@@ -1,0 +1,28 @@
+/home/travis/build/kaitai-io/ci_targets/tests/spec/java/src/io/kaitai/struct/spec/TestSwitchManualStrElse.java:3: error: cannot find symbol
+import io.kaitai.struct.testformats.SwitchManualStrElse;
+                                   ^
+  symbol:   class SwitchManualStrElse
+  location: package io.kaitai.struct.testformats
+/home/travis/build/kaitai-io/ci_targets/tests/spec/java/src/io/kaitai/struct/spec/TestSwitchManualStrElse.java:11: error: cannot find symbol
+        SwitchManualStrElse r = SwitchManualStrElse.fromFile(SRC_DIR + "switch_opcodes2.bin");
+        ^
+  symbol:   class SwitchManualStrElse
+  location: class TestSwitchManualStrElse
+/home/travis/build/kaitai-io/ci_targets/tests/spec/java/src/io/kaitai/struct/spec/TestSwitchManualStrElse.java:11: error: cannot find symbol
+        SwitchManualStrElse r = SwitchManualStrElse.fromFile(SRC_DIR + "switch_opcodes2.bin");
+                                ^
+  symbol:   variable SwitchManualStrElse
+  location: class TestSwitchManualStrElse
+/home/travis/build/kaitai-io/ci_targets/tests/spec/java/src/io/kaitai/struct/spec/TestSwitchManualStrElse.java:16: error: package SwitchManualStrElse.Opcode does not exist
+        assertEquals(((SwitchManualStrElse.Opcode.Strval) r.opcodes().get(0).body()).value(), "foo");
+                                                 ^
+/home/travis/build/kaitai-io/ci_targets/tests/spec/java/src/io/kaitai/struct/spec/TestSwitchManualStrElse.java:19: error: package SwitchManualStrElse.Opcode does not exist
+        assertEquals(((SwitchManualStrElse.Opcode.Noneval) r.opcodes().get(1).body()).filler(), 0x42);
+                                                 ^
+/home/travis/build/kaitai-io/ci_targets/tests/spec/java/src/io/kaitai/struct/spec/TestSwitchManualStrElse.java:22: error: package SwitchManualStrElse.Opcode does not exist
+        assertEquals(((SwitchManualStrElse.Opcode.Noneval) r.opcodes().get(2).body()).filler(), 0xcafe);
+                                                 ^
+/home/travis/build/kaitai-io/ci_targets/tests/spec/java/src/io/kaitai/struct/spec/TestSwitchManualStrElse.java:25: error: package SwitchManualStrElse.Opcode does not exist
+        assertEquals(((SwitchManualStrElse.Opcode.Intval) r.opcodes().get(3).body()).value(), 7);
+                                                 ^
+7 errors
