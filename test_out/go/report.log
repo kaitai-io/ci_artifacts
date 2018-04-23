@@ -1,6 +1,80 @@
-# github.com/kaitai-io/ci_targets/tests/spec/go
-bcd_user_type_be_test.go:8:2: cannot find package "github.com/kaitai-io/kaitai_struct_go_runtime/kaitai" in any of:
-	/home/travis/.gimme/versions/go1.10.linux.amd64/src/github.com/kaitai-io/kaitai_struct_go_runtime/kaitai (from $GOROOT)
-	/home/travis/gopath/src/github.com/kaitai-io/kaitai_struct_go_runtime/kaitai (from $GOPATH)
-	/home/travis/gopath/src/github.com/kaitai-io/ci_targets/tests/compiled/go/src/github.com/kaitai-io/kaitai_struct_go_runtime/kaitai
-FAIL	github.com/kaitai-io/ci_targets/tests/spec/go [setup failed]
+=== RUN   TestBcdUserTypeBe
+--- PASS: TestBcdUserTypeBe (0.00s)
+=== RUN   TestBcdUserTypeLe
+--- PASS: TestBcdUserTypeLe (0.00s)
+=== RUN   TestBufferedStruct
+--- PASS: TestBufferedStruct (0.00s)
+=== RUN   TestBytesPadTerm
+--- FAIL: TestBytesPadTerm (0.00s)
+	bytes_pad_term_test.go:26: 
+			Error Trace:	bytes_pad_term_test.go:26
+			Error:      	Not equal: 
+			            	expected: string("str1")
+			            	actual  : []uint8([]byte{0x73, 0x74, 0x72, 0x31, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40})
+			Test:       	TestBytesPadTerm
+	bytes_pad_term_test.go:27: 
+			Error Trace:	bytes_pad_term_test.go:27
+			Error:      	Not equal: 
+			            	expected: string("str2foo")
+			            	actual  : []uint8([]byte{0x73, 0x74, 0x72, 0x32, 0x66, 0x6f, 0x6f, 0x40, 0x2b, 0x2b, 0x2b, 0x2b, 0x2b, 0x2b, 0x2b, 0x2b, 0x2b, 0x2b, 0x2b, 0x2b})
+			Test:       	TestBytesPadTerm
+	bytes_pad_term_test.go:28: 
+			Error Trace:	bytes_pad_term_test.go:28
+			Error:      	Not equal: 
+			            	expected: string("str+++3bar+++")
+			            	actual  : []uint8([]byte{0x73, 0x74, 0x72, 0x2b, 0x2b, 0x2b, 0x33, 0x62, 0x61, 0x72, 0x2b, 0x2b, 0x2b, 0x40, 0x2b, 0x2b, 0x2b, 0x2b, 0x2b, 0x2b})
+			Test:       	TestBytesPadTerm
+	bytes_pad_term_test.go:29: 
+			Error Trace:	bytes_pad_term_test.go:29
+			Error:      	Not equal: 
+			            	expected: string("str4baz@")
+			            	actual  : []uint8([]byte{0x73, 0x74, 0x72, 0x34, 0x62, 0x61, 0x7a, 0x40, 0x2e, 0x2e, 0x2e, 0x2e, 0x2e, 0x2e, 0x2e, 0x2e, 0x2e, 0x2e, 0x2e, 0x2e})
+			Test:       	TestBytesPadTerm
+=== RUN   TestDefaultBigEndian
+--- PASS: TestDefaultBigEndian (0.00s)
+=== RUN   TestDefaultEndianMod
+--- PASS: TestDefaultEndianMod (0.00s)
+=== RUN   TestDocstringsDocref
+--- PASS: TestDocstringsDocref (0.00s)
+=== RUN   TestDocstrings
+--- PASS: TestDocstrings (0.00s)
+=== RUN   TestEnum0
+--- PASS: TestEnum0 (0.00s)
+=== RUN   TestEnumFancy
+--- PASS: TestEnumFancy (0.00s)
+=== RUN   TestExpr0
+--- PASS: TestExpr0 (0.00s)
+=== RUN   TestExpr1
+--- PASS: TestExpr1 (0.00s)
+=== RUN   TestExpr2
+--- PASS: TestExpr2 (0.00s)
+=== RUN   TestExpr3
+--- PASS: TestExpr3 (0.00s)
+=== RUN   TestExprArray
+--- FAIL: TestExprArray (0.00s)
+	expr_array_test.go:22: EOF
+=== RUN   TestExprBytesCmp
+--- PASS: TestExprBytesCmp (0.00s)
+=== RUN   TestExprIoPos
+--- FAIL: TestExprIoPos (0.00s)
+panic: runtime error: makeslice: len out of range [recovered]
+	panic: runtime error: makeslice: len out of range
+
+goroutine 22 [running]:
+testing.tRunner.func1(0xc42010cff0)
+	/home/travis/.gimme/versions/go1.10.linux.amd64/src/testing/testing.go:742 +0x29d
+panic(0x6caa20, 0x7611f0)
+	/home/travis/.gimme/versions/go1.10.linux.amd64/src/runtime/panic.go:505 +0x229
+github.com/kaitai-io/kaitai_struct_go_runtime/kaitai.(*Stream).ReadBytes(0xc4200e8a60, 0xfffffffffffffffe, 0x0, 0x0, 0xc42001d350, 0x9, 0x0)
+	/home/travis/gopath/src/github.com/kaitai-io/kaitai_struct_go_runtime/kaitai/stream.go:205 +0x40
+test_formats.(*ExprIoPos_AllPlusNumber).Read(0xc42008a910, 0xc4200e8a60, 0xc420076300, 0xc420076300, 0x10, 0x0)
+	/home/travis/gopath/src/github.com/kaitai-io/ci_targets/tests/compiled/go/src/test_formats/expr_io_pos.go:78 +0x14b
+test_formats.(*ExprIoPos).Read(0xc420076300, 0xc4200e8a40, 0x6c5220, 0xc420076300, 0xc420076300, 0x2d2, 0x4ccaa0)
+	/home/travis/gopath/src/github.com/kaitai-io/ci_targets/tests/compiled/go/src/test_formats/expr_io_pos.go:32 +0x1e6
+github.com/kaitai-io/ci_targets/tests/spec/go.TestExprIoPos(0xc42010cff0)
+	/home/travis/gopath/src/github.com/kaitai-io/ci_targets/tests/spec/go/expr_io_pos_test.go:20 +0x136
+testing.tRunner(0xc42010cff0, 0x73e450)
+	/home/travis/.gimme/versions/go1.10.linux.amd64/src/testing/testing.go:777 +0xd0
+created by testing.(*T).Run
+	/home/travis/.gimme/versions/go1.10.linux.amd64/src/testing/testing.go:824 +0x2e0
+FAIL	github.com/kaitai-io/ci_targets/tests/spec/go	0.008s
