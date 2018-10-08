@@ -79,6 +79,8 @@
 			            	+ 00000010  2e 2e 2e 2e                                       |....|
 			            	 }
 			Test:       	TestBytesPadTerm
+=== RUN   TestDebugArrayUser
+--- PASS: TestDebugArrayUser (0.00s)
 === RUN   TestDefaultBigEndian
 --- PASS: TestDefaultBigEndian (0.00s)
 === RUN   TestDefaultEndianMod
@@ -214,7 +216,7 @@
 			            	actual  : uint32(0xe8e8e8e8)
 			Test:       	TestProcessCoerceUsertype1
 === RUN   TestProcessCoerceUsertype2
---- FAIL: TestProcessCoerceUsertype2 (0.00s)
+--- FAIL: TestProcessCoerceUsertype2 (0.07s)
 	process_coerce_usertype2_test.go:36: 
 			Error Trace:	process_coerce_usertype2_test.go:36
 			Error:      	Not equal: 
@@ -222,7 +224,7 @@
 			            	actual  : uint32(0xe8e8e8e8)
 			Test:       	TestProcessCoerceUsertype2
 === RUN   TestProcessCustom
---- FAIL: TestProcessCustom (0.06s)
+--- FAIL: TestProcessCustom (0.00s)
 	process_custom_test.go:25: 
 			Error Trace:	process_custom_test.go:25
 			Error:      	Not equal: 
@@ -607,4 +609,4 @@
 			            	 }
 			Test:       	TestZlibWithHeader78
 FAIL
-FAIL	github.com/kaitai-io/ci_targets/tests/spec/go	0.069s
+FAIL	github.com/kaitai-io/ci_targets/tests/spec/go	0.084s
