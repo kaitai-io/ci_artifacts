@@ -7,6 +7,8 @@
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imported_root.h:14:7: note: declared here
 class imported_root_t : public kaitai::kstruct {
       ^
+2 errors generated.
+make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imported_and_rel.cpp.o] Error 1
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/buffered_struct.cpp:22:21: error: no member named 'make_unique' in namespace 'std'
     m_block1 = std::make_unique<block_t>(m__io__raw_block1, this, m__root);
                ~~~~~^
@@ -37,10 +39,6 @@ class imported_root_t : public kaitai::kstruct {
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/buffered_struct.cpp:26:61: warning: expression result unused [-Wunused-value]
     m_block2 = std::make_unique<block_t>(m__io__raw_block2, this, m__root);
                                                             ^~~~
-2 errors generated.
-make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imported_and_rel.cpp.o] Error 1
-4 warnings and 4 errors generated.
-make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/buffered_struct.cpp.o] Error 1
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/repeat_eos_struct.cpp:20:48: error: no member named 'make_unique' in namespace 'std'
             m_chunks->push_back(std::move(std::make_unique<chunk_t>(m__io, this, m__root)));
                                           ~~~~~^
@@ -56,6 +54,8 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/repeat_eos_struct.cpp:20:76: warning: expression result unused [-Wunused-value]
             m_chunks->push_back(std::move(std::make_unique<chunk_t>(m__io, this, m__root)));
                                                                            ^~~~
+4 warnings and 4 errors generated.
+make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/buffered_struct.cpp.o] Error 1
 2 warnings and 2 errors generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/repeat_eos_struct.cpp.o] Error 1
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/instance_user_array.cpp:67:54: error: no member named 'make_unique' in namespace 'std'
@@ -146,6 +146,8 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/expr_2.cpp:24:49: warning: expression result unused [-Wunused-value]
     m_str1 = std::make_unique<mod_str_t>(m__io, this, m__root);
                                                 ^~~~
+7 warnings and 4 errors generated.
+make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_call_short.cpp.o] Error 1
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/expr_2.cpp:25:19: error: no member named 'make_unique' in namespace 'std'
     m_str2 = std::make_unique<mod_str_t>(m__io, this, m__root);
              ~~~~~^
@@ -176,8 +178,6 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/expr_2.cpp:48:57: warning: expression result unused [-Wunused-value]
     m_rest = std::make_unique<tuple_t>(m__io__raw_rest, this, m__root);
                                                         ^~~~
-7 warnings and 4 errors generated.
-make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_call_short.cpp.o] Error 1
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/expr_2.cpp:83:21: error: no member named 'make_unique' in namespace 'std'
     m_tuple5 = std::make_unique<tuple_t>(m__io, this, m__root);
                ~~~~~^
@@ -272,21 +272,6 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nested_same_name2.cpp:19:52: warning: expression result unused [-Wunused-value]
     m_dummy = std::make_unique<dummy_obj_t>(m__io, this, m__root);
                                                    ^~~~
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nested_same_name2.cpp:34:18: error: no member named 'make_unique' in namespace 'std'
-    m_foo = std::make_unique<foo_obj_t>(m__io, this, m__root);
-            ~~~~~^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nested_same_name2.cpp:34:30: error: 'foo_obj_t' does not refer to a value
-    m_foo = std::make_unique<foo_obj_t>(m__io, this, m__root);
-                             ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nested_same_name2.h:41:15: note: declared here
-        class foo_obj_t : public kaitai::kstruct {
-              ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nested_same_name2.cpp:34:41: warning: expression result unused [-Wunused-value]
-    m_foo = std::make_unique<foo_obj_t>(m__io, this, m__root);
-                                        ^~~~~
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nested_same_name2.cpp:34:48: warning: expression result unused [-Wunused-value]
-    m_foo = std::make_unique<foo_obj_t>(m__io, this, m__root);
-                                               ^~~~
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/opaque_external_type_02_parent.cpp:17:21: error: no member named 'make_unique' in namespace 'std'
     m_parent = std::make_unique<parent_obj_t>(m__io, this, m__root);
                ~~~~~^
@@ -302,18 +287,33 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/opaque_external_type_02_parent.cpp:17:54: warning: expression result unused [-Wunused-value]
     m_parent = std::make_unique<parent_obj_t>(m__io, this, m__root);
                                                      ^~~~
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nested_same_name2.cpp:34:18: error: no member named 'make_unique' in namespace 'std'
+    m_foo = std::make_unique<foo_obj_t>(m__io, this, m__root);
+            ~~~~~^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nested_same_name2.cpp:34:30: error: 'foo_obj_t' does not refer to a value
+    m_foo = std::make_unique<foo_obj_t>(m__io, this, m__root);
+                             ^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nested_same_name2.h:41:15: note: declared here
+        class foo_obj_t : public kaitai::kstruct {
+              ^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nested_same_name2.cpp:34:41: warning: expression result unused [-Wunused-value]
+    m_foo = std::make_unique<foo_obj_t>(m__io, this, m__root);
+                                        ^~~~~
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nested_same_name2.cpp:34:48: warning: expression result unused [-Wunused-value]
+    m_foo = std::make_unique<foo_obj_t>(m__io, this, m__root);
+                                               ^~~~
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/opaque_external_type_02_parent.cpp:31:20: error: no member named 'make_unique' in namespace 'std'
     m_child = std::make_unique<opaque_external_type_02_child_t>(m__io);
               ~~~~~^
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/opaque_external_type_02_parent.cpp:31:32: error: 'opaque_external_type_02_child_t' does not refer to a value
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nested_same_name2.cpp    m_child = std::make_unique<opaque_external_type_02_child_t>(m__io);:
-62                               ^:
-18: error: no member named 'make_unique' in namespace 'std'/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/opaque_external_type_02_child.h
-:14:7: note: declared here
-    m_foo = std::make_unique<foo_obj_t>(m__io, this, m__root);
-            ~~~~~^
+    m_child = std::make_unique<opaque_external_type_02_child_t>(m__io);
+                               ^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/opaque_external_type_02_child.h:14:7: note: declared here
 class opaque_external_type_02_child_t : public kaitai::kstruct {
       ^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nested_same_name2.cpp:62:18: error: no member named 'make_unique' in namespace 'std'
+    m_foo = std::make_unique<foo_obj_t>(m__io, this, m__root);
+            ~~~~~^
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nested_same_name2.cpp:62:30: error: 'foo_obj_t' does not refer to a value
     m_foo = std::make_unique<foo_obj_t>(m__io, this, m__root);
                              ^
@@ -599,6 +599,8 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/multiple_use.cpp:17:46: warning: expression result unused [-Wunused-value]
     m_t1 = std::make_unique<type_1_t>(m__io, this, m__root);
                                              ^~~~
+2 warnings and 2 errors generated.
+make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/repeat_n_struct.cpp.o] Error 1
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/multiple_use.cpp:18:17: error: no member named 'make_unique' in namespace 'std'
     m_t2 = std::make_unique<type_2_t>(m__io, this, m__root);
            ~~~~~^
@@ -644,24 +646,67 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/multiple_use.cpp:72:53: warning: expression result unused [-Wunused-value]
     m_second_use = std::make_unique<multi_t>(m__io, this, m__root);
                                                     ^~~~
-2 warnings and 2 errors generated.
-make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/repeat_n_struct.cpp.o] Error 1
 8 warnings and 8 errors generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/multiple_use.cpp.o] Error 1
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/bcd_user_type_be.cpp:23:18: error: no member named 'make_unique' in namespace 'std'
-    m_ltr = std::make_unique<ltr_obj_t>(m__io__raw_ltr, this, m__root);
-            ~~~~~^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/default_endian_mod.cpp:16:19: error: no member named 'make_unique' in namespace 'std'
+    m_main = std::make_unique<main_obj_t>(m__io, this, m__root);
+             ~~~~~^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/default_endian_mod.cpp:16:31: error: 'main_obj_t' does not refer to a value
+    m_main = std::make_unique<main_obj_t>(m__io, this, m__root);
+                              ^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/default_endian_mod.h:27:11: note: declared here
+    class main_obj_t : public kaitai::kstruct {
+          ^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/default_endian_mod.cpp:16:43: warning: expression result unused [-Wunused-value]
+    m_main = std::make_unique<main_obj_t>(m__io, this, m__root);
+                                          ^~~~~
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/default_endian_mod.cpp:16:50: warning: expression result unused [-Wunused-value]
+    m_main = std::make_unique<main_obj_t>(m__io, this, m__root);
+                                                 ^~~~
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/default_endian_mod.cpp:32:19: error: no member named 'make_unique' in namespace 'std'
+    m_nest = std::make_unique<subnest_t>(m__io, this, m__root);
+             ~~~~~^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/default_endian_mod.cpp:32:31: error: 'subnest_t' does not refer to a value
+    m_nest = std::make_unique<subnest_t>(m__io, this, m__root);
+                              ^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/default_endian_mod.h:41:15: note: declared here
+        class subnest_t : public kaitai::kstruct {
+              ^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/default_endian_mod.cpp:32:42: warning: expression result unused [-Wunused-value]
+    m_nest = std::make_unique<subnest_t>(m__io, this, m__root);
+                                         ^~~~~
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/default_endian_mod.cpp:32:49: warning: expression result unused [-Wunused-value]
+    m_nest = std::make_unique<subnest_t>(m__io, this, m__root);
+                                                ^~~~
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/default_endian_mod.cpp:33:22: error: /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/bcd_user_type_be.cppno member named 'make_unique' in namespace 'std':
+23:18: error: no member named 'make_unique' in namespace 'std'
+    m_nest_be = std::make_unique<subnest_be_t>(m__io, this, m__root);
+                ~~~~~^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/default_endian_mod.cpp:33:34:     m_ltr = std::make_unique<ltr_obj_t>(m__io__raw_ltr, this, m__root);error
+:             ~~~~~^'subnest_be_t' does not refer to a value
+
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/bcd_user_type_be.cpp:23:30: error: 'ltr_obj_t' does not refer to a value
-    m_ltr = std::make_unique<ltr_obj_t>(m__io__raw_ltr, this, m__root);
-                             ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/bcd_user_type_be.h:29:11: note: declared here
+    m_nest_be = std::make_unique<subnest_be_t>(m__io, this, m__root);
+                                 ^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/default_endian_mod.h    m_ltr = std::make_unique<ltr_obj_t>(m__io__raw_ltr, this, m__root);:
+64                             ^:
+15: /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/bcd_user_type_be.hnote:: 29declared here:
+11: note: declared here
+        class subnest_be_t : public kaitai::kstruct {
+              ^
     class ltr_obj_t : public kaitai::kstruct {
           ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/bcd_user_type_be.cpp:23:41: warning: expression result unused [-Wunused-value]
-    m_ltr = std::make_unique<ltr_obj_t>(m__io__raw_ltr, this, m__root);
-                                        ^~~~~~~~~~~~~~
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/bcd_user_type_be.cpp:23:57: warning: expression result unused [-Wunused-value]
-    m_ltr = std::make_unique<ltr_obj_t>(m__io__raw_ltr, this, m__root);
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/bcd_user_type_be.cpp:/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/default_endian_mod.cpp23::3341::48 :warning : warningexpression result unused [-Wunused-value]: 
+expression result unused [-Wunused-value]
+    m_nest_be = std::make_unique<subnest_be_t>(m__io, this, m__root);    m_ltr = std::make_unique<ltr_obj_t>(m__io__raw_ltr, this, m__root);
+
+                                               ^~~~~                                        ^~~~~~~~~~~~~~
+
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/default_endian_mod.cpp/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/bcd_user_type_be.cpp::3323::5557::  warningwarning: : expression result unused [-Wunused-value]expression result unused [-Wunused-value]
+
+    m_nest_be = std::make_unique<subnest_be_t>(m__io, this, m__root);
+                                                      ^~~~    m_ltr = std::make_unique<ltr_obj_t>(m__io__raw_ltr, this, m__root);
+
                                                         ^~~~
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/bcd_user_type_be.cpp:26:18: error: no member named 'make_unique' in namespace 'std'
     m_rtl = std::make_unique<rtl_obj_t>(m__io__raw_rtl, this, m__root);
@@ -693,55 +738,10 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/bcd_user_type_be.cpp:29:96: warning: expression result unused [-Wunused-value]
     m_leading_zero_ltr = std::make_unique<leading_zero_ltr_obj_t>(m__io__raw_leading_zero_ltr, this, m__root);
                                                                                                ^~~~
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/default_endian_mod.cpp:16:19: error: no member named 'make_unique' in namespace 'std'
-    m_main = std::make_unique<main_obj_t>(m__io, this, m__root);
-             ~~~~~^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/default_endian_mod.cpp:16:31: error: 'main_obj_t' does not refer to a value
-    m_main = std::make_unique<main_obj_t>(m__io, this, m__root);
-                              ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/default_endian_mod.h:27:11: note: declared here
-    class main_obj_t : public kaitai::kstruct {
-          ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/default_endian_mod.cpp:16:43: warning: expression result unused [-Wunused-value]
-    m_main = std::make_unique<main_obj_t>(m__io, this, m__root);
-                                          ^~~~~
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/default_endian_mod.cpp:16:50: warning: expression result unused [-Wunused-value]
-    m_main = std::make_unique<main_obj_t>(m__io, this, m__root);
-                                                 ^~~~
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/default_endian_mod.cpp:32:19: error: no member named 'make_unique' in namespace 'std'
-    m_nest = std::make_unique<subnest_t>(m__io, this, m__root);
-             ~~~~~^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/default_endian_mod.cpp:32:31: error: 'subnest_t' does not refer to a value
-    m_nest = std::make_unique<subnest_t>(m__io, this, m__root);
-                              ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/default_endian_mod.h:41:15: note: declared here
-        class subnest_t : public kaitai::kstruct {
-              ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/default_endian_mod.cpp:32:42: warning: expression result unused [-Wunused-value]
-    m_nest = std::make_unique<subnest_t>(m__io, this, m__root);
-                                         ^~~~~
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/default_endian_mod.cpp:32:49: warning: expression result unused [-Wunused-value]
-    m_nest = std::make_unique<subnest_t>(m__io, this, m__root);
-                                                ^~~~
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/default_endian_mod.cpp:33:22: error: no member named 'make_unique' in namespace 'std'
-    m_nest_be = std::make_unique<subnest_be_t>(m__io, this, m__root);
-                ~~~~~^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/default_endian_mod.cpp:33:34: error: 'subnest_be_t' does not refer to a value
-    m_nest_be = std::make_unique<subnest_be_t>(m__io, this, m__root);
-                                 ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/default_endian_mod.h:64:15: note: declared here
-        class subnest_be_t : public kaitai::kstruct {
-              ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/default_endian_mod.cpp:33:48: warning: expression result unused [-Wunused-value]
-    m_nest_be = std::make_unique<subnest_be_t>(m__io, this, m__root);
-                                               ^~~~~
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/default_endian_mod.cpp:33:55: warning: expression result unused [-Wunused-value]
-    m_nest_be = std::make_unique<subnest_be_t>(m__io, this, m__root);
-                                                      ^~~~
-6 warnings and 6 errors generated.
-make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/bcd_user_type_be.cpp.o] Error 1
 6 warnings and 6 errors generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/default_endian_mod.cpp.o] Error 1
+6 warnings and 6 errors generated.
+make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/bcd_user_type_be.cpp.o] Error 1
 In file included from /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_enum.cpp:4:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_enum.h:107:64: error: call to deleted constructor of 'std::unique_ptr<kaitai::kstruct>'
         std::unique_ptr<kaitai::kstruct> body() const { return m_body; }
@@ -796,21 +796,6 @@ In file included from /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp
                                                    ^~~~
 6 warnings and 7 errors generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_enum.cpp.o] Error 1
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent_vs_value_inst.cpp:17:20: error: no member named 'make_unique' in namespace 'std'
-    m_child = std::make_unique<child_obj_t>(m__io, this, m__root);
-              ~~~~~^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent_vs_value_inst.cpp:17:32: error: 'child_obj_t' does not refer to a value
-    m_child = std::make_unique<child_obj_t>(m__io, this, m__root);
-                               ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent_vs_value_inst.h:27:11: note: declared here
-    class child_obj_t : public kaitai::kstruct {
-          ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent_vs_value_inst.cpp:17:45: warning: expression result unused [-Wunused-value]
-    m_child = std::make_unique<child_obj_t>(m__io, this, m__root);
-                                            ^~~~~
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent_vs_value_inst.cpp:17:52: warning: expression result unused [-Wunused-value]
-    m_child = std::make_unique<child_obj_t>(m__io, this, m__root);
-                                                   ^~~~
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/default_endian_expr_exception.cpp:21:46: error: no member named 'make_unique' in namespace 'std'
             m_docs->push_back(std::move(std::make_unique<doc_t>(m__io, this, m__root)));
                                         ~~~~~^
@@ -841,10 +826,25 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/default_endian_expr_exception.cpp:39:50: warning: expression result unused [-Wunused-value]
     m_main = std::make_unique<main_obj_t>(m__io, this, m__root);
                                                  ^~~~
-2 warnings and 2 errors generated.
-make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent_vs_value_inst.cpp.o] Error 1
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent_vs_value_inst.cpp:17:20: error: no member named 'make_unique' in namespace 'std'
+    m_child = std::make_unique<child_obj_t>(m__io, this, m__root);
+              ~~~~~^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent_vs_value_inst.cpp:17:32: error: 'child_obj_t' does not refer to a value
+    m_child = std::make_unique<child_obj_t>(m__io, this, m__root);
+                               ^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent_vs_value_inst.h:27:11: note: declared here
+    class child_obj_t : public kaitai::kstruct {
+          ^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent_vs_value_inst.cpp:17:45: warning: expression result unused [-Wunused-value]
+    m_child = std::make_unique<child_obj_t>(m__io, this, m__root);
+                                            ^~~~~
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent_vs_value_inst.cpp:17:52: warning: expression result unused [-Wunused-value]
+    m_child = std::make_unique<child_obj_t>(m__io, this, m__root);
+                                                   ^~~~
 4 warnings and 4 errors generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/default_endian_expr_exception.cpp.o] Error 1
+2 warnings and 2 errors generated.
+make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent_vs_value_inst.cpp.o] Error 1
 In file included from /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_size_else.cpp:4:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_size_else.h:126:64: error: call to deleted constructor of 'std::unique_ptr<kaitai::kstruct>'
         std::unique_ptr<kaitai::kstruct> body() const { return m_body; }
@@ -882,15 +882,6 @@ In file included from /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_size_else.cpp:43:66: warning: expression result unused [-Wunused-value]
         m_body = std::make_unique<chunk_meta_t>(m__io__raw_body, this, m__root);
                                                                  ^~~~
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imports_circular_a.cpp:18:18: error: no member named 'make_unique' in namespace 'std'
-    m_two = std::make_unique<imports_circular_b_t>(m__io);
-            ~~~~~^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imports_circular_a.cpp:18:30: error: 'imports_circular_b_t' does not refer to a value
-    m_two = std::make_unique<imports_circular_b_t>(m__io);
-                             ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imports_circular_b.h:15:7: note: declared here
-class imports_circular_b_t : public kaitai::kstruct {
-      ^
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_size_else.cpp:49:23: error: no member named 'make_unique' in namespace 'std'
         m_body = std::make_unique<chunk_dir_t>(m__io__raw_body, this, m__root);
                  ~~~~~^
@@ -906,6 +897,15 @@ class imports_circular_b_t : public kaitai::kstruct {
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_size_else.cpp:49:65: warning: expression result unused [-Wunused-value]
         m_body = std::make_unique<chunk_dir_t>(m__io__raw_body, this, m__root);
                                                                 ^~~~
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imports_circular_a.cpp:18:18: error: no member named 'make_unique' in namespace 'std'
+    m_two = std::make_unique<imports_circular_b_t>(m__io);
+            ~~~~~^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imports_circular_a.cpp:18:30: error: 'imports_circular_b_t' does not refer to a value
+    m_two = std::make_unique<imports_circular_b_t>(m__io);
+                             ^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imports_circular_b.h:15:7: note: declared here
+class imports_circular_b_t : public kaitai::kstruct {
+      ^
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_size_else.cpp:55:23: error: no member named 'make_unique' in namespace 'std'
         m_body = std::make_unique<dummy_t>(m__io__raw_body, this, m__root);
                  ~~~~~^
@@ -1177,8 +1177,16 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/index_to_param_expr.cpp:28:75: warning: expression result unused [-Wunused-value]
         m_blocks->push_back(std::move(std::make_unique<block_t>(i, m__io, this, m__root)));
                                                                           ^~~~
-3 warnings and 2 errors generated.
-make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/index_to_param_expr.cpp.o] Error 1
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imports_circular_b.cpp:21:27: error: no member named 'make_unique' in namespace 'std'
+        m_back_ref = std::make_unique<imports_circular_a_t>(m__io);
+                     ~~~~~^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imports_circular_b.cpp:21:39: error: 'imports_circular_a_t' does not refer to a value
+        m_back_ref = std::make_unique<imports_circular_a_t>(m__io);
+                                      ^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imports_circular_a.h:15:7: note: declared here
+class imports_circular_a_t : public kaitai::kstruct {
+      ^
+2 errors generated.
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/debug_enum_name.cpp:23:24: error: no member named 'make_unique' in namespace 'std'
     m_test_type = std::make_unique<test_subtype_t>(m__io, this, m__root);
                   ~~~~~^
@@ -1194,17 +1202,9 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/debug_enum_name.cpp:23:59: warning: expression result unused [-Wunused-value]
     m_test_type = std::make_unique<test_subtype_t>(m__io, this, m__root);
                                                           ^~~~
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imports_circular_b.cpp:21:27: error: no member named 'make_unique' in namespace 'std'
-        m_back_ref = std::make_unique<imports_circular_a_t>(m__io);
-                     ~~~~~^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imports_circular_b.cpp:21:39: error: 'imports_circular_a_t' does not refer to a value
-        m_back_ref = std::make_unique<imports_circular_a_t>(m__io);
-                                      ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imports_circular_a.h:15:7: note: declared here
-class imports_circular_a_t : public kaitai::kstruct {
-      ^
-2 errors generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imports_circular_b.cpp.o] Error 1
+3 warnings and 2 errors generated.
+make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/index_to_param_expr.cpp.o] Error 1
 2 warnings and 2 errors generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/debug_enum_name.cpp.o] Error 1
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_integers.cpp:20:49: error: no member named 'make_unique' in namespace 'std'
@@ -1329,15 +1329,6 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
                                                ^~~~
 6 warnings and 6 errors generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nested_same_name.cpp.o] Error 1
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imports_rel_1.cpp:18:18: error: no member named 'make_unique' in namespace 'std'
-    m_two = std::make_unique<imported_1_t>(m__io);
-            ~~~~~^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imports_rel_1.cpp:18:30: error: 'imported_1_t' does not refer to a value
-    m_two = std::make_unique<imported_1_t>(m__io);
-                             ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imported_1.h:15:7: note: declared here
-class imported_1_t : public kaitai::kstruct {
-      ^
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent2.cpp:22:42: error: no member named 'make_unique' in namespace 'std'
         m_tags->push_back(std::move(std::make_unique<tag_t>(m__io, this, m__root)));
                                     ~~~~~^
@@ -1353,12 +1344,20 @@ class imported_1_t : public kaitai::kstruct {
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent2.cpp:22:68: warning: expression result unused [-Wunused-value]
         m_tags->push_back(std::move(std::make_unique<tag_t>(m__io, this, m__root)));
                                                                    ^~~~
-2 errors generated.
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent2.cpp:62:16: error: call to deleted constructor of 'std::unique_ptr<nav_parent2_t::tag_t::tag_char_t>'
         return m_tag_content;
                ^~~~~~~~~~~~~
 /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/bits/unique_ptr.h:273:7: note: 'unique_ptr' has been explicitly marked deleted here
       unique_ptr(const unique_ptr&) = delete;
+      ^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imports_rel_1.cpp:18:18: error: no member named 'make_unique' in namespace 'std'
+    m_two = std::make_unique<imported_1_t>(m__io);
+            ~~~~~^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imports_rel_1.cpp:18:30: error: 'imported_1_t' does not refer to a value
+    m_two = std::make_unique<imported_1_t>(m__io);
+                             ^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imported_1.h:15:7: note: declared here
+class imported_1_t : public kaitai::kstruct {
       ^
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent2.cpp:71:34: error: no member named 'make_unique' in namespace 'std'
             m_tag_content = std::make_unique<tag_char_t>(io, this, m__root);
@@ -1381,6 +1380,7 @@ class imported_1_t : public kaitai::kstruct {
 /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/bits/unique_ptr.h:273:7: note: 'unique_ptr' has been explicitly marked deleted here
       unique_ptr(const unique_ptr&) = delete;
       ^
+2 errors generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imports_rel_1.cpp.o] Error 1
 4 warnings and 6 errors generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent2.cpp.o] Error 1
@@ -1508,8 +1508,6 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/default_endian_expr_is_be.cpp:146:68: warning: expression result unused [-Wunused-value]
         m_inst_sub = std::make_unique<sub_main_obj_t>(m__io, this, m__root, m__is_le);
                                                                    ^~~~~~~
-10 warnings and 8 errors generated.
-make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/default_endian_expr_is_be.cpp.o] Error 1
 In file included from /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_str.cpp:4:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_str.h:102:64: error: call to deleted constructor of 'std::unique_ptr<kaitai::kstruct>'
         std::unique_ptr<kaitai::kstruct> body() const { return m_body; }
@@ -1532,21 +1530,6 @@ In file included from /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_str.cpp:20:78: warning: expression result unused [-Wunused-value]
             m_opcodes->push_back(std::move(std::make_unique<opcode_t>(m__io, this, m__root)));
                                                                              ^~~~
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_str.cpp:42:27: error: no member named 'make_unique' in namespace 'std'
-            m_body = std::make_unique<intval_t>(m__io, this, m__root);
-                     ~~~~~^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_str.cpp:42:39: error: 'intval_t' does not refer to a value
-            m_body = std::make_unique<intval_t>(m__io, this, m__root);
-                                      ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_str.h:42:15: note: declared here
-        class intval_t : public kaitai::kstruct {
-              ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_str.cpp:42:49: warning: expression result unused [-Wunused-value]
-            m_body = std::make_unique<intval_t>(m__io, this, m__root);
-                                                ^~~~~
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_str.cpp:42:56: warning: expression result unused [-Wunused-value]
-            m_body = std::make_unique<intval_t>(m__io, this, m__root);
-                                                       ^~~~
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_pass_usertype.cpp:17:20: error: no member named 'make_unique' in namespace 'std'
     m_first = std::make_unique<block_t>(m__io, this, m__root);
               ~~~~~^
@@ -1562,20 +1545,20 @@ In file included from /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_pass_usertype.cpp:17:48: warning: expression result unused [-Wunused-value]
     m_first = std::make_unique<block_t>(m__io, this, m__root);
                                                ^~~~
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_str.cpp:46:27: error: no member named 'make_unique' in namespace 'std'
-            m_body = std::make_unique<strval_t>(m__io, this, m__root);
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_str.cpp:42:27: error: no member named 'make_unique' in namespace 'std'
+            m_body = std::make_unique<intval_t>(m__io, this, m__root);
                      ~~~~~^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_str.cpp:46:39: error: 'strval_t' does not refer to a value
-            m_body = std::make_unique<strval_t>(m__io, this, m__root);
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_str.cpp:42:39: error: 'intval_t' does not refer to a value
+            m_body = std::make_unique<intval_t>(m__io, this, m__root);
                                       ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_str.h:65:15: note: declared here
-        class strval_t : public kaitai::kstruct {
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_str.h:42:15: note: declared here
+        class intval_t : public kaitai::kstruct {
               ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_str.cpp:46:49: warning: expression result unused [-Wunused-value]
-            m_body = std::make_unique<strval_t>(m__io, this, m__root);
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_str.cpp:42:49: warning: expression result unused [-Wunused-value]
+            m_body = std::make_unique<intval_t>(m__io, this, m__root);
                                                 ^~~~~
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_str.cpp:46:56: warning: expression result unused [-Wunused-value]
-            m_body = std::make_unique<strval_t>(m__io, this, m__root);
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_str.cpp:42:56: warning: expression result unused [-Wunused-value]
+            m_body = std::make_unique<intval_t>(m__io, this, m__root);
                                                        ^~~~
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_pass_usertype.cpp:18:18: error: no member named 'make_unique' in namespace 'std'
     m_one = std::make_unique<param_type_t>(first(), m__io, this, m__root);
@@ -1607,10 +1590,27 @@ In file included from /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp
 /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/bits/unique_ptr.h:211:7: note: candidate function not viable: no known conversion from 'std::unique_ptr<block_t>' to 'std::nullptr_t' (aka 'nullptr_t') for 1st argument
       operator=(nullptr_t) noexcept
       ^
-6 warnings and 7 errors generated.
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_str.cpp:46:27: error: no member named 'make_unique' in namespace 'std'
+            m_body = std::make_unique<strval_t>(m__io, this, m__root);
+                     ~~~~~^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_str.cpp:46:39: error: 'strval_t' does not refer to a value
+            m_body = std::make_unique<strval_t>(m__io, this, m__root);
+                                      ^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_str.h:65:15: note: declared here
+        class strval_t : public kaitai::kstruct {
+              ^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_str.cpp:46:49: warning: expression result unused [-Wunused-value]
+            m_body = std::make_unique<strval_t>(m__io, this, m__root);
+                                                ^~~~~
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_str.cpp:46:56: warning: expression result unused [-Wunused-value]
+            m_body = std::make_unique<strval_t>(m__io, this, m__root);
+                                                       ^~~~
+10 warnings and 8 errors generated.
+make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/default_endian_expr_is_be.cpp.o] Error 1
 4 warnings and 5 errors generated.
-make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_pass_usertype.cpp.o] Error 1
+6 warnings and 7 errors generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_str.cpp.o] Error 1
+make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_pass_usertype.cpp.o] Error 1
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/if_struct.cpp:18:18: error: no member named 'make_unique' in namespace 'std'
     m_op1 = std::make_unique<operation_t>(m__io, this, m__root);
             ~~~~~^
@@ -1771,6 +1771,23 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/if_values.cpp:20:70: warning: expression result unused [-Wunused-value]
         m_codes->push_back(std::move(std::make_unique<code_t>(m__io, this, m__root)));
                                                                      ^~~~
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_enum.cpp:17:32: error: no member named 'make_unique' in namespace 'std'
+    m_invoke_with_param = std::make_unique<with_param_t>(one(), m__io, this, m__root);
+                          ~~~~~^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_enum.cpp:17:44: error: 'with_param_t' does not refer to a value
+    m_invoke_with_param = std::make_unique<with_param_t>(one(), m__io, this, m__root);
+                                           ^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_enum.h:33:11: note: declared here
+    class with_param_t : public kaitai::kstruct {
+          ^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_enum.cpp:17:65: warning: expression result unused [-Wunused-value]
+    m_invoke_with_param = std::make_unique<with_param_t>(one(), m__io, this, m__root);
+                                                                ^~~~~
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_enum.cpp:17:72: warning: expression result unused [-Wunused-value]
+    m_invoke_with_param = std::make_unique<with_param_t>(one(), m__io, this, m__root);
+                                                                       ^~~~
+2 warnings and 2 errors generated.
+make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/if_values.cpp.o] Error 1
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/vlq_base128_le.cpp:23:22: error: no member named 'make_unique' in namespace 'std'
             _ = std::make_unique<group_t>(m__io, this, m__root);
                 ~~~~~^
@@ -1786,6 +1803,8 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/vlq_base128_le.cpp:23:50: warning: expression result unused [-Wunused-value]
             _ = std::make_unique<group_t>(m__io, this, m__root);
                                                  ^~~~
+2 warnings and 2 errors generated.
+make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_enum.cpp.o] Error 1
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/vlq_base128_le.cpp:75:335: warning: shift count >= width of type [-Wshift-count-overflow]
     m_value = (((((((groups()->at(0)->value() + ((len() >= 2) ? ((groups()->at(1)->value() << 7)) : (0))) + ((len() >= 3) ? ((groups()->at(2)->value() << 14)) : (0))) + ((len() >= 4) ? ((groups()->at(3)->value() << 21)) : (0))) + ((len() >= 5) ? ((groups()->at(4)->value() << 28)) : (0))) + ((len() >= 6) ? ((groups()->at(5)->value() << 35)) : (0))) + ((len() >= 7) ? ((groups()->at(6)->value() << 42)) : (0))) + ((len() >= 8) ? ((groups()->at(7)->value() << 49)) : (0)));
                                                                                                                                                                                                                                                                                                                                               ^  ~~
@@ -1795,7 +1814,6 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/vlq_base128_le.cpp:75:457: warning: shift count >= width of type [-Wshift-count-overflow]
     m_value = (((((((groups()->at(0)->value() + ((len() >= 2) ? ((groups()->at(1)->value() << 7)) : (0))) + ((len() >= 3) ? ((groups()->at(2)->value() << 14)) : (0))) + ((len() >= 4) ? ((groups()->at(3)->value() << 21)) : (0))) + ((len() >= 5) ? ((groups()->at(4)->value() << 28)) : (0))) + ((len() >= 6) ? ((groups()->at(5)->value() << 35)) : (0))) + ((len() >= 7) ? ((groups()->at(6)->value() << 42)) : (0))) + ((len() >= 8) ? ((groups()->at(7)->value() << 49)) : (0)));
                                                                                                                                                                                                                                                                                                                                                                                                                                                                         ^  ~~
-2 warnings and 2 errors generated.
 In file included from /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/vlq_base128_le.cpp:3:
 In file included from /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/memory:63:
 In file included from /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/bits/allocator.h:46:
@@ -1818,26 +1836,8 @@ In file included from /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../include/x86_
 /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/bits/unique_ptr.h:273:7: note: 'unique_ptr' has been explicitly marked deleted here
       unique_ptr(const unique_ptr&) = delete;
       ^
-make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/if_values.cpp.o] Error 1
 5 warnings and 3 errors generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/vlq_base128_le.cpp.o] Error 1
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_enum.cpp:17:32: error: no member named 'make_unique' in namespace 'std'
-    m_invoke_with_param = std::make_unique<with_param_t>(one(), m__io, this, m__root);
-                          ~~~~~^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_enum.cpp:17:44: error: 'with_param_t' does not refer to a value
-    m_invoke_with_param = std::make_unique<with_param_t>(one(), m__io, this, m__root);
-                                           ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_enum.h:33:11: note: declared here
-    class with_param_t : public kaitai::kstruct {
-          ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_enum.cpp:17:65: warning: expression result unused [-Wunused-value]
-    m_invoke_with_param = std::make_unique<with_param_t>(one(), m__io, this, m__root);
-                                                                ^~~~~
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_enum.cpp:17:72: warning: expression result unused [-Wunused-value]
-    m_invoke_with_param = std::make_unique<with_param_t>(one(), m__io, this, m__root);
-                                                                       ^~~~
-2 warnings and 2 errors generated.
-make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_enum.cpp.o] Error 1
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent_override.cpp:18:22: error: no member named 'make_unique' in namespace 'std'
     m_child_1 = std::make_unique<child_t>(m__io, this, m__root);
                 ~~~~~^
@@ -1853,21 +1853,6 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent_override.cpp:18:50: warning: expression result unused [-Wunused-value]
     m_child_1 = std::make_unique<child_t>(m__io, this, m__root);
                                                  ^~~~
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent_override.cpp:19:25: error: no member named 'make_unique' in namespace 'std'
-    m_mediator_2 = std::make_unique<mediator_t>(m__io, this, m__root);
-                   ~~~~~^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent_override.cpp:19:37: error: 'mediator_t' does not refer to a value
-    m_mediator_2 = std::make_unique<mediator_t>(m__io, this, m__root);
-                                    ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent_override.h:28:11: note: declared here
-    class mediator_t : public kaitai::kstruct {
-          ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent_override.cpp:19:49: warning: expression result unused [-Wunused-value]
-    m_mediator_2 = std::make_unique<mediator_t>(m__io, this, m__root);
-                                                ^~~~~
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent_override.cpp:19:56: warning: expression result unused [-Wunused-value]
-    m_mediator_2 = std::make_unique<mediator_t>(m__io, this, m__root);
-                                                       ^~~~
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/debug_array_user.cpp:16:22: error: no member named 'make_unique' in namespace 'std'
     m_one_cat = std::make_unique<cat_t>(m__io, this, m__root);
                 ~~~~~^
@@ -1883,6 +1868,21 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/debug_array_user.cpp:16:48: warning: expression result unused [-Wunused-value]
     m_one_cat = std::make_unique<cat_t>(m__io, this, m__root);
                                                ^~~~
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent_override.cpp:19:25: error: no member named 'make_unique' in namespace 'std'
+    m_mediator_2 = std::make_unique<mediator_t>(m__io, this, m__root);
+                   ~~~~~^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent_override.cpp:19:37: error: 'mediator_t' does not refer to a value
+    m_mediator_2 = std::make_unique<mediator_t>(m__io, this, m__root);
+                                    ^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent_override.h:28:11: note: declared here
+    class mediator_t : public kaitai::kstruct {
+          ^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent_override.cpp:19:49: warning: expression result unused [-Wunused-value]
+    m_mediator_2 = std::make_unique<mediator_t>(m__io, this, m__root);
+                                                ^~~~~
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent_override.cpp:19:56: warning: expression result unused [-Wunused-value]
+    m_mediator_2 = std::make_unique<mediator_t>(m__io, this, m__root);
+                                                       ^~~~
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent_override.cpp:33:22: error: no member named 'make_unique' in namespace 'std'
     m_child_2 = std::make_unique<child_t>(m__io, _parent(), m__root);
                 ~~~~~^
@@ -1979,6 +1979,15 @@ class imported_2_t : public kaitai::kstruct {
       ^
 2 errors generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imported_1.cpp.o] Error 1
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imports0.cpp:19:17: error: no member named 'make_unique' in namespace 'std'
+    m_hw = std::make_unique<hello_world_t>(m__io);
+           ~~~~~^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imports0.cpp:19:29: error: 'hello_world_t' does not refer to a value
+    m_hw = std::make_unique<hello_world_t>(m__io);
+                            ^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/hello_world.h:14:7: note: declared here
+class hello_world_t : public kaitai::kstruct {
+      ^
 In file included from /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_bytearray.cpp:4:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_bytearray.h:102:64: error: call to deleted constructor of 'std::unique_ptr<kaitai::kstruct>'
         std::unique_ptr<kaitai::kstruct> body() const { return m_body; }
@@ -2001,6 +2010,8 @@ In file included from /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_bytearray.cpp:20:78: warning: expression result unused [-Wunused-value]
             m_opcodes->push_back(std::move(std::make_unique<opcode_t>(m__io, this, m__root)));
                                                                              ^~~~
+2 errors generated.
+make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imports0.cpp.o] Error 1
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_bytearray.cpp:42:27: error: no member named 'make_unique' in namespace 'std'
             m_body = std::make_unique<intval_t>(m__io, this, m__root);
                      ~~~~~^
@@ -2016,15 +2027,6 @@ In file included from /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_bytearray.cpp:42:56: warning: expression result unused [-Wunused-value]
             m_body = std::make_unique<intval_t>(m__io, this, m__root);
                                                        ^~~~
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imports0.cpp:19:17: error: no member named 'make_unique' in namespace 'std'
-    m_hw = std::make_unique<hello_world_t>(m__io);
-           ~~~~~^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imports0.cpp:19:29: error: 'hello_world_t' does not refer to a value
-    m_hw = std::make_unique<hello_world_t>(m__io);
-                            ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/hello_world.h:14:7: note: declared here
-class hello_world_t : public kaitai::kstruct {
-      ^
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_bytearray.cpp:46:27: error: no member named 'make_unique' in namespace 'std'
             m_body = std::make_unique<strval_t>(m__io, this, m__root);
                      ~~~~~^
@@ -2040,8 +2042,6 @@ class hello_world_t : public kaitai::kstruct {
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_bytearray.cpp:46:56: warning: expression result unused [-Wunused-value]
             m_body = std::make_unique<strval_t>(m__io, this, m__root);
                                                        ^~~~
-2 errors generated.
-make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imports0.cpp.o] Error 1
 6 warnings and 7 errors generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_bytearray.cpp.o] Error 1
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/position_abs.cpp:43:20: error: no member named 'make_unique' in namespace 'std'
@@ -2060,7 +2060,6 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
     m_index = std::make_unique<index_obj_t>(m__io, this, m__root);
                                                    ^~~~
 2 warnings and 2 errors generated.
-make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/position_abs.cpp.o] Error 1
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imported_and_abs.cpp:18:18: error: no member named 'make_unique' in namespace 'std'
     m_two = std::make_unique<imported_root_t>(m__io);
             ~~~~~^
@@ -2070,6 +2069,7 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imported_root.h:14:7: note: declared here
 class imported_root_t : public kaitai::kstruct {
       ^
+make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/position_abs.cpp.o] Error 1
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent_false.cpp:18:24: error: no member named 'make_unique' in namespace 'std'
     m_element_a = std::make_unique<parent_a_t>(m__io, this, m__root);
                   ~~~~~^
@@ -2085,7 +2085,6 @@ class imported_root_t : public kaitai::kstruct {
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent_false.cpp:18:55: warning: expression result unused [-Wunused-value]
     m_element_a = std::make_unique<parent_a_t>(m__io, this, m__root);
                                                       ^~~~
-2 errors generated.
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent_false.cpp:19:24: error: no member named 'make_unique' in namespace 'std'
     m_element_b = std::make_unique<parent_b_t>(m__io, this, m__root);
                   ~~~~~^
@@ -2101,6 +2100,7 @@ class imported_root_t : public kaitai::kstruct {
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent_false.cpp:19:55: warning: expression result unused [-Wunused-value]
     m_element_b = std::make_unique<parent_b_t>(m__io, this, m__root);
                                                       ^~~~
+2 errors generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imported_and_abs.cpp.o] Error 1
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent_false.cpp:34:18: error: no member named 'make_unique' in namespace 'std'
     m_foo = std::make_unique<child_t>(m__io, this, m__root);
@@ -2219,12 +2219,12 @@ In file included from /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../include/x86_
       unique_ptr(const unique_ptr&) = delete;
       ^
 2 warnings and 3 errors generated.
-make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/repeat_until_sized.cpp.o] Error 1
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/position_in_seq.cpp:49:21: error: no member named 'make_unique' in namespace 'std'
     m_header = std::make_unique<header_obj_t>(m__io, this, m__root);
                ~~~~~^
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/position_in_seq.cpp:49:33: error: 'header_obj_t' does not refer to a value
-    m_header = std::make_unique<header_obj_t>(m__io, this, m__root);
+    m_header = std::make_unique<header_obj_t>(m__io, this, m__root);make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/repeat_until_sized.cpp.o] Error 1
+
                                 ^
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/position_in_seq.h:28:11: note: declared here
     class header_obj_t : public kaitai::kstruct {
@@ -2486,21 +2486,6 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/default_endian_expr_inherited.cpp:39:50: warning: expression result unused [-Wunused-value]
     m_main = std::make_unique<main_obj_t>(m__io, this, m__root);
                                                  ^~~~
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nested_types.cpp:17:18: error: no member named 'make_unique' in namespace 'std'
-    m_one = std::make_unique<subtype_a_t>(m__io, this, m__root);
-            ~~~~~^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nested_types.cpp:17:30: error: 'subtype_a_t' does not refer to a value
-    m_one = std::make_unique<subtype_a_t>(m__io, this, m__root);
-                             ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nested_types.h:28:11: note: declared here
-    class subtype_a_t : public kaitai::kstruct {
-          ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nested_types.cpp:17:43: warning: expression result unused [-Wunused-value]
-    m_one = std::make_unique<subtype_a_t>(m__io, this, m__root);
-                                          ^~~~~
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nested_types.cpp:17:50: warning: expression result unused [-Wunused-value]
-    m_one = std::make_unique<subtype_a_t>(m__io, this, m__root);
-                                                 ^~~~
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/default_endian_expr_inherited.cpp:74:22: error: no member named 'make_unique' in namespace 'std'
     m_insides = std::make_unique<sub_obj_t>(m__io, this, m__root, m__is_le);
                 ~~~~~^
@@ -2519,21 +2504,6 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/default_endian_expr_inherited.cpp:74:58: warning: expression result unused [-Wunused-value]
     m_insides = std::make_unique<sub_obj_t>(m__io, this, m__root, m__is_le);
                                                          ^~~~~~~
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nested_types.cpp:18:18: error: no member named 'make_unique' in namespace 'std'
-    m_two = std::make_unique<subtype_b_t>(m__io, this, m__root);
-            ~~~~~^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nested_types.cpp:18:30: error: 'subtype_b_t' does not refer to a value
-    m_two = std::make_unique<subtype_b_t>(m__io, this, m__root);
-                             ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nested_types.h:77:11: note: declared here
-    class subtype_b_t : public kaitai::kstruct {
-          ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nested_types.cpp:18:43: warning: expression result unused [-Wunused-value]
-    m_two = std::make_unique<subtype_b_t>(m__io, this, m__root);
-                                          ^~~~~
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nested_types.cpp:18:50: warning: expression result unused [-Wunused-value]
-    m_two = std::make_unique<subtype_b_t>(m__io, this, m__root);
-                                                 ^~~~
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/default_endian_expr_inherited.cpp:78:22: error: no member named 'make_unique' in namespace 'std'
     m_insides = std::make_unique<sub_obj_t>(m__io, this, m__root, m__is_le);
                 ~~~~~^
@@ -2552,21 +2522,6 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/default_endian_expr_inherited.cpp:78:58: warning: expression result unused [-Wunused-value]
     m_insides = std::make_unique<sub_obj_t>(m__io, this, m__root, m__is_le);
                                                          ^~~~~~~
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nested_types.cpp:33:28: error: no member named 'make_unique' in namespace 'std'
-    m_typed_at_root = std::make_unique<subtype_b_t>(m__io, this, m__root);
-                      ~~~~~^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nested_types.cpp:33:40: error: 'subtype_b_t' does not refer to a value
-    m_typed_at_root = std::make_unique<subtype_b_t>(m__io, this, m__root);
-                                       ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nested_types.h:77:11: note: declared here
-    class subtype_b_t : public kaitai::kstruct {
-          ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nested_types.cpp:33:53: warning: expression result unused [-Wunused-value]
-    m_typed_at_root = std::make_unique<subtype_b_t>(m__io, this, m__root);
-                                                    ^~~~~
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nested_types.cpp:33:60: warning: expression result unused [-Wunused-value]
-    m_typed_at_root = std::make_unique<subtype_b_t>(m__io, this, m__root);
-                                                           ^~~~
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/default_endian_expr_inherited.cpp:105:19: error: no member named 'make_unique' in namespace 'std'
     m_more = std::make_unique<subsub_obj_t>(m__io, this, m__root, m__is_le);
              ~~~~~^
@@ -2585,21 +2540,6 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/default_endian_expr_inherited.cpp:105:58: warning: expression result unused [-Wunused-value]
     m_more = std::make_unique<subsub_obj_t>(m__io, this, m__root, m__is_le);
                                                          ^~~~~~~
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nested_types.cpp:34:25: error: no member named 'make_unique' in namespace 'std'
-    m_typed_here = std::make_unique<subtype_c_t>(m__io, this, m__root);
-                   ~~~~~^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nested_types.cpp:34:37: error: 'subtype_c_t' does not refer to a value
-    m_typed_here = std::make_unique<subtype_c_t>(m__io, this, m__root);
-                                    ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nested_types.h:41:15: note: declared here
-        class subtype_c_t : public kaitai::kstruct {
-              ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nested_types.cpp:34:50: warning: expression result unused [-Wunused-value]
-    m_typed_here = std::make_unique<subtype_c_t>(m__io, this, m__root);
-                                                 ^~~~~
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nested_types.cpp:34:57: warning: expression result unused [-Wunused-value]
-    m_typed_here = std::make_unique<subtype_c_t>(m__io, this, m__root);
-                                                        ^~~~
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/default_endian_expr_inherited.cpp:110:19: error: no member named 'make_unique' in namespace 'std'
     m_more = std::make_unique<subsub_obj_t>(m__io, this, m__root, m__is_le);
              ~~~~~^
@@ -2618,10 +2558,70 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/default_endian_expr_inherited.cpp:110:58: warning: expression result unused [-Wunused-value]
     m_more = std::make_unique<subsub_obj_t>(m__io, this, m__root, m__is_le);
                                                          ^~~~~~~
-8 warnings and 8 errors generated.
-make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nested_types.cpp.o] Error 1
 16 warnings and 12 errors generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/default_endian_expr_inherited.cpp.o] Error 1
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nested_types.cpp:17:18: error: no member named 'make_unique' in namespace 'std'
+    m_one = std::make_unique<subtype_a_t>(m__io, this, m__root);
+            ~~~~~^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nested_types.cpp:17:30: error: 'subtype_a_t' does not refer to a value
+    m_one = std::make_unique<subtype_a_t>(m__io, this, m__root);
+                             ^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nested_types.h:28:11: note: declared here
+    class subtype_a_t : public kaitai::kstruct {
+          ^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nested_types.cpp:17:43: warning: expression result unused [-Wunused-value]
+    m_one = std::make_unique<subtype_a_t>(m__io, this, m__root);
+                                          ^~~~~
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nested_types.cpp:17:50: warning: expression result unused [-Wunused-value]
+    m_one = std::make_unique<subtype_a_t>(m__io, this, m__root);
+                                                 ^~~~
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nested_types.cpp:18:18: error: no member named 'make_unique' in namespace 'std'
+    m_two = std::make_unique<subtype_b_t>(m__io, this, m__root);
+            ~~~~~^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nested_types.cpp:18:30: error: 'subtype_b_t' does not refer to a value
+    m_two = std::make_unique<subtype_b_t>(m__io, this, m__root);
+                             ^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nested_types.h:77:11: note: declared here
+    class subtype_b_t : public kaitai::kstruct {
+          ^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nested_types.cpp:18:43: warning: expression result unused [-Wunused-value]
+    m_two = std::make_unique<subtype_b_t>(m__io, this, m__root);
+                                          ^~~~~
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nested_types.cpp:18:50: warning: expression result unused [-Wunused-value]
+    m_two = std::make_unique<subtype_b_t>(m__io, this, m__root);
+                                                 ^~~~
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nested_types.cpp:33:28: error: no member named 'make_unique' in namespace 'std'
+    m_typed_at_root = std::make_unique<subtype_b_t>(m__io, this, m__root);
+                      ~~~~~^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nested_types.cpp:33:40: error: 'subtype_b_t' does not refer to a value
+    m_typed_at_root = std::make_unique<subtype_b_t>(m__io, this, m__root);
+                                       ^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nested_types.h:77:11: note: declared here
+    class subtype_b_t : public kaitai::kstruct {
+          ^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nested_types.cpp:33:53: warning: expression result unused [-Wunused-value]
+    m_typed_at_root = std::make_unique<subtype_b_t>(m__io, this, m__root);
+                                                    ^~~~~
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nested_types.cpp:33:60: warning: expression result unused [-Wunused-value]
+    m_typed_at_root = std::make_unique<subtype_b_t>(m__io, this, m__root);
+                                                           ^~~~
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nested_types.cpp:34:25: error: no member named 'make_unique' in namespace 'std'
+    m_typed_here = std::make_unique<subtype_c_t>(m__io, this, m__root);
+                   ~~~~~^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nested_types.cpp:34:37: error: 'subtype_c_t' does not refer to a value
+    m_typed_here = std::make_unique<subtype_c_t>(m__io, this, m__root);
+                                    ^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nested_types.h:41:15: note: declared here
+        class subtype_c_t : public kaitai::kstruct {
+              ^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nested_types.cpp:34:50: warning: expression result unused [-Wunused-value]
+    m_typed_here = std::make_unique<subtype_c_t>(m__io, this, m__root);
+                                                 ^~~~~
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nested_types.cpp:34:57: warning: expression result unused [-Wunused-value]
+    m_typed_here = std::make_unique<subtype_c_t>(m__io, this, m__root);
+                                                        ^~~~
+8 warnings and 8 errors generated.
+make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nested_types.cpp.o] Error 1
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_repeat_expr.cpp:35:46: error: no member named 'make_unique' in namespace 'std'
             m_body->push_back(std::move(std::make_unique<one_t>(io__raw_body, this, m__root)));
                                         ~~~~~^
@@ -2801,7 +2801,6 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
             m_blocks->push_back(std::move(std::make_unique<block_t>(i, m__io, this, m__root)));
                                                                               ^~~~
 3 warnings and 2 errors generated.
-make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/index_to_param_eos.cpp.o] Error 1
 In file included from /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_size.cpp:4:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_size.h:108:64: error: call to deleted constructor of 'std::unique_ptr<kaitai::kstruct>'
         std::unique_ptr<kaitai::kstruct> body() const { return m_body; }
@@ -2809,6 +2808,7 @@ In file included from /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp
 /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/bits/unique_ptr.h:273:7: note: 'unique_ptr' has been explicitly marked deleted here
       unique_ptr(const unique_ptr&) = delete;
       ^
+make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/index_to_param_eos.cpp.o] Error 1
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_size.cpp:20:48: error: no member named 'make_unique' in namespace 'std'
             m_chunks->push_back(std::move(std::make_unique<chunk_t>(m__io, this, m__root)));
                                           ~~~~~^
@@ -2839,6 +2839,21 @@ In file included from /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_size.cpp:45:66: warning: expression result unused [-Wunused-value]
         m_body = std::make_unique<chunk_meta_t>(m__io__raw_body, this, m__root);
                                                                  ^~~~
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_size.cpp:52:23: error: no member named 'make_unique' in namespace 'std'
+        m_body = std::make_unique<chunk_dir_t>(m__io__raw_body, this, m__root);
+                 ~~~~~^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_size.cpp:52:35: error: 'chunk_dir_t' does not refer to a value
+        m_body = std::make_unique<chunk_dir_t>(m__io__raw_body, this, m__root);
+                                  ^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_size.h:67:15: note: declared here
+        class chunk_dir_t : public kaitai::kstruct {
+              ^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_size.cpp:52:48: warning: expression result unused [-Wunused-value]
+        m_body = std::make_unique<chunk_dir_t>(m__io__raw_body, this, m__root);
+                                               ^~~~~~~~~~~~~~~
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_size.cpp:52:65: warning: expression result unused [-Wunused-value]
+        m_body = std::make_unique<chunk_dir_t>(m__io__raw_body, this, m__root);
+                                                                ^~~~
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent3.cpp:59:16: error: call to deleted constructor of 'std::unique_ptr<nav_parent3_t::tag_t::tag_char_t>'
         return m_tag_content;
                ^~~~~~~~~~~~~
@@ -2857,21 +2872,6 @@ In file included from /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent3.cpp:68:58: warning: expression result unused [-Wunused-value]
             m_tag_content = std::make_unique<tag_char_t>(io, this, m__root);
                                                          ^~
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_size.cpp:52:23: error: no member named 'make_unique' in namespace 'std'
-        m_body = std::make_unique<chunk_dir_t>(m__io__raw_body, this, m__root);
-                 ~~~~~^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_size.cpp:52:35: error: 'chunk_dir_t' does not refer to a value
-        m_body = std::make_unique<chunk_dir_t>(m__io__raw_body, this, m__root);
-                                  ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_size.h:67:15: note: declared here
-        class chunk_dir_t : public kaitai::kstruct {
-              ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_size.cpp:52:48: warning: expression result unused [-Wunused-value]
-        m_body = std::make_unique<chunk_dir_t>(m__io__raw_body, this, m__root);
-                                               ^~~~~~~~~~~~~~~
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_size.cpp:52:65: warning: expression result unused [-Wunused-value]
-        m_body = std::make_unique<chunk_dir_t>(m__io__raw_body, this, m__root);
-                                                                ^~~~
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent3.cpp:68:62: warning: expression result unused [-Wunused-value]
             m_tag_content = std::make_unique<tag_char_t>(io, this, m__root);
                                                              ^~~~
@@ -2881,6 +2881,7 @@ In file included from /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp
 /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/bits/unique_ptr.h:273:7: note: 'unique_ptr' has been explicitly marked deleted here
       unique_ptr(const unique_ptr&) = delete;
       ^
+6 warnings and 7 errors generated.
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent3.cpp:85:42: error: no member named 'make_unique' in namespace 'std'
         m_tags->push_back(std::move(std::make_unique<tag_t>(m__io, this, m__root)));
                                     ~~~~~^
@@ -2896,9 +2897,8 @@ In file included from /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent3.cpp:85:68: warning: expression result unused [-Wunused-value]
         m_tags->push_back(std::move(std::make_unique<tag_t>(m__io, this, m__root)));
                                                                    ^~~~
-6 warnings and 7 errors generated.
-4 warnings and 6 errors generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_size.cpp.o] Error 1
+4 warnings and 6 errors generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent3.cpp.o] Error 1
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/expr_io_eof.cpp:21:25: error: no member named 'make_unique' in namespace 'std'
     m_substream1 = std::make_unique<one_or_two_t>(m__io__raw_substream1, this, m__root);
@@ -2949,6 +2949,21 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
                                                    ^~~~
 2 warnings and 2 errors generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/position_to_end.cpp.o] Error 1
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/enum_if.cpp:18:18: error: no member named 'make_unique' in namespace 'std'
+    m_op1 = std::make_unique<operation_t>(m__io, this, m__root);
+            ~~~~~^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/enum_if.cpp:18:30: error: 'operation_t' does not refer to a value
+    m_op1 = std::make_unique<operation_t>(m__io, this, m__root);
+                             ^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/enum_if.h:34:11: note: declared here
+    class operation_t : public kaitai::kstruct {
+          ^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/enum_if.cpp:18:43: warning: expression result unused [-Wunused-value]
+    m_op1 = std::make_unique<operation_t>(m__io, this, m__root);
+                                          ^~~~~
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/enum_if.cpp:18:50: warning: expression result unused [-Wunused-value]
+    m_op1 = std::make_unique<operation_t>(m__io, this, m__root);
+                                                 ^~~~
 In file included from /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_str_else.cpp:4:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_str_else.h:120:64: error: call to deleted constructor of 'std::unique_ptr<kaitai::kstruct>'
         std::unique_ptr<kaitai::kstruct> body() const { return m_body; }
@@ -2956,9 +2971,25 @@ In file included from /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp
 /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/bits/unique_ptr.h:273:7: note: 'unique_ptr' has been explicitly marked deleted here
       unique_ptr(const unique_ptr&) = delete;
       ^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/enum_if.cpp:19:18: error: no member named 'make_unique' in namespace 'std'
+    m_op2 = std::make_unique<operation_t>(m__io, this, m__root);
+            ~~~~~^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/enum_if.cpp:19:30: error: 'operation_t' does not refer to a value
+    m_op2 = std::make_unique<operation_t>(m__io, this, m__root);
+                             ^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/enum_if.h:34:11: note: declared here
+    class operation_t : public kaitai::kstruct {
+          ^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/enum_if.cpp:19:43: warning: expression result unused [-Wunused-value]
+    m_op2 = std::make_unique<operation_t>(m__io, this, m__root);
+                                          ^~~~~
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/enum_if.cpp:19:50: warning: expression result unused [-Wunused-value]
+    m_op2 = std::make_unique<operation_t>(m__io, this, m__root);
+                                                 ^~~~
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_str_else.cpp:20:49: error: no member named 'make_unique' in namespace 'std'
-            m_opcodes->push_back(std::move(std::make_unique<opcode_t>(m__io, this, m__root)));
-                                           ~~~~~^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/enum_if.cpp:20:18:             m_opcodes->push_back(std::move(std::make_unique<opcode_t>(m__io, this, m__root)));error
+:                                            ~~~~~^no member named 'make_unique' in namespace 'std'
+
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_str_else.cpp:20:61: error: 'opcode_t' does not refer to a value
             m_opcodes->push_back(std::move(std::make_unique<opcode_t>(m__io, this, m__root)));
                                                             ^
@@ -2971,6 +3002,20 @@ In file included from /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_str_else.cpp:20:78: warning: expression result unused [-Wunused-value]
             m_opcodes->push_back(std::move(std::make_unique<opcode_t>(m__io, this, m__root)));
                                                                              ^~~~
+    m_op3 = std::make_unique<operation_t>(m__io, this, m__root);
+            ~~~~~^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/enum_if.cpp:20:30: error: 'operation_t' does not refer to a value
+    m_op3 = std::make_unique<operation_t>(m__io, this, m__root);
+                             ^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/enum_if.h:34:11: note: declared here
+    class operation_t : public kaitai::kstruct {
+          ^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/enum_if.cpp:20:43: warning: expression result unused [-Wunused-value]
+    m_op3 = std::make_unique<operation_t>(m__io, this, m__root);
+                                          ^~~~~
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/enum_if.cpp:20:50: warning: expression result unused [-Wunused-value]
+    m_op3 = std::make_unique<operation_t>(m__io, this, m__root);
+                                                 ^~~~
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_str_else.cpp:40:27: error: no member named 'make_unique' in namespace 'std'
             m_body = std::make_unique<intval_t>(m__io, this, m__root);
                      ~~~~~^
@@ -2986,6 +3031,21 @@ In file included from /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_str_else.cpp:40:56: warning: expression result unused [-Wunused-value]
             m_body = std::make_unique<intval_t>(m__io, this, m__root);
                                                        ^~~~
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/enum_if.cpp:39:28: error: no member named 'make_unique' in namespace 'std'
+        m_arg_tuple = std::make_unique<arg_tuple_t>(m__io, this, m__root);
+                      ~~~~~^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/enum_if.cpp:39:40: error: 'arg_tuple_t' does not refer to a value
+        m_arg_tuple = std::make_unique<arg_tuple_t>(m__io, this, m__root);
+                                       ^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/enum_if.h:73:11: note: declared here
+    class arg_tuple_t : public kaitai::kstruct {
+          ^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/enum_if.cpp:39:53: warning: expression result unused [-Wunused-value]
+        m_arg_tuple = std::make_unique<arg_tuple_t>(m__io, this, m__root);
+                                                    ^~~~~
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/enum_if.cpp:39:60: warning: expression result unused [-Wunused-value]
+        m_arg_tuple = std::make_unique<arg_tuple_t>(m__io, this, m__root);
+                                                           ^~~~
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_str_else.cpp:43:27: error: no member named 'make_unique' in namespace 'std'
             m_body = std::make_unique<strval_t>(m__io, this, m__root);
                      ~~~~~^
@@ -3000,6 +3060,21 @@ In file included from /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp
                                                 ^~~~~
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_str_else.cpp:43:56: warning: expression result unused [-Wunused-value]
             m_body = std::make_unique<strval_t>(m__io, this, m__root);
+                                                       ^~~~
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/enum_if.cpp:44:26: error: no member named 'make_unique' in namespace 'std'
+        m_arg_str = std::make_unique<arg_str_t>(m__io, this, m__root);
+                    ~~~~~^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/enum_if.cpp:44:38: error: 'arg_str_t' does not refer to a value
+        m_arg_str = std::make_unique<arg_str_t>(m__io, this, m__root);
+                                     ^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/enum_if.h:98:11: note: declared here
+    class arg_str_t : public kaitai::kstruct {
+          ^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/enum_if.cpp:44:49: warning: expression result unused [-Wunused-value]
+        m_arg_str = std::make_unique<arg_str_t>(m__io, this, m__root);
+                                                ^~~~~
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/enum_if.cpp:44:56: warning: expression result unused [-Wunused-value]
+        m_arg_str = std::make_unique<arg_str_t>(m__io, this, m__root);
                                                        ^~~~
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_str_else.cpp:46:27: error: no member named 'make_unique' in namespace 'std'
             m_body = std::make_unique<noneval_t>(m__io, this, m__root);
@@ -3016,83 +3091,6 @@ In file included from /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_str_else.cpp:46:57: warning: expression result unused [-Wunused-value]
             m_body = std::make_unique<noneval_t>(m__io, this, m__root);
                                                         ^~~~
-8 warnings and 9 errors generated.
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/enum_if.cpp:18:18: error: no member named 'make_unique' in namespace 'std'
-    m_op1 = std::make_unique<operation_t>(m__io, this, m__root);
-            ~~~~~^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/enum_if.cpp:18:30: error: 'operation_t' does not refer to a value
-    m_op1 = std::make_unique<operation_t>(m__io, this, m__root);
-                             ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/enum_if.h:34:11: note: declared here
-    class operation_t : public kaitai::kstruct {
-          ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/enum_if.cpp:18:43: warning: expression result unused [-Wunused-value]
-    m_op1 = std::make_unique<operation_t>(m__io, this, m__root);
-                                          ^~~~~
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/enum_if.cpp:18:50: warning: expression result unused [-Wunused-value]
-    m_op1 = std::make_unique<operation_t>(m__io, this, m__root);
-                                                 ^~~~
-make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_str_else.cpp.o] Error 1
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/enum_if.cpp:19:18: error: no member named 'make_unique' in namespace 'std'
-    m_op2 = std::make_unique<operation_t>(m__io, this, m__root);
-            ~~~~~^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/enum_if.cpp:19:30: error: 'operation_t' does not refer to a value
-    m_op2 = std::make_unique<operation_t>(m__io, this, m__root);
-                             ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/enum_if.h:34:11: note: declared here
-    class operation_t : public kaitai::kstruct {
-          ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/enum_if.cpp:19:43: warning: expression result unused [-Wunused-value]
-    m_op2 = std::make_unique<operation_t>(m__io, this, m__root);
-                                          ^~~~~
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/enum_if.cpp:19:50: warning: expression result unused [-Wunused-value]
-    m_op2 = std::make_unique<operation_t>(m__io, this, m__root);
-                                                 ^~~~
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/enum_if.cpp:20:18: error: no member named 'make_unique' in namespace 'std'
-    m_op3 = std::make_unique<operation_t>(m__io, this, m__root);
-            ~~~~~^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/enum_if.cpp:20:30: error: 'operation_t' does not refer to a value
-    m_op3 = std::make_unique<operation_t>(m__io, this, m__root);
-                             ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/enum_if.h:34:11: note: declared here
-    class operation_t : public kaitai::kstruct {
-          ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/enum_if.cpp:20:43: warning: expression result unused [-Wunused-value]
-    m_op3 = std::make_unique<operation_t>(m__io, this, m__root);
-                                          ^~~~~
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/enum_if.cpp:20:50: warning: expression result unused [-Wunused-value]
-    m_op3 = std::make_unique<operation_t>(m__io, this, m__root);
-                                                 ^~~~
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/enum_if.cpp:39:28: error: no member named 'make_unique' in namespace 'std'
-        m_arg_tuple = std::make_unique<arg_tuple_t>(m__io, this, m__root);
-                      ~~~~~^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/enum_if.cpp:39:40: error: 'arg_tuple_t' does not refer to a value
-        m_arg_tuple = std::make_unique<arg_tuple_t>(m__io, this, m__root);
-                                       ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/enum_if.h:73:11: note: declared here
-    class arg_tuple_t : public kaitai::kstruct {
-          ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/enum_if.cpp:39:53: warning: expression result unused [-Wunused-value]
-        m_arg_tuple = std::make_unique<arg_tuple_t>(m__io, this, m__root);
-                                                    ^~~~~
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/enum_if.cpp:39:60: warning: expression result unused [-Wunused-value]
-        m_arg_tuple = std::make_unique<arg_tuple_t>(m__io, this, m__root);
-                                                           ^~~~
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/enum_if.cpp:44:26: error: no member named 'make_unique' in namespace 'std'
-        m_arg_str = std::make_unique<arg_str_t>(m__io, this, m__root);
-                    ~~~~~^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/enum_if.cpp:44:38: error: 'arg_str_t' does not refer to a value
-        m_arg_str = std::make_unique<arg_str_t>(m__io, this, m__root);
-                                     ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/enum_if.h:98:11: note: declared here
-    class arg_str_t : public kaitai::kstruct {
-          ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/enum_if.cpp:44:49: warning: expression result unused [-Wunused-value]
-        m_arg_str = std::make_unique<arg_str_t>(m__io, this, m__root);
-                                                ^~~~~
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/enum_if.cpp:44:56: warning: expression result unused [-Wunused-value]
-        m_arg_str = std::make_unique<arg_str_t>(m__io, this, m__root);
-                                                       ^~~~
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/user_type.cpp:16:18: error: no member named 'make_unique' in namespace 'std'
     m_one = std::make_unique<header_t>(m__io, this, m__root);
             ~~~~~^
@@ -3108,9 +3106,11 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/user_type.cpp:16:47: warning: expression result unused [-Wunused-value]
     m_one = std::make_unique<header_t>(m__io, this, m__root);
                                               ^~~~
+8 warnings and 9 errors generated.
 10 warnings and 10 errors generated.
-2 warnings and 2 errors generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/enum_if.cpp.o] Error 1
+make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_str_else.cpp.o] Error 1
+2 warnings and 2 errors generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/user_type.cpp.o] Error 1
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/opaque_external_type_02_child.cpp:19:17: error: no member named 'make_unique' in namespace 'std'
     m_s3 = std::make_unique<opaque_external_type_02_child_child_t>(m__io, this, m__root);
@@ -3907,9 +3907,6 @@ In file included from /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl
 /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/bits/unique_ptr.h:273:7: note: 'unique_ptr' has been explicitly marked deleted here
       unique_ptr(const unique_ptr&) = delete;
       ^
-/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/test_switch_manual_int_else.cpp:16:23: error: cannot cast from type 'std::unique_ptr<kaitai::kstruct>' to pointer type 'switch_manual_int_else_t::opcode_t::strval_t *'
-    BOOST_CHECK_EQUAL(static_cast<switch_manual_int_else_t::opcode_t::strval_t*>(r->opcodes()->at(0)->body())->value(), std::string("foo"));
-                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/test_switch_manual_str.cpp:16:23: error: cannot cast from type 'std::unique_ptr<kaitai::kstruct>' to pointer type 'switch_manual_str_t::opcode_t::strval_t *'
     BOOST_CHECK_EQUAL(static_cast<switch_manual_str_t::opcode_t::strval_t*>(r->opcodes()->at(0)->body())->value(), std::string("foobar"));
                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -3926,6 +3923,15 @@ note: (skipping 10 expansions in backtrace; use -fmacro-backtrace-limit=0 to see
 /usr/include/boost/preprocessor/seq/elem.hpp:43:60: note: expanded from macro 'BOOST_PP_SEQ_ELEM_II'
 #    define BOOST_PP_SEQ_ELEM_II(im) BOOST_PP_SEQ_ELEM_III(im)
                                                            ^~
+/usr/include/boost/preprocessor/seq/elem.hpp:44:41: note: expanded from macro 'BOOST_PP_SEQ_ELEM_III'
+#    define BOOST_PP_SEQ_ELEM_III(x, _) x
+                                        ^
+/usr/include/boost/test/test_tools.hpp:97:52: note: expanded from macro 'BOOST_TEST_PASS_ARG_INFO'
+#define BOOST_TEST_PASS_ARG_INFO( r, data, arg ) , arg, BOOST_STRINGIZE( arg )
+                                                   ^~~
+/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/test_switch_manual_str.cpp:18:23: error: cannot cast from type 'std::unique_ptr<kaitai::kstruct>' to pointer type 'switch_manual_str_t::opcode_t::intval_t *'
+    BOOST_CHECK_EQUAL(static_cast<switch_manual_str_t::opcode_t::intval_t*>(r->opcodes()->at(1)->body())->value(), 66);
+                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 /usr/include/boost/test/test_tools.hpp:169:109: note: expanded from macro 'BOOST_CHECK_EQUAL'
     BOOST_CHECK_WITH_ARGS_IMPL( ::boost::test_tools::tt_detail::equal_impl_frwd(), "", CHECK, CHECK_EQUAL, (L)(R) )
                                                                                                             ^
@@ -3945,15 +3951,59 @@ note: (skipping 10 expansions in backtrace; use -fmacro-backtrace-limit=0 to see
 /usr/include/boost/test/test_tools.hpp:97:52: note: expanded from macro 'BOOST_TEST_PASS_ARG_INFO'
 #define BOOST_TEST_PASS_ARG_INFO( r, data, arg ) , arg, BOOST_STRINGIZE( arg )
                                                    ^~~
+/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/test_switch_manual_int_else.cpp:16:23: error: cannot cast from type 'std::unique_ptr<kaitai::kstruct>' to pointer type 'switch_manual_int_else_t::opcode_t::strval_t *'
+/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/test_switch_manual_str.cpp:20:23: error: cannot cast from type 'std::unique_ptr<kaitai::kstruct>' to pointer type 'switch_manual_str_t::opcode_t::intval_t *'
+    BOOST_CHECK_EQUAL(static_cast<switch_manual_str_t::opcode_t::intval_t*>(r->opcodes()->at(2)->body())->value(), 55);
+                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/boost/test/test_tools.hpp:169:109: note: expanded from macro 'BOOST_CHECK_EQUAL'
+    BOOST_CHECK_WITH_ARGS_IMPL( ::boost::test_tools::tt_detail::equal_impl_frwd(), "", CHECK, CHECK_EQUAL, (L)(R) )
+                                                                                                            ^
+/usr/include/boost/test/test_tools.hpp:103:59: note: expanded from macro 'BOOST_CHECK_WITH_ARGS_IMPL'
+    BOOST_PP_SEQ_FOR_EACH( BOOST_TEST_PASS_ARG_INFO, '_', ARGS ) ); \
+                                                          ^~~~
+/usr/include/boost/preprocessor/seq/for_each.hpp:26:80: note: expanded from macro 'BOOST_PP_SEQ_FOR_EACH'
+#    define BOOST_PP_SEQ_FOR_EACH(macro, data, seq) BOOST_PP_FOR((macro, data, seq (nil)), BOOST_PP_SEQ_FOR_EACH_P, BOOST_PP_SEQ_FOR_EACH_O, BOOST_PP_SEQ_FOR_EACH_M)
+                                                                               ^~~
+note: (skipping 10 expansions in backtrace; use -fmacro-backtrace-limit=0 to see all)
+/usr/include/boost/preprocessor/seq/elem.hpp:43:60: note: expanded from macro 'BOOST_PP_SEQ_ELEM_II'
+#    define BOOST_PP_SEQ_ELEM_II(im) BOOST_PP_SEQ_ELEM_III(im)
+                                                           ^~
+    BOOST_CHECK_EQUAL(static_cast<switch_manual_int_else_t::opcode_t::strval_t*>(r->opcodes()->at(0)->body())->value(), std::string("foo"));
+                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/boost/test/test_tools.hpp:169:109: note: expanded from macro 'BOOST_CHECK_EQUAL'
+    BOOST_CHECK_WITH_ARGS_IMPL( ::boost::test_tools::tt_detail::equal_impl_frwd(), "", CHECK, CHECK_EQUAL, (L)(R) )
+                                                                                                            ^
+/usr/include/boost/test/test_tools.hpp:103:59: note: expanded from macro 'BOOST_CHECK_WITH_ARGS_IMPL'
+    BOOST_PP_SEQ_FOR_EACH( BOOST_TEST_PASS_ARG_INFO, '_', ARGS ) ); \
+                                                          ^~~~
+/usr/include/boost/preprocessor/seq/for_each.hpp:26:80: note: expanded from macro 'BOOST_PP_SEQ_FOR_EACH'
+#    define BOOST_PP_SEQ_FOR_EACH(macro, data, seq) BOOST_PP_FOR((macro, data, seq (nil)), BOOST_PP_SEQ_FOR_EACH_P, BOOST_PP_SEQ_FOR_EACH_O, BOOST_PP_SEQ_FOR_EACH_M)
+                                                                               ^~~
+note: (skipping 10 expansions in backtrace; use -fmacro-backtrace-limit=0 to see all)
+/usr/include/boost/preprocessor/seq/elem.hpp:43:60: note: expanded from macro 'BOOST_PP_SEQ_ELEM_II'
+#    define BOOST_PP_SEQ_ELEM_II(im) BOOST_PP_SEQ_ELEM_III(im)
+                                                           ^~
+/usr/include/boost/preprocessor/seq/elem.hpp:44:41: note: expanded from macro 'BOOST_PP_SEQ_ELEM_III'
+#    define BOOST_PP_SEQ_ELEM_III(x, _) x
+                                        ^
 /usr/include/boost/preprocessor/seq/elem.hpp:44:41: note: expanded from macro 'BOOST_PP_SEQ_ELEM_III'
 #    define BOOST_PP_SEQ_ELEM_III(x, _) x
                                         ^
 /usr/include/boost/test/test_tools.hpp:97:52: note: expanded from macro 'BOOST_TEST_PASS_ARG_INFO'
 #define BOOST_TEST_PASS_ARG_INFO( r, data, arg ) , arg, BOOST_STRINGIZE( arg )
                                                    ^~~
-/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/test_switch_manual_str.cpp:18:23: error: cannot cast from type 'std::unique_ptr<kaitai::kstruct>' to pointer type 'switch_manual_str_t::opcode_t::intval_t *'
-    BOOST_CHECK_EQUAL(static_cast<switch_manual_str_t::opcode_t::intval_t*>(r->opcodes()->at(1)->body())->value(), 66);
+/usr/include/boost/test/test_tools.hpp:97:52: note: expanded from macro 'BOOST_TEST_PASS_ARG_INFO'
+#define BOOST_TEST_PASS_ARG_INFO( r, data, arg ) , arg, BOOST_STRINGIZE( arg )
+                                                   ^~~
+/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/test_switch_manual_str.cpp:22:23: error: cannot cast from type 'std::unique_ptr<kaitai::kstruct>' to pointer type 'switch_manual_str_t::opcode_t::strval_t *'
+    BOOST_CHECK_EQUAL(static_cast<switch_manual_str_t::opcode_t::strval_t*>(r->opcodes()->at(3)->body())->value(), std::string(""));
                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/boost/test/test_tools.hpp:169:109: note: expanded from macro 'BOOST_CHECK_EQUAL'
+    BOOST_CHECK_WITH_ARGS_IMPL( ::boost::test_tools::tt_detail::equal_impl_frwd(), "", CHECK, CHECK_EQUAL, (L)(R) )
+                                                                                                            ^
+/usr/include/boost/test/test_tools.hpp:103:59: note: expanded from macro 'BOOST_CHECK_WITH_ARGS_IMPL'
+    BOOST_PP_SEQ_FOR_EACH( BOOST_TEST_PASS_ARG_INFO, '_', ARGS ) ); \
+                                                          ^~~~
 /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/test_switch_manual_int_else.cpp:18:23: error: cannot cast from type 'std::unique_ptr<kaitai::kstruct>' to pointer type 'switch_manual_int_else_t::opcode_t::noneval_t *'
     BOOST_CHECK_EQUAL(static_cast<switch_manual_int_else_t::opcode_t::noneval_t*>(r->opcodes()->at(1)->body())->filler(), 66);
                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -3967,15 +4017,6 @@ note: (skipping 10 expansions in backtrace; use -fmacro-backtrace-limit=0 to see
 #    define BOOST_PP_SEQ_FOR_EACH(macro, data, seq) BOOST_PP_FOR((macro, data, seq (nil)), BOOST_PP_SEQ_FOR_EACH_P, BOOST_PP_SEQ_FOR_EACH_O, BOOST_PP_SEQ_FOR_EACH_M)
                                                                                ^~~
 note: (skipping 10 expansions in backtrace; use -fmacro-backtrace-limit=0 to see all)
-/usr/include/boost/preprocessor/seq/elem.hpp:43:60: note: expanded from macro 'BOOST_PP_SEQ_ELEM_II'
-#    define BOOST_PP_SEQ_ELEM_II(im) BOOST_PP_SEQ_ELEM_III(im)
-                                                           ^~
-/usr/include/boost/test/test_tools.hpp:169:109: note: expanded from macro 'BOOST_CHECK_EQUAL'
-    BOOST_CHECK_WITH_ARGS_IMPL( ::boost::test_tools::tt_detail::equal_impl_frwd(), "", CHECK, CHECK_EQUAL, (L)(R) )
-                                                                                                            ^
-/usr/include/boost/test/test_tools.hpp:103:59: note: expanded from macro 'BOOST_CHECK_WITH_ARGS_IMPL'
-    BOOST_PP_SEQ_FOR_EACH( BOOST_TEST_PASS_ARG_INFO, '_', ARGS ) ); \
-                                                          ^~~~
 /usr/include/boost/preprocessor/seq/for_each.hpp:26:80: note: expanded from macro 'BOOST_PP_SEQ_FOR_EACH'
 #    define BOOST_PP_SEQ_FOR_EACH(macro, data, seq) BOOST_PP_FOR((macro, data, seq (nil)), BOOST_PP_SEQ_FOR_EACH_P, BOOST_PP_SEQ_FOR_EACH_O, BOOST_PP_SEQ_FOR_EACH_M)
                                                                                ^~~
@@ -3989,6 +4030,9 @@ note: (skipping 10 expansions in backtrace; use -fmacro-backtrace-limit=0 to see
 /usr/include/boost/test/test_tools.hpp:97:52: note: expanded from macro 'BOOST_TEST_PASS_ARG_INFO'
 #define BOOST_TEST_PASS_ARG_INFO( r, data, arg ) , arg, BOOST_STRINGIZE( arg )
                                                    ^~~
+/usr/include/boost/preprocessor/seq/elem.hpp:43:60: note: expanded from macro 'BOOST_PP_SEQ_ELEM_II'
+#    define BOOST_PP_SEQ_ELEM_II(im) BOOST_PP_SEQ_ELEM_III(im)
+                                                           ^~
 /usr/include/boost/preprocessor/seq/elem.hpp:44:41: note: expanded from macro 'BOOST_PP_SEQ_ELEM_III'
 #    define BOOST_PP_SEQ_ELEM_III(x, _) x
                                         ^
@@ -4008,68 +4052,24 @@ note: (skipping 10 expansions in backtrace; use -fmacro-backtrace-limit=0 to see
 #    define BOOST_PP_SEQ_FOR_EACH(macro, data, seq) BOOST_PP_FOR((macro, data, seq (nil)), BOOST_PP_SEQ_FOR_EACH_P, BOOST_PP_SEQ_FOR_EACH_O, BOOST_PP_SEQ_FOR_EACH_M)
                                                                                ^~~
 note: (skipping 10 expansions in backtrace; use -fmacro-backtrace-limit=0 to see all)
-/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/test_switch_manual_str.cpp:20:23: error: cannot cast from type 'std::unique_ptr<kaitai::kstruct>' to pointer type 'switch_manual_str_t::opcode_t::intval_t *'
-    BOOST_CHECK_EQUAL(static_cast<switch_manual_str_t::opcode_t::intval_t*>(r->opcodes()->at(2)->body())->value(), 55);
-                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/usr/include/boost/test/test_tools.hpp:169:109: note: expanded from macro 'BOOST_CHECK_EQUAL'
-    BOOST_CHECK_WITH_ARGS_IMPL( ::boost::test_tools::tt_detail::equal_impl_frwd(), "", CHECK, CHECK_EQUAL, (L)(R) )
-                                                                                                            ^
-/usr/include/boost/test/test_tools.hpp:103:59: note: expanded from macro 'BOOST_CHECK_WITH_ARGS_IMPL'
-    BOOST_PP_SEQ_FOR_EACH( BOOST_TEST_PASS_ARG_INFO, '_', ARGS ) ); \
-                                                          ^~~~
-/usr/include/boost/preprocessor/seq/for_each.hpp:26:80: note: expanded from macro 'BOOST_PP_SEQ_FOR_EACH'
-#    define BOOST_PP_SEQ_FOR_EACH(macro, data, seq) BOOST_PP_FOR((macro, data, seq (nil)), BOOST_PP_SEQ_FOR_EACH_P, BOOST_PP_SEQ_FOR_EACH_O, BOOST_PP_SEQ_FOR_EACH_M)
-                                                                               ^~~
-note: (skipping 10 expansions in backtrace; use -fmacro-backtrace-limit=0 to see all)
 /usr/include/boost/preprocessor/seq/elem.hpp:43:60: note: expanded from macro 'BOOST_PP_SEQ_ELEM_II'
 #    define BOOST_PP_SEQ_ELEM_II(im) BOOST_PP_SEQ_ELEM_III(im)
                                                            ^~
 /usr/include/boost/preprocessor/seq/elem.hpp:44:41: note: expanded from macro 'BOOST_PP_SEQ_ELEM_III'
 #    define BOOST_PP_SEQ_ELEM_III(x, _) x
                                         ^
-/usr/include/boost/preprocessor/seq/elem.hpp:43:60: note: expanded from macro 'BOOST_PP_SEQ_ELEM_II'
-#    define BOOST_PP_SEQ_ELEM_II(im) BOOST_PP_SEQ_ELEM_III(im)
-                                                           ^~
-/usr/include/boost/preprocessor/seq/elem.hpp:44:41: note: expanded from macro 'BOOST_PP_SEQ_ELEM_III'
-#    define BOOST_PP_SEQ_ELEM_III(x, _) x
-                                        ^
-/usr/include/boost/test/test_tools.hpp:97:52: note: expanded from macro 'BOOST_TEST_PASS_ARG_INFO'
-#define BOOST_TEST_PASS_ARG_INFO( r, data, arg ) , arg, BOOST_STRINGIZE( arg )
-                                                   ^~~
 /usr/include/boost/test/test_tools.hpp:97:52: note: expanded from macro 'BOOST_TEST_PASS_ARG_INFO'
 #define BOOST_TEST_PASS_ARG_INFO( r, data, arg ) , arg, BOOST_STRINGIZE( arg )
                                                    ^~~
 /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/test_switch_manual_int_else.cpp:22:23: error: cannot cast from type 'std::unique_ptr<kaitai::kstruct>' to pointer type 'switch_manual_int_else_t::opcode_t::intval_t *'
     BOOST_CHECK_EQUAL(static_cast<switch_manual_int_else_t::opcode_t::intval_t*>(r->opcodes()->at(3)->body())->value(), 7);
                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/test_switch_manual_str.cpp:22:23: error: cannot cast from type 'std::unique_ptr<kaitai::kstruct>' to pointer type 'switch_manual_str_t::opcode_t::strval_t *'
-    BOOST_CHECK_EQUAL(static_cast<switch_manual_str_t::opcode_t::strval_t*>(r->opcodes()->at(3)->body())->value(), std::string(""));
-                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 /usr/include/boost/test/test_tools.hpp:169:109: note: expanded from macro 'BOOST_CHECK_EQUAL'
     BOOST_CHECK_WITH_ARGS_IMPL( ::boost::test_tools::tt_detail::equal_impl_frwd(), "", CHECK, CHECK_EQUAL, (L)(R) )
                                                                                                             ^
 /usr/include/boost/test/test_tools.hpp:103:59: note: expanded from macro 'BOOST_CHECK_WITH_ARGS_IMPL'
     BOOST_PP_SEQ_FOR_EACH( BOOST_TEST_PASS_ARG_INFO, '_', ARGS ) ); \
                                                           ^~~~
-/usr/include/boost/test/test_tools.hpp:169:109: note: expanded from macro 'BOOST_CHECK_EQUAL'
-    BOOST_CHECK_WITH_ARGS_IMPL( ::boost::test_tools::tt_detail::equal_impl_frwd(), "", CHECK, CHECK_EQUAL, (L)(R) )
-                                                                                                            ^
-/usr/include/boost/test/test_tools.hpp:103:59: note: expanded from macro 'BOOST_CHECK_WITH_ARGS_IMPL'
-    BOOST_PP_SEQ_FOR_EACH( BOOST_TEST_PASS_ARG_INFO, '_', ARGS ) ); \
-                                                          ^~~~
-/usr/include/boost/preprocessor/seq/for_each.hpp:26:80: note: expanded from macro 'BOOST_PP_SEQ_FOR_EACH'
-#    define BOOST_PP_SEQ_FOR_EACH(macro, data, seq) BOOST_PP_FOR((macro, data, seq (nil)), BOOST_PP_SEQ_FOR_EACH_P, BOOST_PP_SEQ_FOR_EACH_O, BOOST_PP_SEQ_FOR_EACH_M)
-                                                                               ^~~
-note: (skipping 10 expansions in backtrace; use -fmacro-backtrace-limit=0 to see all)
-/usr/include/boost/preprocessor/seq/elem.hpp:43:60: note: expanded from macro 'BOOST_PP_SEQ_ELEM_II'
-#    define BOOST_PP_SEQ_ELEM_II(im) BOOST_PP_SEQ_ELEM_III(im)
-                                                           ^~
-/usr/include/boost/preprocessor/seq/elem.hpp:44:41: note: expanded from macro 'BOOST_PP_SEQ_ELEM_III'
-#    define BOOST_PP_SEQ_ELEM_III(x, _) x
-                                        ^
-/usr/include/boost/test/test_tools.hpp:97:52: note: expanded from macro 'BOOST_TEST_PASS_ARG_INFO'
-#define BOOST_TEST_PASS_ARG_INFO( r, data, arg ) , arg, BOOST_STRINGIZE( arg )
-                                                   ^~~
 /usr/include/boost/preprocessor/seq/for_each.hpp:26:80: note: expanded from macro 'BOOST_PP_SEQ_FOR_EACH'
 #    define BOOST_PP_SEQ_FOR_EACH(macro, data, seq) BOOST_PP_FOR((macro, data, seq (nil)), BOOST_PP_SEQ_FOR_EACH_P, BOOST_PP_SEQ_FOR_EACH_O, BOOST_PP_SEQ_FOR_EACH_M)
                                                                                ^~~
@@ -4084,9 +4084,9 @@ note: (skipping 10 expansions in backtrace; use -fmacro-backtrace-limit=0 to see
 #define BOOST_TEST_PASS_ARG_INFO( r, data, arg ) , arg, BOOST_STRINGIZE( arg )
                                                    ^~~
 5 errors generated.
+make[2]: *** [CMakeFiles/ks_tests.dir/test_switch_manual_str.cpp.o] Error 1
 5 errors generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/test_switch_manual_int_else.cpp.o] Error 1
-make[2]: *** [CMakeFiles/ks_tests.dir/test_switch_manual_str.cpp.o] Error 1
 /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/test_process_coerce_switch.cpp:4:10: fatal error: 'process_coerce_switch.h' file not found
 #include <process_coerce_switch.h>
          ^~~~~~~~~~~~~~~~~~~~~~~~~
