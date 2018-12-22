@@ -1,10 +1,3 @@
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/repeat_eos_struct.cpp: In member function ‘void repeat_eos_struct_t::_read()’:
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/repeat_eos_struct.cpp:20:43: error: ‘make_unique’ is not a member of ‘std’
-             m_chunks->push_back(std::move(std::make_unique<chunk_t>(m__io, this, m__root)));
-                                           ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/repeat_eos_struct.cpp:20:67: error: expected primary-expression before ‘>’ token
-             m_chunks->push_back(std::move(std::make_unique<chunk_t>(m__io, this, m__root)));
-                                                                   ^
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/buffered_struct.cpp: In member function ‘void buffered_struct_t::_read()’:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/buffered_struct.cpp:22:16: error: ‘make_unique’ is not a member of ‘std’
      m_block1 = std::make_unique<block_t>(m__io__raw_block1, this, m__root);
@@ -25,7 +18,13 @@
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imported_and_rel.cpp:18:45: error: expected primary-expression before ‘>’ token
      m_two = std::make_unique<imported_root_t>(m__io);
                                              ^
-make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/repeat_eos_struct.cpp.o] Error 1
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/repeat_eos_struct.cpp: In member function ‘void repeat_eos_struct_t::_read()’:
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/repeat_eos_struct.cpp:20:43: error: ‘make_unique’ is not a member of ‘std’
+             m_chunks->push_back(std::move(std::make_unique<chunk_t>(m__io, this, m__root)));
+                                           ^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/repeat_eos_struct.cpp:20:67: error: expected primary-expression before ‘>’ token
+             m_chunks->push_back(std::move(std::make_unique<chunk_t>(m__io, this, m__root)));
+                                                                   ^
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/instance_user_array.cpp: In member function ‘std::vector<std::unique_ptr<instance_user_array_t::entry_t> >* instance_user_array_t::user_entries()’:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/instance_user_array.cpp:67:49: error: ‘make_unique’ is not a member of ‘std’
              m_user_entries->push_back(std::move(std::make_unique<entry_t>(io__raw_user_entries, this, m__root)));
@@ -33,8 +32,9 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/instance_user_array.cpp:67:73: error: expected primary-expression before ‘>’ token
              m_user_entries->push_back(std::move(std::make_unique<entry_t>(io__raw_user_entries, this, m__root)));
                                                                          ^
-make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/buffered_struct.cpp.o] Error 1
 make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imported_and_rel.cpp.o] Error 1
+make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/buffered_struct.cpp.o] Error 1
+make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/repeat_eos_struct.cpp.o] Error 1
 make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/instance_user_array.cpp.o] Error 1
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent_false2.cpp: In member function ‘void nav_parent_false2_t::_read()’:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent_false2.cpp:16:20: error: ‘make_unique’ is not a member of ‘std’
@@ -44,20 +44,6 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
      m_parentless = std::make_unique<child_t>(m__io, nullptr, m__root);
                                             ^
 make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent_false2.cpp.o] Error 1
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_call_short.cpp: In member function ‘void params_call_short_t::_read()’:
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_call_short.cpp:17:14: error: ‘make_unique’ is not a member of ‘std’
-     m_buf1 = std::make_unique<my_str1_t>(5, m__io, this, m__root);
-              ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_call_short.cpp:17:40: error: expected primary-expression before ‘>’ token
-     m_buf1 = std::make_unique<my_str1_t>(5, m__io, this, m__root);
-                                        ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_call_short.cpp:18:14: error: ‘make_unique’ is not a member of ‘std’
-     m_buf2 = std::make_unique<my_str2_t>((2 + 3), true, m__io, this, m__root);
-              ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_call_short.cpp:18:40: error: expected primary-expression before ‘>’ token
-     m_buf2 = std::make_unique<my_str2_t>((2 + 3), true, m__io, this, m__root);
-                                        ^
-make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_call_short.cpp.o] Error 1
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/expr_2.cpp: In member function ‘void expr_2_t::_read()’:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/expr_2.cpp:24:14: error: ‘make_unique’ is not a member of ‘std’
      m_str1 = std::make_unique<mod_str_t>(m__io, this, m__root);
@@ -78,6 +64,19 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/expr_2.cpp:48:38: error: expected primary-expression before ‘>’ token
      m_rest = std::make_unique<tuple_t>(m__io__raw_rest, this, m__root);
                                       ^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_call_short.cpp: In member function ‘void params_call_short_t::_read()’:
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_call_short.cpp:17:14: error: ‘make_unique’ is not a member of ‘std’
+     m_buf1 = std::make_unique<my_str1_t>(5, m__io, this, m__root);
+              ^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_call_short.cpp:17:40: error: expected primary-expression before ‘>’ token
+     m_buf1 = std::make_unique<my_str1_t>(5, m__io, this, m__root);
+                                        ^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_call_short.cpp:18:14: error: ‘make_unique’ is not a member of ‘std’
+     m_buf2 = std::make_unique<my_str2_t>((2 + 3), true, m__io, this, m__root);
+              ^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_call_short.cpp:18:40: error: expected primary-expression before ‘>’ token
+     m_buf2 = std::make_unique<my_str2_t>((2 + 3), true, m__io, this, m__root);
+                                        ^
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/expr_2.cpp: In member function ‘expr_2_t::tuple_t* expr_2_t::mod_str_t::tuple5()’:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/expr_2.cpp:83:16: error: ‘make_unique’ is not a member of ‘std’
      m_tuple5 = std::make_unique<tuple_t>(m__io, this, m__root);
@@ -85,6 +84,7 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/expr_2.cpp:83:40: error: expected primary-expression before ‘>’ token
      m_tuple5 = std::make_unique<tuple_t>(m__io, this, m__root);
                                         ^
+make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_call_short.cpp.o] Error 1
 make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/expr_2.cpp.o] Error 1
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_root.cpp: In member function ‘void nav_root_t::_read()’:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_root.cpp:17:16: error: ‘make_unique’ is not a member of ‘std’
@@ -107,6 +107,20 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
          m_entries->push_back(std::move(std::make_unique<entry_t>(m__io, this, m__root)));
                                                                 ^
 make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_root.cpp.o] Error 1
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/opaque_external_type_02_parent.cpp: In member function ‘void opaque_external_type_02_parent_t::_read()’:
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/opaque_external_type_02_parent.cpp:17:16: error: ‘make_unique’ is not a member of ‘std’
+     m_parent = std::make_unique<parent_obj_t>(m__io, this, m__root);
+                ^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/opaque_external_type_02_parent.cpp:17:45: error: expected primary-expression before ‘>’ token
+     m_parent = std::make_unique<parent_obj_t>(m__io, this, m__root);
+                                             ^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/opaque_external_type_02_parent.cpp: In member function ‘void opaque_external_type_02_parent_t::parent_obj_t::_read()’:
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/opaque_external_type_02_parent.cpp:31:15: error: ‘make_unique’ is not a member of ‘std’
+     m_child = std::make_unique<opaque_external_type_02_child_t>(m__io);
+               ^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/opaque_external_type_02_parent.cpp:31:63: error: expected primary-expression before ‘>’ token
+     m_child = std::make_unique<opaque_external_type_02_child_t>(m__io);
+                                                               ^
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nested_same_name2.cpp: In member function ‘void nested_same_name2_t::_read()’:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nested_same_name2.cpp:18:19: error: ‘make_unique’ is not a member of ‘std’
      m_main_data = std::make_unique<main_t>(m__io, this, m__root);
@@ -134,21 +148,6 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nested_same_name2.cpp:62:39: error: expected primary-expression before ‘>’ token
      m_foo = std::make_unique<foo_obj_t>(m__io, this, m__root);
                                        ^
-make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nested_same_name2.cpp.o] Error 1
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/opaque_external_type_02_parent.cpp: In member function ‘void opaque_external_type_02_parent_t::_read()’:
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/opaque_external_type_02_parent.cpp:17:16: error: ‘make_unique’ is not a member of ‘std’
-     m_parent = std::make_unique<parent_obj_t>(m__io, this, m__root);
-                ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/opaque_external_type_02_parent.cpp:17:45: error: expected primary-expression before ‘>’ token
-     m_parent = std::make_unique<parent_obj_t>(m__io, this, m__root);
-                                             ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/opaque_external_type_02_parent.cpp: In member function ‘void opaque_external_type_02_parent_t::parent_obj_t::_read()’:
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/opaque_external_type_02_parent.cpp:31:15: error: ‘make_unique’ is not a member of ‘std’
-     m_child = std::make_unique<opaque_external_type_02_child_t>(m__io);
-               ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/opaque_external_type_02_parent.cpp:31:63: error: expected primary-expression before ‘>’ token
-     m_child = std::make_unique<opaque_external_type_02_child_t>(m__io);
-                                                               ^
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/default_endian_expr_is_le.cpp: In member function ‘void default_endian_expr_is_le_t::_read()’:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/default_endian_expr_is_le.cpp:21:41: error: ‘make_unique’ is not a member of ‘std’
              m_docs->push_back(std::move(std::make_unique<doc_t>(m__io, this, m__root)));
@@ -156,6 +155,7 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/default_endian_expr_is_le.cpp:21:63: error: expected primary-expression before ‘>’ token
              m_docs->push_back(std::move(std::make_unique<doc_t>(m__io, this, m__root)));
                                                                ^
+make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/opaque_external_type_02_parent.cpp.o] Error 1
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/default_endian_expr_is_le.cpp: In member function ‘void default_endian_expr_is_le_t::doc_t::_read()’:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/default_endian_expr_is_le.cpp:39:14: error: ‘make_unique’ is not a member of ‘std’
      m_main = std::make_unique<main_obj_t>(m__io, this, m__root);
@@ -163,7 +163,7 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/default_endian_expr_is_le.cpp:39:41: error: expected primary-expression before ‘>’ token
      m_main = std::make_unique<main_obj_t>(m__io, this, m__root);
                                          ^
-make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/opaque_external_type_02_parent.cpp.o] Error 1
+make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nested_same_name2.cpp.o] Error 1
 make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/default_endian_expr_is_le.cpp.o] Error 1
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/bcd_user_type_le.cpp: In member function ‘void bcd_user_type_le_t::_read()’:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/bcd_user_type_le.cpp:23:13: error: ‘make_unique’ is not a member of ‘std’
@@ -317,25 +317,6 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/multiple_use.cpp:72:44: error: expected primary-expression before ‘>’ token
      m_second_use = std::make_unique<multi_t>(m__io, this, m__root);
                                             ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/bcd_user_type_be.cpp: In member function ‘void bcd_user_type_be_t::_read()’:
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/bcd_user_type_be.cpp:23:13: error: ‘make_unique’ is not a member of ‘std’
-     m_ltr = std::make_unique<ltr_obj_t>(m__io__raw_ltr, this, m__root);
-             ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/bcd_user_type_be.cpp:23:39: error: expected primary-expression before ‘>’ token
-     m_ltr = std::make_unique<ltr_obj_t>(m__io__raw_ltr, this, m__root);
-                                       ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/bcd_user_type_be.cpp:26:13: error: ‘make_unique’ is not a member of ‘std’
-     m_rtl = std::make_unique<rtl_obj_t>(m__io__raw_rtl, this, m__root);
-             ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/bcd_user_type_be.cpp:26:39: error: expected primary-expression before ‘>’ token
-     m_rtl = std::make_unique<rtl_obj_t>(m__io__raw_rtl, this, m__root);
-                                       ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/bcd_user_type_be.cpp:29:26: error: ‘make_unique’ is not a member of ‘std’
-     m_leading_zero_ltr = std::make_unique<leading_zero_ltr_obj_t>(m__io__raw_leading_zero_ltr, this, m__root);
-                          ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/bcd_user_type_be.cpp:29:65: error: expected primary-expression before ‘>’ token
-     m_leading_zero_ltr = std::make_unique<leading_zero_ltr_obj_t>(m__io__raw_leading_zero_ltr, this, m__root);
-                                                                 ^
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/default_endian_mod.cpp: In member function ‘void default_endian_mod_t::_read()’:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/default_endian_mod.cpp:16:14: error: ‘make_unique’ is not a member of ‘std’
      m_main = std::make_unique<main_obj_t>(m__io, this, m__root);
@@ -356,7 +337,28 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/default_endian_mod.cpp:33:46: error: expected primary-expression before ‘>’ token
      m_nest_be = std::make_unique<subnest_be_t>(m__io, this, m__root);
                                               ^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/bcd_user_type_be.cpp: In member function ‘void bcd_user_type_be_t::_read()’:
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/bcd_user_type_be.cpp:23:13: error: ‘make_unique’ is not a member of ‘std’
+     m_ltr = std::make_unique<ltr_obj_t>(m__io__raw_ltr, this, m__root);
+             ^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/bcd_user_type_be.cpp:23:39: error: expected primary-expression before ‘>’ token
+     m_ltr = std::make_unique<ltr_obj_t>(m__io__raw_ltr, this, m__root);
+                                       ^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/bcd_user_type_be.cpp:26:13: error: ‘make_unique’ is not a member of ‘std’
+     m_rtl = std::make_unique<rtl_obj_t>(m__io__raw_rtl, this, m__root);
+             ^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/bcd_user_type_be.cpp:26:39: error: expected primary-expression before ‘>’ token
+     m_rtl = std::make_unique<rtl_obj_t>(m__io__raw_rtl, this, m__root);
+                                       ^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/bcd_user_type_be.cpp:29:26: error: ‘make_unique’ is not a member of ‘std’
+     m_leading_zero_ltr = std::make_unique<leading_zero_ltr_obj_t>(m__io__raw_leading_zero_ltr, this, m__root);
+                          ^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/bcd_user_type_be.cpp:29:65: error: expected primary-expression before ‘>’ token
+     m_leading_zero_ltr = std::make_unique<leading_zero_ltr_obj_t>(m__io__raw_leading_zero_ltr, this, m__root);
+                                                                 ^
 make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/multiple_use.cpp.o] Error 1
+make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/default_endian_mod.cpp.o] Error 1
+make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/bcd_user_type_be.cpp.o] Error 1
 In file included from /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_enum.cpp:4:0:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_enum.h: In member function ‘std::unique_ptr<kaitai::kstruct> switch_manual_enum_t::opcode_t::body() const’:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_enum.h:107:64: error: use of deleted function ‘std::unique_ptr<_Tp, _Dp>::unique_ptr(const std::unique_ptr<_Tp, _Dp>&) [with _Tp = kaitai::kstruct; _Dp = std::default_delete<kaitai::kstruct>]’
@@ -387,8 +389,15 @@ In file included from /usr/include/c++/4.8/memory:81:0,
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_enum.cpp:46:43: error: expected primary-expression before ‘>’ token
          m_body = std::make_unique<strval_t>(m__io, this, m__root);
                                            ^
-make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/bcd_user_type_be.cpp.o] Error 1
-make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/default_endian_mod.cpp.o] Error 1
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent_vs_value_inst.cpp: In member function ‘void nav_parent_vs_value_inst_t::_read()’:
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent_vs_value_inst.cpp:17:15: error: ‘make_unique’ is not a member of ‘std’
+     m_child = std::make_unique<child_obj_t>(m__io, this, m__root);
+               ^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent_vs_value_inst.cpp:17:43: error: expected primary-expression before ‘>’ token
+     m_child = std::make_unique<child_obj_t>(m__io, this, m__root);
+                                           ^
+make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent_vs_value_inst.cpp.o] Error 1
+make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_enum.cpp.o] Error 1
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/default_endian_expr_exception.cpp: In member function ‘void default_endian_expr_exception_t::_read()’:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/default_endian_expr_exception.cpp:21:41: error: ‘make_unique’ is not a member of ‘std’
              m_docs->push_back(std::move(std::make_unique<doc_t>(m__io, this, m__root)));
@@ -403,16 +412,7 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/default_endian_expr_exception.cpp:39:41: error: expected primary-expression before ‘>’ token
      m_main = std::make_unique<main_obj_t>(m__io, this, m__root);
                                          ^
-make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_enum.cpp.o] Error 1
 make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/default_endian_expr_exception.cpp.o] Error 1
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent_vs_value_inst.cpp: In member function ‘void nav_parent_vs_value_inst_t::_read()’:
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent_vs_value_inst.cpp:17:15: error: ‘make_unique’ is not a member of ‘std’
-     m_child = std::make_unique<child_obj_t>(m__io, this, m__root);
-               ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent_vs_value_inst.cpp:17:43: error: expected primary-expression before ‘>’ token
-     m_child = std::make_unique<child_obj_t>(m__io, this, m__root);
-                                           ^
-make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent_vs_value_inst.cpp.o] Error 1
 In file included from /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_size_else.cpp:4:0:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_size_else.h: In member function ‘std::unique_ptr<kaitai::kstruct> switch_manual_int_size_else_t::chunk_t::body() const’:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_size_else.h:126:64: error: use of deleted function ‘std::unique_ptr<_Tp, _Dp>::unique_ptr(const std::unique_ptr<_Tp, _Dp>&) [with _Tp = kaitai::kstruct; _Dp = std::default_delete<kaitai::kstruct>]’
@@ -449,7 +449,6 @@ In file included from /usr/include/c++/4.8/memory:81:0,
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_size_else.cpp:55:42: error: expected primary-expression before ‘>’ token
          m_body = std::make_unique<dummy_t>(m__io__raw_body, this, m__root);
                                           ^
-make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_size_else.cpp.o] Error 1
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imports_circular_a.cpp: In member function ‘void imports_circular_a_t::_read()’:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imports_circular_a.cpp:18:13: error: ‘make_unique’ is not a member of ‘std’
      m_two = std::make_unique<imports_circular_b_t>(m__io);
@@ -457,6 +456,8 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imports_circular_a.cpp:18:50: error: expected primary-expression before ‘>’ token
      m_two = std::make_unique<imports_circular_b_t>(m__io);
                                                   ^
+make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imports_circular_a.cpp.o] Error 1
+make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_size_else.cpp.o] Error 1
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/type_ternary_opaque.cpp: In member function ‘void type_ternary_opaque_t::_read()’:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/type_ternary_opaque.cpp:27:25: error: ‘make_unique’ is not a member of ‘std’
          m_dif_wo_hack = std::make_unique<term_strz_t>(m__io__raw_dif_wo_hack);
@@ -477,13 +478,13 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/repeat_until_complex.cpp:23:43: error: expected primary-expression before ‘>’ token
              _ = std::make_unique<type_u1_t>(m__io, this, m__root);
                                            ^
-make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imports_circular_a.cpp.o] Error 1
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/repeat_until_complex.cpp:33:17: error: ‘make_unique’ is not a member of ‘std’
              _ = std::make_unique<type_u2_t>(m__io, this, m__root);
                  ^
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/repeat_until_complex.cpp:33:43: error: expected primary-expression before ‘>’ token
              _ = std::make_unique<type_u2_t>(m__io, this, m__root);
                                            ^
+make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/type_ternary_opaque.cpp.o] Error 1
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/process_coerce_bytes.cpp: In member function ‘void process_coerce_bytes_t::_read()’:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/process_coerce_bytes.cpp:20:40: error: ‘make_unique’ is not a member of ‘std’
          m_records->push_back(std::move(std::make_unique<record_t>(m__io, this, m__root)));
@@ -491,7 +492,6 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/process_coerce_bytes.cpp:20:65: error: expected primary-expression before ‘>’ token
          m_records->push_back(std::move(std::make_unique<record_t>(m__io, this, m__root)));
                                                                  ^
-make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/type_ternary_opaque.cpp.o] Error 1
 In file included from /usr/include/x86_64-linux-gnu/c++/4.8/bits/c++allocator.h:33:0,
                  from /usr/include/c++/4.8/bits/allocator.h:46,
                  from /usr/include/c++/4.8/memory:63,
@@ -521,12 +521,12 @@ In file included from /usr/include/x86_64-linux-gnu/c++/4.8/bits/c++allocator.h:
 /usr/include/c++/4.8/ext/new_allocator.h:120:4: error: use of deleted function ‘std::unique_ptr<_Tp, _Dp>::unique_ptr(const std::unique_ptr<_Tp, _Dp>&) [with _Tp = repeat_until_complex_t::type_u2_t; _Dp = std::default_delete<repeat_until_complex_t::type_u2_t>]’
   { ::new((void *)__p) _Up(std::forward<_Args>(__args)...); }
     ^
-make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/process_coerce_bytes.cpp.o] Error 1
 In file included from /usr/include/c++/4.8/memory:81:0,
                  from /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/repeat_until_complex.cpp:3:
 /usr/include/c++/4.8/bits/unique_ptr.h:273:7: error: declared here
        unique_ptr(const unique_ptr&) = delete;
        ^
+make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/process_coerce_bytes.cpp.o] Error 1
 make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/repeat_until_complex.cpp.o] Error 1
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/yaml_ints.cpp: In member function ‘int32_t yaml_ints_t::test_u8_dec()’:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/yaml_ints.cpp:43:19: warning: overflow in implicit constant conversion [-Woverflow]
@@ -543,6 +543,7 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/str_encodings_default.cpp:18:40: error: expected primary-expression before ‘>’ token
      m_rest = std::make_unique<subtype_t>(m__io, this, m__root);
                                         ^
+make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/str_encodings_default.cpp.o] Error 1
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/expr_io_pos.cpp: In member function ‘void expr_io_pos_t::_read()’:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/expr_io_pos.cpp:21:20: error: ‘make_unique’ is not a member of ‘std’
      m_substream1 = std::make_unique<all_plus_number_t>(m__io__raw_substream1, this, m__root);
@@ -556,8 +557,6 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/expr_io_pos.cpp:24:54: error: expected primary-expression before ‘>’ token
      m_substream2 = std::make_unique<all_plus_number_t>(m__io__raw_substream2, this, m__root);
                                                       ^
-make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/str_encodings_default.cpp.o] Error 1
-make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/expr_io_pos.cpp.o] Error 1
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nested_types3.cpp: In member function ‘void nested_types3_t::_read()’:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nested_types3.cpp:18:14: error: ‘make_unique’ is not a member of ‘std’
      m_a_cc = std::make_unique<subtype_a_t::subtype_cc_t>(m__io, this, m__root);
@@ -590,6 +589,8 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nested_types3.cpp:87:69: error: expected primary-expression before ‘>’ token
      m_a_c_d = std::make_unique<subtype_a_t::subtype_c_t::subtype_d_t>(m__io, this, m__root);
                                                                      ^
+make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/expr_io_pos.cpp.o] Error 1
+make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nested_types3.cpp.o] Error 1
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/index_to_param_expr.cpp: In member function ‘void index_to_param_expr_t::_read()’:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/index_to_param_expr.cpp:28:39: error: ‘make_unique’ is not a member of ‘std’
          m_blocks->push_back(std::move(std::make_unique<block_t>(i, m__io, this, m__root)));
@@ -597,8 +598,6 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/index_to_param_expr.cpp:28:63: error: expected primary-expression before ‘>’ token
          m_blocks->push_back(std::move(std::make_unique<block_t>(i, m__io, this, m__root)));
                                                                ^
-make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nested_types3.cpp.o] Error 1
-make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/index_to_param_expr.cpp.o] Error 1
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/debug_enum_name.cpp: In member function ‘void debug_enum_name_t::_read()’:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/debug_enum_name.cpp:23:19: error: ‘make_unique’ is not a member of ‘std’
      m_test_type = std::make_unique<test_subtype_t>(m__io, this, m__root);
@@ -606,6 +605,7 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/debug_enum_name.cpp:23:50: error: expected primary-expression before ‘>’ token
      m_test_type = std::make_unique<test_subtype_t>(m__io, this, m__root);
                                                   ^
+make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/index_to_param_expr.cpp.o] Error 1
 make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/debug_enum_name.cpp.o] Error 1
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imports_circular_b.cpp: In member function ‘void imports_circular_b_t::_read()’:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imports_circular_b.cpp:21:22: error: ‘make_unique’ is not a member of ‘std’
@@ -614,7 +614,6 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imports_circular_b.cpp:21:59: error: expected primary-expression before ‘>’ token
          m_back_ref = std::make_unique<imports_circular_a_t>(m__io);
                                                            ^
-make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imports_circular_b.cpp.o] Error 1
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_integers.cpp: In member function ‘void switch_integers_t::_read()’:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_integers.cpp:20:44: error: ‘make_unique’ is not a member of ‘std’
              m_opcodes->push_back(std::move(std::make_unique<opcode_t>(m__io, this, m__root)));
@@ -622,6 +621,7 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_integers.cpp:20:69: error: expected primary-expression before ‘>’ token
              m_opcodes->push_back(std::move(std::make_unique<opcode_t>(m__io, this, m__root)));
                                                                      ^
+make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imports_circular_b.cpp.o] Error 1
 make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_integers.cpp.o] Error 1
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/process_coerce_usertype2.cpp: In member function ‘void process_coerce_usertype2_t::_read()’:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/process_coerce_usertype2.cpp:20:40: error: ‘make_unique’ is not a member of ‘std’
@@ -673,6 +673,13 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
      m_foo = std::make_unique<foo_obj_t>(m__io, this, m__root);
                                        ^
 make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nested_same_name.cpp.o] Error 1
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imports_rel_1.cpp: In member function ‘void imports_rel_1_t::_read()’:
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imports_rel_1.cpp:18:13: error: ‘make_unique’ is not a member of ‘std’
+     m_two = std::make_unique<imported_1_t>(m__io);
+             ^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imports_rel_1.cpp:18:42: error: expected primary-expression before ‘>’ token
+     m_two = std::make_unique<imported_1_t>(m__io);
+                                          ^
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent2.cpp: In member function ‘void nav_parent2_t::_read()’:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent2.cpp:22:37: error: ‘make_unique’ is not a member of ‘std’
          m_tags->push_back(std::move(std::make_unique<tag_t>(m__io, this, m__root)));
@@ -703,22 +710,7 @@ In file included from /usr/include/c++/4.8/memory:81:0,
 /usr/include/c++/4.8/bits/unique_ptr.h:273:7: error: declared here
        unique_ptr(const unique_ptr&) = delete;
        ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imports_rel_1.cpp: In member function ‘void imports_rel_1_t::_read()’:
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imports_rel_1.cpp:18:13: error: ‘make_unique’ is not a member of ‘std’
-     m_two = std::make_unique<imported_1_t>(m__io);
-             ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imports_rel_1.cpp:18:42: error: expected primary-expression before ‘>’ token
-     m_two = std::make_unique<imported_1_t>(m__io);
-                                          ^
-make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent2.cpp.o] Error 1
 make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imports_rel_1.cpp.o] Error 1
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imports_abs_abs.cpp: In member function ‘void imports_abs_abs_t::_read()’:
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imports_abs_abs.cpp:18:13: error: ‘make_unique’ is not a member of ‘std’
-     m_two = std::make_unique<imported_and_abs_t>(m__io);
-             ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imports_abs_abs.cpp:18:48: error: expected primary-expression before ‘>’ token
-     m_two = std::make_unique<imported_and_abs_t>(m__io);
-                                                ^
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent.cpp: In member function ‘void nav_parent_t::_read()’:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent.cpp:17:16: error: ‘make_unique’ is not a member of ‘std’
      m_header = std::make_unique<header_obj_t>(m__io, this, m__root);
@@ -739,8 +731,16 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent.cpp:51:64: error: expected primary-expression before ‘>’ token
          m_entries->push_back(std::move(std::make_unique<entry_t>(m__io, this, m__root)));
                                                                 ^
-make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imports_abs_abs.cpp.o] Error 1
+make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent2.cpp.o] Error 1
 make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent.cpp.o] Error 1
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imports_abs_abs.cpp: In member function ‘void imports_abs_abs_t::_read()’:
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imports_abs_abs.cpp:18:13: error: ‘make_unique’ is not a member of ‘std’
+     m_two = std::make_unique<imported_and_abs_t>(m__io);
+             ^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imports_abs_abs.cpp:18:48: error: expected primary-expression before ‘>’ token
+     m_two = std::make_unique<imported_and_abs_t>(m__io);
+                                                ^
+make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imports_abs_abs.cpp.o] Error 1
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/default_endian_expr_is_be.cpp: In member function ‘void default_endian_expr_is_be_t::_read()’:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/default_endian_expr_is_be.cpp:21:41: error: ‘make_unique’ is not a member of ‘std’
              m_docs->push_back(std::move(std::make_unique<doc_t>(m__io, this, m__root)));
@@ -768,6 +768,7 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/default_endian_expr_is_be.cpp:146:53: error: expected primary-expression before ‘>’ token
          m_inst_sub = std::make_unique<sub_main_obj_t>(m__io, this, m__root, m__is_le);
                                                      ^
+make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/default_endian_expr_is_be.cpp.o] Error 1
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_pass_usertype.cpp: In member function ‘void params_pass_usertype_t::_read()’:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_pass_usertype.cpp:17:15: error: ‘make_unique’ is not a member of ‘std’
      m_first = std::make_unique<block_t>(m__io, this, m__root);
@@ -800,7 +801,6 @@ In file included from /usr/include/c++/4.8/memory:81:0,
 /usr/include/c++/4.8/bits/unique_ptr.h:273:7: error: declared here
        unique_ptr(const unique_ptr&) = delete;
        ^
-make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/default_endian_expr_is_be.cpp.o] Error 1
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_str.cpp: In member function ‘void switch_manual_str_t::_read()’:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_str.cpp:20:44: error: ‘make_unique’ is not a member of ‘std’
              m_opcodes->push_back(std::move(std::make_unique<opcode_t>(m__io, this, m__root)));
@@ -855,6 +855,7 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/if_struct.cpp:44:47: error: expected primary-expression before ‘>’ token
          m_arg_str = std::make_unique<arg_str_t>(m__io, this, m__root);
                                                ^
+make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/if_struct.cpp.o] Error 1
 In file included from /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/recursive_one.cpp:4:0:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/recursive_one.h: In member function ‘std::unique_ptr<kaitai::kstruct> recursive_one_t::next() const’:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/recursive_one.h:64:60: error: use of deleted function ‘std::unique_ptr<_Tp, _Dp>::unique_ptr(const std::unique_ptr<_Tp, _Dp>&) [with _Tp = kaitai::kstruct; _Dp = std::default_delete<kaitai::kstruct>]’
@@ -897,7 +898,6 @@ In file included from /usr/include/c++/4.8/memory:81:0,
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/process_to_user.cpp:20:41: error: expected primary-expression before ‘>’ token
      m_buf1 = std::make_unique<just_str_t>(m__io__raw_buf1, this, m__root);
                                          ^
-make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/if_struct.cpp.o] Error 1
 make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/recursive_one.cpp.o] Error 1
 make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/process_to_user.cpp.o] Error 1
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/if_values.cpp: In member function ‘void if_values_t::_read()’:
@@ -907,6 +907,14 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/if_values.cpp:20:61: error: expected primary-expression before ‘>’ token
          m_codes->push_back(std::move(std::make_unique<code_t>(m__io, this, m__root)));
                                                              ^
+make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/if_values.cpp.o] Error 1
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_enum.cpp: In member function ‘void params_enum_t::_read()’:
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_enum.cpp:17:27: error: ‘make_unique’ is not a member of ‘std’
+     m_invoke_with_param = std::make_unique<with_param_t>(one(), m__io, this, m__root);
+                           ^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_enum.cpp:17:56: error: expected primary-expression before ‘>’ token
+     m_invoke_with_param = std::make_unique<with_param_t>(one(), m__io, this, m__root);
+                                                        ^
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/vlq_base128_le.cpp: In member function ‘void vlq_base128_le_t::_read()’:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/vlq_base128_le.cpp:23:17: error: ‘make_unique’ is not a member of ‘std’
              _ = std::make_unique<group_t>(m__io, this, m__root);
@@ -924,7 +932,7 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/vlq_base128_le.cpp:75:460: warning: left shift count >= width of type [enabled by default]
      m_value = (((((((groups()->at(0)->value() + ((len() >= 2) ? ((groups()->at(1)->value() << 7)) : (0))) + ((len() >= 3) ? ((groups()->at(2)->value() << 14)) : (0))) + ((len() >= 4) ? ((groups()->at(3)->value() << 21)) : (0))) + ((len() >= 5) ? ((groups()->at(4)->value() << 28)) : (0))) + ((len() >= 6) ? ((groups()->at(5)->value() << 35)) : (0))) + ((len() >= 7) ? ((groups()->at(6)->value() << 42)) : (0))) + ((len() >= 8) ? ((groups()->at(7)->value() << 49)) : (0)));
                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ^
-make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/if_values.cpp.o] Error 1
+make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_enum.cpp.o] Error 1
 In file included from /usr/include/x86_64-linux-gnu/c++/4.8/bits/c++allocator.h:33:0,
                  from /usr/include/c++/4.8/bits/allocator.h:46,
                  from /usr/include/c++/4.8/memory:63,
@@ -943,14 +951,20 @@ In file included from /usr/include/c++/4.8/memory:81:0,
        unique_ptr(const unique_ptr&) = delete;
        ^
 make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/vlq_base128_le.cpp.o] Error 1
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_enum.cpp: In member function ‘void params_enum_t::_read()’:
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_enum.cpp:17:27: error: ‘make_unique’ is not a member of ‘std’
-     m_invoke_with_param = std::make_unique<with_param_t>(one(), m__io, this, m__root);
-                           ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_enum.cpp:17:56: error: expected primary-expression before ‘>’ token
-     m_invoke_with_param = std::make_unique<with_param_t>(one(), m__io, this, m__root);
-                                                        ^
-make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_enum.cpp.o] Error 1
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/debug_array_user.cpp: In member function ‘void debug_array_user_t::_read()’:
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/debug_array_user.cpp:16:17: error: ‘make_unique’ is not a member of ‘std’
+     m_one_cat = std::make_unique<cat_t>(m__io, this, m__root);
+                 ^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/debug_array_user.cpp:16:39: error: expected primary-expression before ‘>’ token
+     m_one_cat = std::make_unique<cat_t>(m__io, this, m__root);
+                                       ^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/debug_array_user.cpp:22:51: error: ‘make_unique’ is not a member of ‘std’
+         std::unique_ptr<cat_t> _t_array_of_cats = std::make_unique<cat_t>(m__io, this, m__root);
+                                                   ^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/debug_array_user.cpp:22:73: error: expected primary-expression before ‘>’ token
+         std::unique_ptr<cat_t> _t_array_of_cats = std::make_unique<cat_t>(m__io, this, m__root);
+                                                                         ^
+make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/debug_array_user.cpp.o] Error 1
 In file included from /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int.cpp:4:0:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int.h: In member function ‘std::unique_ptr<kaitai::kstruct> switch_manual_int_t::opcode_t::body() const’:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int.h:102:64: error: use of deleted function ‘std::unique_ptr<_Tp, _Dp>::unique_ptr(const std::unique_ptr<_Tp, _Dp>&) [with _Tp = kaitai::kstruct; _Dp = std::default_delete<kaitai::kstruct>]’
@@ -981,13 +995,6 @@ In file included from /usr/include/c++/4.8/memory:81:0,
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent_override.cpp:33:41: error: expected primary-expression before ‘>’ token
      m_child_2 = std::make_unique<child_t>(m__io, _parent(), m__root);
                                          ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imported_1.cpp: In member function ‘void imported_1_t::_read()’:
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imported_1.cpp:18:13: error: ‘make_unique’ is not a member of ‘std’
-     m_two = std::make_unique<imported_2_t>(m__io);
-             ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imported_1.cpp:18:42: error: expected primary-expression before ‘>’ token
-     m_two = std::make_unique<imported_2_t>(m__io);
-                                          ^
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int.cpp: In member function ‘void switch_manual_int_t::_read()’:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int.cpp:20:44: error: ‘make_unique’ is not a member of ‘std’
              m_opcodes->push_back(std::move(std::make_unique<opcode_t>(m__io, this, m__root)));
@@ -1008,23 +1015,16 @@ In file included from /usr/include/c++/4.8/memory:81:0,
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int.cpp:46:43: error: expected primary-expression before ‘>’ token
          m_body = std::make_unique<strval_t>(m__io, this, m__root);
                                            ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/debug_array_user.cpp: In member function ‘void debug_array_user_t::_read()’:
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/debug_array_user.cpp:16:17: error: ‘make_unique’ is not a member of ‘std’
-     m_one_cat = std::make_unique<cat_t>(m__io, this, m__root);
-                 ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/debug_array_user.cpp:16:39: error: expected primary-expression before ‘>’ token
-     m_one_cat = std::make_unique<cat_t>(m__io, this, m__root);
-                                       ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/debug_array_user.cpp:22:51: error: ‘make_unique’ is not a member of ‘std’
-         std::unique_ptr<cat_t> _t_array_of_cats = std::make_unique<cat_t>(m__io, this, m__root);
-                                                   ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/debug_array_user.cpp:22:73: error: expected primary-expression before ‘>’ token
-         std::unique_ptr<cat_t> _t_array_of_cats = std::make_unique<cat_t>(m__io, this, m__root);
-                                                                         ^
-make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imported_1.cpp.o] Error 1
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imported_1.cpp: In member function ‘void imported_1_t::_read()’:
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imported_1.cpp:18:13: error: ‘make_unique’ is not a member of ‘std’
+     m_two = std::make_unique<imported_2_t>(m__io);
+             ^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imported_1.cpp:18:42: error: expected primary-expression before ‘>’ token
+     m_two = std::make_unique<imported_2_t>(m__io);
+                                          ^
 make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent_override.cpp.o] Error 1
 make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int.cpp.o] Error 1
-make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/debug_array_user.cpp.o] Error 1
+make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imported_1.cpp.o] Error 1
 In file included from /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_bytearray.cpp:4:0:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_bytearray.h: In member function ‘std::unique_ptr<kaitai::kstruct> switch_bytearray_t::opcode_t::body() const’:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_bytearray.h:102:64: error: use of deleted function ‘std::unique_ptr<_Tp, _Dp>::unique_ptr(const std::unique_ptr<_Tp, _Dp>&) [with _Tp = kaitai::kstruct; _Dp = std::default_delete<kaitai::kstruct>]’
@@ -1071,7 +1071,6 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/position_abs.cpp:43:43: error: expected primary-expression before ‘>’ token
      m_index = std::make_unique<index_obj_t>(m__io, this, m__root);
                                            ^
-make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/position_abs.cpp.o] Error 1
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imported_and_abs.cpp: In member function ‘void imported_and_abs_t::_read()’:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imported_and_abs.cpp:18:13: error: ‘make_unique’ is not a member of ‘std’
      m_two = std::make_unique<imported_root_t>(m__io);
@@ -1079,7 +1078,7 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imported_and_abs.cpp:18:45: error: expected primary-expression before ‘>’ token
      m_two = std::make_unique<imported_root_t>(m__io);
                                              ^
-make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imported_and_abs.cpp.o] Error 1
+make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/position_abs.cpp.o] Error 1
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/type_ternary.cpp: In member function ‘void type_ternary_t::_read()’:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/type_ternary.cpp:27:25: error: ‘make_unique’ is not a member of ‘std’
          m_dif_wo_hack = std::make_unique<dummy_t>(m__io__raw_dif_wo_hack, this, m__root);
@@ -1126,6 +1125,7 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent_false.cpp:49:37: error: expected primary-expression before ‘>’ token
      m_foo = std::make_unique<child_t>(m__io, nullptr, m__root);
                                      ^
+make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imported_and_abs.cpp.o] Error 1
 make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/type_ternary.cpp.o] Error 1
 make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent_false.cpp.o] Error 1
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/repeat_until_sized.cpp: In member function ‘void repeat_until_sized_t::_read()’:
@@ -1135,6 +1135,13 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/repeat_until_sized.cpp:29:42: error: expected primary-expression before ‘>’ token
              _ = std::make_unique<record_t>(io__raw_records, this, m__root);
                                           ^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/position_in_seq.cpp: In member function ‘position_in_seq_t::header_obj_t* position_in_seq_t::header()’:
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/position_in_seq.cpp:49:16: error: ‘make_unique’ is not a member of ‘std’
+     m_header = std::make_unique<header_obj_t>(m__io, this, m__root);
+                ^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/position_in_seq.cpp:49:45: error: expected primary-expression before ‘>’ token
+     m_header = std::make_unique<header_obj_t>(m__io, this, m__root);
+                                             ^
 In file included from /usr/include/x86_64-linux-gnu/c++/4.8/bits/c++allocator.h:33:0,
                  from /usr/include/c++/4.8/bits/allocator.h:46,
                  from /usr/include/c++/4.8/memory:63,
@@ -1152,14 +1159,6 @@ In file included from /usr/include/c++/4.8/memory:81:0,
 /usr/include/c++/4.8/bits/unique_ptr.h:273:7: error: declared here
        unique_ptr(const unique_ptr&) = delete;
        ^
-make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/repeat_until_sized.cpp.o] Error 1
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/position_in_seq.cpp: In member function ‘position_in_seq_t::header_obj_t* position_in_seq_t::header()’:
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/position_in_seq.cpp:49:16: error: ‘make_unique’ is not a member of ‘std’
-     m_header = std::make_unique<header_obj_t>(m__io, this, m__root);
-                ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/position_in_seq.cpp:49:45: error: expected primary-expression before ‘>’ token
-     m_header = std::make_unique<header_obj_t>(m__io, this, m__root);
-                                             ^
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/process_coerce_usertype1.cpp: In member function ‘void process_coerce_usertype1_t::_read()’:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/process_coerce_usertype1.cpp:20:40: error: ‘make_unique’ is not a member of ‘std’
          m_records->push_back(std::move(std::make_unique<record_t>(m__io, this, m__root)));
@@ -1180,6 +1179,9 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/process_coerce_usertype1.cpp:53:44: error: expected primary-expression before ‘>’ token
          m_buf_proc = std::make_unique<foo_t>(m__io__raw_buf_proc, this, m__root);
                                             ^
+make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/position_in_seq.cpp.o] Error 1
+make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/repeat_until_sized.cpp.o] Error 1
+make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/process_coerce_usertype1.cpp.o] Error 1
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imports_abs_rel.cpp: In member function ‘void imports_abs_rel_t::_read()’:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imports_abs_rel.cpp:18:13: error: ‘make_unique’ is not a member of ‘std’
      m_two = std::make_unique<imported_and_rel_t>(m__io);
@@ -1187,7 +1189,6 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imports_abs_rel.cpp:18:48: error: expected primary-expression before ‘>’ token
      m_two = std::make_unique<imported_and_rel_t>(m__io);
                                                 ^
-make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/position_in_seq.cpp.o] Error 1
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nested_types2.cpp: In member function ‘void nested_types2_t::_read()’:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nested_types2.cpp:17:13: error: ‘make_unique’ is not a member of ‘std’
      m_one = std::make_unique<subtype_a_t>(m__io, this, m__root);
@@ -1240,7 +1241,6 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
      m_typed_root = std::make_unique<subtype_b_t>(m__io, this, m__root);
                                                 ^
 make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imports_abs_rel.cpp.o] Error 1
-make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/process_coerce_usertype1.cpp.o] Error 1
 make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nested_types2.cpp.o] Error 1
 In file included from /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent_switch.cpp:4:0:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent_switch.h: In member function ‘std::unique_ptr<nav_parent_switch_t::element_1_t> nav_parent_switch_t::content() const’:
@@ -1293,7 +1293,6 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nested_types.cpp:34:48: error: expected primary-expression before ‘>’ token
      m_typed_here = std::make_unique<subtype_c_t>(m__io, this, m__root);
                                                 ^
-make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nested_types.cpp.o] Error 1
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/default_endian_expr_inherited.cpp: In member function ‘void default_endian_expr_inherited_t::_read()’:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/default_endian_expr_inherited.cpp:21:41: error: ‘make_unique’ is not a member of ‘std’
              m_docs->push_back(std::move(std::make_unique<doc_t>(m__io, this, m__root)));
@@ -1308,16 +1307,6 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/default_endian_expr_inherited.cpp:39:41: error: expected primary-expression before ‘>’ token
      m_main = std::make_unique<main_obj_t>(m__io, this, m__root);
                                          ^
-In file included from /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_else.cpp:4:0:
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_else.h: In member function ‘std::unique_ptr<kaitai::kstruct> switch_manual_int_else_t::opcode_t::body() const’:
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_else.h:120:64: error: use of deleted function ‘std::unique_ptr<_Tp, _Dp>::unique_ptr(const std::unique_ptr<_Tp, _Dp>&) [with _Tp = kaitai::kstruct; _Dp = std::default_delete<kaitai::kstruct>]’
-         std::unique_ptr<kaitai::kstruct> body() const { return m_body; }
-                                                                ^
-In file included from /usr/include/c++/4.8/memory:81:0,
-                 from /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_else.cpp:3:
-/usr/include/c++/4.8/bits/unique_ptr.h:273:7: error: declared here
-       unique_ptr(const unique_ptr&) = delete;
-       ^
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/default_endian_expr_inherited.cpp: In member function ‘void default_endian_expr_inherited_t::doc_t::main_obj_t::_read_le()’:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/default_endian_expr_inherited.cpp:74:17: error: ‘make_unique’ is not a member of ‘std’
      m_insides = std::make_unique<sub_obj_t>(m__io, this, m__root, m__is_le);
@@ -1346,6 +1335,8 @@ In file included from /usr/include/c++/4.8/memory:81:0,
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/default_endian_expr_inherited.cpp:110:43: error: expected primary-expression before ‘>’ token
      m_more = std::make_unique<subsub_obj_t>(m__io, this, m__root, m__is_le);
                                            ^
+make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nested_types.cpp.o] Error 1
+make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/default_endian_expr_inherited.cpp.o] Error 1
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_repeat_expr.cpp: In member function ‘void switch_repeat_expr_t::_read()’:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_repeat_expr.cpp:35:41: error: ‘make_unique’ is not a member of ‘std’
              m_body->push_back(std::move(std::make_unique<one_t>(io__raw_body, this, m__root)));
@@ -1359,6 +1350,16 @@ In file included from /usr/include/c++/4.8/memory:81:0,
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_repeat_expr.cpp:43:63: error: expected primary-expression before ‘>’ token
              m_body->push_back(std::move(std::make_unique<two_t>(io__raw_body, this, m__root)));
                                                                ^
+In file included from /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_else.cpp:4:0:
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_else.h: In member function ‘std::unique_ptr<kaitai::kstruct> switch_manual_int_else_t::opcode_t::body() const’:
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_else.h:120:64: error: use of deleted function ‘std::unique_ptr<_Tp, _Dp>::unique_ptr(const std::unique_ptr<_Tp, _Dp>&) [with _Tp = kaitai::kstruct; _Dp = std::default_delete<kaitai::kstruct>]’
+         std::unique_ptr<kaitai::kstruct> body() const { return m_body; }
+                                                                ^
+In file included from /usr/include/c++/4.8/memory:81:0,
+                 from /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_else.cpp:3:
+/usr/include/c++/4.8/bits/unique_ptr.h:273:7: error: declared here
+       unique_ptr(const unique_ptr&) = delete;
+       ^
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_else.cpp: In member function ‘void switch_manual_int_else_t::_read()’:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_else.cpp:20:44: error: ‘make_unique’ is not a member of ‘std’
              m_opcodes->push_back(std::move(std::make_unique<opcode_t>(m__io, this, m__root)));
@@ -1386,7 +1387,6 @@ In file included from /usr/include/c++/4.8/memory:81:0,
          m_body = std::make_unique<noneval_t>(m__io, this, m__root);
                                             ^
 make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_else.cpp.o] Error 1
-make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/default_endian_expr_inherited.cpp.o] Error 1
 make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_repeat_expr.cpp.o] Error 1
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/opaque_with_param.cpp: In member function ‘void opaque_with_param_t::_read()’:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/opaque_with_param.cpp:17:13: error: ‘make_unique’ is not a member of ‘std’
@@ -1420,6 +1420,7 @@ In file included from /usr/include/c++/4.8/memory:81:0,
 /usr/include/c++/4.8/bits/unique_ptr.h:273:7: error: declared here
        unique_ptr(const unique_ptr&) = delete;
        ^
+make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/index_to_param_until.cpp.o] Error 1
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/index_to_param_eos.cpp: In member function ‘void index_to_param_eos_t::_read()’:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/index_to_param_eos.cpp:28:43: error: ‘make_unique’ is not a member of ‘std’
              m_blocks->push_back(std::move(std::make_unique<block_t>(i, m__io, this, m__root)));
@@ -1427,7 +1428,6 @@ In file included from /usr/include/c++/4.8/memory:81:0,
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/index_to_param_eos.cpp:28:67: error: expected primary-expression before ‘>’ token
              m_blocks->push_back(std::move(std::make_unique<block_t>(i, m__io, this, m__root)));
                                                                    ^
-make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/index_to_param_until.cpp.o] Error 1
 In file included from /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_size.cpp:4:0:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_size.h: In member function ‘std::unique_ptr<kaitai::kstruct> switch_manual_int_size_t::chunk_t::body() const’:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_size.h:108:64: error: use of deleted function ‘std::unique_ptr<_Tp, _Dp>::unique_ptr(const std::unique_ptr<_Tp, _Dp>&) [with _Tp = kaitai::kstruct; _Dp = std::default_delete<kaitai::kstruct>]’
@@ -1490,7 +1490,6 @@ In file included from /usr/include/c++/4.8/memory:81:0,
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent3.cpp:85:59: error: expected primary-expression before ‘>’ token
          m_tags->push_back(std::move(std::make_unique<tag_t>(m__io, this, m__root)));
                                                            ^
-make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent3.cpp.o] Error 1
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/expr_io_eof.cpp: In member function ‘void expr_io_eof_t::_read()’:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/expr_io_eof.cpp:21:20: error: ‘make_unique’ is not a member of ‘std’
      m_substream1 = std::make_unique<one_or_two_t>(m__io__raw_substream1, this, m__root);
@@ -1504,6 +1503,7 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/expr_io_eof.cpp:24:49: error: expected primary-expression before ‘>’ token
      m_substream2 = std::make_unique<one_or_two_t>(m__io__raw_substream2, this, m__root);
                                                  ^
+make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent3.cpp.o] Error 1
 make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/expr_io_eof.cpp.o] Error 1
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/position_to_end.cpp: In member function ‘position_to_end_t::index_obj_t* position_to_end_t::index()’:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/position_to_end.cpp:43:15: error: ‘make_unique’ is not a member of ‘std’
@@ -1523,33 +1523,6 @@ In file included from /usr/include/c++/4.8/memory:81:0,
 /usr/include/c++/4.8/bits/unique_ptr.h:273:7: error: declared here
        unique_ptr(const unique_ptr&) = delete;
        ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_str_else.cpp: In member function ‘void switch_manual_str_else_t::_read()’:
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_str_else.cpp:20:44: error: ‘make_unique’ is not a member of ‘std’
-             m_opcodes->push_back(std::move(std::make_unique<opcode_t>(m__io, this, m__root)));
-                                            ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_str_else.cpp:20:69: error: expected primary-expression before ‘>’ token
-             m_opcodes->push_back(std::move(std::make_unique<opcode_t>(m__io, this, m__root)));
-                                                                     ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_str_else.cpp: In member function ‘void switch_manual_str_else_t::opcode_t::_read()’:
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_str_else.cpp:40:22: error: ‘make_unique’ is not a member of ‘std’
-             m_body = std::make_unique<intval_t>(m__io, this, m__root);
-                      ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_str_else.cpp:40:47: error: expected primary-expression before ‘>’ token
-             m_body = std::make_unique<intval_t>(m__io, this, m__root);
-                                               ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_str_else.cpp:43:22: error: ‘make_unique’ is not a member of ‘std’
-             m_body = std::make_unique<strval_t>(m__io, this, m__root);
-                      ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_str_else.cpp:43:47: error: expected primary-expression before ‘>’ token
-             m_body = std::make_unique<strval_t>(m__io, this, m__root);
-                                               ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_str_else.cpp:46:22: error: ‘make_unique’ is not a member of ‘std’
-             m_body = std::make_unique<noneval_t>(m__io, this, m__root);
-                      ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_str_else.cpp:46:48: error: expected primary-expression before ‘>’ token
-             m_body = std::make_unique<noneval_t>(m__io, this, m__root);
-                                                ^
-make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_str_else.cpp.o] Error 1
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/enum_if.cpp: In member function ‘void enum_if_t::_read()’:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/enum_if.cpp:18:13: error: ‘make_unique’ is not a member of ‘std’
      m_op1 = std::make_unique<operation_t>(m__io, this, m__root);
@@ -1582,6 +1555,34 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/enum_if.cpp:44:47: error: expected primary-expression before ‘>’ token
          m_arg_str = std::make_unique<arg_str_t>(m__io, this, m__root);
                                                ^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_str_else.cpp: In member function ‘void switch_manual_str_else_t::_read()’:
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_str_else.cpp:20:44: error: ‘make_unique’ is not a member of ‘std’
+             m_opcodes->push_back(std::move(std::make_unique<opcode_t>(m__io, this, m__root)));
+                                            ^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_str_else.cpp:20:69: error: expected primary-expression before ‘>’ token
+             m_opcodes->push_back(std::move(std::make_unique<opcode_t>(m__io, this, m__root)));
+                                                                     ^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_str_else.cpp: In member function ‘void switch_manual_str_else_t::opcode_t::_read()’:
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_str_else.cpp:40:22: error: ‘make_unique’ is not a member of ‘std’
+             m_body = std::make_unique<intval_t>(m__io, this, m__root);
+                      ^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_str_else.cpp:40:47: error: expected primary-expression before ‘>’ token
+             m_body = std::make_unique<intval_t>(m__io, this, m__root);
+                                               ^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_str_else.cpp:43:22: error: ‘make_unique’ is not a member of ‘std’
+             m_body = std::make_unique<strval_t>(m__io, this, m__root);
+                      ^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_str_else.cpp:43:47: error: expected primary-expression before ‘>’ token
+             m_body = std::make_unique<strval_t>(m__io, this, m__root);
+                                               ^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_str_else.cpp:46:22: error: ‘make_unique’ is not a member of ‘std’
+             m_body = std::make_unique<noneval_t>(m__io, this, m__root);
+                      ^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_str_else.cpp:46:48: error: expected primary-expression before ‘>’ token
+             m_body = std::make_unique<noneval_t>(m__io, this, m__root);
+                                                ^
+make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_str_else.cpp.o] Error 1
+make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/enum_if.cpp.o] Error 1
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/user_type.cpp: In member function ‘void user_type_t::_read()’:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/user_type.cpp:16:13: error: ‘make_unique’ is not a member of ‘std’
      m_one = std::make_unique<header_t>(m__io, this, m__root);
@@ -1589,7 +1590,6 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/user_type.cpp:16:38: error: expected primary-expression before ‘>’ token
      m_one = std::make_unique<header_t>(m__io, this, m__root);
                                       ^
-make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/enum_if.cpp.o] Error 1
 make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/user_type.cpp.o] Error 1
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/opaque_external_type_02_child.cpp: In member function ‘void opaque_external_type_02_child_t::_read()’:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/opaque_external_type_02_child.cpp:19:12: error: ‘make_unique’ is not a member of ‘std’
@@ -1599,13 +1599,6 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
      m_s3 = std::make_unique<opaque_external_type_02_child_child_t>(m__io, this, m__root);
                                                                   ^
 make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/opaque_external_type_02_child.cpp.o] Error 1
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imports_abs.cpp: In member function ‘void imports_abs_t::_read()’:
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imports_abs.cpp:17:13: error: ‘make_unique’ is not a member of ‘std’
-     m_len = std::make_unique<vlq_base128_le_t>(m__io);
-             ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imports_abs.cpp:17:46: error: expected primary-expression before ‘>’ token
-     m_len = std::make_unique<vlq_base128_le_t>(m__io);
-                                              ^
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/instance_io_user.cpp: In member function ‘void instance_io_user_t::_read()’:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/instance_io_user.cpp:23:40: error: ‘make_unique’ is not a member of ‘std’
          m_entries->push_back(std::move(std::make_unique<entry_t>(m__io, this, m__root)));
@@ -1619,8 +1612,15 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/instance_io_user.cpp:27:47: error: expected primary-expression before ‘>’ token
      m_strings = std::make_unique<strings_obj_t>(m__io__raw_strings, this, m__root);
                                                ^
-make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imports_abs.cpp.o] Error 1
 make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/instance_io_user.cpp.o] Error 1
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imports_abs.cpp: In member function ‘void imports_abs_t::_read()’:
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imports_abs.cpp:17:13: error: ‘make_unique’ is not a member of ‘std’
+     m_len = std::make_unique<vlq_base128_le_t>(m__io);
+             ^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imports_abs.cpp:17:46: error: expected primary-expression before ‘>’ token
+     m_len = std::make_unique<vlq_base128_le_t>(m__io);
+                                              ^
+make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imports_abs.cpp.o] Error 1
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/enum_1.cpp: In member function ‘void enum_1_t::_read()’:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/enum_1.cpp:16:14: error: ‘make_unique’ is not a member of ‘std’
      m_main = std::make_unique<main_obj_t>(m__io, this, m__root);
@@ -1713,6 +1713,10 @@ In file included from /usr/include/c++/4.8/memory:81:0,
          static_cast<switch_manual_int_size_t::chunk_t::chunk_dir_t*>(r->chunks()->at(1)->body());
                                                                                                 ^
 make[2]: *** [CMakeFiles/ks_tests.dir/test_switch_manual_int_size.cpp.o] Error 1
+/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/test_switch_cast.cpp:3:25: fatal error: switch_cast.h: No such file or directory
+ #include <switch_cast.h>
+                         ^
+compilation terminated.
 In file included from /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/test_switch_manual_int.cpp:4:0:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int.h: In member function ‘std::unique_ptr<kaitai::kstruct> switch_manual_int_t::opcode_t::body() const’:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int.h:102:64: error: use of deleted function ‘std::unique_ptr<_Tp, _Dp>::unique_ptr(const std::unique_ptr<_Tp, _Dp>&) [with _Tp = kaitai::kstruct; _Dp = std::default_delete<kaitai::kstruct>]’
@@ -1745,10 +1749,6 @@ In file included from /usr/include/boost/test/unit_test.hpp:19:0,
      BOOST_CHECK_EQUAL(static_cast<switch_manual_int_t::opcode_t::strval_t*>(r->opcodes()->at(3)->body())->value(), std::string(""));
                                                                                                         ^
 make[2]: *** [CMakeFiles/ks_tests.dir/test_switch_manual_int.cpp.o] Error 1
-/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/test_switch_cast.cpp:3:25: fatal error: switch_cast.h: No such file or directory
- #include <switch_cast.h>
-                         ^
-compilation terminated.
 In file included from /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/test_switch_manual_int_size_eos.cpp:3:0:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_size_eos.h: In member function ‘std::unique_ptr<kaitai::kstruct> switch_manual_int_size_eos_t::chunk_body_t::body() const’:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_size_eos.h:136:64: error: use of deleted function ‘std::unique_ptr<_Tp, _Dp>::unique_ptr(const std::unique_ptr<_Tp, _Dp>&) [with _Tp = kaitai::kstruct; _Dp = std::default_delete<kaitai::kstruct>]’
@@ -1978,10 +1978,6 @@ In file included from /usr/include/boost/test/unit_test.hpp:19:0,
      BOOST_CHECK_EQUAL(static_cast<switch_manual_str_t::opcode_t::strval_t*>(r->opcodes()->at(3)->body())->value(), std::string(""));
                                                                                                         ^
 make[2]: *** [CMakeFiles/ks_tests.dir/test_switch_manual_str.cpp.o] Error 1
-/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/test_process_coerce_switch.cpp:4:35: fatal error: process_coerce_switch.h: No such file or directory
- #include <process_coerce_switch.h>
-                                   ^
-compilation terminated.
 In file included from /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/test_switch_manual_int_else.cpp:4:0:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_else.h: In member function ‘std::unique_ptr<kaitai::kstruct> switch_manual_int_else_t::opcode_t::body() const’:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_else.h:120:64: error: use of deleted function ‘std::unique_ptr<_Tp, _Dp>::unique_ptr(const std::unique_ptr<_Tp, _Dp>&) [with _Tp = kaitai::kstruct; _Dp = std::default_delete<kaitai::kstruct>]’
@@ -2013,13 +2009,17 @@ In file included from /usr/include/boost/test/unit_test.hpp:19:0,
 /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/test_switch_manual_int_else.cpp:22:109: error: invalid static_cast from type ‘std::unique_ptr<kaitai::kstruct>’ to type ‘switch_manual_int_else_t::opcode_t::intval_t*’
      BOOST_CHECK_EQUAL(static_cast<switch_manual_int_else_t::opcode_t::intval_t*>(r->opcodes()->at(3)->body())->value(), 7);
                                                                                                              ^
+/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/test_process_coerce_switch.cpp:4:35: fatal error: process_coerce_switch.h: No such file or directory
+ #include <process_coerce_switch.h>
+                                   ^
+compilation terminated.
 make[2]: *** [CMakeFiles/ks_tests.dir/test_switch_manual_int_else.cpp.o] Error 1
 make[2]: *** [CMakeFiles/ks_tests.dir/test_cast_to_imported.cpp.o] Error 1
-make[2]: *** [CMakeFiles/ks_tests.dir/test_process_coerce_switch.cpp.o] Error 1
 /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/test_cast_to_top.cpp:4:25: fatal error: cast_to_top.h: No such file or directory
  #include <cast_to_top.h>
                          ^
 compilation terminated.
+make[2]: *** [CMakeFiles/ks_tests.dir/test_process_coerce_switch.cpp.o] Error 1
 make[2]: *** [CMakeFiles/ks_tests.dir/test_cast_to_top.cpp.o] Error 1
 make[2]: Target `CMakeFiles/ks_tests.dir/build' not remade because of errors.
 make[1]: *** [CMakeFiles/ks_tests.dir/all] Error 2
