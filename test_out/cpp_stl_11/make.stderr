@@ -31,6 +31,8 @@ make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/te
 /Applications/Xcode-9.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:2394:3: note: copy constructor is implicitly deleted because 'unique_ptr<nav_parent2_t::tag_t::tag_char_t, std::__1::default_delete<nav_parent2_t::tag_t::tag_char_t> >' has a user-declared move constructor
   unique_ptr(unique_ptr&& __u) noexcept
   ^
+2 errors generated.
+make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent2.cpp.o] Error 1
 /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent3.cpp:59:16: error: call to implicitly-deleted copy constructor of 'std::unique_ptr<nav_parent3_t::tag_t::tag_char_t>'
         return m_tag_content;
                ^~~~~~~~~~~~~
@@ -43,8 +45,6 @@ make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/te
 /Applications/Xcode-9.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:2394:3: note: copy constructor is implicitly deleted because 'unique_ptr<nav_parent3_t::tag_t::tag_char_t, std::__1::default_delete<nav_parent3_t::tag_t::tag_char_t> >' has a user-declared move constructor
   unique_ptr(unique_ptr&& __u) noexcept
   ^
-2 errors generated.
-make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent2.cpp.o] Error 1
 2 errors generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent3.cpp.o] Error 1
 In file included from /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent_switch.cpp:4:
@@ -194,6 +194,13 @@ In file included from /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cp
   ^
 1 error generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_bytearray.cpp.o] Error 1
+In file included from /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int.cpp:4:
+/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int.h:102:64: error: call to implicitly-deleted copy constructor of 'std::unique_ptr<kaitai::kstruct>'
+        std::unique_ptr<kaitai::kstruct> body() const { return m_body; }
+                                                               ^~~~~~
+/Applications/Xcode-9.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:2394:3: note: copy constructor is implicitly deleted because 'unique_ptr<kaitai::kstruct, std::__1::default_delete<kaitai::kstruct> >' has a user-declared move constructor
+  unique_ptr(unique_ptr&& __u) noexcept
+  ^
 In file included from /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_enum.cpp:4:
 /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_enum.h:107:64: error: call to implicitly-deleted copy constructor of 'std::unique_ptr<kaitai::kstruct>'
         std::unique_ptr<kaitai::kstruct> body() const { return m_body; }
@@ -201,33 +208,19 @@ In file included from /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cp
 /Applications/Xcode-9.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:2394:3: note: copy constructor is implicitly deleted because 'unique_ptr<kaitai::kstruct, std::__1::default_delete<kaitai::kstruct> >' has a user-declared move constructor
   unique_ptr(unique_ptr&& __u) noexcept
   ^
-In file included from In file included from /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_else.cpp:4:
+In file included from /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_else.cpp:4:
 /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_else.h:120:64: error: call to implicitly-deleted copy constructor of 'std::unique_ptr<kaitai::kstruct>'
         std::unique_ptr<kaitai::kstruct> body() const { return m_body; }
                                                                ^~~~~~
 /Applications/Xcode-9.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:2394:3: note: copy constructor is implicitly deleted because 'unique_ptr<kaitai::kstruct, std::__1::default_delete<kaitai::kstruct> >' has a user-declared move constructor
   unique_ptr(unique_ptr&& __u) noexcept
   ^
-/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int.cpp:4:
-/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int.h:102:64: error: call to implicitly-deleted copy constructor of 'std::unique_ptr<kaitai::kstruct>'
-        std::unique_ptr<kaitai::kstruct> body() const { return m_body; }
-                                                               ^~~~~~
-/Applications/Xcode-9.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:2394:3: note: copy constructor is implicitly deleted because 'unique_ptr<kaitai::kstruct, std::__1::default_delete<kaitai::kstruct> >' has a user-declared move constructor
-  unique_ptr(unique_ptr&& __u) noexcept
-  ^
-1 error generated.
-make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_enum.cpp.o] Error 1
 1 error generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int.cpp.o] Error 1
 1 error generated.
+make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_enum.cpp.o] Error 1
+1 error generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_else.cpp.o] Error 1
-In file included from /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_size.cpp:4:
-/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_size.h:108:64: error: call to implicitly-deleted copy constructor of 'std::unique_ptr<kaitai::kstruct>'
-        std::unique_ptr<kaitai::kstruct> body() const { return m_body; }
-                                                               ^~~~~~
-/Applications/Xcode-9.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:2394:3: note: copy constructor is implicitly deleted because 'unique_ptr<kaitai::kstruct, std::__1::default_delete<kaitai::kstruct> >' has a user-declared move constructor
-  unique_ptr(unique_ptr&& __u) noexcept
-  ^
 In file included from /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_size_else.cpp:4:
 /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_size_else.h:126:64: error: call to implicitly-deleted copy constructor of 'std::unique_ptr<kaitai::kstruct>'
         std::unique_ptr<kaitai::kstruct> body() const { return m_body; }
@@ -235,8 +228,13 @@ In file included from /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cp
 /Applications/Xcode-9.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:2394:3: note: copy constructor is implicitly deleted because 'unique_ptr<kaitai::kstruct, std::__1::default_delete<kaitai::kstruct> >' has a user-declared move constructor
   unique_ptr(unique_ptr&& __u) noexcept
   ^
-1 error generated.
-make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_size.cpp.o] Error 1
+In file included from /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_size.cpp:4:
+/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_size.h:108:64: error: call to implicitly-deleted copy constructor of 'std::unique_ptr<kaitai::kstruct>'
+        std::unique_ptr<kaitai::kstruct> body() const { return m_body; }
+                                                               ^~~~~~
+/Applications/Xcode-9.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:2394:3: note: copy constructor is implicitly deleted because 'unique_ptr<kaitai::kstruct, std::__1::default_delete<kaitai::kstruct> >' has a user-declared move constructor
+  unique_ptr(unique_ptr&& __u) noexcept
+  ^
 In file included from /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_size_eos.cpp:4:
 /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_size_eos.h:136:64: error: call to implicitly-deleted copy constructor of 'std::unique_ptr<kaitai::kstruct>'
         std::unique_ptr<kaitai::kstruct> body() const { return m_body; }
@@ -244,6 +242,8 @@ In file included from /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cp
 /Applications/Xcode-9.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:2394:3: note: copy constructor is implicitly deleted because 'unique_ptr<kaitai::kstruct, std::__1::default_delete<kaitai::kstruct> >' has a user-declared move constructor
   unique_ptr(unique_ptr&& __u) noexcept
   ^
+1 error generated.
+make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_size.cpp.o] Error 1
 1 error generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_size_else.cpp.o] Error 1
 In file included from /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_str.cpp:4:
@@ -253,6 +253,8 @@ In file included from /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cp
 /Applications/Xcode-9.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:2394:3: note: copy constructor is implicitly deleted because 'unique_ptr<kaitai::kstruct, std::__1::default_delete<kaitai::kstruct> >' has a user-declared move constructor
   unique_ptr(unique_ptr&& __u) noexcept
   ^
+1 error generated.
+make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_size_eos.cpp.o] Error 1
 In file included from /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_str_else.cpp:4:
 /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_str_else.h:120:64: error: call to implicitly-deleted copy constructor of 'std::unique_ptr<kaitai::kstruct>'
         std::unique_ptr<kaitai::kstruct> body() const { return m_body; }
@@ -260,8 +262,6 @@ In file included from /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cp
 /Applications/Xcode-9.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:2394:3: note: copy constructor is implicitly deleted because 'unique_ptr<kaitai::kstruct, std::__1::default_delete<kaitai::kstruct> >' has a user-declared move constructor
   unique_ptr(unique_ptr&& __u) noexcept
   ^
-1 error generated.
-make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_size_eos.cpp.o] Error 1
 1 error generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_str.cpp.o] Error 1
 1 error generated.
@@ -423,6 +423,9 @@ note: (skipping 13 expansions in backtrace; use -fmacro-backtrace-limit=0 to see
 /usr/local/include/boost/test/tools/old/interface.hpp:51:49: note: expanded from macro 'BOOST_TEST_TOOL_PASS_ARG'
 #define BOOST_TEST_TOOL_PASS_ARG( r, _, arg ) , arg, BOOST_STRINGIZE( arg )
                                                 ^~~
+/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/test_switch_cast.cpp:3:10: fatal error: 'switch_cast.h' file not found
+#include <switch_cast.h>
+         ^~~~~~~~~~~~~~~
 /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/test_switch_bytearray.cpp:18:23: error: cannot cast from type 'std::unique_ptr<kaitai::kstruct>' to pointer type 'switch_bytearray_t::opcode_t::intval_t *'
     BOOST_CHECK_EQUAL(static_cast<switch_bytearray_t::opcode_t::intval_t*>(r->opcodes()->at(1)->body())->value(), 66);
                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -489,9 +492,6 @@ note: (skipping 13 expansions in backtrace; use -fmacro-backtrace-limit=0 to see
 /usr/local/include/boost/test/tools/old/interface.hpp:51:49: note: expanded from macro 'BOOST_TEST_TOOL_PASS_ARG'
 #define BOOST_TEST_TOOL_PASS_ARG( r, _, arg ) , arg, BOOST_STRINGIZE( arg )
                                                 ^~~
-/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/test_switch_cast.cpp:3:10: fatal error: 'switch_cast.h' file not found
-#include <switch_cast.h>
-         ^~~~~~~~~~~~~~~
 1 error generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/test_switch_cast.cpp.o] Error 1
 5 errors generated.
@@ -690,6 +690,13 @@ note: (skipping 13 expansions in backtrace; use -fmacro-backtrace-limit=0 to see
                                                 ^~~
 5 errors generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/test_switch_manual_int.cpp.o] Error 1
+In file included from /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/test_switch_manual_int_size.cpp:3:
+/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_size.h:108:64: error: call to implicitly-deleted copy constructor of 'std::unique_ptr<kaitai::kstruct>'
+        std::unique_ptr<kaitai::kstruct> body() const { return m_body; }
+                                                               ^~~~~~
+/Applications/Xcode-9.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:2394:3: note: copy constructor is implicitly deleted because 'unique_ptr<kaitai::kstruct, std::__1::default_delete<kaitai::kstruct> >' has a user-declared move constructor
+  unique_ptr(unique_ptr&& __u) noexcept
+  ^
 In file included from /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/test_switch_manual_int_else.cpp:4:
 /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_else.h:120:64: error: call to implicitly-deleted copy constructor of 'std::unique_ptr<kaitai::kstruct>'
         std::unique_ptr<kaitai::kstruct> body() const { return m_body; }
@@ -697,6 +704,9 @@ In file included from /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_st
 /Applications/Xcode-9.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:2394:3: note: copy constructor is implicitly deleted because 'unique_ptr<kaitai::kstruct, std::__1::default_delete<kaitai::kstruct> >' has a user-declared move constructor
   unique_ptr(unique_ptr&& __u) noexcept
   ^
+/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/test_switch_manual_int_size.cpp:20:9: error: cannot cast from type 'std::unique_ptr<kaitai::kstruct>' to pointer type 'switch_manual_int_size_t::chunk_t::chunk_meta_t *'
+        static_cast<switch_manual_int_size_t::chunk_t::chunk_meta_t*>(r->chunks()->at(0)->body());
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/test_switch_manual_int_else.cpp:16:23: error: cannot cast from type 'std::unique_ptr<kaitai::kstruct>' to pointer type 'switch_manual_int_else_t::opcode_t::strval_t *'
     BOOST_CHECK_EQUAL(static_cast<switch_manual_int_else_t::opcode_t::strval_t*>(r->opcodes()->at(0)->body())->value(), std::string("foo"));
                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -732,6 +742,9 @@ note: (skipping 13 expansions in backtrace; use -fmacro-backtrace-limit=0 to see
     BOOST_PP_SEQ_FOR_EACH( BOOST_TEST_TOOL_PASS_ARG, _, ARGS )
                                                         ^~~~
 note: (skipping 13 expansions in backtrace; use -fmacro-backtrace-limit=0 to see all)
+/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/test_switch_manual_int_size.cpp:26:9: error: cannot cast from type 'std::unique_ptr<kaitai::kstruct>' to pointer type 'switch_manual_int_size_t::chunk_t::chunk_dir_t *'
+        static_cast<switch_manual_int_size_t::chunk_t::chunk_dir_t*>(r->chunks()->at(1)->body());
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 /usr/local/include/boost/preprocessor/seq/elem.hpp:43:60: note: expanded from macro 'BOOST_PP_SEQ_ELEM_II'
 #    define BOOST_PP_SEQ_ELEM_II(im) BOOST_PP_SEQ_ELEM_III(im)
                                                            ^~
@@ -785,21 +798,6 @@ note: (skipping 13 expansions in backtrace; use -fmacro-backtrace-limit=0 to see
 /usr/local/include/boost/test/tools/old/interface.hpp:51:49: note: expanded from macro 'BOOST_TEST_TOOL_PASS_ARG'
 #define BOOST_TEST_TOOL_PASS_ARG( r, _, arg ) , arg, BOOST_STRINGIZE( arg )
                                                 ^~~
-In file included from /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/test_switch_manual_int_size.cpp:3:
-/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_size.h:108:64: error: call to implicitly-deleted copy constructor of 'std::unique_ptr<kaitai::kstruct>'
-        std::unique_ptr<kaitai::kstruct> body() const { return m_body; }
-                                                               ^~~~~~
-/Applications/Xcode-9.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:2394:3: note: copy constructor is implicitly deleted because 'unique_ptr<kaitai::kstruct, std::__1::default_delete<kaitai::kstruct> >' has a user-declared move constructor
-  unique_ptr(unique_ptr&& __u) noexcept
-  ^
-/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/test_switch_manual_int_size.cpp:20:9: error: cannot cast from type 'std::unique_ptr<kaitai::kstruct>' to pointer type 'switch_manual_int_size_t::chunk_t::chunk_meta_t *'
-        static_cast<switch_manual_int_size_t::chunk_t::chunk_meta_t*>(r->chunks()->at(0)->body());
-        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/test_switch_manual_int_size.cpp:26:9: error: cannot cast from type 'std::unique_ptr<kaitai::kstruct>' to pointer type 'switch_manual_int_size_t::chunk_t::chunk_dir_t *'
-        static_cast<switch_manual_int_size_t::chunk_t::chunk_dir_t*>(r->chunks()->at(1)->body());
-        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-5 errors generated.
-make[2]: *** [CMakeFiles/ks_tests.dir/test_switch_manual_int_else.cpp.o] Error 1
 In file included from /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/test_switch_manual_int_size_else.cpp:4:
 /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_size_else.h:126:64: error: call to implicitly-deleted copy constructor of 'std::unique_ptr<kaitai::kstruct>'
         std::unique_ptr<kaitai::kstruct> body() const { return m_body; }
@@ -832,6 +830,13 @@ note: (skipping 13 expansions in backtrace; use -fmacro-backtrace-limit=0 to see
 /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/test_switch_manual_int_size_else.cpp:18:23: error: cannot cast from type 'std::unique_ptr<kaitai::kstruct>' to pointer type 'switch_manual_int_size_else_t::chunk_t::chunk_meta_t *'
     BOOST_CHECK_EQUAL(static_cast<switch_manual_int_size_else_t::chunk_t::chunk_meta_t*>(r->chunks()->at(0)->body())->author(), std::string("Me"));
                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/test_switch_manual_int_size_eos.cpp:3:
+/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_size_eos.h:136:64: error: call to implicitly-deleted copy constructor of 'std::unique_ptr<kaitai::kstruct>'
+        std::unique_ptr<kaitai::kstruct> body() const { return m_body; }
+                                                               ^~~~~~
+/Applications/Xcode-9.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:2394:3: note: copy constructor is implicitly deleted because 'unique_ptr<kaitai::kstruct, std::__1::default_delete<kaitai::kstruct> >' has a user-declared move constructor
+  unique_ptr(unique_ptr&& __u) noexcept
+  ^
 /usr/local/include/boost/test/tools/old/interface.hpp:153:81: note: expanded from macro 'BOOST_CHECK_EQUAL'
     ::boost::test_tools::tt_detail::equal_impl_frwd(), "", CHECK, CHECK_EQUAL, (L)(R) )
                                                                                 ^
@@ -936,22 +941,17 @@ note: (skipping 13 expansions in backtrace; use -fmacro-backtrace-limit=0 to see
 /usr/local/include/boost/preprocessor/seq/elem.hpp:44:41: note: expanded from macro 'BOOST_PP_SEQ_ELEM_III'
 #    define BOOST_PP_SEQ_ELEM_III(x, _) x
                                         ^
-/usr/local/include/boost/test/tools/old/interface.hpp:51:49: note: expanded from macro 'BOOST_TEST_TOOL_PASS_ARG'
-#define BOOST_TEST_TOOL_PASS_ARG( r, _, arg ) , arg, BOOST_STRINGIZE( arg )
-                                                ^~~
-In file included from /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/test_switch_manual_int_size_eos.cpp:3:
-/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_size_eos.h:136:64: error: call to implicitly-deleted copy constructor of 'std::unique_ptr<kaitai::kstruct>'
-        std::unique_ptr<kaitai::kstruct> body() const { return m_body; }
-                                                               ^~~~~~
-/Applications/Xcode-9.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:2394:3: note: copy constructor is implicitly deleted because 'unique_ptr<kaitai::kstruct, std::__1::default_delete<kaitai::kstruct> >' has a user-declared move constructor
-  unique_ptr(unique_ptr&& __u) noexcept
-  ^
 /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/test_switch_manual_int_size_eos.cpp:20:9: error: cannot cast from type 'std::unique_ptr<kaitai::kstruct>' to pointer type 'switch_manual_int_size_eos_t::chunk_body_t::chunk_meta_t *'
         static_cast<switch_manual_int_size_eos_t::chunk_body_t::chunk_meta_t*>(r->chunks()->at(0)->body()->body());
         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/test_switch_manual_int_size_eos.cpp:26:9: error: cannot cast from type 'std::unique_ptr<kaitai::kstruct>' to pointer type 'switch_manual_int_size_eos_t::chunk_body_t::chunk_dir_t *'
         static_cast<switch_manual_int_size_eos_t::chunk_body_t::chunk_dir_t*>(r->chunks()->at(1)->body()->body());
         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/include/boost/test/tools/old/interface.hpp:51:49: note: expanded from macro 'BOOST_TEST_TOOL_PASS_ARG'
+#define BOOST_TEST_TOOL_PASS_ARG( r, _, arg ) , arg, BOOST_STRINGIZE( arg )
+                                                ^~~
+5 errors generated.
+make[2]: *** [CMakeFiles/ks_tests.dir/test_switch_manual_int_else.cpp.o] Error 1
 3 errors generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/test_switch_manual_int_size.cpp.o] Error 1
 7 errors generated.
@@ -960,13 +960,6 @@ make[2]: *** [CMakeFiles/ks_tests.dir/test_switch_manual_int_size_else.cpp.o] Er
 make[2]: *** [CMakeFiles/ks_tests.dir/test_switch_manual_int_size_eos.cpp.o] Error 1
 In file included from /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/test_switch_manual_str.cpp:4:
 /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_str.h:102:64: error: call to implicitly-deleted copy constructor of 'std::unique_ptr<kaitai::kstruct>'
-        std::unique_ptr<kaitai::kstruct> body() const { return m_body; }
-                                                               ^~~~~~
-/Applications/Xcode-9.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:2394:3: note: copy constructor is implicitly deleted because 'unique_ptr<kaitai::kstruct, std::__1::default_delete<kaitai::kstruct> >' has a user-declared move constructor
-  unique_ptr(unique_ptr&& __u) noexcept
-  ^
-In file included from /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/test_switch_manual_str_else.cpp:4:
-/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_str_else.h:120:64: error: call to implicitly-deleted copy constructor of 'std::unique_ptr<kaitai::kstruct>'
         std::unique_ptr<kaitai::kstruct> body() const { return m_body; }
                                                                ^~~~~~
 /Applications/Xcode-9.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:2394:3: note: copy constructor is implicitly deleted because 'unique_ptr<kaitai::kstruct, std::__1::default_delete<kaitai::kstruct> >' has a user-declared move constructor
@@ -987,6 +980,13 @@ In file included from /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_st
 note: (skipping 13 expansions in backtrace; use -fmacro-backtrace-limit=0 to see all)
 /usr/local/include/boost/preprocessor/seq/elem.hpp:43:60: note: expanded from macro 'BOOST_PP_SEQ_ELEM_II'
 #    define BOOST_PP_SEQ_ELEM_II(im) BOOST_PP_SEQ_ELEM_III(im)
+In file included from /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/test_switch_manual_str_else.cpp:4:
+/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_str_else.h:120:64: error: call to implicitly-deleted copy constructor of 'std::unique_ptr<kaitai::kstruct>'
+        std::unique_ptr<kaitai::kstruct> body() const { return m_body; }
+                                                               ^~~~~~
+/Applications/Xcode-9.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:2394:3: note: copy constructor is implicitly deleted because 'unique_ptr<kaitai::kstruct, std::__1::default_delete<kaitai::kstruct> >' has a user-declared move constructor
+  unique_ptr(unique_ptr&& __u) noexcept
+  ^
                                                            ^~
 /usr/local/include/boost/preprocessor/seq/elem.hpp:44:41: note: expanded from macro 'BOOST_PP_SEQ_ELEM_III'
 #    define BOOST_PP_SEQ_ELEM_III(x, _) x
