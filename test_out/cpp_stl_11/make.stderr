@@ -19,35 +19,12 @@ In file included from /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cp
   ^
 1 error generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/index_to_param_until.cpp.o] Error 1
-/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent2.cpp:62:16: error: no viable conversion from returned value of type 'std::unique_ptr<tag_char_t>' to function return type 'nav_parent2_t::tag_t::tag_char_t *'
-        return m_tag_content;
-               ^~~~~~~~~~~~~
-/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent2.cpp:76:12: error: no viable conversion from returned value of type 'std::unique_ptr<tag_char_t>' to function return type 'nav_parent2_t::tag_t::tag_char_t *'
-    return m_tag_content;
-           ^~~~~~~~~~~~~
-2 errors generated.
-make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent2.cpp.o] Error 1
-/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent3.cpp:59:16: error: no viable conversion from returned value of type 'std::unique_ptr<tag_char_t>' to function return type 'nav_parent3_t::tag_t::tag_char_t *'
-        return m_tag_content;
-               ^~~~~~~~~~~~~
-/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent3.cpp:73:12: error: no viable conversion from returned value of type 'std::unique_ptr<tag_char_t>' to function return type 'nav_parent3_t::tag_t::tag_char_t *'
-    return m_tag_content;
-           ^~~~~~~~~~~~~
-2 errors generated.
-make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent3.cpp.o] Error 1
-In file included from /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent_switch.cpp:4:
-/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent_switch.h:96:43: error: no viable conversion from returned value of type 'const std::unique_ptr<element_1_t>' to function return type 'nav_parent_switch_t::element_1_t *'
-    element_1_t* content() const { return m_content; }
-                                          ^~~~~~~~~
+In file included from /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/non_standard.cpp:4:
+/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/non_standard.h:54:40: error: member reference base type 'const uint32_t' (aka 'const unsigned int') is not a structure or union
+    uint32_t bar() const { return m_bar.get(); }
+                                  ~~~~~^~~~
 1 error generated.
-make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent_switch.cpp.o] Error 1
-In file included from /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_pass_struct.cpp:4:
-/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_pass_struct.h:84:51: error: no viable conversion from returned value of type 'const std::unique_ptr<kaitai::kstruct>' to function return type 'kaitai::kstruct *'
-            kaitai::kstruct* foo() const { return m_foo; }
-                                                  ^~~~~
-/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_pass_struct.h:97:47: error: no viable conversion from returned value of type 'const std::unique_ptr<kaitai::kstruct>' to function return type 'kaitai::kstruct *'
-        kaitai::kstruct* foo() const { return m_foo; }
-                                              ^~~~~
+make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/non_standard.cpp.o] Error 1
 /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_pass_struct.cpp:40:11: error: object of type 'std::__1::unique_ptr<kaitai::kstruct, std::__1::default_delete<kaitai::kstruct> >' cannot be assigned because its copy assignment operator is implicitly deleted
     m_foo = p_foo;
           ^
@@ -85,7 +62,7 @@ params_pass_struct_t::struct_type_t::baz_t::baz_t(std::unique_ptr<kaitai::kstruc
 /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_pass_struct.h:64:15: note: candidate constructor (the implicit copy constructor) not viable: requires 1 argument, but 4 were provided
         class baz_t : public kaitai::kstruct {
               ^
-6 errors generated.
+4 errors generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_pass_struct.cpp.o] Error 1
 /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_pass_usertype.cpp:40:11: error: object of type 'std::__1::unique_ptr<params_pass_usertype_t::block_t, std::__1::default_delete<params_pass_usertype_t::block_t> >' cannot be assigned because its copy assignment operator is implicitly deleted
     m_foo = p_foo;
@@ -107,12 +84,6 @@ params_pass_usertype_t::param_type_t::param_type_t(std::unique_ptr<block_t> p_fo
           ^
 2 errors generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_pass_usertype.cpp.o] Error 1
-In file included from /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/recursive_one.cpp:4:
-/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/recursive_one.h:64:44: error: no viable conversion from returned value of type 'const std::unique_ptr<kaitai::kstruct>' to function return type 'kaitai::kstruct *'
-    kaitai::kstruct* next() const { return m_next; }
-                                           ^~~~~~
-1 error generated.
-make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/recursive_one.cpp.o] Error 1
 In file included from /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/repeat_until_complex.cpp:3:
 /Applications/Xcode-9.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:1759:31: error: call to implicitly-deleted copy constructor of 'std::__1::unique_ptr<repeat_until_complex_t::type_u1_t, std::__1::default_delete<repeat_until_complex_t::type_u1_t> >'
             ::new((void*)__p) _Up(_VSTD::forward<_Args>(__args)...);
@@ -173,60 +144,24 @@ In file included from /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cp
   ^
 1 error generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/repeat_until_sized.cpp.o] Error 1
-In file included from /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_bytearray.cpp:4:
-/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_bytearray.h:102:48: error: no viable conversion from returned value of type 'const std::unique_ptr<kaitai::kstruct>' to function return type 'kaitai::kstruct *'
-        kaitai::kstruct* body() const { return m_body; }
-                                               ^~~~~~
+In file included from /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_integers.cpp:4:
+/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_integers.h:54:46: error: member reference base type 'const uint64_t' (aka 'const unsigned long long') is not a structure or union
+        uint64_t body() const { return m_body.get(); }
+                                       ~~~~~~^~~~
 1 error generated.
-make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_bytearray.cpp.o] Error 1
-In file included from /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_enum.cpp:4:
-/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_enum.h:107:48: error: no viable conversion from returned value of type 'const std::unique_ptr<kaitai::kstruct>' to function return type 'kaitai::kstruct *'
-        kaitai::kstruct* body() const { return m_body; }
-                                               ^~~~~~
-In file included from /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int.cpp:4:
-/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int.h:102:48: error: no viable conversion from returned value of type 'const std::unique_ptr<kaitai::kstruct>' to function return type 'kaitai::kstruct *'
-        kaitai::kstruct* body() const { return m_body; }
-                                               ^~~~~~
-In file included from /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_else.cpp:4:
-/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_else.h:120:48: error: no viable conversion from returned value of type 'const std::unique_ptr<kaitai::kstruct>' to function return type 'kaitai::kstruct *'
-        kaitai::kstruct* body() const { return m_body; }
-                                               ^~~~~~
+make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_integers.cpp.o] Error 1
+In file included from /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_integers2.cpp:4:
+/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_integers2.h:55:40: error: member reference base type 'const uint64_t' (aka 'const unsigned long long') is not a structure or union
+    uint64_t len() const { return m_len.get(); }
+                                  ~~~~~^~~~
 1 error generated.
-make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_enum.cpp.o] Error 1
+make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_integers2.cpp.o] Error 1
+In file included from /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_multi_bool_ops.cpp:4:
+/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_multi_bool_ops.h:54:46: error: member reference base type 'const uint64_t' (aka 'const unsigned long long') is not a structure or union
+        uint64_t body() const { return m_body.get(); }
+                                       ~~~~~~^~~~
 1 error generated.
-make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int.cpp.o] Error 1
-1 error generated.
-make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_else.cpp.o] Error 1
-In file included from /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_size.cpp:4:
-/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_size.h:108:48: error: no viable conversion from returned value of type 'const std::unique_ptr<kaitai::kstruct>' to function return type 'kaitai::kstruct *'
-        kaitai::kstruct* body() const { return m_body; }
-                                               ^~~~~~
-In file included from /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_size_else.cpp:4:
-/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_size_else.h:126:48: error: no viable conversion from returned value of type 'const std::unique_ptr<kaitai::kstruct>' to function return type 'kaitai::kstruct *'
-        kaitai::kstruct* body() const { return m_body; }
-                                               ^~~~~~
-1 error generated.
-make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_size.cpp.o] Error 1
-In file included from /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_size_eos.cpp:4:
-/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_size_eos.h:136:48: error: no viable conversion from returned value of type 'const std::unique_ptr<kaitai::kstruct>' to function return type 'kaitai::kstruct *'
-        kaitai::kstruct* body() const { return m_body; }
-                                               ^~~~~~
-1 error generated.
-make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_size_else.cpp.o] Error 1
-In file included from /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_str.cpp:4:
-/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_str.h:102:48: error: no viable conversion from returned value of type 'const std::unique_ptr<kaitai::kstruct>' to function return type 'kaitai::kstruct *'
-        kaitai::kstruct* body() const { return m_body; }
-                                               ^~~~~~
-1 error generated.
-make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_size_eos.cpp.o] Error 1
-In file included from /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_str_else.cpp:4:
-/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_str_else.h:120:48: error: no viable conversion from returned value of type 'const std::unique_ptr<kaitai::kstruct>' to function return type 'kaitai::kstruct *'
-        kaitai::kstruct* body() const { return m_body; }
-                                               ^~~~~~
-1 error generated.
-make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_str.cpp.o] Error 1
-1 error generated.
-make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_str_else.cpp.o] Error 1
+make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_multi_bool_ops.cpp.o] Error 1
 /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/vlq_base128_le.cpp:75:335: warning: shift count >= width of type [-Wshift-count-overflow]
     m_value = (((((((groups()->at(0)->value() + ((len() >= 2) ? ((groups()->at(1)->value() << 7)) : (0))) + ((len() >= 3) ? ((groups()->at(2)->value() << 14)) : (0))) + ((len() >= 4) ? ((groups()->at(3)->value() << 21)) : (0))) + ((len() >= 5) ? ((groups()->at(4)->value() << 28)) : (0))) + ((len() >= 6) ? ((groups()->at(5)->value() << 35)) : (0))) + ((len() >= 7) ? ((groups()->at(6)->value() << 42)) : (0))) + ((len() >= 8) ? ((groups()->at(7)->value() << 49)) : (0)));
                                                                                                                                                                                                                                                                                                                                               ^  ~~
@@ -279,82 +214,40 @@ make[2]: *** [CMakeFiles/ks_tests.dir/test_cast_to_imported.cpp.o] Error 1
          ^~~~~~~~~~~~~~~
 1 error generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/test_cast_to_top.cpp.o] Error 1
-In file included from /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/test_nav_parent_switch.cpp:4:
-/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent_switch.h:96:43: error: no viable conversion from returned value of type 'const std::unique_ptr<element_1_t>' to function return type 'nav_parent_switch_t::element_1_t *'
-    element_1_t* content() const { return m_content; }
-                                          ^~~~~~~~~
+In file included from /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/test_non_standard.cpp:4:
+/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/non_standard.h:54:40: error: member reference base type 'const uint32_t' (aka 'const unsigned int') is not a structure or union
+    uint32_t bar() const { return m_bar.get(); }
+                                  ~~~~~^~~~
 1 error generated.
-make[2]: *** [CMakeFiles/ks_tests.dir/test_nav_parent_switch.cpp.o] Error 1
+make[2]: *** [CMakeFiles/ks_tests.dir/test_non_standard.cpp.o] Error 1
 /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/test_process_coerce_switch.cpp:4:10: fatal error: 'process_coerce_switch.h' file not found
 #include <process_coerce_switch.h>
          ^~~~~~~~~~~~~~~~~~~~~~~~~
 1 error generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/test_process_coerce_switch.cpp.o] Error 1
-In file included from /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/test_recursive_one.cpp:3:
-/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/recursive_one.h:64:44: error: no viable conversion from returned value of type 'const std::unique_ptr<kaitai::kstruct>' to function return type 'kaitai::kstruct *'
-    kaitai::kstruct* next() const { return m_next; }
-                                           ^~~~~~
-1 error generated.
-make[2]: *** [CMakeFiles/ks_tests.dir/test_recursive_one.cpp.o] Error 1
-In file included from /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/test_switch_bytearray.cpp:4:
-/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_bytearray.h:102:48: error: no viable conversion from returned value of type 'const std::unique_ptr<kaitai::kstruct>' to function return type 'kaitai::kstruct *'
-        kaitai::kstruct* body() const { return m_body; }
-                                               ^~~~~~
-1 error generated.
-make[2]: *** [CMakeFiles/ks_tests.dir/test_switch_bytearray.cpp.o] Error 1
 /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/test_switch_cast.cpp:3:10: fatal error: 'switch_cast.h' file not found
 #include <switch_cast.h>
          ^~~~~~~~~~~~~~~
 1 error generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/test_switch_cast.cpp.o] Error 1
-In file included from /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/test_switch_manual_enum.cpp:3:
-/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_enum.h:107:48: error: no viable conversion from returned value of type 'const std::unique_ptr<kaitai::kstruct>' to function return type 'kaitai::kstruct *'
-        kaitai::kstruct* body() const { return m_body; }
-                                               ^~~~~~
+In file included from /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/test_switch_integers.cpp:4:
+/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_integers.h:54:46: error: member reference base type 'const uint64_t' (aka 'const unsigned long long') is not a structure or union
+        uint64_t body() const { return m_body.get(); }
+                                       ~~~~~~^~~~
 1 error generated.
-make[2]: *** [CMakeFiles/ks_tests.dir/test_switch_manual_enum.cpp.o] Error 1
-In file included from /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/test_switch_manual_int.cpp:4:
-/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int.h:102:48: error: no viable conversion from returned value of type 'const std::unique_ptr<kaitai::kstruct>' to function return type 'kaitai::kstruct *'
-        kaitai::kstruct* body() const { return m_body; }
-                                               ^~~~~~
+make[2]: *** [CMakeFiles/ks_tests.dir/test_switch_integers.cpp.o] Error 1
+In file included from /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/test_switch_integers2.cpp:4:
+/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_integers2.h:55:40: error: member reference base type 'const uint64_t' (aka 'const unsigned long long') is not a structure or union
+    uint64_t len() const { return m_len.get(); }
+                                  ~~~~~^~~~
 1 error generated.
-make[2]: *** [CMakeFiles/ks_tests.dir/test_switch_manual_int.cpp.o] Error 1
-In file included from /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/test_switch_manual_int_else.cpp:4:
-/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_else.h:120:48: error: no viable conversion from returned value of type 'const std::unique_ptr<kaitai::kstruct>' to function return type 'kaitai::kstruct *'
-        kaitai::kstruct* body() const { return m_body; }
-                                               ^~~~~~
-In file included from /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/test_switch_manual_int_size.cpp:3:
-/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_size.h:108:48: error: no viable conversion from returned value of type 'const std::unique_ptr<kaitai::kstruct>' to function return type 'kaitai::kstruct *'
-        kaitai::kstruct* body() const { return m_body; }
-                                               ^~~~~~
+make[2]: *** [CMakeFiles/ks_tests.dir/test_switch_integers2.cpp.o] Error 1
+In file included from /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/test_switch_multi_bool_ops.cpp:3:
+/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_multi_bool_ops.h:54:46: error: member reference base type 'const uint64_t' (aka 'const unsigned long long') is not a structure or union
+        uint64_t body() const { return m_body.get(); }
+                                       ~~~~~~^~~~
 1 error generated.
-make[2]: *** [CMakeFiles/ks_tests.dir/test_switch_manual_int_else.cpp.o] Error 1
-In file included from /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/test_switch_manual_int_size_else.cpp:4:
-/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_size_else.h:126:48: error: no viable conversion from returned value of type 'const std::unique_ptr<kaitai::kstruct>' to function return type 'kaitai::kstruct *'
-        kaitai::kstruct* body() const { return m_body; }
-                                               ^~~~~~
-In file included from /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/test_switch_manual_int_size_eos.cpp:3:
-/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_size_eos.h:136:48: error: no viable conversion from returned value of type 'const std::unique_ptr<kaitai::kstruct>' to function return type 'kaitai::kstruct *'
-        kaitai::kstruct* body() const { return m_body; }
-                                               ^~~~~~
-1 error generated.
-make[2]: *** [CMakeFiles/ks_tests.dir/test_switch_manual_int_size.cpp.o] Error 1
-1 error generated.
-make[2]: *** [CMakeFiles/ks_tests.dir/test_switch_manual_int_size_else.cpp.o] Error 1
-1 error generated.
-make[2]: *** [CMakeFiles/ks_tests.dir/test_switch_manual_int_size_eos.cpp.o] Error 1
-In file included from /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/test_switch_manual_str.cpp:4:
-/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_str.h:102:48: error: no viable conversion from returned value of type 'const std::unique_ptr<kaitai::kstruct>' to function return type 'kaitai::kstruct *'
-        kaitai::kstruct* body() const { return m_body; }
-                                               ^~~~~~
-In file included from /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/test_switch_manual_str_else.cpp:4:
-/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_str_else.h:120:48: error: no viable conversion from returned value of type 'const std::unique_ptr<kaitai::kstruct>' to function return type 'kaitai::kstruct *'
-        kaitai::kstruct* body() const { return m_body; }
-                                               ^~~~~~
-1 error generated.
-make[2]: *** [CMakeFiles/ks_tests.dir/test_switch_manual_str.cpp.o] Error 1
-1 error generated.
-make[2]: *** [CMakeFiles/ks_tests.dir/test_switch_manual_str_else.cpp.o] Error 1
+make[2]: *** [CMakeFiles/ks_tests.dir/test_switch_multi_bool_ops.cpp.o] Error 1
 /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/test_switch_repeat_expr.cpp:16:24: error: cannot cast from type 'std::__1::__vector_base<std::__1::unique_ptr<kaitai::kstruct, std::__1::default_delete<kaitai::kstruct> >, std::__1::allocator<std::__1::unique_ptr<kaitai::kstruct, std::__1::default_delete<kaitai::kstruct> > > >::value_type' (aka 'std::__1::unique_ptr<kaitai::kstruct, std::__1::default_delete<kaitai::kstruct> >') to pointer type 'switch_repeat_expr_t::one_t *'
     BOOST_CHECK_EQUAL((static_cast<switch_repeat_expr_t::one_t*>(r->body()->at(0)))->first(), std::string("Stuff\0Me\0", 9));
                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
