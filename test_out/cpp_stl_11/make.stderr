@@ -1,38 +1,15 @@
-In file included from /usr/include/x86_64-linux-gnu/c++/4.8/bits/c++allocator.h:33:0,
-                 from /usr/include/c++/4.8/bits/allocator.h:46,
-                 from /usr/include/c++/4.8/memory:63,
-                 from /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/repeat_until_complex.cpp:3:
-/usr/include/c++/4.8/ext/new_allocator.h: In instantiation of ‘void __gnu_cxx::new_allocator<_Tp>::construct(_Up*, _Args&& ...) [with _Up = std::unique_ptr<repeat_until_complex_t::type_u1_t>; _Args = {const std::unique_ptr<repeat_until_complex_t::type_u1_t, std::default_delete<repeat_until_complex_t::type_u1_t> >&}; _Tp = std::unique_ptr<repeat_until_complex_t::type_u1_t>]’:
-/usr/include/c++/4.8/bits/alloc_traits.h:254:4:   required from ‘static typename std::enable_if<std::allocator_traits<_Alloc>::__construct_helper<_Tp, _Args>::value, void>::type std::allocator_traits<_Alloc>::_S_construct(_Alloc&, _Tp*, _Args&& ...) [with _Tp = std::unique_ptr<repeat_until_complex_t::type_u1_t>; _Args = {const std::unique_ptr<repeat_until_complex_t::type_u1_t, std::default_delete<repeat_until_complex_t::type_u1_t> >&}; _Alloc = std::allocator<std::unique_ptr<repeat_until_complex_t::type_u1_t> >; typename std::enable_if<std::allocator_traits<_Alloc>::__construct_helper<_Tp, _Args>::value, void>::type = void]’
-/usr/include/c++/4.8/bits/alloc_traits.h:393:57:   required from ‘static decltype (_S_construct(__a, __p, (forward<_Args>)(std::allocator_traits::construct::__args)...)) std::allocator_traits<_Alloc>::construct(_Alloc&, _Tp*, _Args&& ...) [with _Tp = std::unique_ptr<repeat_until_complex_t::type_u1_t>; _Args = {const std::unique_ptr<repeat_until_complex_t::type_u1_t, std::default_delete<repeat_until_complex_t::type_u1_t> >&}; _Alloc = std::allocator<std::unique_ptr<repeat_until_complex_t::type_u1_t> >; decltype (_S_construct(__a, __p, (forward<_Args>)(std::allocator_traits::construct::__args)...)) = <type error>]’
-/usr/include/c++/4.8/bits/stl_vector.h:906:34:   required from ‘void std::vector<_Tp, _Alloc>::push_back(const value_type&) [with _Tp = std::unique_ptr<repeat_until_complex_t::type_u1_t>; _Alloc = std::allocator<std::unique_ptr<repeat_until_complex_t::type_u1_t> >; std::vector<_Tp, _Alloc>::value_type = std::unique_ptr<repeat_until_complex_t::type_u1_t>]’
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/repeat_until_complex.cpp:24:33:   required from here
-/usr/include/c++/4.8/ext/new_allocator.h:120:4: error: use of deleted function ‘std::unique_ptr<_Tp, _Dp>::unique_ptr(const std::unique_ptr<_Tp, _Dp>&) [with _Tp = repeat_until_complex_t::type_u1_t; _Dp = std::default_delete<repeat_until_complex_t::type_u1_t>]’
-  { ::new((void *)__p) _Up(std::forward<_Args>(__args)...); }
-    ^
-In file included from /usr/include/c++/4.8/memory:81:0,
-                 from /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/repeat_until_complex.cpp:3:
-/usr/include/c++/4.8/bits/unique_ptr.h:273:7: error: declared here
-       unique_ptr(const unique_ptr&) = delete;
-       ^
-In file included from /usr/include/x86_64-linux-gnu/c++/4.8/bits/c++allocator.h:33:0,
-                 from /usr/include/c++/4.8/bits/allocator.h:46,
-                 from /usr/include/c++/4.8/memory:63,
-                 from /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/repeat_until_complex.cpp:3:
-/usr/include/c++/4.8/ext/new_allocator.h: In instantiation of ‘void __gnu_cxx::new_allocator<_Tp>::construct(_Up*, _Args&& ...) [with _Up = std::unique_ptr<repeat_until_complex_t::type_u2_t>; _Args = {const std::unique_ptr<repeat_until_complex_t::type_u2_t, std::default_delete<repeat_until_complex_t::type_u2_t> >&}; _Tp = std::unique_ptr<repeat_until_complex_t::type_u2_t>]’:
-/usr/include/c++/4.8/bits/alloc_traits.h:254:4:   required from ‘static typename std::enable_if<std::allocator_traits<_Alloc>::__construct_helper<_Tp, _Args>::value, void>::type std::allocator_traits<_Alloc>::_S_construct(_Alloc&, _Tp*, _Args&& ...) [with _Tp = std::unique_ptr<repeat_until_complex_t::type_u2_t>; _Args = {const std::unique_ptr<repeat_until_complex_t::type_u2_t, std::default_delete<repeat_until_complex_t::type_u2_t> >&}; _Alloc = std::allocator<std::unique_ptr<repeat_until_complex_t::type_u2_t> >; typename std::enable_if<std::allocator_traits<_Alloc>::__construct_helper<_Tp, _Args>::value, void>::type = void]’
-/usr/include/c++/4.8/bits/alloc_traits.h:393:57:   required from ‘static decltype (_S_construct(__a, __p, (forward<_Args>)(std::allocator_traits::construct::__args)...)) std::allocator_traits<_Alloc>::construct(_Alloc&, _Tp*, _Args&& ...) [with _Tp = std::unique_ptr<repeat_until_complex_t::type_u2_t>; _Args = {const std::unique_ptr<repeat_until_complex_t::type_u2_t, std::default_delete<repeat_until_complex_t::type_u2_t> >&}; _Alloc = std::allocator<std::unique_ptr<repeat_until_complex_t::type_u2_t> >; decltype (_S_construct(__a, __p, (forward<_Args>)(std::allocator_traits::construct::__args)...)) = <type error>]’
-/usr/include/c++/4.8/bits/stl_vector.h:906:34:   required from ‘void std::vector<_Tp, _Alloc>::push_back(const value_type&) [with _Tp = std::unique_ptr<repeat_until_complex_t::type_u2_t>; _Alloc = std::allocator<std::unique_ptr<repeat_until_complex_t::type_u2_t> >; std::vector<_Tp, _Alloc>::value_type = std::unique_ptr<repeat_until_complex_t::type_u2_t>]’
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/repeat_until_complex.cpp:34:34:   required from here
-/usr/include/c++/4.8/ext/new_allocator.h:120:4: error: use of deleted function ‘std::unique_ptr<_Tp, _Dp>::unique_ptr(const std::unique_ptr<_Tp, _Dp>&) [with _Tp = repeat_until_complex_t::type_u2_t; _Dp = std::default_delete<repeat_until_complex_t::type_u2_t>]’
-  { ::new((void *)__p) _Up(std::forward<_Args>(__args)...); }
-    ^
-In file included from /usr/include/c++/4.8/memory:81:0,
-                 from /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/repeat_until_complex.cpp:3:
-/usr/include/c++/4.8/bits/unique_ptr.h:273:7: error: declared here
-       unique_ptr(const unique_ptr&) = delete;
-       ^
-make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/repeat_until_complex.cpp.o] Error 1
+In file included from /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_size_eos.cpp:4:0:
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_size_eos.h: In member function ‘kaitai::kstruct* switch_manual_int_size_eos_t::chunk_body_t::body() const’:
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_size_eos.h:136:48: error: cannot convert ‘const std::unique_ptr<kaitai::kstruct>’ to ‘kaitai::kstruct*’ in return
+         kaitai::kstruct* body() const { return m_body; }
+                                                ^
+make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_size_eos.cpp.o] Error 1
+In file included from /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_size_else.cpp:4:0:
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_size_else.h: In member function ‘kaitai::kstruct* switch_manual_int_size_else_t::chunk_t::body() const’:
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_size_else.h:126:48: error: cannot convert ‘const std::unique_ptr<kaitai::kstruct>’ to ‘kaitai::kstruct*’ in return
+         kaitai::kstruct* body() const { return m_body; }
+                                                ^
+make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_size_else.cpp.o] Error 1
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/yaml_ints.cpp: In member function ‘int32_t yaml_ints_t::test_u8_dec()’:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/yaml_ints.cpp:43:19: warning: overflow in implicit constant conversion [-Woverflow]
      m_test_u8_dec = 18446744073709551615ULL;
@@ -41,24 +18,6 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/yaml_ints.cpp:51:19: warning: overflow in implicit constant conversion [-Woverflow]
      m_test_u8_hex = 18446744073709551615ULL;
                    ^
-In file included from /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_integers2.cpp:4:0:
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_integers2.h: In member function ‘uint64_t switch_integers2_t::len() const’:
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_integers2.h:55:41: error: request for member ‘get’ in ‘((const switch_integers2_t*)this)->switch_integers2_t::m_len’, which is of non-class type ‘const uint64_t {aka const long unsigned int}’
-     uint64_t len() const { return m_len.get(); }
-                                         ^
-make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_integers2.cpp.o] Error 1
-In file included from /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_integers.cpp:4:0:
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_integers.h: In member function ‘uint64_t switch_integers_t::opcode_t::body() const’:
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_integers.h:54:47: error: request for member ‘get’ in ‘((const switch_integers_t::opcode_t*)this)->switch_integers_t::opcode_t::m_body’, which is of non-class type ‘const uint64_t {aka const long unsigned int}’
-         uint64_t body() const { return m_body.get(); }
-                                               ^
-make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_integers.cpp.o] Error 1
-In file included from /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/non_standard.cpp:4:0:
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/non_standard.h: In member function ‘uint32_t non_standard_t::bar() const’:
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/non_standard.h:54:41: error: request for member ‘get’ in ‘((const non_standard_t*)this)->non_standard_t::m_bar’, which is of non-class type ‘const uint32_t {aka const unsigned int}’
-     uint32_t bar() const { return m_bar.get(); }
-                                         ^
-make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/non_standard.cpp.o] Error 1
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/vlq_base128_le.cpp: In member function ‘int32_t vlq_base128_le_t::value()’:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/vlq_base128_le.cpp:75:338: warning: left shift count >= width of type [enabled by default]
      m_value = (((((((groups()->at(0)->value() + ((len() >= 2) ? ((groups()->at(1)->value() << 7)) : (0))) + ((len() >= 3) ? ((groups()->at(2)->value() << 14)) : (0))) + ((len() >= 4) ? ((groups()->at(3)->value() << 21)) : (0))) + ((len() >= 5) ? ((groups()->at(4)->value() << 28)) : (0))) + ((len() >= 6) ? ((groups()->at(5)->value() << 35)) : (0))) + ((len() >= 7) ? ((groups()->at(6)->value() << 42)) : (0))) + ((len() >= 8) ? ((groups()->at(7)->value() << 49)) : (0)));
@@ -69,93 +28,51 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/vlq_base128_le.cpp:75:460: warning: left shift count >= width of type [enabled by default]
      m_value = (((((((groups()->at(0)->value() + ((len() >= 2) ? ((groups()->at(1)->value() << 7)) : (0))) + ((len() >= 3) ? ((groups()->at(2)->value() << 14)) : (0))) + ((len() >= 4) ? ((groups()->at(3)->value() << 21)) : (0))) + ((len() >= 5) ? ((groups()->at(4)->value() << 28)) : (0))) + ((len() >= 6) ? ((groups()->at(5)->value() << 35)) : (0))) + ((len() >= 7) ? ((groups()->at(6)->value() << 42)) : (0))) + ((len() >= 8) ? ((groups()->at(7)->value() << 49)) : (0)));
                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ^
-In file included from /usr/include/x86_64-linux-gnu/c++/4.8/bits/c++allocator.h:33:0,
-                 from /usr/include/c++/4.8/bits/allocator.h:46,
-                 from /usr/include/c++/4.8/memory:63,
-                 from /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/vlq_base128_le.cpp:3:
-/usr/include/c++/4.8/ext/new_allocator.h: In instantiation of ‘void __gnu_cxx::new_allocator<_Tp>::construct(_Up*, _Args&& ...) [with _Up = std::unique_ptr<vlq_base128_le_t::group_t>; _Args = {const std::unique_ptr<vlq_base128_le_t::group_t, std::default_delete<vlq_base128_le_t::group_t> >&}; _Tp = std::unique_ptr<vlq_base128_le_t::group_t>]’:
-/usr/include/c++/4.8/bits/alloc_traits.h:254:4:   required from ‘static typename std::enable_if<std::allocator_traits<_Alloc>::__construct_helper<_Tp, _Args>::value, void>::type std::allocator_traits<_Alloc>::_S_construct(_Alloc&, _Tp*, _Args&& ...) [with _Tp = std::unique_ptr<vlq_base128_le_t::group_t>; _Args = {const std::unique_ptr<vlq_base128_le_t::group_t, std::default_delete<vlq_base128_le_t::group_t> >&}; _Alloc = std::allocator<std::unique_ptr<vlq_base128_le_t::group_t> >; typename std::enable_if<std::allocator_traits<_Alloc>::__construct_helper<_Tp, _Args>::value, void>::type = void]’
-/usr/include/c++/4.8/bits/alloc_traits.h:393:57:   required from ‘static decltype (_S_construct(__a, __p, (forward<_Args>)(std::allocator_traits::construct::__args)...)) std::allocator_traits<_Alloc>::construct(_Alloc&, _Tp*, _Args&& ...) [with _Tp = std::unique_ptr<vlq_base128_le_t::group_t>; _Args = {const std::unique_ptr<vlq_base128_le_t::group_t, std::default_delete<vlq_base128_le_t::group_t> >&}; _Alloc = std::allocator<std::unique_ptr<vlq_base128_le_t::group_t> >; decltype (_S_construct(__a, __p, (forward<_Args>)(std::allocator_traits::construct::__args)...)) = <type error>]’
-/usr/include/c++/4.8/bits/stl_vector.h:906:34:   required from ‘void std::vector<_Tp, _Alloc>::push_back(const value_type&) [with _Tp = std::unique_ptr<vlq_base128_le_t::group_t>; _Alloc = std::allocator<std::unique_ptr<vlq_base128_le_t::group_t> >; std::vector<_Tp, _Alloc>::value_type = std::unique_ptr<vlq_base128_le_t::group_t>]’
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/vlq_base128_le.cpp:24:34:   required from here
-/usr/include/c++/4.8/ext/new_allocator.h:120:4: error: use of deleted function ‘std::unique_ptr<_Tp, _Dp>::unique_ptr(const std::unique_ptr<_Tp, _Dp>&) [with _Tp = vlq_base128_le_t::group_t; _Dp = std::default_delete<vlq_base128_le_t::group_t>]’
-  { ::new((void *)__p) _Up(std::forward<_Args>(__args)...); }
-    ^
-In file included from /usr/include/c++/4.8/memory:81:0,
-                 from /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/vlq_base128_le.cpp:3:
-/usr/include/c++/4.8/bits/unique_ptr.h:273:7: error: declared here
-       unique_ptr(const unique_ptr&) = delete;
-       ^
-make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/vlq_base128_le.cpp.o] Error 1
-In file included from /usr/include/x86_64-linux-gnu/c++/4.8/bits/c++allocator.h:33:0,
-                 from /usr/include/c++/4.8/bits/allocator.h:46,
-                 from /usr/include/c++/4.8/memory:63,
-                 from /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/repeat_until_sized.cpp:3:
-/usr/include/c++/4.8/ext/new_allocator.h: In instantiation of ‘void __gnu_cxx::new_allocator<_Tp>::construct(_Up*, _Args&& ...) [with _Up = std::unique_ptr<repeat_until_sized_t::record_t>; _Args = {const std::unique_ptr<repeat_until_sized_t::record_t, std::default_delete<repeat_until_sized_t::record_t> >&}; _Tp = std::unique_ptr<repeat_until_sized_t::record_t>]’:
-/usr/include/c++/4.8/bits/alloc_traits.h:254:4:   required from ‘static typename std::enable_if<std::allocator_traits<_Alloc>::__construct_helper<_Tp, _Args>::value, void>::type std::allocator_traits<_Alloc>::_S_construct(_Alloc&, _Tp*, _Args&& ...) [with _Tp = std::unique_ptr<repeat_until_sized_t::record_t>; _Args = {const std::unique_ptr<repeat_until_sized_t::record_t, std::default_delete<repeat_until_sized_t::record_t> >&}; _Alloc = std::allocator<std::unique_ptr<repeat_until_sized_t::record_t> >; typename std::enable_if<std::allocator_traits<_Alloc>::__construct_helper<_Tp, _Args>::value, void>::type = void]’
-/usr/include/c++/4.8/bits/alloc_traits.h:393:57:   required from ‘static decltype (_S_construct(__a, __p, (forward<_Args>)(std::allocator_traits::construct::__args)...)) std::allocator_traits<_Alloc>::construct(_Alloc&, _Tp*, _Args&& ...) [with _Tp = std::unique_ptr<repeat_until_sized_t::record_t>; _Args = {const std::unique_ptr<repeat_until_sized_t::record_t, std::default_delete<repeat_until_sized_t::record_t> >&}; _Alloc = std::allocator<std::unique_ptr<repeat_until_sized_t::record_t> >; decltype (_S_construct(__a, __p, (forward<_Args>)(std::allocator_traits::construct::__args)...)) = <type error>]’
-/usr/include/c++/4.8/bits/stl_vector.h:906:34:   required from ‘void std::vector<_Tp, _Alloc>::push_back(const value_type&) [with _Tp = std::unique_ptr<repeat_until_sized_t::record_t>; _Alloc = std::allocator<std::unique_ptr<repeat_until_sized_t::record_t> >; std::vector<_Tp, _Alloc>::value_type = std::unique_ptr<repeat_until_sized_t::record_t>]’
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/repeat_until_sized.cpp:30:35:   required from here
-/usr/include/c++/4.8/ext/new_allocator.h:120:4: error: use of deleted function ‘std::unique_ptr<_Tp, _Dp>::unique_ptr(const std::unique_ptr<_Tp, _Dp>&) [with _Tp = repeat_until_sized_t::record_t; _Dp = std::default_delete<repeat_until_sized_t::record_t>]’
-  { ::new((void *)__p) _Up(std::forward<_Args>(__args)...); }
-    ^
-In file included from /usr/include/c++/4.8/memory:81:0,
-                 from /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/repeat_until_sized.cpp:3:
-/usr/include/c++/4.8/bits/unique_ptr.h:273:7: error: declared here
-       unique_ptr(const unique_ptr&) = delete;
-       ^
-make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/repeat_until_sized.cpp.o] Error 1
-In file included from /usr/include/x86_64-linux-gnu/c++/4.8/bits/c++allocator.h:33:0,
-                 from /usr/include/c++/4.8/bits/allocator.h:46,
-                 from /usr/include/c++/4.8/memory:63,
-                 from /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/index_to_param_until.cpp:3:
-/usr/include/c++/4.8/ext/new_allocator.h: In instantiation of ‘void __gnu_cxx::new_allocator<_Tp>::construct(_Up*, _Args&& ...) [with _Up = std::unique_ptr<index_to_param_until_t::block_t>; _Args = {const std::unique_ptr<index_to_param_until_t::block_t, std::default_delete<index_to_param_until_t::block_t> >&}; _Tp = std::unique_ptr<index_to_param_until_t::block_t>]’:
-/usr/include/c++/4.8/bits/alloc_traits.h:254:4:   required from ‘static typename std::enable_if<std::allocator_traits<_Alloc>::__construct_helper<_Tp, _Args>::value, void>::type std::allocator_traits<_Alloc>::_S_construct(_Alloc&, _Tp*, _Args&& ...) [with _Tp = std::unique_ptr<index_to_param_until_t::block_t>; _Args = {const std::unique_ptr<index_to_param_until_t::block_t, std::default_delete<index_to_param_until_t::block_t> >&}; _Alloc = std::allocator<std::unique_ptr<index_to_param_until_t::block_t> >; typename std::enable_if<std::allocator_traits<_Alloc>::__construct_helper<_Tp, _Args>::value, void>::type = void]’
-/usr/include/c++/4.8/bits/alloc_traits.h:393:57:   required from ‘static decltype (_S_construct(__a, __p, (forward<_Args>)(std::allocator_traits::construct::__args)...)) std::allocator_traits<_Alloc>::construct(_Alloc&, _Tp*, _Args&& ...) [with _Tp = std::unique_ptr<index_to_param_until_t::block_t>; _Args = {const std::unique_ptr<index_to_param_until_t::block_t, std::default_delete<index_to_param_until_t::block_t> >&}; _Alloc = std::allocator<std::unique_ptr<index_to_param_until_t::block_t> >; decltype (_S_construct(__a, __p, (forward<_Args>)(std::allocator_traits::construct::__args)...)) = <type error>]’
-/usr/include/c++/4.8/bits/stl_vector.h:906:34:   required from ‘void std::vector<_Tp, _Alloc>::push_back(const value_type&) [with _Tp = std::unique_ptr<index_to_param_until_t::block_t>; _Alloc = std::allocator<std::unique_ptr<index_to_param_until_t::block_t> >; std::vector<_Tp, _Alloc>::value_type = std::unique_ptr<index_to_param_until_t::block_t>]’
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/index_to_param_until.cpp:30:34:   required from here
-/usr/include/c++/4.8/ext/new_allocator.h:120:4: error: use of deleted function ‘std::unique_ptr<_Tp, _Dp>::unique_ptr(const std::unique_ptr<_Tp, _Dp>&) [with _Tp = index_to_param_until_t::block_t; _Dp = std::default_delete<index_to_param_until_t::block_t>]’
-  { ::new((void *)__p) _Up(std::forward<_Args>(__args)...); }
-    ^
-In file included from /usr/include/c++/4.8/memory:81:0,
-                 from /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/index_to_param_until.cpp:3:
-/usr/include/c++/4.8/bits/unique_ptr.h:273:7: error: declared here
-       unique_ptr(const unique_ptr&) = delete;
-       ^
-make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/index_to_param_until.cpp.o] Error 1
-In file included from /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_multi_bool_ops.cpp:4:0:
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_multi_bool_ops.h: In member function ‘uint64_t switch_multi_bool_ops_t::opcode_t::body() const’:
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_multi_bool_ops.h:54:47: error: request for member ‘get’ in ‘((const switch_multi_bool_ops_t::opcode_t*)this)->switch_multi_bool_ops_t::opcode_t::m_body’, which is of non-class type ‘const uint64_t {aka const long unsigned int}’
-         uint64_t body() const { return m_body.get(); }
-                                               ^
-make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_multi_bool_ops.cpp.o] Error 1
+In file included from /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_else.cpp:4:0:
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_else.h: In member function ‘kaitai::kstruct* switch_manual_int_else_t::opcode_t::body() const’:
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_else.h:120:48: error: cannot convert ‘const std::unique_ptr<kaitai::kstruct>’ to ‘kaitai::kstruct*’ in return
+         kaitai::kstruct* body() const { return m_body; }
+                                                ^
+make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_else.cpp.o] Error 1
+In file included from /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_size.cpp:4:0:
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_size.h: In member function ‘kaitai::kstruct* switch_manual_int_size_t::chunk_t::body() const’:
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_size.h:108:48: error: cannot convert ‘const std::unique_ptr<kaitai::kstruct>’ to ‘kaitai::kstruct*’ in return
+         kaitai::kstruct* body() const { return m_body; }
+                                                ^
+make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_size.cpp.o] Error 1
+In file included from /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_str_else.cpp:4:0:
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_str_else.h: In member function ‘kaitai::kstruct* switch_manual_str_else_t::opcode_t::body() const’:
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_str_else.h:120:48: error: cannot convert ‘const std::unique_ptr<kaitai::kstruct>’ to ‘kaitai::kstruct*’ in return
+         kaitai::kstruct* body() const { return m_body; }
+                                                ^
+make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_str_else.cpp.o] Error 1
 /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/test_cast_nested.cpp:4:25: fatal error: cast_nested.h: No such file or directory
  #include <cast_nested.h>
                          ^
 compilation terminated.
-In file included from /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/test_non_standard.cpp:4:0:
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/non_standard.h: In member function ‘uint32_t non_standard_t::bar() const’:
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/non_standard.h:54:41: error: request for member ‘get’ in ‘((const non_standard_t*)this)->non_standard_t::m_bar’, which is of non-class type ‘const uint32_t {aka const unsigned int}’
-     uint32_t bar() const { return m_bar.get(); }
-                                         ^
-make[2]: *** [CMakeFiles/ks_tests.dir/test_non_standard.cpp.o] Error 1
 make[2]: *** [CMakeFiles/ks_tests.dir/test_cast_nested.cpp.o] Error 1
-In file included from /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/test_switch_integers.cpp:4:0:
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_integers.h: In member function ‘uint64_t switch_integers_t::opcode_t::body() const’:
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_integers.h:54:47: error: request for member ‘get’ in ‘((const switch_integers_t::opcode_t*)this)->switch_integers_t::opcode_t::m_body’, which is of non-class type ‘const uint64_t {aka const long unsigned int}’
-         uint64_t body() const { return m_body.get(); }
-                                               ^
-make[2]: *** [CMakeFiles/ks_tests.dir/test_switch_integers.cpp.o] Error 1
-In file included from /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/test_switch_integers2.cpp:4:0:
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_integers2.h: In member function ‘uint64_t switch_integers2_t::len() const’:
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_integers2.h:55:41: error: request for member ‘get’ in ‘((const switch_integers2_t*)this)->switch_integers2_t::m_len’, which is of non-class type ‘const uint64_t {aka const long unsigned int}’
-     uint64_t len() const { return m_len.get(); }
-                                         ^
-make[2]: *** [CMakeFiles/ks_tests.dir/test_switch_integers2.cpp.o] Error 1
+In file included from /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/test_switch_manual_str_else.cpp:4:0:
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_str_else.h: In member function ‘kaitai::kstruct* switch_manual_str_else_t::opcode_t::body() const’:
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_str_else.h:120:48: error: cannot convert ‘const std::unique_ptr<kaitai::kstruct>’ to ‘kaitai::kstruct*’ in return
+         kaitai::kstruct* body() const { return m_body; }
+                                                ^
+make[2]: *** [CMakeFiles/ks_tests.dir/test_switch_manual_str_else.cpp.o] Error 1
+In file included from /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/test_switch_manual_int_size.cpp:3:0:
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_size.h: In member function ‘kaitai::kstruct* switch_manual_int_size_t::chunk_t::body() const’:
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_size.h:108:48: error: cannot convert ‘const std::unique_ptr<kaitai::kstruct>’ to ‘kaitai::kstruct*’ in return
+         kaitai::kstruct* body() const { return m_body; }
+                                                ^
+make[2]: *** [CMakeFiles/ks_tests.dir/test_switch_manual_int_size.cpp.o] Error 1
 /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/test_switch_cast.cpp:3:25: fatal error: switch_cast.h: No such file or directory
  #include <switch_cast.h>
                          ^
 compilation terminated.
+In file included from /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/test_switch_manual_int_size_eos.cpp:3:0:
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_size_eos.h: In member function ‘kaitai::kstruct* switch_manual_int_size_eos_t::chunk_body_t::body() const’:
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_size_eos.h:136:48: error: cannot convert ‘const std::unique_ptr<kaitai::kstruct>’ to ‘kaitai::kstruct*’ in return
+         kaitai::kstruct* body() const { return m_body; }
+                                                ^
+make[2]: *** [CMakeFiles/ks_tests.dir/test_switch_manual_int_size_eos.cpp.o] Error 1
 make[2]: *** [CMakeFiles/ks_tests.dir/test_switch_cast.cpp.o] Error 1
 In file included from /usr/include/boost/test/unit_test.hpp:19:0,
                  from /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/test_switch_repeat_expr.cpp:1:
@@ -168,22 +85,28 @@ make[2]: *** [CMakeFiles/ks_tests.dir/test_switch_repeat_expr.cpp.o] Error 1
  #include <cast_to_imported.h>
                               ^
 compilation terminated.
+In file included from /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/test_switch_manual_int_size_else.cpp:4:0:
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_size_else.h: In member function ‘kaitai::kstruct* switch_manual_int_size_else_t::chunk_t::body() const’:
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_size_else.h:126:48: error: cannot convert ‘const std::unique_ptr<kaitai::kstruct>’ to ‘kaitai::kstruct*’ in return
+         kaitai::kstruct* body() const { return m_body; }
+                                                ^
+make[2]: *** [CMakeFiles/ks_tests.dir/test_switch_manual_int_size_else.cpp.o] Error 1
 /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/test_process_coerce_switch.cpp:4:35: fatal error: process_coerce_switch.h: No such file or directory
  #include <process_coerce_switch.h>
                                    ^
 compilation terminated.
+In file included from /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/test_switch_manual_int_else.cpp:4:0:
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_else.h: In member function ‘kaitai::kstruct* switch_manual_int_else_t::opcode_t::body() const’:
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_else.h:120:48: error: cannot convert ‘const std::unique_ptr<kaitai::kstruct>’ to ‘kaitai::kstruct*’ in return
+         kaitai::kstruct* body() const { return m_body; }
+                                                ^
+make[2]: *** [CMakeFiles/ks_tests.dir/test_switch_manual_int_else.cpp.o] Error 1
 make[2]: *** [CMakeFiles/ks_tests.dir/test_cast_to_imported.cpp.o] Error 1
-In file included from /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/test_switch_multi_bool_ops.cpp:3:0:
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_multi_bool_ops.h: In member function ‘uint64_t switch_multi_bool_ops_t::opcode_t::body() const’:
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_multi_bool_ops.h:54:47: error: request for member ‘get’ in ‘((const switch_multi_bool_ops_t::opcode_t*)this)->switch_multi_bool_ops_t::opcode_t::m_body’, which is of non-class type ‘const uint64_t {aka const long unsigned int}’
-         uint64_t body() const { return m_body.get(); }
-                                               ^
-make[2]: *** [CMakeFiles/ks_tests.dir/test_switch_multi_bool_ops.cpp.o] Error 1
+make[2]: *** [CMakeFiles/ks_tests.dir/test_process_coerce_switch.cpp.o] Error 1
 /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/test_cast_to_top.cpp:4:25: fatal error: cast_to_top.h: No such file or directory
  #include <cast_to_top.h>
                          ^
 compilation terminated.
-make[2]: *** [CMakeFiles/ks_tests.dir/test_process_coerce_switch.cpp.o] Error 1
 make[2]: *** [CMakeFiles/ks_tests.dir/test_cast_to_top.cpp.o] Error 1
 make[2]: Target `CMakeFiles/ks_tests.dir/build' not remade because of errors.
 make[1]: *** [CMakeFiles/ks_tests.dir/all] Error 2
