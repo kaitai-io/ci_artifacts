@@ -1,53 +1,3 @@
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_pass_struct.cpp:18:48: error: no matching constructor for initialization of 'params_pass_struct_t::struct_type_t'
-    m_one = std::unique_ptr<struct_type_t>(new struct_type_t(first(), m__io, this, m__root));
-                                               ^             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_pass_struct.h:56:9: note: candidate constructor not viable: no known conversion from 'params_pass_struct_t::block_t *' to 'std::unique_ptr<kaitai::kstruct>' for 1st argument
-        struct_type_t(std::unique_ptr<kaitai::kstruct> p_foo, kaitai::kstream* p__io, params_pass_struct_t* p__parent = nullptr, params_pass_struct_t* p__root = nullptr);
-        ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_pass_struct.h:51:11: note: candidate constructor (the implicit copy constructor) not viable: requires 1 argument, but 4 were provided
-    class struct_type_t : public kaitai::kstruct {
-          ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_pass_struct.cpp:40:11: error: overload resolution selected deleted operator '='
-    m_foo = p_foo;
-    ~~~~~ ^ ~~~~~
-/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/bits/unique_ptr.h:274:19: note: candidate function has been explicitly deleted
-      unique_ptr& operator=(const unique_ptr&) = delete;
-                  ^
-/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/bits/unique_ptr.h:190:7: note: candidate function not viable: no known conversion from 'std::unique_ptr<kaitai::kstruct>' to 'std::unique_ptr<kaitai::kstruct, std::default_delete<kaitai::kstruct> > &&' for 1st argument
-      operator=(unique_ptr&& __u) noexcept
-      ^
-/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/bits/unique_ptr.h:203:2: note: candidate function [with _Up = kaitai::kstruct, _Ep = std::default_delete<kaitai::kstruct>] not viable: no known conversion from 'std::unique_ptr<kaitai::kstruct>' to 'unique_ptr<kaitai::kstruct, std::default_delete<kaitai::kstruct> > &&' for 1st argument
-        operator=(unique_ptr<_Up, _Ep>&& __u) noexcept
-        ^
-/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/bits/unique_ptr.h:211:7: note: candidate function not viable: no known conversion from 'std::unique_ptr<kaitai::kstruct>' to 'std::nullptr_t' (aka 'nullptr_t') for 1st argument
-      operator=(nullptr_t) noexcept
-      ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_pass_struct.cpp:46:40: error: no matching constructor for initialization of 'params_pass_struct_t::struct_type_t::baz_t'
-    m_bar = std::unique_ptr<baz_t>(new baz_t(foo(), m__io, this, m__root));
-                                       ^     ~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_pass_struct.h:68:13: note: candidate constructor not viable: no known conversion from 'kaitai::kstruct *' to 'std::unique_ptr<kaitai::kstruct>' for 1st argument
-            baz_t(std::unique_ptr<kaitai::kstruct> p_foo, kaitai::kstream* p__io, params_pass_struct_t::struct_type_t* p__parent = nullptr, params_pass_struct_t* p__root = nullptr);
-            ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_pass_struct.h:64:15: note: candidate constructor (the implicit copy constructor) not viable: requires 1 argument, but 4 were provided
-        class baz_t : public kaitai::kstruct {
-              ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_pass_struct.cpp:55:11: error: overload resolution selected deleted operator '='
-    m_foo = p_foo;
-    ~~~~~ ^ ~~~~~
-/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/bits/unique_ptr.h:274:19: note: candidate function has been explicitly deleted
-      unique_ptr& operator=(const unique_ptr&) = delete;
-                  ^
-/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/bits/unique_ptr.h:190:7: note: candidate function not viable: no known conversion from 'std::unique_ptr<kaitai::kstruct>' to 'std::unique_ptr<kaitai::kstruct, std::default_delete<kaitai::kstruct> > &&' for 1st argument
-      operator=(unique_ptr&& __u) noexcept
-      ^
-/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/bits/unique_ptr.h:203:2: note: candidate function [with _Up = kaitai::kstruct, _Ep = std::default_delete<kaitai::kstruct>] not viable: no known conversion from 'std::unique_ptr<kaitai::kstruct>' to 'unique_ptr<kaitai::kstruct, std::default_delete<kaitai::kstruct> > &&' for 1st argument
-        operator=(unique_ptr<_Up, _Ep>&& __u) noexcept
-        ^
-/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/bits/unique_ptr.h:211:7: note: candidate function not viable: no known conversion from 'std::unique_ptr<kaitai::kstruct>' to 'std::nullptr_t' (aka 'nullptr_t') for 1st argument
-      operator=(nullptr_t) noexcept
-      ^
-4 errors generated.
-make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_pass_struct.cpp.o] Error 1
 In file included from /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/repeat_until_complex.cpp:3:
 In file included from /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/memory:63:
 In file included from /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/bits/allocator.h:46:
@@ -113,32 +63,6 @@ In file included from /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp
                                        ~~~~~~^~~~
 1 error generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_integers.cpp.o] Error 1
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_pass_usertype.cpp:18:47: error: no matching constructor for initialization of 'params_pass_usertype_t::param_type_t'
-    m_one = std::unique_ptr<param_type_t>(new param_type_t(first(), m__io, this, m__root));
-                                              ^            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_pass_usertype.h:55:9: note: candidate constructor not viable: no known conversion from 'params_pass_usertype_t::block_t *' to 'std::unique_ptr<block_t>' for 1st argument
-        param_type_t(std::unique_ptr<block_t> p_foo, kaitai::kstream* p__io, params_pass_usertype_t* p__parent = nullptr, params_pass_usertype_t* p__root = nullptr);
-        ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_pass_usertype.h:51:11: note: candidate constructor (the implicit copy constructor) not viable: requires 1 argument, but 4 were provided
-    class param_type_t : public kaitai::kstruct {
-          ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_pass_usertype.cpp:40:11: error: overload resolution selected deleted operator '='
-    m_foo = p_foo;
-    ~~~~~ ^ ~~~~~
-/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/bits/unique_ptr.h:274:19: note: candidate function has been explicitly deleted
-      unique_ptr& operator=(const unique_ptr&) = delete;
-                  ^
-/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/bits/unique_ptr.h:190:7: note: candidate function not viable: no known conversion from 'std::unique_ptr<block_t>' to 'std::unique_ptr<params_pass_usertype_t::block_t, std::default_delete<params_pass_usertype_t::block_t> > &&' for 1st argument
-      operator=(unique_ptr&& __u) noexcept
-      ^
-/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/bits/unique_ptr.h:203:2: note: candidate function [with _Up = params_pass_usertype_t::block_t, _Ep = std::default_delete<params_pass_usertype_t::block_t>] not viable: no known conversion from 'std::unique_ptr<block_t>' to 'unique_ptr<params_pass_usertype_t::block_t, std::default_delete<params_pass_usertype_t::block_t> > &&' for 1st argument
-        operator=(unique_ptr<_Up, _Ep>&& __u) noexcept
-        ^
-/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/bits/unique_ptr.h:211:7: note: candidate function not viable: no known conversion from 'std::unique_ptr<block_t>' to 'std::nullptr_t' (aka 'nullptr_t') for 1st argument
-      operator=(nullptr_t) noexcept
-      ^
-2 errors generated.
-make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_pass_usertype.cpp.o] Error 1
 In file included from /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/non_standard.cpp:4:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/non_standard.h:54:40: error: member reference base type 'const uint32_t' (aka 'const unsigned int') is not a structure or union
     uint32_t bar() const { return m_bar.get(); }
