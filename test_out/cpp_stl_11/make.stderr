@@ -25,55 +25,6 @@ In file included from /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cp
                                   ~~~~~^~~~
 1 error generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/non_standard.cpp.o] Error 1
-/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_pass_struct.cpp:18:48: error: no matching constructor for initialization of 'params_pass_struct_t::struct_type_t'
-    m_one = std::unique_ptr<struct_type_t>(new struct_type_t(first(), m__io, this, m__root));
-                                               ^             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_pass_struct.h:56:9: note: candidate constructor not viable: no known conversion from 'params_pass_struct_t::block_t *' to 'std::unique_ptr<kaitai::kstruct>' for 1st argument
-        struct_type_t(std::unique_ptr<kaitai::kstruct> p_foo, kaitai::kstream* p__io, params_pass_struct_t* p__parent = nullptr, params_pass_struct_t* p__root = nullptr);
-        ^
-/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_pass_struct.h:51:11: note: candidate constructor (the implicit copy constructor) not viable: requires 1 argument, but 4 were provided
-    class struct_type_t : public kaitai::kstruct {
-          ^
-/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_pass_struct.cpp:40:11: error: object of type 'std::__1::unique_ptr<kaitai::kstruct, std::__1::default_delete<kaitai::kstruct> >' cannot be assigned because its copy assignment operator is implicitly deleted
-    m_foo = p_foo;
-          ^
-/Applications/Xcode-9.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:2394:3: note: copy assignment operator is implicitly deleted because 'unique_ptr<kaitai::kstruct, std::__1::default_delete<kaitai::kstruct> >' has a user-declared move constructor
-  unique_ptr(unique_ptr&& __u) noexcept
-  ^
-/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_pass_struct.cpp:46:40: error: no matching constructor for initialization of 'params_pass_struct_t::struct_type_t::baz_t'
-    m_bar = std::unique_ptr<baz_t>(new baz_t(foo(), m__io, this, m__root));
-                                       ^     ~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_pass_struct.h:68:13: note: candidate constructor not viable: no known conversion from 'kaitai::kstruct *' to 'std::unique_ptr<kaitai::kstruct>' for 1st argument
-            baz_t(std::unique_ptr<kaitai::kstruct> p_foo, kaitai::kstream* p__io, params_pass_struct_t::struct_type_t* p__parent = nullptr, params_pass_struct_t* p__root = nullptr);
-            ^
-/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_pass_struct.h:64:15: note: candidate constructor (the implicit copy constructor) not viable: requires 1 argument, but 4 were provided
-        class baz_t : public kaitai::kstruct {
-              ^
-/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_pass_struct.cpp:55:11: error: object of type 'std::__1::unique_ptr<kaitai::kstruct, std::__1::default_delete<kaitai::kstruct> >' cannot be assigned because its copy assignment operator is implicitly deleted
-    m_foo = p_foo;
-          ^
-/Applications/Xcode-9.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:2394:3: note: copy assignment operator is implicitly deleted because 'unique_ptr<kaitai::kstruct, std::__1::default_delete<kaitai::kstruct> >' has a user-declared move constructor
-  unique_ptr(unique_ptr&& __u) noexcept
-  ^
-4 errors generated.
-make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_pass_struct.cpp.o] Error 1
-/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_pass_usertype.cpp:18:47: error: no matching constructor for initialization of 'params_pass_usertype_t::param_type_t'
-    m_one = std::unique_ptr<param_type_t>(new param_type_t(first(), m__io, this, m__root));
-                                              ^            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_pass_usertype.h:55:9: note: candidate constructor not viable: no known conversion from 'params_pass_usertype_t::block_t *' to 'std::unique_ptr<block_t>' for 1st argument
-        param_type_t(std::unique_ptr<block_t> p_foo, kaitai::kstream* p__io, params_pass_usertype_t* p__parent = nullptr, params_pass_usertype_t* p__root = nullptr);
-        ^
-/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_pass_usertype.h:51:11: note: candidate constructor (the implicit copy constructor) not viable: requires 1 argument, but 4 were provided
-    class param_type_t : public kaitai::kstruct {
-          ^
-/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_pass_usertype.cpp:40:11: error: object of type 'std::__1::unique_ptr<params_pass_usertype_t::block_t, std::__1::default_delete<params_pass_usertype_t::block_t> >' cannot be assigned because its copy assignment operator is implicitly deleted
-    m_foo = p_foo;
-          ^
-/Applications/Xcode-9.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:2394:3: note: copy assignment operator is implicitly deleted because 'unique_ptr<params_pass_usertype_t::block_t, std::__1::default_delete<params_pass_usertype_t::block_t> >' has a user-declared move constructor
-  unique_ptr(unique_ptr&& __u) noexcept
-  ^
-2 errors generated.
-make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_pass_usertype.cpp.o] Error 1
 In file included from /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/repeat_until_complex.cpp:3:
 /Applications/Xcode-9.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:1759:31: error: call to implicitly-deleted copy constructor of 'std::__1::unique_ptr<repeat_until_complex_t::type_u1_t, std::__1::default_delete<repeat_until_complex_t::type_u1_t> >'
             ::new((void*)__p) _Up(_VSTD::forward<_Args>(__args)...);
