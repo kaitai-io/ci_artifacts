@@ -1,17 +1,18 @@
-/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/test_process_coerce_switch.cpp:4:35: fatal error: process_coerce_switch.h: No such file or directory
- #include <process_coerce_switch.h>
-                                   ^
-compilation terminated.
-make[2]: *** [CMakeFiles/ks_tests.dir/test_process_coerce_switch.cpp.o] Error 1
-In file included from /usr/include/boost/test/unit_test.hpp:19:0,
-                 from /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/test_switch_repeat_expr.cpp:1:
-/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/test_switch_repeat_expr.cpp: In member function ‘void test_switch_repeat_expr::test_method()’:
-/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/test_switch_repeat_expr.cpp:16:82: error: invalid static_cast from type ‘__gnu_cxx::__alloc_traits<std::allocator<std::unique_ptr<kaitai::kstruct> > >::value_type {aka std::unique_ptr<kaitai::kstruct>}’ to type ‘switch_repeat_expr_t::one_t*’
-     BOOST_CHECK_EQUAL((static_cast<switch_repeat_expr_t::one_t*>(r->body()->at(0)))->first(), std::string("Stuff\0Me\0", 9));
-                                                                                  ^
-make[2]: *** [CMakeFiles/ks_tests.dir/test_switch_repeat_expr.cpp.o] Error 1
-make[2]: Target `CMakeFiles/ks_tests.dir/build' not remade because of errors.
-make[1]: *** [CMakeFiles/ks_tests.dir/all] Error 2
-make[1]: Target `all' not remade because of errors.
-make: *** [all] Error 2
-make: Target `default_target' not remade because of errors.
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/vlq_base128_le.cpp: In member function ‘int32_t vlq_base128_le_t::value()’:
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/vlq_base128_le.cpp:75:338: warning: left shift count >= width of type [enabled by default]
+     m_value = (((((((groups()->at(0)->value() + ((len() >= 2) ? ((groups()->at(1)->value() << 7)) : (0))) + ((len() >= 3) ? ((groups()->at(2)->value() << 14)) : (0))) + ((len() >= 4) ? ((groups()->at(3)->value() << 21)) : (0))) + ((len() >= 5) ? ((groups()->at(4)->value() << 28)) : (0))) + ((len() >= 6) ? ((groups()->at(5)->value() << 35)) : (0))) + ((len() >= 7) ? ((groups()->at(6)->value() << 42)) : (0))) + ((len() >= 8) ? ((groups()->at(7)->value() << 49)) : (0)));
+                                                                                                                                                                                                                                                                                                                                                  ^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/vlq_base128_le.cpp:75:399: warning: left shift count >= width of type [enabled by default]
+     m_value = (((((((groups()->at(0)->value() + ((len() >= 2) ? ((groups()->at(1)->value() << 7)) : (0))) + ((len() >= 3) ? ((groups()->at(2)->value() << 14)) : (0))) + ((len() >= 4) ? ((groups()->at(3)->value() << 21)) : (0))) + ((len() >= 5) ? ((groups()->at(4)->value() << 28)) : (0))) + ((len() >= 6) ? ((groups()->at(5)->value() << 35)) : (0))) + ((len() >= 7) ? ((groups()->at(6)->value() << 42)) : (0))) + ((len() >= 8) ? ((groups()->at(7)->value() << 49)) : (0)));
+                                                                                                                                                                                                                                                                                                                                                                                                               ^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/vlq_base128_le.cpp:75:460: warning: left shift count >= width of type [enabled by default]
+     m_value = (((((((groups()->at(0)->value() + ((len() >= 2) ? ((groups()->at(1)->value() << 7)) : (0))) + ((len() >= 3) ? ((groups()->at(2)->value() << 14)) : (0))) + ((len() >= 4) ? ((groups()->at(3)->value() << 21)) : (0))) + ((len() >= 5) ? ((groups()->at(4)->value() << 28)) : (0))) + ((len() >= 6) ? ((groups()->at(5)->value() << 35)) : (0))) + ((len() >= 7) ? ((groups()->at(6)->value() << 42)) : (0))) + ((len() >= 8) ? ((groups()->at(7)->value() << 49)) : (0)));
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/yaml_ints.cpp: In member function ‘int32_t yaml_ints_t::test_u8_dec()’:
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/yaml_ints.cpp:43:19: warning: overflow in implicit constant conversion [-Woverflow]
+     m_test_u8_dec = 18446744073709551615ULL;
+                   ^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/yaml_ints.cpp: In member function ‘int32_t yaml_ints_t::test_u8_hex()’:
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/yaml_ints.cpp:51:19: warning: overflow in implicit constant conversion [-Woverflow]
+     m_test_u8_hex = 18446744073709551615ULL;
+                   ^
