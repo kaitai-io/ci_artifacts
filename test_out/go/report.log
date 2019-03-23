@@ -6,13 +6,13 @@
 --- PASS: TestBitsByteAligned (0.00s)
 === RUN   TestBitsSimple
 --- FAIL: TestBitsSimple (0.00s)
-	bits_simple_test.go:14: <nil>
+	bits_simple_test.go:21: <nil>
 === RUN   TestBufferedStruct
 --- PASS: TestBufferedStruct (0.00s)
 === RUN   TestBytesPadTerm
 --- FAIL: TestBytesPadTerm (0.00s)
-	bytes_pad_term_test.go:25: 
-			Error Trace:	bytes_pad_term_test.go:25
+	bytes_pad_term_test.go:32: 
+			Error Trace:	bytes_pad_term_test.go:32
 			Error:      	Not equal: 
 			            	expected: []byte{0x73, 0x74, 0x72, 0x31}
 			            	actual  : []byte{0x73, 0x74, 0x72, 0x31, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40}
@@ -28,8 +28,8 @@
 			            	+ 00000010  40 40 40 40                                       |@@@@|
 			            	 }
 			Test:       	TestBytesPadTerm
-	bytes_pad_term_test.go:26: 
-			Error Trace:	bytes_pad_term_test.go:26
+	bytes_pad_term_test.go:33: 
+			Error Trace:	bytes_pad_term_test.go:33
 			Error:      	Not equal: 
 			            	expected: []byte{0x73, 0x74, 0x72, 0x32, 0x66, 0x6f, 0x6f}
 			            	actual  : []byte{0x73, 0x74, 0x72, 0x32, 0x66, 0x6f, 0x6f, 0x40, 0x2b, 0x2b, 0x2b, 0x2b, 0x2b, 0x2b, 0x2b, 0x2b, 0x2b, 0x2b, 0x2b, 0x2b}
@@ -45,8 +45,8 @@
 			            	+ 00000010  2b 2b 2b 2b                                       |++++|
 			            	 }
 			Test:       	TestBytesPadTerm
-	bytes_pad_term_test.go:27: 
-			Error Trace:	bytes_pad_term_test.go:27
+	bytes_pad_term_test.go:34: 
+			Error Trace:	bytes_pad_term_test.go:34
 			Error:      	Not equal: 
 			            	expected: []byte{0x73, 0x74, 0x72, 0x2b, 0x2b, 0x2b, 0x33, 0x62, 0x61, 0x72, 0x2b, 0x2b, 0x2b}
 			            	actual  : []byte{0x73, 0x74, 0x72, 0x2b, 0x2b, 0x2b, 0x33, 0x62, 0x61, 0x72, 0x2b, 0x2b, 0x2b, 0x40, 0x2b, 0x2b, 0x2b, 0x2b, 0x2b, 0x2b}
@@ -62,8 +62,8 @@
 			            	+ 00000010  2b 2b 2b 2b                                       |++++|
 			            	 }
 			Test:       	TestBytesPadTerm
-	bytes_pad_term_test.go:28: 
-			Error Trace:	bytes_pad_term_test.go:28
+	bytes_pad_term_test.go:35: 
+			Error Trace:	bytes_pad_term_test.go:35
 			Error:      	Not equal: 
 			            	expected: []byte{0x73, 0x74, 0x72, 0x34, 0x62, 0x61, 0x7a, 0x40}
 			            	actual  : []byte{0x73, 0x74, 0x72, 0x34, 0x62, 0x61, 0x7a, 0x40, 0x2e, 0x2e, 0x2e, 0x2e, 0x2e, 0x2e, 0x2e, 0x2e, 0x2e, 0x2e, 0x2e, 0x2e}
@@ -117,14 +117,14 @@
 --- PASS: TestExpr3 (0.00s)
 === RUN   TestExprArray
 --- FAIL: TestExprArray (0.00s)
-	expr_array_test.go:22: EOF
+	expr_array_test.go:29: EOF
 === RUN   TestExprBytesCmp
 --- PASS: TestExprBytesCmp (0.00s)
 === RUN   TestExprEnum
 --- PASS: TestExprEnum (0.00s)
 === RUN   TestExprIoPos
 --- FAIL: TestExprIoPos (0.00s)
-	expr_io_pos_test.go:22: ReadBytes(-2): negative number of bytes to read
+	expr_io_pos_test.go:29: ReadBytes(-2): negative number of bytes to read
 === RUN   TestExprMod
 --- PASS: TestExprMod (0.00s)
 === RUN   TestFixedContents
@@ -141,12 +141,12 @@
 --- PASS: TestIfStruct (0.00s)
 === RUN   TestIfValues
 --- FAIL: TestIfValues (0.00s)
-	if_values_test.go:36: 
-			Error Trace:	if_values_test.go:36
+	if_values_test.go:43: 
+			Error Trace:	if_values_test.go:43
 			Error:      	Expected nil, but got: 0
 			Test:       	TestIfValues
-	if_values_test.go:42: 
-			Error Trace:	if_values_test.go:42
+	if_values_test.go:49: 
+			Error Trace:	if_values_test.go:49
 			Error:      	Expected nil, but got: 0
 			Test:       	TestIfValues
 === RUN   TestInstanceIoUser
@@ -157,7 +157,7 @@
 --- PASS: TestInstanceStd (0.00s)
 === RUN   TestInstanceUserArray
 --- FAIL: TestInstanceUserArray (0.00s)
-	instance_user_array_test.go:30: EOF
+	instance_user_array_test.go:37: EOF
 === RUN   TestIntegers
 --- PASS: TestIntegers (0.00s)
 === RUN   TestJsSignedRightShift
@@ -192,8 +192,8 @@
 --- PASS: TestPositionToEnd (0.00s)
 === RUN   TestProcessCoerceBytes
 --- FAIL: TestProcessCoerceBytes (0.00s)
-	process_coerce_bytes_test.go:36: 
-			Error Trace:	process_coerce_bytes_test.go:36
+	process_coerce_bytes_test.go:43: 
+			Error Trace:	process_coerce_bytes_test.go:43
 			Error:      	Not equal: 
 			            	expected: []byte{0x42, 0x42, 0x42, 0x42}
 			            	actual  : []byte{0xe8, 0xe8, 0xe8, 0xe8}
@@ -209,24 +209,24 @@
 			Test:       	TestProcessCoerceBytes
 === RUN   TestProcessCoerceUsertype1
 --- FAIL: TestProcessCoerceUsertype1 (0.00s)
-	process_coerce_usertype1_test.go:36: 
-			Error Trace:	process_coerce_usertype1_test.go:36
+	process_coerce_usertype1_test.go:43: 
+			Error Trace:	process_coerce_usertype1_test.go:43
 			Error:      	Not equal: 
 			            	expected: int(1111638594)
 			            	actual  : uint32(0xe8e8e8e8)
 			Test:       	TestProcessCoerceUsertype1
 === RUN   TestProcessCoerceUsertype2
---- FAIL: TestProcessCoerceUsertype2 (0.01s)
-	process_coerce_usertype2_test.go:36: 
-			Error Trace:	process_coerce_usertype2_test.go:36
+--- FAIL: TestProcessCoerceUsertype2 (0.02s)
+	process_coerce_usertype2_test.go:43: 
+			Error Trace:	process_coerce_usertype2_test.go:43
 			Error:      	Not equal: 
 			            	expected: int(1111638594)
 			            	actual  : uint32(0xe8e8e8e8)
 			Test:       	TestProcessCoerceUsertype2
 === RUN   TestProcessCustom
 --- FAIL: TestProcessCustom (0.00s)
-	process_custom_test.go:25: 
-			Error Trace:	process_custom_test.go:25
+	process_custom_test.go:32: 
+			Error Trace:	process_custom_test.go:32
 			Error:      	Not equal: 
 			            	expected: []byte{0x10, 0xb3, 0x94, 0x94, 0xf4}
 			            	actual  : []byte{0x9, 0xac, 0x8d, 0x8d, 0xed}
@@ -240,8 +240,8 @@
 			            	+ 00000000  09 ac 8d 8d ed                                    |.....|
 			            	 }
 			Test:       	TestProcessCustom
-	process_custom_test.go:26: 
-			Error Trace:	process_custom_test.go:26
+	process_custom_test.go:33: 
+			Error Trace:	process_custom_test.go:33
 			Error:      	Not equal: 
 			            	expected: []byte{0x5f, 0xba, 0x7b, 0x93, 0x63, 0x23, 0x5f}
 			            	actual  : []byte{0xba, 0x7b, 0x93, 0x63, 0x23}
@@ -256,8 +256,8 @@
 			            	+ 00000000  ba 7b 93 63 23                                    |.{.c#|
 			            	 }
 			Test:       	TestProcessCustom
-	process_custom_test.go:27: 
-			Error Trace:	process_custom_test.go:27
+	process_custom_test.go:34: 
+			Error Trace:	process_custom_test.go:34
 			Error:      	Not equal: 
 			            	expected: []byte{0x29, 0x33, 0xb1, 0x38, 0xb1}
 			            	actual  : []byte{0x2a, 0x34, 0xb2, 0x39, 0xb2}
@@ -273,8 +273,8 @@
 			Test:       	TestProcessCustom
 === RUN   TestProcessRotate
 --- FAIL: TestProcessRotate (0.00s)
-	process_rotate_test.go:25: 
-			Error Trace:	process_rotate_test.go:25
+	process_rotate_test.go:32: 
+			Error Trace:	process_rotate_test.go:32
 			Error:      	Not equal: 
 			            	expected: []byte{0x48, 0x65, 0x6c, 0x6c, 0x6f}
 			            	actual  : []byte{0x9, 0xac, 0x8d, 0x8d, 0xed}
@@ -288,8 +288,8 @@
 			            	+ 00000000  09 ac 8d 8d ed                                    |.....|
 			            	 }
 			Test:       	TestProcessRotate
-	process_rotate_test.go:26: 
-			Error Trace:	process_rotate_test.go:26
+	process_rotate_test.go:33: 
+			Error Trace:	process_rotate_test.go:33
 			Error:      	Not equal: 
 			            	expected: []byte{0x57, 0x6f, 0x72, 0x6c, 0x64}
 			            	actual  : []byte{0xba, 0x7b, 0x93, 0x63, 0x23}
@@ -303,8 +303,8 @@
 			            	+ 00000000  ba 7b 93 63 23                                    |.{.c#|
 			            	 }
 			Test:       	TestProcessRotate
-	process_rotate_test.go:27: 
-			Error Trace:	process_rotate_test.go:27
+	process_rotate_test.go:34: 
+			Error Trace:	process_rotate_test.go:34
 			Error:      	Not equal: 
 			            	expected: []byte{0x54, 0x68, 0x65, 0x72, 0x65}
 			            	actual  : []byte{0x2a, 0x34, 0xb2, 0x39, 0xb2}
@@ -320,8 +320,8 @@
 			Test:       	TestProcessRotate
 === RUN   TestProcessToUser
 --- FAIL: TestProcessToUser (0.00s)
-	process_to_user_test.go:25: 
-			Error Trace:	process_to_user_test.go:25
+	process_to_user_test.go:32: 
+			Error Trace:	process_to_user_test.go:32
 			Error:      	Not equal: 
 			            	expected: "Hello"
 			            	actual  : "\t\xac\x8d\x8d\xed"
@@ -335,8 +335,8 @@
 			Test:       	TestProcessToUser
 === RUN   TestProcessXor4Const
 --- FAIL: TestProcessXor4Const (0.00s)
-	process_xor4_const_test.go:26: 
-			Error Trace:	process_xor4_const_test.go:26
+	process_xor4_const_test.go:33: 
+			Error Trace:	process_xor4_const_test.go:33
 			Error:      	Not equal: 
 			            	expected: []byte{0x66, 0x6f, 0x6f, 0x20, 0x62, 0x61, 0x72}
 			            	actual  : []byte{0x8a, 0xd4, 0xcc, 0x34, 0x8e, 0xda, 0xd1}
@@ -352,8 +352,8 @@
 			Test:       	TestProcessXor4Const
 === RUN   TestProcessXor4Value
 --- FAIL: TestProcessXor4Value (0.00s)
-	process_xor4_value_test.go:26: 
-			Error Trace:	process_xor4_value_test.go:26
+	process_xor4_value_test.go:33: 
+			Error Trace:	process_xor4_value_test.go:33
 			Error:      	Not equal: 
 			            	expected: []byte{0x66, 0x6f, 0x6f, 0x20, 0x62, 0x61, 0x72}
 			            	actual  : []byte{0x8a, 0xd4, 0xcc, 0x34, 0x8e, 0xda, 0xd1}
@@ -369,8 +369,8 @@
 			Test:       	TestProcessXor4Value
 === RUN   TestProcessXorConst
 --- FAIL: TestProcessXorConst (0.00s)
-	process_xor_const_test.go:26: 
-			Error Trace:	process_xor_const_test.go:26
+	process_xor_const_test.go:33: 
+			Error Trace:	process_xor_const_test.go:33
 			Error:      	Not equal: 
 			            	expected: []byte{0x66, 0x6f, 0x6f, 0x20, 0x62, 0x61, 0x72}
 			            	actual  : []byte{0x99, 0x90, 0x90, 0xdf, 0x9d, 0x9e, 0x8d}
@@ -386,8 +386,8 @@
 			Test:       	TestProcessXorConst
 === RUN   TestProcessXorValue
 --- FAIL: TestProcessXorValue (0.00s)
-	process_xor_value_test.go:26: 
-			Error Trace:	process_xor_value_test.go:26
+	process_xor_value_test.go:33: 
+			Error Trace:	process_xor_value_test.go:33
 			Error:      	Not equal: 
 			            	expected: []byte{0x66, 0x6f, 0x6f, 0x20, 0x62, 0x61, 0x72}
 			            	actual  : []byte{0x99, 0x90, 0x90, 0xdf, 0x9d, 0x9e, 0x8d}
@@ -409,44 +409,44 @@
 --- PASS: TestRepeatNStruct (0.00s)
 === RUN   TestRepeatNStrzDouble
 --- FAIL: TestRepeatNStrzDouble (0.00s)
-	repeat_n_strz_double_test.go:22: EOF
+	repeat_n_strz_double_test.go:29: EOF
 === RUN   TestRepeatNStrz
 --- FAIL: TestRepeatNStrz (0.00s)
-	repeat_n_strz_test.go:22: EOF
+	repeat_n_strz_test.go:29: EOF
 === RUN   TestRepeatUntilComplex
 --- FAIL: TestRepeatUntilComplex (0.00s)
-	repeat_until_complex_test.go:27: 
-			Error Trace:	repeat_until_complex_test.go:27
+	repeat_until_complex_test.go:34: 
+			Error Trace:	repeat_until_complex_test.go:34
 			Error:      	Not equal: 
 			            	expected: []int([]int{1, 2, 3, 4})
 			            	actual  : []uint8([]byte{0x1, 0x2, 0x3, 0x4})
 			Test:       	TestRepeatUntilComplex
-	repeat_until_complex_test.go:29: 
-			Error Trace:	repeat_until_complex_test.go:29
+	repeat_until_complex_test.go:36: 
+			Error Trace:	repeat_until_complex_test.go:36
 			Error:      	Not equal: 
 			            	expected: []int([]int{1, 2})
 			            	actual  : []uint8([]byte{0x1, 0x2})
 			Test:       	TestRepeatUntilComplex
-	repeat_until_complex_test.go:33: 
-			Error Trace:	repeat_until_complex_test.go:33
+	repeat_until_complex_test.go:40: 
+			Error Trace:	repeat_until_complex_test.go:40
 			Error:      	Not equal: 
 			            	expected: []int([]int{1, 2, 3, 4, 5, 6})
 			            	actual  : []uint16([]uint16{0x1, 0x2, 0x3, 0x4, 0x5, 0x6})
 			Test:       	TestRepeatUntilComplex
-	repeat_until_complex_test.go:35: 
-			Error Trace:	repeat_until_complex_test.go:35
+	repeat_until_complex_test.go:42: 
+			Error Trace:	repeat_until_complex_test.go:42
 			Error:      	Not equal: 
 			            	expected: []int([]int{1, 2, 3})
 			            	actual  : []uint16([]uint16{0x1, 0x2, 0x3})
 			Test:       	TestRepeatUntilComplex
-	repeat_until_complex_test.go:37: 
-			Error Trace:	repeat_until_complex_test.go:37
+	repeat_until_complex_test.go:44: 
+			Error Trace:	repeat_until_complex_test.go:44
 			Error:      	Not equal: 
 			            	expected: []int([]int{1, 2, 3, 4})
 			            	actual  : []uint16([]uint16{0x1, 0x2, 0x3, 0x4})
 			Test:       	TestRepeatUntilComplex
-	repeat_until_complex_test.go:39: 
-			Error Trace:	repeat_until_complex_test.go:39
+	repeat_until_complex_test.go:46: 
+			Error Trace:	repeat_until_complex_test.go:46
 			Error:      	Not equal: 
 			            	expected: []int([]int{102, 111, 111, 98, 97, 114, 0})
 			            	actual  : []uint8([]byte{0x66, 0x6f, 0x6f, 0x62, 0x61, 0x72, 0x0})
@@ -463,8 +463,8 @@
 --- PASS: TestStrLiterals2 (0.00s)
 === RUN   TestStrPadTermEmpty
 --- FAIL: TestStrPadTermEmpty (0.00s)
-	str_pad_term_empty_test.go:25: 
-			Error Trace:	str_pad_term_empty_test.go:25
+	str_pad_term_empty_test.go:32: 
+			Error Trace:	str_pad_term_empty_test.go:32
 			Error:      	Not equal: 
 			            	expected: ""
 			            	actual  : "@@@@@@@@@@@@@@@@@@@@"
@@ -476,8 +476,8 @@
 			            	-
 			            	+@@@@@@@@@@@@@@@@@@@@
 			Test:       	TestStrPadTermEmpty
-	str_pad_term_empty_test.go:26: 
-			Error Trace:	str_pad_term_empty_test.go:26
+	str_pad_term_empty_test.go:33: 
+			Error Trace:	str_pad_term_empty_test.go:33
 			Error:      	Not equal: 
 			            	expected: ""
 			            	actual  : "@@@@@@@@++++++++++++"
@@ -489,8 +489,8 @@
 			            	-
 			            	+@@@@@@@@++++++++++++
 			Test:       	TestStrPadTermEmpty
-	str_pad_term_empty_test.go:27: 
-			Error Trace:	str_pad_term_empty_test.go:27
+	str_pad_term_empty_test.go:34: 
+			Error Trace:	str_pad_term_empty_test.go:34
 			Error:      	Not equal: 
 			            	expected: ""
 			            	actual  : "@tr+++3bar+++@++++++"
@@ -502,8 +502,8 @@
 			            	-
 			            	+@tr+++3bar+++@++++++
 			Test:       	TestStrPadTermEmpty
-	str_pad_term_empty_test.go:28: 
-			Error Trace:	str_pad_term_empty_test.go:28
+	str_pad_term_empty_test.go:35: 
+			Error Trace:	str_pad_term_empty_test.go:35
 			Error:      	Not equal: 
 			            	expected: "@"
 			            	actual  : "@@@@@@@@............"
@@ -517,8 +517,8 @@
 			Test:       	TestStrPadTermEmpty
 === RUN   TestStrPadTerm
 --- FAIL: TestStrPadTerm (0.00s)
-	str_pad_term_test.go:25: 
-			Error Trace:	str_pad_term_test.go:25
+	str_pad_term_test.go:32: 
+			Error Trace:	str_pad_term_test.go:32
 			Error:      	Not equal: 
 			            	expected: "str1"
 			            	actual  : "str1@@@@@@@@@@@@@@@@"
@@ -530,8 +530,8 @@
 			            	-str1
 			            	+str1@@@@@@@@@@@@@@@@
 			Test:       	TestStrPadTerm
-	str_pad_term_test.go:26: 
-			Error Trace:	str_pad_term_test.go:26
+	str_pad_term_test.go:33: 
+			Error Trace:	str_pad_term_test.go:33
 			Error:      	Not equal: 
 			            	expected: "str2foo"
 			            	actual  : "str2foo@++++++++++++"
@@ -543,8 +543,8 @@
 			            	-str2foo
 			            	+str2foo@++++++++++++
 			Test:       	TestStrPadTerm
-	str_pad_term_test.go:27: 
-			Error Trace:	str_pad_term_test.go:27
+	str_pad_term_test.go:34: 
+			Error Trace:	str_pad_term_test.go:34
 			Error:      	Not equal: 
 			            	expected: "str+++3bar+++"
 			            	actual  : "str+++3bar+++@++++++"
@@ -556,8 +556,8 @@
 			            	-str+++3bar+++
 			            	+str+++3bar+++@++++++
 			Test:       	TestStrPadTerm
-	str_pad_term_test.go:28: 
-			Error Trace:	str_pad_term_test.go:28
+	str_pad_term_test.go:35: 
+			Error Trace:	str_pad_term_test.go:35
 			Error:      	Not equal: 
 			            	expected: "str4baz@"
 			            	actual  : "str4baz@............"
@@ -571,16 +571,16 @@
 			Test:       	TestStrPadTerm
 === RUN   TestTermBytes
 --- FAIL: TestTermBytes (0.00s)
-	term_bytes_test.go:22: EOF
+	term_bytes_test.go:29: EOF
 === RUN   TestTermStrz
 --- FAIL: TestTermStrz (0.00s)
-	term_strz_test.go:22: EOF
+	term_strz_test.go:29: EOF
 === RUN   TestTypeIntUnaryOp
 --- PASS: TestTypeIntUnaryOp (0.00s)
 === RUN   TestTypeTernary
 --- FAIL: TestTypeTernary (0.00s)
-	type_ternary_test.go:29: 
-			Error Trace:	type_ternary_test.go:29
+	type_ternary_test.go:36: 
+			Error Trace:	type_ternary_test.go:36
 			Error:      	Not equal: 
 			            	expected: int(101)
 			            	actual  : uint8(0x66)
@@ -589,8 +589,8 @@
 --- PASS: TestUserType (0.00s)
 === RUN   TestZlibWithHeader78
 --- FAIL: TestZlibWithHeader78 (0.00s)
-	zlib_with_header_78_test.go:25: 
-			Error Trace:	zlib_with_header_78_test.go:25
+	zlib_with_header_78_test.go:32: 
+			Error Trace:	zlib_with_header_78_test.go:32
 			Error:      	Not equal: 
 			            	expected: []byte{0x61, 0x20, 0x71, 0x75, 0x69, 0x63, 0x6b, 0x20, 0x62, 0x72, 0x6f, 0x77, 0x6e, 0x20, 0x66, 0x6f, 0x78, 0x20, 0x6a, 0x75, 0x6d, 0x70, 0x73, 0x20, 0x6f, 0x76, 0x65, 0x72}
 			            	actual  : []byte{0x78, 0x9c, 0x4b, 0x54, 0x28, 0x2c, 0xcd, 0x4c, 0xce, 0x56, 0x48, 0x2a, 0xca, 0x2f, 0xcf, 0x53, 0x48, 0xcb, 0xaf, 0x50, 0xc8, 0x2a, 0xcd, 0x2d, 0x28, 0x56, 0xc8, 0x2f, 0x4b, 0x2d, 0x2, 0x0, 0x94, 0xbd, 0xa, 0x7f}
@@ -609,4 +609,4 @@
 			            	 }
 			Test:       	TestZlibWithHeader78
 FAIL
-FAIL	github.com/kaitai-io/ci_targets/tests/spec/go	0.024s
+FAIL	github.com/kaitai-io/ci_targets/tests/spec/go	0.027s
