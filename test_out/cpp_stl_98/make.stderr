@@ -1,3 +1,22 @@
+In file included from /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_to_i_class_border_2.cpp:4:0:
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_to_i_class_border_2.h:18:58: error: expected ‘)’ before ‘*’ token
+     enum_to_i_class_border_2_t(enum_to_i_class_border_1_t* p_parent, kaitai::kstream* p__io, kaitai::kstruct* p__parent = 0, enum_to_i_class_border_2_t* p__root = 0);
+                                                          ^
+In file included from /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_to_i_class_border_2.cpp:4:0:
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_to_i_class_border_2.h:34:5: error: ‘enum_to_i_class_border_1_t’ does not name a type
+     enum_to_i_class_border_1_t* m_parent;
+     ^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_to_i_class_border_2.h:39:5: error: ‘enum_to_i_class_border_1_t’ does not name a type
+     enum_to_i_class_border_1_t* parent() const { return m_parent; }
+     ^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_to_i_class_border_2.cpp:8:55: error: expected constructor, destructor, or type conversion before ‘(’ token
+ enum_to_i_class_border_2_t::enum_to_i_class_border_2_t(enum_to_i_class_border_1_t* p_parent, kaitai::kstream* p__io, kaitai::kstruct* p__parent, enum_to_i_class_border_2_t* p__root) : kaitai::kstruct(p__io) {
+                                                       ^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_to_i_class_border_2.cpp: In member function ‘bool enum_to_i_class_border_2_t::is_dog()’:
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_to_i_class_border_2.cpp:25:23: error: ‘parent’ was not declared in this scope
+     m_is_dog = parent()->some_dog() == 4;
+                       ^
+make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_to_i_class_border_2.cpp.o] Error 1
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/io_local_var.cpp: In destructor ‘virtual io_local_var_t::~io_local_var_t()’:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/io_local_var.cpp:29:23: error: ‘n_mess_up’ was not declared in this scope
      if (f_mess_up && !n_mess_up) {
