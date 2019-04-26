@@ -1,16 +1,11 @@
 Scanning dependencies of target ks_tests
-[  0%] Building CXX object CMakeFiles/ks_tests.dir/test_expr_sizeof_type_1.cpp.o
-[  0%] Building CXX object CMakeFiles/ks_tests.dir/test_expr_sizeof_type_0.cpp.o
-/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/test_expr_sizeof_type_1.cpp:4:10: fatal error: 'expr_sizeof_type_1.h' file not found
-#include <expr_sizeof_type_1.h>
-         ^~~~~~~~~~~~~~~~~~~~~~
-1 error generated.
-/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/test_expr_sizeof_type_0.cpp:4:10: fatal error: 'expr_sizeof_type_0.h' file not found
-#include <expr_sizeof_type_0.h>
-         ^~~~~~~~~~~~~~~~~~~~~~
-make[2]: *** [CMakeFiles/ks_tests.dir/test_expr_sizeof_type_1.cpp.o] Error 1
-1 error generated.
-make[2]: *** [CMakeFiles/ks_tests.dir/test_expr_sizeof_type_0.cpp.o] Error 1
+[  1%] Linking CXX executable ks_tests
+CMakeFiles/ks_tests.dir/test_io_local_var.cpp.o: In function `test_io_local_var::test_method()':
+/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/test_io_local_var.cpp:12: undefined reference to `io_local_var_t::io_local_var_t(kaitai::kstream*, kaitai::kstruct*, io_local_var_t*)'
+CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/enum_to_i_class_border_1.cpp.o: In function `enum_to_i_class_border_1_t::checker()':
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/enum_to_i_class_border_1.cpp:41: undefined reference to `enum_to_i_class_border_2_t::enum_to_i_class_border_2_t(enum_to_i_class_border_1_t*, kaitai::kstream*, kaitai::kstruct*, enum_to_i_class_border_2_t*)'
+clang-5.0: error: linker command failed with exit code 1 (use -v to see invocation)
+make[2]: *** [ks_tests] Error 1
 make[2]: Target `CMakeFiles/ks_tests.dir/build' not remade because of errors.
 make[1]: *** [CMakeFiles/ks_tests.dir/all] Error 2
 make[1]: Target `all' not remade because of errors.
