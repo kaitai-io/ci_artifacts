@@ -2,7 +2,7 @@ Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
 Copyright (C) Microsoft Corporation. All rights reserved.
 
 Building the projects in this solution one at a time. To enable parallel build, please add the "/m" switch.
-Build started 4/27/2019 5:23:25 PM.
+Build started 4/27/2019 9:24:24 PM.
 Project "C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\KS_TEST_CPP_STL.sln" on node 1 (default targets).
 ValidateSolutionConfiguration:
   Building solution configuration "Debug|x64".
@@ -48,42 +48,6 @@ C:\projects\ci-targets\tests\spec\cpp_stl_11\prereq\my_custom_fx.cpp(8): warning
   test_bits_byte_aligned.cpp
   test_bits_enum.cpp
   test_bits_simple.cpp
-C:\Tools\vcpkg\installed\x64-windows\include\boost/test/tools/old/impl.hpp(107): warning C4805: '==': unsafe mix of type 'const Left' and type 'const Right' in operation [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
-          with
-          [
-              Left=bool
-          ]
-          and
-          [
-              Right=int
-          ]
-  C:\Tools\vcpkg\installed\x64-windows\include\boost/test/tools/old/impl.hpp(130): note: see reference to function template instantiation 'boost::test_tools::assertion_result boost::test_tools::tt_detail::equal_impl<Left,Right>(const Left &,const Right &)' being compiled
-          with
-          [
-              Left=bool,
-              Right=int
-          ]
-  C:\Tools\vcpkg\installed\x64-windows\include\boost/test/tools/old/impl.hpp(145): note: see reference to function template instantiation 'boost::test_tools::assertion_result boost::test_tools::tt_detail::equal_impl_frwd::call_impl<Left,Right>(const Left &,const Right &,boost::mpl::false_) const' being compiled
-          with
-          [
-              Left=bool,
-              Right=int
-          ]
-  C:\Tools\vcpkg\installed\x64-windows\include\boost/test/tools/old/impl.hpp(92): note: see reference to function template instantiation 'boost::test_tools::assertion_result boost::test_tools::tt_detail::equal_impl_frwd::operator ()<Arg0,Arg1>(const Left &,const Right &) const' being compiled
-          with
-          [
-              Arg0=bool,
-              Arg1=int,
-              Left=bool,
-              Right=int
-          ]
-  C:\projects\ci-targets\tests\spec\cpp_stl_11\test_bits_simple.cpp(19): note: see reference to function template instantiation 'bool boost::test_tools::tt_detail::check_frwd<boost::test_tools::tt_detail::equal_impl_frwd,bool,int>(Pred,const boost::unit_test::lazy_ostream &,boost::unit_test::const_string,size_t,boost::test_tools::tt_detail::tool_level,boost::test_tools::tt_detail::check_type,const Arg0 &,const char *,const Arg1 &,const char *)' being compiled
-          with
-          [
-              Pred=boost::test_tools::tt_detail::equal_impl_frwd,
-              Arg0=bool,
-              Arg1=int
-          ]
   test_buffered_struct.cpp
   test_bytes_pad_term.cpp
   test_cast_nested.cpp
@@ -491,7 +455,6 @@ Build FAILED.
 (ClCompile target) -> 
   C:\projects\ci-targets\runtime\cpp_stl\kaitai\kaitaistream.cpp(492): warning C4267: '=': conversion from 'size_t' to 'uInt', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
   C:\projects\ci-targets\tests\spec\cpp_stl_11\prereq\my_custom_fx.cpp(8): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
-  C:\Tools\vcpkg\installed\x64-windows\include\boost/test/tools/old/impl.hpp(107): warning C4805: '==': unsafe mix of type 'const Left' and type 'const Right' in operation [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
   C:\projects\ci-targets\tests\compiled\cpp_stl_11\expr_1.cpp(35): warning C4267: '=': conversion from 'size_t' to 'int32_t', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
   C:\projects\ci-targets\tests\compiled\cpp_stl_11\expr_2.cpp(124): warning C4267: '=': conversion from 'size_t' to 'int32_t', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
   C:\projects\ci-targets\tests\compiled\cpp_stl_11\expr_array.cpp(67): warning C4267: '=': conversion from 'size_t' to 'int32_t', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
@@ -545,7 +508,7 @@ Build FAILED.
   C:\projects\ci-targets\tests\compiled\cpp_stl_11\io_local_var.cpp(55): error C2065: 'n_mess_up': undeclared identifier [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
   C:\projects\ci-targets\tests\compiled\cpp_stl_11\io_local_var.cpp(62): error C2065: 'n_mess_up': undeclared identifier [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
 
-    13 Warning(s)
+    12 Warning(s)
     36 Error(s)
 
-Time Elapsed 00:05:00.99
+Time Elapsed 00:05:04.93
