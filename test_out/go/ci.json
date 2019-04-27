@@ -1,15 +1,18 @@
 {
   "BcdUserTypeBe": {
     "status": "passed",
-    "elapsed": 0.0
+    "elapsed": 0.0,
+    "is_kst": true
   },
   "BcdUserTypeLe": {
     "status": "passed",
-    "elapsed": 0.0
+    "elapsed": 0.0,
+    "is_kst": true
   },
   "BitsByteAligned": {
     "status": "passed",
-    "elapsed": 0.0
+    "elapsed": 0.0,
+    "is_kst": true
   },
   "BitsSimple": {
     "status": "failed",
@@ -21,11 +24,13 @@
       "trace": [
         "bits_simple_test.go:21: &lt;nil&gt;"
       ]
-    }
+    },
+    "is_kst": true
   },
   "BufferedStruct": {
     "status": "passed",
-    "elapsed": 0.0
+    "elapsed": 0.0,
+    "is_kst": true
   },
   "BytesPadTerm": {
     "status": "failed",
@@ -37,7 +42,8 @@
       "trace": [
         "bytes_pad_term_test.go:32: &#xA;&#x9;&#x9;Error Trace:&#x9;bytes_pad_term_test.go:32&#xA;&#x9;&#x9;Error:      &#x9;Not equal: &#xA;&#x9;&#x9;            &#x9;expected: []byte{0x73, 0x74, 0x72, 0x31}&#xA;&#x9;&#x9;            &#x9;actual  : []byte{0x73, 0x74, 0x72, 0x31, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40}&#xA;&#x9;&#x9;            &#x9;&#xA;&#x9;&#x9;            &#x9;Diff:&#xA;&#x9;&#x9;            &#x9;--- Expected&#xA;&#x9;&#x9;            &#x9;+++ Actual&#xA;&#x9;&#x9;            &#x9;@@ -1,3 +1,4 @@&#xA;&#x9;&#x9;            &#x9;-([]uint8) (len=4) {&#xA;&#x9;&#x9;            &#x9;- 00000000  73 74 72 31                                       |str1|&#xA;&#x9;&#x9;            &#x9;+([]uint8) (len=20) {&#xA;&#x9;&#x9;            &#x9;+ 00000000  73 74 72 31 40 40 40 40  40 40 40 40 40 40 40 40  |str1@@@@@@@@@@@@|&#xA;&#x9;&#x9;            &#x9;+ 00000010  40 40 40 40                                       |@@@@|&#xA;&#x9;&#x9;            &#x9; }&#xA;&#x9;&#x9;Test:       &#x9;TestBytesPadTerm&#xA;bytes_pad_term_test.go:33: &#xA;&#x9;&#x9;Error Trace:&#x9;bytes_pad_term_test.go:33&#xA;&#x9;&#x9;Error:      &#x9;Not equal: &#xA;&#x9;&#x9;            &#x9;expected: []byte{0x73, 0x74, 0x72, 0x32, 0x66, 0x6f, 0x6f}&#xA;&#x9;&#x9;            &#x9;actual  : []byte{0x73, 0x74, 0x72, 0x32, 0x66, 0x6f, 0x6f, 0x40, 0x2b, 0x2b, 0x2b, 0x2b, 0x2b, 0x2b, 0x2b, 0x2b, 0x2b, 0x2b, 0x2b, 0x2b}&#xA;&#x9;&#x9;            &#x9;&#xA;&#x9;&#x9;            &#x9;Diff:&#xA;&#x9;&#x9;            &#x9;--- Expected&#xA;&#x9;&#x9;            &#x9;+++ Actual&#xA;&#x9;&#x9;            &#x9;@@ -1,3 +1,4 @@&#xA;&#x9;&#x9;            &#x9;-([]uint8) (len=7) {&#xA;&#x9;&#x9;            &#x9;- 00000000  73 74 72 32 66 6f 6f                              |str2foo|&#xA;&#x9;&#x9;            &#x9;+([]uint8) (len=20) {&#xA;&#x9;&#x9;            &#x9;+ 00000000  73 74 72 32 66 6f 6f 40  2b 2b 2b 2b 2b 2b 2b 2b  |str2foo@++++++++|&#xA;&#x9;&#x9;            &#x9;+ 00000010  2b 2b 2b 2b                                       |++++|&#xA;&#x9;&#x9;            &#x9; }&#xA;&#x9;&#x9;Test:       &#x9;TestBytesPadTerm&#xA;bytes_pad_term_test.go:34: &#xA;&#x9;&#x9;Error Trace:&#x9;bytes_pad_term_test.go:34&#xA;&#x9;&#x9;Error:      &#x9;Not equal: &#xA;&#x9;&#x9;            &#x9;expected: []byte{0x73, 0x74, 0x72, 0x2b, 0x2b, 0x2b, 0x33, 0x62, 0x61, 0x72, 0x2b, 0x2b, 0x2b}&#xA;&#x9;&#x9;            &#x9;actual  : []byte{0x73, 0x74, 0x72, 0x2b, 0x2b, 0x2b, 0x33, 0x62, 0x61, 0x72, 0x2b, 0x2b, 0x2b, 0x40, 0x2b, 0x2b, 0x2b, 0x2b, 0x2b, 0x2b}&#xA;&#x9;&#x9;            &#x9;&#xA;&#x9;&#x9;            &#x9;Diff:&#xA;&#x9;&#x9;            &#x9;--- Expected&#xA;&#x9;&#x9;            &#x9;+++ Actual&#xA;&#x9;&#x9;            &#x9;@@ -1,3 +1,4 @@&#xA;&#x9;&#x9;            &#x9;-([]uint8) (len=13) {&#xA;&#x9;&#x9;            &#x9;- 00000000  73 74 72 2b 2b 2b 33 62  61 72 2b 2b 2b           |str+++3bar+++|&#xA;&#x9;&#x9;            &#x9;+([]uint8) (len=20) {&#xA;&#x9;&#x9;            &#x9;+ 00000000  73 74 72 2b 2b 2b 33 62  61 72 2b 2b 2b 40 2b 2b  |str+++3bar+++@++|&#xA;&#x9;&#x9;            &#x9;+ 00000010  2b 2b 2b 2b                                       |++++|&#xA;&#x9;&#x9;            &#x9; }&#xA;&#x9;&#x9;Test:       &#x9;TestBytesPadTerm&#xA;bytes_pad_term_test.go:35: &#xA;&#x9;&#x9;Error Trace:&#x9;bytes_pad_term_test.go:35&#xA;&#x9;&#x9;Error:      &#x9;Not equal: &#xA;&#x9;&#x9;            &#x9;expected: []byte{0x73, 0x74, 0x72, 0x34, 0x62, 0x61, 0x7a, 0x40}&#xA;&#x9;&#x9;            &#x9;actual  : []byte{0x73, 0x74, 0x72, 0x34, 0x62, 0x61, 0x7a, 0x40, 0x2e, 0x2e, 0x2e, 0x2e, 0x2e, 0x2e, 0x2e, 0x2e, 0x2e, 0x2e, 0x2e, 0x2e}&#xA;&#x9;&#x9;            &#x9;&#xA;&#x9;&#x9;            &#x9;Diff:&#xA;&#x9;&#x9;            &#x9;--- Expected&#xA;&#x9;&#x9;            &#x9;+++ Actual&#xA;&#x9;&#x9;            &#x9;@@ -1,3 +1,4 @@&#xA;&#x9;&#x9;            &#x9;-([]uint8) (len=8) {&#xA;&#x9;&#x9;            &#x9;- 00000000  73 74 72 34 62 61 7a 40                           |str4baz@|&#xA;&#x9;&#x9;            &#x9;+([]uint8) (len=20) {&#xA;&#x9;&#x9;            &#x9;+ 00000000  73 74 72 34 62 61 7a 40  2e 2e 2e 2e 2e 2e 2e 2e  |str4baz@........|&#xA;&#x9;&#x9;            &#x9;+ 00000010  2e 2e 2e 2e                                       |....|&#xA;&#x9;&#x9;            &#x9; }&#xA;&#x9;&#x9;Test:       &#x9;TestBytesPadTerm"
       ]
-    }
+    },
+    "is_kst": true
   },
   "DebugArrayUser": {
     "status": "passed",
@@ -45,19 +51,23 @@
   },
   "DefaultBigEndian": {
     "status": "passed",
-    "elapsed": 0.0
+    "elapsed": 0.0,
+    "is_kst": true
   },
   "DefaultEndianMod": {
     "status": "passed",
-    "elapsed": 0.0
+    "elapsed": 0.0,
+    "is_kst": true
   },
   "DocstringsDocref": {
     "status": "passed",
-    "elapsed": 0.0
+    "elapsed": 0.0,
+    "is_kst": true
   },
   "Docstrings": {
     "status": "passed",
-    "elapsed": 0.0
+    "elapsed": 0.0,
+    "is_kst": true
   },
   "Enum0": {
     "status": "passed",
@@ -65,15 +75,18 @@
   },
   "Enum1": {
     "status": "passed",
-    "elapsed": 0.0
+    "elapsed": 0.0,
+    "is_kst": true
   },
   "EnumDeepLiterals": {
     "status": "passed",
-    "elapsed": 0.0
+    "elapsed": 0.0,
+    "is_kst": true
   },
   "EnumDeep": {
     "status": "passed",
-    "elapsed": 0.0
+    "elapsed": 0.0,
+    "is_kst": true
   },
   "EnumFancy": {
     "status": "passed",
@@ -81,35 +94,43 @@
   },
   "EnumIf": {
     "status": "passed",
-    "elapsed": 0.0
+    "elapsed": 0.0,
+    "is_kst": true
   },
   "EnumNegative": {
     "status": "passed",
-    "elapsed": 0.0
+    "elapsed": 0.0,
+    "is_kst": true
   },
   "EnumOfValueInst": {
     "status": "passed",
-    "elapsed": 0.0
+    "elapsed": 0.0,
+    "is_kst": true
   },
   "EnumToI": {
     "status": "passed",
-    "elapsed": 0.0
+    "elapsed": 0.0,
+    "is_kst": true
   },
   "Expr0": {
     "status": "passed",
-    "elapsed": 0.0
+    "elapsed": 0.0,
+    "is_kst": true
   },
   "Expr1": {
     "status": "passed",
-    "elapsed": 0.0
+    "elapsed": 0.0,
+    "is_kst": true
   },
   "Expr2": {
     "status": "passed",
-    "elapsed": 0.0
+    "elapsed": 0.0,
+    "is_kst": true
   },
   "Expr3": {
     "status": "passed",
-    "elapsed": 0.0
+    "elapsed": 0.0,
+    "is_kst": true
   },
   "ExprArray": {
     "status": "failed",
@@ -121,15 +142,18 @@
       "trace": [
         "expr_array_test.go:29: EOF"
       ]
-    }
+    },
+    "is_kst": true
   },
   "ExprBytesCmp": {
     "status": "passed",
-    "elapsed": 0.0
+    "elapsed": 0.0,
+    "is_kst": true
   },
   "ExprEnum": {
     "status": "passed",
-    "elapsed": 0.0
+    "elapsed": 0.0,
+    "is_kst": true
   },
   "ExprIoPos": {
     "status": "failed",
@@ -141,23 +165,28 @@
       "trace": [
         "expr_io_pos_test.go:29: ReadBytes(-2): negative number of bytes to read"
       ]
-    }
+    },
+    "is_kst": true
   },
   "ExprMod": {
     "status": "passed",
-    "elapsed": 0.0
+    "elapsed": 0.0,
+    "is_kst": true
   },
   "FixedContents": {
     "status": "passed",
-    "elapsed": 0.0
+    "elapsed": 0.0,
+    "is_kst": true
   },
   "FixedStruct": {
     "status": "passed",
-    "elapsed": 0.0
+    "elapsed": 0.0,
+    "is_kst": true
   },
   "FloatToI": {
     "status": "passed",
-    "elapsed": 0.0
+    "elapsed": 0.0,
+    "is_kst": true
   },
   "FloatingPoints": {
     "status": "passed",
@@ -165,11 +194,13 @@
   },
   "HelloWorld": {
     "status": "passed",
-    "elapsed": 0.0
+    "elapsed": 0.0,
+    "is_kst": true
   },
   "IfStruct": {
     "status": "passed",
-    "elapsed": 0.0
+    "elapsed": 0.0,
+    "is_kst": true
   },
   "IfValues": {
     "status": "failed",
@@ -181,19 +212,23 @@
       "trace": [
         "if_values_test.go:43: &#xA;&#x9;&#x9;Error Trace:&#x9;if_values_test.go:43&#xA;&#x9;&#x9;Error:      &#x9;Expected nil, but got: 0&#xA;&#x9;&#x9;Test:       &#x9;TestIfValues&#xA;if_values_test.go:49: &#xA;&#x9;&#x9;Error Trace:&#x9;if_values_test.go:49&#xA;&#x9;&#x9;Error:      &#x9;Expected nil, but got: 0&#xA;&#x9;&#x9;Test:       &#x9;TestIfValues"
       ]
-    }
+    },
+    "is_kst": true
   },
   "InstanceIoUser": {
     "status": "passed",
-    "elapsed": 0.0
+    "elapsed": 0.0,
+    "is_kst": true
   },
   "InstanceStdArray": {
     "status": "passed",
-    "elapsed": 0.0
+    "elapsed": 0.0,
+    "is_kst": true
   },
   "InstanceStd": {
     "status": "passed",
-    "elapsed": 0.0
+    "elapsed": 0.0,
+    "is_kst": true
   },
   "InstanceUserArray": {
     "status": "failed",
@@ -205,23 +240,28 @@
       "trace": [
         "instance_user_array_test.go:37: EOF"
       ]
-    }
+    },
+    "is_kst": true
   },
   "Integers": {
     "status": "passed",
-    "elapsed": 0.0
+    "elapsed": 0.0,
+    "is_kst": true
   },
   "JsSignedRightShift": {
     "status": "passed",
-    "elapsed": 0.0
+    "elapsed": 0.0,
+    "is_kst": true
   },
   "MetaXref": {
     "status": "passed",
-    "elapsed": 0.0
+    "elapsed": 0.0,
+    "is_kst": true
   },
   "MultipleUse": {
     "status": "passed",
-    "elapsed": 0.0
+    "elapsed": 0.0,
+    "is_kst": true
   },
   "NavParentFalse2": {
     "status": "passed",
@@ -229,39 +269,48 @@
   },
   "NavParent": {
     "status": "passed",
-    "elapsed": 0.0
+    "elapsed": 0.0,
+    "is_kst": true
   },
   "NavParentVsValueInst": {
     "status": "passed",
-    "elapsed": 0.0
+    "elapsed": 0.0,
+    "is_kst": true
   },
   "NavRoot": {
     "status": "passed",
-    "elapsed": 0.0
+    "elapsed": 0.0,
+    "is_kst": true
   },
   "NestedSameName2": {
     "status": "passed",
-    "elapsed": 0.0
+    "elapsed": 0.0,
+    "is_kst": true
   },
   "NestedSameName": {
     "status": "passed",
-    "elapsed": 0.0
+    "elapsed": 0.0,
+    "is_kst": true
   },
   "NestedTypes2": {
     "status": "passed",
-    "elapsed": 0.0
+    "elapsed": 0.0,
+    "is_kst": true
   },
   "NestedTypes3": {
     "status": "passed",
-    "elapsed": 0.0
+    "elapsed": 0.0,
+    "is_kst": true
   },
   "NestedTypes": {
     "status": "passed",
-    "elapsed": 0.0
+    "elapsed": 0.0,
+    "is_kst": true
   },
   "PositionAbs": {
     "status": "passed",
-    "elapsed": 0.0
+    "elapsed": 0.0,
+    "is_kst": true
   },
   "PositionInSeq": {
     "status": "passed",
@@ -269,7 +318,8 @@
   },
   "PositionToEnd": {
     "status": "passed",
-    "elapsed": 0.0
+    "elapsed": 0.0,
+    "is_kst": true
   },
   "ProcessCoerceBytes": {
     "status": "failed",
@@ -281,7 +331,8 @@
       "trace": [
         "process_coerce_bytes_test.go:43: &#xA;&#x9;&#x9;Error Trace:&#x9;process_coerce_bytes_test.go:43&#xA;&#x9;&#x9;Error:      &#x9;Not equal: &#xA;&#x9;&#x9;            &#x9;expected: []byte{0x42, 0x42, 0x42, 0x42}&#xA;&#x9;&#x9;            &#x9;actual  : []byte{0xe8, 0xe8, 0xe8, 0xe8}&#xA;&#x9;&#x9;            &#x9;&#xA;&#x9;&#x9;            &#x9;Diff:&#xA;&#x9;&#x9;            &#x9;--- Expected&#xA;&#x9;&#x9;            &#x9;+++ Actual&#xA;&#x9;&#x9;            &#x9;@@ -1,3 +1,3 @@&#xA;&#x9;&#x9;            &#x9; ([]uint8) (len=4) {&#xA;&#x9;&#x9;            &#x9;- 00000000  42 42 42 42                                       |BBBB|&#xA;&#x9;&#x9;            &#x9;+ 00000000  e8 e8 e8 e8                                       |....|&#xA;&#x9;&#x9;            &#x9; }&#xA;&#x9;&#x9;Test:       &#x9;TestProcessCoerceBytes"
       ]
-    }
+    },
+    "is_kst": true
   },
   "ProcessCoerceUsertype1": {
     "status": "failed",
@@ -293,7 +344,8 @@
       "trace": [
         "process_coerce_usertype1_test.go:43: &#xA;&#x9;&#x9;Error Trace:&#x9;process_coerce_usertype1_test.go:43&#xA;&#x9;&#x9;Error:      &#x9;Not equal: &#xA;&#x9;&#x9;            &#x9;expected: int(1111638594)&#xA;&#x9;&#x9;            &#x9;actual  : uint32(0xe8e8e8e8)&#xA;&#x9;&#x9;Test:       &#x9;TestProcessCoerceUsertype1"
       ]
-    }
+    },
+    "is_kst": true
   },
   "ProcessCoerceUsertype2": {
     "status": "failed",
@@ -305,7 +357,8 @@
       "trace": [
         "process_coerce_usertype2_test.go:43: &#xA;&#x9;&#x9;Error Trace:&#x9;process_coerce_usertype2_test.go:43&#xA;&#x9;&#x9;Error:      &#x9;Not equal: &#xA;&#x9;&#x9;            &#x9;expected: int(1111638594)&#xA;&#x9;&#x9;            &#x9;actual  : uint32(0xe8e8e8e8)&#xA;&#x9;&#x9;Test:       &#x9;TestProcessCoerceUsertype2"
       ]
-    }
+    },
+    "is_kst": true
   },
   "ProcessCustom": {
     "status": "failed",
@@ -317,7 +370,8 @@
       "trace": [
         "process_custom_test.go:32: &#xA;&#x9;&#x9;Error Trace:&#x9;process_custom_test.go:32&#xA;&#x9;&#x9;Error:      &#x9;Not equal: &#xA;&#x9;&#x9;            &#x9;expected: []byte{0x10, 0xb3, 0x94, 0x94, 0xf4}&#xA;&#x9;&#x9;            &#x9;actual  : []byte{0x9, 0xac, 0x8d, 0x8d, 0xed}&#xA;&#x9;&#x9;            &#x9;&#xA;&#x9;&#x9;            &#x9;Diff:&#xA;&#x9;&#x9;            &#x9;--- Expected&#xA;&#x9;&#x9;            &#x9;+++ Actual&#xA;&#x9;&#x9;            &#x9;@@ -1,3 +1,3 @@&#xA;&#x9;&#x9;            &#x9; ([]uint8) (len=5) {&#xA;&#x9;&#x9;            &#x9;- 00000000  10 b3 94 94 f4                                    |.....|&#xA;&#x9;&#x9;            &#x9;+ 00000000  09 ac 8d 8d ed                                    |.....|&#xA;&#x9;&#x9;            &#x9; }&#xA;&#x9;&#x9;Test:       &#x9;TestProcessCustom&#xA;process_custom_test.go:33: &#xA;&#x9;&#x9;Error Trace:&#x9;process_custom_test.go:33&#xA;&#x9;&#x9;Error:      &#x9;Not equal: &#xA;&#x9;&#x9;            &#x9;expected: []byte{0x5f, 0xba, 0x7b, 0x93, 0x63, 0x23, 0x5f}&#xA;&#x9;&#x9;            &#x9;actual  : []byte{0xba, 0x7b, 0x93, 0x63, 0x23}&#xA;&#x9;&#x9;            &#x9;&#xA;&#x9;&#x9;            &#x9;Diff:&#xA;&#x9;&#x9;            &#x9;--- Expected&#xA;&#x9;&#x9;            &#x9;+++ Actual&#xA;&#x9;&#x9;            &#x9;@@ -1,3 +1,3 @@&#xA;&#x9;&#x9;            &#x9;-([]uint8) (len=7) {&#xA;&#x9;&#x9;            &#x9;- 00000000  5f ba 7b 93 63 23 5f                              |_.{.c#_|&#xA;&#x9;&#x9;            &#x9;+([]uint8) (len=5) {&#xA;&#x9;&#x9;            &#x9;+ 00000000  ba 7b 93 63 23                                    |.{.c#|&#xA;&#x9;&#x9;            &#x9; }&#xA;&#x9;&#x9;Test:       &#x9;TestProcessCustom&#xA;process_custom_test.go:34: &#xA;&#x9;&#x9;Error Trace:&#x9;process_custom_test.go:34&#xA;&#x9;&#x9;Error:      &#x9;Not equal: &#xA;&#x9;&#x9;            &#x9;expected: []byte{0x29, 0x33, 0xb1, 0x38, 0xb1}&#xA;&#x9;&#x9;            &#x9;actual  : []byte{0x2a, 0x34, 0xb2, 0x39, 0xb2}&#xA;&#x9;&#x9;            &#x9;&#xA;&#x9;&#x9;            &#x9;Diff:&#xA;&#x9;&#x9;            &#x9;--- Expected&#xA;&#x9;&#x9;            &#x9;+++ Actual&#xA;&#x9;&#x9;            &#x9;@@ -1,3 +1,3 @@&#xA;&#x9;&#x9;            &#x9; ([]uint8) (len=5) {&#xA;&#x9;&#x9;            &#x9;- 00000000  29 33 b1 38 b1                                    |)3.8.|&#xA;&#x9;&#x9;            &#x9;+ 00000000  2a 34 b2 39 b2                                    |*4.9.|&#xA;&#x9;&#x9;            &#x9; }&#xA;&#x9;&#x9;Test:       &#x9;TestProcessCustom"
       ]
-    }
+    },
+    "is_kst": true
   },
   "ProcessRotate": {
     "status": "failed",
@@ -329,7 +383,8 @@
       "trace": [
         "process_rotate_test.go:32: &#xA;&#x9;&#x9;Error Trace:&#x9;process_rotate_test.go:32&#xA;&#x9;&#x9;Error:      &#x9;Not equal: &#xA;&#x9;&#x9;            &#x9;expected: []byte{0x48, 0x65, 0x6c, 0x6c, 0x6f}&#xA;&#x9;&#x9;            &#x9;actual  : []byte{0x9, 0xac, 0x8d, 0x8d, 0xed}&#xA;&#x9;&#x9;            &#x9;&#xA;&#x9;&#x9;            &#x9;Diff:&#xA;&#x9;&#x9;            &#x9;--- Expected&#xA;&#x9;&#x9;            &#x9;+++ Actual&#xA;&#x9;&#x9;            &#x9;@@ -1,3 +1,3 @@&#xA;&#x9;&#x9;            &#x9; ([]uint8) (len=5) {&#xA;&#x9;&#x9;            &#x9;- 00000000  48 65 6c 6c 6f                                    |Hello|&#xA;&#x9;&#x9;            &#x9;+ 00000000  09 ac 8d 8d ed                                    |.....|&#xA;&#x9;&#x9;            &#x9; }&#xA;&#x9;&#x9;Test:       &#x9;TestProcessRotate&#xA;process_rotate_test.go:33: &#xA;&#x9;&#x9;Error Trace:&#x9;process_rotate_test.go:33&#xA;&#x9;&#x9;Error:      &#x9;Not equal: &#xA;&#x9;&#x9;            &#x9;expected: []byte{0x57, 0x6f, 0x72, 0x6c, 0x64}&#xA;&#x9;&#x9;            &#x9;actual  : []byte{0xba, 0x7b, 0x93, 0x63, 0x23}&#xA;&#x9;&#x9;            &#x9;&#xA;&#x9;&#x9;            &#x9;Diff:&#xA;&#x9;&#x9;            &#x9;--- Expected&#xA;&#x9;&#x9;            &#x9;+++ Actual&#xA;&#x9;&#x9;            &#x9;@@ -1,3 +1,3 @@&#xA;&#x9;&#x9;            &#x9; ([]uint8) (len=5) {&#xA;&#x9;&#x9;            &#x9;- 00000000  57 6f 72 6c 64                                    |World|&#xA;&#x9;&#x9;            &#x9;+ 00000000  ba 7b 93 63 23                                    |.{.c#|&#xA;&#x9;&#x9;            &#x9; }&#xA;&#x9;&#x9;Test:       &#x9;TestProcessRotate&#xA;process_rotate_test.go:34: &#xA;&#x9;&#x9;Error Trace:&#x9;process_rotate_test.go:34&#xA;&#x9;&#x9;Error:      &#x9;Not equal: &#xA;&#x9;&#x9;            &#x9;expected: []byte{0x54, 0x68, 0x65, 0x72, 0x65}&#xA;&#x9;&#x9;            &#x9;actual  : []byte{0x2a, 0x34, 0xb2, 0x39, 0xb2}&#xA;&#x9;&#x9;            &#x9;&#xA;&#x9;&#x9;            &#x9;Diff:&#xA;&#x9;&#x9;            &#x9;--- Expected&#xA;&#x9;&#x9;            &#x9;+++ Actual&#xA;&#x9;&#x9;            &#x9;@@ -1,3 +1,3 @@&#xA;&#x9;&#x9;            &#x9; ([]uint8) (len=5) {&#xA;&#x9;&#x9;            &#x9;- 00000000  54 68 65 72 65                                    |There|&#xA;&#x9;&#x9;            &#x9;+ 00000000  2a 34 b2 39 b2                                    |*4.9.|&#xA;&#x9;&#x9;            &#x9; }&#xA;&#x9;&#x9;Test:       &#x9;TestProcessRotate"
       ]
-    }
+    },
+    "is_kst": true
   },
   "ProcessToUser": {
     "status": "failed",
@@ -341,7 +396,8 @@
       "trace": [
         "process_to_user_test.go:32: &#xA;&#x9;&#x9;Error Trace:&#x9;process_to_user_test.go:32&#xA;&#x9;&#x9;Error:      &#x9;Not equal: &#xA;&#x9;&#x9;            &#x9;expected: &#34;Hello&#34;&#xA;&#x9;&#x9;            &#x9;actual  : &#34;\\t\\xac\\x8d\\x8d\\xed&#34;&#xA;&#x9;&#x9;            &#x9;&#xA;&#x9;&#x9;            &#x9;Diff:&#xA;&#x9;&#x9;            &#x9;--- Expected&#xA;&#x9;&#x9;            &#x9;+++ Actual&#xA;&#x9;&#x9;            &#x9;@@ -1 +1 @@&#xA;&#x9;&#x9;            &#x9;-Hello&#xA;&#x9;&#x9;            &#x9;+&#x9;����&#xA;&#x9;&#x9;Test:       &#x9;TestProcessToUser"
       ]
-    }
+    },
+    "is_kst": true
   },
   "ProcessXor4Const": {
     "status": "failed",
@@ -353,7 +409,8 @@
       "trace": [
         "process_xor4_const_test.go:33: &#xA;&#x9;&#x9;Error Trace:&#x9;process_xor4_const_test.go:33&#xA;&#x9;&#x9;Error:      &#x9;Not equal: &#xA;&#x9;&#x9;            &#x9;expected: []byte{0x66, 0x6f, 0x6f, 0x20, 0x62, 0x61, 0x72}&#xA;&#x9;&#x9;            &#x9;actual  : []byte{0x8a, 0xd4, 0xcc, 0x34, 0x8e, 0xda, 0xd1}&#xA;&#x9;&#x9;            &#x9;&#xA;&#x9;&#x9;            &#x9;Diff:&#xA;&#x9;&#x9;            &#x9;--- Expected&#xA;&#x9;&#x9;            &#x9;+++ Actual&#xA;&#x9;&#x9;            &#x9;@@ -1,3 +1,3 @@&#xA;&#x9;&#x9;            &#x9; ([]uint8) (len=7) {&#xA;&#x9;&#x9;            &#x9;- 00000000  66 6f 6f 20 62 61 72                              |foo bar|&#xA;&#x9;&#x9;            &#x9;+ 00000000  8a d4 cc 34 8e da d1                              |...4...|&#xA;&#x9;&#x9;            &#x9; }&#xA;&#x9;&#x9;Test:       &#x9;TestProcessXor4Const"
       ]
-    }
+    },
+    "is_kst": true
   },
   "ProcessXor4Value": {
     "status": "failed",
@@ -365,7 +422,8 @@
       "trace": [
         "process_xor4_value_test.go:33: &#xA;&#x9;&#x9;Error Trace:&#x9;process_xor4_value_test.go:33&#xA;&#x9;&#x9;Error:      &#x9;Not equal: &#xA;&#x9;&#x9;            &#x9;expected: []byte{0x66, 0x6f, 0x6f, 0x20, 0x62, 0x61, 0x72}&#xA;&#x9;&#x9;            &#x9;actual  : []byte{0x8a, 0xd4, 0xcc, 0x34, 0x8e, 0xda, 0xd1}&#xA;&#x9;&#x9;            &#x9;&#xA;&#x9;&#x9;            &#x9;Diff:&#xA;&#x9;&#x9;            &#x9;--- Expected&#xA;&#x9;&#x9;            &#x9;+++ Actual&#xA;&#x9;&#x9;            &#x9;@@ -1,3 +1,3 @@&#xA;&#x9;&#x9;            &#x9; ([]uint8) (len=7) {&#xA;&#x9;&#x9;            &#x9;- 00000000  66 6f 6f 20 62 61 72                              |foo bar|&#xA;&#x9;&#x9;            &#x9;+ 00000000  8a d4 cc 34 8e da d1                              |...4...|&#xA;&#x9;&#x9;            &#x9; }&#xA;&#x9;&#x9;Test:       &#x9;TestProcessXor4Value"
       ]
-    }
+    },
+    "is_kst": true
   },
   "ProcessXorConst": {
     "status": "failed",
@@ -377,7 +435,8 @@
       "trace": [
         "process_xor_const_test.go:33: &#xA;&#x9;&#x9;Error Trace:&#x9;process_xor_const_test.go:33&#xA;&#x9;&#x9;Error:      &#x9;Not equal: &#xA;&#x9;&#x9;            &#x9;expected: []byte{0x66, 0x6f, 0x6f, 0x20, 0x62, 0x61, 0x72}&#xA;&#x9;&#x9;            &#x9;actual  : []byte{0x99, 0x90, 0x90, 0xdf, 0x9d, 0x9e, 0x8d}&#xA;&#x9;&#x9;            &#x9;&#xA;&#x9;&#x9;            &#x9;Diff:&#xA;&#x9;&#x9;            &#x9;--- Expected&#xA;&#x9;&#x9;            &#x9;+++ Actual&#xA;&#x9;&#x9;            &#x9;@@ -1,3 +1,3 @@&#xA;&#x9;&#x9;            &#x9; ([]uint8) (len=7) {&#xA;&#x9;&#x9;            &#x9;- 00000000  66 6f 6f 20 62 61 72                              |foo bar|&#xA;&#x9;&#x9;            &#x9;+ 00000000  99 90 90 df 9d 9e 8d                              |.......|&#xA;&#x9;&#x9;            &#x9; }&#xA;&#x9;&#x9;Test:       &#x9;TestProcessXorConst"
       ]
-    }
+    },
+    "is_kst": true
   },
   "ProcessXorValue": {
     "status": "failed",
@@ -389,11 +448,13 @@
       "trace": [
         "process_xor_value_test.go:33: &#xA;&#x9;&#x9;Error Trace:&#x9;process_xor_value_test.go:33&#xA;&#x9;&#x9;Error:      &#x9;Not equal: &#xA;&#x9;&#x9;            &#x9;expected: []byte{0x66, 0x6f, 0x6f, 0x20, 0x62, 0x61, 0x72}&#xA;&#x9;&#x9;            &#x9;actual  : []byte{0x99, 0x90, 0x90, 0xdf, 0x9d, 0x9e, 0x8d}&#xA;&#x9;&#x9;            &#x9;&#xA;&#x9;&#x9;            &#x9;Diff:&#xA;&#x9;&#x9;            &#x9;--- Expected&#xA;&#x9;&#x9;            &#x9;+++ Actual&#xA;&#x9;&#x9;            &#x9;@@ -1,3 +1,3 @@&#xA;&#x9;&#x9;            &#x9; ([]uint8) (len=7) {&#xA;&#x9;&#x9;            &#x9;- 00000000  66 6f 6f 20 62 61 72                              |foo bar|&#xA;&#x9;&#x9;            &#x9;+ 00000000  99 90 90 df 9d 9e 8d                              |.......|&#xA;&#x9;&#x9;            &#x9; }&#xA;&#x9;&#x9;Test:       &#x9;TestProcessXorValue"
       ]
-    }
+    },
+    "is_kst": true
   },
   "RepeatEosStruct": {
     "status": "passed",
-    "elapsed": 0.0
+    "elapsed": 0.0,
+    "is_kst": true
   },
   "RepeatEosU4": {
     "status": "passed",
@@ -401,7 +462,8 @@
   },
   "RepeatNStruct": {
     "status": "passed",
-    "elapsed": 0.0
+    "elapsed": 0.0,
+    "is_kst": true
   },
   "RepeatNStrzDouble": {
     "status": "failed",
@@ -413,7 +475,8 @@
       "trace": [
         "repeat_n_strz_double_test.go:29: EOF"
       ]
-    }
+    },
+    "is_kst": true
   },
   "RepeatNStrz": {
     "status": "failed",
@@ -425,7 +488,8 @@
       "trace": [
         "repeat_n_strz_test.go:29: EOF"
       ]
-    }
+    },
+    "is_kst": true
   },
   "RepeatUntilComplex": {
     "status": "failed",
@@ -437,7 +501,8 @@
       "trace": [
         "repeat_until_complex_test.go:34: &#xA;&#x9;&#x9;Error Trace:&#x9;repeat_until_complex_test.go:34&#xA;&#x9;&#x9;Error:      &#x9;Not equal: &#xA;&#x9;&#x9;            &#x9;expected: []int([]int{1, 2, 3, 4})&#xA;&#x9;&#x9;            &#x9;actual  : []uint8([]byte{0x1, 0x2, 0x3, 0x4})&#xA;&#x9;&#x9;Test:       &#x9;TestRepeatUntilComplex&#xA;repeat_until_complex_test.go:36: &#xA;&#x9;&#x9;Error Trace:&#x9;repeat_until_complex_test.go:36&#xA;&#x9;&#x9;Error:      &#x9;Not equal: &#xA;&#x9;&#x9;            &#x9;expected: []int([]int{1, 2})&#xA;&#x9;&#x9;            &#x9;actual  : []uint8([]byte{0x1, 0x2})&#xA;&#x9;&#x9;Test:       &#x9;TestRepeatUntilComplex&#xA;repeat_until_complex_test.go:40: &#xA;&#x9;&#x9;Error Trace:&#x9;repeat_until_complex_test.go:40&#xA;&#x9;&#x9;Error:      &#x9;Not equal: &#xA;&#x9;&#x9;            &#x9;expected: []int([]int{1, 2, 3, 4, 5, 6})&#xA;&#x9;&#x9;            &#x9;actual  : []uint16([]uint16{0x1, 0x2, 0x3, 0x4, 0x5, 0x6})&#xA;&#x9;&#x9;Test:       &#x9;TestRepeatUntilComplex&#xA;repeat_until_complex_test.go:42: &#xA;&#x9;&#x9;Error Trace:&#x9;repeat_until_complex_test.go:42&#xA;&#x9;&#x9;Error:      &#x9;Not equal: &#xA;&#x9;&#x9;            &#x9;expected: []int([]int{1, 2, 3})&#xA;&#x9;&#x9;            &#x9;actual  : []uint16([]uint16{0x1, 0x2, 0x3})&#xA;&#x9;&#x9;Test:       &#x9;TestRepeatUntilComplex&#xA;repeat_until_complex_test.go:44: &#xA;&#x9;&#x9;Error Trace:&#x9;repeat_until_complex_test.go:44&#xA;&#x9;&#x9;Error:      &#x9;Not equal: &#xA;&#x9;&#x9;            &#x9;expected: []int([]int{1, 2, 3, 4})&#xA;&#x9;&#x9;            &#x9;actual  : []uint16([]uint16{0x1, 0x2, 0x3, 0x4})&#xA;&#x9;&#x9;Test:       &#x9;TestRepeatUntilComplex&#xA;repeat_until_complex_test.go:46: &#xA;&#x9;&#x9;Error Trace:&#x9;repeat_until_complex_test.go:46&#xA;&#x9;&#x9;Error:      &#x9;Not equal: &#xA;&#x9;&#x9;            &#x9;expected: []int([]int{102, 111, 111, 98, 97, 114, 0})&#xA;&#x9;&#x9;            &#x9;actual  : []uint8([]byte{0x66, 0x6f, 0x6f, 0x62, 0x61, 0x72, 0x0})&#xA;&#x9;&#x9;Test:       &#x9;TestRepeatUntilComplex"
       ]
-    }
+    },
+    "is_kst": true
   },
   "RepeatUntilS4": {
     "status": "passed",
@@ -445,19 +510,23 @@
   },
   "StrEncodingsDefault": {
     "status": "passed",
-    "elapsed": 0.0
+    "elapsed": 0.0,
+    "is_kst": true
   },
   "StrEncodings": {
     "status": "passed",
-    "elapsed": 0.0
+    "elapsed": 0.0,
+    "is_kst": true
   },
   "StrEos": {
     "status": "passed",
-    "elapsed": 0.0
+    "elapsed": 0.0,
+    "is_kst": true
   },
   "StrLiterals2": {
     "status": "passed",
-    "elapsed": 0.0
+    "elapsed": 0.0,
+    "is_kst": true
   },
   "StrPadTermEmpty": {
     "status": "failed",
@@ -469,7 +538,8 @@
       "trace": [
         "str_pad_term_empty_test.go:32: &#xA;&#x9;&#x9;Error Trace:&#x9;str_pad_term_empty_test.go:32&#xA;&#x9;&#x9;Error:      &#x9;Not equal: &#xA;&#x9;&#x9;            &#x9;expected: &#34;&#34;&#xA;&#x9;&#x9;            &#x9;actual  : &#34;@@@@@@@@@@@@@@@@@@@@&#34;&#xA;&#x9;&#x9;            &#x9;&#xA;&#x9;&#x9;            &#x9;Diff:&#xA;&#x9;&#x9;            &#x9;--- Expected&#xA;&#x9;&#x9;            &#x9;+++ Actual&#xA;&#x9;&#x9;            &#x9;@@ -1 +1 @@&#xA;&#x9;&#x9;            &#x9;-&#xA;&#x9;&#x9;            &#x9;+@@@@@@@@@@@@@@@@@@@@&#xA;&#x9;&#x9;Test:       &#x9;TestStrPadTermEmpty&#xA;str_pad_term_empty_test.go:33: &#xA;&#x9;&#x9;Error Trace:&#x9;str_pad_term_empty_test.go:33&#xA;&#x9;&#x9;Error:      &#x9;Not equal: &#xA;&#x9;&#x9;            &#x9;expected: &#34;&#34;&#xA;&#x9;&#x9;            &#x9;actual  : &#34;@@@@@@@@++++++++++++&#34;&#xA;&#x9;&#x9;            &#x9;&#xA;&#x9;&#x9;            &#x9;Diff:&#xA;&#x9;&#x9;            &#x9;--- Expected&#xA;&#x9;&#x9;            &#x9;+++ Actual&#xA;&#x9;&#x9;            &#x9;@@ -1 +1 @@&#xA;&#x9;&#x9;            &#x9;-&#xA;&#x9;&#x9;            &#x9;+@@@@@@@@++++++++++++&#xA;&#x9;&#x9;Test:       &#x9;TestStrPadTermEmpty&#xA;str_pad_term_empty_test.go:34: &#xA;&#x9;&#x9;Error Trace:&#x9;str_pad_term_empty_test.go:34&#xA;&#x9;&#x9;Error:      &#x9;Not equal: &#xA;&#x9;&#x9;            &#x9;expected: &#34;&#34;&#xA;&#x9;&#x9;            &#x9;actual  : &#34;@tr+++3bar+++@++++++&#34;&#xA;&#x9;&#x9;            &#x9;&#xA;&#x9;&#x9;            &#x9;Diff:&#xA;&#x9;&#x9;            &#x9;--- Expected&#xA;&#x9;&#x9;            &#x9;+++ Actual&#xA;&#x9;&#x9;            &#x9;@@ -1 +1 @@&#xA;&#x9;&#x9;            &#x9;-&#xA;&#x9;&#x9;            &#x9;+@tr+++3bar+++@++++++&#xA;&#x9;&#x9;Test:       &#x9;TestStrPadTermEmpty&#xA;str_pad_term_empty_test.go:35: &#xA;&#x9;&#x9;Error Trace:&#x9;str_pad_term_empty_test.go:35&#xA;&#x9;&#x9;Error:      &#x9;Not equal: &#xA;&#x9;&#x9;            &#x9;expected: &#34;@&#34;&#xA;&#x9;&#x9;            &#x9;actual  : &#34;@@@@@@@@............&#34;&#xA;&#x9;&#x9;            &#x9;&#xA;&#x9;&#x9;            &#x9;Diff:&#xA;&#x9;&#x9;            &#x9;--- Expected&#xA;&#x9;&#x9;            &#x9;+++ Actual&#xA;&#x9;&#x9;            &#x9;@@ -1 +1 @@&#xA;&#x9;&#x9;            &#x9;-@&#xA;&#x9;&#x9;            &#x9;+@@@@@@@@............&#xA;&#x9;&#x9;Test:       &#x9;TestStrPadTermEmpty"
       ]
-    }
+    },
+    "is_kst": true
   },
   "StrPadTerm": {
     "status": "failed",
@@ -481,7 +551,8 @@
       "trace": [
         "str_pad_term_test.go:32: &#xA;&#x9;&#x9;Error Trace:&#x9;str_pad_term_test.go:32&#xA;&#x9;&#x9;Error:      &#x9;Not equal: &#xA;&#x9;&#x9;            &#x9;expected: &#34;str1&#34;&#xA;&#x9;&#x9;            &#x9;actual  : &#34;str1@@@@@@@@@@@@@@@@&#34;&#xA;&#x9;&#x9;            &#x9;&#xA;&#x9;&#x9;            &#x9;Diff:&#xA;&#x9;&#x9;            &#x9;--- Expected&#xA;&#x9;&#x9;            &#x9;+++ Actual&#xA;&#x9;&#x9;            &#x9;@@ -1 +1 @@&#xA;&#x9;&#x9;            &#x9;-str1&#xA;&#x9;&#x9;            &#x9;+str1@@@@@@@@@@@@@@@@&#xA;&#x9;&#x9;Test:       &#x9;TestStrPadTerm&#xA;str_pad_term_test.go:33: &#xA;&#x9;&#x9;Error Trace:&#x9;str_pad_term_test.go:33&#xA;&#x9;&#x9;Error:      &#x9;Not equal: &#xA;&#x9;&#x9;            &#x9;expected: &#34;str2foo&#34;&#xA;&#x9;&#x9;            &#x9;actual  : &#34;str2foo@++++++++++++&#34;&#xA;&#x9;&#x9;            &#x9;&#xA;&#x9;&#x9;            &#x9;Diff:&#xA;&#x9;&#x9;            &#x9;--- Expected&#xA;&#x9;&#x9;            &#x9;+++ Actual&#xA;&#x9;&#x9;            &#x9;@@ -1 +1 @@&#xA;&#x9;&#x9;            &#x9;-str2foo&#xA;&#x9;&#x9;            &#x9;+str2foo@++++++++++++&#xA;&#x9;&#x9;Test:       &#x9;TestStrPadTerm&#xA;str_pad_term_test.go:34: &#xA;&#x9;&#x9;Error Trace:&#x9;str_pad_term_test.go:34&#xA;&#x9;&#x9;Error:      &#x9;Not equal: &#xA;&#x9;&#x9;            &#x9;expected: &#34;str+++3bar+++&#34;&#xA;&#x9;&#x9;            &#x9;actual  : &#34;str+++3bar+++@++++++&#34;&#xA;&#x9;&#x9;            &#x9;&#xA;&#x9;&#x9;            &#x9;Diff:&#xA;&#x9;&#x9;            &#x9;--- Expected&#xA;&#x9;&#x9;            &#x9;+++ Actual&#xA;&#x9;&#x9;            &#x9;@@ -1 +1 @@&#xA;&#x9;&#x9;            &#x9;-str+++3bar+++&#xA;&#x9;&#x9;            &#x9;+str+++3bar+++@++++++&#xA;&#x9;&#x9;Test:       &#x9;TestStrPadTerm&#xA;str_pad_term_test.go:35: &#xA;&#x9;&#x9;Error Trace:&#x9;str_pad_term_test.go:35&#xA;&#x9;&#x9;Error:      &#x9;Not equal: &#xA;&#x9;&#x9;            &#x9;expected: &#34;str4baz@&#34;&#xA;&#x9;&#x9;            &#x9;actual  : &#34;str4baz@............&#34;&#xA;&#x9;&#x9;            &#x9;&#xA;&#x9;&#x9;            &#x9;Diff:&#xA;&#x9;&#x9;            &#x9;--- Expected&#xA;&#x9;&#x9;            &#x9;+++ Actual&#xA;&#x9;&#x9;            &#x9;@@ -1 +1 @@&#xA;&#x9;&#x9;            &#x9;-str4baz@&#xA;&#x9;&#x9;            &#x9;+str4baz@............&#xA;&#x9;&#x9;Test:       &#x9;TestStrPadTerm"
       ]
-    }
+    },
+    "is_kst": true
   },
   "TermBytes": {
     "status": "failed",
@@ -493,7 +564,8 @@
       "trace": [
         "term_bytes_test.go:29: EOF"
       ]
-    }
+    },
+    "is_kst": true
   },
   "TermStrz": {
     "status": "failed",
@@ -505,11 +577,13 @@
       "trace": [
         "term_strz_test.go:29: EOF"
       ]
-    }
+    },
+    "is_kst": true
   },
   "TypeIntUnaryOp": {
     "status": "passed",
-    "elapsed": 0.0
+    "elapsed": 0.0,
+    "is_kst": true
   },
   "TypeTernary": {
     "status": "failed",
@@ -521,11 +595,13 @@
       "trace": [
         "type_ternary_test.go:36: &#xA;&#x9;&#x9;Error Trace:&#x9;type_ternary_test.go:36&#xA;&#x9;&#x9;Error:      &#x9;Not equal: &#xA;&#x9;&#x9;            &#x9;expected: int(101)&#xA;&#x9;&#x9;            &#x9;actual  : uint8(0x66)&#xA;&#x9;&#x9;Test:       &#x9;TestTypeTernary"
       ]
-    }
+    },
+    "is_kst": true
   },
   "UserType": {
     "status": "passed",
-    "elapsed": 0.0
+    "elapsed": 0.0,
+    "is_kst": true
   },
   "ZlibWithHeader78": {
     "status": "failed",
@@ -537,11 +613,12 @@
       "trace": [
         "zlib_with_header_78_test.go:32: &#xA;&#x9;&#x9;Error Trace:&#x9;zlib_with_header_78_test.go:32&#xA;&#x9;&#x9;Error:      &#x9;Not equal: &#xA;&#x9;&#x9;            &#x9;expected: []byte{0x61, 0x20, 0x71, 0x75, 0x69, 0x63, 0x6b, 0x20, 0x62, 0x72, 0x6f, 0x77, 0x6e, 0x20, 0x66, 0x6f, 0x78, 0x20, 0x6a, 0x75, 0x6d, 0x70, 0x73, 0x20, 0x6f, 0x76, 0x65, 0x72}&#xA;&#x9;&#x9;            &#x9;actual  : []byte{0x78, 0x9c, 0x4b, 0x54, 0x28, 0x2c, 0xcd, 0x4c, 0xce, 0x56, 0x48, 0x2a, 0xca, 0x2f, 0xcf, 0x53, 0x48, 0xcb, 0xaf, 0x50, 0xc8, 0x2a, 0xcd, 0x2d, 0x28, 0x56, 0xc8, 0x2f, 0x4b, 0x2d, 0x2, 0x0, 0x94, 0xbd, 0xa, 0x7f}&#xA;&#x9;&#x9;            &#x9;&#xA;&#x9;&#x9;            &#x9;Diff:&#xA;&#x9;&#x9;            &#x9;--- Expected&#xA;&#x9;&#x9;            &#x9;+++ Actual&#xA;&#x9;&#x9;            &#x9;@@ -1,4 +1,5 @@&#xA;&#x9;&#x9;            &#x9;-([]uint8) (len=28) {&#xA;&#x9;&#x9;            &#x9;- 00000000  61 20 71 75 69 63 6b 20  62 72 6f 77 6e 20 66 6f  |a quick brown fo|&#xA;&#x9;&#x9;            &#x9;- 00000010  78 20 6a 75 6d 70 73 20  6f 76 65 72              |x jumps over|&#xA;&#x9;&#x9;            &#x9;+([]uint8) (len=36) {&#xA;&#x9;&#x9;            &#x9;+ 00000000  78 9c 4b 54 28 2c cd 4c  ce 56 48 2a ca 2f cf 53  |x.KT(,.L.VH*./.S|&#xA;&#x9;&#x9;            &#x9;+ 00000010  48 cb af 50 c8 2a cd 2d  28 56 c8 2f 4b 2d 02 00  |H..P.*.-(V./K-..|&#xA;&#x9;&#x9;            &#x9;+ 00000020  94 bd 0a 7f                                       |....|&#xA;&#x9;&#x9;            &#x9; }&#xA;&#x9;&#x9;Test:       &#x9;TestZlibWithHeader78"
       ]
-    }
+    },
+    "is_kst": true
   },
   "$meta": {
     "lang": "go",
-    "timestamp": "2019-04-27T17:22:25Z",
+    "timestamp": "2019-04-27T21:20:50Z",
     "ci": {
       "ci": "travis",
       "build_id": "525369120",
