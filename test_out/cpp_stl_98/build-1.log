@@ -4,9 +4,9 @@ Scanning dependencies of target ks_tests
 [  0%] Building CXX object CMakeFiles/ks_tests.dir/prereq/custom_fx.cpp.o
 [  1%] Building CXX object CMakeFiles/ks_tests.dir/main.cpp.o
 [  1%] Building CXX object CMakeFiles/ks_tests.dir/test_bcd_user_type_be.cpp.o
-[  1%] Building CXX object CMakeFiles/ks_tests.dir/test_bcd_user_type_le.cpp.o
-[  1%] Building CXX object CMakeFiles/ks_tests.dir/test_bits_enum.cpp.o
+[  0%] Building CXX object CMakeFiles/ks_tests.dir/test_bcd_user_type_le.cpp.o
 [  2%] Building CXX object CMakeFiles/ks_tests.dir/test_bits_byte_aligned.cpp.o
+[  2%] Building CXX object CMakeFiles/ks_tests.dir/test_bits_enum.cpp.o
 [  2%] Building CXX object CMakeFiles/ks_tests.dir/test_bits_simple.cpp.o
 [  3%] Building CXX object CMakeFiles/ks_tests.dir/test_buffered_struct.cpp.o
 [  3%] Building CXX object CMakeFiles/ks_tests.dir/test_bytes_pad_term.cpp.o
@@ -176,7 +176,6 @@ Scanning dependencies of target ks_tests
 [ 53%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/default_endian_mod.cpp.o
 [ 53%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/docstrings.cpp.o
 [ 54%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/docstrings_docref.cpp.o
-[ 54%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/docstrings_docref_multi.cpp.o
 In file included from /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/default_endian_expr_exception.cpp:6:
 /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:15:7: error: exception specification of overriding function is more lax than base version
 class kstruct_error: public std::runtime_error {
@@ -187,11 +186,20 @@ class kstruct_error: public std::runtime_error {
             ^
 1 error generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/default_endian_expr_exception.cpp.o] Error 1
+[ 54%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/docstrings_docref_multi.cpp.o
 [ 54%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_0.cpp.o
 In file included from /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/default_endian_expr_inherited.cpp:6:
 /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:15:7: error: exception specification of overriding function is more lax than base version
 class kstruct_error: public std::runtime_error {
+      ^In file included from /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/default_endian_expr_is_be.cpp:6:
+/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:15:7: error: exception specification of overriding function is more lax than base version
+class kstruct_error: public std::runtime_error {
       ^
+/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:15:7: note: while declaring the implicit destructor for 'kstruct_error'
+/Applications/Xcode-9.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/stdexcept:106:13: note: overridden virtual function is here
+    virtual ~runtime_error() _NOEXCEPT;
+            ^
+
 /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:15:7: note: while declaring the implicit destructor for 'kstruct_error'
 /Applications/Xcode-9.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/stdexcept:106:13: note: overridden virtual function is here
     virtual ~runtime_error() _NOEXCEPT;
@@ -199,14 +207,6 @@ class kstruct_error: public std::runtime_error {
 1 error generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/default_endian_expr_inherited.cpp.o] Error 1
 [ 55%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_1.cpp.o
-In file included from /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/default_endian_expr_is_be.cpp:6:
-/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:15:7: error: exception specification of overriding function is more lax than base version
-class kstruct_error: public std::runtime_error {
-      ^
-/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:15:7: note: while declaring the implicit destructor for 'kstruct_error'
-/Applications/Xcode-9.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/stdexcept:106:13: note: overridden virtual function is here
-    virtual ~runtime_error() _NOEXCEPT;
-            ^
 1 error generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/default_endian_expr_is_be.cpp.o] Error 1
 [ 55%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_deep.cpp.o
@@ -244,8 +244,7 @@ In file included from /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cp
 /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_to_i_class_border_2.h:14:7: note: 'enum_to_i_class_border_2_t' declared here
 class enum_to_i_class_border_2_t : public kaitai::kstruct {
       ^
-/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_to_i_class_border_2.h:34:5:[ 60%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/expr_array.cpp.o
- error: unknown type name 'enum_to_i_class_border_1_t'; did you mean 'enum_to_i_class_border_2_t'?
+/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_to_i_class_border_2.h:34:5: error: unknown type name 'enum_to_i_class_border_1_t'; did you mean 'enum_to_i_class_border_2_t'?
     enum_to_i_class_border_1_t* m_parent;
     ^~~~~~~~~~~~~~~~~~~~~~~~~~
     enum_to_i_class_border_2_t
@@ -259,6 +258,7 @@ class enum_to_i_class_border_2_t : public kaitai::kstruct {
 /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_to_i_class_border_2.h:14:7: note: 'enum_to_i_class_border_2_t' declared here
 class enum_to_i_class_border_2_t : public kaitai::kstruct {
       ^
+[ 60%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/expr_array.cpp.o
 /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_to_i_class_border_2.cpp:8:56: error: unknown type name 'enum_to_i_class_border_1_t'; did you mean 'enum_to_i_class_border_2_t'?
 enum_to_i_class_border_2_t::enum_to_i_class_border_2_t(enum_to_i_class_border_1_t* p_parent, kaitai::kstream* p__io, kaitai::kstruct* p__parent, enum_to_i_class_border_2_t* p__root) : kaitai::kstruct(p__io) {
                                                        ^~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -315,10 +315,11 @@ make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/te
 [ 73%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/meta_xref.cpp.o
 [ 73%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/multiple_use.cpp.o
 [ 74%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/nav_parent.cpp.o
-[ 74%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/nav_parent2.cpp.o
 /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/io_local_var.cpp:19:72: warning: comparison of unsigned expression < 0 is always false [-Wtautological-compare]
     if (static_cast<io_local_var_t::dummy_t*>(mess_up())->_io()->pos() < 0) {
         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ^ ~
+[ 74%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/nav_parent2.cpp.o
+[ 74%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/nav_parent3.cpp.o
 /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/io_local_var.cpp:29:23: error: use of undeclared identifier 'n_mess_up'
     if (f_mess_up && !n_mess_up) {
                       ^
@@ -328,8 +329,7 @@ make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/te
 /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/io_local_var.cpp:56:9: error: use of undeclared identifier 'n_mess_up'
         n_mess_up = false;
         ^
-/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/io_local_var.cpp:63:9: error: use of undeclared identifier 'n_mess_up'[ 74%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/nav_parent3.cpp.o
-
+/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/io_local_var.cpp:63:9: error: use of undeclared identifier 'n_mess_up'
         n_mess_up = false;
         ^
 1 warning and 4 errors generated.
