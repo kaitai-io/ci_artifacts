@@ -4,6 +4,8 @@
 --- PASS: TestBcdUserTypeLe (0.00s)
 === RUN   TestBitsByteAligned
 --- PASS: TestBitsByteAligned (0.00s)
+=== RUN   TestBitsEnum
+--- PASS: TestBitsEnum (0.00s)
 === RUN   TestBitsSimple
 --- FAIL: TestBitsSimple (0.00s)
 	bits_simple_test.go:21: <nil>
@@ -83,8 +85,18 @@
 --- PASS: TestDebugArrayUser (0.00s)
 === RUN   TestDefaultBigEndian
 --- PASS: TestDefaultBigEndian (0.00s)
+=== RUN   TestDefaultEndianExprException
+--- PASS: TestDefaultEndianExprException (0.00s)
+=== RUN   TestDefaultEndianExprInherited
+--- PASS: TestDefaultEndianExprInherited (0.00s)
+=== RUN   TestDefaultEndianExprIsBe
+--- PASS: TestDefaultEndianExprIsBe (0.00s)
+=== RUN   TestDefaultEndianExprIsLe
+--- PASS: TestDefaultEndianExprIsLe (0.00s)
 === RUN   TestDefaultEndianMod
 --- PASS: TestDefaultEndianMod (0.00s)
+=== RUN   TestDocstringsDocrefMulti
+--- PASS: TestDocstringsDocrefMulti (0.00s)
 === RUN   TestDocstringsDocref
 --- PASS: TestDocstringsDocref (0.00s)
 === RUN   TestDocstrings
@@ -137,6 +149,12 @@
 --- PASS: TestFloatingPoints (0.00s)
 === RUN   TestHelloWorld
 --- PASS: TestHelloWorld (0.00s)
+=== RUN   TestIfInstances
+--- FAIL: TestIfInstances (0.00s)
+	if_instances_test.go:29: 
+			Error Trace:	if_instances_test.go:29
+			Error:      	Expected nil, but got: 0x0
+			Test:       	TestIfInstances
 === RUN   TestIfStruct
 --- PASS: TestIfStruct (0.00s)
 === RUN   TestIfValues
@@ -162,6 +180,8 @@
 --- PASS: TestIntegers (0.00s)
 === RUN   TestJsSignedRightShift
 --- PASS: TestJsSignedRightShift (0.00s)
+=== RUN   TestMetaTags
+--- PASS: TestMetaTags (0.00s)
 === RUN   TestMetaXref
 --- PASS: TestMetaXref (0.00s)
 === RUN   TestMultipleUse
@@ -179,7 +199,7 @@
 === RUN   TestNavRoot
 --- PASS: TestNavRoot (0.00s)
 === RUN   TestNestedSameName2
---- PASS: TestNestedSameName2 (0.00s)
+--- PASS: TestNestedSameName2 (0.02s)
 === RUN   TestNestedSameName
 --- PASS: TestNestedSameName (0.00s)
 === RUN   TestNestedTypes2
@@ -195,7 +215,7 @@
 === RUN   TestPositionInSeq
 --- PASS: TestPositionInSeq (0.00s)
 === RUN   TestPositionToEnd
---- PASS: TestPositionToEnd (0.01s)
+--- PASS: TestPositionToEnd (0.00s)
 === RUN   TestProcessCoerceBytes
 --- PASS: TestProcessCoerceBytes (0.00s)
 === RUN   TestProcessCoerceUsertype1
@@ -262,6 +282,14 @@
 --- PASS: TestProcessXorConst (0.00s)
 === RUN   TestProcessXorValue
 --- PASS: TestProcessXorValue (0.00s)
+=== RUN   TestRepeatEosBit
+--- FAIL: TestRepeatEosBit (0.00s)
+	repeat_eos_bit_test.go:25: 
+			Error Trace:	repeat_eos_bit_test.go:25
+			Error:      	Not equal: 
+			            	expected: 16
+			            	actual  : 15
+			Test:       	TestRepeatEosBit
 === RUN   TestRepeatEosStruct
 --- PASS: TestRepeatEosStruct (0.00s)
 === RUN   TestRepeatEosU4
@@ -440,13 +468,23 @@
 === RUN   TestTermStrz
 --- FAIL: TestTermStrz (0.00s)
 	term_strz_test.go:29: EOF
+=== RUN   TestTsPacketHeader
+--- PASS: TestTsPacketHeader (0.00s)
 === RUN   TestTypeIntUnaryOp
 --- PASS: TestTypeIntUnaryOp (0.00s)
 === RUN   TestTypeTernary
 --- PASS: TestTypeTernary (0.00s)
 === RUN   TestUserType
 --- PASS: TestUserType (0.00s)
+=== RUN   TestValidFailEqBytes
+--- FAIL: TestValidFailEqBytes (0.00s)
+	valid_fail_eq_bytes_test.go:24: expected kaitai.ValidationNotEqualError, got <nil>
+=== RUN   TestValidFailEqInt
+--- FAIL: TestValidFailEqInt (0.00s)
+	valid_fail_eq_int_test.go:24: expected kaitai.ValidationNotEqualError, got <nil>
+=== RUN   TestValidShort
+--- PASS: TestValidShort (0.00s)
 === RUN   TestZlibWithHeader78
 --- PASS: TestZlibWithHeader78 (0.00s)
 FAIL
-FAIL	github.com/kaitai-io/ci_targets/tests/spec/go	0.020s
+FAIL	github.com/kaitai-io/ci_targets/tests/spec/go	0.027s
