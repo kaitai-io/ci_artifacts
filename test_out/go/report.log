@@ -12,75 +12,7 @@
 === RUN   TestBufferedStruct
 --- PASS: TestBufferedStruct (0.00s)
 === RUN   TestBytesPadTerm
---- FAIL: TestBytesPadTerm (0.00s)
-	bytes_pad_term_test.go:32: 
-			Error Trace:	bytes_pad_term_test.go:32
-			Error:      	Not equal: 
-			            	expected: []byte{0x73, 0x74, 0x72, 0x31}
-			            	actual  : []byte{0x73, 0x74, 0x72, 0x31, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40}
-			            	
-			            	Diff:
-			            	--- Expected
-			            	+++ Actual
-			            	@@ -1,3 +1,4 @@
-			            	-([]uint8) (len=4) {
-			            	- 00000000  73 74 72 31                                       |str1|
-			            	+([]uint8) (len=20) {
-			            	+ 00000000  73 74 72 31 40 40 40 40  40 40 40 40 40 40 40 40  |str1@@@@@@@@@@@@|
-			            	+ 00000010  40 40 40 40                                       |@@@@|
-			            	 }
-			Test:       	TestBytesPadTerm
-	bytes_pad_term_test.go:33: 
-			Error Trace:	bytes_pad_term_test.go:33
-			Error:      	Not equal: 
-			            	expected: []byte{0x73, 0x74, 0x72, 0x32, 0x66, 0x6f, 0x6f}
-			            	actual  : []byte{0x73, 0x74, 0x72, 0x32, 0x66, 0x6f, 0x6f, 0x40, 0x2b, 0x2b, 0x2b, 0x2b, 0x2b, 0x2b, 0x2b, 0x2b, 0x2b, 0x2b, 0x2b, 0x2b}
-			            	
-			            	Diff:
-			            	--- Expected
-			            	+++ Actual
-			            	@@ -1,3 +1,4 @@
-			            	-([]uint8) (len=7) {
-			            	- 00000000  73 74 72 32 66 6f 6f                              |str2foo|
-			            	+([]uint8) (len=20) {
-			            	+ 00000000  73 74 72 32 66 6f 6f 40  2b 2b 2b 2b 2b 2b 2b 2b  |str2foo@++++++++|
-			            	+ 00000010  2b 2b 2b 2b                                       |++++|
-			            	 }
-			Test:       	TestBytesPadTerm
-	bytes_pad_term_test.go:34: 
-			Error Trace:	bytes_pad_term_test.go:34
-			Error:      	Not equal: 
-			            	expected: []byte{0x73, 0x74, 0x72, 0x2b, 0x2b, 0x2b, 0x33, 0x62, 0x61, 0x72, 0x2b, 0x2b, 0x2b}
-			            	actual  : []byte{0x73, 0x74, 0x72, 0x2b, 0x2b, 0x2b, 0x33, 0x62, 0x61, 0x72, 0x2b, 0x2b, 0x2b, 0x40, 0x2b, 0x2b, 0x2b, 0x2b, 0x2b, 0x2b}
-			            	
-			            	Diff:
-			            	--- Expected
-			            	+++ Actual
-			            	@@ -1,3 +1,4 @@
-			            	-([]uint8) (len=13) {
-			            	- 00000000  73 74 72 2b 2b 2b 33 62  61 72 2b 2b 2b           |str+++3bar+++|
-			            	+([]uint8) (len=20) {
-			            	+ 00000000  73 74 72 2b 2b 2b 33 62  61 72 2b 2b 2b 40 2b 2b  |str+++3bar+++@++|
-			            	+ 00000010  2b 2b 2b 2b                                       |++++|
-			            	 }
-			Test:       	TestBytesPadTerm
-	bytes_pad_term_test.go:35: 
-			Error Trace:	bytes_pad_term_test.go:35
-			Error:      	Not equal: 
-			            	expected: []byte{0x73, 0x74, 0x72, 0x34, 0x62, 0x61, 0x7a, 0x40}
-			            	actual  : []byte{0x73, 0x74, 0x72, 0x34, 0x62, 0x61, 0x7a, 0x40, 0x2e, 0x2e, 0x2e, 0x2e, 0x2e, 0x2e, 0x2e, 0x2e, 0x2e, 0x2e, 0x2e, 0x2e}
-			            	
-			            	Diff:
-			            	--- Expected
-			            	+++ Actual
-			            	@@ -1,3 +1,4 @@
-			            	-([]uint8) (len=8) {
-			            	- 00000000  73 74 72 34 62 61 7a 40                           |str4baz@|
-			            	+([]uint8) (len=20) {
-			            	+ 00000000  73 74 72 34 62 61 7a 40  2e 2e 2e 2e 2e 2e 2e 2e  |str4baz@........|
-			            	+ 00000010  2e 2e 2e 2e                                       |....|
-			            	 }
-			Test:       	TestBytesPadTerm
+--- PASS: TestBytesPadTerm (0.00s)
 === RUN   TestDebugArrayUser
 --- PASS: TestDebugArrayUser (0.00s)
 === RUN   TestDefaultBigEndian
@@ -199,7 +131,7 @@
 === RUN   TestNavRoot
 --- PASS: TestNavRoot (0.00s)
 === RUN   TestNestedSameName2
---- PASS: TestNestedSameName2 (0.02s)
+--- PASS: TestNestedSameName2 (0.01s)
 === RUN   TestNestedSameName
 --- PASS: TestNestedSameName (0.00s)
 === RUN   TestNestedTypes2
@@ -351,113 +283,9 @@
 === RUN   TestStrLiterals2
 --- PASS: TestStrLiterals2 (0.00s)
 === RUN   TestStrPadTermEmpty
---- FAIL: TestStrPadTermEmpty (0.00s)
-	str_pad_term_empty_test.go:32: 
-			Error Trace:	str_pad_term_empty_test.go:32
-			Error:      	Not equal: 
-			            	expected: ""
-			            	actual  : "@@@@@@@@@@@@@@@@@@@@"
-			            	
-			            	Diff:
-			            	--- Expected
-			            	+++ Actual
-			            	@@ -1 +1 @@
-			            	-
-			            	+@@@@@@@@@@@@@@@@@@@@
-			Test:       	TestStrPadTermEmpty
-	str_pad_term_empty_test.go:33: 
-			Error Trace:	str_pad_term_empty_test.go:33
-			Error:      	Not equal: 
-			            	expected: ""
-			            	actual  : "@@@@@@@@++++++++++++"
-			            	
-			            	Diff:
-			            	--- Expected
-			            	+++ Actual
-			            	@@ -1 +1 @@
-			            	-
-			            	+@@@@@@@@++++++++++++
-			Test:       	TestStrPadTermEmpty
-	str_pad_term_empty_test.go:34: 
-			Error Trace:	str_pad_term_empty_test.go:34
-			Error:      	Not equal: 
-			            	expected: ""
-			            	actual  : "@tr+++3bar+++@++++++"
-			            	
-			            	Diff:
-			            	--- Expected
-			            	+++ Actual
-			            	@@ -1 +1 @@
-			            	-
-			            	+@tr+++3bar+++@++++++
-			Test:       	TestStrPadTermEmpty
-	str_pad_term_empty_test.go:35: 
-			Error Trace:	str_pad_term_empty_test.go:35
-			Error:      	Not equal: 
-			            	expected: "@"
-			            	actual  : "@@@@@@@@............"
-			            	
-			            	Diff:
-			            	--- Expected
-			            	+++ Actual
-			            	@@ -1 +1 @@
-			            	-@
-			            	+@@@@@@@@............
-			Test:       	TestStrPadTermEmpty
+--- PASS: TestStrPadTermEmpty (0.00s)
 === RUN   TestStrPadTerm
---- FAIL: TestStrPadTerm (0.00s)
-	str_pad_term_test.go:32: 
-			Error Trace:	str_pad_term_test.go:32
-			Error:      	Not equal: 
-			            	expected: "str1"
-			            	actual  : "str1@@@@@@@@@@@@@@@@"
-			            	
-			            	Diff:
-			            	--- Expected
-			            	+++ Actual
-			            	@@ -1 +1 @@
-			            	-str1
-			            	+str1@@@@@@@@@@@@@@@@
-			Test:       	TestStrPadTerm
-	str_pad_term_test.go:33: 
-			Error Trace:	str_pad_term_test.go:33
-			Error:      	Not equal: 
-			            	expected: "str2foo"
-			            	actual  : "str2foo@++++++++++++"
-			            	
-			            	Diff:
-			            	--- Expected
-			            	+++ Actual
-			            	@@ -1 +1 @@
-			            	-str2foo
-			            	+str2foo@++++++++++++
-			Test:       	TestStrPadTerm
-	str_pad_term_test.go:34: 
-			Error Trace:	str_pad_term_test.go:34
-			Error:      	Not equal: 
-			            	expected: "str+++3bar+++"
-			            	actual  : "str+++3bar+++@++++++"
-			            	
-			            	Diff:
-			            	--- Expected
-			            	+++ Actual
-			            	@@ -1 +1 @@
-			            	-str+++3bar+++
-			            	+str+++3bar+++@++++++
-			Test:       	TestStrPadTerm
-	str_pad_term_test.go:35: 
-			Error Trace:	str_pad_term_test.go:35
-			Error:      	Not equal: 
-			            	expected: "str4baz@"
-			            	actual  : "str4baz@............"
-			            	
-			            	Diff:
-			            	--- Expected
-			            	+++ Actual
-			            	@@ -1 +1 @@
-			            	-str4baz@
-			            	+str4baz@............
-			Test:       	TestStrPadTerm
+--- PASS: TestStrPadTerm (0.00s)
 === RUN   TestSwitchIntegers2
 --- PASS: TestSwitchIntegers2 (0.00s)
 === RUN   TestSwitchIntegers
@@ -487,4 +315,4 @@
 === RUN   TestZlibWithHeader78
 --- PASS: TestZlibWithHeader78 (0.00s)
 FAIL
-FAIL	github.com/kaitai-io/ci_targets/tests/spec/go	0.027s
+FAIL	github.com/kaitai-io/ci_targets/tests/spec/go	0.023s
