@@ -1,118 +1,125 @@
 {
   "NavParentFalse2": {
     "status": "passed",
-    "elapsed": 1.287e-05,
+    "elapsed": 1.812e-05,
+    "is_kst": true
+  },
+  "ProcessXor4Value": {
+    "status": "passed",
+    "elapsed": 3.552e-05,
     "is_kst": true
   },
   "DefaultEndianMod": {
     "status": "passed",
-    "elapsed": 2.885e-05,
+    "elapsed": 2.05e-05,
     "is_kst": true
   },
-  "TypeTernary": {
-    "status": "failed",
-    "elapsed": 2.48e-05,
-    "failure": {
-      "file_name": null,
-      "line_num": null,
-      "message": "/home/travis/build/kaitai-io/ci_targets/tests/spec/nim/tests/ttype_ternary.nim(15, 22): Check failed: r.dif.value == uint8(101)",
-      "trace": [
-        "r.dif.value was 111\nuint8(101) was 101"
-      ]
-    },
+  "ProcessXorConst": {
+    "status": "passed",
+    "elapsed": 2.742e-05,
     "is_kst": true
   },
   "JsSignedRightShift": {
     "status": "passed",
-    "elapsed": 1.335e-05,
+    "elapsed": 8.82e-06,
     "is_kst": true
   },
   "MetaXref": {
     "status": "passed",
-    "elapsed": 6.44e-06,
+    "elapsed": 1.74e-05,
     "is_kst": true
   },
   "ExprSizeofType1": {
     "status": "passed",
-    "elapsed": 7.15e-06,
+    "elapsed": 1.168e-05,
     "is_kst": true
   },
-  "FloatToI": {
-    "status": "passed",
-    "elapsed": 3.6e-05,
-    "is_kst": true
-  },
-  "ExprSizeofType0": {
-    "status": "passed",
-    "elapsed": 1.192e-05,
-    "is_kst": true
-  },
-  "MetaTags": {
-    "status": "passed",
-    "elapsed": 1.025e-05,
-    "is_kst": true
-  },
-  "HelloWorld": {
-    "status": "passed",
-    "elapsed": 1.144e-05,
-    "is_kst": true
-  },
-  "BitsSimple": {
-    "status": "passed",
-    "elapsed": 7.725e-05,
-    "is_kst": true
-  },
-  "FloatingPoints": {
-    "status": "passed",
-    "elapsed": 1.478e-05,
-    "is_kst": true
-  },
-  "UserType": {
-    "status": "passed",
-    "elapsed": 7.51e-05,
-    "is_kst": true
-  },
-  "ExprMod": {
-    "status": "passed",
-    "elapsed": 1.74e-05,
-    "is_kst": true
-  },
-  "StrLiterals2": {
-    "status": "passed",
-    "elapsed": 8.917e-05,
-    "is_kst": true
-  },
-  "DocstringsDocrefMulti": {
-    "status": "passed",
-    "elapsed": 7.87e-06,
-    "is_kst": true
-  },
-  "Expr0": {
-    "status": "passed",
-    "elapsed": 3.123e-05,
-    "is_kst": true
-  },
-  "DefaultBigEndian": {
-    "status": "passed",
-    "elapsed": 1.478e-05,
-    "is_kst": true
-  },
-  "BufferedStruct": {
+  "BytesPadTerm": {
     "status": "failed",
-    "elapsed": 6.819e-05,
+    "elapsed": 0.00011992,
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "/home/travis/build/kaitai-io/ci_targets/tests/spec/nim/tests/tbuffered_struct.nim(18, 17): Check failed: r.len2 == uint32(8)",
+      "message": "/home/travis/build/kaitai-io/ci_targets/tests/spec/nim/tests/tbytes_pad_term.nim(15, 19): Check failed: r.strPad == seq[byte](@[115, 116, 114, 49].mapIt(toByte(it)))",
       "trace": [
-        "r.len2 was 4294967295\nuint32(8) was 8\n/home/travis/build/kaitai-io/ci_targets/tests/spec/nim/tests/tbuffered_struct.nim(19, 27): Check failed: r.block2.number1 == uint32(68)\nr.block2.number1 was 4294967295\nuint32(68) was 68\n/home/travis/build/kaitai-io/ci_targets/tests/spec/nim/tests/tbuffered_struct.nim(20, 27): Check failed: r.block2.number2 == uint32(69)\nr.block2.number2 was 8\nuint32(69) was 69\n/home/travis/build/kaitai-io/ci_targets/tests/spec/nim/tests/tbuffered_struct.nim(21, 21): Check failed: r.finisher == uint32(238)\nr.finisher was 68\nuint32(238) was 238"
+        "r.strPad was @[115, 116, 114, 49, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64]\nseq[byte](@[115, 116, 114, 49].mapIt(toByte(it))) was @[115, 116, 114, 49]\n/home/travis/build/kaitai-io/ci_targets/tests/spec/nim/tests/tbytes_pad_term.nim(16, 20): Check failed: r.strTerm == seq[byte](@[115, 116, 114, 50, 102, 111, 111].mapIt(toByte(it)))\nr.strTerm was @[115, 116, 114, 50, 102, 111, 111, 64, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43]\nseq[byte](@[115, 116, 114, 50, 102, 111, 111].mapIt(toByte(it))) was @[115, 116, 114, 50, 102, 111, 111]\n/home/travis/build/kaitai-io/ci_targets/tests/spec/nim/tests/tbytes_pad_term.nim(17, 26): Check failed: r.strTermAndPad ==&#10;    seq[byte](@[115, 116, 114, 43, 43, 43, 51, 98, 97, 114, 43, 43, 43].mapIt(toByte(it)))\nr.strTermAndPad was @[115, 116, 114, 43, 43, 43, 51, 98, 97, 114, 43, 43, 43, 64, 43, 43, 43, 43, 43, 43]\nseq[byte](@[115, 116, 114, 43, 43, 43, 51, 98, 97, 114, 43, 43, 43].mapIt(toByte(it))) was @[115, 116, 114, 43, 43, 43, 51, 98, 97, 114, 43, 43, 43]\n/home/travis/build/kaitai-io/ci_targets/tests/spec/nim/tests/tbytes_pad_term.nim(18, 27): Check failed: r.strTermInclude ==&#10;    seq[byte](@[115, 116, 114, 52, 98, 97, 122, 64].mapIt(toByte(it)))\nr.strTermInclude was @[115, 116, 114, 52, 98, 97, 122, 64, 46, 46, 46, 46, 46, 46, 46, 46, 46, 46, 46, 46]\nseq[byte](@[115, 116, 114, 52, 98, 97, 122, 64].mapIt(toByte(it))) was @[115, 116, 114, 52, 98, 97, 122, 64]"
       ]
     },
     "is_kst": true
   },
+  "ProcessXorValue": {
+    "status": "passed",
+    "elapsed": 2.551e-05,
+    "is_kst": true
+  },
+  "ExprSizeofType0": {
+    "status": "passed",
+    "elapsed": 1.073e-05,
+    "is_kst": true
+  },
+  "MetaTags": {
+    "status": "passed",
+    "elapsed": 6.91e-06,
+    "is_kst": true
+  },
+  "HelloWorld": {
+    "status": "passed",
+    "elapsed": 1.788e-05,
+    "is_kst": true
+  },
+  "BitsSimple": {
+    "status": "passed",
+    "elapsed": 0.00012231,
+    "is_kst": true
+  },
+  "FloatingPoints": {
+    "status": "passed",
+    "elapsed": 6.318e-05,
+    "is_kst": true
+  },
+  "UserType": {
+    "status": "passed",
+    "elapsed": 2.599e-05,
+    "is_kst": true
+  },
+  "ExprSizeofValue0": {
+    "status": "passed",
+    "elapsed": 7.749e-05,
+    "is_kst": true
+  },
+  "ExprMod": {
+    "status": "passed",
+    "elapsed": 0.000144,
+    "is_kst": true
+  },
+  "BitsByteAligned": {
+    "status": "passed",
+    "elapsed": 3.862e-05,
+    "is_kst": true
+  },
+  "StrLiterals2": {
+    "status": "passed",
+    "elapsed": 2.384e-05,
+    "is_kst": true
+  },
+  "DocstringsDocrefMulti": {
+    "status": "passed",
+    "elapsed": 1.097e-05,
+    "is_kst": true
+  },
+  "Expr0": {
+    "status": "passed",
+    "elapsed": 5.77e-05,
+    "is_kst": true
+  },
+  "DefaultBigEndian": {
+    "status": "passed",
+    "elapsed": 1.55e-05,
+    "is_kst": true
+  },
   "TypeIntUnaryOp": {
     "status": "passed",
-    "elapsed": 1.884e-05,
+    "elapsed": 2.003e-05,
     "is_kst": true
   },
   "BcdUserTypeBe": {
@@ -121,10 +128,10 @@
   "BcdUserTypeLe": {
     "is_kst": true
   },
-  "BitsByteAligned": {
+  "BitsEnum": {
     "is_kst": true
   },
-  "BytesPadTerm": {
+  "BufferedStruct": {
     "is_kst": true
   },
   "CastNested": {
@@ -151,7 +158,31 @@
   "DocstringsDocref": {
     "is_kst": true
   },
+  "Enum0": {
+    "is_kst": true
+  },
+  "Enum1": {
+    "is_kst": true
+  },
+  "EnumDeep": {
+    "is_kst": true
+  },
   "EnumDeepLiterals": {
+    "is_kst": true
+  },
+  "EnumFancy": {
+    "is_kst": true
+  },
+  "EnumIf": {
+    "is_kst": true
+  },
+  "EnumNegative": {
+    "is_kst": true
+  },
+  "EnumOfValueInst": {
+    "is_kst": true
+  },
+  "EnumToI": {
     "is_kst": true
   },
   "Expr1": {
@@ -169,10 +200,10 @@
   "ExprBytesCmp": {
     "is_kst": true
   },
-  "ExprIoPos": {
+  "ExprEnum": {
     "is_kst": true
   },
-  "ExprSizeofValue0": {
+  "ExprIoPos": {
     "is_kst": true
   },
   "ExprSizeofValueSized": {
@@ -182,6 +213,9 @@
     "is_kst": true
   },
   "FixedStruct": {
+    "is_kst": true
+  },
+  "FloatToI": {
     "is_kst": true
   },
   "IfInstances": {
@@ -274,6 +308,9 @@
   "ParamsCallShort": {
     "is_kst": true
   },
+  "ParamsEnum": {
+    "is_kst": true
+  },
   "ParamsPassUsertype": {
     "is_kst": true
   },
@@ -308,15 +345,6 @@
     "is_kst": true
   },
   "ProcessXor4Const": {
-    "is_kst": true
-  },
-  "ProcessXor4Value": {
-    "is_kst": true
-  },
-  "ProcessXorConst": {
-    "is_kst": true
-  },
-  "ProcessXorValue": {
     "is_kst": true
   },
   "RecursiveOne": {
@@ -373,6 +401,9 @@
   "SwitchIntegers2": {
     "is_kst": true
   },
+  "SwitchManualEnum": {
+    "is_kst": true
+  },
   "SwitchManualInt": {
     "is_kst": true
   },
@@ -394,6 +425,12 @@
   "TermStrz": {
     "is_kst": true
   },
+  "TsPacketHeader": {
+    "is_kst": true
+  },
+  "TypeTernary": {
+    "is_kst": true
+  },
   "ValidShort": {
     "is_kst": true
   },
@@ -402,13 +439,13 @@
   },
   "$meta": {
     "lang": "nim",
-    "timestamp": "2019-10-12T15:13:55Z",
+    "timestamp": "2019-10-13T09:50:23Z",
     "ci": {
       "ci": "travis",
-      "build_id": "597006328",
-      "job_id": "597006351",
-      "job_number": "228.23",
-      "url": "https://travis-ci.org/kaitai-io/ci_targets/jobs/597006351"
+      "build_id": "597212216",
+      "job_id": "597212239",
+      "job_number": "229.23",
+      "url": "https://travis-ci.org/kaitai-io/ci_targets/jobs/597212239"
     }
   }
 }
