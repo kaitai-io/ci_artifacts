@@ -1,11 +1,11 @@
 Scanning dependencies of target ks_tests
 [  0%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/runtime/cpp_stl/kaitai/kaitaistream.cpp.o
 [  0%] Building CXX object CMakeFiles/ks_tests.dir/prereq/my_custom_fx.cpp.o
-[  0%] Building CXX object CMakeFiles/ks_tests.dir/test_imports_circular_a.cpp.o
 [  0%] Building CXX object CMakeFiles/ks_tests.dir/prereq/custom_fx.cpp.o
 [  1%] Building CXX object CMakeFiles/ks_tests.dir/test_cast_nested.cpp.o
-[  1%] Building CXX object CMakeFiles/ks_tests.dir/test_imports_rel_1.cpp.o
+[  1%] Building CXX object CMakeFiles/ks_tests.dir/test_imports_circular_a.cpp.o
 [  2%] Building CXX object CMakeFiles/ks_tests.dir/test_process_coerce_usertype1.cpp.o
+[  2%] Building CXX object CMakeFiles/ks_tests.dir/test_imports_rel_1.cpp.o
 [  2%] Building CXX object CMakeFiles/ks_tests.dir/test_expr_sizeof_type_1.cpp.o
 [  2%] Building CXX object CMakeFiles/ks_tests.dir/test_opaque_external_type.cpp.o
 [  3%] Building CXX object CMakeFiles/ks_tests.dir/test_docstrings_docref.cpp.o
@@ -280,6 +280,7 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
 [ 79%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_enum.cpp.o
 [ 79%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/debug_array_user.cpp.o
 [ 80%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent_override.cpp.o
+[ 80%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/meta_xref.cpp.o
 In file included from /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/enum_to_i_class_border_2.cpp:4:0:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/enum_to_i_class_border_2.h:18:58: error: expected ‘)’ before ‘*’ token
      enum_to_i_class_border_2_t(enum_to_i_class_border_1_t* p_parent, kaitai::kstream* p__io, kaitai::kstruct* p__parent = nullptr, enum_to_i_class_border_2_t* p__root = nullptr);
@@ -299,7 +300,6 @@ In file included from /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp
      m_is_dog = parent()->some_dog() == 4;
                        ^
 make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/enum_to_i_class_border_2.cpp.o] Error 1
-[ 80%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/meta_xref.cpp.o
 [ 80%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int.cpp.o
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/vlq_base128_le.cpp: In member function ‘int32_t vlq_base128_le_t::value()’:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/vlq_base128_le.cpp:75:338: warning: left shift count >= width of type [enabled by default]
@@ -351,59 +351,6 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
 [ 92%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent3.cpp.o
 [ 92%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/expr_mod.cpp.o
 [ 93%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imported_2.cpp.o
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/expr_bytes_ops.cpp: In member function ‘uint8_t expr_bytes_ops_t::two_last()’:
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/expr_bytes_ops.cpp:37:23: error: base operand of ‘->’ has non-pointer type ‘std::string {aka std::basic_string<char>}’
-     m_two_last = two()->back();
-                       ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/expr_bytes_ops.cpp: In member function ‘uint8_t expr_bytes_ops_t::two_max()’:
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/expr_bytes_ops.cpp:45:40: error: base operand of ‘->’ has non-pointer type ‘std::string {aka std::basic_string<char>}’
-     m_two_max = *std::max_element(two()->begin(), two()->end());
-                                        ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/expr_bytes_ops.cpp:45:56: error: base operand of ‘->’ has non-pointer type ‘std::string {aka std::basic_string<char>}’
-     m_two_max = *std::max_element(two()->begin(), two()->end());
-                                                        ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/expr_bytes_ops.cpp: In member function ‘uint8_t expr_bytes_ops_t::one_min()’:
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/expr_bytes_ops.cpp:53:40: error: base operand of ‘->’ has non-pointer type ‘std::string {aka std::basic_string<char>}’
-     m_one_min = *std::min_element(one()->begin(), one()->end());
-                                        ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/expr_bytes_ops.cpp:53:56: error: base operand of ‘->’ has non-pointer type ‘std::string {aka std::basic_string<char>}’
-     m_one_min = *std::min_element(one()->begin(), one()->end());
-                                                        ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/expr_bytes_ops.cpp: In member function ‘uint8_t expr_bytes_ops_t::one_first()’:
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/expr_bytes_ops.cpp:61:24: error: base operand of ‘->’ has non-pointer type ‘std::string {aka std::basic_string<char>}’
-     m_one_first = one()->front();
-                        ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/expr_bytes_ops.cpp: In member function ‘uint8_t expr_bytes_ops_t::one_mid()’:
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/expr_bytes_ops.cpp:69:22: error: base operand of ‘->’ has non-pointer type ‘std::string {aka std::basic_string<char>}’
-     m_one_mid = one()->at(1);
-                      ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/expr_bytes_ops.cpp: In member function ‘uint8_t expr_bytes_ops_t::two_min()’:
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/expr_bytes_ops.cpp:85:40: error: base operand of ‘->’ has non-pointer type ‘std::string {aka std::basic_string<char>}’
-     m_two_min = *std::min_element(two()->begin(), two()->end());
-                                        ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/expr_bytes_ops.cpp:85:56: error: base operand of ‘->’ has non-pointer type ‘std::string {aka std::basic_string<char>}’
-     m_two_min = *std::min_element(two()->begin(), two()->end());
-                                                        ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/expr_bytes_ops.cpp: In member function ‘uint8_t expr_bytes_ops_t::two_mid()’:
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/expr_bytes_ops.cpp:93:22: error: base operand of ‘->’ has non-pointer type ‘std::string {aka std::basic_string<char>}’
-     m_two_mid = two()->at(1);
-                      ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/expr_bytes_ops.cpp: In member function ‘uint8_t expr_bytes_ops_t::one_last()’:
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/expr_bytes_ops.cpp:109:23: error: base operand of ‘->’ has non-pointer type ‘std::string {aka std::basic_string<char>}’
-     m_one_last = one()->back();
-                       ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/expr_bytes_ops.cpp: In member function ‘uint8_t expr_bytes_ops_t::one_max()’:
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/expr_bytes_ops.cpp:125:40: error: base operand of ‘->’ has non-pointer type ‘std::string {aka std::basic_string<char>}’
-     m_one_max = *std::max_element(one()->begin(), one()->end());
-                                        ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/expr_bytes_ops.cpp:125:56: error: base operand of ‘->’ has non-pointer type ‘std::string {aka std::basic_string<char>}’
-     m_one_max = *std::max_element(one()->begin(), one()->end());
-                                                        ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/expr_bytes_ops.cpp: In member function ‘uint8_t expr_bytes_ops_t::two_first()’:
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/expr_bytes_ops.cpp:133:24: error: base operand of ‘->’ has non-pointer type ‘std::string {aka std::basic_string<char>}’
-     m_two_first = two()->front();
-                        ^
-make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/expr_bytes_ops.cpp.o] Error 1
 [ 93%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/expr_io_eof.cpp.o
 [ 93%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/float_to_i.cpp.o
 [ 93%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/position_to_end.cpp.o
