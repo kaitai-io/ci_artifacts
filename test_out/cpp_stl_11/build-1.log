@@ -225,8 +225,8 @@ Scanning dependencies of target ks_tests
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/yaml_ints.cpp:51:21: warning: implicit conversion from 'unsigned long long' to 'int32_t' (aka 'int') changes value from 18446744073709551615 to -1 [-Wconstant-conversion]
     m_test_u8_hex = 18446744073709551615ULL;
                   ~ ^~~~~~~~~~~~~~~~~~~~~~~
-2 warnings generated.
 [ 67%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_enum_invalid_else.cpp.o
+2 warnings generated.
 [ 67%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/bytes_pad_term.cpp.o
 [ 67%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nested_types3.cpp.o
 [ 68%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/valid_fail_eq_int.cpp.o
@@ -254,12 +254,15 @@ Scanning dependencies of target ks_tests
 [ 74%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/enum_invalid.cpp.o
 [ 75%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/bits_simple.cpp.o
 [ 75%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/expr_0.cpp.o
+[ 75%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/default_endian_expr_is_be.cpp.o
+[ 75%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_str.cpp.o
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/io_local_var.cpp:19:72: warning: comparison of unsigned expression < 0 is always false [-Wtautological-compare]
     if (static_cast<io_local_var_t::dummy_t*>(mess_up())->_io()->pos() < 0) {
         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ^ ~
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/io_local_var.cpp:29:23: error: use of undeclared identifier 'n_mess_up'
     if (f_mess_up && !n_mess_up) {
                       ^
+[ 76%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_pass_usertype.cpp.o
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/io_local_var.cpp:52:5: error: use of undeclared identifier 'n_mess_up'
     n_mess_up = true;
     ^
@@ -271,9 +274,6 @@ Scanning dependencies of target ks_tests
         ^
 1 warning and 4 errors generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/io_local_var.cpp.o] Error 1
-[ 75%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/default_endian_expr_is_be.cpp.o
-[ 75%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_str.cpp.o
-[ 76%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_pass_usertype.cpp.o
 [ 76%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/non_standard.cpp.o
 [ 76%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/if_struct.cpp.o
 [ 77%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/ts_packet_header.cpp.o
@@ -323,7 +323,6 @@ class enum_to_i_class_border_2_t : public kaitai::kstruct {
 5 errors generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/enum_to_i_class_border_2.cpp.o] Error 1
 [ 80%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int.cpp.o
-[ 81%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imported_1.cpp.o
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/vlq_base128_le.cpp:75:335: warning: shift count >= width of type [-Wshift-count-overflow]
     m_value = (((((((groups()->at(0)->value() + ((len() >= 2) ? ((groups()->at(1)->value() << 7)) : (0))) + ((len() >= 3) ? ((groups()->at(2)->value() << 14)) : (0))) + ((len() >= 4) ? ((groups()->at(3)->value() << 21)) : (0))) + ((len() >= 5) ? ((groups()->at(4)->value() << 28)) : (0))) + ((len() >= 6) ? ((groups()->at(5)->value() << 35)) : (0))) + ((len() >= 7) ? ((groups()->at(6)->value() << 42)) : (0))) + ((len() >= 8) ? ((groups()->at(7)->value() << 49)) : (0)));
                                                                                                                                                                                                                                                                                                                                               ^  ~~
@@ -333,10 +332,11 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/vlq_base128_le.cpp:75:457: warning: shift count >= width of type [-Wshift-count-overflow]
     m_value = (((((((groups()->at(0)->value() + ((len() >= 2) ? ((groups()->at(1)->value() << 7)) : (0))) + ((len() >= 3) ? ((groups()->at(2)->value() << 14)) : (0))) + ((len() >= 4) ? ((groups()->at(3)->value() << 21)) : (0))) + ((len() >= 5) ? ((groups()->at(4)->value() << 28)) : (0))) + ((len() >= 6) ? ((groups()->at(5)->value() << 35)) : (0))) + ((len() >= 7) ? ((groups()->at(6)->value() << 42)) : (0))) + ((len() >= 8) ? ((groups()->at(7)->value() << 49)) : (0)));
                                                                                                                                                                                                                                                                                                                                                                                                                                                                         ^  ~~
+[ 81%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imported_1.cpp.o
 [ 81%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_bytearray.cpp.o
 [ 81%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/eof_exception_bytes.cpp.o
-3 warnings generated.
-[ 82%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imports0.cpp.o
+3[ 82%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imports0.cpp.o
+ warnings generated.
 [ 82%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/position_abs.cpp.o
 [ 82%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent_false.cpp.o
 [ 82%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imported_and_abs.cpp.o
@@ -358,8 +358,8 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
 [ 87%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/default_endian_expr_inherited.cpp.o
 [ 88%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/enum_0.cpp.o
 [ 88%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/valid_fail_eq_bytes.cpp.o
-[ 88%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nested_types.cpp.o
 [ 89%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_repeat_expr.cpp.o
+[ 88%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nested_types.cpp.o
 [ 89%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_else.cpp.o
 [ 89%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/expr_enum.cpp.o
 [ 89%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/expr_1.cpp.o
@@ -382,64 +382,6 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
 [ 95%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/user_type.cpp.o
 [ 95%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/repeat_eos_u4.cpp.o
 [ 95%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/opaque_external_type_02_child.cpp.o
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/expr_bytes_ops.cpp:37:23: error: member reference type 'std::string' (aka 'basic_string<char>') is not a pointer; did you mean to use '.'?
-    m_two_last = two()->back();
-                 ~~~~~^~
-                      .
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/expr_bytes_ops.cpp:45:40: error: member reference type 'std::string' (aka 'basic_string<char>') is not a pointer; did you mean to use '.'?
-    m_two_max = *std::max_element(two()->begin(), two()->end());
-                                  ~~~~~^~
-                                       .
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/expr_bytes_ops.cpp:45:56: error: member reference type 'std::string' (aka 'basic_string<char>') is not a pointer; did you mean to use '.'?
-    m_two_max = *std::max_element(two()->begin(), two()->end());
-                                                  ~~~~~^~
-                                                       .
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/expr_bytes_ops.cpp:53:40: error: member reference type 'std::string' (aka 'basic_string<char>') is not a pointer; did you mean to use '.'?
-    m_one_min = *std::min_element(one()->begin(), one()->end());
-                                  ~~~~~^~
-                                       .
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/expr_bytes_ops.cpp:53:56: error: member reference type 'std::string' (aka 'basic_string<char>') is not a pointer; did you mean to use '.'?
-    m_one_min = *std::min_element(one()->begin(), one()->end());
-                                                  ~~~~~^~
-                                                       .
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/expr_bytes_ops.cpp:61:24: error: member reference type 'std::string' (aka 'basic_string<char>') is not a pointer; did you mean to use '.'?
-    m_one_first = one()->front();
-                  ~~~~~^~
-                       .
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/expr_bytes_ops.cpp:69:22: error: member reference type 'std::string' (aka 'basic_string<char>') is not a pointer; did you mean to use '.'?
-    m_one_mid = one()->at(1);
-                ~~~~~^~
-                     .
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/expr_bytes_ops.cpp:85:40: error: member reference type 'std::string' (aka 'basic_string<char>') is not a pointer; did you mean to use '.'?
-    m_two_min = *std::min_element(two()->begin(), two()->end());
-                                  ~~~~~^~
-                                       .
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/expr_bytes_ops.cpp:85:56: error: member reference type 'std::string' (aka 'basic_string<char>') is not a pointer; did you mean to use '.'?
-    m_two_min = *std::min_element(two()->begin(), two()->end());
-                                                  ~~~~~^~
-                                                       .
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/expr_bytes_ops.cpp:93:22: error: member reference type 'std::string' (aka 'basic_string<char>') is not a pointer; did you mean to use '.'?
-    m_two_mid = two()->at(1);
-                ~~~~~^~
-                     .
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/expr_bytes_ops.cpp:109:23: error: member reference type 'std::string' (aka 'basic_string<char>') is not a pointer; did you mean to use '.'?
-    m_one_last = one()->back();
-                 ~~~~~^~
-                      .
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/expr_bytes_ops.cpp:125:40: error: member reference type 'std::string' (aka 'basic_string<char>') is not a pointer; did you mean to use '.'?
-    m_one_max = *std::max_element(one()->begin(), one()->end());
-                                  ~~~~~^~
-                                       .
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/expr_bytes_ops.cpp:125:56: error: member reference type 'std::string' (aka 'basic_string<char>') is not a pointer; did you mean to use '.'?
-    m_one_max = *std::max_element(one()->begin(), one()->end());
-                                                  ~~~~~^~
-                                                       .
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/expr_bytes_ops.cpp:133:24: error: member reference type 'std::string' (aka 'basic_string<char>') is not a pointer; did you mean to use '.'?
-    m_two_first = two()->front();
-                  ~~~~~^~
-                       .
-14 errors generated.
-make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/expr_bytes_ops.cpp.o] Error 1
 [ 96%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/instance_io_user.cpp.o
 [ 96%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imports_abs.cpp.o
 [ 96%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/str_pad_term_empty.cpp.o
