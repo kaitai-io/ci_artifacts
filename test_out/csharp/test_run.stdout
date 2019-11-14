@@ -9,6 +9,15 @@ Test Files
     spec/csharp/kaitai_struct_csharp_tests/bin/Debug/kaitai_struct_csharp_tests.dll
 
 
+Errors and Failures
+
+1) Error : Kaitai.SpecValidNotParsedIf.TestValidNotParsedIf
+Kaitai.ValidationNotEqualError : /seq/0: at pos 0: validation failed: not equal, expected 42, but got 
+   at Kaitai.ValidNotParsedIf._read() in C:\projects\ci-targets\tests\compiled\csharp\ValidNotParsedIf.cs:line 29
+   at Kaitai.ValidNotParsedIf..ctor(KaitaiStream p__io, KaitaiStruct p__parent, ValidNotParsedIf p__root) in C:\projects\ci-targets\tests\compiled\csharp\ValidNotParsedIf.cs:line 18
+   at Kaitai.ValidNotParsedIf.FromFile(String fileName) in C:\projects\ci-targets\tests\compiled\csharp\ValidNotParsedIf.cs:line 11
+   at Kaitai.SpecValidNotParsedIf.TestValidNotParsedIf() in C:\projects\ci-targets\tests\spec\csharp\kaitai_struct_csharp_tests\tests\SpecValidNotParsedIf.cs:line 13
+
 Run Settings
     WorkDirectory: C:\projects\ci-targets\tests
     ImageRuntimeVersion: 4.0.30319
@@ -18,10 +27,11 @@ Run Settings
     NumberOfTestWorkers: 2
 
 Test Run Summary
-  Overall result: Passed
-  Test Count: 149, Passed: 149, Failed: 0, Inconclusive: 0, Skipped: 0
-  Start time: 2019-10-13 09:35:39Z
-    End time: 2019-10-13 09:35:41Z
-    Duration: 1.517 seconds
+  Overall result: Failed
+  Test Count: 153, Passed: 152, Failed: 1, Inconclusive: 0, Skipped: 0
+    Failed Tests - Failures: 0, Errors: 1, Invalid: 0
+  Start time: 2019-11-14 11:01:54Z
+    End time: 2019-11-14 11:01:56Z
+    Duration: 1.901 seconds
 
 Results (nunit3) saved as test_out/csharp/TestResult.xml
