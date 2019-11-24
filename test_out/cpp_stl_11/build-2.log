@@ -1,13 +1,25 @@
 Scanning dependencies of target ks_tests
-[  1%] Linking CXX executable ks_tests
-Undefined symbols for architecture x86_64:
-  "io_local_var_t::io_local_var_t(kaitai::kstream*, kaitai::kstruct*, io_local_var_t*)", referenced from:
-      test_io_local_var::test_method() in test_io_local_var.cpp.o
-  "enum_to_i_class_border_2_t::enum_to_i_class_border_2_t(enum_to_i_class_border_1_t*, kaitai::kstream*, kaitai::kstruct*, enum_to_i_class_border_2_t*)", referenced from:
-      enum_to_i_class_border_1_t::checker() in enum_to_i_class_border_1.cpp.o
-ld: symbol(s) not found for architecture x86_64
-clang: error: linker command failed with exit code 1 (use -v to see invocation)
-make[2]: *** [ks_tests] Error 1
+[  0%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/process_repeat_usertype.cpp.o
+/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/process_repeat_usertype.cpp:28:58: error: no viable conversion from 'std::unique_ptr<std::vector<std::string> >' (aka 'unique_ptr<vector<basic_string<char, char_traits<char>, allocator<char> > > >') to 'std::string' (aka 'basic_string<char, char_traits<char>, allocator<char> >')
+        m__raw_blocks = kaitai::kstream::process_xor_one(m__raw__raw_blocks, 158);
+                                                         ^~~~~~~~~~~~~~~~~~
+/Applications/Xcode-9.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/string:760:5: note: candidate constructor not viable: no known conversion from 'std::unique_ptr<std::vector<std::string> >' (aka 'unique_ptr<vector<basic_string<char, char_traits<char>, allocator<char> > > >') to 'const std::__1::basic_string<char> &' for 1st argument
+    basic_string(const basic_string& __str);
+    ^
+/Applications/Xcode-9.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/string:765:5: note: candidate constructor not viable: no known conversion from 'std::unique_ptr<std::vector<std::string> >' (aka 'unique_ptr<vector<basic_string<char, char_traits<char>, allocator<char> > > >') to 'std::__1::basic_string<char> &&' for 1st argument
+    basic_string(basic_string&& __str)
+    ^
+/Applications/Xcode-9.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/string:775:31: note: candidate constructor not viable: no known conversion from 'std::unique_ptr<std::vector<std::string> >' (aka 'unique_ptr<vector<basic_string<char, char_traits<char>, allocator<char> > > >') to 'const char *' for 1st argument
+    _LIBCPP_INLINE_VISIBILITY basic_string(const _CharT* __s);
+                              ^
+/Applications/Xcode-9.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/string:808:5: note: candidate constructor not viable: no known conversion from 'std::unique_ptr<std::vector<std::string> >' (aka 'unique_ptr<vector<basic_string<char, char_traits<char>, allocator<char> > > >') to 'initializer_list<char>' for 1st argument
+    basic_string(initializer_list<_CharT> __il);
+    ^
+/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/../../../runtime/cpp_stl/kaitai/kaitaistream.h:179:52: note: passing argument to parameter 'data' here
+    static std::string process_xor_one(std::string data, uint8_t key);
+                                                   ^
+1 error generated.
+make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/process_repeat_usertype.cpp.o] Error 1
 make[2]: Target `CMakeFiles/ks_tests.dir/build' not remade because of errors.
 make[1]: *** [CMakeFiles/ks_tests.dir/all] Error 2
 make[1]: Target `all' not remade because of errors.
