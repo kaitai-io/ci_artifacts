@@ -6,12 +6,12 @@
   },
   "BcdUserTypeLe": {
     "status": "passed",
-    "elapsed": 0.003,
+    "elapsed": 0.002,
     "is_kst": true
   },
   "BitsByteAligned": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "BitsEnum": {
@@ -161,13 +161,49 @@
     },
     "is_kst": true
   },
+  "EnumIntRangeS": {
+    "status": "passed",
+    "elapsed": 0.001,
+    "is_kst": true
+  },
+  "EnumIntRangeU": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
   "EnumInvalid": {
     "status": "passed",
-    "elapsed": 0.0
+    "elapsed": 0.001
+  },
+  "EnumLongRangeS": {
+    "status": "failed",
+    "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": null,
+      "trace": [
+        "9223372036854776000 === -9223372036854776000\n\n      + expected - actual\n\n      -9223372036854776000\n      +-9223372036854776000\n      \nAssertionError: 9223372036854776000 === -9223372036854776000\n    at /home/travis/build/kaitai-io/ci_targets/tests/spec/javascript/test_enum_long_range_s.js:8:10\n    at /home/travis/build/kaitai-io/ci_targets/tests/helpers/javascript/testHelper.js:13:9\n    at FSReqWrap.readFileAfterClose [as oncomplete] (fs.js:439:3)"
+      ]
+    },
+    "is_kst": true
+  },
+  "EnumLongRangeU": {
+    "status": "failed",
+    "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": null,
+      "trace": [
+        "2147483647 === 4294967295\n\n      + expected - actual\n\n      -2147483647\n      +4294967295\n      \nAssertionError: 2147483647 === 4294967295\n    at /home/travis/build/kaitai-io/ci_targets/tests/spec/javascript/test_enum_long_range_u.js:9:10\n    at /home/travis/build/kaitai-io/ci_targets/tests/helpers/javascript/testHelper.js:13:9\n    at FSReqWrap.readFileAfterClose [as oncomplete] (fs.js:439:3)"
+      ]
+    },
+    "is_kst": true
   },
   "EnumNegative": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "EnumOfValueInst": {
@@ -182,37 +218,37 @@
   },
   "EnumToIClassBorder1": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "EofExceptionBytes": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "EofExceptionU4": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "EosExceptionBytes": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "EosExceptionU4": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "Expr0": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "Expr1": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "Expr2": {
@@ -222,7 +258,7 @@
   },
   "Expr3": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "ExprArray": {
@@ -256,12 +292,12 @@
   },
   "ExprIoPos": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "ExprMod": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "ExprSizeofType0": {
@@ -271,7 +307,7 @@
   },
   "ExprSizeofType1": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "ExprSizeofValue0": {
@@ -296,7 +332,7 @@
   },
   "FloatToI": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "FloatingPoints": {
@@ -311,17 +347,17 @@
   },
   "IfInstances": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "IfStruct": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "IfValues": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.002,
     "is_kst": true
   },
   "Imports0": {
@@ -331,7 +367,7 @@
   },
   "ImportsAbs": {
     "status": "passed",
-    "elapsed": 0.0
+    "elapsed": 0.001
   },
   "ImportsCircularA": {
     "status": "failed",
@@ -352,7 +388,7 @@
   },
   "IndexToParamEos": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "IndexToParamExpr": {
@@ -362,7 +398,7 @@
   },
   "IndexToParamUntil": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "InstanceIoUser": {
@@ -387,7 +423,7 @@
   },
   "Integers": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "IoLocalVar": {
@@ -397,12 +433,12 @@
   },
   "JsSignedRightShift": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "MetaTags": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "MetaXref": {
@@ -417,12 +453,12 @@
   },
   "NavParent": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "NavParent2": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "NavParent3": {
@@ -432,7 +468,7 @@
   },
   "NavParentFalse": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "NavParentFalse2": {
@@ -447,7 +483,7 @@
   },
   "NavParentSwitch": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "NavParentSwitchCast": {
@@ -457,17 +493,17 @@
   },
   "NavParentVsValueInst": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "NavRoot": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "NestedSameName": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "NestedSameName2": {
@@ -477,12 +513,12 @@
   },
   "NestedTypes": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "NestedTypes2": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "NestedTypes3": {
@@ -518,21 +554,21 @@
   },
   "ParamsCallShort": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "ParamsDef": {
     "status": "passed",
-    "elapsed": 0.0
+    "elapsed": 0.001
   },
   "ParamsEnum": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "ParamsPassUsertype": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "PositionAbs": {
@@ -542,12 +578,12 @@
   },
   "PositionInSeq": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.003,
     "is_kst": true
   },
   "PositionToEnd": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "ProcessCoerceBytes": {
@@ -562,17 +598,17 @@
   },
   "ProcessCoerceUsertype1": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "ProcessCoerceUsertype2": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "ProcessCustom": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "ProcessRepeatBytes": {
@@ -603,27 +639,27 @@
   },
   "ProcessRotate": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "ProcessToUser": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "ProcessXor4Const": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "ProcessXor4Value": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "ProcessXorConst": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "ProcessXorValue": {
@@ -638,17 +674,17 @@
   },
   "RepeatEosBit": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "RepeatEosStruct": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "RepeatEosU4": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "RepeatNStruct": {
@@ -663,17 +699,17 @@
   },
   "RepeatNStrzDouble": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.009,
     "is_kst": true
   },
   "RepeatUntilComplex": {
     "status": "passed",
-    "elapsed": 0.002,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "RepeatUntilS4": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "RepeatUntilSized": {
@@ -683,12 +719,12 @@
   },
   "StrEncodings": {
     "status": "passed",
-    "elapsed": 0.03,
+    "elapsed": 0.027,
     "is_kst": true
   },
   "StrEncodingsDefault": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "StrEos": {
@@ -712,7 +748,7 @@
   },
   "StrPadTermEmpty": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "SwitchBytearray": {
@@ -722,11 +758,11 @@
   },
   "SwitchCast": {
     "status": "passed",
-    "elapsed": 0.0
+    "elapsed": 0.001
   },
   "SwitchIntegers": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "SwitchIntegers2": {
@@ -741,7 +777,7 @@
   },
   "SwitchManualInt": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "SwitchManualIntElse": {
@@ -755,26 +791,26 @@
   },
   "SwitchManualIntSizeElse": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "SwitchManualIntSizeEos": {
     "status": "passed",
-    "elapsed": 0.0
+    "elapsed": 0.001
   },
   "SwitchManualStr": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "SwitchManualStrElse": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "SwitchMultiBoolOps": {
     "status": "passed",
-    "elapsed": 0.0
+    "elapsed": 0.001
   },
   "SwitchRepeatExpr": {
     "status": "passed",
@@ -782,7 +818,7 @@
   },
   "TermBytes": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "TermStrz": {
@@ -792,7 +828,7 @@
   },
   "TsPacketHeader": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "TypeIntUnaryOp": {
@@ -801,7 +837,7 @@
   },
   "TypeTernary": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "TypeTernaryOpaque": {
@@ -810,12 +846,12 @@
   },
   "UserType": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "ValidFailContents": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "ValidFailEqBytes": {
@@ -825,22 +861,22 @@
   },
   "ValidFailEqInt": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "ValidFailInst": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "ValidNotParsedIf": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "ValidShort": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "ValidSwitch": {
@@ -855,13 +891,13 @@
   },
   "$meta": {
     "lang": "javascript",
-    "timestamp": "2019-12-09T19:41:15Z",
+    "timestamp": "2019-12-10T15:35:40Z",
     "ci": {
       "ci": "travis",
-      "build_id": "622835546",
-      "job_id": "622835556",
-      "job_number": "252.10",
-      "url": "https://travis-ci.org/kaitai-io/ci_targets/jobs/622835556"
+      "build_id": "623232237",
+      "job_id": "623232247",
+      "job_number": "253.10",
+      "url": "https://travis-ci.org/kaitai-io/ci_targets/jobs/623232247"
     }
   }
 }
