@@ -1,9 +1,9 @@
 
 Test module "C++/STL test units for Kaitai Struct" has failed with:
-  161 test cases out of 162 passed
-  1 test case out of 162 failed
-  726 assertions out of 727 passed
-  1 assertion out of 727 failed
+  164 test cases out of 166 passed
+  2 test cases out of 166 failed
+  740 assertions out of 743 passed
+  3 assertions out of 743 failed
 
   Test case "test_bcd_user_type_be" has passed with:
     6 assertions out of 6 passed
@@ -85,8 +85,21 @@ Test module "C++/STL test units for Kaitai Struct" has failed with:
   Test case "test_enum_if" has passed with:
     7 assertions out of 7 passed
 
+  Test case "test_enum_int_range_s" has passed with:
+    3 assertions out of 3 passed
+
+  Test case "test_enum_int_range_u" has passed with:
+    2 assertions out of 2 passed
+
   Test case "test_enum_invalid" has passed with:
     2 assertions out of 2 passed
+
+  Test case "test_enum_long_range_s" has passed with:
+    7 assertions out of 7 passed
+
+  Test case "test_enum_long_range_u" has failed with:
+    2 assertions out of 4 passed
+    2 assertions out of 4 failed
 
   Test case "test_enum_negative" has passed with:
     2 assertions out of 2 passed
@@ -484,78 +497,78 @@ Test module "C++/STL test units for Kaitai Struct" has failed with:
 
 Detected memory leaks!
 Dumping objects ->
-{32545} normal block at 0x000001667F0C1A20, 40 bytes long.
- Data: <x       p   L   > 78 B5 9B DD F6 7F 00 00 70 C8 AF DB 4C 00 00 00 
-{32532} normal block at 0x000001667F0C2AC0, 40 bytes long.
- Data: <        p   L   > A8 B5 9B DD F6 7F 00 00 70 C8 AF DB 4C 00 00 00 
-{32518} normal block at 0x000001667F0C23C0, 40 bytes long.
- Data: <        p   L   > A8 B5 9B DD F6 7F 00 00 70 C8 AF DB 4C 00 00 00 
-{32498} normal block at 0x000001667F129430, 16 bytes long.
- Data: < 2  f           > 90 32 0F 7F 66 01 00 00 00 00 00 00 00 00 00 00 
-{32497} normal block at 0x000001667F0F3280, 72 bytes long.
- Data: <        p   L   > 90 B5 9B DD F6 7F 00 00 70 C8 AF DB 4C 00 00 00 
-{31596} normal block at 0x000001667F12A5B0, 16 bytes long.
- Data: <p:  f           > 70 3A 0F 7F 66 01 00 00 00 00 00 00 00 00 00 00 
-{31595} normal block at 0x000001667F0F3A60, 72 bytes long.
- Data: <        P   f   > 98 94 9B DD F6 7F 00 00 50 0C 0A 7F 66 01 00 00 
-{31584} normal block at 0x000001667F12ABA0, 16 bytes long.
- Data: < @  f           > A0 40 0F 7F 66 01 00 00 00 00 00 00 00 00 00 00 
-{31583} normal block at 0x000001667F0F4090, 72 bytes long.
- Data: <        `   f   > 98 94 9B DD F6 7F 00 00 60 D9 09 7F 66 01 00 00 
-{31572} normal block at 0x000001667F129D40, 16 bytes long.
- Data: <X   f           > 58 93 05 7F 66 01 00 00 00 00 00 00 00 00 00 00 
-{31571} normal block at 0x000001667F129CA0, 16 bytes long.
- Data: <0   f           > 30 93 05 7F 66 01 00 00 00 00 00 00 00 00 00 00 
-{31570} normal block at 0x000001667F129BB0, 16 bytes long.
- Data: <    f           > 80 93 05 7F 66 01 00 00 00 00 00 00 00 00 00 00 
-{31569} normal block at 0x000001667F059330, 120 bytes long.
- Data: <    f   AAAA    > A0 9C 12 7F 66 01 00 00 41 41 41 41 00 20 20 20 
-{31542} normal block at 0x000001667F129B60, 16 bytes long.
- Data: < D  f           > 90 44 10 7F 66 01 00 00 00 00 00 00 00 00 00 00 
-{31541} normal block at 0x000001667F104490, 32 bytes long.
- Data: <`   f   0   f   > 60 9B 12 7F 66 01 00 00 30 93 05 7F 66 01 00 00 
-{31540} normal block at 0x000001667F0C1DA0, 40 bytes long.
- Data: <            f   > 80 94 9B DD F6 7F 00 00 D0 D5 07 7F 66 01 00 00 
-{31517} normal block at 0x000001667F129520, 16 bytes long.
- Data: < "  f           > 08 22 0A 7F 66 01 00 00 00 00 00 00 00 00 00 00 
-{31516} normal block at 0x000001667F129E80, 16 bytes long.
- Data: < !  f           > E0 21 0A 7F 66 01 00 00 00 00 00 00 00 00 00 00 
-{31515} normal block at 0x000001667F0A21D0, 112 bytes long.
- Data: <h           f   > 68 94 9B DD F6 7F 00 00 C0 88 0A 7F 66 01 00 00 
-{30979} normal block at 0x000001667F0C1400, 40 bytes long.
- Data: < ~          L   > E8 7E 9B DD F6 7F 00 00 10 CA AF DB 4C 00 00 00 
-{30976} normal block at 0x000001667F0C1BE0, 40 bytes long.
- Data: <            L   > 18 7F 9B DD F6 7F 00 00 10 CA AF DB 4C 00 00 00 
-{30973} normal block at 0x000001667F0C2190, 40 bytes long.
- Data: <            L   > 18 7F 9B DD F6 7F 00 00 10 CA AF DB 4C 00 00 00 
-{30964} normal block at 0x000001667F129250, 16 bytes long.
- Data: < 3  f           > B0 33 0F 7F 66 01 00 00 00 00 00 00 00 00 00 00 
-{30963} normal block at 0x000001667F0F33A0, 72 bytes long.
- Data: <            L   > 00 7F 9B DD F6 7F 00 00 10 CA AF DB 4C 00 00 00 
-{14989} normal block at 0x000001667F129890, 6 bytes long.
+{33167} normal block at 0x0000014FCF159790, 40 bytes long.
+ Data: < ZVf    `   .   > F8 5A 56 66 F6 7F 00 00 60 C8 FF B5 2E 00 00 00 
+{33154} normal block at 0x0000014FCF159720, 40 bytes long.
+ Data: <([Vf    `   .   > 28 5B 56 66 F6 7F 00 00 60 C8 FF B5 2E 00 00 00 
+{33140} normal block at 0x0000014FCF159640, 40 bytes long.
+ Data: <([Vf    `   .   > 28 5B 56 66 F6 7F 00 00 60 C8 FF B5 2E 00 00 00 
+{33120} normal block at 0x0000014FCF1B4E10, 16 bytes long.
+ Data: <    O           > 10 90 18 CF 4F 01 00 00 00 00 00 00 00 00 00 00 
+{33119} normal block at 0x0000014FCF189000, 72 bytes long.
+ Data: < [Vf    `   .   > 10 5B 56 66 F6 7F 00 00 60 C8 FF B5 2E 00 00 00 
+{32218} normal block at 0x0000014FCF1B5CC0, 16 bytes long.
+ Data: <    O           > C0 A3 18 CF 4F 01 00 00 00 00 00 00 00 00 00 00 
+{32217} normal block at 0x0000014FCF18A3B0, 72 bytes long.
+ Data: < :Vf        O   > 18 3A 56 66 F6 7F 00 00 C0 B0 10 CF 4F 01 00 00 
+{32206} normal block at 0x0000014FCF1B6120, 16 bytes long.
+ Data: <    O           > 00 A6 18 CF 4F 01 00 00 00 00 00 00 00 00 00 00 
+{32205} normal block at 0x0000014FCF18A5F0, 72 bytes long.
+ Data: < :Vf        O   > 18 3A 56 66 F6 7F 00 00 A0 D1 12 CF 4F 01 00 00 
+{32194} normal block at 0x0000014FCF1B4190, 16 bytes long.
+ Data: <x   O           > 78 A6 15 CF 4F 01 00 00 00 00 00 00 00 00 00 00 
+{32193} normal block at 0x0000014FCF1B54F0, 16 bytes long.
+ Data: <P   O           > 50 A6 15 CF 4F 01 00 00 00 00 00 00 00 00 00 00 
+{32192} normal block at 0x0000014FCF1B54A0, 16 bytes long.
+ Data: <    O           > A0 A6 15 CF 4F 01 00 00 00 00 00 00 00 00 00 00 
+{32191} normal block at 0x0000014FCF15A650, 120 bytes long.
+ Data: < T  O   AAAA    > F0 54 1B CF 4F 01 00 00 41 41 41 41 00 20 20 20 
+{32164} normal block at 0x0000014FCF1B5090, 16 bytes long.
+ Data: <0   O           > 30 8C 19 CF 4F 01 00 00 00 00 00 00 00 00 00 00 
+{32163} normal block at 0x0000014FCF198C30, 32 bytes long.
+ Data: < P  O   P   O   > 90 50 1B CF 4F 01 00 00 50 A6 15 CF 4F 01 00 00 
+{32162} normal block at 0x0000014FCF1595D0, 40 bytes long.
+ Data: < :Vf    `   O   > 00 3A 56 66 F6 7F 00 00 60 C4 12 CF 4F 01 00 00 
+{32139} normal block at 0x0000014FCF1B4500, 16 bytes long.
+ Data: <    O           > D8 C2 18 CF 4F 01 00 00 00 00 00 00 00 00 00 00 
+{32138} normal block at 0x0000014FCF1B4410, 16 bytes long.
+ Data: <    O           > B0 C2 18 CF 4F 01 00 00 00 00 00 00 00 00 00 00 
+{32137} normal block at 0x0000014FCF18C2A0, 112 bytes long.
+ Data: < 9Vf     e  O   > E8 39 56 66 F6 7F 00 00 00 65 13 CF 4F 01 00 00 
+{31601} normal block at 0x0000014FCF158990, 40 bytes long.
+ Data: <h$Vf        .   > 68 24 56 66 F6 7F 00 00 00 CA FF B5 2E 00 00 00 
+{31598} normal block at 0x0000014FCF1584C0, 40 bytes long.
+ Data: < $Vf        .   > 98 24 56 66 F6 7F 00 00 00 CA FF B5 2E 00 00 00 
+{31595} normal block at 0x0000014FCF158D80, 40 bytes long.
+ Data: < $Vf        .   > 98 24 56 66 F6 7F 00 00 00 CA FF B5 2E 00 00 00 
+{31586} normal block at 0x0000014FCF1B4DC0, 16 bytes long.
+ Data: <p   O           > 70 A5 18 CF 4F 01 00 00 00 00 00 00 00 00 00 00 
+{31585} normal block at 0x0000014FCF18A560, 72 bytes long.
+ Data: < $Vf        .   > 80 24 56 66 F6 7F 00 00 00 CA FF B5 2E 00 00 00 
+{15611} normal block at 0x0000014FCF1B4EB0, 6 bytes long.
  Data: <foo|ba> 66 6F 6F 7C 62 61 
-{14986} normal block at 0x000001667F0A29B0, 264 bytes long.
- Data: < )  f    @      > B8 29 0A 7F 66 01 00 00 10 40 93 DD F6 7F 00 00 
-{14886} normal block at 0x000001667F1291B0, 6 bytes long.
+{15608} normal block at 0x0000014FCF134060, 264 bytes long.
+ Data: <h@  O   p Mf    > 68 40 13 CF 4F 01 00 00 70 C0 4D 66 F6 7F 00 00 
+{15508} normal block at 0x0000014FCF1B4B90, 6 bytes long.
  Data: <foo|ba> 66 6F 6F 7C 62 61 
-{14883} normal block at 0x000001667F0BF0E0, 264 bytes long.
- Data: <    f    @      > E8 F0 0B 7F 66 01 00 00 10 40 93 DD F6 7F 00 00 
-{12178} normal block at 0x000001667F128F80, 16 bytes long.
- Data: <    f   `   f   > C0 FE 09 7F 66 01 00 00 60 FB 09 7F 66 01 00 00 
-{12174} normal block at 0x000001667F0C18D0, 48 bytes long.
- Data: <            L   > C8 C5 99 DD F6 7F 00 00 20 CE AF DB 4C 00 00 00 
-{12170} normal block at 0x000001667F129340, 16 bytes long.
- Data: <p   f           > 70 FB 09 7F 66 01 00 00 00 00 00 00 00 00 00 00 
-{12169} normal block at 0x000001667F09FB60, 80 bytes long.
- Data: <            L   > E0 C5 99 DD F6 7F 00 00 20 CE AF DB 4C 00 00 00 
-{12165} normal block at 0x000001667F0C2120, 48 bytes long.
- Data: <            L   > C8 C5 99 DD F6 7F 00 00 20 CE AF DB 4C 00 00 00 
-{12161} normal block at 0x000001667F129390, 16 bytes long.
- Data: <    f           > D0 FE 09 7F 66 01 00 00 00 00 00 00 00 00 00 00 
-{12160} normal block at 0x000001667F09FEC0, 80 bytes long.
- Data: <            L   > E0 C5 99 DD F6 7F 00 00 20 CE AF DB 4C 00 00 00 
-{12158} normal block at 0x000001667F129930, 16 bytes long.
- Data: <PE  f           > 50 45 10 7F 66 01 00 00 00 00 00 00 00 00 00 00 
-{12157} normal block at 0x000001667F104550, 32 bytes long.
- Data: <0   f       f   > 30 99 12 7F 66 01 00 00 80 8F 12 7F 66 01 00 00 
+{15505} normal block at 0x0000014FCF14D000, 264 bytes long.
+ Data: <    O   p Mf    > 08 D0 14 CF 4F 01 00 00 70 C0 4D 66 F6 7F 00 00 
+{12270} normal block at 0x0000014FCF1B4BE0, 16 bytes long.
+ Data: <    O       O   > 80 DD 12 CF 4F 01 00 00 00 E2 12 CF 4F 01 00 00 
+{12266} normal block at 0x0000014FCF158060, 48 bytes long.
+ Data: <(jTf        .   > 28 6A 54 66 F6 7F 00 00 10 CE FF B5 2E 00 00 00 
+{12262} normal block at 0x0000014FCF1B53B0, 16 bytes long.
+ Data: <    O           > 10 E2 12 CF 4F 01 00 00 00 00 00 00 00 00 00 00 
+{12261} normal block at 0x0000014FCF12E200, 80 bytes long.
+ Data: <@jTf        .   > 40 6A 54 66 F6 7F 00 00 10 CE FF B5 2E 00 00 00 
+{12257} normal block at 0x0000014FCF159560, 48 bytes long.
+ Data: <(jTf        .   > 28 6A 54 66 F6 7F 00 00 10 CE FF B5 2E 00 00 00 
+{12253} normal block at 0x0000014FCF1B49B0, 16 bytes long.
+ Data: <    O           > 90 DD 12 CF 4F 01 00 00 00 00 00 00 00 00 00 00 
+{12252} normal block at 0x0000014FCF12DD80, 80 bytes long.
+ Data: <@jTf        .   > 40 6A 54 66 F6 7F 00 00 10 CE FF B5 2E 00 00 00 
+{12250} normal block at 0x0000014FCF1B4C30, 16 bytes long.
+ Data: <    O           > F0 83 19 CF 4F 01 00 00 00 00 00 00 00 00 00 00 
+{12249} normal block at 0x0000014FCF1983F0, 32 bytes long.
+ Data: <0L  O    K  O   > 30 4C 1B CF 4F 01 00 00 E0 4B 1B CF 4F 01 00 00 
 Object dump complete.
