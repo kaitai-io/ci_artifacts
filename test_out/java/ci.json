@@ -16,17 +16,17 @@
   },
   "RecursiveOne": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "ProcessToUser": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "NavRoot": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.002,
     "is_kst": true
   },
   "RepeatUntilComplex": {
@@ -36,7 +36,7 @@
   },
   "SwitchManualInt": {
     "status": "passed",
-    "elapsed": 0.002,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "NavParent3": {
@@ -56,7 +56,7 @@
   },
   "SwitchIntegers": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "SwitchManualIntSizeElse": {
@@ -66,17 +66,17 @@
   },
   "UserType": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "InstanceUserArray": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "ParamsEnum": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.002,
     "is_kst": true
   },
   "DefaultEndianExprException": {
@@ -91,21 +91,21 @@
   },
   "ImportsCircularA": {
     "status": "passed",
-    "elapsed": 0.001
+    "elapsed": 0.0
   },
   "ExprSizeofType0": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "SwitchManualStr": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.002,
     "is_kst": true
   },
   "ExprBytesOps": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "ZlibWithHeader78": {
@@ -120,7 +120,7 @@
   },
   "TypeIntUnaryOp": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "StrPadTermEmpty": {
@@ -130,17 +130,17 @@
   },
   "ExprCalcArrayOps": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "EosExceptionBytes": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "ValidFailEqInt": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "ParamsDef": {
@@ -153,12 +153,12 @@
   },
   "EnumNegative": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "TermStrz": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "SwitchManualStrElse": {
@@ -183,7 +183,7 @@
   },
   "StrEncodings": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "SwitchManualEnumInvalid": {
@@ -200,18 +200,33 @@
     "elapsed": 0.001,
     "is_kst": true
   },
+  "EnumLongRangeU": {
+    "status": "failed",
+    "elapsed": 0.001,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": "expected [INT_MAX] but found [null]",
+      "trace": [
+        "\n      ",
+        "java.lang.AssertionError: expected [INT_MAX] but found [null]\n\tat org.testng.Assert.fail(Assert.java:94)\n\tat org.testng.Assert.failNotEquals(Assert.java:513)\n\tat org.testng.Assert.assertEqualsImpl(Assert.java:130)\n\tat org.testng.Assert.assertEquals(Assert.java:116)\n\tat org.testng.Assert.assertEquals(Assert.java:179)\n\tat io.kaitai.struct.spec.TestEnumLongRangeU.testEnumLongRangeU(TestEnumLongRangeU.java:15)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:606)\n\tat org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)\n\tat org.testng.internal.Invoker.invokeMethod(Invoker.java:643)\n\tat org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)\n\tat org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)\n\tat org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)\n\tat org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)\n\tat org.testng.TestRunner.privateRun(TestRunner.java:782)\n\tat org.testng.TestRunner.run(TestRunner.java:632)\n\tat org.testng.SuiteRunner.runTest(SuiteRunner.java:366)\n\tat org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)\n\tat org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)\n\tat org.testng.SuiteRunner.run(SuiteRunner.java:268)\n\tat org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)\n\tat org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)\n\tat org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)\n\tat org.testng.TestNG.runSuitesLocally(TestNG.java:1169)\n\tat org.testng.TestNG.run(TestNG.java:1064)\n\tat org.testng.TestNG.privateMain(TestNG.java:1385)\n\tat org.testng.TestNG.main(TestNG.java:1354)\n",
+        "\n    "
+      ]
+    },
+    "is_kst": true
+  },
   "DebugArrayUser": {
     "status": "passed",
     "elapsed": 0.001
   },
   "CastToImported": {
     "status": "passed",
-    "elapsed": 0.012,
+    "elapsed": 0.007,
     "is_kst": true
   },
   "ProcessXor4Const": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "ImportsAbsAbs": {
@@ -225,7 +240,7 @@
   },
   "ValidNotParsedIf": {
     "status": "passed",
-    "elapsed": 0.058,
+    "elapsed": 0.054,
     "is_kst": true
   },
   "PositionToEnd": {
@@ -235,7 +250,7 @@
   },
   "JsSignedRightShift": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "InstanceStd": {
@@ -249,7 +264,7 @@
   },
   "ProcessXorValue": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "HelloWorld": {
@@ -259,7 +274,7 @@
   },
   "ProcessCustom": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.002,
     "is_kst": true
   },
   "Integers": {
@@ -274,12 +289,12 @@
   },
   "RepeatUntilSized": {
     "status": "passed",
-    "elapsed": 0.002,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "ValidFailInst": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "MetaTags": {
@@ -294,7 +309,7 @@
   },
   "SwitchIntegers2": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "EnumImport": {
@@ -304,7 +319,7 @@
   },
   "Expr1": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "DefaultEndianMod": {
@@ -319,7 +334,7 @@
   },
   "EnumToI": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "ParamsPassUsertype": {
@@ -329,12 +344,27 @@
   },
   "ProcessCoerceUsertype2": {
     "status": "passed",
-    "elapsed": 0.002,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "IndexSizes": {
     "status": "passed",
     "elapsed": 0.001,
+    "is_kst": true
+  },
+  "ProcessRepeatUsertype": {
+    "status": "failed",
+    "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": "io/kaitai/struct/testformats/ProcessRepeatUsertype",
+      "trace": [
+        "\n      ",
+        "java.lang.NoClassDefFoundError: io/kaitai/struct/testformats/ProcessRepeatUsertype\n\tat io.kaitai.struct.spec.TestProcessRepeatUsertype.testProcessRepeatUsertype(TestProcessRepeatUsertype.java:12)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:606)\n\tat org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)\n\tat org.testng.internal.Invoker.invokeMethod(Invoker.java:643)\n\tat org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)\n\tat org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)\n\tat org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)\n\tat org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)\n\tat org.testng.TestRunner.privateRun(TestRunner.java:782)\n\tat org.testng.TestRunner.run(TestRunner.java:632)\n\tat org.testng.SuiteRunner.runTest(SuiteRunner.java:366)\n\tat org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)\n\tat org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)\n\tat org.testng.SuiteRunner.run(SuiteRunner.java:268)\n\tat org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)\n\tat org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)\n\tat org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)\n\tat org.testng.TestNG.runSuitesLocally(TestNG.java:1169)\n\tat org.testng.TestNG.run(TestNG.java:1064)\n\tat org.testng.TestNG.privateMain(TestNG.java:1385)\n\tat org.testng.TestNG.main(TestNG.java:1354)\nCaused by: java.lang.ClassNotFoundException: io.kaitai.struct.testformats.ProcessRepeatUsertype\n\tat java.net.URLClassLoader$1.run(URLClassLoader.java:359)\n\tat java.net.URLClassLoader$1.run(URLClassLoader.java:348)\n\tat java.security.AccessController.doPrivileged(Native Method)\n\tat java.net.URLClassLoader.findClass(URLClassLoader.java:347)\n\tat java.lang.ClassLoader.loadClass(ClassLoader.java:425)\n\tat sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:312)\n\tat java.lang.ClassLoader.loadClass(ClassLoader.java:358)\n\t... 24 more\n",
+        "\n    "
+      ]
+    },
     "is_kst": true
   },
   "MetaXref": {
@@ -369,17 +399,17 @@
   },
   "InstanceIoUser": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.002,
     "is_kst": true
   },
   "ValidSwitch": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "NavParent2": {
     "status": "passed",
-    "elapsed": 0.002,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "ProcessCoerceUsertype1": {
@@ -389,12 +419,12 @@
   },
   "NavParentFalse": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.002,
     "is_kst": true
   },
   "SwitchManualIntSizeEos": {
     "status": "passed",
-    "elapsed": 0.002
+    "elapsed": 0.001
   },
   "Expr2": {
     "status": "passed",
@@ -403,7 +433,7 @@
   },
   "ImportsRel1": {
     "status": "passed",
-    "elapsed": 0.001
+    "elapsed": 0.002
   },
   "NestedSameName": {
     "status": "passed",
@@ -426,12 +456,12 @@
   },
   "NavParentFalse2": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "DefaultEndianExprIsBe": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.002,
     "is_kst": true
   },
   "EnumDeep": {
@@ -460,7 +490,7 @@
   },
   "FixedContents": {
     "status": "passed",
-    "elapsed": 0.01,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "NavParentOverride": {
@@ -470,21 +500,21 @@
   },
   "IndexToParamUntil": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "OpaqueExternalType": {
     "status": "passed",
-    "elapsed": 0.001
+    "elapsed": 0.0
   },
   "ProcessRotate": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "DefaultEndianExprIsLe": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.002,
     "is_kst": true
   },
   "ImportsAbsRel": {
@@ -498,12 +528,12 @@
   },
   "IfStruct": {
     "status": "passed",
-    "elapsed": 0.002,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "OpaqueExternalType02Parent": {
     "status": "passed",
-    "elapsed": 0.001
+    "elapsed": 0.002
   },
   "EnumToIClassBorder1": {
     "status": "passed",
@@ -517,7 +547,7 @@
   },
   "BitsByteAligned": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "Enum1": {
@@ -532,7 +562,7 @@
   },
   "ExprIoEof": {
     "status": "passed",
-    "elapsed": 0.001
+    "elapsed": 0.0
   },
   "Docstrings": {
     "status": "passed",
@@ -556,16 +586,16 @@
   },
   "SwitchManualEnum": {
     "status": "passed",
-    "elapsed": 0.003,
+    "elapsed": 0.002,
     "is_kst": true
   },
   "DebugEnumName": {
     "status": "passed",
-    "elapsed": 0.001
+    "elapsed": 0.002
   },
   "StrEncodingsDefault": {
     "status": "passed",
-    "elapsed": 0.035,
+    "elapsed": 0.023,
     "is_kst": true
   },
   "ProcessXor4Value": {
@@ -589,12 +619,12 @@
   },
   "IfInstances": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "NavParent": {
     "status": "passed",
-    "elapsed": 0.002,
+    "elapsed": 0.01,
     "is_kst": true
   },
   "ProcessCoerceBytes": {
@@ -609,7 +639,22 @@
   },
   "NavParentSwitchCast": {
     "status": "passed",
-    "elapsed": 0.002,
+    "elapsed": 0.001,
+    "is_kst": true
+  },
+  "ProcessRepeatBytes": {
+    "status": "failed",
+    "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": "io/kaitai/struct/testformats/ProcessRepeatBytes",
+      "trace": [
+        "\n      ",
+        "java.lang.NoClassDefFoundError: io/kaitai/struct/testformats/ProcessRepeatBytes\n\tat io.kaitai.struct.spec.TestProcessRepeatBytes.testProcessRepeatBytes(TestProcessRepeatBytes.java:12)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:606)\n\tat org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)\n\tat org.testng.internal.Invoker.invokeMethod(Invoker.java:643)\n\tat org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)\n\tat org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)\n\tat org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)\n\tat org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)\n\tat org.testng.TestRunner.privateRun(TestRunner.java:782)\n\tat org.testng.TestRunner.run(TestRunner.java:632)\n\tat org.testng.SuiteRunner.runTest(SuiteRunner.java:366)\n\tat org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)\n\tat org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)\n\tat org.testng.SuiteRunner.run(SuiteRunner.java:268)\n\tat org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)\n\tat org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)\n\tat org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)\n\tat org.testng.TestNG.runSuitesLocally(TestNG.java:1169)\n\tat org.testng.TestNG.run(TestNG.java:1064)\n\tat org.testng.TestNG.privateMain(TestNG.java:1385)\n\tat org.testng.TestNG.main(TestNG.java:1354)\nCaused by: java.lang.ClassNotFoundException: io.kaitai.struct.testformats.ProcessRepeatBytes\n\tat java.net.URLClassLoader$1.run(URLClassLoader.java:359)\n\tat java.net.URLClassLoader$1.run(URLClassLoader.java:348)\n\tat java.security.AccessController.doPrivileged(Native Method)\n\tat java.net.URLClassLoader.findClass(URLClassLoader.java:347)\n\tat java.lang.ClassLoader.loadClass(ClassLoader.java:425)\n\tat sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:312)\n\tat java.lang.ClassLoader.loadClass(ClassLoader.java:358)\n\t... 24 more\n",
+        "\n    "
+      ]
+    },
     "is_kst": true
   },
   "RepeatEosU4": {
@@ -632,21 +677,21 @@
   },
   "ExprEnum": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "EnumForUnknownId": {
     "status": "passed",
-    "elapsed": 0.001
+    "elapsed": 0.0
   },
   "FloatingPoints": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "DefaultBigEndian": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "EnumOfValueInst": {
@@ -665,16 +710,16 @@
   },
   "EnumInvalid": {
     "status": "passed",
-    "elapsed": 0.001
+    "elapsed": 0.016
   },
   "ExprSizeofValue0": {
     "status": "passed",
-    "elapsed": 0.008,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "RepeatEosStruct": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "RepeatNStruct": {
@@ -694,7 +739,7 @@
   },
   "IfValues": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.012,
     "is_kst": true
   },
   "EnumIntRangeS": {
@@ -704,26 +749,36 @@
   },
   "StrPadTerm": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "InstanceStdArray": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "ExprArray": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
+    "is_kst": true
+  },
+  "EnumIntRangeU": {
+    "status": "passed",
+    "elapsed": 0.001,
     "is_kst": true
   },
   "StrLiterals": {
     "status": "passed",
-    "elapsed": 0.001
+    "elapsed": 0.0
+  },
+  "EnumLongRangeS": {
+    "status": "passed",
+    "elapsed": 0.001,
+    "is_kst": true
   },
   "Expr0": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "ValidShort": {
@@ -733,12 +788,12 @@
   },
   "BitsEnum": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "Expr3": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "Imports0": {
@@ -757,7 +812,7 @@
   },
   "EofExceptionBytes": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "IoLocalVar": {
@@ -776,7 +831,7 @@
   },
   "TsPacketHeader": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "BufferedStruct": {
@@ -790,7 +845,7 @@
   },
   "ValidFailEqBytes": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "SwitchMultiBoolOps": {
@@ -799,7 +854,7 @@
   },
   "DefaultEndianExprInherited": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.002,
     "is_kst": true
   },
   "OptionalId": {
@@ -818,7 +873,7 @@
   },
   "DocstringsDocref": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "ParamsCallShort": {
@@ -828,43 +883,18 @@
   },
   "ProcessXorConst": {
     "status": "passed",
-    "elapsed": 0.0,
-    "is_kst": true
-  },
-  "EnumLongRangeS": {
-    "status": "spec_build_failed",
-    "elapsed": 0,
-    "is_kst": true
-  },
-  "EnumIntRangeU": {
-    "status": "spec_build_failed",
-    "elapsed": 0,
-    "is_kst": true
-  },
-  "EnumLongRangeU": {
-    "status": "spec_build_failed",
-    "elapsed": 0,
-    "is_kst": true
-  },
-  "ProcessRepeatUsertype": {
-    "status": "spec_build_failed",
-    "elapsed": 0,
-    "is_kst": true
-  },
-  "ProcessRepeatBytes": {
-    "status": "spec_build_failed",
-    "elapsed": 0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "$meta": {
     "lang": "java",
-    "timestamp": "2019-12-10T15:33:49Z",
+    "timestamp": "2019-12-10T21:32:55Z",
     "ci": {
       "ci": "travis",
-      "build_id": "623232237",
-      "job_id": "623232244",
-      "job_number": "253.7",
-      "url": "https://travis-ci.org/kaitai-io/ci_targets/jobs/623232244"
+      "build_id": "623388051",
+      "job_id": "623388058",
+      "job_number": "254.7",
+      "url": "https://travis-ci.org/kaitai-io/ci_targets/jobs/623388058"
     }
   }
 }
