@@ -1,3 +1,23 @@
+spec/java/src/io/kaitai/struct/spec/TestValidFailRangeInt.java:11: error: cannot find symbol
+    @Test(expectedExceptions = KaitaiStream.ValidationGreaterThanError.class)
+                                           ^
+  symbol:   class ValidationGreaterThanError
+  location: class KaitaiStream
+spec/java/src/io/kaitai/struct/spec/TestValidFailMaxInt.java:11: error: cannot find symbol
+    @Test(expectedExceptions = KaitaiStream.ValidationGreaterThanError.class)
+                                           ^
+  symbol:   class ValidationGreaterThanError
+  location: class KaitaiStream
+spec/java/src/io/kaitai/struct/spec/TestValidFailMinInt.java:11: error: cannot find symbol
+    @Test(expectedExceptions = KaitaiStream.ValidationLessThanError.class)
+                                           ^
+  symbol:   class ValidationLessThanError
+  location: class KaitaiStream
+spec/java/src/io/kaitai/struct/spec/TestValidFailAnyofInt.java:11: error: cannot find symbol
+    @Test(expectedExceptions = KaitaiStream.ValidationNotAnyOfError.class)
+                                           ^
+  symbol:   class ValidationNotAnyOfError
+  location: class KaitaiStream
 compiled/java/src/io/kaitai/struct/testformats/ValidFailMinInt.java:32: error: cannot find symbol
             throw new KaitaiStream.ValidationLessThanError(123, foo(), _io(), "/seq/0");
                                   ^
@@ -13,10 +33,15 @@ compiled/java/src/io/kaitai/struct/testformats/ValidFailRangeInt.java:35: error:
                                   ^
   symbol:   class ValidationGreaterThanError
   location: class KaitaiStream
-compiled/java/src/io/kaitai/struct/testformats/ValidFailMaxInt.java:32: error: cannot find symbol
-            throw new KaitaiStream.ValidationLessThanError(12, foo(), _io(), "/seq/0");
+compiled/java/src/io/kaitai/struct/testformats/ValidFailAnyofInt.java:32: error: cannot find symbol
+            throw new KaitaiStream.ValidationNotAnyOfError(foo(), _io(), "/seq/0");
                                   ^
-  symbol:   class ValidationLessThanError
+  symbol:   class ValidationNotAnyOfError
+  location: class KaitaiStream
+compiled/java/src/io/kaitai/struct/testformats/ValidFailMaxInt.java:32: error: cannot find symbol
+            throw new KaitaiStream.ValidationGreaterThanError(12, foo(), _io(), "/seq/0");
+                                  ^
+  symbol:   class ValidationGreaterThanError
   location: class KaitaiStream
 compiled/java/src/io/kaitai/struct/testformats/ProcessRepeatUsertype.java:35: error: no suitable method found for processXor(ArrayList<byte[]>,int)
             this._raw_blocks = KaitaiStream.processXor(this._raw__raw_blocks, 158);
@@ -32,4 +57,4 @@ compiled/java/src/io/kaitai/struct/testformats/ProcessRepeatBytes.java:34: error
       (actual argument ArrayList<byte[]> cannot be converted to byte[] by method invocation conversion)
     method KaitaiStream.processXor(byte[],int) is not applicable
       (actual argument ArrayList<byte[]> cannot be converted to byte[] by method invocation conversion)
-6 errors
+11 errors
