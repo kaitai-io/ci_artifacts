@@ -1,14 +1,15 @@
 Scanning dependencies of target ks_tests
 [  0%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/runtime/cpp_stl/kaitai/kaitaistream.cpp.o
 [  0%] Building CXX object CMakeFiles/ks_tests.dir/prereq/my_custom_fx.cpp.o
+[  0%] Building CXX object CMakeFiles/ks_tests.dir/test_valid_fail_max_int.cpp.o
 [  1%] Building CXX object CMakeFiles/ks_tests.dir/prereq/custom_fx.cpp.o
 [  1%] Building CXX object CMakeFiles/ks_tests.dir/test_valid_fail_eq_bytes.cpp.o
-[  1%] Building CXX object CMakeFiles/ks_tests.dir/test_valid_fail_max_int.cpp.o
 [  2%] Building CXX object CMakeFiles/ks_tests.dir/test_cast_nested.cpp.o
 [  2%] Building CXX object CMakeFiles/ks_tests.dir/test_imports_circular_a.cpp.o
 [  2%] Building CXX object CMakeFiles/ks_tests.dir/test_enum_long_range_s.cpp.o
 [  3%] Building CXX object CMakeFiles/ks_tests.dir/test_imports_rel_1.cpp.o
 [  3%] Building CXX object CMakeFiles/ks_tests.dir/test_process_coerce_usertype1.cpp.o
+[  3%] Building CXX object CMakeFiles/ks_tests.dir/test_expr_sizeof_type_1.cpp.o
 In file included from /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_enum_long_range_s.cpp:4:0:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_long_range_s.h:18:31: warning: integer constant is so large that it is unsigned [enabled by default]
          CONSTANTS_LONG_MIN = -9223372036854775808,
@@ -19,7 +20,6 @@ In file included from /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl
 /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_cast_nested.cpp:4:25: fatal error: cast_nested.h: No such file or directory
  #include <cast_nested.h>
                          ^
-[  3%] Building CXX object CMakeFiles/ks_tests.dir/test_expr_sizeof_type_1.cpp.o
 compilation terminated.
 /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_process_coerce_usertype1.cpp:4:38: fatal error: process_coerce_usertype1.h: No such file or directory
  #include <process_coerce_usertype1.h>
@@ -160,12 +160,12 @@ make[2]: *** [CMakeFiles/ks_tests.dir/test_default_endian_expr_exception.cpp.o] 
 [  8%] Building CXX object CMakeFiles/ks_tests.dir/test_enum_import.cpp.o
 [  8%] Building CXX object CMakeFiles/ks_tests.dir/test_index_to_param_eos.cpp.o
 [  9%] Building CXX object CMakeFiles/ks_tests.dir/test_hello_world.cpp.o
-make[2]: *** [CMakeFiles/ks_tests.dir/test_bcd_user_type_be.cpp.o] Error 1
 /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_repeat_until_complex.cpp:4:34: fatal error: repeat_until_complex.h: No such file or directory
  #include <repeat_until_complex.h>
                                   ^
-[  9%] Building CXX object CMakeFiles/ks_tests.dir/test_fixed_struct.cpp.o
 compilation terminated.
+make[2]: *** [CMakeFiles/ks_tests.dir/test_bcd_user_type_be.cpp.o] Error 1
+[  9%] Building CXX object CMakeFiles/ks_tests.dir/test_fixed_struct.cpp.o
 /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_index_to_param_eos.cpp:4:32: fatal error: index_to_param_eos.h: No such file or directory
  #include <index_to_param_eos.h>
                                 ^
@@ -183,6 +183,8 @@ In file included from /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_import.h:33:5: error: ‘enum_deep_t’ does not name a type
      enum_deep_t::container1_t::container2_t::animal_t pet_2() const { return m_pet_2; }
      ^
+make[2]: *** [CMakeFiles/ks_tests.dir/test_nav_parent2.cpp.o] Error 1
+[ 10%] Building CXX object CMakeFiles/ks_tests.dir/test_type_ternary_opaque.cpp.o
 In file included from /usr/include/boost/test/unit_test.hpp:19:0,
                  from /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_enum_import.cpp:3:
 /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_enum_import.cpp: In member function ‘void test_enum_import::test_method()’:
@@ -192,14 +194,12 @@ In file included from /usr/include/boost/test/unit_test.hpp:19:0,
 /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_enum_import.cpp:18:26: error: ‘class enum_import_t’ has no member named ‘pet_2’
      BOOST_CHECK_EQUAL(r->pet_2(), enum_deep_t::container1_t::container2_t::ANIMAL_HARE);
                           ^
-make[2]: *** [CMakeFiles/ks_tests.dir/test_nav_parent2.cpp.o] Error 1
-[ 10%] Building CXX object CMakeFiles/ks_tests.dir/test_type_ternary_opaque.cpp.o
-make[2]: *** [CMakeFiles/ks_tests.dir/test_enum_import.cpp.o] Error 1
-[ 10%] Building CXX object CMakeFiles/ks_tests.dir/test_expr_enum.cpp.o
 /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_fixed_struct.cpp:3:26: fatal error: fixed_struct.h: No such file or directory
  #include <fixed_struct.h>
                           ^
 compilation terminated.
+make[2]: *** [CMakeFiles/ks_tests.dir/test_enum_import.cpp.o] Error 1
+[ 10%] Building CXX object CMakeFiles/ks_tests.dir/test_expr_enum.cpp.o
 make[2]: *** [CMakeFiles/ks_tests.dir/test_nav_root.cpp.o] Error 1
 [ 10%] Building CXX object CMakeFiles/ks_tests.dir/test_expr_1.cpp.o
 make[2]: *** [CMakeFiles/ks_tests.dir/test_buffered_struct.cpp.o] Error 1
@@ -220,6 +220,8 @@ make[2]: *** [CMakeFiles/ks_tests.dir/test_repeat_until_complex.cpp.o] Error 1
 make[2]: *** [CMakeFiles/ks_tests.dir/test_index_to_param_eos.cpp.o] Error 1
 [ 12%] Building CXX object CMakeFiles/ks_tests.dir/test_nav_parent_false2.cpp.o
 [ 13%] Building CXX object CMakeFiles/ks_tests.dir/test_default_endian_expr_is_be.cpp.o
+make[2]: *** [CMakeFiles/ks_tests.dir/test_fixed_struct.cpp.o] Error 1
+[ 13%] Building CXX object CMakeFiles/ks_tests.dir/test_process_custom.cpp.o
 /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_index_to_param_until.cpp:4:34: fatal error: index_to_param_until.h: No such file or directory
  #include <index_to_param_until.h>
                                   ^
@@ -228,15 +230,13 @@ compilation terminated.
  #include <nav_parent_override.h>
                                  ^
 compilation terminated.
-make[2]: *** [CMakeFiles/ks_tests.dir/test_fixed_struct.cpp.o] Error 1
-[ 13%] Building CXX object CMakeFiles/ks_tests.dir/test_process_custom.cpp.o
 /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_default_endian_expr_is_be.cpp:4:39: fatal error: default_endian_expr_is_be.h: No such file or directory
  #include <default_endian_expr_is_be.h>
                                        ^
 compilation terminated.
 [ 13%] Building CXX object CMakeFiles/ks_tests.dir/test_expr_bytes_cmp.cpp.o
-[ 14%] Building CXX object CMakeFiles/ks_tests.dir/test_type_ternary.cpp.o
 make[2]: *** [CMakeFiles/ks_tests.dir/test_expr_io_eof.cpp.o] Error 1
+[ 14%] Building CXX object CMakeFiles/ks_tests.dir/test_type_ternary.cpp.o
 [ 14%] Building CXX object CMakeFiles/ks_tests.dir/test_repeat_until_sized.cpp.o
 make[2]: *** [CMakeFiles/ks_tests.dir/test_process_coerce_usertype2.cpp.o] Error 1
 [ 14%] Building CXX object CMakeFiles/ks_tests.dir/test_eof_exception_u4.cpp.o
@@ -261,11 +261,11 @@ make[2]: *** [CMakeFiles/ks_tests.dir/test_default_endian_expr_is_be.cpp.o] Erro
  #include <enum_1.h>
                     ^
 compilation terminated.
+[ 17%] Building CXX object CMakeFiles/ks_tests.dir/test_enum_int_range_s.cpp.o
 /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_expr_2.cpp:4:20: fatal error: expr_2.h: No such file or directory
  #include <expr_2.h>
                     ^
 compilation terminated.
-[ 17%] Building CXX object CMakeFiles/ks_tests.dir/test_enum_int_range_s.cpp.o
 /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_switch_manual_str_else.cpp:4:36: fatal error: switch_manual_str_else.h: No such file or directory
  #include <switch_manual_str_else.h>
                                     ^
@@ -273,8 +273,8 @@ compilation terminated.
 [ 17%] Building CXX object CMakeFiles/ks_tests.dir/test_nested_same_name.cpp.o
 make[2]: *** [CMakeFiles/ks_tests.dir/test_type_ternary.cpp.o] Error 1
 [ 17%] Building CXX object CMakeFiles/ks_tests.dir/test_term_bytes.cpp.o
-[ 18%] Building CXX object CMakeFiles/ks_tests.dir/test_expr_array.cpp.o
 make[2]: *** [CMakeFiles/ks_tests.dir/test_repeat_until_sized.cpp.o] Error 1
+[ 18%] Building CXX object CMakeFiles/ks_tests.dir/test_expr_array.cpp.o
 [ 18%] Building CXX object CMakeFiles/ks_tests.dir/test_valid_fail_eq_int.cpp.o
 /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_nested_same_name.cpp:4:30: fatal error: nested_same_name.h: No such file or directory
  #include <nested_same_name.h>
@@ -283,49 +283,49 @@ compilation terminated.
 [ 18%] Building CXX object CMakeFiles/ks_tests.dir/test_bytes_pad_term.cpp.o
 make[2]: *** [CMakeFiles/ks_tests.dir/test_enum_1.cpp.o] Error 1
 [ 19%] Building CXX object CMakeFiles/ks_tests.dir/test_nested_types.cpp.o
-make[2]: *** [CMakeFiles/ks_tests.dir/test_expr_2.cpp.o] Error 1
 [ 19%] Building CXX object CMakeFiles/ks_tests.dir/test_enum_invalid.cpp.o
+make[2]: *** [CMakeFiles/ks_tests.dir/test_expr_2.cpp.o] Error 1
 [ 20%] Building CXX object CMakeFiles/ks_tests.dir/test_debug_array_user.cpp.o
 [ 20%] Building CXX object CMakeFiles/ks_tests.dir/test_nav_parent_vs_value_inst.cpp.o
-make[2]: *** [CMakeFiles/ks_tests.dir/test_switch_manual_str_else.cpp.o] Error 1
 [ 20%] Building CXX object CMakeFiles/ks_tests.dir/test_opaque_external_type_02_parent.cpp.o
+make[2]: *** [CMakeFiles/ks_tests.dir/test_switch_manual_str_else.cpp.o] Error 1
 [ 21%] Building CXX object CMakeFiles/ks_tests.dir/test_imports0.cpp.o
 /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_nested_types.cpp:4:26: fatal error: nested_types.h: No such file or directory
  #include <nested_types.h>
                           ^
 compilation terminated.
-/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_debug_array_user.cpp:2:30: fatal error: debug_array_user.h: No such file or directory
- #include <debug_array_user.h>
-                              ^
-compilation terminated.
 /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_nav_parent_vs_value_inst.cpp:4:38: fatal error: nav_parent_vs_value_inst.h: No such file or directory
  #include <nav_parent_vs_value_inst.h>
                                       ^
 compilation terminated.
-[ 21%] Building CXX object CMakeFiles/ks_tests.dir/test_imports_abs_abs.cpp.o
+/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_debug_array_user.cpp:2:30: fatal error: debug_array_user.h: No such file or directory
+ #include <debug_array_user.h>
+                              ^
+compilation terminated.
 /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_opaque_external_type_02_parent.cpp:3:44: fatal error: opaque_external_type_02_parent.h: No such file or directory
  #include <opaque_external_type_02_parent.h>
                                             ^
 compilation terminated.
+[ 21%] Building CXX object CMakeFiles/ks_tests.dir/test_imports_abs_abs.cpp.o
 make[2]: *** [CMakeFiles/ks_tests.dir/test_nested_same_name.cpp.o] Error 1
 [ 21%] Building CXX object CMakeFiles/ks_tests.dir/test_enum_for_unknown_id.cpp.o
 [ 22%] Building CXX object CMakeFiles/ks_tests.dir/test_expr_bytes_ops.cpp.o
 [ 22%] Building CXX object CMakeFiles/ks_tests.dir/test_instance_std_array.cpp.o
-make[2]: *** [CMakeFiles/ks_tests.dir/test_nested_types.cpp.o] Error 1
 [ 22%] Building CXX object CMakeFiles/ks_tests.dir/test_switch_integers.cpp.o
+make[2]: *** [CMakeFiles/ks_tests.dir/test_nested_types.cpp.o] Error 1
 [ 23%] Building CXX object CMakeFiles/ks_tests.dir/test_str_literals2.cpp.o
 [ 23%] Building CXX object CMakeFiles/ks_tests.dir/test_switch_manual_int_size.cpp.o
-make[2]: *** [CMakeFiles/ks_tests.dir/test_debug_array_user.cpp.o] Error 1
-[ 23%] Building CXX object CMakeFiles/ks_tests.dir/test_switch_integers2.cpp.o
 make[2]: *** [CMakeFiles/ks_tests.dir/test_nav_parent_vs_value_inst.cpp.o] Error 1
+[ 23%] Building CXX object CMakeFiles/ks_tests.dir/test_switch_integers2.cpp.o
+make[2]: *** [CMakeFiles/ks_tests.dir/test_debug_array_user.cpp.o] Error 1
 [ 24%] Building CXX object CMakeFiles/ks_tests.dir/test_params_enum.cpp.o
-[ 24%] Building CXX object CMakeFiles/ks_tests.dir/test_valid_fail_range_int.cpp.o
 make[2]: *** [CMakeFiles/ks_tests.dir/test_opaque_external_type_02_parent.cpp.o] Error 1
-[ 24%] Building CXX object CMakeFiles/ks_tests.dir/test_meta_xref.cpp.o
+[ 24%] Building CXX object CMakeFiles/ks_tests.dir/test_valid_fail_range_int.cpp.o
 /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_switch_integers.cpp:4:29: fatal error: switch_integers.h: No such file or directory
  #include <switch_integers.h>
                              ^
 compilation terminated.
+[ 24%] Building CXX object CMakeFiles/ks_tests.dir/test_meta_xref.cpp.o
 [ 25%] Building CXX object CMakeFiles/ks_tests.dir/test_term_strz.cpp.o
 /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_switch_manual_int_size.cpp:3:36: fatal error: switch_manual_int_size.h: No such file or directory
  #include <switch_manual_int_size.h>
@@ -344,26 +344,26 @@ compilation terminated.
  #include <repeat_n_struct.h>
                              ^
 compilation terminated.
+make[2]: *** [CMakeFiles/ks_tests.dir/test_switch_integers.cpp.o] Error 1
 /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_nav_parent.cpp:4:24: fatal error: nav_parent.h: No such file or directory
  #include <nav_parent.h>
                         ^
 compilation terminated.
-make[2]: *** [CMakeFiles/ks_tests.dir/test_switch_integers.cpp.o] Error 1
 [ 27%] Building CXX object CMakeFiles/ks_tests.dir/test_valid_fail_contents.cpp.o
 make[2]: *** [CMakeFiles/ks_tests.dir/test_switch_manual_int_size.cpp.o] Error 1
 [ 27%] Building CXX object CMakeFiles/ks_tests.dir/test_str_literals.cpp.o
-[ 27%] Building CXX object CMakeFiles/ks_tests.dir/test_default_big_endian.cpp.o
 make[2]: *** [CMakeFiles/ks_tests.dir/test_params_enum.cpp.o] Error 1
+[ 27%] Building CXX object CMakeFiles/ks_tests.dir/test_default_big_endian.cpp.o
 [ 28%] Building CXX object CMakeFiles/ks_tests.dir/test_process_xor_const.cpp.o
 [ 28%] Building CXX object CMakeFiles/ks_tests.dir/test_yaml_ints.cpp.o
 [ 28%] Building CXX object CMakeFiles/ks_tests.dir/test_switch_manual_int.cpp.o
 [ 29%] Building CXX object CMakeFiles/ks_tests.dir/test_repeat_until_s4.cpp.o
-[ 29%] Building CXX object CMakeFiles/ks_tests.dir/test_position_to_end.cpp.o
-[ 30%] Building CXX object CMakeFiles/ks_tests.dir/test_switch_cast.cpp.o
 /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_switch_manual_int.cpp:4:31: fatal error: switch_manual_int.h: No such file or directory
  #include <switch_manual_int.h>
                                ^
 compilation terminated.
+[ 29%] Building CXX object CMakeFiles/ks_tests.dir/test_position_to_end.cpp.o
+[ 30%] Building CXX object CMakeFiles/ks_tests.dir/test_switch_cast.cpp.o
 make[2]: *** [CMakeFiles/ks_tests.dir/test_repeat_n_struct.cpp.o] Error 1
 [ 30%] Building CXX object CMakeFiles/ks_tests.dir/test_expr_calc_array_ops.cpp.o
 [ 30%] Building CXX object CMakeFiles/ks_tests.dir/test_default_endian_mod.cpp.o
@@ -374,10 +374,6 @@ make[2]: *** [CMakeFiles/ks_tests.dir/test_nav_parent.cpp.o] Error 1
  #include <position_to_end.h>
                              ^
 compilation terminated.
-/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_switch_cast.cpp:3:25: fatal error: switch_cast.h: No such file or directory
- #include <switch_cast.h>
-                         ^
-compilation terminated.
 /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_expr_calc_array_ops.cpp:4:33: fatal error: expr_calc_array_ops.h: No such file or directory
  #include <expr_calc_array_ops.h>
                                  ^
@@ -385,6 +381,10 @@ compilation terminated.
 /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_default_endian_mod.cpp:4:32: fatal error: default_endian_mod.h: No such file or directory
  #include <default_endian_mod.h>
                                 ^
+compilation terminated.
+/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_switch_cast.cpp:3:25: fatal error: switch_cast.h: No such file or directory
+ #include <switch_cast.h>
+                         ^
 compilation terminated.
 /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_switch_manual_int_size_eos.cpp:3:40: fatal error: switch_manual_int_size_eos.h: No such file or directory
  #include <switch_manual_int_size_eos.h>
@@ -403,13 +403,13 @@ make[2]: *** [CMakeFiles/ks_tests.dir/test_switch_manual_int.cpp.o] Error 1
 [ 32%] Building CXX object CMakeFiles/ks_tests.dir/test_repeat_n_strz_double.cpp.o
 make[2]: *** [CMakeFiles/ks_tests.dir/test_position_to_end.cpp.o] Error 1
 [ 32%] Building CXX object CMakeFiles/ks_tests.dir/test_expr_sizeof_value_0.cpp.o
-make[2]: *** [CMakeFiles/ks_tests.dir/test_switch_cast.cpp.o] Error 1
+make[2]: *** [CMakeFiles/ks_tests.dir/test_default_endian_mod.cpp.o] Error 1
 [ 32%] Building CXX object CMakeFiles/ks_tests.dir/test_enum_0.cpp.o
 make[2]: *** [CMakeFiles/ks_tests.dir/test_expr_calc_array_ops.cpp.o] Error 1
 [ 33%] Building CXX object CMakeFiles/ks_tests.dir/test_valid_fail_min_int.cpp.o
-make[2]: *** [CMakeFiles/ks_tests.dir/test_default_endian_mod.cpp.o] Error 1
-[ 33%] Building CXX object CMakeFiles/ks_tests.dir/test_optional_id.cpp.o
+make[2]: *** [CMakeFiles/ks_tests.dir/test_switch_cast.cpp.o] Error 1
 make[2]: *** [CMakeFiles/ks_tests.dir/test_switch_manual_int_size_eos.cpp.o] Error 1
+[ 33%] Building CXX object CMakeFiles/ks_tests.dir/test_optional_id.cpp.o
 [ 33%] Building CXX object CMakeFiles/ks_tests.dir/test_expr_io_pos.cpp.o
 make[2]: *** [CMakeFiles/ks_tests.dir/test_instance_io_user.cpp.o] Error 1
 [ 34%] Building CXX object CMakeFiles/ks_tests.dir/test_expr_sizeof_type_0.cpp.o
@@ -424,11 +424,11 @@ compilation terminated.
 compilation terminated.
 make[2]: *** [CMakeFiles/ks_tests.dir/test_nav_parent_switch_cast.cpp.o] Error 1
 [ 34%] Building CXX object CMakeFiles/ks_tests.dir/test_bits_simple.cpp.o
-[ 35%] Building CXX object CMakeFiles/ks_tests.dir/test_js_signed_right_shift.cpp.o
 /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_default_endian_expr_is_le.cpp:4:39: fatal error: default_endian_expr_is_le.h: No such file or directory
  #include <default_endian_expr_is_le.h>
                                        ^
 compilation terminated.
+[ 35%] Building CXX object CMakeFiles/ks_tests.dir/test_js_signed_right_shift.cpp.o
 [ 35%] Building CXX object CMakeFiles/ks_tests.dir/test_process_xor4_const.cpp.o
 [ 35%] Building CXX object CMakeFiles/ks_tests.dir/test_nav_parent_false.cpp.o
 [ 36%] Building CXX object CMakeFiles/ks_tests.dir/test_repeat_eos_struct.cpp.o
@@ -436,12 +436,12 @@ compilation terminated.
  #include <nav_parent_false.h>
                               ^
 compilation terminated.
-make[2]: *** [CMakeFiles/ks_tests.dir/test_expr_sizeof_value_0.cpp.o] Error 1
-[ 36%] Building CXX object CMakeFiles/ks_tests.dir/test_io_local_var.cpp.o
 /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_repeat_eos_struct.cpp:4:31: fatal error: repeat_eos_struct.h: No such file or directory
  #include <repeat_eos_struct.h>
                                ^
 compilation terminated.
+make[2]: *** [CMakeFiles/ks_tests.dir/test_expr_sizeof_value_0.cpp.o] Error 1
+[ 36%] Building CXX object CMakeFiles/ks_tests.dir/test_io_local_var.cpp.o
 [ 36%] Building CXX object CMakeFiles/ks_tests.dir/test_nested_types2.cpp.o
 make[2]: *** [CMakeFiles/ks_tests.dir/test_expr_io_pos.cpp.o] Error 1
 [ 37%] Building CXX object CMakeFiles/ks_tests.dir/test_valid_short.cpp.o
@@ -451,12 +451,12 @@ make[2]: *** [CMakeFiles/ks_tests.dir/test_expr_io_pos.cpp.o] Error 1
  #include <io_local_var.h>
                           ^
 compilation terminated.
+make[2]: *** [CMakeFiles/ks_tests.dir/test_default_endian_expr_is_le.cpp.o] Error 1
+[ 38%] Building CXX object CMakeFiles/ks_tests.dir/test_if_struct.cpp.o
 /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_nested_types2.cpp:4:27: fatal error: nested_types2.h: No such file or directory
  #include <nested_types2.h>
                            ^
 compilation terminated.
-make[2]: *** [CMakeFiles/ks_tests.dir/test_default_endian_expr_is_le.cpp.o] Error 1
-[ 38%] Building CXX object CMakeFiles/ks_tests.dir/test_if_struct.cpp.o
 /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_if_struct.cpp:4:23: fatal error: if_struct.h: No such file or directory
  #include <if_struct.h>
                        ^
@@ -482,13 +482,13 @@ make[2]: *** [CMakeFiles/ks_tests.dir/test_nested_types2.cpp.o] Error 1
 [ 40%] Building CXX object CMakeFiles/ks_tests.dir/test_switch_manual_enum.cpp.o
 [ 41%] Building CXX object CMakeFiles/ks_tests.dir/test_str_eos.cpp.o
 [ 41%] Building CXX object CMakeFiles/ks_tests.dir/test_valid_long.cpp.o
+make[2]: *** [CMakeFiles/ks_tests.dir/test_if_struct.cpp.o] Error 1
 [ 41%] Building CXX object CMakeFiles/ks_tests.dir/test_imports_abs_rel.cpp.o
+[ 42%] Building CXX object CMakeFiles/ks_tests.dir/test_str_pad_term.cpp.o
 /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_switch_manual_enum.cpp:4:32: fatal error: switch_manual_enum.h: No such file or directory
  #include <switch_manual_enum.h>
                                 ^
 compilation terminated.
-make[2]: *** [CMakeFiles/ks_tests.dir/test_if_struct.cpp.o] Error 1
-[ 42%] Building CXX object CMakeFiles/ks_tests.dir/test_str_pad_term.cpp.o
 [ 42%] Building CXX object CMakeFiles/ks_tests.dir/test_nested_types3.cpp.o
 make[2]: *** [CMakeFiles/ks_tests.dir/test_if_values.cpp.o] Error 1
 [ 42%] Building CXX object CMakeFiles/ks_tests.dir/test_recursive_one.cpp.o
@@ -500,16 +500,16 @@ make[2]: *** [CMakeFiles/ks_tests.dir/test_enum_if.cpp.o] Error 1
  #include <nested_types3.h>
                            ^
 compilation terminated.
-[ 44%] Building CXX object CMakeFiles/ks_tests.dir/test_valid_switch.cpp.o
 /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_recursive_one.cpp:4:27: fatal error: recursive_one.h: No such file or directory
  #include <recursive_one.h>
                            ^
 compilation terminated.
+[ 44%] Building CXX object CMakeFiles/ks_tests.dir/test_valid_switch.cpp.o
+[ 44%] Building CXX object CMakeFiles/ks_tests.dir/test_str_pad_term_empty.cpp.o
 /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_nested_same_name2.cpp:4:31: fatal error: nested_same_name2.h: No such file or directory
  #include <nested_same_name2.h>
                                ^
 compilation terminated.
-[ 44%] Building CXX object CMakeFiles/ks_tests.dir/test_str_pad_term_empty.cpp.o
 /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_process_to_user.cpp:4:29: fatal error: process_to_user.h: No such file or directory
  #include <process_to_user.h>
                              ^
@@ -524,22 +524,22 @@ make[2]: *** [CMakeFiles/ks_tests.dir/test_switch_manual_enum.cpp.o] Error 1
 [ 45%] Building CXX object CMakeFiles/ks_tests.dir/test_process_repeat_usertype.cpp.o
 make[2]: *** [CMakeFiles/ks_tests.dir/test_nested_types3.cpp.o] Error 1
 [ 45%] Building CXX object CMakeFiles/ks_tests.dir/test_str_encodings.cpp.o
-make[2]: *** [CMakeFiles/ks_tests.dir/test_recursive_one.cpp.o] Error 1
 [ 46%] Building CXX object CMakeFiles/ks_tests.dir/test_valid_not_parsed_if.cpp.o
+make[2]: *** [CMakeFiles/ks_tests.dir/test_recursive_one.cpp.o] Error 1
 [ 46%] Building CXX object CMakeFiles/ks_tests.dir/test_enum_to_i.cpp.o
 /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_multiple_use.cpp:4:26: fatal error: multiple_use.h: No such file or directory
  #include <multiple_use.h>
                           ^
 compilation terminated.
-make[2]: *** [CMakeFiles/ks_tests.dir/test_nested_same_name2.cpp.o] Error 1
-[ 46%] Building CXX object CMakeFiles/ks_tests.dir/test_expr_sizeof_value_sized.cpp.o
 /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_process_repeat_usertype.cpp:4:37: fatal error: process_repeat_usertype.h: No such file or directory
  #include <process_repeat_usertype.h>
                                      ^
 compilation terminated.
+make[2]: *** [CMakeFiles/ks_tests.dir/test_nested_same_name2.cpp.o] Error 1
+[ 46%] Building CXX object CMakeFiles/ks_tests.dir/test_expr_sizeof_value_sized.cpp.o
+make[2]: *** [CMakeFiles/ks_tests.dir/test_switch_bytearray.cpp.o] Error 1
 make[2]: *** [CMakeFiles/ks_tests.dir/test_process_to_user.cpp.o] Error 1
 [ 47%] Building CXX object CMakeFiles/ks_tests.dir/test_params_pass_usertype.cpp.o
-make[2]: *** [CMakeFiles/ks_tests.dir/test_switch_bytearray.cpp.o] Error 1
 [ 47%] Building CXX object CMakeFiles/ks_tests.dir/test_expr_0.cpp.o
 /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_expr_sizeof_value_sized.cpp:4:37: fatal error: expr_sizeof_value_sized.h: No such file or directory
  #include <expr_sizeof_value_sized.h>
@@ -552,11 +552,11 @@ compilation terminated.
 [ 47%] Building CXX object CMakeFiles/ks_tests.dir/test_eos_exception_bytes.cpp.o
 [ 48%] Building CXX object CMakeFiles/ks_tests.dir/test_enum_of_value_inst.cpp.o
 [ 48%] Building CXX object CMakeFiles/ks_tests.dir/test_debug_enum_name.cpp.o
+[ 48%] Building CXX object CMakeFiles/ks_tests.dir/test_debug_0.cpp.o
 /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_eos_exception_bytes.cpp:4:33: fatal error: eos_exception_bytes.h: No such file or directory
  #include <eos_exception_bytes.h>
                                  ^
 compilation terminated.
-[ 48%] Building CXX object CMakeFiles/ks_tests.dir/test_debug_0.cpp.o
 make[2]: *** [CMakeFiles/ks_tests.dir/test_multiple_use.cpp.o] Error 1
 [ 49%] Building CXX object CMakeFiles/ks_tests.dir/test_switch_repeat_expr.cpp.o
 /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_debug_enum_name.cpp:3:29: fatal error: debug_enum_name.h: No such file or directory
@@ -565,13 +565,13 @@ make[2]: *** [CMakeFiles/ks_tests.dir/test_multiple_use.cpp.o] Error 1
 compilation terminated.
 make[2]: *** [CMakeFiles/ks_tests.dir/test_process_repeat_usertype.cpp.o] Error 1
 [ 49%] Building CXX object CMakeFiles/ks_tests.dir/test_meta_tags.cpp.o
-make[2]: *** [CMakeFiles/ks_tests.dir/test_expr_sizeof_value_sized.cpp.o] Error 1
 [ 50%] Building CXX object CMakeFiles/ks_tests.dir/test_str_encodings_default.cpp.o
-[ 50%] Building CXX object CMakeFiles/ks_tests.dir/test_eos_exception_u4.cpp.o
 /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_switch_repeat_expr.cpp:3:32: fatal error: switch_repeat_expr.h: No such file or directory
  #include <switch_repeat_expr.h>
                                 ^
 compilation terminated.
+make[2]: *** [CMakeFiles/ks_tests.dir/test_expr_sizeof_value_sized.cpp.o] Error 1
+[ 50%] Building CXX object CMakeFiles/ks_tests.dir/test_eos_exception_u4.cpp.o
 make[2]: *** [CMakeFiles/ks_tests.dir/test_params_pass_usertype.cpp.o] Error 1
 [ 50%] Building CXX object CMakeFiles/ks_tests.dir/test_index_sizes.cpp.o
 [ 51%] Building CXX object CMakeFiles/ks_tests.dir/test_params_call_extra_parens.cpp.o
@@ -579,17 +579,17 @@ make[2]: *** [CMakeFiles/ks_tests.dir/test_params_pass_usertype.cpp.o] Error 1
  #include <str_encodings_default.h>
                                    ^
 compilation terminated.
+[ 51%] Building CXX object CMakeFiles/ks_tests.dir/test_enum_int_range_u.cpp.o
 /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_eos_exception_u4.cpp:4:30: fatal error: eos_exception_u4.h: No such file or directory
  #include <eos_exception_u4.h>
                               ^
 compilation terminated.
-[ 51%] Building CXX object CMakeFiles/ks_tests.dir/test_enum_int_range_u.cpp.o
-make[2]: *** [CMakeFiles/ks_tests.dir/test_eos_exception_bytes.cpp.o] Error 1
-[ 51%] Building CXX object CMakeFiles/ks_tests.dir/test_process_xor4_value.cpp.o
 /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_params_call_extra_parens.cpp:4:38: fatal error: params_call_extra_parens.h: No such file or directory
  #include <params_call_extra_parens.h>
                                       ^
 compilation terminated.
+make[2]: *** [CMakeFiles/ks_tests.dir/test_eos_exception_bytes.cpp.o] Error 1
+[ 51%] Building CXX object CMakeFiles/ks_tests.dir/test_process_xor4_value.cpp.o
 make[2]: *** [CMakeFiles/ks_tests.dir/test_debug_enum_name.cpp.o] Error 1
 [ 52%] Building CXX object CMakeFiles/ks_tests.dir/test_process_coerce_bytes.cpp.o
 [ 52%] Building CXX object CMakeFiles/ks_tests.dir/test_nav_parent_switch.cpp.o
@@ -600,28 +600,28 @@ make[2]: *** [CMakeFiles/ks_tests.dir/test_switch_repeat_expr.cpp.o] Error 1
                                   ^
 compilation terminated.
 [ 53%] Building CXX object CMakeFiles/ks_tests.dir/main.cpp.o
-[ 53%] Building CXX object CMakeFiles/ks_tests.dir/test_enum_fancy.cpp.o
 /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_nav_parent_switch.cpp:4:31: fatal error: nav_parent_switch.h: No such file or directory
  #include <nav_parent_switch.h>
                                ^
 compilation terminated.
-make[2]: *** [CMakeFiles/ks_tests.dir/test_eos_exception_u4.cpp.o] Error 1
 make[2]: *** [CMakeFiles/ks_tests.dir/test_str_encodings_default.cpp.o] Error 1
+[ 53%] Building CXX object CMakeFiles/ks_tests.dir/test_enum_fancy.cpp.o
 [ 53%] Building CXX object CMakeFiles/ks_tests.dir/test_repeat_eos_u4.cpp.o
+make[2]: *** [CMakeFiles/ks_tests.dir/test_eos_exception_u4.cpp.o] Error 1
 [ 54%] Building CXX object CMakeFiles/ks_tests.dir/test_user_type.cpp.o
 make[2]: *** [CMakeFiles/ks_tests.dir/test_params_call_extra_parens.cpp.o] Error 1
 [ 54%] Building CXX object CMakeFiles/ks_tests.dir/test_floating_points.cpp.o
+[ 54%] Building CXX object CMakeFiles/ks_tests.dir/test_params_call_short.cpp.o
+[ 55%] Building CXX object CMakeFiles/ks_tests.dir/test_ts_packet_header.cpp.o
 /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_user_type.cpp:4:23: fatal error: user_type.h: No such file or directory
  #include <user_type.h>
                        ^
 compilation terminated.
-[ 54%] Building CXX object CMakeFiles/ks_tests.dir/test_params_call_short.cpp.o
-[ 55%] Building CXX object CMakeFiles/ks_tests.dir/test_ts_packet_header.cpp.o
-[ 55%] Building CXX object CMakeFiles/ks_tests.dir/test_enum_deep_literals.cpp.o
 /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_params_call_short.cpp:4:31: fatal error: params_call_short.h: No such file or directory
  #include <params_call_short.h>
                                ^
 compilation terminated.
+[ 55%] Building CXX object CMakeFiles/ks_tests.dir/test_enum_deep_literals.cpp.o
 make[2]: *** [CMakeFiles/ks_tests.dir/test_process_coerce_bytes.cpp.o] Error 1
 [ 55%] Building CXX object CMakeFiles/ks_tests.dir/test_valid_fail_anyof_int.cpp.o
 [ 56%] Building CXX object CMakeFiles/ks_tests.dir/test_switch_manual_int_size_else.cpp.o
@@ -633,43 +633,43 @@ make[2]: *** [CMakeFiles/ks_tests.dir/test_nav_parent_switch.cpp.o] Error 1
                                          ^
 compilation terminated.
 [ 57%] Building CXX object CMakeFiles/ks_tests.dir/test_type_int_unary_op.cpp.o
-make[2]: *** [CMakeFiles/ks_tests.dir/test_user_type.cpp.o] Error 1
 [ 57%] Building CXX object CMakeFiles/ks_tests.dir/test_integers.cpp.o
 [ 57%] Building CXX object CMakeFiles/ks_tests.dir/test_switch_manual_str.cpp.o
+make[2]: *** [CMakeFiles/ks_tests.dir/test_user_type.cpp.o] Error 1
 [ 58%] Building CXX object CMakeFiles/ks_tests.dir/test_bcd_user_type_le.cpp.o
 [ 58%] Building CXX object CMakeFiles/ks_tests.dir/test_switch_manual_int_else.cpp.o
+make[2]: *** [CMakeFiles/ks_tests.dir/test_params_call_short.cpp.o] Error 1
+[ 58%] Building CXX object CMakeFiles/ks_tests.dir/test_valid_fail_inst.cpp.o
 /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_switch_manual_str.cpp:4:31: fatal error: switch_manual_str.h: No such file or directory
  #include <switch_manual_str.h>
                                ^
 compilation terminated.
-make[2]: *** [CMakeFiles/ks_tests.dir/test_params_call_short.cpp.o] Error 1
-[ 58%] Building CXX object CMakeFiles/ks_tests.dir/test_valid_fail_inst.cpp.o
+[ 59%] Building CXX object CMakeFiles/ks_tests.dir/test_nav_parent3.cpp.o
 /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_bcd_user_type_le.cpp:4:30: fatal error: bcd_user_type_le.h: No such file or directory
  #include <bcd_user_type_le.h>
                               ^
 compilation terminated.
-[ 59%] Building CXX object CMakeFiles/ks_tests.dir/test_nav_parent3.cpp.o
+[ 59%] Building CXX object CMakeFiles/ks_tests.dir/test_switch_multi_bool_ops.cpp.o
 /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_switch_manual_int_else.cpp:4:36: fatal error: switch_manual_int_else.h: No such file or directory
  #include <switch_manual_int_else.h>
                                     ^
 compilation terminated.
-[ 59%] Building CXX object CMakeFiles/ks_tests.dir/test_switch_multi_bool_ops.cpp.o
-make[2]: *** [CMakeFiles/ks_tests.dir/test_switch_manual_int_size_else.cpp.o] Error 1
-[ 60%] Building CXX object CMakeFiles/ks_tests.dir/test_instance_user_array.cpp.o
 /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_nav_parent3.cpp:4:25: fatal error: nav_parent3.h: No such file or directory
  #include <nav_parent3.h>
                          ^
 compilation terminated.
+make[2]: *** [CMakeFiles/ks_tests.dir/test_switch_manual_int_size_else.cpp.o] Error 1
+[ 60%] Building CXX object CMakeFiles/ks_tests.dir/test_instance_user_array.cpp.o
 [ 60%] Building CXX object CMakeFiles/ks_tests.dir/test_position_in_seq.cpp.o
 /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_switch_multi_bool_ops.cpp:3:35: fatal error: switch_multi_bool_ops.h: No such file or directory
  #include <switch_multi_bool_ops.h>
                                    ^
 compilation terminated.
+[ 60%] Building CXX object CMakeFiles/ks_tests.dir/test_process_xor_value.cpp.o
 /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_instance_user_array.cpp:4:33: fatal error: instance_user_array.h: No such file or directory
  #include <instance_user_array.h>
                                  ^
 compilation terminated.
-[ 60%] Building CXX object CMakeFiles/ks_tests.dir/test_process_xor_value.cpp.o
 /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_position_in_seq.cpp:4:29: fatal error: position_in_seq.h: No such file or directory
  #include <position_in_seq.h>
                              ^
@@ -686,27 +686,27 @@ make[2]: *** [CMakeFiles/ks_tests.dir/test_switch_manual_int_else.cpp.o] Error 1
 compilation terminated.
 make[2]: *** [CMakeFiles/ks_tests.dir/test_nav_parent3.cpp.o] Error 1
 [ 62%] Building CXX object CMakeFiles/ks_tests.dir/test_cast_to_top.cpp.o
+[ 62%] Building CXX object CMakeFiles/ks_tests.dir/test_fixed_contents.cpp.o
 /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_default_endian_expr_inherited.cpp:4:43: fatal error: default_endian_expr_inherited.h: No such file or directory
  #include <default_endian_expr_inherited.h>
                                            ^
 compilation terminated.
-[ 62%] Building CXX object CMakeFiles/ks_tests.dir/test_fixed_contents.cpp.o
+make[2]: *** [CMakeFiles/ks_tests.dir/test_switch_multi_bool_ops.cpp.o] Error 1
+[ 62%] Building CXX object CMakeFiles/ks_tests.dir/test_imports_abs.cpp.o
 /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_position_abs.cpp:4:26: fatal error: position_abs.h: No such file or directory
  #include <position_abs.h>
                           ^
 compilation terminated.
-make[2]: *** [CMakeFiles/ks_tests.dir/test_switch_multi_bool_ops.cpp.o] Error 1
-[ 62%] Building CXX object CMakeFiles/ks_tests.dir/test_imports_abs.cpp.o
 make[2]: *** [CMakeFiles/ks_tests.dir/test_instance_user_array.cpp.o] Error 1
 [ 63%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/instance_std_array.cpp.o
-make[2]: *** [CMakeFiles/ks_tests.dir/test_position_in_seq.cpp.o] Error 1
-[ 63%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/imported_and_rel.cpp.o
-[ 63%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/floating_points.cpp.o
-[ 64%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/expr_sizeof_type_0.cpp.o
 /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_imports_abs.cpp:5:28: fatal error: vlq_base128_le.h: No such file or directory
  #include <vlq_base128_le.h>
                             ^
 compilation terminated.
+[ 63%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/imported_and_rel.cpp.o
+make[2]: *** [CMakeFiles/ks_tests.dir/test_position_in_seq.cpp.o] Error 1
+[ 63%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/floating_points.cpp.o
+[ 64%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/expr_sizeof_type_0.cpp.o
 [ 64%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/nav_parent_false2.cpp.o
 [ 64%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/repeat_n_strz.cpp.o
 [ 65%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/valid_fail_contents.cpp.o
@@ -718,8 +718,8 @@ make[2]: *** [CMakeFiles/ks_tests.dir/test_index_to_param_expr.cpp.o] Error 1
 [ 66%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/cast_to_top.cpp.o
 [ 67%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_int_range_s.cpp.o
 [ 67%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/eof_exception_u4.cpp.o
-make[2]: *** [CMakeFiles/ks_tests.dir/test_default_endian_expr_inherited.cpp.o] Error 1
 [ 67%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_for_unknown_id.cpp.o
+make[2]: *** [CMakeFiles/ks_tests.dir/test_default_endian_expr_inherited.cpp.o] Error 1
 [ 68%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/str_eos.cpp.o
 [ 68%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/cast_to_imported.cpp.o
 [ 68%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/expr_sizeof_type_1.cpp.o
@@ -739,7 +739,6 @@ make[2]: *** [CMakeFiles/ks_tests.dir/test_position_abs.cpp.o] Error 1
 [ 73%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/valid_long.cpp.o
 [ 73%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/imports_circular_a.cpp.o
 [ 74%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_long_range_s.cpp.o
-[ 74%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/type_ternary_opaque.cpp.o
 In file included from /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_long_range_s.cpp:4:0:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_long_range_s.h:18:31: warning: integer constant is so large that it is unsigned [enabled by default]
          CONSTANTS_LONG_MIN = -9223372036854775808,
@@ -747,16 +746,19 @@ In file included from /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_long_range_s.h:18:9: warning: this decimal constant is unsigned only in ISO C90 [enabled by default]
          CONSTANTS_LONG_MIN = -9223372036854775808,
          ^
+[ 74%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/type_ternary_opaque.cpp.o
 [ 74%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/str_literals2.cpp.o
+make[2]: *** [CMakeFiles/ks_tests.dir/test_imports_abs.cpp.o] Error 1
 [ 75%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/params_def.cpp.o
 [ 75%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/process_xor4_const.cpp.o
 [ 75%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/yaml_ints.cpp.o
-make[2]: *** [CMakeFiles/ks_tests.dir/test_imports_abs.cpp.o] Error 1
 [ 76%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/expr_3.cpp.o
 [ 76%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_to_i.cpp.o
 [ 76%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/hello_world.cpp.o
 [ 77%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/bytes_pad_term.cpp.o
 [ 77%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/valid_fail_eq_int.cpp.o
+[ 77%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/imports_circular_b.cpp.o
+[ 78%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/switch_integers2.cpp.o
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/yaml_ints.cpp: In member function ‘int32_t yaml_ints_t::test_u8_dec()’:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/yaml_ints.cpp:41:19: warning: overflow in implicit constant conversion [-Woverflow]
      m_test_u8_dec = 18446744073709551615ULL;
@@ -765,8 +767,6 @@ make[2]: *** [CMakeFiles/ks_tests.dir/test_imports_abs.cpp.o] Error 1
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/yaml_ints.cpp:49:19: warning: overflow in implicit constant conversion [-Woverflow]
      m_test_u8_hex = 18446744073709551615ULL;
                    ^
-[ 77%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/imports_circular_b.cpp.o
-[ 78%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/switch_integers2.cpp.o
 [ 78%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_negative.cpp.o
 [ 78%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/process_custom.cpp.o
 [ 79%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/opaque_external_type.cpp.o
@@ -802,11 +802,15 @@ In file included from /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl
      static std::string process_xor_one(std::string data, uint8_t key);
                         ^
 /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistream.h:179:24: note:   no known conversion for argument 1 from ‘std::vector<std::basic_string<char> >*’ to ‘std::string {aka std::basic_string<char>}’
+[ 86%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/eof_exception_bytes.cpp.o
+make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/process_repeat_bytes.cpp.o] Error 1
+[ 86%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/imports0.cpp.o
+[ 87%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/imported_and_abs.cpp.o
+[ 87%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/js_signed_right_shift.cpp.o
 In file included from /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_to_i_class_border_2.cpp:4:0:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_to_i_class_border_2.h:17:58: error: expected ‘)’ before ‘*’ token
      enum_to_i_class_border_2_t(enum_to_i_class_border_1_t* p_parent, kaitai::kstream* p__io, kaitai::kstruct* p__parent = 0, enum_to_i_class_border_2_t* p__root = 0);
                                                           ^
-make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/process_repeat_bytes.cpp.o] Error 1
 In file included from /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_to_i_class_border_2.cpp:4:0:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_to_i_class_border_2.h:33:5: error: ‘enum_to_i_class_border_1_t’ does not name a type
      enum_to_i_class_border_1_t* m_parent;
@@ -817,7 +821,6 @@ In file included from /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_to_i_class_border_2.cpp:7:1: error: prototype for ‘enum_to_i_class_border_2_t::enum_to_i_class_border_2_t(enum_to_i_class_border_1_t*, kaitai::kstream*, kaitai::kstruct*, enum_to_i_class_border_2_t*)’ does not match any in class ‘enum_to_i_class_border_2_t’
  enum_to_i_class_border_2_t::enum_to_i_class_border_2_t(enum_to_i_class_border_1_t* p_parent, kaitai::kstream* p__io, kaitai::kstruct* p__parent, enum_to_i_class_border_2_t* p__root) : kaitai::kstruct(p__io) {
  ^
-[ 86%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/eof_exception_bytes.cpp.o
 In file included from /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_to_i_class_border_2.cpp:4:0:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_to_i_class_border_2.h:13:7: error: candidates are: enum_to_i_class_border_2_t::enum_to_i_class_border_2_t(const enum_to_i_class_border_2_t&)
  class enum_to_i_class_border_2_t : public kaitai::kstruct {
@@ -827,13 +830,9 @@ In file included from /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_to_i_class_border_2.cpp:24:23: error: ‘parent’ was not declared in this scope
      m_is_dog = parent()->some_dog() == 4;
                        ^
-[ 86%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/imports0.cpp.o
 make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_to_i_class_border_2.cpp.o] Error 1
-[ 87%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/imported_and_abs.cpp.o
-[ 87%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/js_signed_right_shift.cpp.o
 [ 87%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_fancy.cpp.o
 [ 88%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/optional_id.cpp.o
-[ 88%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/valid_switch.cpp.o
 In file included from /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_import.cpp:4:0:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_import.h:26:5: error: ‘enum_0_t’ does not name a type
      enum_0_t::animal_t m_pet_1;
@@ -872,6 +871,7 @@ In file included from /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_import.cpp:14:97: error: expected ‘)’ before ‘;’ token
      m_pet_2 = static_cast<enum_deep_t::container1_t::container2_t::animal_t>(m__io->read_u4le());
                                                                                                  ^
+[ 88%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/valid_switch.cpp.o
 make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_import.cpp.o] Error 1
 [ 88%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/repeat_until_s4.cpp.o
 [ 89%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/instance_std.cpp.o
@@ -916,12 +916,12 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
 [ 97%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/str_pad_term_empty.cpp.o
 [ 97%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/fixed_contents.cpp.o
 [ 98%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/expr_bytes_cmp.cpp.o
-[ 98%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/process_xor4_value.cpp.o
-[ 98%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/expr_array.cpp.o
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/imports_abs.cpp:5:28: fatal error: vlq_base128_le.h: No such file or directory
  #include "vlq_base128_le.h"
                             ^
 compilation terminated.
+[ 98%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/process_xor4_value.cpp.o
+[ 98%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/expr_array.cpp.o
 make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/imports_abs.cpp.o] Error 1
 [ 99%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/zlib_with_header_78.cpp.o
 [ 99%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/docstrings_docref.cpp.o
