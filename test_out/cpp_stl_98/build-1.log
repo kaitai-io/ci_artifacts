@@ -113,8 +113,8 @@ In file included from /usr/include/c++/4.8/istream:39:0,
      operator<<(basic_ostream<_CharT, _Traits>& __out, char __c)
      ^
 make[2]: *** [CMakeFiles/ks_tests.dir/test_enum_long_range_s.cpp.o] Error 1
+[  2%] Building CXX object CMakeFiles/ks_tests.dir/test_docstrings_docref.cpp.o
 [  3%] Building CXX object CMakeFiles/ks_tests.dir/test_opaque_external_type.cpp.o
-[  3%] Building CXX object CMakeFiles/ks_tests.dir/test_docstrings_docref.cpp.o
 [  3%] Building CXX object CMakeFiles/ks_tests.dir/test_non_standard.cpp.o
 [  4%] Building CXX object CMakeFiles/ks_tests.dir/test_default_endian_expr_exception.cpp.o
 [  4%] Building CXX object CMakeFiles/ks_tests.dir/test_process_repeat_bytes.cpp.o
@@ -228,9 +228,9 @@ compilation terminated.
 [ 25%] Building CXX object CMakeFiles/ks_tests.dir/test_optional_id.cpp.o
 [ 26%] Building CXX object CMakeFiles/ks_tests.dir/test_expr_io_pos.cpp.o
 [ 26%] Building CXX object CMakeFiles/ks_tests.dir/test_expr_sizeof_type_0.cpp.o
-make[2]: *** [CMakeFiles/ks_tests.dir/test_expr_calc_array_ops.cpp.o] Error 1
 [ 26%] Building CXX object CMakeFiles/ks_tests.dir/test_default_endian_expr_is_le.cpp.o
 [ 27%] Building CXX object CMakeFiles/ks_tests.dir/test_bits_simple.cpp.o
+make[2]: *** [CMakeFiles/ks_tests.dir/test_expr_calc_array_ops.cpp.o] Error 1
 [ 27%] Building CXX object CMakeFiles/ks_tests.dir/test_js_signed_right_shift.cpp.o
 [ 27%] Building CXX object CMakeFiles/ks_tests.dir/test_process_xor4_const.cpp.o
 [ 27%] Building CXX object CMakeFiles/ks_tests.dir/test_nav_parent_false.cpp.o
@@ -426,6 +426,7 @@ In file included from /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp
 [ 74%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/expr_0.cpp.o
 [ 74%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/default_endian_expr_is_be.cpp.o
 [ 75%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/switch_manual_str.cpp.o
+[ 75%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/params_pass_usertype.cpp.o
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/io_local_var.cpp: In destructor ‘virtual io_local_var_t::~io_local_var_t()’:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/io_local_var.cpp:27:23: error: ‘n_mess_up’ was not declared in this scope
      if (f_mess_up && !n_mess_up) {
@@ -435,7 +436,6 @@ In file included from /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp
      n_mess_up = true;
      ^
 make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/io_local_var.cpp.o] Error 1
-[ 75%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/params_pass_usertype.cpp.o
 [ 75%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/valid_fail_inst.cpp.o
 [ 75%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/non_standard.cpp.o
 [ 76%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/process_repeat_bytes.cpp.o
@@ -443,6 +443,7 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
 [ 76%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/ts_packet_header.cpp.o
 [ 77%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/imported_root.cpp.o
 [ 77%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/recursive_one.cpp.o
+[ 77%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/process_to_user.cpp.o
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/process_repeat_bytes.cpp: In member function ‘void process_repeat_bytes_t::_read()’:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/process_repeat_bytes.cpp:21:67: error: no matching function for call to ‘kaitai::kstream::process_xor_one(std::vector<std::basic_string<char> >*&, int)’
          m_bufs = kaitai::kstream::process_xor_one(m__raw_bufs, 158);
@@ -455,7 +456,6 @@ In file included from /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl
      static std::string process_xor_one(std::string data, uint8_t key);
                         ^
 /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistream.h:179:24: note:   no known conversion for argument 1 from ‘std::vector<std::basic_string<char> >*’ to ‘std::string {aka std::basic_string<char>}’
-[ 77%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/process_to_user.cpp.o
 make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/process_repeat_bytes.cpp.o] Error 1
 [ 77%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/switch_cast.cpp.o
 [ 78%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/if_values.cpp.o
@@ -565,7 +565,6 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
 [ 86%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/nested_types2.cpp.o
 [ 86%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/str_literals.cpp.o
 [ 86%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/nav_parent_switch.cpp.o
-[ 87%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/process_xor_const.cpp.o
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/process_repeat_usertype.cpp: In member function ‘void process_repeat_usertype_t::_read()’:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/process_repeat_usertype.cpp:26:81: error: no matching function for call to ‘kaitai::kstream::process_xor_one(std::vector<std::basic_string<char> >*&, int)’
          m__raw_blocks = kaitai::kstream::process_xor_one(m__raw__raw_blocks, 158);
@@ -578,6 +577,7 @@ In file included from /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl
      static std::string process_xor_one(std::string data, uint8_t key);
                         ^
 /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistream.h:179:24: note:   no known conversion for argument 1 from ‘std::vector<std::basic_string<char> >*’ to ‘std::string {aka std::basic_string<char>}’
+[ 87%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/process_xor_const.cpp.o
 make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/process_repeat_usertype.cpp.o] Error 1
 [ 87%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/valid_not_parsed_if.cpp.o
 [ 87%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/default_endian_expr_inherited.cpp.o
@@ -608,6 +608,8 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
 [ 94%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_if.cpp.o
 [ 94%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_long_range_u.cpp.o
 [ 94%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/integers.cpp.o
+[ 95%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/user_type.cpp.o
+[ 95%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/repeat_eos_u4.cpp.o
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/valid_fail_anyof_int.cpp: In member function ‘void valid_fail_anyof_int_t::_read()’:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/valid_fail_anyof_int.cpp:16:95: error: no matching function for call to ‘kaitai::validation_not_any_of_error<unsigned char>::validation_not_any_of_error(uint8_t, kaitai::kstream*, std::string)’
          throw kaitai::validation_not_any_of_error<uint8_t>(foo(), _io(), std::string("/seq/0"));
@@ -623,8 +625,6 @@ In file included from /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp
        ^
 /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:150:7: note:   candidate expects 1 argument, 3 provided
 make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/valid_fail_anyof_int.cpp.o] Error 1
-[ 95%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/user_type.cpp.o
-[ 95%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/repeat_eos_u4.cpp.o
 [ 95%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/opaque_external_type_02_child.cpp.o
 [ 95%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/instance_io_user.cpp.o
 [ 96%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/imports_abs.cpp.o
