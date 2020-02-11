@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-	<testsuite tests="103" failures="15" time="0.023" name="github.com/kaitai-io/ci_targets/tests/spec/go">
+	<testsuite tests="119" failures="22" time="0.024" name="github.com/kaitai-io/ci_targets/tests/spec/go">
 		<properties>
 			<property name="go.version" value="go1.10"></property>
 		</properties>
@@ -29,9 +29,26 @@
 		<testcase classname="go" name="TestEnumDeep" time="0.000"></testcase>
 		<testcase classname="go" name="TestEnumFancy" time="0.000"></testcase>
 		<testcase classname="go" name="TestEnumIf" time="0.000"></testcase>
+		<testcase classname="go" name="TestEnumImport" time="0.000"></testcase>
+		<testcase classname="go" name="TestEnumIntRangeS" time="0.000"></testcase>
+		<testcase classname="go" name="TestEnumIntRangeU" time="0.000"></testcase>
+		<testcase classname="go" name="TestEnumLongRangeS" time="0.000"></testcase>
+		<testcase classname="go" name="TestEnumLongRangeU" time="0.000"></testcase>
 		<testcase classname="go" name="TestEnumNegative" time="0.000"></testcase>
 		<testcase classname="go" name="TestEnumOfValueInst" time="0.000"></testcase>
 		<testcase classname="go" name="TestEnumToI" time="0.000"></testcase>
+		<testcase classname="go" name="TestEofExceptionBytes" time="0.000">
+			<failure message="Failed" type="">eof_exception_bytes_test.go:31: expected kaitai.EndOfStreamError, got *errors.errorString</failure>
+		</testcase>
+		<testcase classname="go" name="TestEofExceptionU4" time="0.000">
+			<failure message="Failed" type="">eof_exception_u4_test.go:31: expected kaitai.EndOfStreamError, got &lt;nil&gt;</failure>
+		</testcase>
+		<testcase classname="go" name="TestEosExceptionBytes" time="0.000">
+			<failure message="Failed" type="">eos_exception_bytes_test.go:31: expected kaitai.EndOfStreamError, got *errors.errorString</failure>
+		</testcase>
+		<testcase classname="go" name="TestEosExceptionU4" time="0.000">
+			<failure message="Failed" type="">eos_exception_u4_test.go:31: expected kaitai.EndOfStreamError, got &lt;nil&gt;</failure>
+		</testcase>
 		<testcase classname="go" name="TestExpr0" time="0.000"></testcase>
 		<testcase classname="go" name="TestExpr1" time="0.000"></testcase>
 		<testcase classname="go" name="TestExpr2" time="0.000"></testcase>
@@ -40,18 +57,20 @@
 			<failure message="Failed" type="">expr_array_test.go:29: EOF</failure>
 		</testcase>
 		<testcase classname="go" name="TestExprBytesCmp" time="0.000"></testcase>
+		<testcase classname="go" name="TestExprBytesOps" time="0.000"></testcase>
 		<testcase classname="go" name="TestExprEnum" time="0.000"></testcase>
 		<testcase classname="go" name="TestExprIoPos" time="0.000">
 			<failure message="Failed" type="">expr_io_pos_test.go:29: ReadBytes(-2): negative number of bytes to read</failure>
 		</testcase>
 		<testcase classname="go" name="TestExprMod" time="0.000"></testcase>
+		<testcase classname="go" name="TestExprStrOps" time="0.000"></testcase>
 		<testcase classname="go" name="TestFixedContents" time="0.000"></testcase>
 		<testcase classname="go" name="TestFixedStruct" time="0.000"></testcase>
 		<testcase classname="go" name="TestFloatToI" time="0.000"></testcase>
 		<testcase classname="go" name="TestFloatingPoints" time="0.000"></testcase>
 		<testcase classname="go" name="TestHelloWorld" time="0.000"></testcase>
 		<testcase classname="go" name="TestIfInstances" time="0.000">
-			<failure message="Failed" type="">if_instances_test.go:29: &#xA;&#x9;&#x9;Error Trace:&#x9;if_instances_test.go:29&#xA;&#x9;&#x9;Error:      &#x9;Expected nil, but got: 0x0&#xA;&#x9;&#x9;Test:       &#x9;TestIfInstances</failure>
+			<failure message="Failed" type="">if_instances_test.go:36: &#xA;&#x9;&#x9;Error Trace:&#x9;if_instances_test.go:36&#xA;&#x9;&#x9;Error:      &#x9;Expected nil, but got: 0x0&#xA;&#x9;&#x9;Test:       &#x9;TestIfInstances</failure>
 		</testcase>
 		<testcase classname="go" name="TestIfStruct" time="0.000"></testcase>
 		<testcase classname="go" name="TestIfValues" time="0.000">
@@ -63,7 +82,7 @@
 		<testcase classname="go" name="TestInstanceUserArray" time="0.000">
 			<failure message="Failed" type="">instance_user_array_test.go:37: EOF</failure>
 		</testcase>
-		<testcase classname="go" name="TestIntegers" time="0.000"></testcase>
+		<testcase classname="go" name="TestIntegers" time="0.010"></testcase>
 		<testcase classname="go" name="TestJsSignedRightShift" time="0.000"></testcase>
 		<testcase classname="go" name="TestMetaTags" time="0.000"></testcase>
 		<testcase classname="go" name="TestMetaXref" time="0.000"></testcase>
@@ -74,7 +93,7 @@
 		<testcase classname="go" name="TestNavParent" time="0.000"></testcase>
 		<testcase classname="go" name="TestNavParentVsValueInst" time="0.000"></testcase>
 		<testcase classname="go" name="TestNavRoot" time="0.000"></testcase>
-		<testcase classname="go" name="TestNestedSameName2" time="0.010"></testcase>
+		<testcase classname="go" name="TestNestedSameName2" time="0.000"></testcase>
 		<testcase classname="go" name="TestNestedSameName" time="0.000"></testcase>
 		<testcase classname="go" name="TestNestedTypes2" time="0.000"></testcase>
 		<testcase classname="go" name="TestNestedTypes3" time="0.000"></testcase>
@@ -96,7 +115,7 @@
 		<testcase classname="go" name="TestProcessXorConst" time="0.000"></testcase>
 		<testcase classname="go" name="TestProcessXorValue" time="0.000"></testcase>
 		<testcase classname="go" name="TestRepeatEosBit" time="0.000">
-			<failure message="Failed" type="">repeat_eos_bit_test.go:25: &#xA;&#x9;&#x9;Error Trace:&#x9;repeat_eos_bit_test.go:25&#xA;&#x9;&#x9;Error:      &#x9;Not equal: &#xA;&#x9;&#x9;            &#x9;expected: 16&#xA;&#x9;&#x9;            &#x9;actual  : 15&#xA;&#x9;&#x9;Test:       &#x9;TestRepeatEosBit</failure>
+			<failure message="Failed" type="">repeat_eos_bit_test.go:32: &#xA;&#x9;&#x9;Error Trace:&#x9;repeat_eos_bit_test.go:32&#xA;&#x9;&#x9;Error:      &#x9;Not equal: &#xA;&#x9;&#x9;            &#x9;expected: 16&#xA;&#x9;&#x9;            &#x9;actual  : 15&#xA;&#x9;&#x9;Test:       &#x9;TestRepeatEosBit</failure>
 		</testcase>
 		<testcase classname="go" name="TestRepeatEosStruct" time="0.000"></testcase>
 		<testcase classname="go" name="TestRepeatEosU4" time="0.000"></testcase>
@@ -111,6 +130,9 @@
 			<failure message="Failed" type="">repeat_until_complex_test.go:34: &#xA;&#x9;&#x9;Error Trace:&#x9;repeat_until_complex_test.go:34&#xA;&#x9;&#x9;Error:      &#x9;Not equal: &#xA;&#x9;&#x9;            &#x9;expected: []int([]int{1, 2, 3, 4})&#xA;&#x9;&#x9;            &#x9;actual  : []uint8([]byte{0x1, 0x2, 0x3, 0x4})&#xA;&#x9;&#x9;Test:       &#x9;TestRepeatUntilComplex&#xA;repeat_until_complex_test.go:36: &#xA;&#x9;&#x9;Error Trace:&#x9;repeat_until_complex_test.go:36&#xA;&#x9;&#x9;Error:      &#x9;Not equal: &#xA;&#x9;&#x9;            &#x9;expected: []int([]int{1, 2})&#xA;&#x9;&#x9;            &#x9;actual  : []uint8([]byte{0x1, 0x2})&#xA;&#x9;&#x9;Test:       &#x9;TestRepeatUntilComplex&#xA;repeat_until_complex_test.go:40: &#xA;&#x9;&#x9;Error Trace:&#x9;repeat_until_complex_test.go:40&#xA;&#x9;&#x9;Error:      &#x9;Not equal: &#xA;&#x9;&#x9;            &#x9;expected: []int([]int{1, 2, 3, 4, 5, 6})&#xA;&#x9;&#x9;            &#x9;actual  : []uint16([]uint16{0x1, 0x2, 0x3, 0x4, 0x5, 0x6})&#xA;&#x9;&#x9;Test:       &#x9;TestRepeatUntilComplex&#xA;repeat_until_complex_test.go:42: &#xA;&#x9;&#x9;Error Trace:&#x9;repeat_until_complex_test.go:42&#xA;&#x9;&#x9;Error:      &#x9;Not equal: &#xA;&#x9;&#x9;            &#x9;expected: []int([]int{1, 2, 3})&#xA;&#x9;&#x9;            &#x9;actual  : []uint16([]uint16{0x1, 0x2, 0x3})&#xA;&#x9;&#x9;Test:       &#x9;TestRepeatUntilComplex&#xA;repeat_until_complex_test.go:44: &#xA;&#x9;&#x9;Error Trace:&#x9;repeat_until_complex_test.go:44&#xA;&#x9;&#x9;Error:      &#x9;Not equal: &#xA;&#x9;&#x9;            &#x9;expected: []int([]int{1, 2, 3, 4})&#xA;&#x9;&#x9;            &#x9;actual  : []uint16([]uint16{0x1, 0x2, 0x3, 0x4})&#xA;&#x9;&#x9;Test:       &#x9;TestRepeatUntilComplex&#xA;repeat_until_complex_test.go:46: &#xA;&#x9;&#x9;Error Trace:&#x9;repeat_until_complex_test.go:46&#xA;&#x9;&#x9;Error:      &#x9;Not equal: &#xA;&#x9;&#x9;            &#x9;expected: []int([]int{102, 111, 111, 98, 97, 114, 0})&#xA;&#x9;&#x9;            &#x9;actual  : []uint8([]byte{0x66, 0x6f, 0x6f, 0x62, 0x61, 0x72, 0x0})&#xA;&#x9;&#x9;Test:       &#x9;TestRepeatUntilComplex</failure>
 		</testcase>
 		<testcase classname="go" name="TestRepeatUntilS4" time="0.000"></testcase>
+		<testcase classname="go" name="TestStrCombine" time="0.000">
+			<failure message="Failed" type="">str_combine_test.go:29: EOF</failure>
+		</testcase>
 		<testcase classname="go" name="TestStrEncodingsDefault" time="0.000"></testcase>
 		<testcase classname="go" name="TestStrEncodings" time="0.000"></testcase>
 		<testcase classname="go" name="TestStrEos" time="0.000"></testcase>
@@ -129,12 +151,20 @@
 		<testcase classname="go" name="TestTypeIntUnaryOp" time="0.000"></testcase>
 		<testcase classname="go" name="TestTypeTernary" time="0.000"></testcase>
 		<testcase classname="go" name="TestUserType" time="0.000"></testcase>
+		<testcase classname="go" name="TestValidFailContents" time="0.000">
+			<failure message="Failed" type="">valid_fail_contents_test.go:31: expected kaitai.ValidationNotEqualError, got &lt;nil&gt;</failure>
+		</testcase>
 		<testcase classname="go" name="TestValidFailEqBytes" time="0.000">
-			<failure message="Failed" type="">valid_fail_eq_bytes_test.go:24: expected kaitai.ValidationNotEqualError, got &lt;nil&gt;</failure>
+			<failure message="Failed" type="">valid_fail_eq_bytes_test.go:31: expected kaitai.ValidationNotEqualError, got &lt;nil&gt;</failure>
 		</testcase>
 		<testcase classname="go" name="TestValidFailEqInt" time="0.000">
-			<failure message="Failed" type="">valid_fail_eq_int_test.go:24: expected kaitai.ValidationNotEqualError, got &lt;nil&gt;</failure>
+			<failure message="Failed" type="">valid_fail_eq_int_test.go:31: expected kaitai.ValidationNotEqualError, got &lt;nil&gt;</failure>
 		</testcase>
+		<testcase classname="go" name="TestValidFailInst" time="0.000">
+			<failure message="Failed" type="">valid_fail_inst_test.go:31: expected kaitai.ValidationNotEqualError, got &lt;nil&gt;</failure>
+		</testcase>
+		<testcase classname="go" name="TestValidLong" time="0.000"></testcase>
+		<testcase classname="go" name="TestValidNotParsedIf" time="0.000"></testcase>
 		<testcase classname="go" name="TestValidShort" time="0.000"></testcase>
 		<testcase classname="go" name="TestZlibWithHeader78" time="0.000"></testcase>
 	</testsuite>
