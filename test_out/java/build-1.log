@@ -12,4 +12,11 @@ compiled/java/src/io/kaitai/struct/testformats/ProcessRepeatUsertype.java:35: er
       (argument mismatch; ArrayList<byte[]> cannot be converted to byte[])
     method KaitaiStream.processXor(byte[],byte[]) is not applicable
       (argument mismatch; ArrayList<byte[]> cannot be converted to byte[])
-2 errors
+compiled/java/src/io/kaitai/struct/testformats/ValidFailRangeFloat.java:32: error: incompatible types: possible lossy conversion from double to long
+            throw new KaitaiStream.ValidationLessThanError(0.2, foo(), _io(), "/seq/0");
+                                                           ^
+compiled/java/src/io/kaitai/struct/testformats/ValidFailRangeFloat.java:35: error: incompatible types: possible lossy conversion from double to long
+            throw new KaitaiStream.ValidationGreaterThanError(0.4, foo(), _io(), "/seq/0");
+                                                              ^
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+4 errors
