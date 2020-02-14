@@ -1,3 +1,9 @@
+compiled/java/src/io/kaitai/struct/testformats/ValidFailRangeFloat.java:32: error: incompatible types: possible lossy conversion from double to long
+            throw new KaitaiStream.ValidationLessThanError(0.2, foo(), _io(), "/seq/0");
+                                                           ^
+compiled/java/src/io/kaitai/struct/testformats/ValidFailRangeFloat.java:35: error: incompatible types: possible lossy conversion from double to long
+            throw new KaitaiStream.ValidationGreaterThanError(0.4, foo(), _io(), "/seq/0");
+                                                              ^
 compiled/java/src/io/kaitai/struct/testformats/ProcessRepeatUsertype.java:35: error: no suitable method found for processXor(ArrayList<byte[]>,int)
             this._raw_blocks = KaitaiStream.processXor(this._raw__raw_blocks, 158);
                                            ^
@@ -12,4 +18,5 @@ compiled/java/src/io/kaitai/struct/testformats/ProcessRepeatBytes.java:34: error
       (argument mismatch; ArrayList<byte[]> cannot be converted to byte[])
     method KaitaiStream.processXor(byte[],byte[]) is not applicable
       (argument mismatch; ArrayList<byte[]> cannot be converted to byte[])
-2 errors
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+4 errors
