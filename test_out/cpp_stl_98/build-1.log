@@ -1,12 +1,12 @@
 Scanning dependencies of target ks_tests
 [  0%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/runtime/cpp_stl/kaitai/kaitaistream.cpp.o
-[  0%] Building CXX object CMakeFiles/ks_tests.dir/prereq/custom_fx.cpp.o
 [  0%] Building CXX object CMakeFiles/ks_tests.dir/prereq/my_custom_fx.cpp.o
-[  0%] Building CXX object CMakeFiles/ks_tests.dir/main.cpp.o
+[  0%] Building CXX object CMakeFiles/ks_tests.dir/prereq/custom_fx.cpp.o
 [  1%] Building CXX object CMakeFiles/ks_tests.dir/prereq/custom_fx_no_args.cpp.o
+[  1%] Building CXX object CMakeFiles/ks_tests.dir/main.cpp.o
 [  1%] Building CXX object CMakeFiles/ks_tests.dir/test_bcd_user_type_be.cpp.o
+[  1%] Building CXX object CMakeFiles/ks_tests.dir/test_bcd_user_type_le.cpp.o
 [  2%] Building CXX object CMakeFiles/ks_tests.dir/test_bits_byte_aligned.cpp.o
-[  2%] Building CXX object CMakeFiles/ks_tests.dir/test_bcd_user_type_le.cpp.o
 [  2%] Building CXX object CMakeFiles/ks_tests.dir/test_bits_enum.cpp.o
 [  2%] Building CXX object CMakeFiles/ks_tests.dir/test_bits_simple.cpp.o
 [  2%] Building CXX object CMakeFiles/ks_tests.dir/test_buffered_struct.cpp.o
@@ -43,6 +43,7 @@ Scanning dependencies of target ks_tests
 [ 10%] Building CXX object CMakeFiles/ks_tests.dir/test_enum_of_value_inst.cpp.o
 [ 11%] Building CXX object CMakeFiles/ks_tests.dir/test_enum_to_i.cpp.o
 [ 11%] Building CXX object CMakeFiles/ks_tests.dir/test_enum_to_i_class_border_1.cpp.o
+[ 11%] Building CXX object CMakeFiles/ks_tests.dir/test_eof_exception_bytes.cpp.o
 In file included from /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_enum_long_range_s.cpp:4:
 /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_long_range_s.h:18:31: warning: integer literal is too large to be represented in type 'long' and is subject to undefined behavior under C++98, interpreting as 'unsigned long'; this literal will be ill-formed in C++11 onwards [-Wc++11-compat]
         CONSTANTS_LONG_MIN = -9223372036854775808,
@@ -50,9 +51,8 @@ In file included from /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_st
 /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_long_range_s.h:17:10: warning: enumeration values exceed range of largest integer [-Wenum-too-large]
     enum constants_t {
          ^
-[ 11%] Building CXX object CMakeFiles/ks_tests.dir/test_eof_exception_bytes.cpp.o
-2 warnings generated.
 [ 11%] Building CXX object CMakeFiles/ks_tests.dir/test_eof_exception_u4.cpp.o
+2 warnings generated.
 [ 12%] Building CXX object CMakeFiles/ks_tests.dir/test_eos_exception_bytes.cpp.o
 [ 12%] Building CXX object CMakeFiles/ks_tests.dir/test_eos_exception_u4.cpp.o
 [ 12%] Building CXX object CMakeFiles/ks_tests.dir/test_expr_0.cpp.o
@@ -67,10 +67,10 @@ In file included from /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_st
 [ 14%] Building CXX object CMakeFiles/ks_tests.dir/test_expr_io_eof.cpp.o
 [ 15%] Building CXX object CMakeFiles/ks_tests.dir/test_expr_io_pos.cpp.o
 [ 15%] Building CXX object CMakeFiles/ks_tests.dir/test_expr_mod.cpp.o
+[ 15%] Building CXX object CMakeFiles/ks_tests.dir/test_expr_sizeof_type_0.cpp.o
 /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_expr_calc_array_ops.cpp:4:10: fatal error: 'expr_calc_array_ops.h' file not found
 #include <expr_calc_array_ops.h>
          ^~~~~~~~~~~~~~~~~~~~~~~
-[ 15%] Building CXX object CMakeFiles/ks_tests.dir/test_expr_sizeof_type_0.cpp.o
 1 error generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/test_expr_calc_array_ops.cpp.o] Error 1
 [ 16%] Building CXX object CMakeFiles/ks_tests.dir/test_expr_sizeof_type_1.cpp.o
@@ -275,8 +275,8 @@ In file included from /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cp
 /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_long_range_s.h:17:10: warning: enumeration values exceed range of largest integer [-Wenum-too-large]
     enum constants_t {
          ^
-2 warnings generated.
 [ 60%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/eof_exception_u4.cpp.o
+2 warnings generated.
 [ 60%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/eos_exception_bytes.cpp.o
 [ 60%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/eos_exception_u4.cpp.o
 [ 60%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/expr_0.cpp.o
@@ -292,13 +292,13 @@ class enum_to_i_class_border_2_t : public kaitai::kstruct {
       ^
 1 error generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_to_i_class_border_1.cpp.o] Error 1
-[ 61%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/expr_2.cpp.o
 /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_to_i_class_border_2.cpp:24:24: error: member access into incomplete type 'enum_to_i_class_border_2_t::enum_to_i_class_border_1_t'
     m_is_dog = parent()->some_dog() == 4;
                        ^
 /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_to_i_class_border_2.h:17:11: note: forward declaration of 'enum_to_i_class_border_2_t::enum_to_i_class_border_1_t'
     class enum_to_i_class_border_1_t;
           ^
+[ 61%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/expr_2.cpp.o
 1 error generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_to_i_class_border_2.cpp.o] Error 1
 [ 61%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/expr_3.cpp.o
@@ -331,13 +331,13 @@ make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/te
 [ 68%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/imports_abs.cpp.o
 [ 68%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/imports_abs_abs.cpp.o
 [ 69%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/imports_abs_rel.cpp.o
-[ 69%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/imports_circular_a.cpp.o
 In file included from /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/imported_and_abs.cpp:4:
 /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/imported_and_abs.h:8:10: fatal error: '/imported_root.h' file not found
 #include "/imported_root.h"
          ^~~~~~~~~~~~~~~~~~
 1 error generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/imported_and_abs.cpp.o] Error 1
+[ 69%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/imports_circular_a.cpp.o
 [ 69%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/imports_circular_b.cpp.o
 [ 70%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/imports_rel_1.cpp.o
 [ 70%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/index_sizes.cpp.o
@@ -349,19 +349,19 @@ In file included from /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cp
 1 error generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/imports_abs.cpp.o] Error 1
 [ 70%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/index_to_param_expr.cpp.o
-In file included from /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/imports_abs_rel.cpp:4:
-/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/imports_abs_rel.h:8:10: fatal error: '/for_abs_imports/imported_and_rel.h' file not found
-#include "/for_abs_imports/imported_and_rel.h"
-         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-1 error generated.
-make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/imports_abs_rel.cpp.o] Error 1
-[ 71%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/index_to_param_until.cpp.o
 In file included from /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/imports_abs_abs.cpp:4:
 /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/imports_abs_abs.h:8:10: fatal error: '/for_abs_imports/imported_and_abs.h' file not found
 #include "/for_abs_imports/imported_and_abs.h"
          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 1 error generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/imports_abs_abs.cpp.o] Error 1
+[ 71%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/index_to_param_until.cpp.o
+In file included from /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/imports_abs_rel.cpp:4:
+/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/imports_abs_rel.h:8:10: fatal error: '/for_abs_imports/imported_and_rel.h' file not found
+#include "/for_abs_imports/imported_and_rel.h"
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1 error generated.
+make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/imports_abs_rel.cpp.o] Error 1
 [ 71%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/instance_io_user.cpp.o
 [ 71%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/instance_std.cpp.o
 [ 71%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/instance_std_array.cpp.o
@@ -383,8 +383,8 @@ make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/te
 /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/io_local_var.cpp:17:72: warning: comparison of unsigned expression < 0 is always false [-Wtautological-compare]
     if (static_cast<io_local_var_t::dummy_t*>(mess_up())->_io()->pos() < 0) {
         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ^ ~
-[ 74%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/nav_parent3.cpp.o
 1 warning generated.
+[ 74%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/nav_parent3.cpp.o
 [ 74%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/nav_parent_false.cpp.o
 [ 74%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/nav_parent_false2.cpp.o
 [ 75%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/nav_parent_override.cpp.o
@@ -396,10 +396,10 @@ make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/te
 [ 76%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/nested_same_name2.cpp.o
 [ 77%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/nested_types.cpp.o
 [ 77%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/nested_types2.cpp.o
+[ 77%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/nested_types3.cpp.o
 /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/nav_parent_switch_cast.cpp:107:71: error: no member named '_parent' in 'kaitai::kstruct'
     m_flag = static_cast<nav_parent_switch_cast_t::foo_t*>(_parent()->_parent())->flag();
                                                            ~~~~~~~~~  ^
-[ 77%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/nested_types3.cpp.o
 1 error generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/nav_parent_switch_cast.cpp.o] Error 1
 [ 77%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/non_standard.cpp.o
@@ -457,9 +457,9 @@ make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/te
 /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistream.h:179:52: note: passing argument to parameter 'data' here
     static std::string process_xor_one(std::string data, uint8_t key);
                                                    ^
+[ 85%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/repeat_eos_bit.cpp.o
 1 error generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/process_repeat_usertype.cpp.o] Error 1
-[ 85%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/repeat_eos_bit.cpp.o
 [ 85%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/repeat_eos_struct.cpp.o
 [ 85%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/repeat_eos_u4.cpp.o
 [ 86%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/repeat_n_struct.cpp.o
