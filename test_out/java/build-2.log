@@ -1,3 +1,8 @@
+spec/java/src/io/kaitai/struct/spec/TestExprBits.java:5: error: cannot find symbol
+import io.kaitai.struct.testformats.ExprBits;
+                                   ^
+  symbol:   class ExprBits
+  location: package io.kaitai.struct.testformats
 spec/java/src/io/kaitai/struct/spec/TestProcessRepeatUsertype.java:5: error: cannot find symbol
 import io.kaitai.struct.testformats.ProcessRepeatUsertype;
                                    ^
@@ -13,6 +18,22 @@ import io.kaitai.struct.testformats.ProcessRepeatBytes;
                                    ^
   symbol:   class ProcessRepeatBytes
   location: package io.kaitai.struct.testformats
+spec/java/src/io/kaitai/struct/spec/TestExprBits.java:12: error: cannot find symbol
+        ExprBits r = ExprBits.fromFile(SRC_DIR + "switch_opcodes.bin");
+        ^
+  symbol:   class ExprBits
+  location: class TestExprBits
+spec/java/src/io/kaitai/struct/spec/TestExprBits.java:12: error: cannot find symbol
+        ExprBits r = ExprBits.fromFile(SRC_DIR + "switch_opcodes.bin");
+                     ^
+  symbol:   variable ExprBits
+  location: class TestExprBits
+spec/java/src/io/kaitai/struct/spec/TestExprBits.java:15: error: package ExprBits does not exist
+        assertEquals(r.enumSeq(), ExprBits.Items.FOO);
+                                          ^
+spec/java/src/io/kaitai/struct/spec/TestExprBits.java:22: error: package ExprBits does not exist
+        assertEquals(r.enumInst(), ExprBits.Items.BAR);
+                                           ^
 spec/java/src/io/kaitai/struct/spec/TestProcessRepeatUsertype.java:12: error: cannot find symbol
         ProcessRepeatUsertype r = ProcessRepeatUsertype.fromFile(SRC_DIR + "process_xor_4.bin");
         ^
@@ -43,4 +64,4 @@ spec/java/src/io/kaitai/struct/spec/TestProcessRepeatBytes.java:12: error: canno
                                ^
   symbol:   variable ProcessRepeatBytes
   location: class TestProcessRepeatBytes
-9 errors
+14 errors
