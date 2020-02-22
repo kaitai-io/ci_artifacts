@@ -10,6 +10,16 @@ compiled/java/src/io/kaitai/struct/testformats/ValidFailRangeFloat.java:35: erro
   required: long,long,KaitaiStream,String
   found: double,float,KaitaiStream,String
   reason: actual argument double cannot be converted to long by method invocation conversion
+compiled/java/src/io/kaitai/struct/testformats/ExprBits.java:56: error: possible loss of precision
+        switch (a()) {
+                 ^
+  required: int
+  found:    long
+compiled/java/src/io/kaitai/struct/testformats/ExprBits.java:85: error: possible loss of precision
+            switch (_parent().a()) {
+                               ^
+  required: int
+  found:    long
 compiled/java/src/io/kaitai/struct/testformats/ProcessRepeatUsertype.java:35: error: no suitable method found for processXor(ArrayList<byte[]>,int)
             this._raw_blocks = KaitaiStream.processXor(this._raw__raw_blocks, 158);
                                            ^
@@ -24,4 +34,4 @@ compiled/java/src/io/kaitai/struct/testformats/ProcessRepeatBytes.java:34: error
       (actual argument ArrayList<byte[]> cannot be converted to byte[] by method invocation conversion)
     method KaitaiStream.processXor(byte[],int) is not applicable
       (actual argument ArrayList<byte[]> cannot be converted to byte[] by method invocation conversion)
-4 errors
+6 errors
