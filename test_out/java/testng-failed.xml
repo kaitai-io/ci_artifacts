@@ -44,6 +44,7 @@
       <class name="io.kaitai.struct.spec.TestBcdUserTypeLe"/>
       <class name="io.kaitai.struct.spec.TestSwitchManualEnumInvalidElse"/>
       <class name="io.kaitai.struct.spec.TestStrLiterals"/>
+      <class name="io.kaitai.struct.spec.TestSwitchElseOnly"/>
       <class name="io.kaitai.struct.spec.TestNavParentVsValueInst"/>
       <class name="io.kaitai.struct.spec.TestStrEos"/>
       <class name="io.kaitai.struct.spec.TestExprBytesOps"/>
@@ -200,6 +201,16 @@
   </test> <!-- all -->
   <test name="all(failed)">
     <classes>
+      <class name="io.kaitai.struct.spec.TestProcessRepeatUsertype">
+        <methods>
+          <include name="testProcessRepeatUsertype"/>
+        </methods>
+      </class> <!-- io.kaitai.struct.spec.TestProcessRepeatUsertype -->
+      <class name="io.kaitai.struct.spec.TestValidFailRangeFloat">
+        <methods>
+          <include name="testValidFailRangeFloat"/>
+        </methods>
+      </class> <!-- io.kaitai.struct.spec.TestValidFailRangeFloat -->
       <class name="io.kaitai.struct.spec.TestExprBits">
         <methods>
           <include name="testExprBits"/>
@@ -210,16 +221,6 @@
           <include name="testProcessRepeatBytes"/>
         </methods>
       </class> <!-- io.kaitai.struct.spec.TestProcessRepeatBytes -->
-      <class name="io.kaitai.struct.spec.TestValidFailRangeFloat">
-        <methods>
-          <include name="testValidFailRangeFloat"/>
-        </methods>
-      </class> <!-- io.kaitai.struct.spec.TestValidFailRangeFloat -->
-      <class name="io.kaitai.struct.spec.TestProcessRepeatUsertype">
-        <methods>
-          <include name="testProcessRepeatUsertype"/>
-        </methods>
-      </class> <!-- io.kaitai.struct.spec.TestProcessRepeatUsertype -->
     </classes>
   </test> <!-- all(failed) -->
 </suite> <!-- Failed suite [Kaitai Struct Java specs] -->
