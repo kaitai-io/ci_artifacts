@@ -1,37 +1,67 @@
-compiled/java/src/io/kaitai/struct/testformats/ValidFailRangeFloat.java:32: error: constructor ValidationLessThanError in class ValidationLessThanError cannot be applied to given types;
-            throw new KaitaiStream.ValidationLessThanError(0.2, foo(), _io(), "/seq/0");
-                  ^
-  required: long,long,KaitaiStream,String
-  found: double,float,KaitaiStream,String
-  reason: actual argument double cannot be converted to long by method invocation conversion
-compiled/java/src/io/kaitai/struct/testformats/ValidFailRangeFloat.java:35: error: constructor ValidationGreaterThanError in class ValidationGreaterThanError cannot be applied to given types;
-            throw new KaitaiStream.ValidationGreaterThanError(0.4, foo(), _io(), "/seq/0");
-                  ^
-  required: long,long,KaitaiStream,String
-  found: double,float,KaitaiStream,String
-  reason: actual argument double cannot be converted to long by method invocation conversion
-compiled/java/src/io/kaitai/struct/testformats/ExprBits.java:56: error: possible loss of precision
-        switch (a()) {
-                 ^
-  required: int
-  found:    long
-compiled/java/src/io/kaitai/struct/testformats/ExprBits.java:85: error: possible loss of precision
-            switch (_parent().a()) {
+spec/java/src/io/kaitai/struct/spec/TestProcessRepeatUsertype.java:5: error: cannot find symbol
+import io.kaitai.struct.testformats.ProcessRepeatUsertype;
+                                   ^
+  symbol:   class ProcessRepeatUsertype
+  location: package io.kaitai.struct.testformats
+spec/java/src/io/kaitai/struct/spec/TestValidFailRangeFloat.java:5: error: cannot find symbol
+import io.kaitai.struct.testformats.ValidFailRangeFloat;
+                                   ^
+  symbol:   class ValidFailRangeFloat
+  location: package io.kaitai.struct.testformats
+spec/java/src/io/kaitai/struct/spec/TestProcessRepeatBytes.java:5: error: cannot find symbol
+import io.kaitai.struct.testformats.ProcessRepeatBytes;
+                                   ^
+  symbol:   class ProcessRepeatBytes
+  location: package io.kaitai.struct.testformats
+spec/java/src/io/kaitai/struct/spec/TestExprBits.java:5: error: cannot find symbol
+import io.kaitai.struct.testformats.ExprBits;
+                                   ^
+  symbol:   class ExprBits
+  location: package io.kaitai.struct.testformats
+spec/java/src/io/kaitai/struct/spec/TestProcessRepeatUsertype.java:12: error: cannot find symbol
+        ProcessRepeatUsertype r = ProcessRepeatUsertype.fromFile(SRC_DIR + "process_xor_4.bin");
+        ^
+  symbol:   class ProcessRepeatUsertype
+  location: class TestProcessRepeatUsertype
+spec/java/src/io/kaitai/struct/spec/TestProcessRepeatUsertype.java:12: error: cannot find symbol
+        ProcessRepeatUsertype r = ProcessRepeatUsertype.fromFile(SRC_DIR + "process_xor_4.bin");
+                                  ^
+  symbol:   variable ProcessRepeatUsertype
+  location: class TestProcessRepeatUsertype
+spec/java/src/io/kaitai/struct/spec/TestValidFailRangeFloat.java:13: error: cannot find symbol
+        ValidFailRangeFloat r = ValidFailRangeFloat.fromFile(SRC_DIR + "floating_points.bin");
+        ^
+  symbol:   class ValidFailRangeFloat
+  location: class TestValidFailRangeFloat
+spec/java/src/io/kaitai/struct/spec/TestValidFailRangeFloat.java:13: error: cannot find symbol
+        ValidFailRangeFloat r = ValidFailRangeFloat.fromFile(SRC_DIR + "floating_points.bin");
+                                ^
+  symbol:   variable ValidFailRangeFloat
+  location: class TestValidFailRangeFloat
+spec/java/src/io/kaitai/struct/spec/TestProcessRepeatBytes.java:12: error: cannot find symbol
+        ProcessRepeatBytes r = ProcessRepeatBytes.fromFile(SRC_DIR + "process_xor_4.bin");
+        ^
+  symbol:   class ProcessRepeatBytes
+  location: class TestProcessRepeatBytes
+spec/java/src/io/kaitai/struct/spec/TestProcessRepeatBytes.java:12: error: cannot find symbol
+        ProcessRepeatBytes r = ProcessRepeatBytes.fromFile(SRC_DIR + "process_xor_4.bin");
                                ^
-  required: int
-  found:    long
-compiled/java/src/io/kaitai/struct/testformats/ProcessRepeatUsertype.java:35: error: no suitable method found for processXor(ArrayList<byte[]>,int)
-            this._raw_blocks = KaitaiStream.processXor(this._raw__raw_blocks, 158);
+  symbol:   variable ProcessRepeatBytes
+  location: class TestProcessRepeatBytes
+spec/java/src/io/kaitai/struct/spec/TestExprBits.java:12: error: cannot find symbol
+        ExprBits r = ExprBits.fromFile(SRC_DIR + "switch_opcodes.bin");
+        ^
+  symbol:   class ExprBits
+  location: class TestExprBits
+spec/java/src/io/kaitai/struct/spec/TestExprBits.java:12: error: cannot find symbol
+        ExprBits r = ExprBits.fromFile(SRC_DIR + "switch_opcodes.bin");
+                     ^
+  symbol:   variable ExprBits
+  location: class TestExprBits
+spec/java/src/io/kaitai/struct/spec/TestExprBits.java:15: error: package ExprBits does not exist
+        assertEquals(r.enumSeq(), ExprBits.Items.FOO);
+                                          ^
+spec/java/src/io/kaitai/struct/spec/TestExprBits.java:22: error: package ExprBits does not exist
+        assertEquals(r.enumInst(), ExprBits.Items.BAR);
                                            ^
-    method KaitaiStream.processXor(byte[],byte[]) is not applicable
-      (actual argument ArrayList<byte[]> cannot be converted to byte[] by method invocation conversion)
-    method KaitaiStream.processXor(byte[],int) is not applicable
-      (actual argument ArrayList<byte[]> cannot be converted to byte[] by method invocation conversion)
-compiled/java/src/io/kaitai/struct/testformats/ProcessRepeatBytes.java:34: error: no suitable method found for processXor(ArrayList<byte[]>,int)
-            this.bufs = KaitaiStream.processXor(this._raw_bufs, 158);
-                                    ^
-    method KaitaiStream.processXor(byte[],byte[]) is not applicable
-      (actual argument ArrayList<byte[]> cannot be converted to byte[] by method invocation conversion)
-    method KaitaiStream.processXor(byte[],int) is not applicable
-      (actual argument ArrayList<byte[]> cannot be converted to byte[] by method invocation conversion)
-6 errors
+14 errors
