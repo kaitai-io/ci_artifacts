@@ -1,28 +1,25 @@
-compiled/java/src/io/kaitai/struct/testformats/ProcessRepeatBytes.java:34: error: no suitable method found for processXor(ArrayList<byte[]>,int)
-            this.bufs = KaitaiStream.processXor(this._raw_bufs, 158);
-                                    ^
-    method KaitaiStream.processXor(byte[],int) is not applicable
-      (argument mismatch; ArrayList<byte[]> cannot be converted to byte[])
-    method KaitaiStream.processXor(byte[],byte[]) is not applicable
-      (argument mismatch; ArrayList<byte[]> cannot be converted to byte[])
-compiled/java/src/io/kaitai/struct/testformats/ExprBits.java:56: error: incompatible types: possible lossy conversion from long to int
-        switch (a()) {
+spec/java/src/io/kaitai/struct/spec/TestSwitchDefaultOnly.java:15: error: <identifier> expected
+        assertIntEquals(r.byte(), 102);
+                          ^
+spec/java/src/io/kaitai/struct/spec/TestSwitchDefaultOnly.java:15: error: ';' expected
+        assertIntEquals(r.byte(), 102);
+                              ^
+compiled/java/src/io/kaitai/struct/testformats/SwitchDefaultOnly.java:33: error: <identifier> expected
+            this.byte = this._io.readS1();
+                 ^
+compiled/java/src/io/kaitai/struct/testformats/SwitchDefaultOnly.java:82: error: <identifier> expected
+    private byte byte;
+                ^
+compiled/java/src/io/kaitai/struct/testformats/SwitchDefaultOnly.java:82: error: <identifier> expected
+    private byte byte;
+                     ^
+compiled/java/src/io/kaitai/struct/testformats/SwitchDefaultOnly.java:89: error: <identifier> expected
+    public byte byte() { return byte; }
                ^
-compiled/java/src/io/kaitai/struct/testformats/ExprBits.java:85: error: incompatible types: possible lossy conversion from long to int
-            switch (_parent().a()) {
-                   ^
-compiled/java/src/io/kaitai/struct/testformats/ProcessRepeatUsertype.java:35: error: no suitable method found for processXor(ArrayList<byte[]>,int)
-            this._raw_blocks = KaitaiStream.processXor(this._raw__raw_blocks, 158);
-                                           ^
-    method KaitaiStream.processXor(byte[],int) is not applicable
-      (argument mismatch; ArrayList<byte[]> cannot be converted to byte[])
-    method KaitaiStream.processXor(byte[],byte[]) is not applicable
-      (argument mismatch; ArrayList<byte[]> cannot be converted to byte[])
-compiled/java/src/io/kaitai/struct/testformats/ValidFailRangeFloat.java:32: error: incompatible types: possible lossy conversion from double to long
-            throw new KaitaiStream.ValidationLessThanError(0.2, foo(), _io(), "/seq/0");
-                                                           ^
-compiled/java/src/io/kaitai/struct/testformats/ValidFailRangeFloat.java:35: error: incompatible types: possible lossy conversion from double to long
-            throw new KaitaiStream.ValidationGreaterThanError(0.4, foo(), _io(), "/seq/0");
-                                                              ^
-Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
-6 errors
+compiled/java/src/io/kaitai/struct/testformats/SwitchDefaultOnly.java:89: error: <identifier> expected
+    public byte byte() { return byte; }
+                    ^
+compiled/java/src/io/kaitai/struct/testformats/SwitchDefaultOnly.java:89: error: '.class' expected
+    public byte byte() { return byte; }
+                                    ^
+8 errors
