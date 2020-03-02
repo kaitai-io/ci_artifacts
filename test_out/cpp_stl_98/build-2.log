@@ -1,0 +1,21 @@
+Scanning dependencies of target ks_tests
+[  0%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/process_repeat_bytes.cpp.o
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/process_repeat_bytes.cpp:21:51: error: no viable conversion from 'std::vector<std::string> *' (aka 'vector<basic_string<char> > *') to 'std::string' (aka 'basic_string<char>')
+        m_bufs = kaitai::kstream::process_xor_one(m__raw_bufs, 158);
+                                                  ^~~~~~~~~~~
+/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/bits/basic_string.h:455:7: note: candidate constructor not viable: no known conversion from 'std::vector<std::string> *' (aka 'vector<basic_string<char> > *') to 'const std::basic_string<char> &' for 1st argument
+      basic_string(const basic_string& __str);
+      ^
+/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/bits/basic_string.h:490:7: note: candidate constructor not viable: no known conversion from 'std::vector<std::string> *' (aka 'vector<basic_string<char> > *') to 'const char *' for 1st argument
+      basic_string(const _CharT* __s, const _Alloc& __a = _Alloc());
+      ^
+/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistream.h:179:52: note: passing argument to parameter 'data' here
+    static std::string process_xor_one(std::string data, uint8_t key);
+                                                   ^
+1 error generated.
+make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/process_repeat_bytes.cpp.o] Error 1
+make[2]: Target `CMakeFiles/ks_tests.dir/build' not remade because of errors.
+make[1]: *** [CMakeFiles/ks_tests.dir/all] Error 2
+make[1]: Target `all' not remade because of errors.
+make: *** [all] Error 2
+make: Target `default_target' not remade because of errors.
