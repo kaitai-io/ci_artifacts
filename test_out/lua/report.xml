@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites>
-    <testsuite name="LuaUnit" id="00001" package="" hostname="localhost" tests="165" timestamp="2020-03-08T15:18:38" time="0.019" errors="1" failures="9">
+    <testsuite name="LuaUnit" id="00001" package="" hostname="localhost" tests="166" timestamp="2020-03-08T15:29:41" time="0.020" errors="1" failures="9">
         <properties>
             <property name="Lua Version" value="Lua 5.3"/>
             <property name="LuaUnit Version" value="3.3"/>
@@ -32,10 +32,7 @@
         </testcase>
         <testcase classname="TestDebugEnumName" name="TestDebugEnumName.test_debug_enum_name" time="0.000">
         </testcase>
-        <testcase classname="TestDebugSwitchUser" name="TestDebugSwitchUser.test_debug_switch_user" time="0.001">
-            <failure type="spec/lua/test_debug_switch_user.lua:12: expected: 1, actual: nil">
-                <![CDATA[stack traceback:
-	spec/lua/test_debug_switch_user.lua:12: in upvalue 'TestDebugSwitchUser.test_debug_switch_user']]></failure>
+        <testcase classname="TestDebugSwitchUser" name="TestDebugSwitchUser.test_debug_switch_user" time="0.000">
         </testcase>
         <testcase classname="TestDefaultBigEndian" name="TestDefaultBigEndian.test_default_big_endian" time="0.000">
         </testcase>
@@ -312,6 +309,12 @@ actual: &quot;oo|b&quot;">
         <testcase classname="TestSwitchBytearray" name="TestSwitchBytearray.test_switch_bytearray" time="0.000">
         </testcase>
         <testcase classname="TestSwitchCast" name="TestSwitchCast.test_switch_cast" time="0.000">
+        </testcase>
+        <testcase classname="TestSwitchElseOnly" name="TestSwitchElseOnly.test_switch_else_only" time="0.002">
+            <failure type="spec/lua/run_test_suite.lua:17: error loading module &apos;switch_else_only&apos; from file &apos;compiled/lua/switch_else_only.lua&apos;:
+	compiled/lua/switch_else_only.lua:21: &apos;end&apos; expected (to close &apos;function&apos; at line 18) near &apos;else&apos;">
+                <![CDATA[stack traceback:
+	spec/lua/run_test_suite.lua:17: in upvalue 'TestSwitchElseOnly.test_switch_else_only']]></failure>
         </testcase>
         <testcase classname="TestSwitchIntegers" name="TestSwitchIntegers.test_switch_integers" time="0.000">
         </testcase>
