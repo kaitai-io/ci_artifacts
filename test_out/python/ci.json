@@ -1,135 +1,28 @@
 {
-  "BcdUserTypeLe": {
-    "status": "passed",
+  "EnumImport": {
+    "status": "failed",
     "elapsed": 0.001,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": "'EnumImport' object has no attribute 'Animal'",
+      "trace": [
+        "\n",
+        "Traceback (most recent call last):\n  File \"/home/travis/build/kaitai-io/ci_targets/tests/spec/python/test_enum_import.py\", line 9, in test_enum_import\n    with EnumImport.from_file('src/enum_0.bin') as r:\n  File \"/home/travis/build/kaitai-io/ci_targets/runtime/python/kaitaistruct.py\", line 35, in from_file\n    return cls(KaitaiStream(f))\n  File \"/home/travis/build/kaitai-io/ci_targets/tests/compiled/python/enum_import.py\", line 16, in __init__\n    self._read()\n  File \"/home/travis/build/kaitai-io/ci_targets/tests/compiled/python/enum_import.py\", line 19, in _read\n    self.pet_1 = KaitaiStream.resolve_enum(self._root.Animal, self._io.read_u4le())\nAttributeError: 'EnumImport' object has no attribute 'Animal'\n",
+        "\t\t"
+      ]
+    },
     "is_kst": true
+  },
+  "TypeTernaryOpaque": {
+    "status": "passed",
+    "elapsed": 0.0
   },
   "SwitchMultiBoolOps": {
     "status": "passed",
     "elapsed": 0.001
   },
-  "ExprSizeofType0": {
-    "status": "passed",
-    "elapsed": 0.0,
-    "is_kst": true
-  },
-  "StrEos": {
-    "status": "passed",
-    "elapsed": 0.0,
-    "is_kst": true
-  },
-  "Debug0": {
-    "status": "passed",
-    "elapsed": 0.001
-  },
-  "EnumDeepLiterals": {
-    "status": "passed",
-    "elapsed": 0.0,
-    "is_kst": true
-  },
-  "FloatingPoints": {
-    "status": "passed",
-    "elapsed": 0.001,
-    "is_kst": true
-  },
-  "SwitchManualEnumInvalid": {
-    "status": "passed",
-    "elapsed": 0.0
-  },
-  "StrEncodings": {
-    "status": "passed",
-    "elapsed": 0.0,
-    "is_kst": true
-  },
-  "EnumOfValueInst": {
-    "status": "passed",
-    "elapsed": 0.0,
-    "is_kst": true
-  },
-  "ImportsRel1": {
-    "status": "passed",
-    "elapsed": 0.0
-  },
-  "RepeatNStrzDouble": {
-    "status": "passed",
-    "elapsed": 0.0,
-    "is_kst": true
-  },
-  "StrEncodingsDefault": {
-    "status": "passed",
-    "elapsed": 0.008,
-    "is_kst": true
-  },
-  "FloatToI": {
-    "status": "passed",
-    "elapsed": 0.001,
-    "is_kst": true
-  },
-  "StrLiterals": {
-    "status": "passed",
-    "elapsed": 0.001
-  },
-  "DocstringsDocrefMulti": {
-    "status": "passed",
-    "elapsed": 0.0,
-    "is_kst": true
-  },
-  "ParamsCallShort": {
-    "status": "passed",
-    "elapsed": 0.0,
-    "is_kst": true
-  },
-  "NavParentOverride": {
-    "status": "passed",
-    "elapsed": 0.0,
-    "is_kst": true
-  },
-  "ValidFailInst": {
-    "status": "passed",
-    "elapsed": 0.0,
-    "is_kst": true
-  },
-  "TypeIntUnaryOp": {
-    "status": "passed",
-    "elapsed": 0.0,
-    "is_kst": true
-  },
-  "NavRoot": {
-    "status": "passed",
-    "elapsed": 0.0,
-    "is_kst": true
-  },
   "ProcessXor4Value": {
-    "status": "passed",
-    "elapsed": 0.0,
-    "is_kst": true
-  },
-  "FixedStruct": {
-    "status": "passed",
-    "elapsed": 0.001,
-    "is_kst": true
-  },
-  "ExprArray": {
-    "status": "passed",
-    "elapsed": 0.001,
-    "is_kst": true
-  },
-  "PositionToEnd": {
-    "status": "passed",
-    "elapsed": 0.0,
-    "is_kst": true
-  },
-  "EosExceptionBytes": {
-    "status": "passed",
-    "elapsed": 0.0,
-    "is_kst": true
-  },
-  "StrLiterals2": {
-    "status": "passed",
-    "elapsed": 0.0,
-    "is_kst": true
-  },
-  "ValidShort": {
     "status": "passed",
     "elapsed": 0.0,
     "is_kst": true
@@ -139,42 +32,352 @@
     "elapsed": 0.0,
     "is_kst": true
   },
-  "SwitchManualEnum": {
+  "NavParentVsValueInst": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "ParamsPassUsertype": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "EosExceptionBytes": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "ExprIoEof": {
+    "status": "passed",
+    "elapsed": 0.0
+  },
+  "InstanceIoUser": {
     "status": "passed",
     "elapsed": 0.001,
     "is_kst": true
   },
-  "ValidLong": {
+  "ParamsCallShort": {
     "status": "passed",
     "elapsed": 0.0,
     "is_kst": true
+  },
+  "ParamsEnum": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "ProcessCoerceUsertype2": {
+    "status": "passed",
+    "elapsed": 0.001,
+    "is_kst": true
+  },
+  "UserType": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "SwitchBytearray": {
+    "status": "passed",
+    "elapsed": 0.001,
+    "is_kst": true
+  },
+  "OpaqueWithParam": {
+    "status": "passed",
+    "elapsed": 0.0
+  },
+  "EnumNegative": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "Expr3": {
+    "status": "passed",
+    "elapsed": 0.001,
+    "is_kst": true
+  },
+  "Debug0": {
+    "status": "passed",
+    "elapsed": 0.001
+  },
+  "ProcessToUser": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "ValidFailMaxInt": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "RepeatNStrz": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "CastNested": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "ValidNotParsedIf": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "EnumLongRangeU": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "EnumToI": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "TypeTernary": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "BitsSimple": {
+    "status": "passed",
+    "elapsed": 0.001,
+    "is_kst": true
+  },
+  "DebugArrayUser": {
+    "status": "passed",
+    "elapsed": 0.0
+  },
+  "BcdUserTypeLe": {
+    "status": "passed",
+    "elapsed": 0.001,
+    "is_kst": true
+  },
+  "ProcessXorValue": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "SwitchManualEnumInvalid": {
+    "status": "passed",
+    "elapsed": 0.001
+  },
+  "RepeatEosBit": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "StrLiterals2": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "ImportsAbs": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "SwitchManualIntElse": {
+    "status": "passed",
+    "elapsed": 0.001,
+    "is_kst": true
+  },
+  "TsPacketHeader": {
+    "status": "passed",
+    "elapsed": 0.001,
+    "is_kst": true
+  },
+  "InstanceStdArray": {
+    "status": "passed",
+    "elapsed": 0.001,
+    "is_kst": true
+  },
+  "ProcessRepeatBytes": {
+    "status": "passed",
+    "elapsed": 0.002,
+    "is_kst": true
+  },
+  "DebugSwitchUser": {
+    "status": "passed",
+    "elapsed": 0.0
+  },
+  "ProcessCoerceBytes": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "ValidSwitch": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "NestedTypes": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "CastToTop": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "NavRoot": {
+    "status": "passed",
+    "elapsed": 0.001,
+    "is_kst": true
+  },
+  "EnumLongRangeS": {
+    "status": "passed",
+    "elapsed": 0.001,
+    "is_kst": true
+  },
+  "IndexToParamUntil": {
+    "status": "passed",
+    "elapsed": 0.001,
+    "is_kst": true
+  },
+  "NavParentOverride": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "SwitchManualIntSizeElse": {
+    "status": "passed",
+    "elapsed": 0.001,
+    "is_kst": true
+  },
+  "SwitchManualStr": {
+    "status": "passed",
+    "elapsed": 0.001,
+    "is_kst": true
+  },
+  "SwitchManualIntSizeEos": {
+    "status": "passed",
+    "elapsed": 0.001
   },
   "Enum1": {
     "status": "passed",
     "elapsed": 0.0,
     "is_kst": true
   },
-  "ProcessXorConst": {
+  "ProcessXor4Const": {
     "status": "passed",
     "elapsed": 0.0,
     "is_kst": true
   },
-  "ExprBytesOps": {
+  "DocstringsDocrefMulti": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "NestedSameName": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "Imports0": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "OptionalId": {
+    "status": "passed",
+    "elapsed": 0.0
+  },
+  "ValidFailInst": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "EnumIntRangeS": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "ExprSizeofValue0": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "MultipleUse": {
     "status": "passed",
     "elapsed": 0.001,
     "is_kst": true
   },
-  "DefaultEndianExprInherited": {
+  "NavParent": {
     "status": "passed",
     "elapsed": 0.001,
     "is_kst": true
   },
-  "DefaultEndianExprIsBe": {
+  "EofExceptionU4": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "Expr0": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "SwitchManualEnum": {
     "status": "passed",
     "elapsed": 0.001,
     "is_kst": true
   },
-  "DefaultEndianMod": {
+  "Enum0": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "ParamsDef": {
+    "status": "passed",
+    "elapsed": 0.0
+  },
+  "SwitchManualStrElse": {
+    "status": "passed",
+    "elapsed": 0.001,
+    "is_kst": true
+  },
+  "ImportsAbsRel": {
+    "status": "passed",
+    "elapsed": 0.0
+  },
+  "BitsByteAligned": {
+    "status": "passed",
+    "elapsed": 0.001,
+    "is_kst": true
+  },
+  "Expr1": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "TermBytes": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "NavParentSwitch": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "ProcessCoerceUsertype1": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "NavParentSwitchCast": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "ExprStrOps": {
+    "status": "passed",
+    "elapsed": 0.001,
+    "is_kst": true
+  },
+  "TermStrz": {
     "status": "passed",
     "elapsed": 0.0,
     "is_kst": true
@@ -194,281 +397,40 @@
     },
     "is_kst": true
   },
-  "NonStandard": {
-    "status": "passed",
-    "elapsed": 0.0,
-    "is_kst": true
-  },
-  "BufferedStruct": {
-    "status": "passed",
-    "elapsed": 0.0,
-    "is_kst": true
-  },
-  "TsPacketHeader": {
-    "status": "passed",
-    "elapsed": 0.0,
-    "is_kst": true
-  },
-  "IndexToParamExpr": {
-    "status": "passed",
-    "elapsed": 0.001,
-    "is_kst": true
-  },
-  "SwitchManualInt": {
-    "status": "passed",
-    "elapsed": 0.001,
-    "is_kst": true
-  },
-  "EnumImport": {
-    "status": "failed",
-    "elapsed": 0.001,
-    "failure": {
-      "file_name": null,
-      "line_num": null,
-      "message": "'EnumImport' object has no attribute 'Animal'",
-      "trace": [
-        "\n",
-        "Traceback (most recent call last):\n  File \"/home/travis/build/kaitai-io/ci_targets/tests/spec/python/test_enum_import.py\", line 9, in test_enum_import\n    with EnumImport.from_file('src/enum_0.bin') as r:\n  File \"/home/travis/build/kaitai-io/ci_targets/runtime/python/kaitaistruct.py\", line 35, in from_file\n    return cls(KaitaiStream(f))\n  File \"/home/travis/build/kaitai-io/ci_targets/tests/compiled/python/enum_import.py\", line 16, in __init__\n    self._read()\n  File \"/home/travis/build/kaitai-io/ci_targets/tests/compiled/python/enum_import.py\", line 19, in _read\n    self.pet_1 = KaitaiStream.resolve_enum(self._root.Animal, self._io.read_u4le())\nAttributeError: 'EnumImport' object has no attribute 'Animal'\n",
-        "\t\t"
-      ]
-    },
-    "is_kst": true
-  },
-  "CastToTop": {
-    "status": "passed",
-    "elapsed": 0.0,
-    "is_kst": true
-  },
-  "RepeatNStrz": {
-    "status": "passed",
-    "elapsed": 0.0,
-    "is_kst": true
-  },
-  "ValidNotParsedIf": {
-    "status": "passed",
-    "elapsed": 0.0,
-    "is_kst": true
-  },
-  "ZlibWithHeader78": {
-    "status": "passed",
-    "elapsed": 0.0,
-    "is_kst": true
-  },
-  "StrPadTerm": {
-    "status": "passed",
-    "elapsed": 0.0,
-    "is_kst": true
-  },
-  "IndexSizes": {
-    "status": "passed",
-    "elapsed": 0.0,
-    "is_kst": true
-  },
-  "MetaTags": {
-    "status": "passed",
-    "elapsed": 0.0,
-    "is_kst": true
-  },
-  "ProcessCoerceSwitch": {
-    "status": "passed",
-    "elapsed": 0.001,
-    "is_kst": true
-  },
-  "ProcessCustomNoArgs": {
-    "status": "passed",
-    "elapsed": 0.0,
-    "is_kst": true
-  },
-  "DefaultEndianExprException": {
-    "status": "passed",
-    "elapsed": 0.0,
-    "is_kst": true
-  },
-  "Expr1": {
-    "status": "passed",
-    "elapsed": 0.0,
-    "is_kst": true
-  },
-  "IfValues": {
-    "status": "passed",
-    "elapsed": 0.001,
-    "is_kst": true
-  },
-  "NavParentFalse2": {
-    "status": "passed",
-    "elapsed": 0.0,
-    "is_kst": true
-  },
-  "RepeatUntilSized": {
-    "status": "passed",
-    "elapsed": 0.001,
-    "is_kst": true
-  },
-  "JsSignedRightShift": {
-    "status": "passed",
-    "elapsed": 0.0,
-    "is_kst": true
-  },
-  "MetaXref": {
-    "status": "passed",
-    "elapsed": 0.0,
-    "is_kst": true
-  },
-  "OpaqueWithParam": {
+  "SwitchRepeatExpr": {
     "status": "passed",
     "elapsed": 0.0
   },
-  "ParamsPassUsertype": {
+  "DefaultBigEndian": {
     "status": "passed",
     "elapsed": 0.0,
     "is_kst": true
   },
-  "RepeatEosU4": {
+  "EosExceptionU4": {
     "status": "passed",
     "elapsed": 0.0,
     "is_kst": true
   },
-  "EnumNegative": {
-    "status": "passed",
-    "elapsed": 0.0,
-    "is_kst": true
-  },
-  "RepeatUntilComplex": {
-    "status": "passed",
-    "elapsed": 0.001,
-    "is_kst": true
-  },
-  "EnumIntRangeU": {
-    "status": "passed",
-    "elapsed": 0.0,
-    "is_kst": true
-  },
-  "BitsEnum": {
-    "status": "passed",
-    "elapsed": 0.0,
-    "is_kst": true
-  },
-  "NestedTypes": {
-    "status": "passed",
-    "elapsed": 0.0,
-    "is_kst": true
-  },
-  "ValidFailEqInt": {
-    "status": "passed",
-    "elapsed": 0.0,
-    "is_kst": true
-  },
-  "ExprSizeofValue0": {
-    "status": "passed",
-    "elapsed": 0.0,
-    "is_kst": true
-  },
-  "ValidFailContents": {
-    "status": "passed",
-    "elapsed": 0.0,
-    "is_kst": true
-  },
-  "NavParentSwitch": {
-    "status": "passed",
-    "elapsed": 0.0,
-    "is_kst": true
-  },
-  "SwitchManualIntSize": {
-    "status": "passed",
-    "elapsed": 0.001
-  },
-  "SwitchManualStr": {
-    "status": "passed",
-    "elapsed": 0.001,
-    "is_kst": true
-  },
-  "BytesPadTerm": {
-    "status": "passed",
-    "elapsed": 0.0,
-    "is_kst": true
-  },
-  "DebugArrayUser": {
+  "YamlInts": {
     "status": "passed",
     "elapsed": 0.0
   },
-  "Expr0": {
+  "PositionToEnd": {
     "status": "passed",
     "elapsed": 0.0,
     "is_kst": true
   },
-  "EnumLongRangeU": {
+  "NestedSameName2": {
     "status": "passed",
     "elapsed": 0.0,
     "is_kst": true
   },
-  "MultipleUse": {
+  "EofExceptionBytes": {
     "status": "passed",
     "elapsed": 0.0,
     "is_kst": true
   },
-  "EofExceptionU4": {
-    "status": "passed",
-    "elapsed": 0.0,
-    "is_kst": true
-  },
-  "ValidFailRangeInt": {
-    "status": "passed",
-    "elapsed": 0.0,
-    "is_kst": true
-  },
-  "SwitchManualIntSizeEos": {
-    "status": "passed",
-    "elapsed": 0.001
-  },
-  "ExprBits": {
-    "status": "passed",
-    "elapsed": 0.001,
-    "is_kst": true
-  },
-  "IndexToParamUntil": {
-    "status": "passed",
-    "elapsed": 0.001,
-    "is_kst": true
-  },
-  "ValidFailMaxInt": {
-    "status": "passed",
-    "elapsed": 0.0,
-    "is_kst": true
-  },
-  "TypeTernaryOpaque": {
-    "status": "passed",
-    "elapsed": 0.0
-  },
-  "EnumLongRangeS": {
-    "status": "passed",
-    "elapsed": 0.001,
-    "is_kst": true
-  },
-  "Enum0": {
-    "status": "passed",
-    "elapsed": 0.0,
-    "is_kst": true
-  },
-  "NavParent3": {
-    "status": "passed",
-    "elapsed": 0.001,
-    "is_kst": true
-  },
-  "SwitchManualIntElse": {
-    "status": "passed",
-    "elapsed": 0.001,
-    "is_kst": true
-  },
-  "ImportsAbsRel": {
-    "status": "passed",
-    "elapsed": 0.0
-  },
-  "ProcessCoerceUsertype2": {
-    "status": "passed",
-    "elapsed": 0.0,
-    "is_kst": true
-  },
-  "ProcessRotate": {
+  "IoLocalVar": {
     "status": "passed",
     "elapsed": 0.0,
     "is_kst": true
@@ -478,70 +440,62 @@
     "elapsed": 0.0,
     "is_kst": true
   },
-  "NavParentSwitchCast": {
+  "IfStruct": {
+    "status": "passed",
+    "elapsed": 0.002,
+    "is_kst": true
+  },
+  "ValidFailEqInt": {
     "status": "passed",
     "elapsed": 0.0,
     "is_kst": true
   },
-  "ExprMod": {
+  "ValidFailAnyofInt": {
     "status": "passed",
     "elapsed": 0.0,
     "is_kst": true
   },
-  "DefaultBigEndian": {
-    "status": "passed",
-    "elapsed": 0.0,
-    "is_kst": true
-  },
-  "SwitchIntegers": {
+  "ProcessRotate": {
     "status": "passed",
     "elapsed": 0.001,
     "is_kst": true
   },
-  "ImportsCircularA": {
-    "status": "passed",
-    "elapsed": 0.0
-  },
-  "ProcessRepeatBytes": {
-    "status": "passed",
-    "elapsed": 0.001,
-    "is_kst": true
-  },
-  "IfInstances": {
+  "EnumOfValueInst": {
     "status": "passed",
     "elapsed": 0.0,
     "is_kst": true
   },
-  "EnumIntRangeS": {
+  "DocstringsDocref": {
     "status": "passed",
     "elapsed": 0.0,
     "is_kst": true
   },
-  "ParamsDef": {
-    "status": "passed",
-    "elapsed": 0.0
-  },
-  "ValidFailMinInt": {
+  "PositionAbs": {
     "status": "passed",
     "elapsed": 0.0,
     "is_kst": true
   },
-  "SwitchManualIntSizeElse": {
-    "status": "passed",
-    "elapsed": 0.001,
-    "is_kst": true
-  },
-  "ValidFailEqBytes": {
+  "RepeatEosStruct": {
     "status": "passed",
     "elapsed": 0.0,
     "is_kst": true
   },
-  "Docstrings": {
+  "StrPadTermEmpty": {
     "status": "passed",
     "elapsed": 0.0,
     "is_kst": true
   },
-  "TermBytes": {
+  "TypeIntUnaryOp": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "BitsEnum": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "RepeatEosU4": {
     "status": "passed",
     "elapsed": 0.0,
     "is_kst": true
@@ -551,18 +505,159 @@
     "elapsed": 0.0,
     "is_kst": true
   },
-  "YamlInts": {
+  "SwitchIntegers": {
+    "status": "passed",
+    "elapsed": 0.001,
+    "is_kst": true
+  },
+  "ProcessCustomNoArgs": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "SwitchCast": {
     "status": "passed",
     "elapsed": 0.0
+  },
+  "PositionInSeq": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "EnumInvalid": {
+    "status": "passed",
+    "elapsed": 0.0
+  },
+  "DefaultEndianMod": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "ValidFailRangeInt": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "EnumDeepLiterals": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "RepeatNStrzDouble": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "ImportsRel1": {
+    "status": "passed",
+    "elapsed": 0.0
+  },
+  "DefaultEndianExprIsLe": {
+    "status": "passed",
+    "elapsed": 0.001,
+    "is_kst": true
+  },
+  "EnumFancy": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "EnumToIClassBorder1": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "BufferedStruct": {
+    "status": "passed",
+    "elapsed": 0.001,
+    "is_kst": true
+  },
+  "ProcessCoerceSwitch": {
+    "status": "passed",
+    "elapsed": 0.001,
+    "is_kst": true
+  },
+  "ImportsAbsAbs": {
+    "status": "passed",
+    "elapsed": 0.0
+  },
+  "ExprSizeofType0": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "ProcessXorConst": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "MetaXref": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "ExprBits": {
+    "status": "passed",
+    "elapsed": 0.001,
+    "is_kst": true
+  },
+  "NestedTypes3": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "ProcessCustom": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "SwitchManualEnumInvalidElse": {
+    "status": "passed",
+    "elapsed": 0.001,
+    "is_kst": true
+  },
+  "SwitchIntegers2": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "CastToImported": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "ValidFailRangeFloat": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
   },
   "ExprCalcArrayOps": {
     "status": "passed",
     "elapsed": 0.001,
     "is_kst": true
   },
-  "TypeTernary": {
+  "SwitchManualInt": {
+    "status": "passed",
+    "elapsed": 0.001,
+    "is_kst": true
+  },
+  "ValidFailEqBytes": {
     "status": "passed",
     "elapsed": 0.0,
+    "is_kst": true
+  },
+  "SwitchManualIntSize": {
+    "status": "passed",
+    "elapsed": 0.001
+  },
+  "IndexToParamExpr": {
+    "status": "passed",
+    "elapsed": 0.001,
+    "is_kst": true
+  },
+  "RepeatUntilSized": {
+    "status": "passed",
+    "elapsed": 0.001,
     "is_kst": true
   },
   "ParamsCallExtraParens": {
@@ -570,24 +665,112 @@
     "elapsed": 0.0,
     "is_kst": true
   },
-  "InstanceStdArray": {
-    "status": "passed",
-    "elapsed": 0.0,
-    "is_kst": true
-  },
-  "ExprEnum": {
-    "status": "passed",
-    "elapsed": 0.0,
-    "is_kst": true
-  },
-  "BitsByteAligned": {
+  "IndexToParamEos": {
     "status": "passed",
     "elapsed": 0.001,
     "is_kst": true
   },
-  "UserType": {
+  "RepeatNStruct": {
+    "status": "passed",
+    "elapsed": 0.001,
+    "is_kst": true
+  },
+  "IfInstances": {
+    "status": "passed",
+    "elapsed": 0.001,
+    "is_kst": true
+  },
+  "ExprSizeofType1": {
     "status": "passed",
     "elapsed": 0.0,
+    "is_kst": true
+  },
+  "DefaultEndianExprIsBe": {
+    "status": "passed",
+    "elapsed": 0.001,
+    "is_kst": true
+  },
+  "DefaultEndianExprInherited": {
+    "status": "passed",
+    "elapsed": 0.001,
+    "is_kst": true
+  },
+  "DefaultEndianExprException": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "RepeatUntilComplex": {
+    "status": "passed",
+    "elapsed": 0.001,
+    "is_kst": true
+  },
+  "FloatingPoints": {
+    "status": "passed",
+    "elapsed": 0.001,
+    "is_kst": true
+  },
+  "ValidFailContents": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "EnumIntRangeU": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "RecursiveOne": {
+    "status": "passed",
+    "elapsed": 0.001,
+    "is_kst": true
+  },
+  "EnumIf": {
+    "status": "passed",
+    "elapsed": 0.001,
+    "is_kst": true
+  },
+  "ValidShort": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "NavParentFalse2": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "ImportsCircularA": {
+    "status": "passed",
+    "elapsed": 0.001
+  },
+  "ExprBytesOps": {
+    "status": "passed",
+    "elapsed": 0.001,
+    "is_kst": true
+  },
+  "MetaTags": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "OpaqueExternalType": {
+    "status": "passed",
+    "elapsed": 0.0
+  },
+  "IndexSizes": {
+    "status": "passed",
+    "elapsed": 0.001,
+    "is_kst": true
+  },
+  "BcdUserTypeBe": {
+    "status": "passed",
+    "elapsed": 0.001,
+    "is_kst": true
+  },
+  "NavParent2": {
+    "status": "passed",
+    "elapsed": 0.001,
     "is_kst": true
   },
   "NestedTypes2": {
@@ -595,21 +778,22 @@
     "elapsed": 0.001,
     "is_kst": true
   },
-  "Integers": {
-    "status": "passed",
-    "elapsed": 0.001,
-    "is_kst": true
-  },
-  "EnumInvalid": {
-    "status": "passed",
-    "elapsed": 0.0
-  },
-  "SwitchIntegers2": {
+  "NonStandard": {
     "status": "passed",
     "elapsed": 0.0,
     "is_kst": true
   },
-  "ValidFailRangeFloat": {
+  "InstanceUserArray": {
+    "status": "passed",
+    "elapsed": 0.001,
+    "is_kst": true
+  },
+  "FixedStruct": {
+    "status": "passed",
+    "elapsed": 0.001,
+    "is_kst": true
+  },
+  "JsSignedRightShift": {
     "status": "passed",
     "elapsed": 0.0,
     "is_kst": true
@@ -624,143 +808,11 @@
     "elapsed": 0.0,
     "is_kst": true
   },
-  "CastNested": {
+  "StrLiterals": {
     "status": "passed",
-    "elapsed": 0.0,
-    "is_kst": true
+    "elapsed": 0.001
   },
-  "NavParentVsValueInst": {
-    "status": "passed",
-    "elapsed": 0.0,
-    "is_kst": true
-  },
-  "DocstringsDocref": {
-    "status": "passed",
-    "elapsed": 0.0,
-    "is_kst": true
-  },
-  "ExprStrOps": {
-    "status": "passed",
-    "elapsed": 0.001,
-    "is_kst": true
-  },
-  "StrPadTermEmpty": {
-    "status": "passed",
-    "elapsed": 0.0,
-    "is_kst": true
-  },
-  "NestedSameName2": {
-    "status": "passed",
-    "elapsed": 0.0,
-    "is_kst": true
-  },
-  "DebugSwitchUser": {
-    "status": "passed",
-    "elapsed": 0.0
-  },
-  "ProcessXorValue": {
-    "status": "passed",
-    "elapsed": 0.0,
-    "is_kst": true
-  },
-  "StrCombine": {
-    "status": "passed",
-    "elapsed": 0.001,
-    "is_kst": true
-  },
-  "Imports0": {
-    "status": "passed",
-    "elapsed": 0.0,
-    "is_kst": true
-  },
-  "DefaultEndianExprIsLe": {
-    "status": "passed",
-    "elapsed": 0.001,
-    "is_kst": true
-  },
-  "HelloWorld": {
-    "status": "passed",
-    "elapsed": 0.0,
-    "is_kst": true
-  },
-  "InstanceIoUser": {
-    "status": "passed",
-    "elapsed": 0.001,
-    "is_kst": true
-  },
-  "PositionAbs": {
-    "status": "passed",
-    "elapsed": 0.0,
-    "is_kst": true
-  },
-  "InstanceUserArray": {
-    "status": "passed",
-    "elapsed": 0.001,
-    "is_kst": true
-  },
-  "RepeatNStruct": {
-    "status": "passed",
-    "elapsed": 0.0,
-    "is_kst": true
-  },
-  "NestedSameName": {
-    "status": "passed",
-    "elapsed": 0.0,
-    "is_kst": true
-  },
-  "RecursiveOne": {
-    "status": "passed",
-    "elapsed": 0.0,
-    "is_kst": true
-  },
-  "EnumForUnknownId": {
-    "status": "passed",
-    "elapsed": 0.0
-  },
-  "ProcessCustom": {
-    "status": "passed",
-    "elapsed": 0.0,
-    "is_kst": true
-  },
-  "ExprIoEof": {
-    "status": "passed",
-    "elapsed": 0.0
-  },
-  "EnumToIClassBorder1": {
-    "status": "passed",
-    "elapsed": 0.0,
-    "is_kst": true
-  },
-  "IndexToParamEos": {
-    "status": "passed",
-    "elapsed": 0.001,
-    "is_kst": true
-  },
-  "ProcessCoerceUsertype1": {
-    "status": "passed",
-    "elapsed": 0.0,
-    "is_kst": true
-  },
-  "OpaqueExternalType": {
-    "status": "passed",
-    "elapsed": 0.0
-  },
-  "ProcessToUser": {
-    "status": "passed",
-    "elapsed": 0.0,
-    "is_kst": true
-  },
-  "ExprSizeofType1": {
-    "status": "passed",
-    "elapsed": 0.0,
-    "is_kst": true
-  },
-  "IfStruct": {
-    "status": "passed",
-    "elapsed": 0.002,
-    "is_kst": true
-  },
-  "EosExceptionU4": {
+  "ValidLong": {
     "status": "passed",
     "elapsed": 0.0,
     "is_kst": true
@@ -769,147 +821,12 @@
     "status": "passed",
     "elapsed": 0.0
   },
-  "Expr3": {
-    "status": "passed",
-    "elapsed": 0.001,
-    "is_kst": true
-  },
-  "RepeatEosBit": {
+  "Docstrings": {
     "status": "passed",
     "elapsed": 0.0,
     "is_kst": true
   },
-  "OpaqueExternalType02Parent": {
-    "status": "passed",
-    "elapsed": 0.0
-  },
-  "FixedContents": {
-    "status": "passed",
-    "elapsed": 0.0,
-    "is_kst": true
-  },
-  "CastToImported": {
-    "status": "passed",
-    "elapsed": 0.0,
-    "is_kst": true
-  },
-  "EofExceptionBytes": {
-    "status": "passed",
-    "elapsed": 0.0,
-    "is_kst": true
-  },
-  "PositionInSeq": {
-    "status": "passed",
-    "elapsed": 0.0,
-    "is_kst": true
-  },
-  "ExprIoPos": {
-    "status": "passed",
-    "elapsed": 0.001,
-    "is_kst": true
-  },
-  "BcdUserTypeBe": {
-    "status": "passed",
-    "elapsed": 0.001,
-    "is_kst": true
-  },
-  "RepeatEosStruct": {
-    "status": "passed",
-    "elapsed": 0.0,
-    "is_kst": true
-  },
-  "ProcessCoerceBytes": {
-    "status": "passed",
-    "elapsed": 0.0,
-    "is_kst": true
-  },
-  "ValidSwitch": {
-    "status": "passed",
-    "elapsed": 0.0,
-    "is_kst": true
-  },
-  "NavParent": {
-    "status": "passed",
-    "elapsed": 0.0,
-    "is_kst": true
-  },
-  "ImportsAbsAbs": {
-    "status": "passed",
-    "elapsed": 0.0
-  },
-  "IoLocalVar": {
-    "status": "passed",
-    "elapsed": 0.0,
-    "is_kst": true
-  },
-  "EnumFancy": {
-    "status": "passed",
-    "elapsed": 0.0,
-    "is_kst": true
-  },
-  "ParamsEnum": {
-    "status": "passed",
-    "elapsed": 0.0,
-    "is_kst": true
-  },
-  "ImportsAbs": {
-    "status": "passed",
-    "elapsed": 0.0,
-    "is_kst": true
-  },
-  "ExprSizeofValueSized": {
-    "status": "passed",
-    "elapsed": 0.001,
-    "is_kst": true
-  },
-  "ValidFailAnyofInt": {
-    "status": "passed",
-    "elapsed": 0.0,
-    "is_kst": true
-  },
-  "NavParent2": {
-    "status": "passed",
-    "elapsed": 0.001,
-    "is_kst": true
-  },
-  "SwitchCast": {
-    "status": "passed",
-    "elapsed": 0.0
-  },
-  "TermStrz": {
-    "status": "passed",
-    "elapsed": 0.0,
-    "is_kst": true
-  },
-  "OptionalId": {
-    "status": "passed",
-    "elapsed": 0.0
-  },
-  "NestedTypes3": {
-    "status": "passed",
-    "elapsed": 0.0,
-    "is_kst": true
-  },
-  "SwitchRepeatExpr": {
-    "status": "passed",
-    "elapsed": 0.0
-  },
-  "ExprBytesCmp": {
-    "status": "passed",
-    "elapsed": 0.001,
-    "is_kst": true
-  },
-  "ProcessXor4Const": {
-    "status": "passed",
-    "elapsed": 0.0,
-    "is_kst": true
-  },
-  "BitsSimple": {
-    "status": "passed",
-    "elapsed": 0.001,
-    "is_kst": true
-  },
-  "EnumToI": {
+  "ExprMod": {
     "status": "passed",
     "elapsed": 0.0,
     "is_kst": true
@@ -919,35 +836,118 @@
     "elapsed": 0.0,
     "is_kst": true
   },
-  "EnumIf": {
-    "status": "passed",
-    "elapsed": 0.001,
-    "is_kst": true
-  },
-  "SwitchManualEnumInvalidElse": {
+  "ValidFailMinInt": {
     "status": "passed",
     "elapsed": 0.0,
     "is_kst": true
   },
-  "SwitchBytearray": {
+  "EnumForUnknownId": {
+    "status": "passed",
+    "elapsed": 0.0
+  },
+  "HelloWorld": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "NavParent3": {
     "status": "passed",
     "elapsed": 0.001,
     "is_kst": true
   },
-  "SwitchManualStrElse": {
+  "IfValues": {
     "status": "passed",
     "elapsed": 0.001,
+    "is_kst": true
+  },
+  "StrEos": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "FloatToI": {
+    "status": "passed",
+    "elapsed": 0.001,
+    "is_kst": true
+  },
+  "ExprBytesCmp": {
+    "status": "passed",
+    "elapsed": 0.001,
+    "is_kst": true
+  },
+  "BytesPadTerm": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "OpaqueExternalType02Parent": {
+    "status": "passed",
+    "elapsed": 0.0
+  },
+  "ZlibWithHeader78": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "StrEncodingsDefault": {
+    "status": "passed",
+    "elapsed": 0.008,
+    "is_kst": true
+  },
+  "ExprIoPos": {
+    "status": "passed",
+    "elapsed": 0.001,
+    "is_kst": true
+  },
+  "ExprEnum": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "ExprSizeofValueSized": {
+    "status": "passed",
+    "elapsed": 0.001,
+    "is_kst": true
+  },
+  "StrEncodings": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "Integers": {
+    "status": "passed",
+    "elapsed": 0.001,
+    "is_kst": true
+  },
+  "ExprArray": {
+    "status": "passed",
+    "elapsed": 0.001,
+    "is_kst": true
+  },
+  "FixedContents": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "StrCombine": {
+    "status": "passed",
+    "elapsed": 0.001,
+    "is_kst": true
+  },
+  "StrPadTerm": {
+    "status": "passed",
+    "elapsed": 0.0,
     "is_kst": true
   },
   "$meta": {
     "lang": "python",
-    "timestamp": "2020-03-07T20:48:48Z",
+    "timestamp": "2020-03-08T20:35:17Z",
     "ci": {
       "ci": "travis",
-      "build_id": "659628820",
-      "job_id": "659628834",
-      "job_number": "285.14",
-      "url": "https://travis-ci.org/kaitai-io/ci_targets/jobs/659628834"
+      "build_id": "659897066",
+      "job_id": "659897080",
+      "job_number": "286.14",
+      "url": "https://travis-ci.org/kaitai-io/ci_targets/jobs/659897080"
     }
   }
 }
