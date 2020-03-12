@@ -1,3 +1,18 @@
+spec/java/src/io/kaitai/struct/spec/TestIntegersMinMax.java:5: error: cannot find symbol
+import io.kaitai.struct.testformats.IntegersMinMax;
+                                   ^
+  symbol:   class IntegersMinMax
+  location: package io.kaitai.struct.testformats
+spec/java/src/io/kaitai/struct/spec/TestIntegersMinMax.java:12: error: cannot find symbol
+        IntegersMinMax r = IntegersMinMax.fromFile(SRC_DIR + "integers_min_max.bin");
+        ^
+  symbol:   class IntegersMinMax
+  location: class TestIntegersMinMax
+spec/java/src/io/kaitai/struct/spec/TestIntegersMinMax.java:12: error: cannot find symbol
+        IntegersMinMax r = IntegersMinMax.fromFile(SRC_DIR + "integers_min_max.bin");
+                           ^
+  symbol:   variable IntegersMinMax
+  location: class TestIntegersMinMax
 compiled/java/src/io/kaitai/struct/testformats/ValidFailRangeFloat.java:32: error: incompatible types: possible lossy conversion from double to long
             throw new KaitaiStream.ValidationLessThanError(0.2, foo(), _io(), "/seq/0");
                                                            ^
@@ -11,4 +26,4 @@ compiled/java/src/io/kaitai/struct/testformats/ExprBits.java:85: error: incompat
             switch (_parent().a()) {
                    ^
 Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
-4 errors
+7 errors
