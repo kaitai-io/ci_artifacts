@@ -7,8 +7,7 @@
 === RUN   TestBitsEnum
 --- PASS: TestBitsEnum (0.00s)
 === RUN   TestBitsSimple
---- FAIL: TestBitsSimple (0.00s)
-	bits_simple_test.go:21: <nil>
+--- PASS: TestBitsSimple (0.00s)
 === RUN   TestBufferedStruct
 --- PASS: TestBufferedStruct (0.00s)
 === RUN   TestBytesPadTerm
@@ -82,8 +81,7 @@
 === RUN   TestExpr3
 --- PASS: TestExpr3 (0.00s)
 === RUN   TestExprArray
---- FAIL: TestExprArray (0.00s)
-	expr_array_test.go:29: EOF
+--- PASS: TestExprArray (0.00s)
 === RUN   TestExprBits
 --- PASS: TestExprBits (0.00s)
 === RUN   TestExprBytesCmp
@@ -94,9 +92,14 @@
 --- PASS: TestExprCalcArrayOps (0.00s)
 === RUN   TestExprEnum
 --- PASS: TestExprEnum (0.00s)
+=== RUN   TestExprIoEof
+--- FAIL: TestExprIoEof (0.00s)
+	expr_io_eof_test.go:33: 
+			Error Trace:	expr_io_eof_test.go:33
+			Error:      	Expected nil, but got: 0x0
+			Test:       	TestExprIoEof
 === RUN   TestExprIoPos
---- FAIL: TestExprIoPos (0.00s)
-	expr_io_pos_test.go:29: ReadBytes(-2): negative number of bytes to read
+--- PASS: TestExprIoPos (0.00s)
 === RUN   TestExprMod
 --- PASS: TestExprMod (0.00s)
 === RUN   TestExprStrOps
@@ -130,11 +133,11 @@
 			Error:      	Expected nil, but got: 0
 			Test:       	TestIfValues
 === RUN   TestInstanceIoUser
---- PASS: TestInstanceIoUser (0.00s)
+--- PASS: TestInstanceIoUser (0.01s)
 === RUN   TestInstanceStdArray
 --- PASS: TestInstanceStdArray (0.00s)
 === RUN   TestInstanceStd
---- PASS: TestInstanceStd (0.01s)
+--- PASS: TestInstanceStd (0.00s)
 === RUN   TestInstanceUserArray
 --- PASS: TestInstanceUserArray (0.00s)
 === RUN   TestIntegers
@@ -258,18 +261,15 @@
 === RUN   TestRepeatNStruct
 --- PASS: TestRepeatNStruct (0.00s)
 === RUN   TestRepeatNStrzDouble
---- FAIL: TestRepeatNStrzDouble (0.00s)
-	repeat_n_strz_double_test.go:29: EOF
+--- PASS: TestRepeatNStrzDouble (0.00s)
 === RUN   TestRepeatNStrz
---- FAIL: TestRepeatNStrz (0.00s)
-	repeat_n_strz_test.go:29: EOF
+--- PASS: TestRepeatNStrz (0.00s)
 === RUN   TestRepeatUntilComplex
 --- PASS: TestRepeatUntilComplex (0.00s)
 === RUN   TestRepeatUntilS4
 --- PASS: TestRepeatUntilS4 (0.00s)
 === RUN   TestStrCombine
---- FAIL: TestStrCombine (0.00s)
-	str_combine_test.go:29: EOF
+--- PASS: TestStrCombine (0.00s)
 === RUN   TestStrEncodingsDefault
 --- PASS: TestStrEncodingsDefault (0.00s)
 === RUN   TestStrEncodings
@@ -289,11 +289,9 @@
 === RUN   TestSwitchIntegers
 --- PASS: TestSwitchIntegers (0.00s)
 === RUN   TestTermBytes
---- FAIL: TestTermBytes (0.00s)
-	term_bytes_test.go:29: EOF
+--- PASS: TestTermBytes (0.00s)
 === RUN   TestTermStrz
---- FAIL: TestTermStrz (0.00s)
-	term_strz_test.go:29: EOF
+--- PASS: TestTermStrz (0.00s)
 === RUN   TestTsPacketHeader
 --- PASS: TestTsPacketHeader (0.00s)
 === RUN   TestTypeIntUnaryOp
@@ -319,8 +317,8 @@
 === RUN   TestValidNotParsedIf
 --- PASS: TestValidNotParsedIf (0.00s)
 === RUN   TestValidShort
---- PASS: TestValidShort (0.00s)
+--- PASS: TestValidShort (0.01s)
 === RUN   TestZlibWithHeader78
 --- PASS: TestZlibWithHeader78 (0.00s)
 FAIL
-FAIL	github.com/kaitai-io/ci_targets/tests/spec/go	0.017s
+FAIL	github.com/kaitai-io/ci_targets/tests/spec/go	0.031s
