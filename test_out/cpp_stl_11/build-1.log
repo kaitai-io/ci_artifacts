@@ -1,8 +1,8 @@
 Scanning dependencies of target ks_tests
 [  0%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/runtime/cpp_stl/kaitai/kaitaistream.cpp.o
+[  0%] Building CXX object CMakeFiles/ks_tests.dir/prereq/my_custom_fx.cpp.o
 [  0%] Building CXX object CMakeFiles/ks_tests.dir/prereq/custom_fx.cpp.o
 [  1%] Building CXX object CMakeFiles/ks_tests.dir/prereq/custom_fx_no_args.cpp.o
-[  1%] Building CXX object CMakeFiles/ks_tests.dir/prereq/my_custom_fx.cpp.o
 [  1%] Building CXX object CMakeFiles/ks_tests.dir/test_valid_fail_max_int.cpp.o
 [  1%] Building CXX object CMakeFiles/ks_tests.dir/test_expr_str_ops.cpp.o
 [  1%] Building CXX object CMakeFiles/ks_tests.dir/test_valid_fail_eq_bytes.cpp.o
@@ -14,18 +14,18 @@ Scanning dependencies of target ks_tests
 [  3%] Building CXX object CMakeFiles/ks_tests.dir/test_expr_sizeof_type_1.cpp.o
 [  3%] Building CXX object CMakeFiles/ks_tests.dir/test_opaque_external_type.cpp.o
 [  3%] Building CXX object CMakeFiles/ks_tests.dir/test_docstrings_docref.cpp.o
-In file included from /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/test_enum_long_range_s.cpp:4:
+[  4%] Building CXX object CMakeFiles/ks_tests.dir/test_non_standard.cpp.o
+In file included from In file included from /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/test_imports_rel_1.cpp:3:
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imports_rel_1.h:8:10: fatal error: 'for_rel_imports/imported_1.h' file not found
+#include "for_rel_imports/imported_1.h"
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/test_enum_long_range_s.cpp:4:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/enum_long_range_s.h:18:31: warning: integer literal is too large to be represented in a signed integer type, interpreting as unsigned [-Wimplicitly-unsigned-literal]
         CONSTANTS_LONG_MIN = -9223372036854775808,
                               ^
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/enum_long_range_s.h:17:10: warning: enumeration values exceed range of largest integer [-Wenum-too-large]
     enum constants_t {
          ^
-In file included from /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/test_imports_rel_1.cpp:3:
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imports_rel_1.h:8:10: fatal error: 'for_rel_imports/imported_1.h' file not found
-#include "for_rel_imports/imported_1.h"
-         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-[  4%] Building CXX object CMakeFiles/ks_tests.dir/test_non_standard.cpp.o
 1 error generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/test_imports_rel_1.cpp.o] Error 1
 [  4%] Building CXX object CMakeFiles/ks_tests.dir/test_default_endian_expr_exception.cpp.o
@@ -279,13 +279,13 @@ make[2]: *** [CMakeFiles/ks_tests.dir/test_process_coerce_switch.cpp.o] Error 1
 [ 54%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/zlib_surrounded.cpp.o
 [ 54%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/cast_to_top.cpp.o
 [ 54%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/enum_int_range_s.cpp.o
-[ 55%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/default_endian_expr_is_le.cpp.o
 In file included from /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/test_imports_abs.cpp:4:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imports_abs.h:8:10: fatal error: '/common/vlq_base128_le.h' file not found
 #include "/common/vlq_base128_le.h"
          ^~~~~~~~~~~~~~~~~~~~~~~~~~
 1 error generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/test_imports_abs.cpp.o] Error 1
+[ 55%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/default_endian_expr_is_le.cpp.o
 [ 55%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/eof_exception_u4.cpp.o
 [ 55%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/enum_for_unknown_id.cpp.o
 [ 55%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/str_eos.cpp.o
@@ -327,37 +327,46 @@ make[2]: *** [CMakeFiles/ks_tests.dir/test_imports_abs.cpp.o] Error 1
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/enum_to_i_class_border_2.h:14:7: note: candidate constructor (the implicit copy constructor) not viable: requires 1 argument, but 2 were provided
 class enum_to_i_class_border_2_t : public kaitai::kstruct {
       ^
-[ 63%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_size_else.cpp.o
 1 error generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/enum_to_i_class_border_1.cpp.o] Error 1
+[ 63%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_size_else.cpp.o
 [ 63%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imports_circular_a.cpp.o
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/expr_calc_array_ops.cpp:43:22: error: assigning to 'std::vector<double> *' from incompatible type 'std::unique_ptr<std::vector<double> >'
     m_double_array = std::unique_ptr<std::vector<double>>(new std::vector<double>{10.0, 25.0, 50.0, 100.0, 3.14159});
                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[ 63%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/repeat_until_complex.cpp.o
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/expr_calc_array_ops.cpp:99:19: error: assigning to 'std::vector<std::string> *' (aka 'vector<basic_string<char> > *') from incompatible type 'std::unique_ptr<std::vector<std::string> >' (aka 'unique_ptr<vector<basic_string<char> > >')
     m_str_array = std::unique_ptr<std::vector<std::string>>(new std::vector<std::string>{std::string("un"), std::string("deux"), std::string("trois"), std::string("quatre")});
                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/expr_calc_array_ops.cpp:195:19: error: assigning to 'std::vector<int32_t> *' (aka 'vector<int> *') from incompatible type 'std::unique_ptr<std::vector<int32_t> >' (aka 'unique_ptr<vector<int> >')
     m_int_array = std::unique_ptr<std::vector<int32_t>>(new std::vector<int32_t>{10, 25, 50, 100, 200, 500, 1000});
                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[ 64%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/enum_long_range_s.cpp.o
 In file included from /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_else_only.cpp:4:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_else_only.h:62:13: error: expected member name or ';' after declaration specifiers
     data_t* struct() const { return m_struct.get(); }
     ~~~~~~  ^
-[ 63%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/repeat_until_complex.cpp.o
-1 error generated.
-make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_else_only.cpp.o] Error 1
-[ 64%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/enum_long_range_s.cpp.o
 3 errors generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/expr_calc_array_ops.cpp.o] Error 1
 [ 64%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/type_ternary_opaque.cpp.o
+1 error generated.
+make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_else_only.cpp.o] Error 1
 [ 64%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/str_literals2.cpp.o
 [ 64%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/process_coerce_bytes.cpp.o
 [ 65%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_def.cpp.o
-[ 65%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/eos_exception_u4.cpp.o
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_size_else.cpp:41:18: error: assigning to 'kaitai::kstruct *' from incompatible type 'std::unique_ptr<chunk_meta_t>'
         m_body = std::unique_ptr<chunk_meta_t>(new chunk_meta_t(m__io__raw_body, this, m__root));
                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_size_else.cpp:47:18: error: assigning to 'kaitai::kstruct *' from incompatible type 'std::unique_ptr<chunk_dir_t>'
+        m_body = std::unique_ptr<chunk_dir_t>(new chunk_dir_t(m__io__raw_body, this, m__root));
+                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_size_else.cpp:53:18: error: assigning to 'kaitai::kstruct *' from incompatible type 'std::unique_ptr<dummy_t>'
+        m_body = std::unique_ptr<dummy_t>(new dummy_t(m__io__raw_body, this, m__root));
+                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+3 errors generated.
+make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_size_else.cpp.o] Error 1
+[ 65%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/eos_exception_u4.cpp.o
+[ 65%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/cast_nested.cpp.o
 In file included from /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/enum_long_range_s.cpp:4:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/enum_long_range_s.h:18:31: warning: integer literal is too large to be represented in a signed integer type, interpreting as unsigned [-Wimplicitly-unsigned-literal]
         CONSTANTS_LONG_MIN = -9223372036854775808,
@@ -365,16 +374,7 @@ In file included from /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/enum_long_range_s.h:17:10: warning: enumeration values exceed range of largest integer [-Wenum-too-large]
     enum constants_t {
          ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_size_else.cpp:47:18: error: assigning to 'kaitai::kstruct *' from incompatible type 'std::unique_ptr<chunk_dir_t>'
-        m_body = std::unique_ptr<chunk_dir_t>(new chunk_dir_t(m__io__raw_body, this, m__root));
-                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_size_else.cpp:53:18: error: assigning to 'kaitai::kstruct *' from incompatible type 'std::unique_ptr<dummy_t>'
-        m_body = std::unique_ptr<dummy_t>(new dummy_t(m__io__raw_body, this, m__root));
-                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 2 warnings generated.
-[ 65%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/cast_nested.cpp.o
-3 errors generated.
-make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_size_else.cpp.o] Error 1
 [ 65%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/process_xor4_const.cpp.o
 [ 66%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/yaml_ints.cpp.o
 [ 66%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/str_encodings_default.cpp.o
@@ -445,8 +445,8 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
 [ 75%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/expr_0.cpp.o
 [ 75%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/default_endian_expr_is_be.cpp.o
 [ 75%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_str.cpp.o
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/io_local_var.cpp[ 75%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_pass_usertype.cpp.o
-:17:72: warning: comparison of unsigned expression < 0 is always false [-Wtautological-compare]
+[ 75%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_pass_usertype.cpp.o
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/io_local_var.cpp:17:72: warning: comparison of unsigned expression < 0 is always false [-Wtautological-compare]
     if (static_cast<io_local_var_t::dummy_t*>(mess_up())->_io()->pos() < 0) {
         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ^ ~
 [ 76%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/valid_fail_inst.cpp.o
@@ -457,6 +457,7 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
 [ 77%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/ts_packet_header.cpp.o
 [ 77%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imported_root.cpp.o
 [ 77%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/recursive_one.cpp.o
+[ 77%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/process_to_user.cpp.o
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/process_repeat_bytes.cpp:19:5: error: use of undeclared identifier 'm__io__raw_bufs'; did you mean 'm__raw_bufs'?
     m__io__raw_bufs = std::unique_ptr<std::vector<kaitai::kstream*>>(new std::vector<kaitai::kstream*>());
     ^~~~~~~~~~~~~~~
@@ -464,8 +465,7 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/process_repeat_bytes.h:30:47: note: 'm__raw_bufs' declared here
     std::unique_ptr<std::vector<std::string>> m__raw_bufs;
                                               ^
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/process_repeat_bytes.cpp[ 77%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/process_to_user.cpp.o
-:19:21: error: no viable overloaded '='
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/process_repeat_bytes.cpp:19:21: error: no viable overloaded '='
     m__io__raw_bufs = std::unique_ptr<std::vector<kaitai::kstream*>>(new std::vector<kaitai::kstream*>());
     ~~~~~~~~~~~~~~~ ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/bits/unique_ptr.h:190:7: note: candidate function not viable: no known conversion from 'unique_ptr<vector<kaitai::kstream *, allocator<kaitai::kstream *>>, default_delete<vector<kaitai::kstream *, allocator<kaitai::kstream *>>>>' to 'unique_ptr<vector<std::basic_string<char>, allocator<std::basic_string<char>>>, default_delete<vector<std::basic_string<char>, allocator<std::basic_string<char>>>>>' for 1st argument
@@ -487,22 +487,22 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/process_repeat_bytes.h:30:47: note: 'm__raw_bufs' declared here
     std::unique_ptr<std::vector<std::string>> m__raw_bufs;
                                               ^
+[ 78%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_cast.cpp.o
 3 errors generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/process_repeat_bytes.cpp.o] Error 1
-[ 78%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_cast.cpp.o
 [ 78%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/if_values.cpp.o
 [ 78%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/enum_to_i_class_border_2.cpp.o
 [ 78%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/vlq_base128_le.cpp.o
 [ 79%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_enum.cpp.o
 [ 79%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/debug_array_user.cpp.o
 [ 79%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent_override.cpp.o
-[ 79%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/meta_xref.cpp.o
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/enum_to_i_class_border_2.cpp:24:24: error: member access into incomplete type 'enum_to_i_class_border_2_t::enum_to_i_class_border_1_t'
     m_is_dog = parent()->some_dog() == 4;
                        ^
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/enum_to_i_class_border_2.h:17:11: note: forward declaration of 'enum_to_i_class_border_2_t::enum_to_i_class_border_1_t'
     class enum_to_i_class_border_1_t;
           ^
+[ 79%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/meta_xref.cpp.o
 1 error generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/enum_to_i_class_border_2.cpp.o] Error 1
 [ 80%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/repeat_until_calc_array_type.cpp.o
@@ -526,9 +526,9 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/repeat_until_calc_array_type.cpp:64:36: error: assigning to 'repeat_until_calc_array_type_t::record_t *' from incompatible type '__gnu_cxx::__alloc_traits<std::allocator<std::unique_ptr<repeat_until_calc_array_type_t::record_t, std::default_delete<repeat_until_calc_array_type_t::record_t> > > >::value_type' (aka 'std::unique_ptr<repeat_until_calc_array_type_t::record_t, std::default_delete<repeat_until_calc_array_type_t::record_t> >')
     m_first_rec = recs_accessor()->front();
                   ~~~~~~~~~~~~~~~~~^~~~~~~
+[ 82%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent_false.cpp.o
 1 error generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/repeat_until_calc_array_type.cpp.o] Error 1
-[ 82%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent_false.cpp.o
 [ 82%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imported_and_abs.cpp.o
 [ 82%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/type_ternary.cpp.o
 [ 82%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/debug_switch_user.cpp.o
