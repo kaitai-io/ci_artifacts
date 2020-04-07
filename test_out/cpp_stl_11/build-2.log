@@ -1,99 +1,100 @@
+CMake Warning at /usr/local/lib/cmake/boost_unit_test_framework-1.71.0/libboost_unit_test_framework-variant-shared.cmake:59 (message):
+  Target Boost::unit_test_framework already has an imported location
+  '/usr/local/lib/libboost_unit_test_framework-mt.dylib', which will be
+  overwritten with '/usr/local/lib/libboost_unit_test_framework.dylib'
+Call Stack (most recent call first):
+  /usr/local/lib/cmake/boost_unit_test_framework-1.71.0/boost_unit_test_framework-config.cmake:43 (include)
+  /usr/local/lib/cmake/Boost-1.71.0/BoostConfig.cmake:117 (find_package)
+  /usr/local/lib/cmake/Boost-1.71.0/BoostConfig.cmake:182 (boost_find_component)
+  /usr/local/Cellar/cmake/3.15.5/share/cmake/Modules/FindBoost.cmake:443 (find_package)
+  CMakeLists.txt:7 (find_package)
+
+
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_11/bin
 Scanning dependencies of target ks_tests
-[  1%] Linking CXX executable ks_tests
-Undefined symbols for architecture x86_64:
-  "expr_ops_parens_t::i_sum_to_str()", referenced from:
-      test_expr_ops_parens::test_method() in test_expr_ops_parens.cpp.o
-  "expr_ops_parens_t::str_concat_len()", referenced from:
-      test_expr_ops_parens::test_method() in test_expr_ops_parens.cpp.o
-  "expr_ops_parens_t::str_concat_rev()", referenced from:
-      test_expr_ops_parens::test_method() in test_expr_ops_parens.cpp.o
-  "expr_ops_parens_t::str_concat_to_i()", referenced from:
-      test_expr_ops_parens::test_method() in test_expr_ops_parens.cpp.o
-  "expr_ops_parens_t::str_concat_substr_2_to_7()", referenced from:
-      test_expr_ops_parens::test_method() in test_expr_ops_parens.cpp.o
-  "expr_ops_parens_t::bool_eq()", referenced from:
-      test_expr_ops_parens::test_method() in test_expr_ops_parens.cpp.o
-  "expr_ops_parens_t::bool_or()", referenced from:
-      test_expr_ops_parens::test_method() in test_expr_ops_parens.cpp.o
-  "expr_ops_parens_t::bool_and()", referenced from:
-      test_expr_ops_parens::test_method() in test_expr_ops_parens.cpp.o
-  "expr_ops_parens_t::expr_ops_parens_t(kaitai::kstream*, kaitai::kstruct*, expr_ops_parens_t*)", referenced from:
-      test_expr_ops_parens::test_method() in test_expr_ops_parens.cpp.o
-  "debug_switch_user_t::_read()", referenced from:
-      test_debug_switch_user::test_method() in test_debug_switch_user.cpp.o
-  "debug_switch_user_t::debug_switch_user_t(kaitai::kstream*, kaitai::kstruct*, debug_switch_user_t*)", referenced from:
-      test_debug_switch_user::test_method() in test_debug_switch_user.cpp.o
-  "expr_calc_array_ops_t::int_array_max()", referenced from:
-      test_expr_calc_array_ops::test_method() in test_expr_calc_array_ops.cpp.o
-  "expr_calc_array_ops_t::int_array_mid()", referenced from:
-      test_expr_calc_array_ops::test_method() in test_expr_calc_array_ops.cpp.o
-  "expr_calc_array_ops_t::int_array_min()", referenced from:
-      test_expr_calc_array_ops::test_method() in test_expr_calc_array_ops.cpp.o
-  "expr_calc_array_ops_t::str_array_max()", referenced from:
-      test_expr_calc_array_ops::test_method() in test_expr_calc_array_ops.cpp.o
-  "expr_calc_array_ops_t::str_array_mid()", referenced from:
-      test_expr_calc_array_ops::test_method() in test_expr_calc_array_ops.cpp.o
-  "expr_calc_array_ops_t::str_array_min()", referenced from:
-      test_expr_calc_array_ops::test_method() in test_expr_calc_array_ops.cpp.o
-  "expr_calc_array_ops_t::int_array_last()", referenced from:
-      test_expr_calc_array_ops::test_method() in test_expr_calc_array_ops.cpp.o
-  "expr_calc_array_ops_t::int_array_size()", referenced from:
-      test_expr_calc_array_ops::test_method() in test_expr_calc_array_ops.cpp.o
-  "expr_calc_array_ops_t::str_array_last()", referenced from:
-      test_expr_calc_array_ops::test_method() in test_expr_calc_array_ops.cpp.o
-  "expr_calc_array_ops_t::str_array_size()", referenced from:
-      test_expr_calc_array_ops::test_method() in test_expr_calc_array_ops.cpp.o
-  "expr_calc_array_ops_t::int_array_first()", referenced from:
-      test_expr_calc_array_ops::test_method() in test_expr_calc_array_ops.cpp.o
-  "expr_calc_array_ops_t::str_array_first()", referenced from:
-      test_expr_calc_array_ops::test_method() in test_expr_calc_array_ops.cpp.o
-  "expr_calc_array_ops_t::double_array_max()", referenced from:
-      test_expr_calc_array_ops::test_method() in test_expr_calc_array_ops.cpp.o
-  "expr_calc_array_ops_t::double_array_mid()", referenced from:
-      test_expr_calc_array_ops::test_method() in test_expr_calc_array_ops.cpp.o
-  "expr_calc_array_ops_t::double_array_min()", referenced from:
-      test_expr_calc_array_ops::test_method() in test_expr_calc_array_ops.cpp.o
-  "expr_calc_array_ops_t::double_array_last()", referenced from:
-      test_expr_calc_array_ops::test_method() in test_expr_calc_array_ops.cpp.o
-  "expr_calc_array_ops_t::double_array_size()", referenced from:
-      test_expr_calc_array_ops::test_method() in test_expr_calc_array_ops.cpp.o
-  "expr_calc_array_ops_t::double_array_first()", referenced from:
-      test_expr_calc_array_ops::test_method() in test_expr_calc_array_ops.cpp.o
-  "expr_calc_array_ops_t::expr_calc_array_ops_t(kaitai::kstream*, kaitai::kstruct*, expr_calc_array_ops_t*)", referenced from:
-      test_expr_calc_array_ops::test_method() in test_expr_calc_array_ops.cpp.o
-  "process_repeat_bytes_t::process_repeat_bytes_t(kaitai::kstream*, kaitai::kstruct*, process_repeat_bytes_t*)", referenced from:
-      test_process_repeat_bytes::test_method() in test_process_repeat_bytes.cpp.o
-  "params_pass_array_int_t::params_pass_array_int_t(kaitai::kstream*, kaitai::kstruct*, params_pass_array_int_t*)", referenced from:
-      test_params_pass_array_int::test_method() in test_params_pass_array_int.cpp.o
-  "params_pass_array_str_t::params_pass_array_str_t(kaitai::kstream*, kaitai::kstruct*, params_pass_array_str_t*)", referenced from:
-      test_params_pass_array_str::test_method() in test_params_pass_array_str.cpp.o
-  "nav_parent_switch_cast_t::foo_t::bar_t::flag()", referenced from:
-      test_nav_parent_switch_cast::test_method() in test_nav_parent_switch_cast.cpp.o
-  "nav_parent_switch_cast_t::nav_parent_switch_cast_t(kaitai::kstream*, kaitai::kstruct*, nav_parent_switch_cast_t*)", referenced from:
-      test_nav_parent_switch_cast::test_method() in test_nav_parent_switch_cast.cpp.o
-  "switch_manual_int_else_t::switch_manual_int_else_t(kaitai::kstream*, kaitai::kstruct*, switch_manual_int_else_t*)", referenced from:
-      test_switch_manual_int_else::test_method() in test_switch_manual_int_else.cpp.o
-  "switch_manual_str_else_t::switch_manual_str_else_t(kaitai::kstream*, kaitai::kstruct*, switch_manual_str_else_t*)", referenced from:
-      test_switch_manual_str_else::test_method() in test_switch_manual_str_else.cpp.o
-  "enum_to_i_class_border_1_t::checker()", referenced from:
-      test_enum_to_i_class_border_1::test_method() in test_enum_to_i_class_border_1.cpp.o
-  "enum_to_i_class_border_1_t::enum_to_i_class_border_1_t(kaitai::kstream*, kaitai::kstruct*, enum_to_i_class_border_1_t*)", referenced from:
-      test_enum_to_i_class_border_1::test_method() in test_enum_to_i_class_border_1.cpp.o
-  "enum_to_i_class_border_2_t::is_dog()", referenced from:
-      test_enum_to_i_class_border_1::test_method() in test_enum_to_i_class_border_1.cpp.o
-  "params_pass_array_struct_t::params_pass_array_struct_t(kaitai::kstream*, kaitai::kstruct*, params_pass_array_struct_t*)", referenced from:
-      test_params_pass_array_struct::test_method() in test_params_pass_array_struct.cpp.o
-  "params_pass_array_usertype_t::params_pass_array_usertype_t(kaitai::kstream*, kaitai::kstruct*, params_pass_array_usertype_t*)", referenced from:
-      test_params_pass_array_usertype::test_method() in test_params_pass_array_usertype.cpp.o
-  "switch_manual_int_size_else_t::switch_manual_int_size_else_t(kaitai::kstream*, kaitai::kstruct*, switch_manual_int_size_else_t*)", referenced from:
-      test_switch_manual_int_size_else::test_method() in test_switch_manual_int_size_else.cpp.o
-  "switch_manual_enum_invalid_else_t::opcode_t::defval_t::value()", referenced from:
-      test_switch_manual_enum_invalid_else::test_method() in test_switch_manual_enum_invalid_else.cpp.o
-  "switch_manual_enum_invalid_else_t::switch_manual_enum_invalid_else_t(kaitai::kstream*, kaitai::kstruct*, switch_manual_enum_invalid_else_t*)", referenced from:
-      test_switch_manual_enum_invalid_else::test_method() in test_switch_manual_enum_invalid_else.cpp.o
-ld: symbol(s) not found for architecture x86_64
-clang: error: linker command failed with exit code 1 (use -v to see invocation)
-make[2]: *** [ks_tests] Error 1
+[  0%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_pass_array_usertype.cpp.o
+[  0%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/repeat_eos_bit.cpp.o
+[  0%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/repeat_eos_struct.cpp.o
+[  1%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/repeat_eos_u4.cpp.o
+[  1%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/repeat_n_struct.cpp.o
+[  1%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/repeat_n_strz.cpp.o
+[  1%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/repeat_n_strz_double.cpp.o
+[  2%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/repeat_until_complex.cpp.o
+/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_pass_array_usertype.cpp:21:55: error: no matching constructor for initialization of 'params_pass_array_usertype_t::param_type_t'
+    m_pass_blocks = std::unique_ptr<param_type_t>(new param_type_t(blocks(), m__io, this, m__root));
+                                                      ^            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_pass_array_usertype.h:55:9: note: candidate constructor not viable: no known conversion from 'std::vector<std::unique_ptr<block_t> > *' to 'std::vector<block_t *> *' for 1st argument
+        param_type_t(std::vector<block_t*>* p_bar, kaitai::kstream* p__io, params_pass_array_usertype_t* p__parent = nullptr, params_pass_array_usertype_t* p__root = nullptr);
+        ^
+/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_pass_array_usertype.h:51:11: note: candidate constructor (the implicit copy constructor) not viable: requires 1 argument, but 4 were provided
+    class param_type_t : public kaitai::kstruct {
+          ^
+1 error generated.
+make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_pass_array_usertype.cpp.o] Error 1
+[  2%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/repeat_until_s4.cpp.o
+[  2%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/repeat_until_sized.cpp.o
+[  2%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/str_encodings.cpp.o
+[  3%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/str_encodings_default.cpp.o
+[  3%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/str_eos.cpp.o
+[  3%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/str_literals.cpp.o
+[  3%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/str_literals2.cpp.o
+[  4%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/str_pad_term.cpp.o
+[  4%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/str_pad_term_empty.cpp.o
+[  4%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_bytearray.cpp.o
+[  4%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_cast.cpp.o
+[  5%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_integers.cpp.o
+[  5%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_integers2.cpp.o
+[  5%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_enum.cpp.o
+[  5%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_enum_invalid.cpp.o
+[  6%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int.cpp.o
+[  6%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_size.cpp.o
+[  6%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_size_eos.cpp.o
+[  6%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_str.cpp.o
+[  7%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_multi_bool_ops.cpp.o
+[  7%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_repeat_expr.cpp.o
+[  7%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/term_bytes.cpp.o
+[  8%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/term_strz.cpp.o
+[  8%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/ts_packet_header.cpp.o
+[  8%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/type_int_unary_op.cpp.o
+[  8%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/type_ternary.cpp.o
+[  9%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/type_ternary_opaque.cpp.o
+[  9%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/user_type.cpp.o
+[  9%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/valid_fail_anyof_int.cpp.o
+[  9%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/valid_fail_contents.cpp.o
+[ 10%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/valid_fail_eq_bytes.cpp.o
+[ 10%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/valid_fail_eq_int.cpp.o
+[ 10%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/valid_fail_inst.cpp.o
+[ 10%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/valid_fail_max_int.cpp.o
+[ 11%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/valid_fail_min_int.cpp.o
+[ 11%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/valid_fail_range_float.cpp.o
+[ 11%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/valid_fail_range_int.cpp.o
+[ 11%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/valid_long.cpp.o
+[ 12%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/valid_not_parsed_if.cpp.o
+[ 12%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/valid_short.cpp.o
+[ 12%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/valid_switch.cpp.o
+[ 12%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/vlq_base128_le.cpp.o
+[ 13%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/yaml_ints.cpp.o
+[ 13%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/zlib_surrounded.cpp.o
+[ 13%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/zlib_with_header_78.cpp.o
+/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/yaml_ints.cpp:41:21: warning: implicit conversion from 'unsigned long long' to 'int32_t' (aka 'int') changes value from 18446744073709551615 to -1 [-Wconstant-conversion]
+    m_test_u8_dec = 18446744073709551615ULL;
+                  ~ ^~~~~~~~~~~~~~~~~~~~~~~
+/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/yaml_ints.cpp:49:21: warning: implicit conversion from 'unsigned long long' to 'int32_t' (aka 'int') changes value from 18446744073709551615 to -1 [-Wconstant-conversion]
+    m_test_u8_hex = 18446744073709551615ULL;
+                  ~ ^~~~~~~~~~~~~~~~~~~~~~~
+/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/vlq_base128_le.cpp:73:335: warning: shift count >= width of type [-Wshift-count-overflow]
+    m_value = (((((((groups()->at(0)->value() + ((len() >= 2) ? ((groups()->at(1)->value() << 7)) : (0))) + ((len() >= 3) ? ((groups()->at(2)->value() << 14)) : (0))) + ((len() >= 4) ? ((groups()->at(3)->value() << 21)) : (0))) + ((len() >= 5) ? ((groups()->at(4)->value() << 28)) : (0))) + ((len() >= 6) ? ((groups()->at(5)->value() << 35)) : (0))) + ((len() >= 7) ? ((groups()->at(6)->value() << 42)) : (0))) + ((len() >= 8) ? ((groups()->at(7)->value() << 49)) : (0)));
+                                                                                                                                                                                                                                                                                                                                              ^  ~~
+/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/vlq_base128_le.cpp:73:396: warning: shift count >= width of type [-Wshift-count-overflow]
+    m_value = (((((((groups()->at(0)->value() + ((len() >= 2) ? ((groups()->at(1)->value() << 7)) : (0))) + ((len() >= 3) ? ((groups()->at(2)->value() << 14)) : (0))) + ((len() >= 4) ? ((groups()->at(3)->value() << 21)) : (0))) + ((len() >= 5) ? ((groups()->at(4)->value() << 28)) : (0))) + ((len() >= 6) ? ((groups()->at(5)->value() << 35)) : (0))) + ((len() >= 7) ? ((groups()->at(6)->value() << 42)) : (0))) + ((len() >= 8) ? ((groups()->at(7)->value() << 49)) : (0)));
+                                                                                                                                                                                                                                                                                                                                                                                                           ^  ~~
+/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/vlq_base128_le.cpp:73:457: warning: shift count >= width of type [-Wshift-count-overflow]
+    m_value = (((((((groups()->at(0)->value() + ((len() >= 2) ? ((groups()->at(1)->value() << 7)) : (0))) + ((len() >= 3) ? ((groups()->at(2)->value() << 14)) : (0))) + ((len() >= 4) ? ((groups()->at(3)->value() << 21)) : (0))) + ((len() >= 5) ? ((groups()->at(4)->value() << 28)) : (0))) + ((len() >= 6) ? ((groups()->at(5)->value() << 35)) : (0))) + ((len() >= 7) ? ((groups()->at(6)->value() << 42)) : (0))) + ((len() >= 8) ? ((groups()->at(7)->value() << 49)) : (0)));
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                        ^  ~~
+2 warnings generated.
+3 warnings generated.
 make[2]: Target `CMakeFiles/ks_tests.dir/build' not remade because of errors.
 make[1]: *** [CMakeFiles/ks_tests.dir/all] Error 2
 make[1]: Target `all' not remade because of errors.
