@@ -1,58 +1,52 @@
-spec/java/src/io/kaitai/struct/spec/TestNestedTypeParam.java:5: error: cannot find symbol
-import io.kaitai.struct.testformats.NestedTypeParam;
+spec/java/src/io/kaitai/struct/spec/TestExprOpsParens.java:5: error: cannot find symbol
+import io.kaitai.struct.testformats.ExprOpsParens;
                                    ^
-  symbol:   class NestedTypeParam
+  symbol:   class ExprOpsParens
   location: package io.kaitai.struct.testformats
-spec/java/src/io/kaitai/struct/spec/TestExprBytesLiteral.java:5: error: cannot find symbol
-import io.kaitai.struct.testformats.ExprBytesLiteral;
+spec/java/src/io/kaitai/struct/spec/TestValidFailRangeFloat.java:5: error: cannot find symbol
+import io.kaitai.struct.testformats.ValidFailRangeFloat;
                                    ^
-  symbol:   class ExprBytesLiteral
+  symbol:   class ValidFailRangeFloat
   location: package io.kaitai.struct.testformats
-spec/java/src/io/kaitai/struct/spec/TestNestedTypeParam.java:12: error: cannot find symbol
-        NestedTypeParam r = NestedTypeParam.fromFile(SRC_DIR + "term_strz.bin");
+spec/java/src/io/kaitai/struct/spec/TestExprBits.java:5: error: cannot find symbol
+import io.kaitai.struct.testformats.ExprBits;
+                                   ^
+  symbol:   class ExprBits
+  location: package io.kaitai.struct.testformats
+spec/java/src/io/kaitai/struct/spec/TestExprOpsParens.java:12: error: cannot find symbol
+        ExprOpsParens r = ExprOpsParens.fromFile(SRC_DIR + "enum_negative.bin");
         ^
-  symbol:   class NestedTypeParam
-  location: class TestNestedTypeParam
-spec/java/src/io/kaitai/struct/spec/TestNestedTypeParam.java:12: error: cannot find symbol
-        NestedTypeParam r = NestedTypeParam.fromFile(SRC_DIR + "term_strz.bin");
-                            ^
-  symbol:   variable NestedTypeParam
-  location: class TestNestedTypeParam
-spec/java/src/io/kaitai/struct/spec/TestExprBytesLiteral.java:12: error: cannot find symbol
-        ExprBytesLiteral r = ExprBytesLiteral.fromFile(SRC_DIR + "enum_negative.bin");
+  symbol:   class ExprOpsParens
+  location: class TestExprOpsParens
+spec/java/src/io/kaitai/struct/spec/TestExprOpsParens.java:12: error: cannot find symbol
+        ExprOpsParens r = ExprOpsParens.fromFile(SRC_DIR + "enum_negative.bin");
+                          ^
+  symbol:   variable ExprOpsParens
+  location: class TestExprOpsParens
+spec/java/src/io/kaitai/struct/spec/TestValidFailRangeFloat.java:13: error: cannot find symbol
+        ValidFailRangeFloat r = ValidFailRangeFloat.fromFile(SRC_DIR + "floating_points.bin");
         ^
-  symbol:   class ExprBytesLiteral
-  location: class TestExprBytesLiteral
-spec/java/src/io/kaitai/struct/spec/TestExprBytesLiteral.java:12: error: cannot find symbol
-        ExprBytesLiteral r = ExprBytesLiteral.fromFile(SRC_DIR + "enum_negative.bin");
-                             ^
-  symbol:   variable ExprBytesLiteral
-  location: class TestExprBytesLiteral
-compiled/java/src/io/kaitai/struct/testformats/ValidFailRangeFloat.java:32: error: constructor ValidationLessThanError in class ValidationLessThanError cannot be applied to given types;
-            throw new KaitaiStream.ValidationLessThanError(0.2, foo(), _io(), "/seq/0");
-                  ^
-  required: long,long,KaitaiStream,String
-  found: double,float,KaitaiStream,String
-  reason: actual argument double cannot be converted to long by method invocation conversion
-compiled/java/src/io/kaitai/struct/testformats/ValidFailRangeFloat.java:35: error: constructor ValidationGreaterThanError in class ValidationGreaterThanError cannot be applied to given types;
-            throw new KaitaiStream.ValidationGreaterThanError(0.4, foo(), _io(), "/seq/0");
-                  ^
-  required: long,long,KaitaiStream,String
-  found: double,float,KaitaiStream,String
-  reason: actual argument double cannot be converted to long by method invocation conversion
-compiled/java/src/io/kaitai/struct/testformats/ExprBits.java:56: error: possible loss of precision
-        switch (a()) {
-                 ^
-  required: int
-  found:    long
-compiled/java/src/io/kaitai/struct/testformats/ExprBits.java:85: error: possible loss of precision
-            switch (_parent().a()) {
-                               ^
-  required: int
-  found:    long
-compiled/java/src/io/kaitai/struct/testformats/ExprOpsParens.java:97: error: inconvertible types
-        int _tmp = (int) (str0To4() + str5To9().length());
-                         ^
-  required: int
-  found:    String
+  symbol:   class ValidFailRangeFloat
+  location: class TestValidFailRangeFloat
+spec/java/src/io/kaitai/struct/spec/TestValidFailRangeFloat.java:13: error: cannot find symbol
+        ValidFailRangeFloat r = ValidFailRangeFloat.fromFile(SRC_DIR + "floating_points.bin");
+                                ^
+  symbol:   variable ValidFailRangeFloat
+  location: class TestValidFailRangeFloat
+spec/java/src/io/kaitai/struct/spec/TestExprBits.java:12: error: cannot find symbol
+        ExprBits r = ExprBits.fromFile(SRC_DIR + "switch_opcodes.bin");
+        ^
+  symbol:   class ExprBits
+  location: class TestExprBits
+spec/java/src/io/kaitai/struct/spec/TestExprBits.java:12: error: cannot find symbol
+        ExprBits r = ExprBits.fromFile(SRC_DIR + "switch_opcodes.bin");
+                     ^
+  symbol:   variable ExprBits
+  location: class TestExprBits
+spec/java/src/io/kaitai/struct/spec/TestExprBits.java:15: error: package ExprBits does not exist
+        assertEquals(r.enumSeq(), ExprBits.Items.FOO);
+                                          ^
+spec/java/src/io/kaitai/struct/spec/TestExprBits.java:22: error: package ExprBits does not exist
+        assertEquals(r.enumInst(), ExprBits.Items.BAR);
+                                           ^
 11 errors
