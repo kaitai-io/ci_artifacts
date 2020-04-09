@@ -1,8 +1,23 @@
+spec/java/src/io/kaitai/struct/spec/TestNestedTypeParam.java:5: error: cannot find symbol
+import io.kaitai.struct.testformats.NestedTypeParam;
+                                   ^
+  symbol:   class NestedTypeParam
+  location: package io.kaitai.struct.testformats
 spec/java/src/io/kaitai/struct/spec/TestExprBytesLiteral.java:5: error: cannot find symbol
 import io.kaitai.struct.testformats.ExprBytesLiteral;
                                    ^
   symbol:   class ExprBytesLiteral
   location: package io.kaitai.struct.testformats
+spec/java/src/io/kaitai/struct/spec/TestNestedTypeParam.java:12: error: cannot find symbol
+        NestedTypeParam r = NestedTypeParam.fromFile(SRC_DIR + "term_strz.bin");
+        ^
+  symbol:   class NestedTypeParam
+  location: class TestNestedTypeParam
+spec/java/src/io/kaitai/struct/spec/TestNestedTypeParam.java:12: error: cannot find symbol
+        NestedTypeParam r = NestedTypeParam.fromFile(SRC_DIR + "term_strz.bin");
+                            ^
+  symbol:   variable NestedTypeParam
+  location: class TestNestedTypeParam
 spec/java/src/io/kaitai/struct/spec/TestExprBytesLiteral.java:12: error: cannot find symbol
         ExprBytesLiteral r = ExprBytesLiteral.fromFile(SRC_DIR + "enum_negative.bin");
         ^
@@ -40,4 +55,4 @@ compiled/java/src/io/kaitai/struct/testformats/ExprOpsParens.java:97: error: inc
                          ^
   required: int
   found:    String
-8 errors
+11 errors
