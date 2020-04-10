@@ -193,18 +193,8 @@
     "is_kst": true
   },
   "EnumInvalid": {
-    "status": "failed",
-    "elapsed": 0.001,
-    "failure": {
-      "file_name": null,
-      "line_num": null,
-      "message": "spec/lua/test_enum_invalid.lua:13: expected: 111, actual: nil",
-      "trace": [
-        "\n                ",
-        "stack traceback:\n\tspec/lua/test_enum_invalid.lua:13: in upvalue 'TestEnumInvalid.test_enum_invalid'"
-      ]
-    },
-    "is_kst": true
+    "status": "passed",
+    "elapsed": 0.0
   },
   "EnumLongRangeS": {
     "status": "passed",
@@ -302,7 +292,7 @@
   },
   "ExprBytesLiteral": {
     "status": "failed",
-    "elapsed": 0.005,
+    "elapsed": 0.01,
     "failure": {
       "file_name": null,
       "line_num": null,
@@ -371,7 +361,7 @@
   },
   "FixedContents": {
     "status": "failed",
-    "elapsed": 0.006,
+    "elapsed": 0.009,
     "failure": {
       "file_name": null,
       "line_num": null,
@@ -385,7 +375,7 @@
   },
   "FixedStruct": {
     "status": "failed",
-    "elapsed": 0.006,
+    "elapsed": 0.009,
     "failure": {
       "file_name": null,
       "line_num": null,
@@ -491,7 +481,7 @@
   },
   "Integers": {
     "status": "failed",
-    "elapsed": 0.007,
+    "elapsed": 0.008,
     "failure": {
       "file_name": null,
       "line_num": null,
@@ -833,28 +823,28 @@
   },
   "StrEncodings": {
     "status": "failed",
-    "elapsed": 0.002,
+    "elapsed": 0.001,
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "spec/lua/run_test_suite.lua:18: error loading module 'test_str_encodings' from file 'spec/lua/test_str_encodings.lua':\n\tspec/lua/test_str_encodings.lua:15: decimal escape too large near '\"\\342\\'",
+      "message": "../runtime/lua/string_decode.lua:42: Encoding SJIS not supported",
       "trace": [
         "\n                ",
-        "stack traceback:\n\tspec/lua/run_test_suite.lua:18: in upvalue 'TestStrEncodings.test_str_encodings'"
+        "stack traceback:\n\t../runtime/lua/string_decode.lua:42: in function 'string_decode.decode'\n\tcompiled/lua/str_encodings.lua:24: in method '_read'\n\tcompiled/lua/str_encodings.lua:15: in local 'init'\n\t../runtime/lua/class.lua:70: in function <../runtime/lua/class.lua:66>\n\t(...tail calls...)\n\tspec/lua/test_str_encodings.lua:10: in upvalue 'TestStrEncodings.test_str_encodings'"
       ]
     },
     "is_kst": true
   },
   "StrEncodingsDefault": {
     "status": "failed",
-    "elapsed": 0.002,
+    "elapsed": 0.001,
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "spec/lua/run_test_suite.lua:18: error loading module 'test_str_encodings_default' from file 'spec/lua/test_str_encodings_default.lua':\n\tspec/lua/test_str_encodings_default.lua:15: decimal escape too large near '\"\\342\\'",
+      "message": "../runtime/lua/string_decode.lua:42: Encoding SJIS not supported",
       "trace": [
         "\n                ",
-        "stack traceback:\n\tspec/lua/run_test_suite.lua:18: in upvalue 'TestStrEncodingsDefault.test_str_encodings_default'"
+        "stack traceback:\n\t../runtime/lua/string_decode.lua:42: in function 'string_decode.decode'\n\tcompiled/lua/str_encodings_default.lua:38: in method '_read'\n\tcompiled/lua/str_encodings_default.lua:31: in local 'init'\n\t../runtime/lua/class.lua:70: in field 'Subtype'\n\tcompiled/lua/str_encodings_default.lua:21: in method '_read'\n\tcompiled/lua/str_encodings_default.lua:15: in local 'init'\n\t../runtime/lua/class.lua:70: in function <../runtime/lua/class.lua:66>\n\t(...tail calls...)\n\tspec/lua/test_str_encodings_default.lua:10: in upvalue 'TestStrEncodingsDefault.test_str_encodings_default'"
       ]
     },
     "is_kst": true
@@ -922,32 +912,12 @@
     "is_kst": true
   },
   "SwitchManualEnumInvalid": {
-    "status": "failed",
-    "elapsed": 0.001,
-    "failure": {
-      "file_name": null,
-      "line_num": null,
-      "message": "spec/lua/test_switch_manual_enum_invalid.lua:13: expected: 255, actual: nil",
-      "trace": [
-        "\n                ",
-        "stack traceback:\n\tspec/lua/test_switch_manual_enum_invalid.lua:13: in upvalue 'TestSwitchManualEnumInvalid.test_switch_manual_enum_invalid'"
-      ]
-    },
-    "is_kst": true
+    "status": "passed",
+    "elapsed": 0.0
   },
   "SwitchManualEnumInvalidElse": {
-    "status": "failed",
-    "elapsed": 0.001,
-    "failure": {
-      "file_name": null,
-      "line_num": null,
-      "message": "spec/lua/test_switch_manual_enum_invalid_else.lua:13: expected: 255, actual: nil",
-      "trace": [
-        "\n                ",
-        "stack traceback:\n\tspec/lua/test_switch_manual_enum_invalid_else.lua:13: in upvalue 'TestSwitchManualEnumInvalidElse.test_switch_manual_enum_invalid_else'"
-      ]
-    },
-    "is_kst": true
+    "status": "passed",
+    "elapsed": 0.0
   },
   "SwitchManualInt": {
     "status": "passed",
@@ -1040,7 +1010,7 @@
   },
   "ValidNotParsedIf": {
     "status": "failed",
-    "elapsed": 0.009,
+    "elapsed": 0.01,
     "failure": {
       "file_name": null,
       "line_num": null,
@@ -1068,7 +1038,7 @@
   },
   "ValidSwitch": {
     "status": "failed",
-    "elapsed": 0.008,
+    "elapsed": 0.006,
     "failure": {
       "file_name": null,
       "line_num": null,
@@ -1095,7 +1065,7 @@
   },
   "ZlibSurrounded": {
     "status": "failed",
-    "elapsed": 0.008,
+    "elapsed": 0.006,
     "failure": {
       "file_name": null,
       "line_num": null,
@@ -1109,7 +1079,7 @@
   },
   "ZlibWithHeader78": {
     "status": "failed",
-    "elapsed": 0.01,
+    "elapsed": 0.009,
     "failure": {
       "file_name": null,
       "line_num": null,
@@ -1123,7 +1093,7 @@
   },
   "$meta": {
     "lang": "lua",
-    "timestamp": "2020-04-09T21:33:11Z",
+    "timestamp": "2020-04-10T08:09:26Z",
     "ci": {
       "ci": "travis",
       "build_id": "673175674",
