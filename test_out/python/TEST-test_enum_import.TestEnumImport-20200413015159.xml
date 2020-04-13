@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="1" failures="0" file="test_enum_import.py" name="test_enum_import.TestEnumImport-20200413015159" skipped="0" tests="1" time="0.001" timestamp="2020-04-13T01:51:59">
+	<testcase classname="test_enum_import.TestEnumImport" file="spec/python/test_enum_import.py" line="8" name="test_enum_import" time="0.001" timestamp="2020-04-13T01:51:59">
+		<error message="name 'Enum0' is not defined" type="NameError">
+<![CDATA[Traceback (most recent call last):
+  File "/home/travis/build/kaitai-io/ci_targets/tests/spec/python/test_enum_import.py", line 9, in test_enum_import
+    with EnumImport.from_file('src/enum_0.bin') as r:
+  File "/home/travis/build/kaitai-io/ci_targets/runtime/python/kaitaistruct.py", line 35, in from_file
+    return cls(KaitaiStream(f))
+  File "/home/travis/build/kaitai-io/ci_targets/tests/compiled/python/enum_import.py", line 16, in __init__
+    self._read()
+  File "/home/travis/build/kaitai-io/ci_targets/tests/compiled/python/enum_import.py", line 19, in _read
+    self.pet_1 = KaitaiStream.resolve_enum(Enum0.Animal, self._io.read_u4le())
+NameError: name 'Enum0' is not defined
+]]>		</error>
+		<system-out>
+<![CDATA[]]>		</system-out>
+		<system-err>
+<![CDATA[]]>		</system-err>
+	</testcase>
+</testsuite>
