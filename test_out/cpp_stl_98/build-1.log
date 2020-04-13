@@ -53,6 +53,7 @@ make[2]: *** [CMakeFiles/ks_tests.dir/test_combine_enum.cpp.o] Error 1
 [ 11%] Building CXX object CMakeFiles/ks_tests.dir/test_enum_of_value_inst.cpp.o
 [ 11%] Building CXX object CMakeFiles/ks_tests.dir/test_enum_to_i.cpp.o
 [ 11%] Building CXX object CMakeFiles/ks_tests.dir/test_enum_to_i_class_border_1.cpp.o
+[ 12%] Building CXX object CMakeFiles/ks_tests.dir/test_eof_exception_bytes.cpp.o
 In file included from /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_enum_long_range_s.cpp:4:
 /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_long_range_s.h:18:31: warning: integer literal is too large to be represented in type 'long' and is subject to undefined behavior under C++98, interpreting as 'unsigned long'; this literal will be ill-formed in C++11 onwards [-Wc++11-compat]
         CONSTANTS_LONG_MIN = -9223372036854775808,
@@ -60,7 +61,6 @@ In file included from /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_st
 /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_long_range_s.h:17:10: warning: enumeration values exceed range of largest integer [-Wenum-too-large]
     enum constants_t {
          ^
-[ 12%] Building CXX object CMakeFiles/ks_tests.dir/test_eof_exception_bytes.cpp.o
 [ 12%] Building CXX object CMakeFiles/ks_tests.dir/test_eof_exception_u4.cpp.o
 2 warnings generated.
 [ 12%] Building CXX object CMakeFiles/ks_tests.dir/test_eos_exception_bytes.cpp.o
@@ -189,15 +189,15 @@ make[2]: *** [CMakeFiles/ks_tests.dir/test_params_pass_array_int.cpp.o] Error 1
 [ 32%] Building CXX object CMakeFiles/ks_tests.dir/test_position_to_end.cpp.o
 /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_params_pass_array_str.cpp:4:10: fatal error: 'params_pass_array_str.h' file not found
 #include "params_pass_array_str.h"
-         ^~~~~~~~~~~~~~~~~~~~~~~~~
-/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_params_pass_array_struct.cpp:4:10: fatal error: 'params_pass_array_struct.h' file not found
+         ^~~~~~~~~~~~~~~~~~~~~~~~~/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_params_pass_array_struct.cpp:4:10: fatal error: 'params_pass_array_struct.h' file not found
 #include "params_pass_array_struct.h"
          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
-1 error generated.
-make[2]: *** [CMakeFiles/ks_tests.dir/test_params_pass_array_str.cpp.o] Error 1
+
 1 error generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/test_params_pass_array_struct.cpp.o] Error 1
 [ 33%] Building CXX object CMakeFiles/ks_tests.dir/test_process_coerce_bytes.cpp.o
+1 error generated.
+make[2]: *** [CMakeFiles/ks_tests.dir/test_params_pass_array_str.cpp.o] Error 1
 [ 33%] Building CXX object CMakeFiles/ks_tests.dir/test_process_coerce_switch.cpp.o
 [ 33%] Building CXX object CMakeFiles/ks_tests.dir/test_process_coerce_usertype1.cpp.o
 [ 33%] Building CXX object CMakeFiles/ks_tests.dir/test_process_coerce_usertype2.cpp.o
@@ -240,11 +240,11 @@ make[2]: *** [CMakeFiles/ks_tests.dir/test_process_coerce_switch.cpp.o] Error 1
 [ 41%] Building CXX object CMakeFiles/ks_tests.dir/test_switch_integers2.cpp.o
 [ 41%] Building CXX object CMakeFiles/ks_tests.dir/test_switch_manual_enum.cpp.o
 [ 42%] Building CXX object CMakeFiles/ks_tests.dir/test_switch_manual_enum_invalid.cpp.o
+[ 42%] Building CXX object CMakeFiles/ks_tests.dir/test_switch_manual_enum_invalid_else.cpp.o
 In file included from /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_switch_else_only.cpp:4:
 /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/switch_else_only.h:62:13: error: expected member name or ';' after declaration specifiers
     data_t* struct() const { return m_struct; }
     ~~~~~~  ^
-[ 42%] Building CXX object CMakeFiles/ks_tests.dir/test_switch_manual_enum_invalid_else.cpp.o
 /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_switch_else_only.cpp:16:26: error: expected unqualified-id
     BOOST_CHECK_EQUAL(r->struct()->value(), std::string("\x6F\x6F\x62\x61", 4));
                          ^
@@ -270,10 +270,10 @@ note: (skipping 13 expansions in backtrace; use -fmacro-backtrace-limit=0 to see
 /usr/local/include/boost/test/tools/old/interface.hpp:53:49: note: expanded from macro 'BOOST_TEST_TOOL_PASS_ARG'
 #define BOOST_TEST_TOOL_PASS_ARG( r, _, arg ) , arg, BOOST_STRINGIZE( arg )
                                                 ^~~
-3 errors generated.
-make[2]: *** [CMakeFiles/ks_tests.dir/test_switch_else_only.cpp.o] Error 1
 [ 42%] Building CXX object CMakeFiles/ks_tests.dir/test_switch_manual_int.cpp.o
+3 errors generated.
 [ 42%] Building CXX object CMakeFiles/ks_tests.dir/test_switch_manual_int_else.cpp.o
+make[2]: *** [CMakeFiles/ks_tests.dir/test_switch_else_only.cpp.o] Error 1
 [ 43%] Building CXX object CMakeFiles/ks_tests.dir/test_switch_manual_int_size.cpp.o
 [ 43%] Building CXX object CMakeFiles/ks_tests.dir/test_switch_manual_int_size_else.cpp.o
 [ 43%] Building CXX object CMakeFiles/ks_tests.dir/test_switch_manual_int_size_eos.cpp.o
@@ -348,6 +348,7 @@ make[2]: *** [CMakeFiles/ks_tests.dir/test_switch_else_only.cpp.o] Error 1
 [ 60%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_to_i.cpp.o
 [ 60%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_to_i_class_border_1.cpp.o
 [ 60%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_to_i_class_border_2.cpp.o
+[ 61%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/eof_exception_bytes.cpp.o
 In file included from /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_long_range_s.cpp:4:
 /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_long_range_s.h:18:31: warning: integer literal is too large to be represented in type 'long' and is subject to undefined behavior under C++98, interpreting as 'unsigned long'; this literal will be ill-formed in C++11 onwards [-Wc++11-compat]
         CONSTANTS_LONG_MIN = -9223372036854775808,
@@ -355,9 +356,8 @@ In file included from /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cp
 /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_long_range_s.h:17:10: warning: enumeration values exceed range of largest integer [-Wenum-too-large]
     enum constants_t {
          ^
-[ 61%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/eof_exception_bytes.cpp.o
-2 warnings generated.
 [ 61%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/eof_exception_u4.cpp.o
+2 warnings generated.
 [ 61%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/eos_exception_bytes.cpp.o
 [ 61%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/eos_exception_u4.cpp.o
 [ 61%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/expr_0.cpp.o
@@ -493,12 +493,12 @@ make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/te
 [ 74%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/multiple_use.cpp.o
 [ 74%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/nav_parent.cpp.o
 [ 75%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/nav_parent2.cpp.o
-[ 75%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/nav_parent3.cpp.o
 /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/io_local_var.cpp:17:72: warning: comparison of unsigned expression < 0 is always false [-Wtautological-compare]
     if (static_cast<io_local_var_t::dummy_t*>(mess_up())->_io()->pos() < 0) {
         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ^ ~
-1[ 75%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/nav_parent_false.cpp.o
- warning generated.
+[ 75%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/nav_parent3.cpp.o
+1 warning generated.
+[ 75%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/nav_parent_false.cpp.o
 [ 75%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/nav_parent_false2.cpp.o
 [ 76%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/nav_parent_override.cpp.o
 [ 76%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/nav_parent_switch.cpp.o
@@ -561,9 +561,9 @@ make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/te
 /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/process_repeat_bytes.h:30:31: note: 'm__raw_bufs' declared here
     std::vector<std::string>* m__raw_bufs;
                               ^
-[ 85%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/process_xor_value.cpp.o
 3 errors generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/process_repeat_bytes.cpp.o] Error 1
+[ 85%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/process_xor_value.cpp.o
 [ 85%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/recursive_one.cpp.o
 [ 85%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/repeat_eos_bit.cpp.o
 [ 86%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/repeat_eos_struct.cpp.o
