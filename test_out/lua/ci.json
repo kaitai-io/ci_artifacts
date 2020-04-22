@@ -223,7 +223,7 @@
   },
   "EnumToIClassBorder1": {
     "status": "failed",
-    "elapsed": 0.002,
+    "elapsed": 0.001,
     "failure": {
       "file_name": null,
       "line_num": null,
@@ -292,7 +292,7 @@
   },
   "ExprBytesLiteral": {
     "status": "failed",
-    "elapsed": 0.006,
+    "elapsed": 0.009,
     "failure": {
       "file_name": null,
       "line_num": null,
@@ -435,9 +435,24 @@
     "status": "passed",
     "elapsed": 0.0
   },
+  "ImportsCircularA": {
+    "status": "failed",
+    "elapsed": 0.002,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": "spec/lua/run_test_suite.lua:18: error loading module 'imports_circular_b' from file 'compiled/lua/imports_circular_b.lua':\n\tcompiled/lua/imports_circular_b.lua:21: too many C levels (limit is 200) in function at line 18 near 'self'",
+      "trace": [
+        "\n                ",
+        "stack traceback:\n\tspec/lua/run_test_suite.lua:18: in upvalue 'TestImportsCircularA.test_imports_circular_a'"
+      ]
+    },
+    "is_kst": true
+  },
   "ImportsRel1": {
     "status": "passed",
-    "elapsed": 0.0
+    "elapsed": 0.0,
+    "is_kst": true
   },
   "IndexSizes": {
     "status": "passed",
@@ -495,7 +510,7 @@
   },
   "IntegersMinMax": {
     "status": "failed",
-    "elapsed": 0.001,
+    "elapsed": 0.002,
     "failure": {
       "file_name": null,
       "line_num": null,
@@ -936,7 +951,8 @@
   },
   "SwitchManualIntSize": {
     "status": "passed",
-    "elapsed": 0.0
+    "elapsed": 0.0,
+    "is_kst": true
   },
   "SwitchManualIntSizeElse": {
     "status": "passed",
@@ -1001,7 +1017,7 @@
   },
   "ValidLong": {
     "status": "failed",
-    "elapsed": 0.008,
+    "elapsed": 0.007,
     "failure": {
       "file_name": null,
       "line_num": null,
@@ -1015,7 +1031,7 @@
   },
   "ValidNotParsedIf": {
     "status": "failed",
-    "elapsed": 0.01,
+    "elapsed": 0.009,
     "failure": {
       "file_name": null,
       "line_num": null,
@@ -1043,7 +1059,7 @@
   },
   "ValidSwitch": {
     "status": "failed",
-    "elapsed": 0.009,
+    "elapsed": 0.008,
     "failure": {
       "file_name": null,
       "line_num": null,
@@ -1056,21 +1072,13 @@
     "is_kst": true
   },
   "YamlInts": {
-    "status": "failed",
-    "elapsed": 0.001,
-    "failure": {
-      "file_name": null,
-      "line_num": null,
-      "message": "spec/lua/test_yaml_ints.lua:12: expected: -1, actual: 1.844674407371e+19",
-      "trace": [
-        "\n                ",
-        "stack traceback:\n\tspec/lua/test_yaml_ints.lua:12: in upvalue 'TestYamlInts.test_yaml_ints'"
-      ]
-    }
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
   },
   "ZlibSurrounded": {
     "status": "failed",
-    "elapsed": 0.009,
+    "elapsed": 0.008,
     "failure": {
       "file_name": null,
       "line_num": null,
@@ -1084,7 +1092,7 @@
   },
   "ZlibWithHeader78": {
     "status": "failed",
-    "elapsed": 0.01,
+    "elapsed": 0.009,
     "failure": {
       "file_name": null,
       "line_num": null,
@@ -1098,13 +1106,13 @@
   },
   "$meta": {
     "lang": "lua",
-    "timestamp": "2020-04-22T01:32:45Z",
+    "timestamp": "2020-04-22T21:35:19Z",
     "ci": {
       "ci": "travis",
-      "build_id": "677966456",
-      "job_id": "677966478",
-      "job_number": "348.22",
-      "url": "https://travis-ci.org/kaitai-io/ci_targets/jobs/677966478"
+      "build_id": "678353061",
+      "job_id": "678353083",
+      "job_number": "349.22",
+      "url": "https://travis-ci.org/kaitai-io/ci_targets/jobs/678353083"
     }
   }
 }

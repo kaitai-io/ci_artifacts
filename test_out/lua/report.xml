@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites>
-    <testsuite name="LuaUnit" id="00001" package="" hostname="localhost" tests="189" timestamp="2020-04-22T01:32:45" time="0.108" errors="3" failures="17">
+    <testsuite name="LuaUnit" id="00001" package="" hostname="localhost" tests="190" timestamp="2020-04-22T21:35:18" time="0.107" errors="3" failures="17">
         <properties>
             <property name="Lua Version" value="Lua 5.3"/>
             <property name="LuaUnit Version" value="3.3"/>
@@ -95,7 +95,7 @@
         </testcase>
         <testcase classname="TestEnumToI" name="TestEnumToI.test_enum_to_i" time="0.000">
         </testcase>
-        <testcase classname="TestEnumToIClassBorder1" name="TestEnumToIClassBorder1.test_enum_to_i_class_border_1" time="0.002">
+        <testcase classname="TestEnumToIClassBorder1" name="TestEnumToIClassBorder1.test_enum_to_i_class_border_1" time="0.001">
             <error type="compiled/lua/enum_to_i_class_border_2.lua:27: attempt to index a nil value (field &apos;parent&apos;)">
                 <![CDATA[stack traceback:
 	spec/lua/test_enum_to_i_class_border_1.lua:14: in upvalue 'TestEnumToIClassBorder1.test_enum_to_i_class_border_1']]></error>
@@ -123,7 +123,7 @@
         </testcase>
         <testcase classname="TestExprBytesCmp" name="TestExprBytesCmp.test_expr_bytes_cmp" time="0.000">
         </testcase>
-        <testcase classname="TestExprBytesLiteral" name="TestExprBytesLiteral.test_expr_bytes_literal" time="0.006">
+        <testcase classname="TestExprBytesLiteral" name="TestExprBytesLiteral.test_expr_bytes_literal" time="0.009">
             <failure type="spec/lua/run_test_suite.lua:18: spec/lua/test_expr_bytes_literal.lua:5: module &apos;expr_bytes_literal&apos; not found:
 	no field package.preload[&apos;expr_bytes_literal&apos;]
 	no file &apos;../runtime/lua/expr_bytes_literal.lua&apos;
@@ -216,7 +216,13 @@
         </testcase>
         <testcase classname="TestImportsAbsRel" name="TestImportsAbsRel.test_imports_abs_rel" time="0.000">
         </testcase>
-        <testcase classname="TestImportsRel1" name="TestImportsRel1.test_imports_rel1" time="0.000">
+        <testcase classname="TestImportsCircularA" name="TestImportsCircularA.test_imports_circular_a" time="0.002">
+            <failure type="spec/lua/run_test_suite.lua:18: error loading module &apos;imports_circular_b&apos; from file &apos;compiled/lua/imports_circular_b.lua&apos;:
+	compiled/lua/imports_circular_b.lua:21: too many C levels (limit is 200) in function at line 18 near &apos;self&apos;">
+                <![CDATA[stack traceback:
+	spec/lua/run_test_suite.lua:18: in upvalue 'TestImportsCircularA.test_imports_circular_a']]></failure>
+        </testcase>
+        <testcase classname="TestImportsRel1" name="TestImportsRel1.test_imports_rel_1" time="0.000">
         </testcase>
         <testcase classname="TestIndexSizes" name="TestIndexSizes.test_index_sizes" time="0.000">
         </testcase>
@@ -251,7 +257,7 @@
                 <![CDATA[stack traceback:
 	spec/lua/run_test_suite.lua:18: in upvalue 'TestIntegers.test_integers']]></failure>
         </testcase>
-        <testcase classname="TestIntegersMinMax" name="TestIntegersMinMax.test_integers_min_max" time="0.001">
+        <testcase classname="TestIntegersMinMax" name="TestIntegersMinMax.test_integers_min_max" time="0.002">
             <failure type="spec/lua/test_integers_min_max.lua:22: expected: 1.844674407371e+19, actual: -1">
                 <![CDATA[stack traceback:
 	spec/lua/test_integers_min_max.lua:22: in upvalue 'TestIntegersMinMax.test_integers_min_max']]></failure>
@@ -470,7 +476,7 @@
         </testcase>
         <testcase classname="TestUserType" name="TestUserType.test_user_type" time="0.000">
         </testcase>
-        <testcase classname="TestValidLong" name="TestValidLong.test_valid_long" time="0.008">
+        <testcase classname="TestValidLong" name="TestValidLong.test_valid_long" time="0.007">
             <failure type="spec/lua/run_test_suite.lua:18: spec/lua/test_valid_long.lua:5: module &apos;valid_long&apos; not found:
 	no field package.preload[&apos;valid_long&apos;]
 	no file &apos;../runtime/lua/valid_long.lua&apos;
@@ -487,7 +493,7 @@
                 <![CDATA[stack traceback:
 	spec/lua/run_test_suite.lua:18: in upvalue 'TestValidLong.test_valid_long']]></failure>
         </testcase>
-        <testcase classname="TestValidNotParsedIf" name="TestValidNotParsedIf.test_valid_not_parsed_if" time="0.010">
+        <testcase classname="TestValidNotParsedIf" name="TestValidNotParsedIf.test_valid_not_parsed_if" time="0.009">
             <failure type="spec/lua/run_test_suite.lua:18: spec/lua/test_valid_not_parsed_if.lua:5: module &apos;valid_not_parsed_if&apos; not found:
 	no field package.preload[&apos;valid_not_parsed_if&apos;]
 	no file &apos;../runtime/lua/valid_not_parsed_if.lua&apos;
@@ -521,7 +527,7 @@
                 <![CDATA[stack traceback:
 	spec/lua/run_test_suite.lua:18: in upvalue 'TestValidShort.test_valid_short']]></failure>
         </testcase>
-        <testcase classname="TestValidSwitch" name="TestValidSwitch.test_valid_switch" time="0.009">
+        <testcase classname="TestValidSwitch" name="TestValidSwitch.test_valid_switch" time="0.008">
             <failure type="spec/lua/run_test_suite.lua:18: spec/lua/test_valid_switch.lua:5: module &apos;valid_switch&apos; not found:
 	no field package.preload[&apos;valid_switch&apos;]
 	no file &apos;../runtime/lua/valid_switch.lua&apos;
@@ -538,12 +544,9 @@
                 <![CDATA[stack traceback:
 	spec/lua/run_test_suite.lua:18: in upvalue 'TestValidSwitch.test_valid_switch']]></failure>
         </testcase>
-        <testcase classname="TestYamlInts" name="TestYamlInts.test_yaml_ints" time="0.001">
-            <failure type="spec/lua/test_yaml_ints.lua:12: expected: -1, actual: 1.844674407371e+19">
-                <![CDATA[stack traceback:
-	spec/lua/test_yaml_ints.lua:12: in upvalue 'TestYamlInts.test_yaml_ints']]></failure>
+        <testcase classname="TestYamlInts" name="TestYamlInts.test_yaml_ints" time="0.000">
         </testcase>
-        <testcase classname="TestZlibSurrounded" name="TestZlibSurrounded.test_zlib_surrounded" time="0.009">
+        <testcase classname="TestZlibSurrounded" name="TestZlibSurrounded.test_zlib_surrounded" time="0.008">
             <failure type="spec/lua/run_test_suite.lua:18: spec/lua/test_zlib_surrounded.lua:5: module &apos;zlib_surrounded&apos; not found:
 	no field package.preload[&apos;zlib_surrounded&apos;]
 	no file &apos;../runtime/lua/zlib_surrounded.lua&apos;
@@ -560,7 +563,7 @@
                 <![CDATA[stack traceback:
 	spec/lua/run_test_suite.lua:18: in upvalue 'TestZlibSurrounded.test_zlib_surrounded']]></failure>
         </testcase>
-        <testcase classname="TestZlibWithHeader78" name="TestZlibWithHeader78.test_zlib_with_header_78" time="0.010">
+        <testcase classname="TestZlibWithHeader78" name="TestZlibWithHeader78.test_zlib_with_header_78" time="0.009">
             <failure type="spec/lua/run_test_suite.lua:18: spec/lua/test_zlib_with_header_78.lua:5: module &apos;zlib_with_header_78&apos; not found:
 	no field package.preload[&apos;zlib_with_header_78&apos;]
 	no file &apos;../runtime/lua/zlib_with_header_78.lua&apos;
