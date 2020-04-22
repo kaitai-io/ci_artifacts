@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-	<testsuite tests="150" failures="14" time="0.028" name="github.com/kaitai-io/ci_targets/tests/spec/go">
+	<testsuite tests="158" failures="15" time="0.032" name="github.com/kaitai-io/ci_targets/tests/spec/go">
 		<properties>
 			<property name="go.version" value="go1.10"></property>
 		</properties>
@@ -85,7 +85,11 @@
 			<failure message="Failed" type="">if_values_test.go:43: &#xA;&#x9;&#x9;Error Trace:&#x9;if_values_test.go:43&#xA;&#x9;&#x9;Error:      &#x9;Expected nil, but got: 0&#xA;&#x9;&#x9;Test:       &#x9;TestIfValues&#xA;if_values_test.go:49: &#xA;&#x9;&#x9;Error Trace:&#x9;if_values_test.go:49&#xA;&#x9;&#x9;Error:      &#x9;Expected nil, but got: 0&#xA;&#x9;&#x9;Test:       &#x9;TestIfValues</failure>
 		</testcase>
 		<testcase classname="go" name="TestImports0" time="0.000"></testcase>
+		<testcase classname="go" name="TestImportsAbsAbs" time="0.000"></testcase>
+		<testcase classname="go" name="TestImportsAbsRel" time="0.000"></testcase>
 		<testcase classname="go" name="TestImportsAbs" time="0.000"></testcase>
+		<testcase classname="go" name="TestImportsCircularA" time="0.000"></testcase>
+		<testcase classname="go" name="TestImportsRel1" time="0.000"></testcase>
 		<testcase classname="go" name="TestIndexSizes" time="0.000"></testcase>
 		<testcase classname="go" name="TestInstanceIoUser" time="0.000"></testcase>
 		<testcase classname="go" name="TestInstanceStdArray" time="0.000"></testcase>
@@ -111,6 +115,10 @@
 		<testcase classname="go" name="TestNestedTypes3" time="0.000"></testcase>
 		<testcase classname="go" name="TestNestedTypes" time="0.000"></testcase>
 		<testcase classname="go" name="TestNonStandard" time="0.000"></testcase>
+		<testcase classname="go" name="TestOpaqueExternalType02Parent" time="0.000">
+			<failure message="Failed" type="">goroutine 116 [running]:&#xA;runtime/debug.Stack(0xc42019c8c0, 0xc420084400, 0xc420054c20)&#xA;runtime/debug.PrintStack()&#xA;github.com/kaitai-io/ci_targets/tests/spec/go.TestOpaqueExternalType02Parent.func1(0xc420191c20)&#xA;panic(0x719c20, 0x9694d0)&#xA;test_formats.(*OpaqueExternalType02Child).SomeMethod(...)&#xA;test_formats.(*OpaqueExternalType02Child_OpaqueExternalType02ChildChild).Read(0xc420193410, 0xc4201a4280, 0xc42019c910, 0x0, 0xc42019ebfc, 0x3)&#xA;test_formats.(*OpaqueExternalType02Child).Read(0xc42019c910, 0xc4201a4280, 0x7146c0, 0xc4201a42a0, 0x0, 0x7488c0, 0x1)&#xA;test_formats.(*OpaqueExternalType02Parent_ParentObj).Read(0xc4201a42a0, 0xc4201a4280, 0xc4201933e0, 0xc4201933e0, 0x748800, 0x1)&#xA;test_formats.(*OpaqueExternalType02Parent).Read(0xc4201933e0, 0xc4201a4280, 0x714660, 0xc4201933e0, 0xc4201933e0, 0x923906, 0x46)&#xA;github.com/kaitai-io/ci_targets/tests/spec/go.TestOpaqueExternalType02Parent(0xc420191c20)&#xA;testing.tRunner(0xc420191c20, 0x79b1c0)&#xA;created by testing.(*T).Run&#xA;opaque_external_type_02_parent_test.go:16: unexpected panic: runtime error: invalid memory address or nil pointer dereference</failure>
+		</testcase>
+		<testcase classname="go" name="TestOpaqueExternalType" time="0.000"></testcase>
 		<testcase classname="go" name="TestOpaqueWithParam" time="0.000"></testcase>
 		<testcase classname="go" name="TestParamsCallExtraParens" time="0.000"></testcase>
 		<testcase classname="go" name="TestParamsCallShort" time="0.000"></testcase>
@@ -137,7 +145,7 @@
 		<testcase classname="go" name="TestProcessToUser" time="0.000"></testcase>
 		<testcase classname="go" name="TestProcessXor4Const" time="0.000"></testcase>
 		<testcase classname="go" name="TestProcessXor4Value" time="0.000"></testcase>
-		<testcase classname="go" name="TestProcessXorConst" time="0.000"></testcase>
+		<testcase classname="go" name="TestProcessXorConst" time="0.010"></testcase>
 		<testcase classname="go" name="TestProcessXorValue" time="0.000"></testcase>
 		<testcase classname="go" name="TestRepeatEosBit" time="0.000">
 			<failure message="Failed" type="">repeat_eos_bit_test.go:32: &#xA;&#x9;&#x9;Error Trace:&#x9;repeat_eos_bit_test.go:32&#xA;&#x9;&#x9;Error:      &#x9;Not equal: &#xA;&#x9;&#x9;            &#x9;expected: 16&#xA;&#x9;&#x9;            &#x9;actual  : 15&#xA;&#x9;&#x9;Test:       &#x9;TestRepeatEosBit</failure>
@@ -145,7 +153,7 @@
 		<testcase classname="go" name="TestRepeatEosStruct" time="0.000"></testcase>
 		<testcase classname="go" name="TestRepeatEosU4" time="0.000"></testcase>
 		<testcase classname="go" name="TestRepeatNStruct" time="0.000"></testcase>
-		<testcase classname="go" name="TestRepeatNStrzDouble" time="0.010"></testcase>
+		<testcase classname="go" name="TestRepeatNStrzDouble" time="0.000"></testcase>
 		<testcase classname="go" name="TestRepeatNStrz" time="0.000"></testcase>
 		<testcase classname="go" name="TestRepeatUntilComplex" time="0.000"></testcase>
 		<testcase classname="go" name="TestRepeatUntilS4" time="0.000"></testcase>
@@ -153,6 +161,7 @@
 		<testcase classname="go" name="TestStrEncodings" time="0.000"></testcase>
 		<testcase classname="go" name="TestStrEos" time="0.000"></testcase>
 		<testcase classname="go" name="TestStrLiterals2" time="0.000"></testcase>
+		<testcase classname="go" name="TestStrLiterals" time="0.000"></testcase>
 		<testcase classname="go" name="TestStrPadTermEmpty" time="0.000"></testcase>
 		<testcase classname="go" name="TestStrPadTerm" time="0.000"></testcase>
 		<testcase classname="go" name="TestSwitchElseOnly" time="0.000"></testcase>
@@ -163,6 +172,7 @@
 		<testcase classname="go" name="TestTermStrz" time="0.000"></testcase>
 		<testcase classname="go" name="TestTsPacketHeader" time="0.000"></testcase>
 		<testcase classname="go" name="TestTypeIntUnaryOp" time="0.000"></testcase>
+		<testcase classname="go" name="TestTypeTernaryOpaque" time="0.000"></testcase>
 		<testcase classname="go" name="TestTypeTernary" time="0.000"></testcase>
 		<testcase classname="go" name="TestUserType" time="0.000"></testcase>
 		<testcase classname="go" name="TestValidFailContents" time="0.000">

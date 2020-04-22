@@ -388,7 +388,25 @@
     "elapsed": 0.0,
     "is_kst": true
   },
+  "ImportsAbsAbs": {
+    "status": "passed",
+    "elapsed": 0.0
+  },
+  "ImportsAbsRel": {
+    "status": "passed",
+    "elapsed": 0.0
+  },
   "ImportsAbs": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "ImportsCircularA": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "ImportsRel1": {
     "status": "passed",
     "elapsed": 0.0,
     "is_kst": true
@@ -518,6 +536,22 @@
     "elapsed": 0.0,
     "is_kst": true
   },
+  "OpaqueExternalType02Parent": {
+    "status": "failed",
+    "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": "Failed",
+      "trace": [
+        "goroutine 116 [running]:&#xA;runtime/debug.Stack(0xc42019c8c0, 0xc420084400, 0xc420054c20)&#xA;runtime/debug.PrintStack()&#xA;github.com/kaitai-io/ci_targets/tests/spec/go.TestOpaqueExternalType02Parent.func1(0xc420191c20)&#xA;panic(0x719c20, 0x9694d0)&#xA;test_formats.(*OpaqueExternalType02Child).SomeMethod(...)&#xA;test_formats.(*OpaqueExternalType02Child_OpaqueExternalType02ChildChild).Read(0xc420193410, 0xc4201a4280, 0xc42019c910, 0x0, 0xc42019ebfc, 0x3)&#xA;test_formats.(*OpaqueExternalType02Child).Read(0xc42019c910, 0xc4201a4280, 0x7146c0, 0xc4201a42a0, 0x0, 0x7488c0, 0x1)&#xA;test_formats.(*OpaqueExternalType02Parent_ParentObj).Read(0xc4201a42a0, 0xc4201a4280, 0xc4201933e0, 0xc4201933e0, 0x748800, 0x1)&#xA;test_formats.(*OpaqueExternalType02Parent).Read(0xc4201933e0, 0xc4201a4280, 0x714660, 0xc4201933e0, 0xc4201933e0, 0x923906, 0x46)&#xA;github.com/kaitai-io/ci_targets/tests/spec/go.TestOpaqueExternalType02Parent(0xc420191c20)&#xA;testing.tRunner(0xc420191c20, 0x79b1c0)&#xA;created by testing.(*T).Run&#xA;opaque_external_type_02_parent_test.go:16: unexpected panic: runtime error: invalid memory address or nil pointer dereference"
+      ]
+    }
+  },
+  "OpaqueExternalType": {
+    "status": "passed",
+    "elapsed": 0.0
+  },
   "OpaqueWithParam": {
     "status": "passed",
     "elapsed": 0.0
@@ -643,7 +677,7 @@
   },
   "ProcessXorConst": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.01,
     "is_kst": true
   },
   "ProcessXorValue": {
@@ -680,7 +714,7 @@
   },
   "RepeatNStrzDouble": {
     "status": "passed",
-    "elapsed": 0.01,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "RepeatNStrz": {
@@ -715,6 +749,10 @@
     "status": "passed",
     "elapsed": 0.0,
     "is_kst": true
+  },
+  "StrLiterals": {
+    "status": "passed",
+    "elapsed": 0.0
   },
   "StrPadTermEmpty": {
     "status": "passed",
@@ -765,6 +803,10 @@
     "status": "passed",
     "elapsed": 0.0,
     "is_kst": true
+  },
+  "TypeTernaryOpaque": {
+    "status": "passed",
+    "elapsed": 0.0
   },
   "TypeTernary": {
     "status": "passed",
@@ -855,13 +897,13 @@
   },
   "$meta": {
     "lang": "go",
-    "timestamp": "2020-04-22T01:32:28Z",
+    "timestamp": "2020-04-22T21:35:19Z",
     "ci": {
       "ci": "travis",
-      "build_id": "677966456",
-      "job_id": "677966476",
-      "job_number": "348.20",
-      "url": "https://travis-ci.org/kaitai-io/ci_targets/jobs/677966476"
+      "build_id": "678353061",
+      "job_id": "678353081",
+      "job_number": "349.20",
+      "url": "https://travis-ci.org/kaitai-io/ci_targets/jobs/678353081"
     }
   }
 }
