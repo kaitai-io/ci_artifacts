@@ -1,214 +1,228 @@
 <testsuites>
-  <testsuite tests="166" failures="0" errors="11" name="tests">
-    <testcase time="0.00203394889831543" name="tbcd_user_type_be" />
-    <testcase time="0.001906633377075195" name="tbcd_user_type_le" />
-    <testcase time="0.001809597015380859" name="tbits_byte_aligned" />
-    <testcase time="0.002082109451293945" name="tbits_enum" />
-    <testcase time="0.001894950866699219" name="tbits_simple" />
-    <testcase time="0.001891136169433594" name="tbuffered_struct" />
-    <testcase time="0.002042770385742188" name="tbytes_pad_term" />
-    <testcase time="0.002164363861083984" name="tcast_nested" />
-    <testcase time="0.001753807067871094" name="tcast_to_imported" />
-    <testcase time="0.001805543899536133" name="tcast_to_top" />
-    <testcase time="0.001798629760742188" name="tcombine_bool" />
-    <testcase time="0.002060413360595703" name="tcombine_bytes" />
-    <testcase time="0.002007484436035156" name="tcombine_str" />
-    <testcase time="0.001779556274414062" name="tdebug_switch_user" />
+  <testsuite tests="166" failures="0" errors="15" name="tests">
+    <testcase time="0.001862287521362305" name="tbcd_user_type_be" />
+    <testcase time="0.001865386962890625" name="tbcd_user_type_le" />
+    <testcase time="0.001771688461303711" name="tbits_byte_aligned" />
+    <testcase time="0.001760482788085938" name="tbits_enum" />
+    <testcase time="0.001800060272216797" name="tbits_simple" />
+    <testcase time="0.001915216445922852" name="tbuffered_struct" />
+    <testcase time="0.001795291900634766" name="tbytes_pad_term" />
+    <testcase time="0.001921176910400391" name="tcast_nested" />
+    <testcase time="0.001685619354248047" name="tcast_to_imported" />
+    <testcase time="0.001745462417602539" name="tcast_to_top" />
+    <testcase time="0.001863956451416016" name="tcombine_bool" />
+    <testcase time="0.001721858978271484" name="tcombine_bytes" />
+    <testcase time="0.001841306686401367" name="tcombine_str" />
+    <testcase time="0.001694679260253906" name="tdebug_switch_user" />
     <testcase time="0.002007007598876953" name="tdefault_big_endian" />
-    <testcase time="0.001904487609863281" name="tdefault_endian_expr_inherited" />
-    <testcase time="0.001955270767211914" name="tdefault_endian_expr_is_be" />
-    <testcase time="0.001986026763916016" name="tdefault_endian_expr_is_le" />
-    <testcase time="0.001791477203369141" name="tdefault_endian_mod" />
-    <testcase time="0.001946449279785156" name="tdocstrings" />
-    <testcase time="0.001975297927856445" name="tdocstrings_docref" />
-    <testcase time="0.001918554306030273" name="tdocstrings_docref_multi" />
-    <testcase time="0.001955270767211914" name="tenum_0" />
-    <testcase time="0.001941919326782227" name="tenum_1" />
-    <testcase time="0.00179290771484375" name="tenum_deep" />
-    <testcase time="0.001918792724609375" name="tenum_deep_literals" />
-    <testcase time="0.001855850219726562" name="tenum_fancy" />
-    <testcase time="0.001970052719116211" name="tenum_if" />
-    <testcase time="0.002668380737304688" name="tenum_import" />
-    <testcase time="0.00194549560546875" name="tenum_int_range_s" />
-    <testcase time="0.002003192901611328" name="tenum_int_range_u" />
-    <testcase time="0.001908063888549805" name="tenum_invalid" />
-    <testcase time="0.001924514770507812" name="tenum_long_range_s" />
-    <testcase time="0.001863479614257812" name="tenum_long_range_u" />
-    <testcase time="0.001811742782592773" name="tenum_negative" />
-    <testcase time="0.001882791519165039" name="tenum_of_value_inst" />
-    <testcase time="0.001893758773803711" name="tenum_to_i" />
+    <testcase time="0.001902341842651367" name="tdefault_endian_expr_inherited" />
+    <testcase time="0.001867771148681641" name="tdefault_endian_expr_is_be" />
+    <testcase time="0.001840829849243164" name="tdefault_endian_expr_is_le" />
+    <testcase time="0.001706600189208984" name="tdefault_endian_mod" />
+    <testcase time="0.001786708831787109" name="tdocstrings" />
+    <testcase time="0.001802444458007812" name="tdocstrings_docref" />
+    <testcase time="0.00185394287109375" name="tdocstrings_docref_multi" />
+    <testcase time="0.001791238784790039" name="tenum_0" />
+    <testcase time="0.001756906509399414" name="tenum_1" />
+    <testcase time="0.00251317024230957" name="tenum_deep" />
+    <testcase time="0.001777410507202148" name="tenum_deep_literals" />
+    <testcase time="0.001739501953125" name="tenum_fancy" />
+    <testcase time="0.003357648849487305" name="tenum_if" />
+    <testcase time="0.001696586608886719" name="tenum_import" />
+    <testcase time="0.001857519149780273" name="tenum_int_range_s" />
+    <testcase time="0.001681327819824219" name="tenum_int_range_u" />
+    <testcase time="0.001800060272216797" name="tenum_invalid" />
+    <testcase time="0.00000000" name="tenum_long_range_s">
+      <failure message="fatal.nim(49)            sysFatal
+Error: unhandled exception: over- or underflow [OverflowError]
+" />
+    </testcase>
+    <testcase time="0.00000000" name="tenum_long_range_u">
+      <failure message="fatal.nim(49)            sysFatal
+Error: unhandled exception: over- or underflow [OverflowError]
+" />
+    </testcase>
+    <testcase time="0.001724720001220703" name="tenum_negative" />
+    <testcase time="0.0018310546875" name="tenum_of_value_inst" />
+    <testcase time="0.001754999160766602" name="tenum_to_i" />
     <testcase time="0.00000000" name="tenum_to_i_class_border_1">
-      <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/enum_to_i_class_border_1.nim(22, 26) Error: undeclared identifier: 'EnumToIClassBorder2'
+      <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/enum_to_i_class_border_1.nim(12, 26) Error: undeclared identifier: 'EnumToIClassBorder2'
 This might be caused by a recursive module dependency:
 /home/travis/build/kaitai-io/ci_targets/compiled/nim/enum_to_i_class_border_2.nim imports /home/travis/build/kaitai-io/ci_targets/compiled/nim/enum_to_i_class_border_1.nim
 /home/travis/build/kaitai-io/ci_targets/compiled/nim/enum_to_i_class_border_1.nim imports /home/travis/build/kaitai-io/ci_targets/compiled/nim/enum_to_i_class_border_2.nim
 " />
     </testcase>
-    <testcase time="0.001956701278686523" name="texpr_0" />
-    <testcase time="0.002151012420654297" name="texpr_1" />
-    <testcase time="0.002060174942016602" name="texpr_2" />
-    <testcase time="0.002023935317993164" name="texpr_3" />
-    <testcase time="0.002262115478515625" name="texpr_array" />
-    <testcase time="0.001822948455810547" name="texpr_bits" />
-    <testcase time="0.001955032348632812" name="texpr_bytes_cmp" />
+    <testcase time="0.001807212829589844" name="texpr_0" />
+    <testcase time="0.001780986785888672" name="texpr_1" />
+    <testcase time="0.001803874969482422" name="texpr_2" />
+    <testcase time="0.001815080642700195" name="texpr_3" />
+    <testcase time="0.001852035522460938" name="texpr_array" />
+    <testcase time="0.001784563064575195" name="texpr_bits" />
+    <testcase time="0.001877069473266602" name="texpr_bytes_cmp" />
     <testcase time="0.00000000" name="texpr_bytes_literal">
       <failure message="/home/travis/build/kaitai-io/ci_targets/tests/spec/nim/tests/texpr_bytes_literal.nim(4, 29) Error: cannot open file: ../../../compiled/nim/expr_bytes_literal
 " />
     </testcase>
-    <testcase time="0.001804590225219727" name="texpr_bytes_ops" />
-    <testcase time="0.001878738403320312" name="texpr_calc_array_ops" />
-    <testcase time="0.001783847808837891" name="texpr_enum" />
-    <testcase time="0.001952409744262695" name="texpr_io_eof" />
-    <testcase time="0.002031803131103516" name="texpr_io_pos" />
-    <testcase time="0.001781940460205078" name="texpr_mod" />
-    <testcase time="0.001809358596801758" name="texpr_ops_parens" />
-    <testcase time="0.001854419708251953" name="texpr_sizeof_type_0" />
-    <testcase time="0.001829147338867188" name="texpr_sizeof_type_1" />
-    <testcase time="0.001909494400024414" name="texpr_sizeof_value_0" />
-    <testcase time="0.001945018768310547" name="texpr_sizeof_value_sized" />
-    <testcase time="0.003076076507568359" name="texpr_str_ops" />
-    <testcase time="0.002034425735473633" name="tfixed_contents" />
-    <testcase time="0.00195622444152832" name="tfixed_struct" />
-    <testcase time="0.001923561096191406" name="tfloat_to_i" />
-    <testcase time="0.001909732818603516" name="tfloating_points" />
-    <testcase time="0.001921892166137695" name="thello_world" />
-    <testcase time="0.001823902130126953" name="tif_instances" />
-    <testcase time="0.002119541168212891" name="tif_struct" />
-    <testcase time="0.001791238784790039" name="tif_values" />
-    <testcase time="0.003293514251708984" name="timports0" />
+    <testcase time="0.001781463623046875" name="texpr_bytes_ops" />
+    <testcase time="0.001756668090820312" name="texpr_calc_array_ops" />
+    <testcase time="0.001804590225219727" name="texpr_enum" />
+    <testcase time="0.001756429672241211" name="texpr_io_eof" />
+    <testcase time="0.001916408538818359" name="texpr_io_pos" />
+    <testcase time="0.001806735992431641" name="texpr_mod" />
+    <testcase time="0.001768350601196289" name="texpr_ops_parens" />
+    <testcase time="0.00169825553894043" name="texpr_sizeof_type_0" />
+    <testcase time="0.001761436462402344" name="texpr_sizeof_type_1" />
+    <testcase time="0.001683473587036133" name="texpr_sizeof_value_0" />
+    <testcase time="0.001777172088623047" name="texpr_sizeof_value_sized" />
+    <testcase time="0.001767873764038086" name="texpr_str_ops" />
+    <testcase time="0.001724720001220703" name="tfixed_contents" />
+    <testcase time="0.001846075057983398" name="tfixed_struct" />
+    <testcase time="0.001765012741088867" name="tfloat_to_i" />
+    <testcase time="0.001703262329101562" name="tfloating_points" />
+    <testcase time="0.001742362976074219" name="thello_world" />
+    <testcase time="0.00167083740234375" name="tif_instances" />
+    <testcase time="0.001800537109375" name="tif_struct" />
+    <testcase time="0.001757383346557617" name="tif_values" />
+    <testcase time="0.001798152923583984" name="timports0" />
     <testcase time="0.00000000" name="timports_abs">
       <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/imports_abs.nim(3, 15) Error: cannot open file: /common/vlq_base128_le
 " />
     </testcase>
-    <testcase time="0.001941442489624023" name="tindex_sizes" />
-    <testcase time="0.001943349838256836" name="tindex_to_param_eos" />
-    <testcase time="0.002209663391113281" name="tindex_to_param_expr" />
-    <testcase time="0.002014636993408203" name="tindex_to_param_until" />
-    <testcase time="0.002138614654541016" name="tinstance_io_user" />
-    <testcase time="0.002043962478637695" name="tinstance_std" />
-    <testcase time="0.001953601837158203" name="tinstance_std_array" />
-    <testcase time="0.001832962036132812" name="tinstance_user_array" />
-    <testcase time="0.001762866973876953" name="tintegers" />
-    <testcase time="0.002008438110351562" name="tintegers_min_max" />
+    <testcase time="0.001988887786865234" name="tindex_sizes" />
+    <testcase time="0.001921653747558594" name="tindex_to_param_eos" />
+    <testcase time="0.001829624176025391" name="tindex_to_param_expr" />
+    <testcase time="0.00178980827331543" name="tindex_to_param_until" />
+    <testcase time="0.001884698867797852" name="tinstance_io_user" />
+    <testcase time="0.001831769943237305" name="tinstance_std" />
+    <testcase time="0.001769304275512695" name="tinstance_std_array" />
+    <testcase time="0.001792669296264648" name="tinstance_user_array" />
+    <testcase time="0.001840353012084961" name="tintegers" />
+    <testcase time="0.001725673675537109" name="tintegers_min_max" />
     <testcase time="0.00000000" name="tio_local_var">
       <failure message="/home/travis/build/kaitai-io/ci_targets/tests/spec/nim/tests/tio_local_var.nim(4, 29) Error: cannot open file: ../../../compiled/nim/io_local_var
 " />
     </testcase>
-    <testcase time="0.00171661376953125" name="tjs_signed_right_shift" />
-    <testcase time="0.001882553100585938" name="tmeta_tags" />
-    <testcase time="0.001813173294067383" name="tmeta_xref" />
-    <testcase time="0.001795053482055664" name="tmultiple_use" />
-    <testcase time="0.002604246139526367" name="tnav_parent" />
-    <testcase time="0.002149343490600586" name="tnav_parent2" />
-    <testcase time="0.002030849456787109" name="tnav_parent3" />
-    <testcase time="0.001894712448120117" name="tnav_parent_false" />
-    <testcase time="0.001865386962890625" name="tnav_parent_false2" />
-    <testcase time="0.002107620239257812" name="tnav_parent_override" />
-    <testcase time="0.001787424087524414" name="tnav_parent_switch" />
+    <testcase time="0.001682758331298828" name="tjs_signed_right_shift" />
+    <testcase time="0.001819372177124023" name="tmeta_tags" />
+    <testcase time="0.001645565032958984" name="tmeta_xref" />
+    <testcase time="0.001740455627441406" name="tmultiple_use" />
+    <testcase time="0.001792192459106445" name="tnav_parent" />
+    <testcase time="0.001802444458007812" name="tnav_parent2" />
+    <testcase time="0.001829862594604492" name="tnav_parent3" />
+    <testcase time="0.001817941665649414" name="tnav_parent_false" />
+    <testcase time="0.00168299674987793" name="tnav_parent_false2" />
+    <testcase time="0.001720190048217773" name="tnav_parent_override" />
+    <testcase time="0.001786947250366211" name="tnav_parent_switch" />
     <testcase time="0.00000000" name="tnav_parent_switch_cast">
       <failure message="/home/travis/build/kaitai-io/ci_targets/tests/spec/nim/tests/tnav_parent_switch_cast.nim(4, 29) Error: cannot open file: ../../../compiled/nim/nav_parent_switch_cast
 " />
     </testcase>
-    <testcase time="0.001931428909301758" name="tnav_parent_vs_value_inst" />
-    <testcase time="0.001940011978149414" name="tnav_root" />
-    <testcase time="0.001869678497314453" name="tnested_same_name" />
-    <testcase time="0.001995325088500977" name="tnested_same_name2" />
-    <testcase time="0.001873493194580078" name="tnested_type_param" />
-    <testcase time="0.001974344253540039" name="tnested_types" />
-    <testcase time="0.001745700836181641" name="tnested_types2" />
-    <testcase time="0.001784324645996094" name="tnested_types3" />
-    <testcase time="0.002005338668823242" name="tnon_standard" />
-    <testcase time="0.002031803131103516" name="tparams_call_extra_parens" />
-    <testcase time="0.001973152160644531" name="tparams_call_short" />
-    <testcase time="0.001970291137695312" name="tparams_enum" />
+    <testcase time="0.00185084342956543" name="tnav_parent_vs_value_inst" />
+    <testcase time="0.001832008361816406" name="tnav_root" />
+    <testcase time="0.001768112182617188" name="tnested_same_name" />
+    <testcase time="0.001754522323608398" name="tnested_same_name2" />
+    <testcase time="0.001909255981445312" name="tnested_type_param" />
+    <testcase time="0.001775264739990234" name="tnested_types" />
+    <testcase time="0.001759052276611328" name="tnested_types2" />
+    <testcase time="0.001799345016479492" name="tnested_types3" />
+    <testcase time="0.001864433288574219" name="tnon_standard" />
+    <testcase time="0.001991510391235352" name="tparams_call_extra_parens" />
+    <testcase time="0.001965045928955078" name="tparams_call_short" />
+    <testcase time="0.001923084259033203" name="tparams_enum" />
     <testcase time="0.00000000" name="tparams_pass_array_int">
       <failure message="/home/travis/build/kaitai-io/ci_targets/tests/spec/nim/tests/tparams_pass_array_int.nim(7, 27) template/generic instantiation of `fromFile` from here
-/home/travis/build/kaitai-io/ci_targets/compiled/nim/params_pass_array_int.nim(49, 21) template/generic instantiation of `read` from here
-/home/travis/build/kaitai-io/ci_targets/compiled/nim/params_pass_array_int.nim(37, 54) template/generic instantiation of `read` from here
-/home/travis/build/kaitai-io/ci_targets/compiled/nim/params_pass_array_int.nim(58, 29) Error: type mismatch: got &lt;seq[int]&gt; but expected 'seq[uint16]'
+/home/travis/build/kaitai-io/ci_targets/compiled/nim/params_pass_array_int.nim(45, 21) template/generic instantiation of `read` from here
+/home/travis/build/kaitai-io/ci_targets/compiled/nim/params_pass_array_int.nim(33, 54) template/generic instantiation of `read` from here
+/home/travis/build/kaitai-io/ci_targets/compiled/nim/params_pass_array_int.nim(54, 29) Error: type mismatch: got &lt;seq[int]&gt; but expected 'seq[uint16]'
 " />
     </testcase>
-    <testcase time="0.002064228057861328" name="tparams_pass_array_str" />
-    <testcase time="0.001919269561767578" name="tparams_pass_array_struct" />
-    <testcase time="0.001889705657958984" name="tparams_pass_array_usertype" />
-    <testcase time="0.001915693283081055" name="tparams_pass_struct" />
-    <testcase time="0.001862525939941406" name="tparams_pass_usertype" />
-    <testcase time="0.002166509628295898" name="tposition_abs" />
-    <testcase time="0.001836776733398438" name="tposition_in_seq" />
-    <testcase time="0.001905679702758789" name="tposition_to_end" />
-    <testcase time="0.001849174499511719" name="tprocess_coerce_bytes" />
+    <testcase time="0.001917362213134766" name="tparams_pass_array_str" />
+    <testcase time="0.001824855804443359" name="tparams_pass_array_struct" />
+    <testcase time="0.00174260139465332" name="tparams_pass_array_usertype" />
+    <testcase time="0.00178074836730957" name="tparams_pass_struct" />
+    <testcase time="0.001817941665649414" name="tparams_pass_usertype" />
+    <testcase time="0.001923084259033203" name="tposition_abs" />
+    <testcase time="0.001762628555297852" name="tposition_in_seq" />
+    <testcase time="0.0017242431640625" name="tposition_to_end" />
+    <testcase time="0.00174713134765625" name="tprocess_coerce_bytes" />
     <testcase time="0.00000000" name="tprocess_coerce_switch">
       <failure message="/home/travis/build/kaitai-io/ci_targets/tests/spec/nim/tests/tprocess_coerce_switch.nim(4, 29) Error: cannot open file: ../../../compiled/nim/process_coerce_switch
 " />
     </testcase>
-    <testcase time="0.0019073486328125" name="tprocess_coerce_usertype1" />
-    <testcase time="0.001993179321289062" name="tprocess_coerce_usertype2" />
-    <testcase time="0.001993179321289062" name="tprocess_custom" />
+    <testcase time="0.001701116561889648" name="tprocess_coerce_usertype1" />
+    <testcase time="0.001829862594604492" name="tprocess_coerce_usertype2" />
+    <testcase time="0.001717805862426758" name="tprocess_custom" />
     <testcase time="0.00000000" name="tprocess_custom_no_args">
       <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/process_custom_no_args.nim(3, 35) Error: cannot open file: ../../tests/spec/nim/opaque/custom_fx_no_args
 " />
     </testcase>
-    <testcase time="0.002110719680786133" name="tprocess_repeat_bytes" />
+    <testcase time="0.001735925674438477" name="tprocess_repeat_bytes" />
     <testcase time="0.00000000" name="tprocess_repeat_usertype">
       <failure message="/home/travis/build/kaitai-io/ci_targets/tests/spec/nim/tests/tprocess_repeat_usertype.nim(7, 30) template/generic instantiation of `fromFile` from here
-/home/travis/build/kaitai-io/ci_targets/compiled/nim/process_repeat_usertype.nim(41, 24) template/generic instantiation of `read` from here
-/home/travis/build/kaitai-io/ci_targets/compiled/nim/process_repeat_usertype.nim(34, 9) Error: redefinition of 'buf'; previous declaration here: /home/travis/build/kaitai-io/ci_targets/compiled/nim/process_repeat_usertype.nim(32, 9)
+/home/travis/build/kaitai-io/ci_targets/compiled/nim/process_repeat_usertype.nim(37, 24) template/generic instantiation of `read` from here
+/home/travis/build/kaitai-io/ci_targets/compiled/nim/process_repeat_usertype.nim(30, 9) Error: redefinition of 'buf'; previous declaration here: /home/travis/build/kaitai-io/ci_targets/compiled/nim/process_repeat_usertype.nim(28, 9)
 " />
     </testcase>
-    <testcase time="0.002465248107910156" name="tprocess_rotate" />
-    <testcase time="0.001958847045898438" name="tprocess_to_user" />
-    <testcase time="0.001894474029541016" name="tprocess_xor4_const" />
-    <testcase time="0.001860380172729492" name="tprocess_xor4_value" />
-    <testcase time="0.001851081848144531" name="tprocess_xor_const" />
-    <testcase time="0.001807689666748047" name="tprocess_xor_value" />
-    <testcase time="0.002009391784667969" name="trecursive_one" />
-    <testcase time="0.001785516738891602" name="trepeat_eos_bit" />
-    <testcase time="0.001821994781494141" name="trepeat_eos_struct" />
-    <testcase time="0.001834392547607422" name="trepeat_eos_u4" />
-    <testcase time="0.002141714096069336" name="trepeat_n_struct" />
-    <testcase time="0.001947164535522461" name="trepeat_n_strz" />
-    <testcase time="0.001887798309326172" name="trepeat_n_strz_double" />
-    <testcase time="0.001880645751953125" name="trepeat_until_complex" />
-    <testcase time="0.002040863037109375" name="trepeat_until_s4" />
-    <testcase time="0.001863002777099609" name="trepeat_until_sized" />
-    <testcase time="0.01192069053649902" name="tstr_encodings" />
-    <testcase time="0.002289533615112305" name="tstr_encodings_default" />
-    <testcase time="0.001955747604370117" name="tstr_eos" />
-    <testcase time="0.001754522323608398" name="tstr_literals2" />
-    <testcase time="0.002032756805419922" name="tstr_pad_term" />
-    <testcase time="0.002112627029418945" name="tstr_pad_term_empty" />
-    <testcase time="0.002013206481933594" name="tswitch_bytearray" />
-    <testcase time="0.001868486404418945" name="tswitch_else_only" />
-    <testcase time="0.001966238021850586" name="tswitch_integers" />
-    <testcase time="0.001925468444824219" name="tswitch_integers2" />
-    <testcase time="0.002321481704711914" name="tswitch_manual_enum" />
-    <testcase time="0.00185394287109375" name="tswitch_manual_enum_invalid" />
-    <testcase time="0.001884937286376953" name="tswitch_manual_enum_invalid_else" />
-    <testcase time="0.001897811889648438" name="tswitch_manual_int" />
-    <testcase time="0.001841545104980469" name="tswitch_manual_int_else" />
-    <testcase time="0.001953840255737305" name="tswitch_manual_int_size_else" />
-    <testcase time="0.002153158187866211" name="tswitch_manual_str" />
-    <testcase time="0.002270221710205078" name="tswitch_manual_str_else" />
-    <testcase time="0.001923084259033203" name="tterm_bytes" />
-    <testcase time="0.001885652542114258" name="tterm_strz" />
-    <testcase time="0.00184178352355957" name="tts_packet_header" />
-    <testcase time="0.001883506774902344" name="ttype_int_unary_op" />
-    <testcase time="0.001916170120239258" name="ttype_ternary" />
-    <testcase time="0.001940488815307617" name="tuser_type" />
-    <testcase time="0.002025842666625977" name="tvalid_long" />
-    <testcase time="0.00207829475402832" name="tvalid_not_parsed_if" />
-    <testcase time="0.001917839050292969" name="tvalid_short" />
-    <testcase time="0.001870393753051758" name="tvalid_switch" />
+    <testcase time="0.001756668090820312" name="tprocess_rotate" />
+    <testcase time="0.001800298690795898" name="tprocess_to_user" />
+    <testcase time="0.001662254333496094" name="tprocess_xor4_const" />
+    <testcase time="0.001737356185913086" name="tprocess_xor4_value" />
+    <testcase time="0.001814365386962891" name="tprocess_xor_const" />
+    <testcase time="0.001712560653686523" name="tprocess_xor_value" />
+    <testcase time="0.001792430877685547" name="trecursive_one" />
+    <testcase time="0.001704216003417969" name="trepeat_eos_bit" />
+    <testcase time="0.001803159713745117" name="trepeat_eos_struct" />
+    <testcase time="0.002010345458984375" name="trepeat_eos_u4" />
+    <testcase time="0.001760482788085938" name="trepeat_n_struct" />
+    <testcase time="0.002110958099365234" name="trepeat_n_strz" />
+    <testcase time="0.001787185668945312" name="trepeat_n_strz_double" />
+    <testcase time="0.001874208450317383" name="trepeat_until_complex" />
+    <testcase time="0.001787662506103516" name="trepeat_until_s4" />
+    <testcase time="0.001765012741088867" name="trepeat_until_sized" />
+    <testcase time="0.005812883377075195" name="tstr_encodings" />
+    <testcase time="0.001951694488525391" name="tstr_encodings_default" />
+    <testcase time="0.001828670501708984" name="tstr_eos" />
+    <testcase time="0.001733064651489258" name="tstr_literals2" />
+    <testcase time="0.001838445663452148" name="tstr_pad_term" />
+    <testcase time="0.00181126594543457" name="tstr_pad_term_empty" />
+    <testcase time="0.001789331436157227" name="tswitch_bytearray" />
+    <testcase time="0.001800775527954102" name="tswitch_else_only" />
+    <testcase time="0.001868963241577148" name="tswitch_integers" />
+    <testcase time="0.001770257949829102" name="tswitch_integers2" />
+    <testcase time="0.001772642135620117" name="tswitch_manual_enum" />
+    <testcase time="0.00000000" name="tswitch_manual_enum_invalid">
+      <failure message="/opt/Nim-1.2.0/lib/pure/unittest.nim(647, 43) Error: conversion from int literal(255) to SwitchManualEnumInvalid_Opcode_CodeEnum is invalid
+" />
+    </testcase>
+    <testcase time="0.00000000" name="tswitch_manual_enum_invalid_else">
+      <failure message="/opt/Nim-1.2.0/lib/pure/unittest.nim(647, 43) Error: conversion from int literal(255) to SwitchManualEnumInvalidElse_Opcode_CodeEnum is invalid
+" />
+    </testcase>
+    <testcase time="0.001815319061279297" name="tswitch_manual_int" />
+    <testcase time="0.001916408538818359" name="tswitch_manual_int_else" />
+    <testcase time="0.00182342529296875" name="tswitch_manual_int_size_else" />
+    <testcase time="0.001860141754150391" name="tswitch_manual_str" />
+    <testcase time="0.001884698867797852" name="tswitch_manual_str_else" />
+    <testcase time="0.001768350601196289" name="tterm_bytes" />
+    <testcase time="0.001776218414306641" name="tterm_strz" />
+    <testcase time="0.001740932464599609" name="tts_packet_header" />
+    <testcase time="0.001670360565185547" name="ttype_int_unary_op" />
+    <testcase time="0.001722097396850586" name="ttype_ternary" />
+    <testcase time="0.001738548278808594" name="tuser_type" />
+    <testcase time="0.001735925674438477" name="tvalid_long" />
+    <testcase time="0.001815319061279297" name="tvalid_not_parsed_if" />
+    <testcase time="0.001857995986938477" name="tvalid_short" />
+    <testcase time="0.001774787902832031" name="tvalid_switch" />
     <testcase time="0.00000000" name="tzlib_surrounded">
       <failure message="/home/travis/build/kaitai-io/ci_targets/tests/spec/nim/tests/tzlib_surrounded.nim(7, 23) template/generic instantiation of `fromFile` from here
-/home/travis/build/kaitai-io/ci_targets/compiled/nim/zlib_surrounded.nim(45, 17) template/generic instantiation of `read` from here
-/home/travis/build/kaitai-io/ci_targets/compiled/nim/zlib_surrounded.nim(36, 36) Error: attempting to call undeclared routine: 'processZlib'
+/home/travis/build/kaitai-io/ci_targets/compiled/nim/zlib_surrounded.nim(41, 17) template/generic instantiation of `read` from here
+/home/travis/build/kaitai-io/ci_targets/compiled/nim/zlib_surrounded.nim(32, 36) Error: attempting to call undeclared routine: 'processZlib'
 " />
     </testcase>
     <testcase time="0.00000000" name="tzlib_with_header_78">
       <failure message="/home/travis/build/kaitai-io/ci_targets/tests/spec/nim/tests/tzlib_with_header_78.nim(7, 25) template/generic instantiation of `fromFile` from here
-/home/travis/build/kaitai-io/ci_targets/compiled/nim/zlib_with_header_78.nim(31, 19) template/generic instantiation of `read` from here
-/home/travis/build/kaitai-io/ci_targets/compiled/nim/zlib_with_header_78.nim(27, 30) Error: attempting to call undeclared routine: 'processZlib'
+/home/travis/build/kaitai-io/ci_targets/compiled/nim/zlib_with_header_78.nim(27, 19) template/generic instantiation of `read` from here
+/home/travis/build/kaitai-io/ci_targets/compiled/nim/zlib_with_header_78.nim(23, 30) Error: attempting to call undeclared routine: 'processZlib'
 " />
     </testcase>
   </testsuite>
