@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites>
-    <testsuite name="LuaUnit" id="00001" package="" hostname="localhost" tests="193" timestamp="2020-04-29T19:50:35" time="0.102" errors="3" failures="15">
+    <testsuite name="LuaUnit" id="00001" package="" hostname="localhost" tests="194" timestamp="2020-04-29T22:44:40" time="0.107" errors="3" failures="14">
         <properties>
             <property name="Lua Version" value="Lua 5.3"/>
             <property name="LuaUnit Version" value="3.3"/>
@@ -29,10 +29,7 @@
         </testcase>
         <testcase classname="TestCastToTop" name="TestCastToTop.test_cast_to_top" time="0.000">
         </testcase>
-        <testcase classname="TestCombineBool" name="TestCombineBool.test_combine_bool" time="0.001">
-            <failure type="spec/lua/test_combine_bool.lua:13: expected: false, actual: 1">
-                <![CDATA[stack traceback:
-	spec/lua/test_combine_bool.lua:13: in upvalue 'TestCombineBool.test_combine_bool']]></failure>
+        <testcase classname="TestCombineBool" name="TestCombineBool.test_combine_bool" time="0.000">
         </testcase>
         <testcase classname="TestCombineBytes" name="TestCombineBytes.test_combine_bytes" time="0.000">
         </testcase>
@@ -115,7 +112,7 @@
         </testcase>
         <testcase classname="TestExpr1" name="TestExpr1.test_expr_1" time="0.000">
         </testcase>
-        <testcase classname="TestExpr2" name="TestExpr2.test_expr_2" time="0.001">
+        <testcase classname="TestExpr2" name="TestExpr2.test_expr_2" time="0.002">
             <failure type="spec/lua/test_expr_2.lua:24: expected: 48, actual: 48.5">
                 <![CDATA[stack traceback:
 	spec/lua/test_expr_2.lua:24: in upvalue 'TestExpr2.test_expr_2']]></failure>
@@ -126,7 +123,7 @@
         </testcase>
         <testcase classname="TestExprBytesCmp" name="TestExprBytesCmp.test_expr_bytes_cmp" time="0.000">
         </testcase>
-        <testcase classname="TestExprBytesLiteral" name="TestExprBytesLiteral.test_expr_bytes_literal" time="0.009">
+        <testcase classname="TestExprBytesLiteral" name="TestExprBytesLiteral.test_expr_bytes_literal" time="0.010">
             <failure type="spec/lua/run_test_suite.lua:18: spec/lua/test_expr_bytes_literal.lua:5: module &apos;expr_bytes_literal&apos; not found:
 	no field package.preload[&apos;expr_bytes_literal&apos;]
 	no file &apos;../runtime/lua/expr_bytes_literal.lua&apos;
@@ -165,7 +162,7 @@
         </testcase>
         <testcase classname="TestExprStrOps" name="TestExprStrOps.test_expr_str_ops" time="0.000">
         </testcase>
-        <testcase classname="TestFixedContents" name="TestFixedContents.test_fixed_contents" time="0.008">
+        <testcase classname="TestFixedContents" name="TestFixedContents.test_fixed_contents" time="0.009">
             <failure type="spec/lua/run_test_suite.lua:18: spec/lua/test_fixed_contents.lua:5: module &apos;fixed_contents&apos; not found:
 	no field package.preload[&apos;fixed_contents&apos;]
 	no file &apos;../runtime/lua/fixed_contents.lua&apos;
@@ -391,7 +388,7 @@
         </testcase>
         <testcase classname="TestRepeatUntilSized" name="TestRepeatUntilSized.test_repeat_until_sized" time="0.000">
         </testcase>
-        <testcase classname="TestStrEncodings" name="TestStrEncodings.test_str_encodings" time="0.001">
+        <testcase classname="TestStrEncodings" name="TestStrEncodings.test_str_encodings" time="0.002">
             <error type="../runtime/lua/string_decode.lua:42: Encoding SJIS not supported">
                 <![CDATA[stack traceback:
 	../runtime/lua/string_decode.lua:42: in function 'string_decode.decode'
@@ -401,7 +398,7 @@
 	(...tail calls...)
 	spec/lua/test_str_encodings.lua:10: in upvalue 'TestStrEncodings.test_str_encodings']]></error>
         </testcase>
-        <testcase classname="TestStrEncodingsDefault" name="TestStrEncodingsDefault.test_str_encodings_default" time="0.001">
+        <testcase classname="TestStrEncodingsDefault" name="TestStrEncodingsDefault.test_str_encodings_default" time="0.002">
             <error type="../runtime/lua/string_decode.lua:42: Encoding SJIS not supported">
                 <![CDATA[stack traceback:
 	../runtime/lua/string_decode.lua:42: in function 'string_decode.decode'
@@ -472,6 +469,8 @@
         </testcase>
         <testcase classname="TestTypeTernary" name="TestTypeTernary.test_type_ternary" time="0.000">
         </testcase>
+        <testcase classname="TestTypeTernary2ndFalsy" name="TestTypeTernary2ndFalsy.test_type_ternary_2nd_falsy" time="0.000">
+        </testcase>
         <testcase classname="TestTypeTernaryOpaque" name="TestTypeTernaryOpaque.test_type_ternary_opaque" time="0.000">
         </testcase>
         <testcase classname="TestUserType" name="TestUserType.test_user_type" time="0.000">
@@ -493,7 +492,7 @@
                 <![CDATA[stack traceback:
 	spec/lua/run_test_suite.lua:18: in upvalue 'TestValidLong.test_valid_long']]></failure>
         </testcase>
-        <testcase classname="TestValidNotParsedIf" name="TestValidNotParsedIf.test_valid_not_parsed_if" time="0.009">
+        <testcase classname="TestValidNotParsedIf" name="TestValidNotParsedIf.test_valid_not_parsed_if" time="0.008">
             <failure type="spec/lua/run_test_suite.lua:18: spec/lua/test_valid_not_parsed_if.lua:5: module &apos;valid_not_parsed_if&apos; not found:
 	no field package.preload[&apos;valid_not_parsed_if&apos;]
 	no file &apos;../runtime/lua/valid_not_parsed_if.lua&apos;
@@ -527,7 +526,7 @@
                 <![CDATA[stack traceback:
 	spec/lua/run_test_suite.lua:18: in upvalue 'TestValidShort.test_valid_short']]></failure>
         </testcase>
-        <testcase classname="TestValidSwitch" name="TestValidSwitch.test_valid_switch" time="0.007">
+        <testcase classname="TestValidSwitch" name="TestValidSwitch.test_valid_switch" time="0.008">
             <failure type="spec/lua/run_test_suite.lua:18: spec/lua/test_valid_switch.lua:5: module &apos;valid_switch&apos; not found:
 	no field package.preload[&apos;valid_switch&apos;]
 	no file &apos;../runtime/lua/valid_switch.lua&apos;
@@ -563,7 +562,7 @@
                 <![CDATA[stack traceback:
 	spec/lua/run_test_suite.lua:18: in upvalue 'TestZlibSurrounded.test_zlib_surrounded']]></failure>
         </testcase>
-        <testcase classname="TestZlibWithHeader78" name="TestZlibWithHeader78.test_zlib_with_header_78" time="0.010">
+        <testcase classname="TestZlibWithHeader78" name="TestZlibWithHeader78.test_zlib_with_header_78" time="0.009">
             <failure type="spec/lua/run_test_suite.lua:18: spec/lua/test_zlib_with_header_78.lua:5: module &apos;zlib_with_header_78&apos; not found:
 	no field package.preload[&apos;zlib_with_header_78&apos;]
 	no file &apos;../runtime/lua/zlib_with_header_78.lua&apos;
