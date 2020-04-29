@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites>
-    <testsuite name="LuaUnit" id="00001" package="" hostname="localhost" tests="190" timestamp="2020-04-22T22:06:33" time="0.110" errors="3" failures="16">
+    <testsuite name="LuaUnit" id="00001" package="" hostname="localhost" tests="193" timestamp="2020-04-29T19:50:35" time="0.102" errors="3" failures="15">
         <properties>
             <property name="Lua Version" value="Lua 5.3"/>
             <property name="LuaUnit Version" value="3.3"/>
@@ -13,10 +13,11 @@
         </testcase>
         <testcase classname="TestBitsEnum" name="TestBitsEnum.test_bits_enum" time="0.000">
         </testcase>
-        <testcase classname="TestBitsSimple" name="TestBitsSimple.test_bits_simple" time="0.001">
-            <failure type="spec/lua/test_bits_simple.lua:24: expected: 1.844674407371e+19, actual: -1">
-                <![CDATA[stack traceback:
-	spec/lua/test_bits_simple.lua:24: in upvalue 'TestBitsSimple.test_bits_simple']]></failure>
+        <testcase classname="TestBitsSeqEndianCombo" name="TestBitsSeqEndianCombo.test_bits_seq_endian_combo" time="0.000">
+        </testcase>
+        <testcase classname="TestBitsSimple" name="TestBitsSimple.test_bits_simple" time="0.000">
+        </testcase>
+        <testcase classname="TestBitsSimpleLe" name="TestBitsSimpleLe.test_bits_simple_le" time="0.000">
         </testcase>
         <testcase classname="TestBufferedStruct" name="TestBufferedStruct.test_buffered_struct" time="0.000">
         </testcase>
@@ -46,6 +47,8 @@
         <testcase classname="TestDebugSwitchUser" name="TestDebugSwitchUser.test_debug_switch_user" time="0.000">
         </testcase>
         <testcase classname="TestDefaultBigEndian" name="TestDefaultBigEndian.test_default_big_endian" time="0.000">
+        </testcase>
+        <testcase classname="TestDefaultBitEndianMod" name="TestDefaultBitEndianMod.test_default_bit_endian_mod" time="0.000">
         </testcase>
         <testcase classname="TestDefaultEndianExprException" name="TestDefaultEndianExprException.test_default_endian_expr_exception" time="0.000">
         </testcase>
@@ -123,7 +126,7 @@
         </testcase>
         <testcase classname="TestExprBytesCmp" name="TestExprBytesCmp.test_expr_bytes_cmp" time="0.000">
         </testcase>
-        <testcase classname="TestExprBytesLiteral" name="TestExprBytesLiteral.test_expr_bytes_literal" time="0.007">
+        <testcase classname="TestExprBytesLiteral" name="TestExprBytesLiteral.test_expr_bytes_literal" time="0.009">
             <failure type="spec/lua/run_test_suite.lua:18: spec/lua/test_expr_bytes_literal.lua:5: module &apos;expr_bytes_literal&apos; not found:
 	no field package.preload[&apos;expr_bytes_literal&apos;]
 	no file &apos;../runtime/lua/expr_bytes_literal.lua&apos;
@@ -257,7 +260,7 @@
                 <![CDATA[stack traceback:
 	spec/lua/run_test_suite.lua:18: in upvalue 'TestIntegers.test_integers']]></failure>
         </testcase>
-        <testcase classname="TestIntegersMinMax" name="TestIntegersMinMax.test_integers_min_max" time="0.002">
+        <testcase classname="TestIntegersMinMax" name="TestIntegersMinMax.test_integers_min_max" time="0.001">
             <failure type="spec/lua/test_integers_min_max.lua:22: expected: 1.844674407371e+19, actual: -1">
                 <![CDATA[stack traceback:
 	spec/lua/test_integers_min_max.lua:22: in upvalue 'TestIntegersMinMax.test_integers_min_max']]></failure>
@@ -340,7 +343,7 @@
         </testcase>
         <testcase classname="TestPositionToEnd" name="TestPositionToEnd.test_position_to_end" time="0.000">
         </testcase>
-        <testcase classname="TestProcessCoerceBytes" name="TestProcessCoerceBytes.test_process_coerce_bytes" time="0.001">
+        <testcase classname="TestProcessCoerceBytes" name="TestProcessCoerceBytes.test_process_coerce_bytes" time="0.000">
         </testcase>
         <testcase classname="TestProcessCoerceSwitch" name="TestProcessCoerceSwitch.test_process_coerce_switch" time="0.000">
         </testcase>
@@ -388,7 +391,7 @@
         </testcase>
         <testcase classname="TestRepeatUntilSized" name="TestRepeatUntilSized.test_repeat_until_sized" time="0.000">
         </testcase>
-        <testcase classname="TestStrEncodings" name="TestStrEncodings.test_str_encodings" time="0.002">
+        <testcase classname="TestStrEncodings" name="TestStrEncodings.test_str_encodings" time="0.001">
             <error type="../runtime/lua/string_decode.lua:42: Encoding SJIS not supported">
                 <![CDATA[stack traceback:
 	../runtime/lua/string_decode.lua:42: in function 'string_decode.decode'
@@ -398,7 +401,7 @@
 	(...tail calls...)
 	spec/lua/test_str_encodings.lua:10: in upvalue 'TestStrEncodings.test_str_encodings']]></error>
         </testcase>
-        <testcase classname="TestStrEncodingsDefault" name="TestStrEncodingsDefault.test_str_encodings_default" time="0.002">
+        <testcase classname="TestStrEncodingsDefault" name="TestStrEncodingsDefault.test_str_encodings_default" time="0.001">
             <error type="../runtime/lua/string_decode.lua:42: Encoding SJIS not supported">
                 <![CDATA[stack traceback:
 	../runtime/lua/string_decode.lua:42: in function 'string_decode.decode'
@@ -473,7 +476,7 @@
         </testcase>
         <testcase classname="TestUserType" name="TestUserType.test_user_type" time="0.000">
         </testcase>
-        <testcase classname="TestValidLong" name="TestValidLong.test_valid_long" time="0.008">
+        <testcase classname="TestValidLong" name="TestValidLong.test_valid_long" time="0.007">
             <failure type="spec/lua/run_test_suite.lua:18: spec/lua/test_valid_long.lua:5: module &apos;valid_long&apos; not found:
 	no field package.preload[&apos;valid_long&apos;]
 	no file &apos;../runtime/lua/valid_long.lua&apos;
@@ -524,7 +527,7 @@
                 <![CDATA[stack traceback:
 	spec/lua/run_test_suite.lua:18: in upvalue 'TestValidShort.test_valid_short']]></failure>
         </testcase>
-        <testcase classname="TestValidSwitch" name="TestValidSwitch.test_valid_switch" time="0.008">
+        <testcase classname="TestValidSwitch" name="TestValidSwitch.test_valid_switch" time="0.007">
             <failure type="spec/lua/run_test_suite.lua:18: spec/lua/test_valid_switch.lua:5: module &apos;valid_switch&apos; not found:
 	no field package.preload[&apos;valid_switch&apos;]
 	no file &apos;../runtime/lua/valid_switch.lua&apos;
