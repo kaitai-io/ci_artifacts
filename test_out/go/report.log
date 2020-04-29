@@ -121,7 +121,7 @@
 === RUN   TestExprSizeofValueSized
 --- PASS: TestExprSizeofValueSized (0.00s)
 === RUN   TestExprStrOps
---- PASS: TestExprStrOps (0.01s)
+--- PASS: TestExprStrOps (0.02s)
 === RUN   TestFixedContents
 --- PASS: TestFixedContents (0.00s)
 === RUN   TestFixedStruct
@@ -213,28 +213,28 @@
 === RUN   TestNonStandard
 --- PASS: TestNonStandard (0.00s)
 === RUN   TestOpaqueExternalType02Parent
-goroutine 116 [running]:
-runtime/debug.Stack(0xc42019c8c0, 0xc420084400, 0xc420054c20)
+goroutine 103 [running]:
+runtime/debug.Stack(0xc420170820, 0xc420001800, 0xc420059c20)
 	/home/travis/.gimme/versions/go1.10.linux.amd64/src/runtime/debug/stack.go:24 +0xa7
 runtime/debug.PrintStack()
 	/home/travis/.gimme/versions/go1.10.linux.amd64/src/runtime/debug/stack.go:16 +0x22
-github.com/kaitai-io/ci_targets/tests/spec/go.TestOpaqueExternalType02Parent.func1(0xc420191c20)
+github.com/kaitai-io/ci_targets/tests/spec/go.TestOpaqueExternalType02Parent.func1(0xc420163c20)
 	/home/travis/gopath/src/github.com/kaitai-io/ci_targets/tests/spec/go/opaque_external_type_02_parent_test.go:15 +0x57
-panic(0x719c20, 0x9694d0)
+panic(0x719fa0, 0x9694d0)
 	/home/travis/.gimme/versions/go1.10.linux.amd64/src/runtime/panic.go:505 +0x229
 test_formats.(*OpaqueExternalType02Child).SomeMethod(...)
 	/home/travis/gopath/src/github.com/kaitai-io/ci_targets/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:46
-test_formats.(*OpaqueExternalType02Child_OpaqueExternalType02ChildChild).Read(0xc420193410, 0xc4201a4280, 0xc42019c910, 0x0, 0xc42019ebfc, 0x3)
+test_formats.(*OpaqueExternalType02Child_OpaqueExternalType02ChildChild).Read(0xc420165470, 0xc4201762e0, 0xc420170870, 0x0, 0xc42016edbc, 0x3)
 	/home/travis/gopath/src/github.com/kaitai-io/ci_targets/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:69 +0x5d
-test_formats.(*OpaqueExternalType02Child).Read(0xc42019c910, 0xc4201a4280, 0x7146c0, 0xc4201a42a0, 0x0, 0x7488c0, 0x1)
+test_formats.(*OpaqueExternalType02Child).Read(0xc420170870, 0xc4201762e0, 0x7149e0, 0xc420176300, 0x0, 0x748d80, 0x1)
 	/home/travis/gopath/src/github.com/kaitai-io/ci_targets/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:38 +0x1a6
-test_formats.(*OpaqueExternalType02Parent_ParentObj).Read(0xc4201a42a0, 0xc4201a4280, 0xc4201933e0, 0xc4201933e0, 0x748800, 0x1)
+test_formats.(*OpaqueExternalType02Parent_ParentObj).Read(0xc420176300, 0xc4201762e0, 0xc420165440, 0xc420165440, 0x748cc0, 0x1)
 	/home/travis/gopath/src/github.com/kaitai-io/ci_targets/tests/compiled/go/src/test_formats/opaque_external_type_02_parent.go:48 +0xa8
-test_formats.(*OpaqueExternalType02Parent).Read(0xc4201933e0, 0xc4201a4280, 0x714660, 0xc4201933e0, 0xc4201933e0, 0x923906, 0x46)
+test_formats.(*OpaqueExternalType02Parent).Read(0xc420165440, 0xc4201762e0, 0x714980, 0xc420165440, 0xc420165440, 0x923f4e, 0x46)
 	/home/travis/gopath/src/github.com/kaitai-io/ci_targets/tests/compiled/go/src/test_formats/opaque_external_type_02_parent.go:24 +0xb3
-github.com/kaitai-io/ci_targets/tests/spec/go.TestOpaqueExternalType02Parent(0xc420191c20)
+github.com/kaitai-io/ci_targets/tests/spec/go.TestOpaqueExternalType02Parent(0xc420163c20)
 	/home/travis/gopath/src/github.com/kaitai-io/ci_targets/tests/spec/go/opaque_external_type_02_parent_test.go:25 +0x15a
-testing.tRunner(0xc420191c20, 0x79b1c0)
+testing.tRunner(0xc420163c20, 0x79b928)
 	/home/travis/.gimme/versions/go1.10.linux.amd64/src/testing/testing.go:777 +0xd0
 created by testing.(*T).Run
 	/home/travis/.gimme/versions/go1.10.linux.amd64/src/testing/testing.go:824 +0x2e0
@@ -353,13 +353,7 @@ created by testing.(*T).Run
 === RUN   TestProcessXorValue
 --- PASS: TestProcessXorValue (0.00s)
 === RUN   TestRepeatEosBit
---- FAIL: TestRepeatEosBit (0.00s)
-	repeat_eos_bit_test.go:32: 
-			Error Trace:	repeat_eos_bit_test.go:32
-			Error:      	Not equal: 
-			            	expected: 16
-			            	actual  : 15
-			Test:       	TestRepeatEosBit
+--- PASS: TestRepeatEosBit (0.00s)
 === RUN   TestRepeatEosStruct
 --- PASS: TestRepeatEosStruct (0.00s)
 === RUN   TestRepeatEosU4
@@ -433,4 +427,4 @@ created by testing.(*T).Run
 === RUN   TestZlibWithHeader78
 --- PASS: TestZlibWithHeader78 (0.00s)
 FAIL
-FAIL	github.com/kaitai-io/ci_targets/tests/spec/go	0.032s
+FAIL	github.com/kaitai-io/ci_targets/tests/spec/go	0.037s
