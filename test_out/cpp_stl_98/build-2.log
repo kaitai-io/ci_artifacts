@@ -1,11 +1,39 @@
 Scanning dependencies of target ks_tests
-[  0%] Building CXX object CMakeFiles/ks_tests.dir/test_imports_abs_abs.cpp.o
-In file included from /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_imports_abs_abs.cpp:2:
-/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/imports_abs_abs.h:8:10: fatal error: '/for_abs_imports/imported_and_abs.h' file not found
-#include "/for_abs_imports/imported_and_abs.h"
-         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-1 error generated.
-make[2]: *** [CMakeFiles/ks_tests.dir/test_imports_abs_abs.cpp.o] Error 1
+[  1%] Linking CXX executable ks_tests
+Undefined symbols for architecture x86_64:
+  "expr_ops_parens_t::i_sum_to_str()", referenced from:
+      test_expr_ops_parens::test_method() in test_expr_ops_parens.cpp.o
+  "expr_ops_parens_t::str_concat_len()", referenced from:
+      test_expr_ops_parens::test_method() in test_expr_ops_parens.cpp.o
+  "expr_ops_parens_t::str_concat_rev()", referenced from:
+      test_expr_ops_parens::test_method() in test_expr_ops_parens.cpp.o
+  "expr_ops_parens_t::str_concat_to_i()", referenced from:
+      test_expr_ops_parens::test_method() in test_expr_ops_parens.cpp.o
+  "expr_ops_parens_t::str_concat_substr_2_to_7()", referenced from:
+      test_expr_ops_parens::test_method() in test_expr_ops_parens.cpp.o
+  "expr_ops_parens_t::bool_eq()", referenced from:
+      test_expr_ops_parens::test_method() in test_expr_ops_parens.cpp.o
+  "expr_ops_parens_t::bool_or()", referenced from:
+      test_expr_ops_parens::test_method() in test_expr_ops_parens.cpp.o
+  "expr_ops_parens_t::bool_and()", referenced from:
+      test_expr_ops_parens::test_method() in test_expr_ops_parens.cpp.o
+  "expr_ops_parens_t::expr_ops_parens_t(kaitai::kstream*, kaitai::kstruct*, expr_ops_parens_t*)", referenced from:
+      test_expr_ops_parens::test_method() in test_expr_ops_parens.cpp.o
+  "process_repeat_bytes_t::process_repeat_bytes_t(kaitai::kstream*, kaitai::kstruct*, process_repeat_bytes_t*)", referenced from:
+      test_process_repeat_bytes::test_method() in test_process_repeat_bytes.cpp.o
+  "nav_parent_switch_cast_t::foo_t::common_t::flag()", referenced from:
+      test_nav_parent_switch_cast::test_method() in test_nav_parent_switch_cast.cpp.o
+  "nav_parent_switch_cast_t::nav_parent_switch_cast_t(kaitai::kstream*, kaitai::kstruct*, nav_parent_switch_cast_t*)", referenced from:
+      test_nav_parent_switch_cast::test_method() in test_nav_parent_switch_cast.cpp.o
+  "enum_to_i_class_border_1_t::checker()", referenced from:
+      test_enum_to_i_class_border_1::test_method() in test_enum_to_i_class_border_1.cpp.o
+  "enum_to_i_class_border_1_t::enum_to_i_class_border_1_t(kaitai::kstream*, kaitai::kstruct*, enum_to_i_class_border_1_t*)", referenced from:
+      test_enum_to_i_class_border_1::test_method() in test_enum_to_i_class_border_1.cpp.o
+  "enum_to_i_class_border_2_t::is_dog()", referenced from:
+      test_enum_to_i_class_border_1::test_method() in test_enum_to_i_class_border_1.cpp.o
+ld: symbol(s) not found for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make[2]: *** [ks_tests] Error 1
 make[2]: Target `CMakeFiles/ks_tests.dir/build' not remade because of errors.
 make[1]: *** [CMakeFiles/ks_tests.dir/all] Error 2
 make[1]: Target `all' not remade because of errors.
