@@ -6,6 +6,70 @@
 --- PASS: TestBitsByteAligned (0.00s)
 === RUN   TestBitsEnum
 --- PASS: TestBitsEnum (0.00s)
+=== RUN   TestBitsSeqEndianCombo
+--- FAIL: TestBitsSeqEndianCombo (0.00s)
+	bits_seq_endian_combo_test.go:37: 
+			Error Trace:	bits_seq_endian_combo_test.go:37
+			Error:      	Not equal: 
+			            	expected: int(36)
+			            	actual  : uint64(0x14)
+			Test:       	TestBitsSeqEndianCombo
+	bits_seq_endian_combo_test.go:38: 
+			Error Trace:	bits_seq_endian_combo_test.go:38
+			Error:      	Not equal: 
+			            	expected: int(26)
+			            	actual  : uint64(0xf)
+			Test:       	TestBitsSeqEndianCombo
+=== RUN   TestBitsSimpleLe
+--- FAIL: TestBitsSimpleLe (0.00s)
+	bits_simple_le_test.go:37: 
+			Error Trace:	bits_simple_le_test.go:37
+			Error:      	Not equal: 
+			            	expected: int(331)
+			            	actual  : uint64(0x0)
+			Test:       	TestBitsSimpleLe
+	bits_simple_le_test.go:38: 
+			Error Trace:	bits_simple_le_test.go:38
+			Error:      	Not equal: 
+			            	expected: int(3)
+			            	actual  : uint64(0x0)
+			Test:       	TestBitsSimpleLe
+	bits_simple_le_test.go:39: 
+			Error Trace:	bits_simple_le_test.go:39
+			Error:      	Not equal: 
+			            	expected: int(393)
+			            	actual  : uint64(0x0)
+			Test:       	TestBitsSimpleLe
+	bits_simple_le_test.go:40: 
+			Error Trace:	bits_simple_le_test.go:40
+			Error:      	Not equal: 
+			            	expected: int(-1)
+			            	actual  : int16(19245)
+			Test:       	TestBitsSimpleLe
+	bits_simple_le_test.go:41: 
+			Error Trace:	bits_simple_le_test.go:41
+			Error:      	Not equal: 
+			            	expected: int(4407632)
+			            	actual  : uint64(0xffff7b)
+			Test:       	TestBitsSimpleLe
+	bits_simple_le_test.go:42: 
+			Error Trace:	bits_simple_le_test.go:42
+			Error:      	Not equal: 
+			            	expected: int(760556875)
+			            	actual  : uint64(0x4b434150)
+			Test:       	TestBitsSimpleLe
+	bits_simple_le_test.go:43: 
+			Error Trace:	bits_simple_le_test.go:43
+			Error:      	Not equal: 
+			            	expected: int64(1099499455812)
+			            	actual  : uint64(0x45442d552d)
+			Test:       	TestBitsSimpleLe
+	bits_simple_le_test.go:44: 
+			Error Trace:	bits_simple_le_test.go:44
+			Error:      	Not equal: 
+			            	expected: 0xffffffffffffffff
+			            	actual  : 0xffffffffffffff46
+			Test:       	TestBitsSimpleLe
 === RUN   TestBitsSimple
 --- PASS: TestBitsSimple (0.00s)
 === RUN   TestBufferedStruct
@@ -22,6 +86,14 @@
 --- PASS: TestDebugArrayUser (0.00s)
 === RUN   TestDefaultBigEndian
 --- PASS: TestDefaultBigEndian (0.00s)
+=== RUN   TestDefaultBitEndianMod
+--- FAIL: TestDefaultBitEndianMod (0.00s)
+	default_bit_endian_mod_test.go:33: 
+			Error Trace:	default_bit_endian_mod_test.go:33
+			Error:      	Not equal: 
+			            	expected: int(8608)
+			            	actual  : uint64(0x43)
+			Test:       	TestDefaultBitEndianMod
 === RUN   TestDefaultEndianExprException
 --- PASS: TestDefaultEndianExprException (0.00s)
 === RUN   TestDefaultEndianExprInherited
@@ -115,13 +187,13 @@
 === RUN   TestExprSizeofType0
 --- PASS: TestExprSizeofType0 (0.00s)
 === RUN   TestExprSizeofType1
---- PASS: TestExprSizeofType1 (0.00s)
+--- PASS: TestExprSizeofType1 (0.01s)
 === RUN   TestExprSizeofValue0
 --- PASS: TestExprSizeofValue0 (0.00s)
 === RUN   TestExprSizeofValueSized
 --- PASS: TestExprSizeofValueSized (0.00s)
 === RUN   TestExprStrOps
---- PASS: TestExprStrOps (0.01s)
+--- PASS: TestExprStrOps (0.00s)
 === RUN   TestFixedContents
 --- PASS: TestFixedContents (0.00s)
 === RUN   TestFixedStruct
@@ -213,28 +285,28 @@
 === RUN   TestNonStandard
 --- PASS: TestNonStandard (0.00s)
 === RUN   TestOpaqueExternalType02Parent
-goroutine 116 [running]:
-runtime/debug.Stack(0xc42019c820, 0xc420084400, 0xc420054c20)
+goroutine 119 [running]:
+runtime/debug.Stack(0xc420054c10, 0xc420054c40, 0x47d073)
 	/home/travis/.gimme/versions/go1.10.linux.amd64/src/runtime/debug/stack.go:24 +0xa7
 runtime/debug.PrintStack()
 	/home/travis/.gimme/versions/go1.10.linux.amd64/src/runtime/debug/stack.go:16 +0x22
-github.com/kaitai-io/ci_targets/tests/spec/go.TestOpaqueExternalType02Parent.func1(0xc420191c20)
+github.com/kaitai-io/ci_targets/tests/spec/go.TestOpaqueExternalType02Parent.func1(0xc4201c1ef0)
 	/home/travis/gopath/src/github.com/kaitai-io/ci_targets/tests/spec/go/opaque_external_type_02_parent_test.go:15 +0x57
-panic(0x71b220, 0x96b4d0)
+panic(0x71e5c0, 0x9704d0)
 	/home/travis/.gimme/versions/go1.10.linux.amd64/src/runtime/panic.go:505 +0x229
 test_formats.(*OpaqueExternalType02Child).SomeMethod(...)
 	/home/travis/gopath/src/github.com/kaitai-io/ci_targets/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:46
-test_formats.(*OpaqueExternalType02Child_OpaqueExternalType02ChildChild).Read(0xc420193440, 0xc4201a6260, 0xc42019c870, 0x0, 0xc42019ebec, 0x3)
+test_formats.(*OpaqueExternalType02Child_OpaqueExternalType02ChildChild).Read(0xc4201bbdd0, 0xc4201da720, 0xc4201d8960, 0x0, 0xc4201b96cc, 0x3)
 	/home/travis/gopath/src/github.com/kaitai-io/ci_targets/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:69 +0x5d
-test_formats.(*OpaqueExternalType02Child).Read(0xc42019c870, 0xc4201a6260, 0x715c00, 0xc4201a6280, 0x0, 0x74a000, 0x1)
+test_formats.(*OpaqueExternalType02Child).Read(0xc4201d8960, 0xc4201da720, 0x718fa0, 0xc4201da740, 0x0, 0x74d660, 0x1)
 	/home/travis/gopath/src/github.com/kaitai-io/ci_targets/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:38 +0x1a6
-test_formats.(*OpaqueExternalType02Parent_ParentObj).Read(0xc4201a6280, 0xc4201a6260, 0xc420193410, 0xc420193410, 0x749f40, 0x1)
+test_formats.(*OpaqueExternalType02Parent_ParentObj).Read(0xc4201da740, 0xc4201da720, 0xc4201bbda0, 0xc4201bbda0, 0x74d5a0, 0x1)
 	/home/travis/gopath/src/github.com/kaitai-io/ci_targets/tests/compiled/go/src/test_formats/opaque_external_type_02_parent.go:48 +0xa8
-test_formats.(*OpaqueExternalType02Parent).Read(0xc420193410, 0xc4201a6260, 0x715ba0, 0xc420193410, 0xc420193410, 0x9263f2, 0x46)
+test_formats.(*OpaqueExternalType02Parent).Read(0xc4201bbda0, 0xc4201da720, 0x718f40, 0xc4201bbda0, 0xc4201bbda0, 0x92b624, 0x46)
 	/home/travis/gopath/src/github.com/kaitai-io/ci_targets/tests/compiled/go/src/test_formats/opaque_external_type_02_parent.go:24 +0xb3
-github.com/kaitai-io/ci_targets/tests/spec/go.TestOpaqueExternalType02Parent(0xc420191c20)
+github.com/kaitai-io/ci_targets/tests/spec/go.TestOpaqueExternalType02Parent(0xc4201c1ef0)
 	/home/travis/gopath/src/github.com/kaitai-io/ci_targets/tests/spec/go/opaque_external_type_02_parent_test.go:25 +0x15a
-testing.tRunner(0xc420191c20, 0x79d0c8)
+testing.tRunner(0xc4201c1ef0, 0x7a0cd0)
 	/home/travis/.gimme/versions/go1.10.linux.amd64/src/testing/testing.go:777 +0xd0
 created by testing.(*T).Run
 	/home/travis/.gimme/versions/go1.10.linux.amd64/src/testing/testing.go:824 +0x2e0
@@ -343,13 +415,13 @@ created by testing.(*T).Run
 === RUN   TestProcessRotate
 --- PASS: TestProcessRotate (0.00s)
 === RUN   TestProcessToUser
---- PASS: TestProcessToUser (0.00s)
+--- PASS: TestProcessToUser (0.02s)
 === RUN   TestProcessXor4Const
 --- PASS: TestProcessXor4Const (0.00s)
 === RUN   TestProcessXor4Value
 --- PASS: TestProcessXor4Value (0.00s)
 === RUN   TestProcessXorConst
---- PASS: TestProcessXorConst (0.01s)
+--- PASS: TestProcessXorConst (0.00s)
 === RUN   TestProcessXorValue
 --- PASS: TestProcessXorValue (0.00s)
 === RUN   TestRepeatEosBit
@@ -429,4 +501,4 @@ created by testing.(*T).Run
 === RUN   TestZlibWithHeader78
 --- PASS: TestZlibWithHeader78 (0.00s)
 FAIL
-FAIL	github.com/kaitai-io/ci_targets/tests/spec/go	0.035s
+FAIL	github.com/kaitai-io/ci_targets/tests/spec/go	0.042s
