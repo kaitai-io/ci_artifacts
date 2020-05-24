@@ -2,7 +2,7 @@ Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
 Copyright (C) Microsoft Corporation. All rights reserved.
 
 Building the projects in this solution one at a time. To enable parallel build, please add the "/m" switch.
-Build started 5/24/2020 10:24:17 PM.
+Build started 5/24/2020 10:24:23 PM.
 Project "C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\KS_TEST_CPP_STL.sln" on node 1 (default targets).
 ValidateSolutionConfiguration:
   Building solution configuration "Debug|x64".
@@ -27,9 +27,7 @@ CustomBuild:
 VcpkgTripletSelection:
   Not using Vcpkg because VcpkgEnabled is "false"
 ClCompile:
-  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\bin\HostX86\x64\CL.exe /c /I"C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin" /I"C:\projects\ci-targets\tests\compiled\cpp_stl_98" /I"C:\projects\ci-targets\tests\spec\cpp_stl_98\..\..\..\runtime\cpp_stl" /I"C:\projects\ci-targets\tests\spec\cpp_stl_98\prereq" /I"C:\Tools\vcpkg\installed\x64-windows\include" /Zi /nologo /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D KS_ZLIB /D KS_STR_ENCODING_ICONV /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"ks_tests.dir\Debug\\" /Fd"ks_tests.dir\Debug\vc141.pdb" /Gd /TP /errorReport:queue  /utf-8 "C:\projects\ci-targets\runtime\cpp_stl\kaitai\kaitaistream.cpp"
-  kaitaistream.cpp
-C:\projects\ci-targets\runtime\cpp_stl\kaitai\kaitaistream.cpp(526): warning C4267: '=': conversion from 'size_t' to 'uInt', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
+  All outputs are up-to-date.
 Link:
   C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\bin\HostX86\x64\link.exe /ERRORREPORT:QUEUE /OUT:"C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\Debug\ks_tests.exe" /INCREMENTAL /NOLOGO "C:\Tools\vcpkg\installed\x64-windows\debug\lib\boost_unit_test_framework-vc140-mt-gd.lib" "C:\Tools\vcpkg\installed\x64-windows\debug\lib\zlibd.lib" "C:\Tools\vcpkg\installed\x64-windows\debug\lib\libiconv.lib" kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/projects/ci-targets/tests/compiled/cpp_stl_98/bin/Debug/ks_tests.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/projects/ci-targets/tests/compiled/cpp_stl_98/bin/Debug/ks_tests.lib" /MACHINE:X64  /machine:x64 ks_tests.dir\Debug\kaitaistream.obj
   ks_tests.dir\Debug\my_custom_fx.obj
@@ -82,7 +80,6 @@ Link:
   ks_tests.dir\Debug\test_enum_negative.obj
   ks_tests.dir\Debug\test_enum_of_value_inst.obj
   ks_tests.dir\Debug\test_enum_to_i.obj
-  ks_tests.dir\Debug\test_enum_to_i_class_border_1.obj
   ks_tests.dir\Debug\test_eof_exception_bytes.obj
   ks_tests.dir\Debug\test_eof_exception_u4.obj
   ks_tests.dir\Debug\test_eos_exception_bytes.obj
@@ -99,7 +96,6 @@ Link:
   ks_tests.dir\Debug\test_expr_io_eof.obj
   ks_tests.dir\Debug\test_expr_io_pos.obj
   ks_tests.dir\Debug\test_expr_mod.obj
-  ks_tests.dir\Debug\test_expr_ops_parens.obj
   ks_tests.dir\Debug\test_expr_sizeof_type_0.obj
   ks_tests.dir\Debug\test_expr_sizeof_type_1.obj
   ks_tests.dir\Debug\test_expr_sizeof_value_0.obj
@@ -137,7 +133,6 @@ Link:
   ks_tests.dir\Debug\test_nav_parent_false2.obj
   ks_tests.dir\Debug\test_nav_parent_override.obj
   ks_tests.dir\Debug\test_nav_parent_switch.obj
-  ks_tests.dir\Debug\test_nav_parent_switch_cast.obj
   ks_tests.dir\Debug\test_nav_parent_vs_value_inst.obj
   ks_tests.dir\Debug\test_nav_root.obj
   ks_tests.dir\Debug\test_nested_same_name.obj
@@ -166,7 +161,6 @@ Link:
   ks_tests.dir\Debug\test_process_coerce_usertype2.obj
   ks_tests.dir\Debug\test_process_custom.obj
   ks_tests.dir\Debug\test_process_custom_no_args.obj
-  ks_tests.dir\Debug\test_process_repeat_bytes.obj
   ks_tests.dir\Debug\test_process_repeat_usertype.obj
   ks_tests.dir\Debug\test_process_rotate.obj
   ks_tests.dir\Debug\test_process_to_user.obj
@@ -430,57 +424,27 @@ Link:
   ks_tests.dir\Debug\yaml_ints.obj
   ks_tests.dir\Debug\zlib_surrounded.obj
   ks_tests.dir\Debug\zlib_with_header_78.obj
-test_enum_to_i_class_border_1.obj : error LNK2019: unresolved external symbol "public: bool __cdecl enum_to_i_class_border_2_t::is_dog(void)" (?is_dog@enum_to_i_class_border_2_t@@QEAA_NXZ) referenced in function "public: void __cdecl test_enum_to_i_class_border_1::test_method(void)" (?test_method@test_enum_to_i_class_border_1@@QEAAXXZ) [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-test_enum_to_i_class_border_1.obj : error LNK2019: unresolved external symbol "public: __cdecl enum_to_i_class_border_1_t::enum_to_i_class_border_1_t(class kaitai::kstream *,class kaitai::kstruct *,class enum_to_i_class_border_1_t *)" (??0enum_to_i_class_border_1_t@@QEAA@PEAVkstream@kaitai@@PEAVkstruct@2@PEAV0@@Z) referenced in function "public: void __cdecl test_enum_to_i_class_border_1::test_method(void)" (?test_method@test_enum_to_i_class_border_1@@QEAAXXZ) [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-test_enum_to_i_class_border_1.obj : error LNK2019: unresolved external symbol "public: class enum_to_i_class_border_2_t * __cdecl enum_to_i_class_border_1_t::checker(void)" (?checker@enum_to_i_class_border_1_t@@QEAAPEAVenum_to_i_class_border_2_t@@XZ) referenced in function "public: void __cdecl test_enum_to_i_class_border_1::test_method(void)" (?test_method@test_enum_to_i_class_border_1@@QEAAXXZ) [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-test_expr_ops_parens.obj : error LNK2019: unresolved external symbol "public: __cdecl expr_ops_parens_t::expr_ops_parens_t(class kaitai::kstream *,class kaitai::kstruct *,class expr_ops_parens_t *)" (??0expr_ops_parens_t@@QEAA@PEAVkstream@kaitai@@PEAVkstruct@2@PEAV0@@Z) referenced in function "public: void __cdecl test_expr_ops_parens::test_method(void)" (?test_method@test_expr_ops_parens@@QEAAXXZ) [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-test_expr_ops_parens.obj : error LNK2019: unresolved external symbol "public: int __cdecl expr_ops_parens_t::bool_and(void)" (?bool_and@expr_ops_parens_t@@QEAAHXZ) referenced in function "public: void __cdecl test_expr_ops_parens::test_method(void)" (?test_method@test_expr_ops_parens@@QEAAXXZ) [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-test_expr_ops_parens.obj : error LNK2019: unresolved external symbol "public: int __cdecl expr_ops_parens_t::bool_or(void)" (?bool_or@expr_ops_parens_t@@QEAAHXZ) referenced in function "public: void __cdecl test_expr_ops_parens::test_method(void)" (?test_method@test_expr_ops_parens@@QEAAXXZ) [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-test_expr_ops_parens.obj : error LNK2019: unresolved external symbol "public: class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > __cdecl expr_ops_parens_t::str_concat_rev(void)" (?str_concat_rev@expr_ops_parens_t@@QEAA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@XZ) referenced in function "public: void __cdecl test_expr_ops_parens::test_method(void)" (?test_method@test_expr_ops_parens@@QEAAXXZ) [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-test_expr_ops_parens.obj : error LNK2019: unresolved external symbol "public: int __cdecl expr_ops_parens_t::str_concat_len(void)" (?str_concat_len@expr_ops_parens_t@@QEAAHXZ) referenced in function "public: void __cdecl test_expr_ops_parens::test_method(void)" (?test_method@test_expr_ops_parens@@QEAAXXZ) [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-test_expr_ops_parens.obj : error LNK2019: unresolved external symbol "public: int __cdecl expr_ops_parens_t::str_concat_to_i(void)" (?str_concat_to_i@expr_ops_parens_t@@QEAAHXZ) referenced in function "public: void __cdecl test_expr_ops_parens::test_method(void)" (?test_method@test_expr_ops_parens@@QEAAXXZ) [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-test_expr_ops_parens.obj : error LNK2019: unresolved external symbol "public: class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > __cdecl expr_ops_parens_t::i_sum_to_str(void)" (?i_sum_to_str@expr_ops_parens_t@@QEAA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@XZ) referenced in function "public: void __cdecl test_expr_ops_parens::test_method(void)" (?test_method@test_expr_ops_parens@@QEAAXXZ) [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-test_expr_ops_parens.obj : error LNK2019: unresolved external symbol "public: int __cdecl expr_ops_parens_t::bool_eq(void)" (?bool_eq@expr_ops_parens_t@@QEAAHXZ) referenced in function "public: void __cdecl test_expr_ops_parens::test_method(void)" (?test_method@test_expr_ops_parens@@QEAAXXZ) [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-test_expr_ops_parens.obj : error LNK2019: unresolved external symbol "public: class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > __cdecl expr_ops_parens_t::str_concat_substr_2_to_7(void)" (?str_concat_substr_2_to_7@expr_ops_parens_t@@QEAA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@XZ) referenced in function "public: void __cdecl test_expr_ops_parens::test_method(void)" (?test_method@test_expr_ops_parens@@QEAAXXZ) [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-test_nav_parent_switch_cast.obj : error LNK2019: unresolved external symbol "public: __cdecl nav_parent_switch_cast_t::nav_parent_switch_cast_t(class kaitai::kstream *,class kaitai::kstruct *,class nav_parent_switch_cast_t *)" (??0nav_parent_switch_cast_t@@QEAA@PEAVkstream@kaitai@@PEAVkstruct@2@PEAV0@@Z) referenced in function "public: void __cdecl test_nav_parent_switch_cast::test_method(void)" (?test_method@test_nav_parent_switch_cast@@QEAAXXZ) [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-test_nav_parent_switch_cast.obj : error LNK2019: unresolved external symbol "public: unsigned char __cdecl nav_parent_switch_cast_t::foo_t::common_t::flag(void)" (?flag@common_t@foo_t@nav_parent_switch_cast_t@@QEAAEXZ) referenced in function "public: void __cdecl test_nav_parent_switch_cast::test_method(void)" (?test_method@test_nav_parent_switch_cast@@QEAAXXZ) [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-test_process_repeat_bytes.obj : error LNK2019: unresolved external symbol "public: __cdecl process_repeat_bytes_t::process_repeat_bytes_t(class kaitai::kstream *,class kaitai::kstruct *,class process_repeat_bytes_t *)" (??0process_repeat_bytes_t@@QEAA@PEAVkstream@kaitai@@PEAVkstruct@2@PEAV0@@Z) referenced in function "public: void __cdecl test_process_repeat_bytes::test_method(void)" (?test_method@test_process_repeat_bytes@@QEAAXXZ) [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\Debug\ks_tests.exe : fatal error LNK1120: 15 unresolved externals [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-Done Building Project "C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj" (default targets) -- FAILED.
-Done Building Project "C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj.metaproj" (default targets) -- FAILED.
-Done Building Project "C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\KS_TEST_CPP_STL.sln" (default targets) -- FAILED.
+  ks_tests.vcxproj -> C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\Debug\ks_tests.exe
+PostBuildEvent:
+  setlocal
+  powershell -noprofile -executionpolicy Bypass -file C:/Tools/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary C:/projects/ci-targets/tests/compiled/cpp_stl_98/bin/Debug/ks_tests.exe -installedDir C:/Tools/vcpkg/installed/x64-windows/debug/bin -OutVariable out
+  if %errorlevel% neq 0 goto :cmEnd
+  :cmEnd
+  endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+  :cmErrorLevel
+  exit /b %1
+  :cmDone
+  if %errorlevel% neq 0 goto :VCEnd
+  :VCEnd
+FinalizeBuildStatus:
+  Deleting file "ks_tests.dir\Debug\ks_tests.tlog\unsuccessfulbuild".
+  Touching "ks_tests.dir\Debug\ks_tests.tlog\ks_tests.lastbuildstate".
+Done Building Project "C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj" (default targets).
+Done Building Project "C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj.metaproj" (default targets).
+Done Building Project "C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\KS_TEST_CPP_STL.sln" (default targets).
 
-Build FAILED.
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
 
-"C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\KS_TEST_CPP_STL.sln" (default target) (1) ->
-"C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj.metaproj" (default target) (3) ->
-"C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj" (default target) (4) ->
-(ClCompile target) -> 
-  C:\projects\ci-targets\runtime\cpp_stl\kaitai\kaitaistream.cpp(526): warning C4267: '=': conversion from 'size_t' to 'uInt', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-
-
-"C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\KS_TEST_CPP_STL.sln" (default target) (1) ->
-"C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj.metaproj" (default target) (3) ->
-"C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj" (default target) (4) ->
-(Link target) -> 
-  test_enum_to_i_class_border_1.obj : error LNK2019: unresolved external symbol "public: bool __cdecl enum_to_i_class_border_2_t::is_dog(void)" (?is_dog@enum_to_i_class_border_2_t@@QEAA_NXZ) referenced in function "public: void __cdecl test_enum_to_i_class_border_1::test_method(void)" (?test_method@test_enum_to_i_class_border_1@@QEAAXXZ) [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-  test_enum_to_i_class_border_1.obj : error LNK2019: unresolved external symbol "public: __cdecl enum_to_i_class_border_1_t::enum_to_i_class_border_1_t(class kaitai::kstream *,class kaitai::kstruct *,class enum_to_i_class_border_1_t *)" (??0enum_to_i_class_border_1_t@@QEAA@PEAVkstream@kaitai@@PEAVkstruct@2@PEAV0@@Z) referenced in function "public: void __cdecl test_enum_to_i_class_border_1::test_method(void)" (?test_method@test_enum_to_i_class_border_1@@QEAAXXZ) [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-  test_enum_to_i_class_border_1.obj : error LNK2019: unresolved external symbol "public: class enum_to_i_class_border_2_t * __cdecl enum_to_i_class_border_1_t::checker(void)" (?checker@enum_to_i_class_border_1_t@@QEAAPEAVenum_to_i_class_border_2_t@@XZ) referenced in function "public: void __cdecl test_enum_to_i_class_border_1::test_method(void)" (?test_method@test_enum_to_i_class_border_1@@QEAAXXZ) [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-  test_expr_ops_parens.obj : error LNK2019: unresolved external symbol "public: __cdecl expr_ops_parens_t::expr_ops_parens_t(class kaitai::kstream *,class kaitai::kstruct *,class expr_ops_parens_t *)" (??0expr_ops_parens_t@@QEAA@PEAVkstream@kaitai@@PEAVkstruct@2@PEAV0@@Z) referenced in function "public: void __cdecl test_expr_ops_parens::test_method(void)" (?test_method@test_expr_ops_parens@@QEAAXXZ) [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-  test_expr_ops_parens.obj : error LNK2019: unresolved external symbol "public: int __cdecl expr_ops_parens_t::bool_and(void)" (?bool_and@expr_ops_parens_t@@QEAAHXZ) referenced in function "public: void __cdecl test_expr_ops_parens::test_method(void)" (?test_method@test_expr_ops_parens@@QEAAXXZ) [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-  test_expr_ops_parens.obj : error LNK2019: unresolved external symbol "public: int __cdecl expr_ops_parens_t::bool_or(void)" (?bool_or@expr_ops_parens_t@@QEAAHXZ) referenced in function "public: void __cdecl test_expr_ops_parens::test_method(void)" (?test_method@test_expr_ops_parens@@QEAAXXZ) [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-  test_expr_ops_parens.obj : error LNK2019: unresolved external symbol "public: class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > __cdecl expr_ops_parens_t::str_concat_rev(void)" (?str_concat_rev@expr_ops_parens_t@@QEAA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@XZ) referenced in function "public: void __cdecl test_expr_ops_parens::test_method(void)" (?test_method@test_expr_ops_parens@@QEAAXXZ) [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-  test_expr_ops_parens.obj : error LNK2019: unresolved external symbol "public: int __cdecl expr_ops_parens_t::str_concat_len(void)" (?str_concat_len@expr_ops_parens_t@@QEAAHXZ) referenced in function "public: void __cdecl test_expr_ops_parens::test_method(void)" (?test_method@test_expr_ops_parens@@QEAAXXZ) [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-  test_expr_ops_parens.obj : error LNK2019: unresolved external symbol "public: int __cdecl expr_ops_parens_t::str_concat_to_i(void)" (?str_concat_to_i@expr_ops_parens_t@@QEAAHXZ) referenced in function "public: void __cdecl test_expr_ops_parens::test_method(void)" (?test_method@test_expr_ops_parens@@QEAAXXZ) [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-  test_expr_ops_parens.obj : error LNK2019: unresolved external symbol "public: class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > __cdecl expr_ops_parens_t::i_sum_to_str(void)" (?i_sum_to_str@expr_ops_parens_t@@QEAA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@XZ) referenced in function "public: void __cdecl test_expr_ops_parens::test_method(void)" (?test_method@test_expr_ops_parens@@QEAAXXZ) [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-  test_expr_ops_parens.obj : error LNK2019: unresolved external symbol "public: int __cdecl expr_ops_parens_t::bool_eq(void)" (?bool_eq@expr_ops_parens_t@@QEAAHXZ) referenced in function "public: void __cdecl test_expr_ops_parens::test_method(void)" (?test_method@test_expr_ops_parens@@QEAAXXZ) [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-  test_expr_ops_parens.obj : error LNK2019: unresolved external symbol "public: class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > __cdecl expr_ops_parens_t::str_concat_substr_2_to_7(void)" (?str_concat_substr_2_to_7@expr_ops_parens_t@@QEAA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@XZ) referenced in function "public: void __cdecl test_expr_ops_parens::test_method(void)" (?test_method@test_expr_ops_parens@@QEAAXXZ) [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-  test_nav_parent_switch_cast.obj : error LNK2019: unresolved external symbol "public: __cdecl nav_parent_switch_cast_t::nav_parent_switch_cast_t(class kaitai::kstream *,class kaitai::kstruct *,class nav_parent_switch_cast_t *)" (??0nav_parent_switch_cast_t@@QEAA@PEAVkstream@kaitai@@PEAVkstruct@2@PEAV0@@Z) referenced in function "public: void __cdecl test_nav_parent_switch_cast::test_method(void)" (?test_method@test_nav_parent_switch_cast@@QEAAXXZ) [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-  test_nav_parent_switch_cast.obj : error LNK2019: unresolved external symbol "public: unsigned char __cdecl nav_parent_switch_cast_t::foo_t::common_t::flag(void)" (?flag@common_t@foo_t@nav_parent_switch_cast_t@@QEAAEXZ) referenced in function "public: void __cdecl test_nav_parent_switch_cast::test_method(void)" (?test_method@test_nav_parent_switch_cast@@QEAAXXZ) [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-  test_process_repeat_bytes.obj : error LNK2019: unresolved external symbol "public: __cdecl process_repeat_bytes_t::process_repeat_bytes_t(class kaitai::kstream *,class kaitai::kstruct *,class process_repeat_bytes_t *)" (??0process_repeat_bytes_t@@QEAA@PEAVkstream@kaitai@@PEAVkstruct@2@PEAV0@@Z) referenced in function "public: void __cdecl test_process_repeat_bytes::test_method(void)" (?test_method@test_process_repeat_bytes@@QEAAXXZ) [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-  C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\Debug\ks_tests.exe : fatal error LNK1120: 15 unresolved externals [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-
-    1 Warning(s)
-    16 Error(s)
-
-Time Elapsed 00:00:04.24
+Time Elapsed 00:00:06.21
