@@ -295,6 +295,24 @@
     "elapsed": 0.0,
     "is_kst": true
   },
+  "ExprIfIntOps": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "ExprIntDiv": {
+    "status": "failed",
+    "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": "Failed",
+      "trace": [
+        "expr_int_div_test.go:43: &#xA;&#x9;&#x9;Error Trace:&#x9;expr_int_div_test.go:43&#xA;&#x9;&#x9;Error:      &#x9;Not equal: &#xA;&#x9;&#x9;            &#x9;expected: -757&#xA;&#x9;&#x9;            &#x9;actual  : -756&#xA;&#x9;&#x9;Test:       &#x9;TestExprIntDiv&#xA;expr_int_div_test.go:53: &#xA;&#x9;&#x9;Error Trace:&#x9;expr_int_div_test.go:53&#xA;&#x9;&#x9;Error:      &#x9;Not equal: &#xA;&#x9;&#x9;            &#x9;expected: -4073&#xA;&#x9;&#x9;            &#x9;actual  : -4072&#xA;&#x9;&#x9;Test:       &#x9;TestExprIntDiv"
+      ]
+    },
+    "is_kst": true
+  },
   "ExprIoEof": {
     "status": "failed",
     "elapsed": 0.0,
@@ -315,7 +333,7 @@
   },
   "ExprMod": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.02,
     "is_kst": true
   },
   "ExprSizeofType0": {
@@ -325,7 +343,7 @@
   },
   "ExprSizeofType1": {
     "status": "passed",
-    "elapsed": 0.01,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "ExprSizeofValue0": {
@@ -559,7 +577,7 @@
       "line_num": null,
       "message": "Failed",
       "trace": [
-        "goroutine 119 [running]:&#xA;runtime/debug.Stack(0xc420054c10, 0xc420054c40, 0x47d073)&#xA;runtime/debug.PrintStack()&#xA;github.com/kaitai-io/ci_targets/tests/spec/go.TestOpaqueExternalType02Parent.func1(0xc42018bef0)&#xA;panic(0x71e5c0, 0x9704d0)&#xA;test_formats.(*OpaqueExternalType02Child).SomeMethod(...)&#xA;test_formats.(*OpaqueExternalType02Child_OpaqueExternalType02ChildChild).Read(0xc4201a6c90, 0xc4201a6c30, 0xc42019e960, 0x0, 0xc420196f6c, 0x3)&#xA;test_formats.(*OpaqueExternalType02Child).Read(0xc42019e960, 0xc4201a6c30, 0x718fa0, 0xc42011f3e0, 0x0, 0x74d660, 0x1)&#xA;test_formats.(*OpaqueExternalType02Parent_ParentObj).Read(0xc42011f3e0, 0xc4201a6c30, 0xc4201a6c60, 0xc4201a6c60, 0x74d5a0, 0x1)&#xA;test_formats.(*OpaqueExternalType02Parent).Read(0xc4201a6c60, 0xc4201a6c30, 0x718f40, 0xc4201a6c60, 0xc4201a6c60, 0x92b62c, 0x46)&#xA;github.com/kaitai-io/ci_targets/tests/spec/go.TestOpaqueExternalType02Parent(0xc42018bef0)&#xA;testing.tRunner(0xc42018bef0, 0x7a0cd0)&#xA;created by testing.(*T).Run&#xA;opaque_external_type_02_parent_test.go:16: unexpected panic: runtime error: invalid memory address or nil pointer dereference"
+        "goroutine 121 [running]:&#xA;runtime/debug.Stack(0xc420054c10, 0xc420054c40, 0x47d073)&#xA;runtime/debug.PrintStack()&#xA;github.com/kaitai-io/ci_targets/tests/spec/go.TestOpaqueExternalType02Parent.func1(0xc4201b60f0)&#xA;panic(0x71f700, 0x9724d0)&#xA;test_formats.(*OpaqueExternalType02Child).SomeMethod(...)&#xA;test_formats.(*OpaqueExternalType02Child_OpaqueExternalType02ChildChild).Read(0xc4201b0f30, 0xc4201b0ed0, 0xc4201a2a50, 0x0, 0xc4201a11bc, 0x3)&#xA;test_formats.(*OpaqueExternalType02Child).Read(0xc4201a2a50, 0xc4201b0ed0, 0x71a0e0, 0xc42011f460, 0x0, 0x74e8c0, 0x1)&#xA;test_formats.(*OpaqueExternalType02Parent_ParentObj).Read(0xc42011f460, 0xc4201b0ed0, 0xc4201b0f00, 0xc4201b0f00, 0x74e800, 0x1)&#xA;test_formats.(*OpaqueExternalType02Parent).Read(0xc4201b0f00, 0xc4201b0ed0, 0x71a080, 0xc4201b0f00, 0xc4201b0f00, 0x92d67a, 0x46)&#xA;github.com/kaitai-io/ci_targets/tests/spec/go.TestOpaqueExternalType02Parent(0xc4201b60f0)&#xA;testing.tRunner(0xc4201b60f0, 0x7a2290)&#xA;created by testing.(*T).Run&#xA;opaque_external_type_02_parent_test.go:16: unexpected panic: runtime error: invalid memory address or nil pointer dereference"
       ]
     }
   },
@@ -667,7 +685,7 @@
   },
   "ProcessRepeatUsertype": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.01,
     "is_kst": true
   },
   "ProcessRotate": {
@@ -677,7 +695,7 @@
   },
   "ProcessToUser": {
     "status": "passed",
-    "elapsed": 0.01,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "ProcessXor4Const": {
@@ -908,13 +926,13 @@
   },
   "$meta": {
     "lang": "go",
-    "timestamp": "2020-05-24T21:57:39Z",
+    "timestamp": "2020-05-30T22:29:11Z",
     "ci": {
       "ci": "travis",
-      "build_id": "690732306",
-      "job_id": "690732328",
-      "job_number": "362.22",
-      "url": "https://travis-ci.org/kaitai-io/ci_targets/jobs/690732328"
+      "build_id": "692996442",
+      "job_id": "692996464",
+      "job_number": "366.22",
+      "url": "https://travis-ci.org/kaitai-io/ci_targets/jobs/692996464"
     }
   }
 }
