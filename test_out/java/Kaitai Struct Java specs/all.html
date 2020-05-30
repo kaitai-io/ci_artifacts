@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>all</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>204/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>204/2/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sun May 24 21:53:29 UTC 2020</td>
+<td>Started on:</td><td>Sat May 30 22:24:44 UTC 2020</td>
 </tr>
-<tr><td>Total time:</td><td>0 seconds (558 ms)</td>
+<tr><td>Total time:</td><td>0 seconds (602 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,96 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestExprIfIntOps.testExprIfIntOps()'><b>testExprIfIntOps</b><br>Test class: io.kaitai.struct.spec.TestExprIfIntOps</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at io.kaitai.struct.spec.CommonSpec.assertIntEquals(CommonSpec.java:48)
+	at io.kaitai.struct.spec.TestExprIfIntOps.testExprIfIntOps(TestExprIfIntOps.java:15)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1105628551", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1105628551'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:305)
+	at org.testng.Assert.assertEquals(Assert.java:315)
+	at io.kaitai.struct.spec.CommonSpec.assertIntEquals(CommonSpec.java:48)
+	at io.kaitai.struct.spec.TestExprIfIntOps.testExprIfIntOps(TestExprIfIntOps.java:15)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.TestNG.privateMain(TestNG.java:1385)
+	at org.testng.TestNG.main(TestNG.java:1354)
+</pre></div></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestExprIfIntOps@5965d37</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestExprIntDiv.testExprIntDiv()'><b>testExprIntDiv</b><br>Test class: io.kaitai.struct.spec.TestExprIntDiv</td>
+<td><div><pre>java.lang.AssertionError: expected [-757] but found [-756]
+	at io.kaitai.struct.spec.CommonSpec.assertIntEquals(CommonSpec.java:36)
+	at io.kaitai.struct.spec.TestExprIntDiv.testExprIntDiv(TestExprIntDiv.java:17)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace37887172", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace37887172'><pre>java.lang.AssertionError: expected [-757] but found [-756]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:389)
+	at org.testng.Assert.assertEquals(Assert.java:399)
+	at io.kaitai.struct.spec.CommonSpec.assertIntEquals(CommonSpec.java:36)
+	at io.kaitai.struct.spec.TestExprIntDiv.testExprIntDiv(TestExprIntDiv.java:17)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.TestNG.privateMain(TestNG.java:1385)
+	at org.testng.TestNG.main(TestNG.java:1354)
+</pre></div></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestExprIntDiv@25be7b63</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -78,112 +168,112 @@ function toggleAllBoxes() {
 <td title='io.kaitai.struct.spec.TestBcdUserTypeBe.testBcdUserTypeBe()'><b>testBcdUserTypeBe</b><br>Test class: io.kaitai.struct.spec.TestBcdUserTypeBe</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestBcdUserTypeBe@5e2c3d18</td></tr>
+<td>io.kaitai.struct.spec.TestBcdUserTypeBe@645aa696</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestBcdUserTypeLe.testBcdUserTypeLe()'><b>testBcdUserTypeLe</b><br>Test class: io.kaitai.struct.spec.TestBcdUserTypeLe</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestBcdUserTypeLe@79e4c792</td></tr>
+<td>io.kaitai.struct.spec.TestBcdUserTypeLe@4a83a74a</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestBitsByteAligned.testBitsByteAligned()'><b>testBitsByteAligned</b><br>Test class: io.kaitai.struct.spec.TestBitsByteAligned</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestBitsByteAligned@353352b6</td></tr>
+<td>io.kaitai.struct.spec.TestBitsByteAligned@6fa51cd4</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestBitsEnum.testBitsEnum()'><b>testBitsEnum</b><br>Test class: io.kaitai.struct.spec.TestBitsEnum</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestBitsEnum@740fb309</td></tr>
+<td>io.kaitai.struct.spec.TestBitsEnum@2de56eb2</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestBitsSeqEndianCombo.testBitsSeqEndianCombo()'><b>testBitsSeqEndianCombo</b><br>Test class: io.kaitai.struct.spec.TestBitsSeqEndianCombo</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestBitsSeqEndianCombo@514646ef</td></tr>
+<td>io.kaitai.struct.spec.TestBitsSeqEndianCombo@7ae0a9ec</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestBitsSimple.testBitsSimple()'><b>testBitsSimple</b><br>Test class: io.kaitai.struct.spec.TestBitsSimple</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestBitsSimple@712625fd</td></tr>
+<td>io.kaitai.struct.spec.TestBitsSimple@350aac89</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestBitsSimpleLe.testBitsSimpleLe()'><b>testBitsSimpleLe</b><br>Test class: io.kaitai.struct.spec.TestBitsSimpleLe</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestBitsSimpleLe@73eb439a</td></tr>
+<td>io.kaitai.struct.spec.TestBitsSimpleLe@1972e513</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestBufferedStruct.testBufferedStruct()'><b>testBufferedStruct</b><br>Test class: io.kaitai.struct.spec.TestBufferedStruct</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestBufferedStruct@4d1c005e</td></tr>
+<td>io.kaitai.struct.spec.TestBufferedStruct@70ed52de</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestBytesPadTerm.testBytesPadTerm()'><b>testBytesPadTerm</b><br>Test class: io.kaitai.struct.spec.TestBytesPadTerm</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestBytesPadTerm@33065d67</td></tr>
+<td>io.kaitai.struct.spec.TestBytesPadTerm@75437611</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestCastNested.testCastNested()'><b>testCastNested</b><br>Test class: io.kaitai.struct.spec.TestCastNested</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestCastNested@273444fe</td></tr>
+<td>io.kaitai.struct.spec.TestCastNested@5032714f</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestCastToImported.testCastToImported()'><b>testCastToImported</b><br>Test class: io.kaitai.struct.spec.TestCastToImported</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestCastToImported@6c4906d3</td></tr>
+<td>io.kaitai.struct.spec.TestCastToImported@4d1bf319</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestCastToTop.testCastToTop()'><b>testCastToTop</b><br>Test class: io.kaitai.struct.spec.TestCastToTop</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestCastToTop@70cf32e3</td></tr>
+<td>io.kaitai.struct.spec.TestCastToTop@71075444</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestCombineBool.testCombineBool()'><b>testCombineBool</b><br>Test class: io.kaitai.struct.spec.TestCombineBool</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestCombineBool@6f01b95f</td></tr>
+<td>io.kaitai.struct.spec.TestCombineBool@4201c465</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestCombineBytes.testCombineBytes()'><b>testCombineBytes</b><br>Test class: io.kaitai.struct.spec.TestCombineBytes</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestCombineBytes@5b247367</td></tr>
+<td>io.kaitai.struct.spec.TestCombineBytes@6c284af</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestCombineEnum.testCombineEnum()'><b>testCombineEnum</b><br>Test class: io.kaitai.struct.spec.TestCombineEnum</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestCombineEnum@4be29ed9</td></tr>
+<td>io.kaitai.struct.spec.TestCombineEnum@cb0755b</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestCombineStr.testCombineStr()'><b>testCombineStr</b><br>Test class: io.kaitai.struct.spec.TestCombineStr</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestCombineStr@6e535154</td></tr>
+<td>io.kaitai.struct.spec.TestCombineStr@55cb6996</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestDebug0.testDebug0()'><b>testDebug0</b><br>Test class: io.kaitai.struct.spec.TestDebug0</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestDebug0@496bc455</td></tr>
+<td>io.kaitai.struct.spec.TestDebug0@7c37508a</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestDebugArrayUser.testDebugArrayUser()'><b>testDebugArrayUser</b><br>Test class: io.kaitai.struct.spec.TestDebugArrayUser</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestDebugArrayUser@18271936</td></tr>
+<td>io.kaitai.struct.spec.TestDebugArrayUser@68c9133c</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestDebugEnumName.testDebugEnumName()'><b>testDebugEnumName</b><br>Test class: io.kaitai.struct.spec.TestDebugEnumName</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestDebugEnumName@1040be71</td></tr>
+<td>io.kaitai.struct.spec.TestDebugEnumName@3f4faf53</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestDebugSwitchUser.testDebugSwitchUser()'><b>testDebugSwitchUser</b><br>Test class: io.kaitai.struct.spec.TestDebugSwitchUser</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestDebugSwitchUser@533bda92</td></tr>
+<td>io.kaitai.struct.spec.TestDebugSwitchUser@45d84a20</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestDefaultBigEndian.testDefaultBigEndian()'><b>testDefaultBigEndian</b><br>Test class: io.kaitai.struct.spec.TestDefaultBigEndian</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestDefaultBigEndian@d737b89</td></tr>
+<td>io.kaitai.struct.spec.TestDefaultBigEndian@3ba987b8</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestDefaultBitEndianMod.testDefaultBitEndianMod()'><b>testDefaultBitEndianMod</b><br>Test class: io.kaitai.struct.spec.TestDefaultBitEndianMod</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestDefaultBitEndianMod@4d1bf319</td></tr>
+<td>io.kaitai.struct.spec.TestDefaultBitEndianMod@4007f65e</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestDefaultEndianExprException.testDefaultEndianExprException()'><b>testDefaultEndianExprException</b><br>Test class: io.kaitai.struct.spec.TestDefaultEndianExprException</td>
 <td><div><pre>io.kaitai.struct.KaitaiStream$UndecidedEndiannessError
@@ -196,8 +286,8 @@ function toggleAllBoxes() {
 	at io.kaitai.struct.testformats.DefaultEndianExprException.&lt;init&gt;(DefaultEndianExprException.java:18)
 	at io.kaitai.struct.testformats.DefaultEndianExprException.fromFile(DefaultEndianExprException.java:14)
 	at io.kaitai.struct.spec.TestDefaultEndianExprException.testDefaultEndianExprException(TestDefaultEndianExprException.java:13)
-... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1989132530", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1989132530'><pre>io.kaitai.struct.KaitaiStream$UndecidedEndiannessError
+... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace447767121", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace447767121'><pre>io.kaitai.struct.KaitaiStream$UndecidedEndiannessError
 	at io.kaitai.struct.testformats.DefaultEndianExprException$Doc$MainObj._read(DefaultEndianExprException.java:98)
 	at io.kaitai.struct.testformats.DefaultEndianExprException$Doc$MainObj.&lt;init&gt;(DefaultEndianExprException.java:82)
 	at io.kaitai.struct.testformats.DefaultEndianExprException$Doc._read(DefaultEndianExprException.java:62)
@@ -232,127 +322,127 @@ function toggleAllBoxes() {
 	at org.testng.TestNG.main(TestNG.java:1354)
 </pre></div></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestDefaultEndianExprException@792b749c</td></tr>
+<td>io.kaitai.struct.spec.TestDefaultEndianExprException@514646ef</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestDefaultEndianExprInherited.testDefaultEndianExprInherited()'><b>testDefaultEndianExprInherited</b><br>Test class: io.kaitai.struct.spec.TestDefaultEndianExprInherited</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestDefaultEndianExprInherited@1972e513</td></tr>
+<td>io.kaitai.struct.spec.TestDefaultEndianExprInherited@6f10d5b6</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestDefaultEndianExprIsBe.testDefaultEndianExprIsBe()'><b>testDefaultEndianExprIsBe</b><br>Test class: io.kaitai.struct.spec.TestDefaultEndianExprIsBe</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestDefaultEndianExprIsBe@5a59ca5e</td></tr>
+<td>io.kaitai.struct.spec.TestDefaultEndianExprIsBe@4f32a3ad</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestDefaultEndianExprIsLe.testDefaultEndianExprIsLe()'><b>testDefaultEndianExprIsLe</b><br>Test class: io.kaitai.struct.spec.TestDefaultEndianExprIsLe</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestDefaultEndianExprIsLe@338fc1d8</td></tr>
+<td>io.kaitai.struct.spec.TestDefaultEndianExprIsLe@f1da57d</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestDefaultEndianMod.testDefaultEndianMod()'><b>testDefaultEndianMod</b><br>Test class: io.kaitai.struct.spec.TestDefaultEndianMod</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestDefaultEndianMod@7c137fd5</td></tr>
+<td>io.kaitai.struct.spec.TestDefaultEndianMod@451001e5</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestDocstrings.testDocstrings()'><b>testDocstrings</b><br>Test class: io.kaitai.struct.spec.TestDocstrings</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestDocstrings@645aa696</td></tr>
+<td>io.kaitai.struct.spec.TestDocstrings@273444fe</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestDocstringsDocref.testDocstringsDocref()'><b>testDocstringsDocref</b><br>Test class: io.kaitai.struct.spec.TestDocstringsDocref</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestDocstringsDocref@305ffe9e</td></tr>
+<td>io.kaitai.struct.spec.TestDocstringsDocref@35841320</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestDocstringsDocrefMulti.testDocstringsDocrefMulti()'><b>testDocstringsDocrefMulti</b><br>Test class: io.kaitai.struct.spec.TestDocstringsDocrefMulti</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestDocstringsDocrefMulti@72cc7e6f</td></tr>
+<td>io.kaitai.struct.spec.TestDocstringsDocrefMulti@18271936</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestEnum0.testEnum0()'><b>testEnum0</b><br>Test class: io.kaitai.struct.spec.TestEnum0</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestEnum0@6c284af</td></tr>
+<td>io.kaitai.struct.spec.TestEnum0@231f98ef</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestEnum1.testEnum1()'><b>testEnum1</b><br>Test class: io.kaitai.struct.spec.TestEnum1</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestEnum1@2034b64c</td></tr>
+<td>io.kaitai.struct.spec.TestEnum1@74e28667</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestEnumDeep.testEnumDeep()'><b>testEnumDeep</b><br>Test class: io.kaitai.struct.spec.TestEnumDeep</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestEnumDeep@48075da3</td></tr>
+<td>io.kaitai.struct.spec.TestEnumDeep@2cb4893b</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestEnumDeepLiterals.testEnumDeepLiterals()'><b>testEnumDeepLiterals</b><br>Test class: io.kaitai.struct.spec.TestEnumDeepLiterals</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestEnumDeepLiterals@609e8838</td></tr>
+<td>io.kaitai.struct.spec.TestEnumDeepLiterals@792b749c</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestEnumFancy.testEnumFancy()'><b>testEnumFancy</b><br>Test class: io.kaitai.struct.spec.TestEnumFancy</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestEnumFancy@2b30a42c</td></tr>
+<td>io.kaitai.struct.spec.TestEnumFancy@6d60fe40</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestEnumForUnknownId.testEnumForUnknownId()'><b>testEnumForUnknownId</b><br>Test class: io.kaitai.struct.spec.TestEnumForUnknownId</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestEnumForUnknownId@8458f04</td></tr>
+<td>io.kaitai.struct.spec.TestEnumForUnknownId@5e2c3d18</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestEnumIf.testEnumIf()'><b>testEnumIf</b><br>Test class: io.kaitai.struct.spec.TestEnumIf</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestEnumIf@28dcca0c</td></tr>
+<td>io.kaitai.struct.spec.TestEnumIf@4d0d9fe7</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestEnumImport.testEnumImport()'><b>testEnumImport</b><br>Test class: io.kaitai.struct.spec.TestEnumImport</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestEnumImport@742ff096</td></tr>
+<td>io.kaitai.struct.spec.TestEnumImport@17f9d882</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestEnumIntRangeS.testEnumIntRangeS()'><b>testEnumIntRangeS</b><br>Test class: io.kaitai.struct.spec.TestEnumIntRangeS</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestEnumIntRangeS@606e4010</td></tr>
+<td>io.kaitai.struct.spec.TestEnumIntRangeS@7a35b0f5</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestEnumIntRangeU.testEnumIntRangeU()'><b>testEnumIntRangeU</b><br>Test class: io.kaitai.struct.spec.TestEnumIntRangeU</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestEnumIntRangeU@7bba5817</td></tr>
+<td>io.kaitai.struct.spec.TestEnumIntRangeU@1c5920df</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestEnumInvalid.testEnumInvalid()'><b>testEnumInvalid</b><br>Test class: io.kaitai.struct.spec.TestEnumInvalid</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestEnumInvalid@4bdeaabb</td></tr>
+<td>io.kaitai.struct.spec.TestEnumInvalid@6b695b06</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestEnumLongRangeS.testEnumLongRangeS()'><b>testEnumLongRangeS</b><br>Test class: io.kaitai.struct.spec.TestEnumLongRangeS</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestEnumLongRangeS@57a78e3</td></tr>
+<td>io.kaitai.struct.spec.TestEnumLongRangeS@710c2b53</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestEnumLongRangeU.testEnumLongRangeU()'><b>testEnumLongRangeU</b><br>Test class: io.kaitai.struct.spec.TestEnumLongRangeU</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestEnumLongRangeU@350aac89</td></tr>
+<td>io.kaitai.struct.spec.TestEnumLongRangeU@196a42c3</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestEnumNegative.testEnumNegative()'><b>testEnumNegative</b><br>Test class: io.kaitai.struct.spec.TestEnumNegative</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestEnumNegative@52f27fbd</td></tr>
+<td>io.kaitai.struct.spec.TestEnumNegative@312aa7c</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestEnumOfValueInst.testEnumOfValueInst()'><b>testEnumOfValueInst</b><br>Test class: io.kaitai.struct.spec.TestEnumOfValueInst</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestEnumOfValueInst@909217e</td></tr>
+<td>io.kaitai.struct.spec.TestEnumOfValueInst@48075da3</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestEnumToI.testEnumToI()'><b>testEnumToI</b><br>Test class: io.kaitai.struct.spec.TestEnumToI</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestEnumToI@7e057f43</td></tr>
+<td>io.kaitai.struct.spec.TestEnumToI@31ea9581</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestEnumToIClassBorder1.testEnumToIClassBorder1()'><b>testEnumToIClassBorder1</b><br>Test class: io.kaitai.struct.spec.TestEnumToIClassBorder1</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestEnumToIClassBorder1@1ca3b418</td></tr>
+<td>io.kaitai.struct.spec.TestEnumToIClassBorder1@74d1dc36</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestEofExceptionBytes.testEofExceptionBytes()'><b>testEofExceptionBytes</b><br>Test class: io.kaitai.struct.spec.TestEofExceptionBytes</td>
 <td><div><pre>java.nio.BufferUnderflowException
@@ -364,8 +454,8 @@ function toggleAllBoxes() {
 	at io.kaitai.struct.testformats.EofExceptionBytes.&lt;init&gt;(EofExceptionBytes.java:16)
 	at io.kaitai.struct.testformats.EofExceptionBytes.fromFile(EofExceptionBytes.java:12)
 	at io.kaitai.struct.spec.TestEofExceptionBytes.testEofExceptionBytes(TestEofExceptionBytes.java:13)
-... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace431506362", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace431506362'><pre>java.nio.BufferUnderflowException
+... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1160649162", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1160649162'><pre>java.nio.BufferUnderflowException
 	at java.base/java.nio.DirectByteBuffer.get(DirectByteBuffer.java:295)
 	at java.base/java.nio.ByteBuffer.get(ByteBuffer.java:762)
 	at io.kaitai.struct.ByteBufferKaitaiStream.readBytes(ByteBufferKaitaiStream.java:324)
@@ -399,7 +489,7 @@ function toggleAllBoxes() {
 	at org.testng.TestNG.main(TestNG.java:1354)
 </pre></div></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestEofExceptionBytes@6440112d</td></tr>
+<td>io.kaitai.struct.spec.TestEofExceptionBytes@183ec003</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestEofExceptionU4.testEofExceptionU4()'><b>testEofExceptionU4</b><br>Test class: io.kaitai.struct.spec.TestEofExceptionU4</td>
 <td><div><pre>java.nio.BufferUnderflowException
@@ -411,8 +501,8 @@ function toggleAllBoxes() {
 	at io.kaitai.struct.testformats.EofExceptionU4.&lt;init&gt;(EofExceptionU4.java:16)
 	at io.kaitai.struct.testformats.EofExceptionU4.fromFile(EofExceptionU4.java:12)
 	at io.kaitai.struct.spec.TestEofExceptionU4.testEofExceptionU4(TestEofExceptionU4.java:13)
-... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1344697180", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1344697180'><pre>java.nio.BufferUnderflowException
+... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1142347343", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1142347343'><pre>java.nio.BufferUnderflowException
 	at java.base/java.nio.Buffer.nextGetIndex(Buffer.java:647)
 	at java.base/java.nio.DirectByteBuffer.getInt(DirectByteBuffer.java:751)
 	at io.kaitai.struct.ByteBufferKaitaiStream.readU4le(ByteBufferKaitaiStream.java:269)
@@ -446,7 +536,7 @@ function toggleAllBoxes() {
 	at org.testng.TestNG.main(TestNG.java:1354)
 </pre></div></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestEofExceptionU4@6be968ce</td></tr>
+<td>io.kaitai.struct.spec.TestEofExceptionU4@303cf2ba</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestEosExceptionBytes.testEosExceptionBytes()'><b>testEosExceptionBytes</b><br>Test class: io.kaitai.struct.spec.TestEosExceptionBytes</td>
 <td><div><pre>java.nio.BufferUnderflowException
@@ -460,8 +550,8 @@ function toggleAllBoxes() {
 	at io.kaitai.struct.testformats.EosExceptionBytes.&lt;init&gt;(EosExceptionBytes.java:16)
 	at io.kaitai.struct.testformats.EosExceptionBytes.fromFile(EosExceptionBytes.java:12)
 	at io.kaitai.struct.spec.TestEosExceptionBytes.testEosExceptionBytes(TestEosExceptionBytes.java:13)
-... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1731656333", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1731656333'><pre>java.nio.BufferUnderflowException
+... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1297189682", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1297189682'><pre>java.nio.BufferUnderflowException
 	at java.base/java.nio.HeapByteBuffer.get(HeapByteBuffer.java:178)
 	at java.base/java.nio.ByteBuffer.get(ByteBuffer.java:762)
 	at io.kaitai.struct.ByteBufferKaitaiStream.readBytes(ByteBufferKaitaiStream.java:324)
@@ -497,7 +587,7 @@ function toggleAllBoxes() {
 	at org.testng.TestNG.main(TestNG.java:1354)
 </pre></div></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestEosExceptionBytes@548d708a</td></tr>
+<td>io.kaitai.struct.spec.TestEosExceptionBytes@33065d67</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestEosExceptionU4.testEosExceptionU4()'><b>testEosExceptionU4</b><br>Test class: io.kaitai.struct.spec.TestEosExceptionU4</td>
 <td><div><pre>java.nio.BufferUnderflowException
@@ -511,8 +601,8 @@ function toggleAllBoxes() {
 	at io.kaitai.struct.testformats.EosExceptionU4.&lt;init&gt;(EosExceptionU4.java:16)
 	at io.kaitai.struct.testformats.EosExceptionU4.fromFile(EosExceptionU4.java:12)
 	at io.kaitai.struct.spec.TestEosExceptionU4.testEosExceptionU4(TestEosExceptionU4.java:13)
-... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace330128595", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace330128595'><pre>java.nio.BufferUnderflowException
+... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace851765426", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace851765426'><pre>java.nio.BufferUnderflowException
 	at java.base/java.nio.Buffer.nextGetIndex(Buffer.java:647)
 	at java.base/java.nio.HeapByteBuffer.getInt(HeapByteBuffer.java:388)
 	at io.kaitai.struct.ByteBufferKaitaiStream.readU4le(ByteBufferKaitaiStream.java:269)
@@ -548,692 +638,692 @@ function toggleAllBoxes() {
 	at org.testng.TestNG.main(TestNG.java:1354)
 </pre></div></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestEosExceptionU4@1750fbeb</td></tr>
+<td>io.kaitai.struct.spec.TestEosExceptionU4@7e057f43</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestExpr0.testExpr0()'><b>testExpr0</b><br>Test class: io.kaitai.struct.spec.TestExpr0</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestExpr0@5032714f</td></tr>
+<td>io.kaitai.struct.spec.TestExpr0@57a78e3</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestExpr1.testExpr1()'><b>testExpr1</b><br>Test class: io.kaitai.struct.spec.TestExpr1</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestExpr1@5b38c1ec</td></tr>
+<td>io.kaitai.struct.spec.TestExpr1@480d3575</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestExpr2.testExpr2()'><b>testExpr2</b><br>Test class: io.kaitai.struct.spec.TestExpr2</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestExpr2@3ad83a66</td></tr>
+<td>io.kaitai.struct.spec.TestExpr2@338fc1d8</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestExpr3.testExpr3()'><b>testExpr3</b><br>Test class: io.kaitai.struct.spec.TestExpr3</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestExpr3@7d900ecf</td></tr>
+<td>io.kaitai.struct.spec.TestExpr3@7a5ceedd</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestExprArray.testExprArray()'><b>testExprArray</b><br>Test class: io.kaitai.struct.spec.TestExprArray</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestExprArray@28261e8e</td></tr>
+<td>io.kaitai.struct.spec.TestExprArray@2d901eb0</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestExprBytesCmp.testExprBytesCmp()'><b>testExprBytesCmp</b><br>Test class: io.kaitai.struct.spec.TestExprBytesCmp</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestExprBytesCmp@221a3fa4</td></tr>
+<td>io.kaitai.struct.spec.TestExprBytesCmp@4d1c005e</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestExprBytesOps.testExprBytesOps()'><b>testExprBytesOps</b><br>Test class: io.kaitai.struct.spec.TestExprBytesOps</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestExprBytesOps@7f485fda</td></tr>
+<td>io.kaitai.struct.spec.TestExprBytesOps@35dab4eb</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestExprCalcArrayOps.testExprCalcArrayOps()'><b>testExprCalcArrayOps</b><br>Test class: io.kaitai.struct.spec.TestExprCalcArrayOps</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestExprCalcArrayOps@673fdbce</td></tr>
+<td>io.kaitai.struct.spec.TestExprCalcArrayOps@710636b0</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestExprEnum.testExprEnum()'><b>testExprEnum</b><br>Test class: io.kaitai.struct.spec.TestExprEnum</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestExprEnum@7c37508a</td></tr>
+<td>io.kaitai.struct.spec.TestExprEnum@76494737</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestExprIoEof.testExprIoEof()'><b>testExprIoEof</b><br>Test class: io.kaitai.struct.spec.TestExprIoEof</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestExprIoEof@71075444</td></tr>
+<td>io.kaitai.struct.spec.TestExprIoEof@5c80cf32</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestExprIoPos.testExprIoPos()'><b>testExprIoPos</b><br>Test class: io.kaitai.struct.spec.TestExprIoPos</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestExprIoPos@5b218417</td></tr>
+<td>io.kaitai.struct.spec.TestExprIoPos@16eb3ea3</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestExprMod.testExprMod()'><b>testExprMod</b><br>Test class: io.kaitai.struct.spec.TestExprMod</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestExprMod@3de8f619</td></tr>
+<td>io.kaitai.struct.spec.TestExprMod@43f02ef2</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestExprSizeofType0.testExprSizeofType0()'><b>testExprSizeofType0</b><br>Test class: io.kaitai.struct.spec.TestExprSizeofType0</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestExprSizeofType0@1caa0244</td></tr>
+<td>io.kaitai.struct.spec.TestExprSizeofType0@5b247367</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestExprSizeofType1.testExprSizeofType1()'><b>testExprSizeofType1</b><br>Test class: io.kaitai.struct.spec.TestExprSizeofType1</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestExprSizeofType1@4d0d9fe7</td></tr>
+<td>io.kaitai.struct.spec.TestExprSizeofType1@66982506</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestExprSizeofValue0.testExprSizeofValue0()'><b>testExprSizeofValue0</b><br>Test class: io.kaitai.struct.spec.TestExprSizeofValue0</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestExprSizeofValue0@4681c175</td></tr>
+<td>io.kaitai.struct.spec.TestExprSizeofValue0@2767e23c</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestExprSizeofValueSized.testExprSizeofValueSized()'><b>testExprSizeofValueSized</b><br>Test class: io.kaitai.struct.spec.TestExprSizeofValueSized</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestExprSizeofValueSized@2de56eb2</td></tr>
+<td>io.kaitai.struct.spec.TestExprSizeofValueSized@6e535154</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestExprStrOps.testExprStrOps()'><b>testExprStrOps</b><br>Test class: io.kaitai.struct.spec.TestExprStrOps</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestExprStrOps@5890e879</td></tr>
+<td>io.kaitai.struct.spec.TestExprStrOps@7c137fd5</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestFixedContents.testFixedContents()'><b>testFixedContents</b><br>Test class: io.kaitai.struct.spec.TestFixedContents</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestFixedContents@66982506</td></tr>
+<td>io.kaitai.struct.spec.TestFixedContents@65987993</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestFixedStruct.testFixedStruct()'><b>testFixedStruct</b><br>Test class: io.kaitai.struct.spec.TestFixedStruct</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestFixedStruct@4722ef0c</td></tr>
+<td>io.kaitai.struct.spec.TestFixedStruct@194fad1</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestFloatToI.testFloatToI()'><b>testFloatToI</b><br>Test class: io.kaitai.struct.spec.TestFloatToI</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestFloatToI@65987993</td></tr>
+<td>io.kaitai.struct.spec.TestFloatToI@6f53b8a</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestFloatingPoints.testFloatingPoints()'><b>testFloatingPoints</b><br>Test class: io.kaitai.struct.spec.TestFloatingPoints</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestFloatingPoints@2d901eb0</td></tr>
+<td>io.kaitai.struct.spec.TestFloatingPoints@72cc7e6f</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestHelloWorld.testHelloWorld()'><b>testHelloWorld</b><br>Test class: io.kaitai.struct.spec.TestHelloWorld</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestHelloWorld@5149d738</td></tr>
+<td>io.kaitai.struct.spec.TestHelloWorld@548d708a</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestIfInstances.testIfInstances()'><b>testIfInstances</b><br>Test class: io.kaitai.struct.spec.TestIfInstances</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestIfInstances@76494737</td></tr>
+<td>io.kaitai.struct.spec.TestIfInstances@2b30a42c</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestIfStruct.testIfStruct()'><b>testIfStruct</b><br>Test class: io.kaitai.struct.spec.TestIfStruct</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestIfStruct@3b0fe47a</td></tr>
+<td>io.kaitai.struct.spec.TestIfStruct@58cbafc2</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestIfValues.testIfValues()'><b>testIfValues</b><br>Test class: io.kaitai.struct.spec.TestIfValues</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestIfValues@4082ba93</td></tr>
+<td>io.kaitai.struct.spec.TestIfValues@359df09a</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestImports0.testImports0()'><b>testImports0</b><br>Test class: io.kaitai.struct.spec.TestImports0</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestImports0@23e84203</td></tr>
+<td>io.kaitai.struct.spec.TestImports0@305ffe9e</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestImportsAbs.testImportsAbs()'><b>testImportsAbs</b><br>Test class: io.kaitai.struct.spec.TestImportsAbs</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestImportsAbs@239a307b</td></tr>
+<td>io.kaitai.struct.spec.TestImportsAbs@3ad83a66</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestImportsAbsAbs.testImportsAbsAbs()'><b>testImportsAbsAbs</b><br>Test class: io.kaitai.struct.spec.TestImportsAbsAbs</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestImportsAbsAbs@2a8448fa</td></tr>
+<td>io.kaitai.struct.spec.TestImportsAbsAbs@3cce5371</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestImportsAbsRel.testImportsAbsRel()'><b>testImportsAbsRel</b><br>Test class: io.kaitai.struct.spec.TestImportsAbsRel</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestImportsAbsRel@231f98ef</td></tr>
+<td>io.kaitai.struct.spec.TestImportsAbsRel@221a3fa4</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestImportsCircularA.testImportsCircularA()'><b>testImportsCircularA</b><br>Test class: io.kaitai.struct.spec.TestImportsCircularA</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestImportsCircularA@6f53b8a</td></tr>
+<td>io.kaitai.struct.spec.TestImportsCircularA@1a245833</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestImportsRel1.testImportsRel1()'><b>testImportsRel1</b><br>Test class: io.kaitai.struct.spec.TestImportsRel1</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestImportsRel1@793f29ff</td></tr>
+<td>io.kaitai.struct.spec.TestImportsRel1@54422e18</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestIndexSizes.testIndexSizes()'><b>testIndexSizes</b><br>Test class: io.kaitai.struct.spec.TestIndexSizes</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestIndexSizes@68c9133c</td></tr>
+<td>io.kaitai.struct.spec.TestIndexSizes@cc43f62</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestIndexToParamEos.testIndexToParamEos()'><b>testIndexToParamEos</b><br>Test class: io.kaitai.struct.spec.TestIndexToParamEos</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestIndexToParamEos@1a245833</td></tr>
+<td>io.kaitai.struct.spec.TestIndexToParamEos@6cb107fd</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestIndexToParamExpr.testIndexToParamExpr()'><b>testIndexToParamExpr</b><br>Test class: io.kaitai.struct.spec.TestIndexToParamExpr</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestIndexToParamExpr@723ca036</td></tr>
+<td>io.kaitai.struct.spec.TestIndexToParamExpr@4c163e3</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestIndexToParamUntil.testIndexToParamUntil()'><b>testIndexToParamUntil</b><br>Test class: io.kaitai.struct.spec.TestIndexToParamUntil</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestIndexToParamUntil@235ecd9f</td></tr>
+<td>io.kaitai.struct.spec.TestIndexToParamUntil@75d3a5e0</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestInstanceIoUser.testInstanceIoUser()'><b>testInstanceIoUser</b><br>Test class: io.kaitai.struct.spec.TestInstanceIoUser</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestInstanceIoUser@7161d8d1</td></tr>
+<td>io.kaitai.struct.spec.TestInstanceIoUser@19e4653c</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestInstanceStd.testInstanceStd()'><b>testInstanceStd</b><br>Test class: io.kaitai.struct.spec.TestInstanceStd</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestInstanceStd@5f8e8a9d</td></tr>
+<td>io.kaitai.struct.spec.TestInstanceStd@15a34df2</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestInstanceStdArray.testInstanceStdArray()'><b>testInstanceStdArray</b><br>Test class: io.kaitai.struct.spec.TestInstanceStdArray</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestInstanceStdArray@5386659f</td></tr>
+<td>io.kaitai.struct.spec.TestInstanceStdArray@7ce026d3</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestInstanceUserArray.testInstanceUserArray()'><b>testInstanceUserArray</b><br>Test class: io.kaitai.struct.spec.TestInstanceUserArray</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestInstanceUserArray@6bbe85a8</td></tr>
+<td>io.kaitai.struct.spec.TestInstanceUserArray@4b013c76</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestIntegers.testIntegers()'><b>testIntegers</b><br>Test class: io.kaitai.struct.spec.TestIntegers</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestIntegers@24569dba</td></tr>
+<td>io.kaitai.struct.spec.TestIntegers@59402b8f</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestIntegersMinMax.testIntegersMinMax()'><b>testIntegersMinMax</b><br>Test class: io.kaitai.struct.spec.TestIntegersMinMax</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestIntegersMinMax@7bd7d6d6</td></tr>
+<td>io.kaitai.struct.spec.TestIntegersMinMax@5f8e8a9d</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestIoLocalVar.testIoLocalVar()'><b>testIoLocalVar</b><br>Test class: io.kaitai.struct.spec.TestIoLocalVar</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestIoLocalVar@3f191845</td></tr>
+<td>io.kaitai.struct.spec.TestIoLocalVar@72035809</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestJsSignedRightShift.testJsSignedRightShift()'><b>testJsSignedRightShift</b><br>Test class: io.kaitai.struct.spec.TestJsSignedRightShift</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestJsSignedRightShift@2a693f59</td></tr>
+<td>io.kaitai.struct.spec.TestJsSignedRightShift@304bb45b</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestMetaTags.testMetaTags()'><b>testMetaTags</b><br>Test class: io.kaitai.struct.spec.TestMetaTags</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestMetaTags@6d60fe40</td></tr>
+<td>io.kaitai.struct.spec.TestMetaTags@73eb439a</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestMetaXref.testMetaXref()'><b>testMetaXref</b><br>Test class: io.kaitai.struct.spec.TestMetaXref</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestMetaXref@117159c0</td></tr>
+<td>io.kaitai.struct.spec.TestMetaXref@202b0582</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestMultipleUse.testMultipleUse()'><b>testMultipleUse</b><br>Test class: io.kaitai.struct.spec.TestMultipleUse</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestMultipleUse@7ce026d3</td></tr>
+<td>io.kaitai.struct.spec.TestMultipleUse@268f106e</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestNavParent.testNavParent()'><b>testNavParent</b><br>Test class: io.kaitai.struct.spec.TestNavParent</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestNavParent@53fb3dab</td></tr>
+<td>io.kaitai.struct.spec.TestNavParent@7bba5817</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestNavParent2.testNavParent2()'><b>testNavParent2</b><br>Test class: io.kaitai.struct.spec.TestNavParent2</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestNavParent2@4a8355dd</td></tr>
+<td>io.kaitai.struct.spec.TestNavParent2@72bc6553</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestNavParent3.testNavParent3()'><b>testNavParent3</b><br>Test class: io.kaitai.struct.spec.TestNavParent3</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestNavParent3@710c2b53</td></tr>
+<td>io.kaitai.struct.spec.TestNavParent3@1caa0244</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestNavParentFalse.testNavParentFalse()'><b>testNavParentFalse</b><br>Test class: io.kaitai.struct.spec.TestNavParentFalse</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestNavParentFalse@17f9d882</td></tr>
+<td>io.kaitai.struct.spec.TestNavParentFalse@15043a2f</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestNavParentFalse2.testNavParentFalse2()'><b>testNavParentFalse2</b><br>Test class: io.kaitai.struct.spec.TestNavParentFalse2</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestNavParentFalse2@61c4eee0</td></tr>
+<td>io.kaitai.struct.spec.TestNavParentFalse2@433defed</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestNavParentOverride.testNavParentOverride()'><b>testNavParentOverride</b><br>Test class: io.kaitai.struct.spec.TestNavParentOverride</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestNavParentOverride@548a24a</td></tr>
+<td>io.kaitai.struct.spec.TestNavParentOverride@7fd50002</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestNavParentSwitch.testNavParentSwitch()'><b>testNavParentSwitch</b><br>Test class: io.kaitai.struct.spec.TestNavParentSwitch</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestNavParentSwitch@7a5ceedd</td></tr>
+<td>io.kaitai.struct.spec.TestNavParentSwitch@2ab4bc72</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestNavParentSwitchCast.testNavParentSwitchCast()'><b>testNavParentSwitchCast</b><br>Test class: io.kaitai.struct.spec.TestNavParentSwitchCast</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestNavParentSwitchCast@58cbafc2</td></tr>
+<td>io.kaitai.struct.spec.TestNavParentSwitchCast@7161d8d1</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestNavParentVsValueInst.testNavParentVsValueInst()'><b>testNavParentVsValueInst</b><br>Test class: io.kaitai.struct.spec.TestNavParentVsValueInst</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestNavParentVsValueInst@1349883</td></tr>
+<td>io.kaitai.struct.spec.TestNavParentVsValueInst@d737b89</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestNavRoot.testNavRoot()'><b>testNavRoot</b><br>Test class: io.kaitai.struct.spec.TestNavRoot</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestNavRoot@2ab4bc72</td></tr>
+<td>io.kaitai.struct.spec.TestNavRoot@239a307b</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestNestedSameName.testNestedSameName()'><b>testNestedSameName</b><br>Test class: io.kaitai.struct.spec.TestNestedSameName</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestNestedSameName@7fd50002</td></tr>
+<td>io.kaitai.struct.spec.TestNestedSameName@28dcca0c</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestNestedSameName2.testNestedSameName2()'><b>testNestedSameName2</b><br>Test class: io.kaitai.struct.spec.TestNestedSameName2</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestNestedSameName2@8519cb4</td></tr>
+<td>io.kaitai.struct.spec.TestNestedSameName2@3f191845</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestNestedTypeParam.testNestedTypeParam()'><b>testNestedTypeParam</b><br>Test class: io.kaitai.struct.spec.TestNestedTypeParam</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestNestedTypeParam@312aa7c</td></tr>
+<td>io.kaitai.struct.spec.TestNestedTypeParam@5a59ca5e</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestNestedTypes.testNestedTypes()'><b>testNestedTypes</b><br>Test class: io.kaitai.struct.spec.TestNestedTypes</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestNestedTypes@3a7442c7</td></tr>
+<td>io.kaitai.struct.spec.TestNestedTypes@53fb3dab</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestNestedTypes2.testNestedTypes2()'><b>testNestedTypes2</b><br>Test class: io.kaitai.struct.spec.TestNestedTypes2</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestNestedTypes2@7ce69770</td></tr>
+<td>io.kaitai.struct.spec.TestNestedTypes2@6e9a5ed8</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestNestedTypes3.testNestedTypes3()'><b>testNestedTypes3</b><br>Test class: io.kaitai.struct.spec.TestNestedTypes3</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestNestedTypes3@413d1baf</td></tr>
+<td>io.kaitai.struct.spec.TestNestedTypes3@1a75e76a</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestNonStandard.testNonStandard()'><b>testNonStandard</b><br>Test class: io.kaitai.struct.spec.TestNonStandard</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestNonStandard@5f049ea1</td></tr>
+<td>io.kaitai.struct.spec.TestNonStandard@909217e</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestOpaqueExternalType.testOpaqueExternalType()'><b>testOpaqueExternalType</b><br>Test class: io.kaitai.struct.spec.TestOpaqueExternalType</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestOpaqueExternalType@43df23d3</td></tr>
+<td>io.kaitai.struct.spec.TestOpaqueExternalType@19932c16</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestOpaqueExternalType02Parent.testOpaqueExternalType02Parent()'><b>testOpaqueExternalType02Parent</b><br>Test class: io.kaitai.struct.spec.TestOpaqueExternalType02Parent</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestOpaqueExternalType02Parent@268f106e</td></tr>
+<td>io.kaitai.struct.spec.TestOpaqueExternalType02Parent@5890e879</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestOpaqueWithParam.testOpaqueWithParam()'><b>testOpaqueWithParam</b><br>Test class: io.kaitai.struct.spec.TestOpaqueWithParam</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestOpaqueWithParam@16eb3ea3</td></tr>
+<td>io.kaitai.struct.spec.TestOpaqueWithParam@5524cca1</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestOptionalId.testOptionalId()'><b>testOptionalId</b><br>Test class: io.kaitai.struct.spec.TestOptionalId</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestOptionalId@c430e6c</td></tr>
+<td>io.kaitai.struct.spec.TestOptionalId@70cf32e3</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestParamsCallExtraParens.testParamsCallExtraParens()'><b>testParamsCallExtraParens</b><br>Test class: io.kaitai.struct.spec.TestParamsCallExtraParens</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestParamsCallExtraParens@17fc391b</td></tr>
+<td>io.kaitai.struct.spec.TestParamsCallExtraParens@43df23d3</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestParamsCallShort.testParamsCallShort()'><b>testParamsCallShort</b><br>Test class: io.kaitai.struct.spec.TestParamsCallShort</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestParamsCallShort@eadd4fb</td></tr>
+<td>io.kaitai.struct.spec.TestParamsCallShort@6f204a1a</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestParamsDef.testParamsDef()'><b>testParamsDef</b><br>Test class: io.kaitai.struct.spec.TestParamsDef</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestParamsDef@72bc6553</td></tr>
+<td>io.kaitai.struct.spec.TestParamsDef@6c4906d3</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestParamsEnum.testParamsEnum()'><b>testParamsEnum</b><br>Test class: io.kaitai.struct.spec.TestParamsEnum</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestParamsEnum@451001e5</td></tr>
+<td>io.kaitai.struct.spec.TestParamsEnum@8462f31</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestParamsPassArrayInt.testParamsPassArrayInt()'><b>testParamsPassArrayInt</b><br>Test class: io.kaitai.struct.spec.TestParamsPassArrayInt</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestParamsPassArrayInt@43f02ef2</td></tr>
+<td>io.kaitai.struct.spec.TestParamsPassArrayInt@5745ca0e</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestParamsPassArrayStr.testParamsPassArrayStr()'><b>testParamsPassArrayStr</b><br>Test class: io.kaitai.struct.spec.TestParamsPassArrayStr</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestParamsPassArrayStr@302c971f</td></tr>
+<td>io.kaitai.struct.spec.TestParamsPassArrayStr@61c4eee0</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestParamsPassArrayStruct.testParamsPassArrayStruct()'><b>testParamsPassArrayStruct</b><br>Test class: io.kaitai.struct.spec.TestParamsPassArrayStruct</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestParamsPassArrayStruct@75437611</td></tr>
+<td>io.kaitai.struct.spec.TestParamsPassArrayStruct@79e4c792</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestParamsPassArrayUsertype.testParamsPassArrayUsertype()'><b>testParamsPassArrayUsertype</b><br>Test class: io.kaitai.struct.spec.TestParamsPassArrayUsertype</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestParamsPassArrayUsertype@4201c465</td></tr>
+<td>io.kaitai.struct.spec.TestParamsPassArrayUsertype@4e5ed836</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestParamsPassStruct.testParamsPassStruct()'><b>testParamsPassStruct</b><br>Test class: io.kaitai.struct.spec.TestParamsPassStruct</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestParamsPassStruct@5745ca0e</td></tr>
+<td>io.kaitai.struct.spec.TestParamsPassStruct@5b38c1ec</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestParamsPassUsertype.testParamsPassUsertype()'><b>testParamsPassUsertype</b><br>Test class: io.kaitai.struct.spec.TestParamsPassUsertype</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestParamsPassUsertype@19e4653c</td></tr>
+<td>io.kaitai.struct.spec.TestParamsPassUsertype@6bbe85a8</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestPositionAbs.testPositionAbs()'><b>testPositionAbs</b><br>Test class: io.kaitai.struct.spec.TestPositionAbs</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestPositionAbs@433defed</td></tr>
+<td>io.kaitai.struct.spec.TestPositionAbs@533bda92</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestPositionInSeq.testPositionInSeq()'><b>testPositionInSeq</b><br>Test class: io.kaitai.struct.spec.TestPositionInSeq</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestPositionInSeq@6cb107fd</td></tr>
+<td>io.kaitai.struct.spec.TestPositionInSeq@740fb309</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestPositionToEnd.testPositionToEnd()'><b>testPositionToEnd</b><br>Test class: io.kaitai.struct.spec.TestPositionToEnd</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestPositionToEnd@5b799640</td></tr>
+<td>io.kaitai.struct.spec.TestPositionToEnd@eadd4fb</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestProcessCoerceBytes.testProcessCoerceBytes()'><b>testProcessCoerceBytes</b><br>Test class: io.kaitai.struct.spec.TestProcessCoerceBytes</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestProcessCoerceBytes@54422e18</td></tr>
+<td>io.kaitai.struct.spec.TestProcessCoerceBytes@3b0fe47a</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestProcessCoerceSwitch.testProcessCoerceSwitch()'><b>testProcessCoerceSwitch</b><br>Test class: io.kaitai.struct.spec.TestProcessCoerceSwitch</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestProcessCoerceSwitch@2cb4893b</td></tr>
+<td>io.kaitai.struct.spec.TestProcessCoerceSwitch@6caf0677</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestProcessCoerceUsertype1.testProcessCoerceUsertype1()'><b>testProcessCoerceUsertype1</b><br>Test class: io.kaitai.struct.spec.TestProcessCoerceUsertype1</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestProcessCoerceUsertype1@17bffc17</td></tr>
+<td>io.kaitai.struct.spec.TestProcessCoerceUsertype1@48e1f6c7</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestProcessCoerceUsertype2.testProcessCoerceUsertype2()'><b>testProcessCoerceUsertype2</b><br>Test class: io.kaitai.struct.spec.TestProcessCoerceUsertype2</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestProcessCoerceUsertype2@5c80cf32</td></tr>
+<td>io.kaitai.struct.spec.TestProcessCoerceUsertype2@673fdbce</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestProcessCustom.testProcessCustom()'><b>testProcessCustom</b><br>Test class: io.kaitai.struct.spec.TestProcessCustom</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestProcessCustom@7ef82753</td></tr>
+<td>io.kaitai.struct.spec.TestProcessCustom@1ca3b418</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestProcessCustomNoArgs.testProcessCustomNoArgs()'><b>testProcessCustomNoArgs</b><br>Test class: io.kaitai.struct.spec.TestProcessCustomNoArgs</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestProcessCustomNoArgs@3e27ba32</td></tr>
+<td>io.kaitai.struct.spec.TestProcessCustomNoArgs@235ecd9f</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestProcessRepeatBytes.testProcessRepeatBytes()'><b>testProcessRepeatBytes</b><br>Test class: io.kaitai.struct.spec.TestProcessRepeatBytes</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestProcessRepeatBytes@359df09a</td></tr>
+<td>io.kaitai.struct.spec.TestProcessRepeatBytes@23e84203</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestProcessRepeatUsertype.testProcessRepeatUsertype()'><b>testProcessRepeatUsertype</b><br>Test class: io.kaitai.struct.spec.TestProcessRepeatUsertype</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestProcessRepeatUsertype@74e28667</td></tr>
+<td>io.kaitai.struct.spec.TestProcessRepeatUsertype@795509d9</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestProcessRotate.testProcessRotate()'><b>testProcessRotate</b><br>Test class: io.kaitai.struct.spec.TestProcessRotate</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestProcessRotate@303cf2ba</td></tr>
+<td>io.kaitai.struct.spec.TestProcessRotate@17fc391b</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestProcessToUser.testProcessToUser()'><b>testProcessToUser</b><br>Test class: io.kaitai.struct.spec.TestProcessToUser</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestProcessToUser@6fa51cd4</td></tr>
+<td>io.kaitai.struct.spec.TestProcessToUser@14028087</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestProcessXor4Const.testProcessXor4Const()'><b>testProcessXor4Const</b><br>Test class: io.kaitai.struct.spec.TestProcessXor4Const</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestProcessXor4Const@74d1dc36</td></tr>
+<td>io.kaitai.struct.spec.TestProcessXor4Const@663c9e7a</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestProcessXor4Value.testProcessXor4Value()'><b>testProcessXor4Value</b><br>Test class: io.kaitai.struct.spec.TestProcessXor4Value</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestProcessXor4Value@59402b8f</td></tr>
+<td>io.kaitai.struct.spec.TestProcessXor4Value@247310d0</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestProcessXorConst.testProcessXorConst()'><b>testProcessXorConst</b><br>Test class: io.kaitai.struct.spec.TestProcessXorConst</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestProcessXorConst@7188af83</td></tr>
+<td>io.kaitai.struct.spec.TestProcessXorConst@1033576a</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestProcessXorValue.testProcessXorValue()'><b>testProcessXorValue</b><br>Test class: io.kaitai.struct.spec.TestProcessXorValue</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestProcessXorValue@4c163e3</td></tr>
+<td>io.kaitai.struct.spec.TestProcessXorValue@536f2a7e</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestRecursiveOne.testRecursiveOne()'><b>testRecursiveOne</b><br>Test class: io.kaitai.struct.spec.TestRecursiveOne</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestRecursiveOne@6f10d5b6</td></tr>
+<td>io.kaitai.struct.spec.TestRecursiveOne@2a693f59</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestRepeatEosBit.testRepeatEosBit()'><b>testRepeatEosBit</b><br>Test class: io.kaitai.struct.spec.TestRepeatEosBit</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestRepeatEosBit@19932c16</td></tr>
+<td>io.kaitai.struct.spec.TestRepeatEosBit@302c971f</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestRepeatEosStruct.testRepeatEosStruct()'><b>testRepeatEosStruct</b><br>Test class: io.kaitai.struct.spec.TestRepeatEosStruct</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestRepeatEosStruct@72035809</td></tr>
+<td>io.kaitai.struct.spec.TestRepeatEosStruct@8458f04</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestRepeatEosU4.testRepeatEosU4()'><b>testRepeatEosU4</b><br>Test class: io.kaitai.struct.spec.TestRepeatEosU4</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestRepeatEosU4@6e9a5ed8</td></tr>
+<td>io.kaitai.struct.spec.TestRepeatEosU4@6440112d</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestRepeatNStruct.testRepeatNStruct()'><b>testRepeatNStruct</b><br>Test class: io.kaitai.struct.spec.TestRepeatNStruct</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestRepeatNStruct@202b0582</td></tr>
+<td>io.kaitai.struct.spec.TestRepeatNStruct@2034b64c</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestRepeatNStrz.testRepeatNStrz()'><b>testRepeatNStrz</b><br>Test class: io.kaitai.struct.spec.TestRepeatNStrz</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestRepeatNStrz@53045c6c</td></tr>
+<td>io.kaitai.struct.spec.TestRepeatNStrz@4be29ed9</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestRepeatNStrzDouble.testRepeatNStrzDouble()'><b>testRepeatNStrzDouble</b><br>Test class: io.kaitai.struct.spec.TestRepeatNStrzDouble</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestRepeatNStrzDouble@cecf639</td></tr>
+<td>io.kaitai.struct.spec.TestRepeatNStrzDouble@1750fbeb</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestRepeatUntilCalcArrayType.testRepeatUntilCalcArrayType()'><b>testRepeatUntilCalcArrayType</b><br>Test class: io.kaitai.struct.spec.TestRepeatUntilCalcArrayType</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestRepeatUntilCalcArrayType@33bc72d1</td></tr>
+<td>io.kaitai.struct.spec.TestRepeatUntilCalcArrayType@48bb62</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestRepeatUntilComplex.testRepeatUntilComplex()'><b>testRepeatUntilComplex</b><br>Test class: io.kaitai.struct.spec.TestRepeatUntilComplex</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestRepeatUntilComplex@663c9e7a</td></tr>
+<td>io.kaitai.struct.spec.TestRepeatUntilComplex@5149d738</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestRepeatUntilS4.testRepeatUntilS4()'><b>testRepeatUntilS4</b><br>Test class: io.kaitai.struct.spec.TestRepeatUntilS4</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestRepeatUntilS4@15a34df2</td></tr>
+<td>io.kaitai.struct.spec.TestRepeatUntilS4@1807e3f6</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestRepeatUntilSized.testRepeatUntilSized()'><b>testRepeatUntilSized</b><br>Test class: io.kaitai.struct.spec.TestRepeatUntilSized</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestRepeatUntilSized@cb0755b</td></tr>
+<td>io.kaitai.struct.spec.TestRepeatUntilSized@742ff096</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestStrEncodings.testStrEncodings()'><b>testStrEncodings</b><br>Test class: io.kaitai.struct.spec.TestStrEncodings</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestStrEncodings@795509d9</td></tr>
+<td>io.kaitai.struct.spec.TestStrEncodings@3a7442c7</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestStrEncodingsDefault.testStrEncodingsDefault()'><b>testStrEncodingsDefault</b><br>Test class: io.kaitai.struct.spec.TestStrEncodingsDefault</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestStrEncodingsDefault@536f2a7e</td></tr>
+<td>io.kaitai.struct.spec.TestStrEncodingsDefault@4bdeaabb</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestStrEos.testStrEos()'><b>testStrEos</b><br>Test class: io.kaitai.struct.spec.TestStrEos</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestStrEos@4b29d1d2</td></tr>
+<td>io.kaitai.struct.spec.TestStrEos@8519cb4</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestStrLiterals.testStrLiterals()'><b>testStrLiterals</b><br>Test class: io.kaitai.struct.spec.TestStrLiterals</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestStrLiterals@4c60d6e9</td></tr>
+<td>io.kaitai.struct.spec.TestStrLiterals@4b29d1d2</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestStrLiterals2.testStrLiterals2()'><b>testStrLiterals2</b><br>Test class: io.kaitai.struct.spec.TestStrLiterals2</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestStrLiterals2@7d9d0818</td></tr>
+<td>io.kaitai.struct.spec.TestStrLiterals2@3e08ff24</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestStrPadTerm.testStrPadTerm()'><b>testStrPadTerm</b><br>Test class: io.kaitai.struct.spec.TestStrPadTerm</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestStrPadTerm@247310d0</td></tr>
+<td>io.kaitai.struct.spec.TestStrPadTerm@4a003cbe</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestStrPadTermEmpty.testStrPadTermEmpty()'><b>testStrPadTermEmpty</b><br>Test class: io.kaitai.struct.spec.TestStrPadTermEmpty</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestStrPadTermEmpty@4a003cbe</td></tr>
+<td>io.kaitai.struct.spec.TestStrPadTermEmpty@609e8838</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestSwitchBytearray.testSwitchBytearray()'><b>testSwitchBytearray</b><br>Test class: io.kaitai.struct.spec.TestSwitchBytearray</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestSwitchBytearray@7a35b0f5</td></tr>
+<td>io.kaitai.struct.spec.TestSwitchBytearray@5b218417</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestSwitchCast.testSwitchCast()'><b>testSwitchCast</b><br>Test class: io.kaitai.struct.spec.TestSwitchCast</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestSwitchCast@183ec003</td></tr>
+<td>io.kaitai.struct.spec.TestSwitchCast@2b40ff9c</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestSwitchElseOnly.testSwitchElseOnly()'><b>testSwitchElseOnly</b><br>Test class: io.kaitai.struct.spec.TestSwitchElseOnly</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestSwitchElseOnly@4a83a74a</td></tr>
+<td>io.kaitai.struct.spec.TestSwitchElseOnly@28261e8e</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestSwitchIntegers.testSwitchIntegers()'><b>testSwitchIntegers</b><br>Test class: io.kaitai.struct.spec.TestSwitchIntegers</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestSwitchIntegers@5524cca1</td></tr>
+<td>io.kaitai.struct.spec.TestSwitchIntegers@4681c175</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestSwitchIntegers2.testSwitchIntegers2()'><b>testSwitchIntegers2</b><br>Test class: io.kaitai.struct.spec.TestSwitchIntegers2</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestSwitchIntegers2@7ae0a9ec</td></tr>
+<td>io.kaitai.struct.spec.TestSwitchIntegers2@1040be71</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestSwitchManualEnum.testSwitchManualEnum()'><b>testSwitchManualEnum</b><br>Test class: io.kaitai.struct.spec.TestSwitchManualEnum</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestSwitchManualEnum@35dab4eb</td></tr>
+<td>io.kaitai.struct.spec.TestSwitchManualEnum@5f049ea1</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestSwitchManualEnumInvalid.testSwitchManualEnumInvalid()'><b>testSwitchManualEnumInvalid</b><br>Test class: io.kaitai.struct.spec.TestSwitchManualEnumInvalid</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestSwitchManualEnumInvalid@45d84a20</td></tr>
+<td>io.kaitai.struct.spec.TestSwitchManualEnumInvalid@c430e6c</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestSwitchManualEnumInvalidElse.testSwitchManualEnumInvalidElse()'><b>testSwitchManualEnumInvalidElse</b><br>Test class: io.kaitai.struct.spec.TestSwitchManualEnumInvalidElse</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestSwitchManualEnumInvalidElse@196a42c3</td></tr>
+<td>io.kaitai.struct.spec.TestSwitchManualEnumInvalidElse@1349883</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestSwitchManualInt.testSwitchManualInt()'><b>testSwitchManualInt</b><br>Test class: io.kaitai.struct.spec.TestSwitchManualInt</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestSwitchManualInt@4b013c76</td></tr>
+<td>io.kaitai.struct.spec.TestSwitchManualInt@712625fd</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestSwitchManualIntElse.testSwitchManualIntElse()'><b>testSwitchManualIntElse</b><br>Test class: io.kaitai.struct.spec.TestSwitchManualIntElse</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestSwitchManualIntElse@4007f65e</td></tr>
+<td>io.kaitai.struct.spec.TestSwitchManualIntElse@5b799640</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestSwitchManualIntSize.testSwitchManualIntSize()'><b>testSwitchManualIntSize</b><br>Test class: io.kaitai.struct.spec.TestSwitchManualIntSize</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestSwitchManualIntSize@6b695b06</td></tr>
+<td>io.kaitai.struct.spec.TestSwitchManualIntSize@6f01b95f</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestSwitchManualIntSizeElse.testSwitchManualIntSizeElse()'><b>testSwitchManualIntSizeElse</b><br>Test class: io.kaitai.struct.spec.TestSwitchManualIntSizeElse</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestSwitchManualIntSizeElse@2b40ff9c</td></tr>
+<td>io.kaitai.struct.spec.TestSwitchManualIntSizeElse@24569dba</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestSwitchManualIntSizeEos.testSwitchManualIntSizeEos()'><b>testSwitchManualIntSizeEos</b><br>Test class: io.kaitai.struct.spec.TestSwitchManualIntSizeEos</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestSwitchManualIntSizeEos@6f204a1a</td></tr>
+<td>io.kaitai.struct.spec.TestSwitchManualIntSizeEos@17bffc17</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestSwitchManualStr.testSwitchManualStr()'><b>testSwitchManualStr</b><br>Test class: io.kaitai.struct.spec.TestSwitchManualStr</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestSwitchManualStr@14028087</td></tr>
+<td>io.kaitai.struct.spec.TestSwitchManualStr@7ce69770</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestSwitchManualStrElse.testSwitchManualStrElse()'><b>testSwitchManualStrElse</b><br>Test class: io.kaitai.struct.spec.TestSwitchManualStrElse</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestSwitchManualStrElse@3ba987b8</td></tr>
+<td>io.kaitai.struct.spec.TestSwitchManualStrElse@5afa3c9</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestSwitchMultiBoolOps.testSwitchMultiBoolOps()'><b>testSwitchMultiBoolOps</b><br>Test class: io.kaitai.struct.spec.TestSwitchMultiBoolOps</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestSwitchMultiBoolOps@8462f31</td></tr>
+<td>io.kaitai.struct.spec.TestSwitchMultiBoolOps@496bc455</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestSwitchRepeatExpr.testSwitchRepeatExpr()'><b>testSwitchRepeatExpr</b><br>Test class: io.kaitai.struct.spec.TestSwitchRepeatExpr</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestSwitchRepeatExpr@5afa3c9</td></tr>
+<td>io.kaitai.struct.spec.TestSwitchRepeatExpr@606e4010</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestTermBytes.testTermBytes()'><b>testTermBytes</b><br>Test class: io.kaitai.struct.spec.TestTermBytes</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestTermBytes@5965d37</td></tr>
+<td>io.kaitai.struct.spec.TestTermBytes@3de8f619</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestTermStrz.testTermStrz()'><b>testTermStrz</b><br>Test class: io.kaitai.struct.spec.TestTermStrz</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestTermStrz@4f32a3ad</td></tr>
+<td>io.kaitai.struct.spec.TestTermStrz@7d900ecf</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestTsPacketHeader.testTsPacketHeader()'><b>testTsPacketHeader</b><br>Test class: io.kaitai.struct.spec.TestTsPacketHeader</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestTsPacketHeader@5ddeb7cb</td></tr>
+<td>io.kaitai.struct.spec.TestTsPacketHeader@7188af83</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestTypeIntUnaryOp.testTypeIntUnaryOp()'><b>testTypeIntUnaryOp</b><br>Test class: io.kaitai.struct.spec.TestTypeIntUnaryOp</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestTypeIntUnaryOp@1033576a</td></tr>
+<td>io.kaitai.struct.spec.TestTypeIntUnaryOp@4082ba93</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestTypeTernary.testTypeTernary()'><b>testTypeTernary</b><br>Test class: io.kaitai.struct.spec.TestTypeTernary</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestTypeTernary@cc43f62</td></tr>
+<td>io.kaitai.struct.spec.TestTypeTernary@413d1baf</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestTypeTernary2ndFalsy.testTypeTernary2ndFalsy()'><b>testTypeTernary2ndFalsy</b><br>Test class: io.kaitai.struct.spec.TestTypeTernary2ndFalsy</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestTypeTernary2ndFalsy@3f4faf53</td></tr>
+<td>io.kaitai.struct.spec.TestTypeTernary2ndFalsy@723ca036</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestTypeTernaryOpaque.testTypeTernaryOpaque()'><b>testTypeTernaryOpaque</b><br>Test class: io.kaitai.struct.spec.TestTypeTernaryOpaque</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestTypeTernaryOpaque@6caf0677</td></tr>
+<td>io.kaitai.struct.spec.TestTypeTernaryOpaque@33bc72d1</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestUserType.testUserType()'><b>testUserType</b><br>Test class: io.kaitai.struct.spec.TestUserType</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestUserType@1cf6d1be</td></tr>
+<td>io.kaitai.struct.spec.TestUserType@53045c6c</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestValidFailAnyofInt.testValidFailAnyofInt()'><b>testValidFailAnyofInt</b><br>Test class: io.kaitai.struct.spec.TestValidFailAnyofInt</td>
 <td><div><pre>io.kaitai.struct.KaitaiStream$ValidationNotAnyOfError: /seq/0: at pos 1: validation failed: not any of the list, got 80
@@ -1242,8 +1332,8 @@ function toggleAllBoxes() {
 	at io.kaitai.struct.testformats.ValidFailAnyofInt.&lt;init&gt;(ValidFailAnyofInt.java:16)
 	at io.kaitai.struct.testformats.ValidFailAnyofInt.fromFile(ValidFailAnyofInt.java:12)
 	at io.kaitai.struct.spec.TestValidFailAnyofInt.testValidFailAnyofInt(TestValidFailAnyofInt.java:13)
-... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1545827753", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1545827753'><pre>io.kaitai.struct.KaitaiStream$ValidationNotAnyOfError: /seq/0: at pos 1: validation failed: not any of the list, got 80
+... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1733581655", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1733581655'><pre>io.kaitai.struct.KaitaiStream$ValidationNotAnyOfError: /seq/0: at pos 1: validation failed: not any of the list, got 80
 	at io.kaitai.struct.testformats.ValidFailAnyofInt._read(ValidFailAnyofInt.java:32)
 	at io.kaitai.struct.testformats.ValidFailAnyofInt.&lt;init&gt;(ValidFailAnyofInt.java:27)
 	at io.kaitai.struct.testformats.ValidFailAnyofInt.&lt;init&gt;(ValidFailAnyofInt.java:16)
@@ -1274,7 +1364,7 @@ function toggleAllBoxes() {
 	at org.testng.TestNG.main(TestNG.java:1354)
 </pre></div></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestValidFailAnyofInt@48bb62</td></tr>
+<td>io.kaitai.struct.spec.TestValidFailAnyofInt@402c4085</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestValidFailContents.testValidFailContents()'><b>testValidFailContents</b><br>Test class: io.kaitai.struct.spec.TestValidFailContents</td>
 <td><div><pre>io.kaitai.struct.KaitaiStream$ValidationNotEqualError: /seq/0: at pos 2: validation failed: not equal, expected [51 41], but got [50 41]
@@ -1283,8 +1373,8 @@ function toggleAllBoxes() {
 	at io.kaitai.struct.testformats.ValidFailContents.&lt;init&gt;(ValidFailContents.java:17)
 	at io.kaitai.struct.testformats.ValidFailContents.fromFile(ValidFailContents.java:13)
 	at io.kaitai.struct.spec.TestValidFailContents.testValidFailContents(TestValidFailContents.java:13)
-... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace652176954", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace652176954'><pre>io.kaitai.struct.KaitaiStream$ValidationNotEqualError: /seq/0: at pos 2: validation failed: not equal, expected [51 41], but got [50 41]
+... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace127702987", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace127702987'><pre>io.kaitai.struct.KaitaiStream$ValidationNotEqualError: /seq/0: at pos 2: validation failed: not equal, expected [51 41], but got [50 41]
 	at io.kaitai.struct.testformats.ValidFailContents._read(ValidFailContents.java:33)
 	at io.kaitai.struct.testformats.ValidFailContents.&lt;init&gt;(ValidFailContents.java:28)
 	at io.kaitai.struct.testformats.ValidFailContents.&lt;init&gt;(ValidFailContents.java:17)
@@ -1315,7 +1405,7 @@ function toggleAllBoxes() {
 	at org.testng.TestNG.main(TestNG.java:1354)
 </pre></div></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestValidFailContents@3e08ff24</td></tr>
+<td>io.kaitai.struct.spec.TestValidFailContents@5ddeb7cb</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestValidFailEqBytes.testValidFailEqBytes()'><b>testValidFailEqBytes</b><br>Test class: io.kaitai.struct.spec.TestValidFailEqBytes</td>
 <td><div><pre>io.kaitai.struct.KaitaiStream$ValidationNotEqualError: /seq/0: at pos 2: validation failed: not equal, expected [51 41], but got [50 41]
@@ -1324,8 +1414,8 @@ function toggleAllBoxes() {
 	at io.kaitai.struct.testformats.ValidFailEqBytes.&lt;init&gt;(ValidFailEqBytes.java:17)
 	at io.kaitai.struct.testformats.ValidFailEqBytes.fromFile(ValidFailEqBytes.java:13)
 	at io.kaitai.struct.spec.TestValidFailEqBytes.testValidFailEqBytes(TestValidFailEqBytes.java:13)
-... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace616207929", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace616207929'><pre>io.kaitai.struct.KaitaiStream$ValidationNotEqualError: /seq/0: at pos 2: validation failed: not equal, expected [51 41], but got [50 41]
+... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace701119748", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace701119748'><pre>io.kaitai.struct.KaitaiStream$ValidationNotEqualError: /seq/0: at pos 2: validation failed: not equal, expected [51 41], but got [50 41]
 	at io.kaitai.struct.testformats.ValidFailEqBytes._read(ValidFailEqBytes.java:33)
 	at io.kaitai.struct.testformats.ValidFailEqBytes.&lt;init&gt;(ValidFailEqBytes.java:28)
 	at io.kaitai.struct.testformats.ValidFailEqBytes.&lt;init&gt;(ValidFailEqBytes.java:17)
@@ -1356,7 +1446,7 @@ function toggleAllBoxes() {
 	at org.testng.TestNG.main(TestNG.java:1354)
 </pre></div></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestValidFailEqBytes@710636b0</td></tr>
+<td>io.kaitai.struct.spec.TestValidFailEqBytes@7bd7d6d6</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestValidFailEqInt.testValidFailEqInt()'><b>testValidFailEqInt</b><br>Test class: io.kaitai.struct.spec.TestValidFailEqInt</td>
 <td><div><pre>io.kaitai.struct.KaitaiStream$ValidationNotEqualError: /seq/0: at pos 1: validation failed: not equal, expected 123, but got 80
@@ -1365,8 +1455,8 @@ function toggleAllBoxes() {
 	at io.kaitai.struct.testformats.ValidFailEqInt.&lt;init&gt;(ValidFailEqInt.java:16)
 	at io.kaitai.struct.testformats.ValidFailEqInt.fromFile(ValidFailEqInt.java:12)
 	at io.kaitai.struct.spec.TestValidFailEqInt.testValidFailEqInt(TestValidFailEqInt.java:13)
-... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1356732524", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1356732524'><pre>io.kaitai.struct.KaitaiStream$ValidationNotEqualError: /seq/0: at pos 1: validation failed: not equal, expected 123, but got 80
+... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace916835004", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace916835004'><pre>io.kaitai.struct.KaitaiStream$ValidationNotEqualError: /seq/0: at pos 1: validation failed: not equal, expected 123, but got 80
 	at io.kaitai.struct.testformats.ValidFailEqInt._read(ValidFailEqInt.java:32)
 	at io.kaitai.struct.testformats.ValidFailEqInt.&lt;init&gt;(ValidFailEqInt.java:27)
 	at io.kaitai.struct.testformats.ValidFailEqInt.&lt;init&gt;(ValidFailEqInt.java:16)
@@ -1397,7 +1487,7 @@ function toggleAllBoxes() {
 	at org.testng.TestNG.main(TestNG.java:1354)
 </pre></div></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestValidFailEqInt@35841320</td></tr>
+<td>io.kaitai.struct.spec.TestValidFailEqInt@548a24a</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestValidFailExpr.testValidFailExpr()'><b>testValidFailExpr</b><br>Test class: io.kaitai.struct.spec.TestValidFailExpr</td>
 <td><div><pre>io.kaitai.struct.KaitaiStream$ValidationExprError: /seq/1: at pos 3: validation failed: not matching the expression, got -190
@@ -1406,8 +1496,8 @@ function toggleAllBoxes() {
 	at io.kaitai.struct.testformats.ValidFailExpr.&lt;init&gt;(ValidFailExpr.java:16)
 	at io.kaitai.struct.testformats.ValidFailExpr.fromFile(ValidFailExpr.java:12)
 	at io.kaitai.struct.spec.TestValidFailExpr.testValidFailExpr(TestValidFailExpr.java:13)
-... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace808417649", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace808417649'><pre>io.kaitai.struct.KaitaiStream$ValidationExprError: /seq/1: at pos 3: validation failed: not matching the expression, got -190
+... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1616359099", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1616359099'><pre>io.kaitai.struct.KaitaiStream$ValidationExprError: /seq/1: at pos 3: validation failed: not matching the expression, got -190
 	at io.kaitai.struct.testformats.ValidFailExpr._read(ValidFailExpr.java:41)
 	at io.kaitai.struct.testformats.ValidFailExpr.&lt;init&gt;(ValidFailExpr.java:27)
 	at io.kaitai.struct.testformats.ValidFailExpr.&lt;init&gt;(ValidFailExpr.java:16)
@@ -1438,7 +1528,7 @@ function toggleAllBoxes() {
 	at org.testng.TestNG.main(TestNG.java:1354)
 </pre></div></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestValidFailExpr@15043a2f</td></tr>
+<td>io.kaitai.struct.spec.TestValidFailExpr@7f485fda</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestValidFailInst.testValidFailInst()'><b>testValidFailInst</b><br>Test class: io.kaitai.struct.spec.TestValidFailInst</td>
 <td><div><pre>io.kaitai.struct.KaitaiStream$ValidationNotEqualError: /instances/inst: at pos 0: validation failed: not equal, expected 80, but got 49
@@ -1448,8 +1538,8 @@ function toggleAllBoxes() {
 	at io.kaitai.struct.testformats.ValidFailInst.&lt;init&gt;(ValidFailInst.java:16)
 	at io.kaitai.struct.testformats.ValidFailInst.fromFile(ValidFailInst.java:12)
 	at io.kaitai.struct.spec.TestValidFailInst.testValidFailInst(TestValidFailInst.java:13)
-... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace502838712", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace502838712'><pre>io.kaitai.struct.KaitaiStream$ValidationNotEqualError: /instances/inst: at pos 0: validation failed: not equal, expected 80, but got 49
+... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2133344792", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2133344792'><pre>io.kaitai.struct.KaitaiStream$ValidationNotEqualError: /instances/inst: at pos 0: validation failed: not equal, expected 80, but got 49
 	at io.kaitai.struct.testformats.ValidFailInst.inst(ValidFailInst.java:43)
 	at io.kaitai.struct.testformats.ValidFailInst._read(ValidFailInst.java:30)
 	at io.kaitai.struct.testformats.ValidFailInst.&lt;init&gt;(ValidFailInst.java:27)
@@ -1481,7 +1571,7 @@ function toggleAllBoxes() {
 	at org.testng.TestNG.main(TestNG.java:1354)
 </pre></div></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestValidFailInst@31ea9581</td></tr>
+<td>io.kaitai.struct.spec.TestValidFailInst@7d9d0818</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestValidFailMaxInt.testValidFailMaxInt()'><b>testValidFailMaxInt</b><br>Test class: io.kaitai.struct.spec.TestValidFailMaxInt</td>
 <td><div><pre>io.kaitai.struct.KaitaiStream$ValidationGreaterThanError: /seq/0: at pos 1: validation failed: not in range, max 12, but got 80
@@ -1490,8 +1580,8 @@ function toggleAllBoxes() {
 	at io.kaitai.struct.testformats.ValidFailMaxInt.&lt;init&gt;(ValidFailMaxInt.java:16)
 	at io.kaitai.struct.testformats.ValidFailMaxInt.fromFile(ValidFailMaxInt.java:12)
 	at io.kaitai.struct.spec.TestValidFailMaxInt.testValidFailMaxInt(TestValidFailMaxInt.java:13)
-... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1760670079", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1760670079'><pre>io.kaitai.struct.KaitaiStream$ValidationGreaterThanError: /seq/0: at pos 1: validation failed: not in range, max 12, but got 80
+... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace130764844", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace130764844'><pre>io.kaitai.struct.KaitaiStream$ValidationGreaterThanError: /seq/0: at pos 1: validation failed: not in range, max 12, but got 80
 	at io.kaitai.struct.testformats.ValidFailMaxInt._read(ValidFailMaxInt.java:32)
 	at io.kaitai.struct.testformats.ValidFailMaxInt.&lt;init&gt;(ValidFailMaxInt.java:27)
 	at io.kaitai.struct.testformats.ValidFailMaxInt.&lt;init&gt;(ValidFailMaxInt.java:16)
@@ -1522,7 +1612,7 @@ function toggleAllBoxes() {
 	at org.testng.TestNG.main(TestNG.java:1354)
 </pre></div></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestValidFailMaxInt@70ed52de</td></tr>
+<td>io.kaitai.struct.spec.TestValidFailMaxInt@6be968ce</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestValidFailMinInt.testValidFailMinInt()'><b>testValidFailMinInt</b><br>Test class: io.kaitai.struct.spec.TestValidFailMinInt</td>
 <td><div><pre>io.kaitai.struct.KaitaiStream$ValidationLessThanError: /seq/0: at pos 1: validation failed: not in range, min 123, but got 80
@@ -1531,8 +1621,8 @@ function toggleAllBoxes() {
 	at io.kaitai.struct.testformats.ValidFailMinInt.&lt;init&gt;(ValidFailMinInt.java:16)
 	at io.kaitai.struct.testformats.ValidFailMinInt.fromFile(ValidFailMinInt.java:12)
 	at io.kaitai.struct.spec.TestValidFailMinInt.testValidFailMinInt(TestValidFailMinInt.java:13)
-... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1016860054", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1016860054'><pre>io.kaitai.struct.KaitaiStream$ValidationLessThanError: /seq/0: at pos 1: validation failed: not in range, min 123, but got 80
+... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1859383896", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1859383896'><pre>io.kaitai.struct.KaitaiStream$ValidationLessThanError: /seq/0: at pos 1: validation failed: not in range, min 123, but got 80
 	at io.kaitai.struct.testformats.ValidFailMinInt._read(ValidFailMinInt.java:32)
 	at io.kaitai.struct.testformats.ValidFailMinInt.&lt;init&gt;(ValidFailMinInt.java:27)
 	at io.kaitai.struct.testformats.ValidFailMinInt.&lt;init&gt;(ValidFailMinInt.java:16)
@@ -1563,7 +1653,7 @@ function toggleAllBoxes() {
 	at org.testng.TestNG.main(TestNG.java:1354)
 </pre></div></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestValidFailMinInt@3cce5371</td></tr>
+<td>io.kaitai.struct.spec.TestValidFailMinInt@4722ef0c</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestValidFailRangeInt.testValidFailRangeInt()'><b>testValidFailRangeInt</b><br>Test class: io.kaitai.struct.spec.TestValidFailRangeInt</td>
 <td><div><pre>io.kaitai.struct.KaitaiStream$ValidationGreaterThanError: /seq/0: at pos 1: validation failed: not in range, max 10, but got 80
@@ -1572,8 +1662,8 @@ function toggleAllBoxes() {
 	at io.kaitai.struct.testformats.ValidFailRangeInt.&lt;init&gt;(ValidFailRangeInt.java:16)
 	at io.kaitai.struct.testformats.ValidFailRangeInt.fromFile(ValidFailRangeInt.java:12)
 	at io.kaitai.struct.spec.TestValidFailRangeInt.testValidFailRangeInt(TestValidFailRangeInt.java:13)
-... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1644236636", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1644236636'><pre>io.kaitai.struct.KaitaiStream$ValidationGreaterThanError: /seq/0: at pos 1: validation failed: not in range, max 10, but got 80
+... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2053628870", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2053628870'><pre>io.kaitai.struct.KaitaiStream$ValidationGreaterThanError: /seq/0: at pos 1: validation failed: not in range, max 10, but got 80
 	at io.kaitai.struct.testformats.ValidFailRangeInt._read(ValidFailRangeInt.java:35)
 	at io.kaitai.struct.testformats.ValidFailRangeInt.&lt;init&gt;(ValidFailRangeInt.java:27)
 	at io.kaitai.struct.testformats.ValidFailRangeInt.&lt;init&gt;(ValidFailRangeInt.java:16)
@@ -1604,42 +1694,42 @@ function toggleAllBoxes() {
 	at org.testng.TestNG.main(TestNG.java:1354)
 </pre></div></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestValidFailRangeInt@1a75e76a</td></tr>
+<td>io.kaitai.struct.spec.TestValidFailRangeInt@353352b6</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestValidLong.testValidLong()'><b>testValidLong</b><br>Test class: io.kaitai.struct.spec.TestValidLong</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestValidLong@402c4085</td></tr>
+<td>io.kaitai.struct.spec.TestValidLong@5386659f</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestValidNotParsedIf.testValidNotParsedIf()'><b>testValidNotParsedIf</b><br>Test class: io.kaitai.struct.spec.TestValidNotParsedIf</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestValidNotParsedIf@2767e23c</td></tr>
+<td>io.kaitai.struct.spec.TestValidNotParsedIf@cecf639</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestValidShort.testValidShort()'><b>testValidShort</b><br>Test class: io.kaitai.struct.spec.TestValidShort</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestValidShort@25be7b63</td></tr>
+<td>io.kaitai.struct.spec.TestValidShort@4a8355dd</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestValidSwitch.testValidSwitch()'><b>testValidSwitch</b><br>Test class: io.kaitai.struct.spec.TestValidSwitch</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestValidSwitch@1c5920df</td></tr>
+<td>io.kaitai.struct.spec.TestValidSwitch@4c60d6e9</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestYamlInts.testYamlInts()'><b>testYamlInts</b><br>Test class: io.kaitai.struct.spec.TestYamlInts</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestYamlInts@75d3a5e0</td></tr>
+<td>io.kaitai.struct.spec.TestYamlInts@1cf6d1be</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestZlibSurrounded.testZlibSurrounded()'><b>testZlibSurrounded</b><br>Test class: io.kaitai.struct.spec.TestZlibSurrounded</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestZlibSurrounded@4e5ed836</td></tr>
+<td>io.kaitai.struct.spec.TestZlibSurrounded@2a8448fa</td></tr>
 <tr>
 <td title='io.kaitai.struct.spec.TestZlibWithHeader78.testZlibWithHeader78()'><b>testZlibWithHeader78</b><br>Test class: io.kaitai.struct.spec.TestZlibWithHeader78</td>
 <td></td>
 <td>0</td>
-<td>io.kaitai.struct.spec.TestZlibWithHeader78@304bb45b</td></tr>
+<td>io.kaitai.struct.spec.TestZlibWithHeader78@52f27fbd</td></tr>
 </table><p>
 </body>
 </html>
