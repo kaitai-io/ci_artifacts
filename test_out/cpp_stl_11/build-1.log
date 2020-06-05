@@ -2,7 +2,7 @@ Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
 Copyright (C) Microsoft Corporation. All rights reserved.
 
 Building the projects in this solution one at a time. To enable parallel build, please add the "/m" switch.
-Build started 6/5/2020 9:11:24 AM.
+Build started 6/5/2020 10:04:21 PM.
 Project "C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\KS_TEST_CPP_STL.sln" on node 1 (default targets).
 ValidateSolutionConfiguration:
   Building solution configuration "Debug|x64".
@@ -606,8 +606,6 @@ C:\projects\ci-targets\tests\compiled\cpp_stl_11\params_pass_array_usertype.cpp(
   process_custom.cpp
   process_custom_no_args.cpp
   process_repeat_bytes.cpp
-C:\projects\ci-targets\tests\compiled\cpp_stl_11\process_repeat_bytes.cpp(19): error C2065: 'm__io__raw_bufs': undeclared identifier [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
-C:\projects\ci-targets\tests\compiled\cpp_stl_11\process_repeat_bytes.cpp(20): error C2065: 'm__io__raw_bufs': undeclared identifier [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
   process_repeat_usertype.cpp
   process_rotate.cpp
   process_to_user.cpp
@@ -623,12 +621,12 @@ C:\projects\ci-targets\tests\compiled\cpp_stl_11\process_repeat_bytes.cpp(20): e
   repeat_n_strz.cpp
   repeat_n_strz_double.cpp
   repeat_until_calc_array_type.cpp
-C:\projects\ci-targets\tests\compiled\cpp_stl_11\repeat_until_calc_array_type.cpp(64): error C2440: '=': cannot convert from '_Ty' to 'repeat_until_calc_array_type_t::record_t *' [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
+C:\projects\ci-targets\tests\compiled\cpp_stl_11\repeat_until_calc_array_type.cpp(63): error C2440: '=': cannot convert from '_Ty' to 'repeat_until_calc_array_type_t::record_t *' [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
           with
           [
               _Ty=std::unique_ptr<repeat_until_calc_array_type_t::record_t,std::default_delete<repeat_until_calc_array_type_t::record_t>>
           ]
-  C:\projects\ci-targets\tests\compiled\cpp_stl_11\repeat_until_calc_array_type.cpp(64): note: No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+  C:\projects\ci-targets\tests\compiled\cpp_stl_11\repeat_until_calc_array_type.cpp(63): note: No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
   repeat_until_complex.cpp
   Generating Code...
   Compiling...
@@ -814,14 +812,12 @@ Build FAILED.
   C:\projects\ci-targets\tests\compiled\cpp_stl_11\params_pass_array_struct.cpp(67): error C2440: 'initializing': cannot convert from 'initializer list' to 'std::vector<std::unique_ptr<kaitai::kstruct,std::default_delete<_Ty>>,std::allocator<std::unique_ptr<_Ty,std::default_delete<_Ty>>>>' [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
   C:\projects\ci-targets\tests\compiled\cpp_stl_11\params_pass_array_struct.cpp(67): error C2440: '=': cannot convert from 'std::unique_ptr<std::vector<std::unique_ptr<kaitai::kstruct,std::default_delete<_Ty>>,std::allocator<std::unique_ptr<_Ty,std::default_delete<_Ty>>>>,std::default_delete<std::vector<std::unique_ptr<_Ty,std::default_delete<_Ty>>,std::allocator<std::unique_ptr<_Ty,std::default_delete<_Ty>>>>>>' to 'std::vector<std::unique_ptr<kaitai::kstruct,std::default_delete<_Ty>>,std::allocator<std::unique_ptr<_Ty,std::default_delete<_Ty>>>> *' [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
   C:\projects\ci-targets\tests\compiled\cpp_stl_11\params_pass_array_usertype.cpp(21): error C2664: 'params_pass_array_usertype_t::param_type_t::param_type_t(const params_pass_array_usertype_t::param_type_t &)': cannot convert argument 1 from 'std::vector<std::unique_ptr<params_pass_array_usertype_t::block_t,std::default_delete<_Ty>>,std::allocator<std::unique_ptr<_Ty,std::default_delete<_Ty>>>> *' to 'std::vector<params_pass_array_usertype_t::block_t *,std::allocator<_Ty>> *' [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
-  C:\projects\ci-targets\tests\compiled\cpp_stl_11\process_repeat_bytes.cpp(19): error C2065: 'm__io__raw_bufs': undeclared identifier [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
-  C:\projects\ci-targets\tests\compiled\cpp_stl_11\process_repeat_bytes.cpp(20): error C2065: 'm__io__raw_bufs': undeclared identifier [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
-  C:\projects\ci-targets\tests\compiled\cpp_stl_11\repeat_until_calc_array_type.cpp(64): error C2440: '=': cannot convert from '_Ty' to 'repeat_until_calc_array_type_t::record_t *' [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
+  C:\projects\ci-targets\tests\compiled\cpp_stl_11\repeat_until_calc_array_type.cpp(63): error C2440: '=': cannot convert from '_Ty' to 'repeat_until_calc_array_type_t::record_t *' [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
   c:\projects\ci-targets\tests\compiled\cpp_stl_11\switch_else_only.h(61): error C2332: 'struct': missing tag name [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
   c:\projects\ci-targets\tests\compiled\cpp_stl_11\switch_else_only.h(61): error C2059: syntax error: 'type' [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
   c:\projects\ci-targets\tests\compiled\cpp_stl_11\switch_else_only.h(61): error C2334: unexpected token(s) preceding '{'; skipping apparent function body [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
 
     42 Warning(s)
-    54 Error(s)
+    52 Error(s)
 
-Time Elapsed 00:08:01.61
+Time Elapsed 00:08:57.08
