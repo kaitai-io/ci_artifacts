@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites>
-    <testsuite name="LuaUnit" id="00001" package="" hostname="localhost" tests="197" timestamp="2020-05-30T22:29:09" time="0.103" errors="3" failures="12">
+    <testsuite name="LuaUnit" id="00001" package="" hostname="localhost" tests="207" timestamp="2020-06-05T09:07:23" time="0.063" errors="5" failures="8">
         <properties>
             <property name="Lua Version" value="Lua 5.3"/>
             <property name="LuaUnit Version" value="3.3"/>
@@ -163,39 +163,12 @@
         </testcase>
         <testcase classname="TestExprStrOps" name="TestExprStrOps.test_expr_str_ops" time="0.000">
         </testcase>
-        <testcase classname="TestFixedContents" name="TestFixedContents.test_fixed_contents" time="0.009">
-            <failure type="spec/lua/run_test_suite.lua:18: spec/lua/test_fixed_contents.lua:5: module &apos;fixed_contents&apos; not found:
-	no field package.preload[&apos;fixed_contents&apos;]
-	no file &apos;../runtime/lua/fixed_contents.lua&apos;
-	no file &apos;spec/lua/fixed_contents.lua&apos;
-	no file &apos;spec/lua/extra/fixed_contents.lua&apos;
-	no file &apos;compiled/lua/fixed_contents.lua&apos;
-	no file &apos;/home/travis/build/kaitai-io/ci_targets/lua_install/share/lua/5.3/fixed_contents.lua&apos;
-	no file &apos;/home/travis/build/kaitai-io/ci_targets/lua_install/share/lua/5.3/fixed_contents/init.lua&apos;
-	no file &apos;./fixed_contents.lua&apos;
-	no file &apos;./fixed_contents/init.lua&apos;
-	no file &apos;/home/travis/build/kaitai-io/ci_targets/lua_install/lib/lua/5.3/fixed_contents.so&apos;
-	no file &apos;/home/travis/build/kaitai-io/ci_targets/lua_install/lib/lua/5.3/loadall.so&apos;
-	no file &apos;./fixed_contents.so&apos;">
-                <![CDATA[stack traceback:
-	spec/lua/run_test_suite.lua:18: in upvalue 'TestFixedContents.test_fixed_contents']]></failure>
+        <testcase classname="TestFixedContents" name="TestFixedContents.test_fixed_contents" time="0.000">
         </testcase>
-        <testcase classname="TestFixedStruct" name="TestFixedStruct.test_fixed_struct" time="0.008">
-            <failure type="spec/lua/run_test_suite.lua:18: spec/lua/test_fixed_struct.lua:5: module &apos;fixed_struct&apos; not found:
-	no field package.preload[&apos;fixed_struct&apos;]
-	no file &apos;../runtime/lua/fixed_struct.lua&apos;
-	no file &apos;spec/lua/fixed_struct.lua&apos;
-	no file &apos;spec/lua/extra/fixed_struct.lua&apos;
-	no file &apos;compiled/lua/fixed_struct.lua&apos;
-	no file &apos;/home/travis/build/kaitai-io/ci_targets/lua_install/share/lua/5.3/fixed_struct.lua&apos;
-	no file &apos;/home/travis/build/kaitai-io/ci_targets/lua_install/share/lua/5.3/fixed_struct/init.lua&apos;
-	no file &apos;./fixed_struct.lua&apos;
-	no file &apos;./fixed_struct/init.lua&apos;
-	no file &apos;/home/travis/build/kaitai-io/ci_targets/lua_install/lib/lua/5.3/fixed_struct.so&apos;
-	no file &apos;/home/travis/build/kaitai-io/ci_targets/lua_install/lib/lua/5.3/loadall.so&apos;
-	no file &apos;./fixed_struct.so&apos;">
+        <testcase classname="TestFixedStruct" name="TestFixedStruct.test_fixed_struct" time="0.001">
+            <failure type="spec/lua/test_fixed_struct.lua:15: expected: 1.844674407371e+19, actual: -1">
                 <![CDATA[stack traceback:
-	spec/lua/run_test_suite.lua:18: in upvalue 'TestFixedStruct.test_fixed_struct']]></failure>
+	spec/lua/test_fixed_struct.lua:15: in upvalue 'TestFixedStruct.test_fixed_struct']]></failure>
         </testcase>
         <testcase classname="TestFloatToI" name="TestFloatToI.test_float_to_i" time="0.000">
         </testcase>
@@ -241,24 +214,12 @@
         </testcase>
         <testcase classname="TestInstanceUserArray" name="TestInstanceUserArray.test_instance_user_array" time="0.000">
         </testcase>
-        <testcase classname="TestIntegers" name="TestIntegers.test_integers" time="0.007">
-            <failure type="spec/lua/run_test_suite.lua:18: spec/lua/test_integers.lua:5: module &apos;integers&apos; not found:
-	no field package.preload[&apos;integers&apos;]
-	no file &apos;../runtime/lua/integers.lua&apos;
-	no file &apos;spec/lua/integers.lua&apos;
-	no file &apos;spec/lua/extra/integers.lua&apos;
-	no file &apos;compiled/lua/integers.lua&apos;
-	no file &apos;/home/travis/build/kaitai-io/ci_targets/lua_install/share/lua/5.3/integers.lua&apos;
-	no file &apos;/home/travis/build/kaitai-io/ci_targets/lua_install/share/lua/5.3/integers/init.lua&apos;
-	no file &apos;./integers.lua&apos;
-	no file &apos;./integers/init.lua&apos;
-	no file &apos;/home/travis/build/kaitai-io/ci_targets/lua_install/lib/lua/5.3/integers.so&apos;
-	no file &apos;/home/travis/build/kaitai-io/ci_targets/lua_install/lib/lua/5.3/loadall.so&apos;
-	no file &apos;./integers.so&apos;">
+        <testcase classname="TestIntegers" name="TestIntegers.test_integers" time="0.001">
+            <failure type="spec/lua/test_integers.lua:15: expected: 1.844674407371e+19, actual: -1">
                 <![CDATA[stack traceback:
-	spec/lua/run_test_suite.lua:18: in upvalue 'TestIntegers.test_integers']]></failure>
+	spec/lua/test_integers.lua:15: in upvalue 'TestIntegers.test_integers']]></failure>
         </testcase>
-        <testcase classname="TestIntegersMinMax" name="TestIntegersMinMax.test_integers_min_max" time="0.001">
+        <testcase classname="TestIntegersMinMax" name="TestIntegersMinMax.test_integers_min_max" time="0.002">
             <failure type="spec/lua/test_integers_min_max.lua:22: expected: 1.844674407371e+19, actual: -1">
                 <![CDATA[stack traceback:
 	spec/lua/test_integers_min_max.lua:22: in upvalue 'TestIntegersMinMax.test_integers_min_max']]></failure>
@@ -331,7 +292,7 @@
         </testcase>
         <testcase classname="TestParamsPassArrayUsertype" name="TestParamsPassArrayUsertype.test_params_pass_array_usertype" time="0.000">
         </testcase>
-        <testcase classname="TestParamsPassStruct" name="TestParamsPassStruct.test_params_pass_struct" time="0.000">
+        <testcase classname="TestParamsPassStruct" name="TestParamsPassStruct.test_params_pass_struct" time="0.001">
         </testcase>
         <testcase classname="TestParamsPassUsertype" name="TestParamsPassUsertype.test_params_pass_usertype" time="0.000">
         </testcase>
@@ -391,7 +352,7 @@
         </testcase>
         <testcase classname="TestRepeatUntilSized" name="TestRepeatUntilSized.test_repeat_until_sized" time="0.000">
         </testcase>
-        <testcase classname="TestStrEncodings" name="TestStrEncodings.test_str_encodings" time="0.001">
+        <testcase classname="TestStrEncodings" name="TestStrEncodings.test_str_encodings" time="0.002">
             <error type="../runtime/lua/string_decode.lua:42: Encoding SJIS not supported">
                 <![CDATA[stack traceback:
 	../runtime/lua/string_decode.lua:42: in function 'string_decode.decode'
@@ -474,73 +435,62 @@
         </testcase>
         <testcase classname="TestUserType" name="TestUserType.test_user_type" time="0.000">
         </testcase>
-        <testcase classname="TestValidLong" name="TestValidLong.test_valid_long" time="0.007">
-            <failure type="spec/lua/run_test_suite.lua:18: spec/lua/test_valid_long.lua:5: module &apos;valid_long&apos; not found:
-	no field package.preload[&apos;valid_long&apos;]
-	no file &apos;../runtime/lua/valid_long.lua&apos;
-	no file &apos;spec/lua/valid_long.lua&apos;
-	no file &apos;spec/lua/extra/valid_long.lua&apos;
-	no file &apos;compiled/lua/valid_long.lua&apos;
-	no file &apos;/home/travis/build/kaitai-io/ci_targets/lua_install/share/lua/5.3/valid_long.lua&apos;
-	no file &apos;/home/travis/build/kaitai-io/ci_targets/lua_install/share/lua/5.3/valid_long/init.lua&apos;
-	no file &apos;./valid_long.lua&apos;
-	no file &apos;./valid_long/init.lua&apos;
-	no file &apos;/home/travis/build/kaitai-io/ci_targets/lua_install/lib/lua/5.3/valid_long.so&apos;
-	no file &apos;/home/travis/build/kaitai-io/ci_targets/lua_install/lib/lua/5.3/loadall.so&apos;
-	no file &apos;./valid_long.so&apos;">
-                <![CDATA[stack traceback:
-	spec/lua/run_test_suite.lua:18: in upvalue 'TestValidLong.test_valid_long']]></failure>
+        <testcase classname="TestValidFailAnyofInt" name="TestValidFailAnyofInt.test_valid_fail_anyof_int" time="0.000">
         </testcase>
-        <testcase classname="TestValidNotParsedIf" name="TestValidNotParsedIf.test_valid_not_parsed_if" time="0.009">
-            <failure type="spec/lua/run_test_suite.lua:18: spec/lua/test_valid_not_parsed_if.lua:5: module &apos;valid_not_parsed_if&apos; not found:
-	no field package.preload[&apos;valid_not_parsed_if&apos;]
-	no file &apos;../runtime/lua/valid_not_parsed_if.lua&apos;
-	no file &apos;spec/lua/valid_not_parsed_if.lua&apos;
-	no file &apos;spec/lua/extra/valid_not_parsed_if.lua&apos;
-	no file &apos;compiled/lua/valid_not_parsed_if.lua&apos;
-	no file &apos;/home/travis/build/kaitai-io/ci_targets/lua_install/share/lua/5.3/valid_not_parsed_if.lua&apos;
-	no file &apos;/home/travis/build/kaitai-io/ci_targets/lua_install/share/lua/5.3/valid_not_parsed_if/init.lua&apos;
-	no file &apos;./valid_not_parsed_if.lua&apos;
-	no file &apos;./valid_not_parsed_if/init.lua&apos;
-	no file &apos;/home/travis/build/kaitai-io/ci_targets/lua_install/lib/lua/5.3/valid_not_parsed_if.so&apos;
-	no file &apos;/home/travis/build/kaitai-io/ci_targets/lua_install/lib/lua/5.3/loadall.so&apos;
-	no file &apos;./valid_not_parsed_if.so&apos;">
-                <![CDATA[stack traceback:
-	spec/lua/run_test_suite.lua:18: in upvalue 'TestValidNotParsedIf.test_valid_not_parsed_if']]></failure>
+        <testcase classname="TestValidFailContents" name="TestValidFailContents.test_valid_fail_contents" time="0.000">
         </testcase>
-        <testcase classname="TestValidShort" name="TestValidShort.test_valid_short" time="0.008">
-            <failure type="spec/lua/run_test_suite.lua:18: spec/lua/test_valid_short.lua:5: module &apos;valid_short&apos; not found:
-	no field package.preload[&apos;valid_short&apos;]
-	no file &apos;../runtime/lua/valid_short.lua&apos;
-	no file &apos;spec/lua/valid_short.lua&apos;
-	no file &apos;spec/lua/extra/valid_short.lua&apos;
-	no file &apos;compiled/lua/valid_short.lua&apos;
-	no file &apos;/home/travis/build/kaitai-io/ci_targets/lua_install/share/lua/5.3/valid_short.lua&apos;
-	no file &apos;/home/travis/build/kaitai-io/ci_targets/lua_install/share/lua/5.3/valid_short/init.lua&apos;
-	no file &apos;./valid_short.lua&apos;
-	no file &apos;./valid_short/init.lua&apos;
-	no file &apos;/home/travis/build/kaitai-io/ci_targets/lua_install/lib/lua/5.3/valid_short.so&apos;
-	no file &apos;/home/travis/build/kaitai-io/ci_targets/lua_install/lib/lua/5.3/loadall.so&apos;
-	no file &apos;./valid_short.so&apos;">
-                <![CDATA[stack traceback:
-	spec/lua/run_test_suite.lua:18: in upvalue 'TestValidShort.test_valid_short']]></failure>
+        <testcase classname="TestValidFailEqBytes" name="TestValidFailEqBytes.test_valid_fail_eq_bytes" time="0.000">
         </testcase>
-        <testcase classname="TestValidSwitch" name="TestValidSwitch.test_valid_switch" time="0.008">
-            <failure type="spec/lua/run_test_suite.lua:18: spec/lua/test_valid_switch.lua:5: module &apos;valid_switch&apos; not found:
-	no field package.preload[&apos;valid_switch&apos;]
-	no file &apos;../runtime/lua/valid_switch.lua&apos;
-	no file &apos;spec/lua/valid_switch.lua&apos;
-	no file &apos;spec/lua/extra/valid_switch.lua&apos;
-	no file &apos;compiled/lua/valid_switch.lua&apos;
-	no file &apos;/home/travis/build/kaitai-io/ci_targets/lua_install/share/lua/5.3/valid_switch.lua&apos;
-	no file &apos;/home/travis/build/kaitai-io/ci_targets/lua_install/share/lua/5.3/valid_switch/init.lua&apos;
-	no file &apos;./valid_switch.lua&apos;
-	no file &apos;./valid_switch/init.lua&apos;
-	no file &apos;/home/travis/build/kaitai-io/ci_targets/lua_install/lib/lua/5.3/valid_switch.so&apos;
+        <testcase classname="TestValidFailEqInt" name="TestValidFailEqInt.test_valid_fail_eq_int" time="0.000">
+        </testcase>
+        <testcase classname="TestValidFailExpr" name="TestValidFailExpr.test_valid_fail_expr" time="0.009">
+            <failure type="spec/lua/run_test_suite.lua:18: spec/lua/test_valid_fail_expr.lua:5: module &apos;valid_fail_expr&apos; not found:
+	no field package.preload[&apos;valid_fail_expr&apos;]
+	no file &apos;../runtime/lua/valid_fail_expr.lua&apos;
+	no file &apos;spec/lua/valid_fail_expr.lua&apos;
+	no file &apos;spec/lua/extra/valid_fail_expr.lua&apos;
+	no file &apos;compiled/lua/valid_fail_expr.lua&apos;
+	no file &apos;/home/travis/build/kaitai-io/ci_targets/lua_install/share/lua/5.3/valid_fail_expr.lua&apos;
+	no file &apos;/home/travis/build/kaitai-io/ci_targets/lua_install/share/lua/5.3/valid_fail_expr/init.lua&apos;
+	no file &apos;./valid_fail_expr.lua&apos;
+	no file &apos;./valid_fail_expr/init.lua&apos;
+	no file &apos;/home/travis/build/kaitai-io/ci_targets/lua_install/lib/lua/5.3/valid_fail_expr.so&apos;
 	no file &apos;/home/travis/build/kaitai-io/ci_targets/lua_install/lib/lua/5.3/loadall.so&apos;
-	no file &apos;./valid_switch.so&apos;">
+	no file &apos;./valid_fail_expr.so&apos;">
                 <![CDATA[stack traceback:
-	spec/lua/run_test_suite.lua:18: in upvalue 'TestValidSwitch.test_valid_switch']]></failure>
+	spec/lua/run_test_suite.lua:18: in upvalue 'TestValidFailExpr.test_valid_fail_expr']]></failure>
+        </testcase>
+        <testcase classname="TestValidFailInst" name="TestValidFailInst.test_valid_fail_inst" time="0.000">
+        </testcase>
+        <testcase classname="TestValidFailMaxInt" name="TestValidFailMaxInt.test_valid_fail_max_int" time="0.000">
+        </testcase>
+        <testcase classname="TestValidFailMinInt" name="TestValidFailMinInt.test_valid_fail_min_int" time="0.000">
+        </testcase>
+        <testcase classname="TestValidFailRangeFloat" name="TestValidFailRangeFloat.test_valid_fail_range_float" time="0.000">
+        </testcase>
+        <testcase classname="TestValidFailRangeInt" name="TestValidFailRangeInt.test_valid_fail_range_int" time="0.000">
+        </testcase>
+        <testcase classname="TestValidLong" name="TestValidLong.test_valid_long" time="0.001">
+            <error type="compiled/lua/valid_long.lua:45: not equal, expected 1.844674407371e+19, but got -1">
+                <![CDATA[stack traceback:
+	compiled/lua/valid_long.lua:45: in method '_read'
+	compiled/lua/valid_long.lua:15: in local 'init'
+	../runtime/lua/class.lua:70: in function <../runtime/lua/class.lua:66>
+	(...tail calls...)
+	spec/lua/test_valid_long.lua:10: in upvalue 'TestValidLong.test_valid_long']]></error>
+        </testcase>
+        <testcase classname="TestValidNotParsedIf" name="TestValidNotParsedIf.test_valid_not_parsed_if" time="0.000">
+        </testcase>
+        <testcase classname="TestValidShort" name="TestValidShort.test_valid_short" time="0.001">
+            <error type="compiled/lua/valid_short.lua:45: not equal, expected 1.844674407371e+19, but got -1">
+                <![CDATA[stack traceback:
+	compiled/lua/valid_short.lua:45: in method '_read'
+	compiled/lua/valid_short.lua:15: in local 'init'
+	../runtime/lua/class.lua:70: in function <../runtime/lua/class.lua:66>
+	(...tail calls...)
+	spec/lua/test_valid_short.lua:10: in upvalue 'TestValidShort.test_valid_short']]></error>
+        </testcase>
+        <testcase classname="TestValidSwitch" name="TestValidSwitch.test_valid_switch" time="0.000">
         </testcase>
         <testcase classname="TestYamlInts" name="TestYamlInts.test_yaml_ints" time="0.000">
         </testcase>
