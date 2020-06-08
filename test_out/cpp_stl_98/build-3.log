@@ -2,7 +2,7 @@ Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
 Copyright (C) Microsoft Corporation. All rights reserved.
 
 Building the projects in this solution one at a time. To enable parallel build, please add the "/m" switch.
-Build started 6/6/2020 7:31:35 AM.
+Build started 6/8/2020 9:15:19 PM.
 Project "C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\KS_TEST_CPP_STL.sln" on node 1 (default targets).
 ValidateSolutionConfiguration:
   Building solution configuration "Debug|x64".
@@ -27,10 +27,10 @@ CustomBuild:
 VcpkgTripletSelection:
   Not using Vcpkg because VcpkgEnabled is "false"
 ClCompile:
-  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\bin\HostX86\x64\CL.exe /c /I"C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin" /I"C:\projects\ci-targets\tests\compiled\cpp_stl_98" /I"C:\projects\ci-targets\tests\spec\cpp_stl_98\..\..\..\runtime\cpp_stl" /I"C:\projects\ci-targets\tests\spec\cpp_stl_98\prereq" /I"C:\Tools\vcpkg\installed\x64-windows\include" /Zi /nologo /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D KS_ZLIB /D KS_STR_ENCODING_ICONV /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"ks_tests.dir\Debug\\" /Fd"ks_tests.dir\Debug\vc141.pdb" /Gd /TP /errorReport:queue  /utf-8 "C:\projects\ci-targets\runtime\cpp_stl\kaitai\kaitaistream.cpp" "C:\projects\ci-targets\tests\compiled\cpp_stl_98\bits_simple.cpp" "C:\projects\ci-targets\tests\compiled\cpp_stl_98\imports_circular_a.cpp" "C:\projects\ci-targets\tests\compiled\cpp_stl_98\index_sizes.cpp"
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\bin\HostX86\x64\CL.exe /c /I"C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin" /I"C:\projects\ci-targets\tests\compiled\cpp_stl_98" /I"C:\projects\ci-targets\tests\spec\cpp_stl_98\..\..\..\runtime\cpp_stl" /I"C:\projects\ci-targets\tests\spec\cpp_stl_98\prereq" /I"C:\Tools\vcpkg\installed\x64-windows\include" /Zi /nologo /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D KS_ZLIB /D KS_STR_ENCODING_ICONV /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"ks_tests.dir\Debug\\" /Fd"ks_tests.dir\Debug\vc141.pdb" /Gd /TP /errorReport:queue  /utf-8 "C:\projects\ci-targets\runtime\cpp_stl\kaitai\kaitaistream.cpp" "C:\projects\ci-targets\tests\compiled\cpp_stl_98\bits_seq_endian_combo.cpp" "C:\projects\ci-targets\tests\compiled\cpp_stl_98\imports_circular_a.cpp" "C:\projects\ci-targets\tests\compiled\cpp_stl_98\index_sizes.cpp"
   kaitaistream.cpp
 C:\projects\ci-targets\runtime\cpp_stl\kaitai\kaitaistream.cpp(526): warning C4267: '=': conversion from 'size_t' to 'uInt', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-  bits_simple.cpp
+  bits_seq_endian_combo.cpp
   imports_circular_a.cpp
   index_sizes.cpp
   Generating Code...
@@ -210,7 +210,7 @@ Link:
   ks_tests.dir\Debug\test_switch_manual_int_size_else.obj
   ks_tests.dir\Debug\test_switch_manual_int_size_eos.obj
   ks_tests.dir\Debug\test_switch_manual_str.obj
-  ks_tests.dir\Debug\test_switch_manual_str_else.obj
+  ks_tests.dir\Debug\test_switch_multi_bool_ops.obj
   ks_tests.dir\Debug\test_switch_repeat_expr.obj
   ks_tests.dir\Debug\test_term_bytes.obj
   ks_tests.dir\Debug\test_term_strz.obj
@@ -227,6 +227,7 @@ Link:
   ks_tests.dir\Debug\test_valid_fail_inst.obj
   ks_tests.dir\Debug\test_valid_fail_max_int.obj
   ks_tests.dir\Debug\test_valid_fail_min_int.obj
+  ks_tests.dir\Debug\test_valid_fail_range_bytes.obj
   ks_tests.dir\Debug\test_valid_fail_range_float.obj
   ks_tests.dir\Debug\test_valid_fail_range_int.obj
   ks_tests.dir\Debug\test_valid_long.obj
@@ -428,6 +429,7 @@ Link:
   ks_tests.dir\Debug\valid_fail_inst.obj
   ks_tests.dir\Debug\valid_fail_max_int.obj
   ks_tests.dir\Debug\valid_fail_min_int.obj
+  ks_tests.dir\Debug\valid_fail_range_bytes.obj
   ks_tests.dir\Debug\valid_fail_range_float.obj
   ks_tests.dir\Debug\valid_fail_range_int.obj
   ks_tests.dir\Debug\valid_long.obj
@@ -491,4 +493,4 @@ Build FAILED.
     1 Warning(s)
     16 Error(s)
 
-Time Elapsed 00:00:06.10
+Time Elapsed 00:00:05.95
