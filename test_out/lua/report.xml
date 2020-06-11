@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites>
-    <testsuite name="LuaUnit" id="00001" package="" hostname="localhost" tests="208" timestamp="2020-06-08T21:15:10" time="0.056" errors="5" failures="8">
+    <testsuite name="LuaUnit" id="00001" package="" hostname="localhost" tests="209" timestamp="2020-06-11T18:12:14" time="0.060" errors="5" failures="8">
         <properties>
             <property name="Lua Version" value="Lua 5.3"/>
             <property name="LuaUnit Version" value="3.3"/>
@@ -165,7 +165,7 @@
         </testcase>
         <testcase classname="TestFixedContents" name="TestFixedContents.test_fixed_contents" time="0.000">
         </testcase>
-        <testcase classname="TestFixedStruct" name="TestFixedStruct.test_fixed_struct" time="0.001">
+        <testcase classname="TestFixedStruct" name="TestFixedStruct.test_fixed_struct" time="0.002">
             <failure type="spec/lua/test_fixed_struct.lua:15: expected: 1.844674407371e+19, actual: -1">
                 <![CDATA[stack traceback:
 	spec/lua/test_fixed_struct.lua:15: in upvalue 'TestFixedStruct.test_fixed_struct']]></failure>
@@ -472,7 +472,9 @@
         </testcase>
         <testcase classname="TestValidFailRangeInt" name="TestValidFailRangeInt.test_valid_fail_range_int" time="0.000">
         </testcase>
-        <testcase classname="TestValidLong" name="TestValidLong.test_valid_long" time="0.001">
+        <testcase classname="TestValidFailRangeStr" name="TestValidFailRangeStr.test_valid_fail_range_str" time="0.000">
+        </testcase>
+        <testcase classname="TestValidLong" name="TestValidLong.test_valid_long" time="0.002">
             <error type="compiled/lua/valid_long.lua:45: not equal, expected 1.844674407371e+19, but got -1">
                 <![CDATA[stack traceback:
 	compiled/lua/valid_long.lua:45: in method '_read'
@@ -496,7 +498,7 @@
         </testcase>
         <testcase classname="TestYamlInts" name="TestYamlInts.test_yaml_ints" time="0.000">
         </testcase>
-        <testcase classname="TestZlibSurrounded" name="TestZlibSurrounded.test_zlib_surrounded" time="0.007">
+        <testcase classname="TestZlibSurrounded" name="TestZlibSurrounded.test_zlib_surrounded" time="0.009">
             <failure type="spec/lua/run_test_suite.lua:18: spec/lua/test_zlib_surrounded.lua:5: module &apos;zlib_surrounded&apos; not found:
 	no field package.preload[&apos;zlib_surrounded&apos;]
 	no file &apos;../runtime/lua/zlib_surrounded.lua&apos;
@@ -513,7 +515,7 @@
                 <![CDATA[stack traceback:
 	spec/lua/run_test_suite.lua:18: in upvalue 'TestZlibSurrounded.test_zlib_surrounded']]></failure>
         </testcase>
-        <testcase classname="TestZlibWithHeader78" name="TestZlibWithHeader78.test_zlib_with_header_78" time="0.009">
+        <testcase classname="TestZlibWithHeader78" name="TestZlibWithHeader78.test_zlib_with_header_78" time="0.008">
             <failure type="spec/lua/run_test_suite.lua:18: spec/lua/test_zlib_with_header_78.lua:5: module &apos;zlib_with_header_78&apos; not found:
 	no field package.preload[&apos;zlib_with_header_78&apos;]
 	no file &apos;../runtime/lua/zlib_with_header_78.lua&apos;
