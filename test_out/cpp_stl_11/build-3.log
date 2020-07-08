@@ -2,7 +2,7 @@ Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
 Copyright (C) Microsoft Corporation. All rights reserved.
 
 Building the projects in this solution one at a time. To enable parallel build, please add the "/m" switch.
-Build started 6/28/2020 5:06:44 PM.
+Build started 7/8/2020 6:59:45 AM.
 Project "C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\KS_TEST_CPP_STL.sln" on node 1 (default targets).
 ValidateSolutionConfiguration:
   Building solution configuration "Debug|x64".
@@ -372,6 +372,7 @@ Link:
   ks_tests.dir\Debug\process_coerce_usertype2.obj
   ks_tests.dir\Debug\process_custom.obj
   ks_tests.dir\Debug\process_custom_no_args.obj
+  ks_tests.dir\Debug\process_repeat_bytes.obj
   ks_tests.dir\Debug\process_repeat_usertype.obj
   ks_tests.dir\Debug\process_rotate.obj
   ks_tests.dir\Debug\process_to_user.obj
@@ -481,9 +482,8 @@ test_params_pass_array_int.obj : error LNK2019: unresolved external symbol "publ
 test_params_pass_array_str.obj : error LNK2019: unresolved external symbol "public: __cdecl params_pass_array_str_t::params_pass_array_str_t(class kaitai::kstream *,class kaitai::kstruct *,class params_pass_array_str_t *)" (??0params_pass_array_str_t@@QEAA@PEAVkstream@kaitai@@PEAVkstruct@2@PEAV0@@Z) referenced in function "public: void __cdecl test_params_pass_array_str::test_method(void)" (?test_method@test_params_pass_array_str@@QEAAXXZ) [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
 test_params_pass_array_struct.obj : error LNK2019: unresolved external symbol "public: __cdecl params_pass_array_struct_t::params_pass_array_struct_t(class kaitai::kstream *,class kaitai::kstruct *,class params_pass_array_struct_t *)" (??0params_pass_array_struct_t@@QEAA@PEAVkstream@kaitai@@PEAVkstruct@2@PEAV0@@Z) referenced in function "public: void __cdecl test_params_pass_array_struct::test_method(void)" (?test_method@test_params_pass_array_struct@@QEAAXXZ) [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
 test_params_pass_array_usertype.obj : error LNK2019: unresolved external symbol "public: __cdecl params_pass_array_usertype_t::params_pass_array_usertype_t(class kaitai::kstream *,class kaitai::kstruct *,class params_pass_array_usertype_t *)" (??0params_pass_array_usertype_t@@QEAA@PEAVkstream@kaitai@@PEAVkstruct@2@PEAV0@@Z) referenced in function "public: void __cdecl test_params_pass_array_usertype::test_method(void)" (?test_method@test_params_pass_array_usertype@@QEAAXXZ) [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
-test_process_repeat_bytes.obj : error LNK2019: unresolved external symbol "public: __cdecl process_repeat_bytes_t::process_repeat_bytes_t(class kaitai::kstream *,class kaitai::kstruct *,class process_repeat_bytes_t *)" (??0process_repeat_bytes_t@@QEAA@PEAVkstream@kaitai@@PEAVkstruct@2@PEAV0@@Z) referenced in function "public: void __cdecl test_process_repeat_bytes::test_method(void)" (?test_method@test_process_repeat_bytes@@QEAAXXZ) [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
 test_repeat_until_calc_array_type.obj : error LNK2019: unresolved external symbol "public: __cdecl repeat_until_calc_array_type_t::repeat_until_calc_array_type_t(class kaitai::kstream *,class kaitai::kstruct *,class repeat_until_calc_array_type_t *)" (??0repeat_until_calc_array_type_t@@QEAA@PEAVkstream@kaitai@@PEAVkstruct@2@PEAV0@@Z) referenced in function "public: void __cdecl test_repeat_until_calc_array_type::test_method(void)" (?test_method@test_repeat_until_calc_array_type@@QEAAXXZ) [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
-C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\Debug\ks_tests.exe : fatal error LNK1120: 41 unresolved externals [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
+C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\Debug\ks_tests.exe : fatal error LNK1120: 40 unresolved externals [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
 Done Building Project "C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj" (default targets) -- FAILED.
 Done Building Project "C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj.metaproj" (default targets) -- FAILED.
 Done Building Project "C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\KS_TEST_CPP_STL.sln" (default targets) -- FAILED.
@@ -540,11 +540,10 @@ Build FAILED.
   test_params_pass_array_str.obj : error LNK2019: unresolved external symbol "public: __cdecl params_pass_array_str_t::params_pass_array_str_t(class kaitai::kstream *,class kaitai::kstruct *,class params_pass_array_str_t *)" (??0params_pass_array_str_t@@QEAA@PEAVkstream@kaitai@@PEAVkstruct@2@PEAV0@@Z) referenced in function "public: void __cdecl test_params_pass_array_str::test_method(void)" (?test_method@test_params_pass_array_str@@QEAAXXZ) [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
   test_params_pass_array_struct.obj : error LNK2019: unresolved external symbol "public: __cdecl params_pass_array_struct_t::params_pass_array_struct_t(class kaitai::kstream *,class kaitai::kstruct *,class params_pass_array_struct_t *)" (??0params_pass_array_struct_t@@QEAA@PEAVkstream@kaitai@@PEAVkstruct@2@PEAV0@@Z) referenced in function "public: void __cdecl test_params_pass_array_struct::test_method(void)" (?test_method@test_params_pass_array_struct@@QEAAXXZ) [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
   test_params_pass_array_usertype.obj : error LNK2019: unresolved external symbol "public: __cdecl params_pass_array_usertype_t::params_pass_array_usertype_t(class kaitai::kstream *,class kaitai::kstruct *,class params_pass_array_usertype_t *)" (??0params_pass_array_usertype_t@@QEAA@PEAVkstream@kaitai@@PEAVkstruct@2@PEAV0@@Z) referenced in function "public: void __cdecl test_params_pass_array_usertype::test_method(void)" (?test_method@test_params_pass_array_usertype@@QEAAXXZ) [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
-  test_process_repeat_bytes.obj : error LNK2019: unresolved external symbol "public: __cdecl process_repeat_bytes_t::process_repeat_bytes_t(class kaitai::kstream *,class kaitai::kstruct *,class process_repeat_bytes_t *)" (??0process_repeat_bytes_t@@QEAA@PEAVkstream@kaitai@@PEAVkstruct@2@PEAV0@@Z) referenced in function "public: void __cdecl test_process_repeat_bytes::test_method(void)" (?test_method@test_process_repeat_bytes@@QEAAXXZ) [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
   test_repeat_until_calc_array_type.obj : error LNK2019: unresolved external symbol "public: __cdecl repeat_until_calc_array_type_t::repeat_until_calc_array_type_t(class kaitai::kstream *,class kaitai::kstruct *,class repeat_until_calc_array_type_t *)" (??0repeat_until_calc_array_type_t@@QEAA@PEAVkstream@kaitai@@PEAVkstruct@2@PEAV0@@Z) referenced in function "public: void __cdecl test_repeat_until_calc_array_type::test_method(void)" (?test_method@test_repeat_until_calc_array_type@@QEAAXXZ) [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
-  C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\Debug\ks_tests.exe : fatal error LNK1120: 41 unresolved externals [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
+  C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\Debug\ks_tests.exe : fatal error LNK1120: 40 unresolved externals [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
 
     1 Warning(s)
-    42 Error(s)
+    41 Error(s)
 
-Time Elapsed 00:00:04.42
+Time Elapsed 00:00:04.54
