@@ -1,8 +1,8 @@
 Scanning dependencies of target ks_tests
 [  0%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/runtime/cpp_stl/kaitai/kaitaistream.cpp.o
-[  0%] Building CXX object CMakeFiles/ks_tests.dir/prereq/custom_fx.cpp.o
-[  0%] Building CXX object CMakeFiles/ks_tests.dir/prereq/custom_fx_no_args.cpp.o
 [  0%] Building CXX object CMakeFiles/ks_tests.dir/prereq/my_custom_fx.cpp.o
+[  0%] Building CXX object CMakeFiles/ks_tests.dir/prereq/custom_fx_no_args.cpp.o
+[  0%] Building CXX object CMakeFiles/ks_tests.dir/prereq/custom_fx.cpp.o
 [  1%] Building CXX object CMakeFiles/ks_tests.dir/test_valid_fail_max_int.cpp.o
 [  1%] Building CXX object CMakeFiles/ks_tests.dir/test_expr_str_ops.cpp.o
 [  1%] Building CXX object CMakeFiles/ks_tests.dir/test_valid_fail_eq_bytes.cpp.o
@@ -23,8 +23,6 @@ In file included from /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl
  #include "for_rel_imports/imported_1.h"
                                         ^
 compilation terminated.
-[  2%] Building CXX object CMakeFiles/ks_tests.dir/test_process_coerce_usertype1.cpp.o
-[  3%] Building CXX object CMakeFiles/ks_tests.dir/test_expr_sizeof_type_1.cpp.o
 In file included from /usr/include/boost/test/unit_test.hpp:19:0,
                  from /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_enum_long_range_s.cpp:3:
 /usr/include/boost/test/test_tools.hpp: In instantiation of ‘void boost::test_tools::print_log_value<T>::operator()(std::ostream&, const T&) [with T = enum_long_range_s_t::constants_t; std::ostream = std::basic_ostream<char>]’:
@@ -120,6 +118,8 @@ In file included from /usr/include/c++/4.8/istream:39:0,
 /usr/include/c++/4.8/ostream:476:5: note: std::basic_ostream<CharT1, Tr>& std::operator<<(std::basic_ostream<CharT1, Tr>&, char) [with _CharT = char; _Traits = std::char_traits<char>]
      operator<<(basic_ostream<_CharT, _Traits>& __out, char __c)
      ^
+[  2%] Building CXX object CMakeFiles/ks_tests.dir/test_process_coerce_usertype1.cpp.o
+[  3%] Building CXX object CMakeFiles/ks_tests.dir/test_expr_sizeof_type_1.cpp.o
 make[2]: *** [CMakeFiles/ks_tests.dir/test_enum_long_range_s.cpp.o] Error 1
 [  3%] Building CXX object CMakeFiles/ks_tests.dir/test_opaque_external_type.cpp.o
 [  3%] Building CXX object CMakeFiles/ks_tests.dir/test_docstrings_docref.cpp.o
@@ -169,47 +169,128 @@ make[2]: *** [CMakeFiles/ks_tests.dir/test_params_pass_array_str.cpp.o] Error 1
 [ 12%] Building CXX object CMakeFiles/ks_tests.dir/test_expr_3.cpp.o
 [ 12%] Building CXX object CMakeFiles/ks_tests.dir/test_process_rotate.cpp.o
 [ 12%] Building CXX object CMakeFiles/ks_tests.dir/test_enum_1.cpp.o
+[ 13%] Building CXX object CMakeFiles/ks_tests.dir/test_switch_repeat_expr_invalid.cpp.o
 [ 13%] Building CXX object CMakeFiles/ks_tests.dir/test_enum_to_i_class_border_1.cpp.o
 [ 13%] Building CXX object CMakeFiles/ks_tests.dir/test_expr_2.cpp.o
 [ 13%] Building CXX object CMakeFiles/ks_tests.dir/test_switch_manual_str_else.cpp.o
 [ 13%] Building CXX object CMakeFiles/ks_tests.dir/test_enum_int_range_s.cpp.o
 [ 14%] Building CXX object CMakeFiles/ks_tests.dir/test_nested_same_name.cpp.o
+In file included from /usr/include/boost/test/unit_test.hpp:19:0,
+                 from /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_switch_repeat_expr_invalid.cpp:3:
+/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_switch_repeat_expr_invalid.cpp: In member function ‘void test_switch_repeat_expr_invalid::test_method()’:
+/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_switch_repeat_expr_invalid.cpp:16:64: error: no matching function for call to ‘std::basic_string<char>::basic_string(kaitai::kstruct*&)’
+     BOOST_CHECK_EQUAL(static_cast<std::string>(r->body()->at(0)), std::string("\x53\x74\x75\x66\x66\x00\x4D\x65\x00", 9));
+                                                                ^
+/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_switch_repeat_expr_invalid.cpp:16:64: note: candidates are:
+In file included from /usr/include/c++/4.8/string:52:0,
+                 from /usr/include/c++/4.8/bits/locale_classes.h:40,
+                 from /usr/include/c++/4.8/bits/ios_base.h:41,
+                 from /usr/include/c++/4.8/ios:42,
+                 from /usr/include/c++/4.8/istream:38,
+                 from /usr/include/c++/4.8/sstream:38,
+                 from /usr/include/boost/test/utils/wrap_stringstream.hpp:26,
+                 from /usr/include/boost/test/predicate_result.hpp:20,
+                 from /usr/include/boost/test/test_tools.hpp:19,
+                 from /usr/include/boost/test/unit_test.hpp:19,
+                 from /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_switch_repeat_expr_invalid.cpp:3:
+/usr/include/c++/4.8/bits/basic_string.h:532:9: note: template<class _InputIterator> std::basic_string<_CharT, _Traits, _Alloc>::basic_string(_InputIterator, _InputIterator, const _Alloc&)
+         basic_string(_InputIterator __beg, _InputIterator __end,
+         ^
+/usr/include/c++/4.8/bits/basic_string.h:532:9: note:   template argument deduction/substitution failed:
+In file included from /usr/include/boost/test/unit_test.hpp:19:0,
+                 from /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_switch_repeat_expr_invalid.cpp:3:
+/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_switch_repeat_expr_invalid.cpp:16:64: note:   candidate expects 3 arguments, 1 provided
+     BOOST_CHECK_EQUAL(static_cast<std::string>(r->body()->at(0)), std::string("\x53\x74\x75\x66\x66\x00\x4D\x65\x00", 9));
+                                                                ^
+In file included from /usr/include/c++/4.8/string:53:0,
+                 from /usr/include/c++/4.8/bits/locale_classes.h:40,
+                 from /usr/include/c++/4.8/bits/ios_base.h:41,
+                 from /usr/include/c++/4.8/ios:42,
+                 from /usr/include/c++/4.8/istream:38,
+                 from /usr/include/c++/4.8/sstream:38,
+                 from /usr/include/boost/test/utils/wrap_stringstream.hpp:26,
+                 from /usr/include/boost/test/predicate_result.hpp:20,
+                 from /usr/include/boost/test/test_tools.hpp:19,
+                 from /usr/include/boost/test/unit_test.hpp:19,
+                 from /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_switch_repeat_expr_invalid.cpp:3:
+/usr/include/c++/4.8/bits/basic_string.tcc:219:5: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(std::basic_string<_CharT, _Traits, _Alloc>::size_type, _CharT, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>; std::basic_string<_CharT, _Traits, _Alloc>::size_type = long unsigned int]
+     basic_string<_CharT, _Traits, _Alloc>::
+     ^
+/usr/include/c++/4.8/bits/basic_string.tcc:219:5: note:   candidate expects 3 arguments, 1 provided
+/usr/include/c++/4.8/bits/basic_string.tcc:212:5: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _CharT*, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+     basic_string<_CharT, _Traits, _Alloc>::
+     ^
+/usr/include/c++/4.8/bits/basic_string.tcc:212:5: note:   no known conversion for argument 1 from ‘kaitai::kstruct*’ to ‘const char*’
+/usr/include/c++/4.8/bits/basic_string.tcc:205:5: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _CharT*, std::basic_string<_CharT, _Traits, _Alloc>::size_type, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>; std::basic_string<_CharT, _Traits, _Alloc>::size_type = long unsigned int]
+     basic_string<_CharT, _Traits, _Alloc>::
+     ^
+/usr/include/c++/4.8/bits/basic_string.tcc:205:5: note:   candidate expects 3 arguments, 1 provided
+/usr/include/c++/4.8/bits/basic_string.tcc:193:5: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const std::basic_string<_CharT, _Traits, _Alloc>&, std::basic_string<_CharT, _Traits, _Alloc>::size_type, std::basic_string<_CharT, _Traits, _Alloc>::size_type, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>; std::basic_string<_CharT, _Traits, _Alloc>::size_type = long unsigned int]
+     basic_string<_CharT, _Traits, _Alloc>::
+     ^
+/usr/include/c++/4.8/bits/basic_string.tcc:193:5: note:   candidate expects 4 arguments, 1 provided
+/usr/include/c++/4.8/bits/basic_string.tcc:183:5: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const std::basic_string<_CharT, _Traits, _Alloc>&, std::basic_string<_CharT, _Traits, _Alloc>::size_type, std::basic_string<_CharT, _Traits, _Alloc>::size_type) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>; std::basic_string<_CharT, _Traits, _Alloc>::size_type = long unsigned int]
+     basic_string<_CharT, _Traits, _Alloc>::
+     ^
+/usr/include/c++/4.8/bits/basic_string.tcc:183:5: note:   candidate expects 3 arguments, 1 provided
+/usr/include/c++/4.8/bits/basic_string.tcc:169:5: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const std::basic_string<_CharT, _Traits, _Alloc>&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+     basic_string<_CharT, _Traits, _Alloc>::
+     ^
+/usr/include/c++/4.8/bits/basic_string.tcc:169:5: note:   no known conversion for argument 1 from ‘kaitai::kstruct*’ to ‘const std::basic_string<char>&’
+/usr/include/c++/4.8/bits/basic_string.tcc:177:5: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+     basic_string<_CharT, _Traits, _Alloc>::
+     ^
+/usr/include/c++/4.8/bits/basic_string.tcc:177:5: note:   no known conversion for argument 1 from ‘kaitai::kstruct*’ to ‘const std::allocator<char>&’
+In file included from /usr/include/c++/4.8/string:52:0,
+                 from /usr/include/c++/4.8/bits/locale_classes.h:40,
+                 from /usr/include/c++/4.8/bits/ios_base.h:41,
+                 from /usr/include/c++/4.8/ios:42,
+                 from /usr/include/c++/4.8/istream:38,
+                 from /usr/include/c++/4.8/sstream:38,
+                 from /usr/include/boost/test/utils/wrap_stringstream.hpp:26,
+                 from /usr/include/boost/test/predicate_result.hpp:20,
+                 from /usr/include/boost/test/test_tools.hpp:19,
+                 from /usr/include/boost/test/unit_test.hpp:19,
+                 from /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_switch_repeat_expr_invalid.cpp:3:
+/usr/include/c++/4.8/bits/basic_string.h:437:7: note: std::basic_string<_CharT, _Traits, _Alloc>::basic_string() [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       basic_string()
+       ^
+/usr/include/c++/4.8/bits/basic_string.h:437:7: note:   candidate expects 0 arguments, 1 provided
 [ 14%] Building CXX object CMakeFiles/ks_tests.dir/test_term_bytes.cpp.o
+make[2]: *** [CMakeFiles/ks_tests.dir/test_switch_repeat_expr_invalid.cpp.o] Error 1
 [ 14%] Building CXX object CMakeFiles/ks_tests.dir/test_expr_array.cpp.o
 [ 14%] Building CXX object CMakeFiles/ks_tests.dir/test_valid_fail_eq_int.cpp.o
-[ 14%] Building CXX object CMakeFiles/ks_tests.dir/test_bytes_pad_term.cpp.o
+[ 15%] Building CXX object CMakeFiles/ks_tests.dir/test_bytes_pad_term.cpp.o
 [ 15%] Building CXX object CMakeFiles/ks_tests.dir/test_nested_types.cpp.o
 [ 15%] Building CXX object CMakeFiles/ks_tests.dir/test_enum_invalid.cpp.o
 [ 15%] Building CXX object CMakeFiles/ks_tests.dir/test_debug_array_user.cpp.o
-[ 15%] Building CXX object CMakeFiles/ks_tests.dir/test_valid_fail_range_float.cpp.o
-[ 16%] Building CXX object CMakeFiles/ks_tests.dir/test_nav_parent_vs_value_inst.cpp.o
+[ 16%] Building CXX object CMakeFiles/ks_tests.dir/test_valid_fail_range_float.cpp.o
 [ 16%] Building CXX object CMakeFiles/ks_tests.dir/test_docstrings_docref_multi.cpp.o
+[ 16%] Building CXX object CMakeFiles/ks_tests.dir/test_nav_parent_vs_value_inst.cpp.o
 [ 16%] Building CXX object CMakeFiles/ks_tests.dir/test_opaque_external_type_02_parent.cpp.o
 [ 16%] Building CXX object CMakeFiles/ks_tests.dir/test_imports0.cpp.o
 [ 17%] Building CXX object CMakeFiles/ks_tests.dir/test_imports_abs_abs.cpp.o
 [ 17%] Building CXX object CMakeFiles/ks_tests.dir/test_enum_for_unknown_id.cpp.o
 [ 17%] Building CXX object CMakeFiles/ks_tests.dir/test_expr_bytes_ops.cpp.o
 [ 17%] Building CXX object CMakeFiles/ks_tests.dir/test_instance_std_array.cpp.o
+[ 18%] Building CXX object CMakeFiles/ks_tests.dir/test_switch_integers.cpp.o
+[ 18%] Building CXX object CMakeFiles/ks_tests.dir/test_str_literals2.cpp.o
 In file included from /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_imports_abs_abs.cpp:2:0:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/imports_abs_abs.h:8:47: fatal error: /for_abs_imports/imported_and_abs.h: No such file or directory
  #include "/for_abs_imports/imported_and_abs.h"
                                                ^
 compilation terminated.
-[ 17%] Building CXX object CMakeFiles/ks_tests.dir/test_switch_integers.cpp.o
-[ 18%] Building CXX object CMakeFiles/ks_tests.dir/test_str_literals2.cpp.o
 [ 18%] Building CXX object CMakeFiles/ks_tests.dir/test_expr_bytes_literal.cpp.o
 [ 18%] Building CXX object CMakeFiles/ks_tests.dir/test_switch_manual_int_size.cpp.o
 /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_expr_bytes_literal.cpp:4:32: fatal error: expr_bytes_literal.h: No such file or directory
  #include "expr_bytes_literal.h"
                                 ^
 compilation terminated.
-[ 18%] Building CXX object CMakeFiles/ks_tests.dir/test_switch_integers2.cpp.o
+[ 19%] Building CXX object CMakeFiles/ks_tests.dir/test_switch_integers2.cpp.o
 [ 19%] Building CXX object CMakeFiles/ks_tests.dir/test_params_enum.cpp.o
 [ 19%] Building CXX object CMakeFiles/ks_tests.dir/test_valid_fail_range_int.cpp.o
 [ 19%] Building CXX object CMakeFiles/ks_tests.dir/test_repeat_until_calc_array_type.cpp.o
 [ 19%] Building CXX object CMakeFiles/ks_tests.dir/test_meta_xref.cpp.o
-make[2]: *** [CMakeFiles/ks_tests.dir/test_imports_abs_abs.cpp.o] Error 1
-[ 20%] Building CXX object CMakeFiles/ks_tests.dir/test_term_strz.cpp.o
 In file included from /usr/include/boost/test/unit_test.hpp:19:0,
                  from /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_switch_manual_int_size.cpp:3:
 /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_switch_manual_int_size.cpp: In member function ‘void test_switch_manual_int_size::test_method()’:
@@ -372,15 +453,17 @@ In file included from /usr/include/c++/4.8/string:52:0,
        ^
 /usr/include/c++/4.8/bits/basic_string.h:437:7: note:   candidate expects 0 arguments, 1 provided
 make[2]: *** [CMakeFiles/ks_tests.dir/test_switch_manual_int_size.cpp.o] Error 1
+[ 20%] Building CXX object CMakeFiles/ks_tests.dir/test_term_strz.cpp.o
+make[2]: *** [CMakeFiles/ks_tests.dir/test_imports_abs_abs.cpp.o] Error 1
 [ 20%] Building CXX object CMakeFiles/ks_tests.dir/test_expr_bits.cpp.o
 [ 20%] Building CXX object CMakeFiles/ks_tests.dir/test_process_custom_no_args.cpp.o
 [ 20%] Building CXX object CMakeFiles/ks_tests.dir/test_combine_enum.cpp.o
-[ 20%] Building CXX object CMakeFiles/ks_tests.dir/test_enum_deep.cpp.o
+[ 21%] Building CXX object CMakeFiles/ks_tests.dir/test_enum_deep.cpp.o
 [ 21%] Building CXX object CMakeFiles/ks_tests.dir/test_repeat_n_struct.cpp.o
 make[2]: *** [CMakeFiles/ks_tests.dir/test_expr_bytes_literal.cpp.o] Error 1
 [ 21%] Building CXX object CMakeFiles/ks_tests.dir/test_nav_parent.cpp.o
 [ 21%] Building CXX object CMakeFiles/ks_tests.dir/test_eof_exception_bytes.cpp.o
-[ 21%] Building CXX object CMakeFiles/ks_tests.dir/test_docstrings.cpp.o
+[ 22%] Building CXX object CMakeFiles/ks_tests.dir/test_docstrings.cpp.o
 [ 22%] Building CXX object CMakeFiles/ks_tests.dir/test_valid_fail_contents.cpp.o
 [ 22%] Building CXX object CMakeFiles/ks_tests.dir/test_str_literals.cpp.o
 [ 22%] Building CXX object CMakeFiles/ks_tests.dir/test_default_big_endian.cpp.o
@@ -389,11 +472,11 @@ make[2]: *** [CMakeFiles/ks_tests.dir/test_expr_bytes_literal.cpp.o] Error 1
 [ 23%] Building CXX object CMakeFiles/ks_tests.dir/test_yaml_ints.cpp.o
 [ 23%] Building CXX object CMakeFiles/ks_tests.dir/test_switch_manual_int.cpp.o
 [ 23%] Building CXX object CMakeFiles/ks_tests.dir/test_repeat_until_s4.cpp.o
-[ 23%] Building CXX object CMakeFiles/ks_tests.dir/test_position_to_end.cpp.o
+[ 24%] Building CXX object CMakeFiles/ks_tests.dir/test_position_to_end.cpp.o
 [ 24%] Building CXX object CMakeFiles/ks_tests.dir/test_switch_cast.cpp.o
 [ 24%] Building CXX object CMakeFiles/ks_tests.dir/test_expr_calc_array_ops.cpp.o
 [ 24%] Building CXX object CMakeFiles/ks_tests.dir/test_default_endian_mod.cpp.o
-[ 24%] Building CXX object CMakeFiles/ks_tests.dir/test_switch_manual_int_size_eos.cpp.o
+[ 25%] Building CXX object CMakeFiles/ks_tests.dir/test_switch_manual_int_size_eos.cpp.o
 [ 25%] Building CXX object CMakeFiles/ks_tests.dir/test_instance_io_user.cpp.o
 [ 25%] Building CXX object CMakeFiles/ks_tests.dir/test_bits_simple_le.cpp.o
 [ 25%] Building CXX object CMakeFiles/ks_tests.dir/test_nav_parent_switch_cast.cpp.o
@@ -406,7 +489,7 @@ compilation terminated.
 [ 26%] Building CXX object CMakeFiles/ks_tests.dir/test_enum_0.cpp.o
 [ 26%] Building CXX object CMakeFiles/ks_tests.dir/test_params_pass_struct.cpp.o
 [ 26%] Building CXX object CMakeFiles/ks_tests.dir/test_valid_fail_min_int.cpp.o
-[ 26%] Building CXX object CMakeFiles/ks_tests.dir/test_optional_id.cpp.o
+[ 27%] Building CXX object CMakeFiles/ks_tests.dir/test_optional_id.cpp.o
 [ 27%] Building CXX object CMakeFiles/ks_tests.dir/test_expr_io_pos.cpp.o
 [ 27%] Building CXX object CMakeFiles/ks_tests.dir/test_expr_sizeof_type_0.cpp.o
 make[2]: *** [CMakeFiles/ks_tests.dir/test_expr_calc_array_ops.cpp.o] Error 1
@@ -420,7 +503,7 @@ make[2]: *** [CMakeFiles/ks_tests.dir/test_expr_calc_array_ops.cpp.o] Error 1
 [ 29%] Building CXX object CMakeFiles/ks_tests.dir/test_nested_types2.cpp.o
 [ 29%] Building CXX object CMakeFiles/ks_tests.dir/test_valid_short.cpp.o
 [ 29%] Building CXX object CMakeFiles/ks_tests.dir/test_float_to_i.cpp.o
-[ 29%] Building CXX object CMakeFiles/ks_tests.dir/test_zlib_with_header_78.cpp.o
+[ 30%] Building CXX object CMakeFiles/ks_tests.dir/test_zlib_with_header_78.cpp.o
 [ 30%] Building CXX object CMakeFiles/ks_tests.dir/test_expr_ops_parens.cpp.o
 [ 30%] Building CXX object CMakeFiles/ks_tests.dir/test_combine_str.cpp.o
 [ 30%] Building CXX object CMakeFiles/ks_tests.dir/test_default_bit_endian_mod.cpp.o
@@ -433,25 +516,25 @@ make[2]: *** [CMakeFiles/ks_tests.dir/test_expr_calc_array_ops.cpp.o] Error 1
 [ 32%] Building CXX object CMakeFiles/ks_tests.dir/test_bits_enum.cpp.o
 [ 32%] Building CXX object CMakeFiles/ks_tests.dir/test_instance_std.cpp.o
 [ 32%] Building CXX object CMakeFiles/ks_tests.dir/test_switch_manual_enum.cpp.o
-[ 32%] Building CXX object CMakeFiles/ks_tests.dir/test_str_eos.cpp.o
+[ 33%] Building CXX object CMakeFiles/ks_tests.dir/test_str_eos.cpp.o
 [ 33%] Building CXX object CMakeFiles/ks_tests.dir/test_valid_long.cpp.o
 [ 33%] Building CXX object CMakeFiles/ks_tests.dir/test_imports_abs_rel.cpp.o
 [ 33%] Building CXX object CMakeFiles/ks_tests.dir/test_str_pad_term.cpp.o
 [ 33%] Building CXX object CMakeFiles/ks_tests.dir/test_nested_types3.cpp.o
 [ 34%] Building CXX object CMakeFiles/ks_tests.dir/test_recursive_one.cpp.o
 [ 34%] Building CXX object CMakeFiles/ks_tests.dir/test_nested_same_name2.cpp.o
+[ 34%] Building CXX object CMakeFiles/ks_tests.dir/test_process_to_user.cpp.o
 In file included from /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_imports_abs_rel.cpp:2:0:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/imports_abs_rel.h:8:47: fatal error: /for_abs_imports/imported_and_rel.h: No such file or directory
  #include "/for_abs_imports/imported_and_rel.h"
                                                ^
 compilation terminated.
-[ 34%] Building CXX object CMakeFiles/ks_tests.dir/test_process_to_user.cpp.o
 [ 34%] Building CXX object CMakeFiles/ks_tests.dir/test_switch_bytearray.cpp.o
 [ 35%] Building CXX object CMakeFiles/ks_tests.dir/test_valid_switch.cpp.o
 [ 35%] Building CXX object CMakeFiles/ks_tests.dir/test_str_pad_term_empty.cpp.o
 [ 35%] Building CXX object CMakeFiles/ks_tests.dir/test_repeat_eos_bit.cpp.o
 [ 35%] Building CXX object CMakeFiles/ks_tests.dir/test_switch_else_only.cpp.o
-[ 35%] Building CXX object CMakeFiles/ks_tests.dir/test_multiple_use.cpp.o
+[ 36%] Building CXX object CMakeFiles/ks_tests.dir/test_multiple_use.cpp.o
 [ 36%] Building CXX object CMakeFiles/ks_tests.dir/test_process_repeat_usertype.cpp.o
 [ 36%] Building CXX object CMakeFiles/ks_tests.dir/test_str_encodings.cpp.o
 [ 36%] Building CXX object CMakeFiles/ks_tests.dir/test_valid_not_parsed_if.cpp.o
@@ -501,11 +584,11 @@ make[2]: *** [CMakeFiles/ks_tests.dir/test_imports_abs_rel.cpp.o] Error 1
 [ 46%] Building CXX object CMakeFiles/ks_tests.dir/test_params_pass_array_int.cpp.o
 [ 46%] Building CXX object CMakeFiles/ks_tests.dir/test_switch_manual_int_else.cpp.o
 [ 47%] Building CXX object CMakeFiles/ks_tests.dir/test_valid_fail_inst.cpp.o
+[ 47%] Building CXX object CMakeFiles/ks_tests.dir/test_nav_parent3.cpp.o
 /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_params_pass_array_int.cpp:4:35: fatal error: params_pass_array_int.h: No such file or directory
  #include "params_pass_array_int.h"
                                    ^
 compilation terminated.
-[ 47%] Building CXX object CMakeFiles/ks_tests.dir/test_nav_parent3.cpp.o
 [ 47%] Building CXX object CMakeFiles/ks_tests.dir/test_process_coerce_switch.cpp.o
 [ 47%] Building CXX object CMakeFiles/ks_tests.dir/test_switch_multi_bool_ops.cpp.o
 [ 47%] Building CXX object CMakeFiles/ks_tests.dir/test_params_pass_array_struct.cpp.o
@@ -599,8 +682,8 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
 [ 59%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/combine_bool.cpp.o
 [ 59%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/params_pass_struct.cpp.o
 [ 60%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_deep.cpp.o
-make[2]: *** [CMakeFiles/ks_tests.dir/test_imports_abs.cpp.o] Error 1
 [ 60%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/switch_manual_int_size_eos.cpp.o
+make[2]: *** [CMakeFiles/ks_tests.dir/test_imports_abs.cpp.o] Error 1
 [ 60%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/default_big_endian.cpp.o
 [ 60%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/process_xor_value.cpp.o
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/expr_ops_parens.cpp: In member function ‘int32_t expr_ops_parens_t::str_concat_len()’:
@@ -726,7 +809,7 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
 [ 63%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/default_endian_expr_exception.cpp.o
 [ 63%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/switch_else_only.cpp.o
 [ 63%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/nav_parent_vs_value_inst.cpp.o
-[ 64%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/switch_manual_int_size_else.cpp.o
+[ 63%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/switch_manual_int_size_else.cpp.o
 [ 64%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/imports_circular_a.cpp.o
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_to_i_class_border_1.cpp: In member function ‘enum_to_i_class_border_2_t* enum_to_i_class_border_1_t::checker()’:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_to_i_class_border_1.cpp:40:62: error: no matching function for call to ‘enum_to_i_class_border_2_t::enum_to_i_class_border_2_t(enum_to_i_class_border_1_t*, kaitai::kstream*&)’
@@ -762,9 +845,10 @@ In file included from /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp
 [ 66%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/process_xor4_const.cpp.o
 [ 66%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/yaml_ints.cpp.o
 [ 66%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/str_encodings_default.cpp.o
-[ 67%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/expr_3.cpp.o
+[ 66%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/expr_3.cpp.o
 [ 67%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_to_i.cpp.o
 [ 67%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/hello_world.cpp.o
+[ 67%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/expr_io_pos.cpp.o
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/yaml_ints.cpp: In member function ‘int32_t yaml_ints_t::test_u8_dec()’:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/yaml_ints.cpp:41:19: warning: overflow in implicit constant conversion [-Woverflow]
      m_test_u8_dec = 18446744073709551615ULL;
@@ -773,7 +857,6 @@ In file included from /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/yaml_ints.cpp:49:19: warning: overflow in implicit constant conversion [-Woverflow]
      m_test_u8_hex = 18446744073709551615ULL;
                    ^
-[ 67%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/expr_io_pos.cpp.o
 [ 67%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/switch_manual_enum_invalid_else.cpp.o
 [ 68%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/bytes_pad_term.cpp.o
 [ 68%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/nested_types3.cpp.o
@@ -783,7 +866,7 @@ In file included from /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp
 [ 69%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/imports_circular_b.cpp.o
 [ 69%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/switch_integers2.cpp.o
 [ 69%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/switch_integers.cpp.o
-[ 70%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/process_coerce_usertype2.cpp.o
+[ 69%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/process_coerce_usertype2.cpp.o
 [ 70%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_negative.cpp.o
 [ 70%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/process_custom.cpp.o
 [ 70%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/opaque_external_type.cpp.o
@@ -795,23 +878,23 @@ In file included from /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp
 [ 72%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/repeat_eos_bit.cpp.o
 [ 72%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/nav_parent2.cpp.o
 [ 72%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/imports_rel_1.cpp.o
+[ 72%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/valid_fail_min_int.cpp.o
+[ 72%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/nav_parent.cpp.o
 In file included from /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/imports_rel_1.cpp:4:0:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/imports_rel_1.h:8:40: fatal error: for_rel_imports/imported_1.h: No such file or directory
  #include "for_rel_imports/imported_1.h"
                                         ^
 compilation terminated.
-[ 72%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/valid_fail_min_int.cpp.o
-[ 73%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/nav_parent.cpp.o
 [ 73%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/integers_min_max.cpp.o
 [ 73%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/imports_abs_abs.cpp.o
 [ 73%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/debug_0.cpp.o
-make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/imports_rel_1.cpp.o] Error 1
-[ 73%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/io_local_var.cpp.o
 In file included from /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/imports_abs_abs.cpp:4:0:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/imports_abs_abs.h:8:47: fatal error: /for_abs_imports/imported_and_abs.h: No such file or directory
  #include "/for_abs_imports/imported_and_abs.h"
                                                ^
 compilation terminated.
+make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/imports_rel_1.cpp.o] Error 1
+[ 73%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/io_local_var.cpp.o
 [ 74%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_invalid.cpp.o
 [ 74%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/valid_fail_range_bytes.cpp.o
 [ 74%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/bits_simple.cpp.o
@@ -821,7 +904,7 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
 [ 75%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/switch_manual_str.cpp.o
 [ 75%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/params_pass_usertype.cpp.o
 [ 75%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/valid_fail_inst.cpp.o
-[ 76%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/non_standard.cpp.o
+[ 75%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/non_standard.cpp.o
 [ 76%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/process_repeat_bytes.cpp.o
 [ 76%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/if_struct.cpp.o
 [ 76%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/expr_if_int_ops.cpp.o
@@ -830,11 +913,11 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
 [ 77%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/recursive_one.cpp.o
 [ 77%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/process_to_user.cpp.o
 [ 77%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/switch_cast.cpp.o
-[ 78%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/if_values.cpp.o
+[ 77%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/if_values.cpp.o
 [ 78%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_to_i_class_border_2.cpp.o
 [ 78%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/vlq_base128_le.cpp.o
 [ 78%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/params_enum.cpp.o
-[ 79%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/debug_array_user.cpp.o
+[ 78%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/debug_array_user.cpp.o
 [ 79%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/nav_parent_override.cpp.o
 [ 79%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/meta_xref.cpp.o
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_to_i_class_border_2.cpp: In member function ‘bool enum_to_i_class_border_2_t::is_dog()’:
@@ -862,59 +945,60 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
 [ 80%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/expr_int_div.cpp.o
 [ 80%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/switch_bytearray.cpp.o
 [ 80%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_import.cpp.o
-[ 81%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/eof_exception_bytes.cpp.o
+[ 80%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/eof_exception_bytes.cpp.o
 [ 81%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/imports0.cpp.o
 [ 81%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/position_abs.cpp.o
 [ 81%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/nav_parent_false.cpp.o
-[ 82%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/imported_and_abs.cpp.o
+[ 81%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/imported_and_abs.cpp.o
 [ 82%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/type_ternary.cpp.o
 [ 82%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/debug_switch_user.cpp.o
+[ 82%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/js_signed_right_shift.cpp.o
+[ 82%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_fancy.cpp.o
 In file included from /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/imported_and_abs.cpp:4:0:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/imported_and_abs.h:8:28: fatal error: /imported_root.h: No such file or directory
  #include "/imported_root.h"
                             ^
 compilation terminated.
-[ 82%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/js_signed_right_shift.cpp.o
-[ 82%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_fancy.cpp.o
 [ 83%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/optional_id.cpp.o
 [ 83%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/valid_switch.cpp.o
 [ 83%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/repeat_until_s4.cpp.o
 make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/imported_and_abs.cpp.o] Error 1
 [ 83%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/default_bit_endian_mod.cpp.o
-[ 84%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/repeat_until_sized.cpp.o
+[ 83%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/repeat_until_sized.cpp.o
 [ 84%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/instance_std.cpp.o
 [ 84%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/position_in_seq.cpp.o
 [ 84%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_int_range_u.cpp.o
-[ 85%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/process_coerce_usertype1.cpp.o
+[ 84%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/process_coerce_usertype1.cpp.o
 [ 85%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_deep_literals.cpp.o
 [ 85%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/process_repeat_usertype.cpp.o
 [ 85%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/imports_abs_rel.cpp.o
 [ 85%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/nested_types2.cpp.o
+[ 86%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/str_literals.cpp.o
 In file included from /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/imports_abs_rel.cpp:4:0:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/imports_abs_rel.h:8:47: fatal error: /for_abs_imports/imported_and_rel.h: No such file or directory
  #include "/for_abs_imports/imported_and_rel.h"
                                                ^
 compilation terminated.
-[ 86%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/str_literals.cpp.o
 [ 86%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/nav_parent_switch.cpp.o
 [ 86%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/process_xor_const.cpp.o
-make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/imports_abs_rel.cpp.o] Error 1
 [ 86%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/valid_not_parsed_if.cpp.o
-[ 87%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/default_endian_expr_inherited.cpp.o
+make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/imports_abs_rel.cpp.o] Error 1
+[ 86%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/default_endian_expr_inherited.cpp.o
 [ 87%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/combine_bytes.cpp.o
 [ 87%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_0.cpp.o
 [ 87%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/valid_fail_range_float.cpp.o
-[ 88%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/valid_fail_eq_bytes.cpp.o
+[ 87%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/valid_fail_eq_bytes.cpp.o
 [ 88%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/nested_types.cpp.o
 [ 88%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/switch_repeat_expr.cpp.o
 [ 88%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/params_call_extra_parens.cpp.o
 [ 88%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/switch_manual_int_else.cpp.o
-[ 89%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/expr_enum.cpp.o
+[ 88%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/expr_enum.cpp.o
 [ 89%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/expr_1.cpp.o
 [ 89%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/opaque_with_param.cpp.o
 [ 89%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/combine_enum.cpp.o
-[ 90%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/term_strz.cpp.o
+[ 89%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/term_strz.cpp.o
 [ 90%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/index_to_param_until.cpp.o
+[ 90%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/switch_repeat_expr_invalid.cpp.o
 [ 90%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/index_sizes.cpp.o
 [ 90%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/expr_bytes_ops.cpp.o
 [ 91%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/process_custom_no_args.cpp.o
