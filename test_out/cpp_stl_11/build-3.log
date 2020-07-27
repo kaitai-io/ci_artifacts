@@ -2,7 +2,7 @@ Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
 Copyright (C) Microsoft Corporation. All rights reserved.
 
 Building the projects in this solution one at a time. To enable parallel build, please add the "/m" switch.
-Build started 7/27/2020 7:05:03 PM.
+Build started 7/27/2020 9:23:12 PM.
 Project "C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\KS_TEST_CPP_STL.sln" on node 1 (default targets).
 ValidateSolutionConfiguration:
   Building solution configuration "Debug|x64".
@@ -27,15 +27,9 @@ CustomBuild:
 VcpkgTripletSelection:
   Not using Vcpkg because VcpkgEnabled is "false"
 ClCompile:
-  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\bin\HostX86\x64\CL.exe /c /I"C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin" /I"C:\projects\ci-targets\tests\compiled\cpp_stl_11" /I"C:\projects\ci-targets\tests\spec\cpp_stl_11\..\..\..\runtime\cpp_stl" /I"C:\projects\ci-targets\tests\spec\cpp_stl_11\prereq" /I"C:\Tools\vcpkg\installed\x64-windows\include" /Zi /nologo /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D KS_ZLIB /D KS_STR_ENCODING_ICONV /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++14 /Fo"ks_tests.dir\Debug\\" /Fd"ks_tests.dir\Debug\vc141.pdb" /Gd /TP /errorReport:queue  /utf-8 "C:\projects\ci-targets\runtime\cpp_stl\kaitai\kaitaistream.cpp" "C:\projects\ci-targets\tests\compiled\cpp_stl_11\enum_long_range_u.cpp" "C:\projects\ci-targets\tests\compiled\cpp_stl_11\imports_circular_a.cpp" "C:\projects\ci-targets\tests\compiled\cpp_stl_11\index_sizes.cpp"
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\bin\HostX86\x64\CL.exe /c /I"C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin" /I"C:\projects\ci-targets\tests\compiled\cpp_stl_11" /I"C:\projects\ci-targets\tests\spec\cpp_stl_11\..\..\..\runtime\cpp_stl" /I"C:\projects\ci-targets\tests\spec\cpp_stl_11\prereq" /I"C:\Tools\vcpkg\installed\x64-windows\include" /Zi /nologo /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D KS_ZLIB /D KS_STR_ENCODING_ICONV /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++14 /Fo"ks_tests.dir\Debug\\" /Fd"ks_tests.dir\Debug\vc141.pdb" /Gd /TP /errorReport:queue  /utf-8 "C:\projects\ci-targets\runtime\cpp_stl\kaitai\kaitaistream.cpp"
   kaitaistream.cpp
 C:\projects\ci-targets\runtime\cpp_stl\kaitai\kaitaistream.cpp(526): warning C4267: '=': conversion from 'size_t' to 'uInt', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
-  enum_long_range_u.cpp
-c:\projects\ci-targets\tests\compiled\cpp_stl_11\enum_long_range_u.h(20): warning C4309: 'initializing': truncation of constant value [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
-c:\projects\ci-targets\tests\compiled\cpp_stl_11\enum_long_range_u.h(22): warning C4309: 'initializing': truncation of constant value [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
-  imports_circular_a.cpp
-  index_sizes.cpp
-  Generating Code...
 Link:
   C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\bin\HostX86\x64\link.exe /ERRORREPORT:QUEUE /OUT:"C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\Debug\ks_tests.exe" /INCREMENTAL /NOLOGO "C:\Tools\vcpkg\installed\x64-windows\debug\lib\boost_unit_test_framework-vc140-mt-gd.lib" "C:\Tools\vcpkg\installed\x64-windows\debug\lib\zlibd.lib" "C:\Tools\vcpkg\installed\x64-windows\debug\lib\libiconv.lib" kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/projects/ci-targets/tests/compiled/cpp_stl_11/bin/Debug/ks_tests.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/projects/ci-targets/tests/compiled/cpp_stl_11/bin/Debug/ks_tests.lib" /MACHINE:X64  /machine:x64 ks_tests.dir\Debug\kaitaistream.obj
   ks_tests.dir\Debug\my_custom_fx.obj
@@ -218,6 +212,7 @@ Link:
   ks_tests.dir\Debug\test_switch_manual_str.obj
   ks_tests.dir\Debug\test_switch_manual_str_else.obj
   ks_tests.dir\Debug\test_switch_multi_bool_ops.obj
+  ks_tests.dir\Debug\test_switch_repeat_expr.obj
   ks_tests.dir\Debug\test_switch_repeat_expr_invalid.obj
   ks_tests.dir\Debug\test_term_bytes.obj
   ks_tests.dir\Debug\test_term_strz.obj
@@ -484,8 +479,6 @@ Build FAILED.
 "C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj" (default target) (4) ->
 (ClCompile target) -> 
   C:\projects\ci-targets\runtime\cpp_stl\kaitai\kaitaistream.cpp(526): warning C4267: '=': conversion from 'size_t' to 'uInt', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
-  c:\projects\ci-targets\tests\compiled\cpp_stl_11\enum_long_range_u.h(20): warning C4309: 'initializing': truncation of constant value [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
-  c:\projects\ci-targets\tests\compiled\cpp_stl_11\enum_long_range_u.h(22): warning C4309: 'initializing': truncation of constant value [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
 
 
 "C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\KS_TEST_CPP_STL.sln" (default target) (1) ->
@@ -513,7 +506,7 @@ Build FAILED.
   test_repeat_until_calc_array_type.obj : error LNK2019: unresolved external symbol "public: __cdecl repeat_until_calc_array_type_t::repeat_until_calc_array_type_t(class kaitai::kstream *,class kaitai::kstruct *,class repeat_until_calc_array_type_t *)" (??0repeat_until_calc_array_type_t@@QEAA@PEAVkstream@kaitai@@PEAVkstruct@2@PEAV0@@Z) referenced in function "public: void __cdecl test_repeat_until_calc_array_type::test_method(void)" (?test_method@test_repeat_until_calc_array_type@@QEAAXXZ) [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
   C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\Debug\ks_tests.exe : fatal error LNK1120: 19 unresolved externals [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
 
-    3 Warning(s)
+    1 Warning(s)
     20 Error(s)
 
-Time Elapsed 00:00:06.77
+Time Elapsed 00:00:05.26
