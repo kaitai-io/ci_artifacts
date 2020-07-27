@@ -104,13 +104,15 @@ make[2]: *** [CMakeFiles/ks_tests.dir/test_imports_abs_abs.cpp.o] Error 1
 [ 18%] Building CXX object CMakeFiles/ks_tests.dir/test_switch_integers2.cpp.o
 [ 19%] Building CXX object CMakeFiles/ks_tests.dir/test_params_enum.cpp.o
 [ 19%] Building CXX object CMakeFiles/ks_tests.dir/test_valid_fail_range_int.cpp.o
+[ 19%] Building CXX object CMakeFiles/ks_tests.dir/test_repeat_until_calc_array_type.cpp.o
 /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/test_expr_bytes_literal.cpp:4:10: fatal error: 'expr_bytes_literal.h' file not found
 #include "expr_bytes_literal.h"
          ^~~~~~~~~~~~~~~~~~~~~~
 1 error generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/test_expr_bytes_literal.cpp.o] Error 1
-[ 19%] Building CXX object CMakeFiles/ks_tests.dir/test_repeat_until_calc_array_type.cpp.o
 [ 19%] Building CXX object CMakeFiles/ks_tests.dir/test_meta_xref.cpp.o
+[ 20%] Building CXX object CMakeFiles/ks_tests.dir/test_term_strz.cpp.o
+[ 20%] Building CXX object CMakeFiles/ks_tests.dir/test_expr_bits.cpp.o
 /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/test_switch_manual_int_size.cpp:22:23: error: no matching conversion for static_cast from 'kaitai::kstruct *' to 'std::string' (aka 'basic_string<char>')
     BOOST_CHECK_EQUAL(static_cast<std::string>(r->chunks()->at(2)->body()), std::string("\x10\x20\x30\x40\x50\x60\x70\x80", 8));
                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -124,8 +126,7 @@ make[2]: *** [CMakeFiles/ks_tests.dir/test_expr_bytes_literal.cpp.o] Error 1
 #    define BOOST_PP_SEQ_FOR_EACH(macro, data, seq) BOOST_PP_FOR((macro, data, seq (nil)), BOOST_PP_SEQ_FOR_EACH_P, BOOST_PP_SEQ_FOR_EACH_O, BOOST_PP_SEQ_FOR_EACH_M)
                                                                                ^~~
 note: (skipping 10 expansions in backtrace; use -fmacro-backtrace-limit=0 to see all)
-/usr/include/boost/preprocessor/seq/elem.hpp[ 20%] Building CXX object CMakeFiles/ks_tests.dir/test_term_strz.cpp.o
-:43:60: note: expanded from macro 'BOOST_PP_SEQ_ELEM_II'
+/usr/include/boost/preprocessor/seq/elem.hpp:43:60: note: expanded from macro 'BOOST_PP_SEQ_ELEM_II'
 #    define BOOST_PP_SEQ_ELEM_II(im) BOOST_PP_SEQ_ELEM_III(im)
                                                            ^~
 /usr/include/boost/preprocessor/seq/elem.hpp:44:41: note: expanded from macro 'BOOST_PP_SEQ_ELEM_III'
@@ -144,8 +145,7 @@ note: (skipping 10 expansions in backtrace; use -fmacro-backtrace-limit=0 to see
       basic_string(const _CharT* __s, const _Alloc& __a = _Alloc());
       ^
 /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/bits/basic_string.h:507:7: note: candidate constructor not viable: no known conversion from 'kaitai::kstruct *' to 'std::basic_string<char>' for 1st argument
-      basic_string(basic_string&& __str) noexcept[ 20%] Building CXX object CMakeFiles/ks_tests.dir/test_expr_bits.cpp.o
-
+      basic_string(basic_string&& __str) noexcept
       ^
 /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/bits/basic_string.h:522:7: note: candidate constructor not viable: no known conversion from 'kaitai::kstruct *' to 'initializer_list<char>' for 1st argument
       basic_string(initializer_list<_CharT> __l, const _Alloc& __a = _Alloc());
@@ -288,13 +288,13 @@ make[2]: *** [CMakeFiles/ks_tests.dir/test_switch_manual_int_size.cpp.o] Error 1
 [ 34%] Building CXX object CMakeFiles/ks_tests.dir/test_nested_same_name2.cpp.o
 [ 34%] Building CXX object CMakeFiles/ks_tests.dir/test_process_to_user.cpp.o
 [ 34%] Building CXX object CMakeFiles/ks_tests.dir/test_switch_bytearray.cpp.o
+[ 34%] Building CXX object CMakeFiles/ks_tests.dir/test_valid_switch.cpp.o
 In file included from /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/test_imports_abs_rel.cpp:2:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/imports_abs_rel.h:8:10: fatal error: '/for_abs_imports/imported_and_rel.h' file not found
 #include "/for_abs_imports/imported_and_rel.h"
          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 1 error generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/test_imports_abs_rel.cpp.o] Error 1
-[ 34%] Building CXX object CMakeFiles/ks_tests.dir/test_valid_switch.cpp.o
 [ 35%] Building CXX object CMakeFiles/ks_tests.dir/test_str_pad_term_empty.cpp.o
 [ 35%] Building CXX object CMakeFiles/ks_tests.dir/test_repeat_eos_bit.cpp.o
 [ 35%] Building CXX object CMakeFiles/ks_tests.dir/test_switch_else_only.cpp.o
@@ -320,30 +320,6 @@ make[2]: *** [CMakeFiles/ks_tests.dir/test_imports_abs_rel.cpp.o] Error 1
 [ 40%] Building CXX object CMakeFiles/ks_tests.dir/test_params_call_extra_parens.cpp.o
 [ 40%] Building CXX object CMakeFiles/ks_tests.dir/test_enum_int_range_u.cpp.o
 [ 40%] Building CXX object CMakeFiles/ks_tests.dir/test_process_xor4_value.cpp.o
-/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/test_switch_repeat_expr.cpp:16:23: error: cannot cast from type '__gnu_cxx::__alloc_traits<std::allocator<std::unique_ptr<kaitai::kstruct, std::default_delete<kaitai::kstruct> > > >::value_type' (aka 'std::unique_ptr<kaitai::kstruct, std::default_delete<kaitai::kstruct> >') to pointer type 'switch_repeat_expr_t::one_t *'
-    BOOST_CHECK_EQUAL(static_cast<switch_repeat_expr_t::one_t*>(r->body()->at(0))->first(), std::string("\x53\x74\x75\x66\x66\x00\x4D\x65\x00", 9));
-                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/usr/include/boost/test/test_tools.hpp:169:109: note: expanded from macro 'BOOST_CHECK_EQUAL'
-    BOOST_CHECK_WITH_ARGS_IMPL( ::boost::test_tools::tt_detail::equal_impl_frwd(), "", CHECK, CHECK_EQUAL, (L)(R) )
-                                                                                                            ^
-/usr/include/boost/test/test_tools.hpp:103:59: note: expanded from macro 'BOOST_CHECK_WITH_ARGS_IMPL'
-    BOOST_PP_SEQ_FOR_EACH( BOOST_TEST_PASS_ARG_INFO, '_', ARGS ) ); \
-                                                          ^~~~
-/usr/include/boost/preprocessor/seq/for_each.hpp:26:80: note: expanded from macro 'BOOST_PP_SEQ_FOR_EACH'
-#    define BOOST_PP_SEQ_FOR_EACH(macro, data, seq) BOOST_PP_FOR((macro, data, seq (nil)), BOOST_PP_SEQ_FOR_EACH_P, BOOST_PP_SEQ_FOR_EACH_O, BOOST_PP_SEQ_FOR_EACH_M)
-                                                                               ^~~
-note: (skipping 10 expansions in backtrace; use -fmacro-backtrace-limit=0 to see all)
-/usr/include/boost/preprocessor/seq/elem.hpp:43:60: note: expanded from macro 'BOOST_PP_SEQ_ELEM_II'
-#    define BOOST_PP_SEQ_ELEM_II(im) BOOST_PP_SEQ_ELEM_III(im)
-                                                           ^~
-/usr/include/boost/preprocessor/seq/elem.hpp:44:41: note: expanded from macro 'BOOST_PP_SEQ_ELEM_III'
-#    define BOOST_PP_SEQ_ELEM_III(x, _) x
-                                        ^
-/usr/include/boost/test/test_tools.hpp:97:52: note: expanded from macro 'BOOST_TEST_PASS_ARG_INFO'
-#define BOOST_TEST_PASS_ARG_INFO( r, data, arg ) , arg, BOOST_STRINGIZE( arg )
-                                                   ^~~
-1 error generated.
-make[2]: *** [CMakeFiles/ks_tests.dir/test_switch_repeat_expr.cpp.o] Error 1
 [ 40%] Building CXX object CMakeFiles/ks_tests.dir/test_process_coerce_bytes.cpp.o
 [ 40%] Building CXX object CMakeFiles/ks_tests.dir/test_valid_fail_expr.cpp.o
 [ 41%] Building CXX object CMakeFiles/ks_tests.dir/test_nav_parent_switch.cpp.o
@@ -381,9 +357,9 @@ make[2]: *** [CMakeFiles/ks_tests.dir/test_switch_repeat_expr.cpp.o] Error 1
 /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/test_process_coerce_switch.cpp:4:10: fatal error: 'process_coerce_switch.h' file not found
 #include "process_coerce_switch.h"
          ^~~~~~~~~~~~~~~~~~~~~~~~~
-[ 48%] Building CXX object CMakeFiles/ks_tests.dir/test_index_to_param_expr.cpp.o
 1 error generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/test_process_coerce_switch.cpp.o] Error 1
+[ 48%] Building CXX object CMakeFiles/ks_tests.dir/test_index_to_param_expr.cpp.o
 [ 48%] Building CXX object CMakeFiles/ks_tests.dir/test_default_endian_expr_inherited.cpp.o
 [ 48%] Building CXX object CMakeFiles/ks_tests.dir/test_position_abs.cpp.o
 [ 49%] Building CXX object CMakeFiles/ks_tests.dir/test_cast_to_top.cpp.o
@@ -425,9 +401,9 @@ make[2]: *** [CMakeFiles/ks_tests.dir/test_imports_abs.cpp.o] Error 1
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_pass_array_int.h:27:11: note: candidate constructor (the implicit copy constructor) not viable: requires 1 argument, but 4 were provided
     class wants_ints_t : public kaitai::kstruct {
           ^
+[ 54%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nested_same_name2.cpp.o
 1 error generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_pass_array_int.cpp.o] Error 1
-[ 54%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nested_same_name2.cpp.o
 [ 54%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/opaque_external_type_02_parent.cpp.o
 [ 55%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/zlib_surrounded.cpp.o
 [ 55%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/cast_to_top.cpp.o
@@ -454,7 +430,6 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
 [ 60%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_int_size_eos.cpp.o
 [ 60%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/default_big_endian.cpp.o
 [ 60%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/process_xor_value.cpp.o
-[ 60%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/repeat_n_struct.cpp.o
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/expr_ops_parens.cpp:100:37: error: invalid operands to binary expression ('std::string' (aka 'basic_string<char>') and 'std::basic_string<char, std::char_traits<char>, std::allocator<char> >::size_type' (aka 'unsigned long'))
     m_str_concat_len = str_0_to_4() + str_5_to_9().length();
                        ~~~~~~~~~~~~ ^ ~~~~~~~~~~~~~~~~~~~~~
@@ -505,6 +480,7 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
     ^
 1 error generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/expr_ops_parens.cpp.o] Error 1
+[ 60%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/repeat_n_struct.cpp.o
 [ 60%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/multiple_use.cpp.o
 [ 61%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/expr_calc_array_ops.cpp.o
 [ 61%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/repeat_n_strz_double.cpp.o
@@ -559,8 +535,8 @@ In file included from /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/yaml_ints.cpp:49:21: warning: implicit conversion from 'unsigned long long' to 'int32_t' (aka 'int') changes value from 18446744073709551615 to -1 [-Wconstant-conversion]
     m_test_u8_hex = 18446744073709551615ULL;
                   ~ ^~~~~~~~~~~~~~~~~~~~~~~
-2 warnings generated.
 [ 67%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/expr_io_pos.cpp.o
+2 warnings generated.
 [ 67%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_enum_invalid_else.cpp.o
 [ 67%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/bytes_pad_term.cpp.o
 [ 68%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nested_types3.cpp.o
@@ -606,12 +582,12 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
 [ 74%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/expr_0.cpp.o
 [ 74%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/default_endian_expr_is_be.cpp.o
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/io_local_var.cpp:17:72: warning: comparison of unsigned expression < 0 is always false [-Wtautological-compare]
-    if (static_cast<io_local_var_t::dummy_t*>(mess_up())->_io()->pos() < 0) {
+    if (static_cast<io_local_var_t::dummy_t*>(mess_up())->_io()->pos() < 0) {[ 75%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_str.cpp.o
+
         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ^ ~
-[ 75%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/switch_manual_str.cpp.o
+1 warning generated.
 [ 75%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_pass_usertype.cpp.o
 [ 75%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/valid_fail_inst.cpp.o
-1 warning generated.
 [ 75%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/non_standard.cpp.o
 [ 75%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/process_repeat_bytes.cpp.o
 [ 76%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/if_struct.cpp.o
@@ -706,7 +682,6 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
 /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/bits/unique_ptr.h:151:7: note: candidate constructor not viable: requires 2 arguments, but 1 was provided
       unique_ptr(pointer __p,
       ^
-[ 83%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/repeat_until_sized.cpp.o
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/debug_switch_user.cpp:24:9: error: no matching conversion for static_cast from 'std::unique_ptr<kaitai::kstruct>' to 'std::unique_ptr<two_t>'
         static_cast<std::unique_ptr<two_t>>(m_data)->_read();
         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -737,9 +712,10 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
 /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/bits/unique_ptr.h:151:7: note: candidate constructor not viable: requires 2 arguments, but 1 was provided
       unique_ptr(pointer __p,
       ^
+[ 83%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/repeat_until_sized.cpp.o
+[ 83%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/instance_std.cpp.o
 2 errors generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/debug_switch_user.cpp.o] Error 1
-[ 83%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/instance_std.cpp.o
 [ 84%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/position_in_seq.cpp.o
 [ 84%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/enum_int_range_u.cpp.o
 [ 84%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/process_coerce_usertype1.cpp.o
@@ -817,6 +793,7 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
 [ 98%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/process_xor4_value.cpp.o
 [ 98%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/fixed_struct.cpp.o
 [ 98%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/expr_array.cpp.o
+[ 98%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/zlib_with_header_78.cpp.o
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_pass_array_usertype.cpp:21:55: error: no matching constructor for initialization of 'params_pass_array_usertype_t::param_type_t'
     m_pass_blocks = std::unique_ptr<param_type_t>(new param_type_t(blocks(), m__io, this, m__root));
                                                       ^            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -827,7 +804,6 @@ make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tes
     class param_type_t : public kaitai::kstruct {
           ^
 1 error generated.
-[ 98%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/zlib_with_header_78.cpp.o
 make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_pass_array_usertype.cpp.o] Error 1
 [ 99%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/docstrings_docref.cpp.o
 [ 99%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/eos_exception_bytes.cpp.o
