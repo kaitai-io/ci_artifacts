@@ -2,7 +2,7 @@ Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
 Copyright (C) Microsoft Corporation. All rights reserved.
 
 Building the projects in this solution one at a time. To enable parallel build, please add the "/m" switch.
-Build started 7/30/2020 10:21:59 PM.
+Build started 7/30/2020 11:12:26 PM.
 Project "C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\KS_TEST_CPP_STL.sln" on node 1 (default targets).
 ValidateSolutionConfiguration:
   Building solution configuration "Debug|x64".
@@ -34,11 +34,14 @@ Link:
   ks_tests.dir\Debug\custom_fx.obj
   ks_tests.dir\Debug\custom_fx_no_args.obj
   ks_tests.dir\Debug\main.obj
+  ks_tests.dir\Debug\test_bcd_user_type_be.obj
+  ks_tests.dir\Debug\test_bcd_user_type_le.obj
   ks_tests.dir\Debug\test_bits_byte_aligned.obj
   ks_tests.dir\Debug\test_bits_enum.obj
   ks_tests.dir\Debug\test_bits_seq_endian_combo.obj
   ks_tests.dir\Debug\test_bits_simple.obj
   ks_tests.dir\Debug\test_bits_simple_le.obj
+  ks_tests.dir\Debug\test_buffered_struct.obj
   ks_tests.dir\Debug\test_bytes_pad_term.obj
   ks_tests.dir\Debug\test_cast_nested.obj
   ks_tests.dir\Debug\test_cast_to_imported.obj
@@ -78,8 +81,11 @@ Link:
   ks_tests.dir\Debug\test_enum_to_i.obj
   ks_tests.dir\Debug\test_eof_exception_bytes.obj
   ks_tests.dir\Debug\test_eof_exception_u4.obj
+  ks_tests.dir\Debug\test_eos_exception_bytes.obj
+  ks_tests.dir\Debug\test_eos_exception_u4.obj
   ks_tests.dir\Debug\test_expr_0.obj
   ks_tests.dir\Debug\test_expr_1.obj
+  ks_tests.dir\Debug\test_expr_2.obj
   ks_tests.dir\Debug\test_expr_3.obj
   ks_tests.dir\Debug\test_expr_array.obj
   ks_tests.dir\Debug\test_expr_bits.obj
@@ -89,10 +95,13 @@ Link:
   ks_tests.dir\Debug\test_expr_enum.obj
   ks_tests.dir\Debug\test_expr_if_int_ops.obj
   ks_tests.dir\Debug\test_expr_int_div.obj
+  ks_tests.dir\Debug\test_expr_io_eof.obj
+  ks_tests.dir\Debug\test_expr_io_pos.obj
   ks_tests.dir\Debug\test_expr_mod.obj
   ks_tests.dir\Debug\test_expr_sizeof_type_0.obj
   ks_tests.dir\Debug\test_expr_sizeof_type_1.obj
   ks_tests.dir\Debug\test_expr_sizeof_value_0.obj
+  ks_tests.dir\Debug\test_expr_sizeof_value_sized.obj
   ks_tests.dir\Debug\test_expr_str_ops.obj
   ks_tests.dir\Debug\test_fixed_contents.obj
   ks_tests.dir\Debug\test_fixed_struct.obj
@@ -108,11 +117,13 @@ Link:
   ks_tests.dir\Debug\test_index_to_param_eos.obj
   ks_tests.dir\Debug\test_index_to_param_expr.obj
   ks_tests.dir\Debug\test_index_to_param_until.obj
+  ks_tests.dir\Debug\test_instance_io_user.obj
   ks_tests.dir\Debug\test_instance_std.obj
   ks_tests.dir\Debug\test_instance_std_array.obj
   ks_tests.dir\Debug\test_instance_user_array.obj
   ks_tests.dir\Debug\test_integers.obj
   ks_tests.dir\Debug\test_integers_min_max.obj
+  ks_tests.dir\Debug\test_io_local_var.obj
   ks_tests.dir\Debug\test_js_signed_right_shift.obj
   ks_tests.dir\Debug\test_meta_tags.obj
   ks_tests.dir\Debug\test_meta_xref.obj
@@ -149,11 +160,14 @@ Link:
   ks_tests.dir\Debug\test_position_in_seq.obj
   ks_tests.dir\Debug\test_position_to_end.obj
   ks_tests.dir\Debug\test_process_coerce_bytes.obj
+  ks_tests.dir\Debug\test_process_coerce_usertype1.obj
+  ks_tests.dir\Debug\test_process_coerce_usertype2.obj
   ks_tests.dir\Debug\test_process_custom.obj
   ks_tests.dir\Debug\test_process_custom_no_args.obj
   ks_tests.dir\Debug\test_process_repeat_bytes.obj
   ks_tests.dir\Debug\test_process_repeat_usertype.obj
   ks_tests.dir\Debug\test_process_rotate.obj
+  ks_tests.dir\Debug\test_process_to_user.obj
   ks_tests.dir\Debug\test_process_xor4_const.obj
   ks_tests.dir\Debug\test_process_xor4_value.obj
   ks_tests.dir\Debug\test_process_xor_const.obj
@@ -183,8 +197,10 @@ Link:
   ks_tests.dir\Debug\test_switch_manual_enum.obj
   ks_tests.dir\Debug\test_switch_manual_enum_invalid.obj
   ks_tests.dir\Debug\test_switch_manual_enum_invalid_else.obj
-  ks_tests.dir\Debug\test_switch_manual_int.obj
   ks_tests.dir\Debug\test_switch_manual_int_else.obj
+  ks_tests.dir\Debug\test_switch_manual_int_size.obj
+  ks_tests.dir\Debug\test_switch_manual_int_size_else.obj
+  ks_tests.dir\Debug\test_switch_manual_int_size_eos.obj
   ks_tests.dir\Debug\test_switch_manual_str.obj
   ks_tests.dir\Debug\test_switch_manual_str_else.obj
   ks_tests.dir\Debug\test_switch_multi_bool_ops.obj
@@ -194,7 +210,10 @@ Link:
   ks_tests.dir\Debug\test_term_strz.obj
   ks_tests.dir\Debug\test_ts_packet_header.obj
   ks_tests.dir\Debug\test_type_int_unary_op.obj
+  ks_tests.dir\Debug\test_type_ternary.obj
   ks_tests.dir\Debug\test_type_ternary_2nd_falsy.obj
+  ks_tests.dir\Debug\test_type_ternary_opaque.obj
+  ks_tests.dir\Debug\test_user_type.obj
   ks_tests.dir\Debug\test_valid_fail_anyof_int.obj
   ks_tests.dir\Debug\test_valid_fail_contents.obj
   ks_tests.dir\Debug\test_valid_fail_eq_bytes.obj
@@ -212,11 +231,15 @@ Link:
   ks_tests.dir\Debug\test_valid_short.obj
   ks_tests.dir\Debug\test_valid_switch.obj
   ks_tests.dir\Debug\test_yaml_ints.obj
+  ks_tests.dir\Debug\test_zlib_surrounded.obj
+  ks_tests.dir\Debug\bcd_user_type_be.obj
+  ks_tests.dir\Debug\bcd_user_type_le.obj
   ks_tests.dir\Debug\bits_byte_aligned.obj
   ks_tests.dir\Debug\bits_enum.obj
   ks_tests.dir\Debug\bits_seq_endian_combo.obj
   ks_tests.dir\Debug\bits_simple.obj
   ks_tests.dir\Debug\bits_simple_le.obj
+  ks_tests.dir\Debug\buffered_struct.obj
   ks_tests.dir\Debug\bytes_pad_term.obj
   ks_tests.dir\Debug\cast_nested.obj
   ks_tests.dir\Debug\cast_to_imported.obj
@@ -256,8 +279,11 @@ Link:
   ks_tests.dir\Debug\enum_to_i.obj
   ks_tests.dir\Debug\eof_exception_bytes.obj
   ks_tests.dir\Debug\eof_exception_u4.obj
+  ks_tests.dir\Debug\eos_exception_bytes.obj
+  ks_tests.dir\Debug\eos_exception_u4.obj
   ks_tests.dir\Debug\expr_0.obj
   ks_tests.dir\Debug\expr_1.obj
+  ks_tests.dir\Debug\expr_2.obj
   ks_tests.dir\Debug\expr_3.obj
   ks_tests.dir\Debug\expr_array.obj
   ks_tests.dir\Debug\expr_bits.obj
@@ -267,10 +293,13 @@ Link:
   ks_tests.dir\Debug\expr_enum.obj
   ks_tests.dir\Debug\expr_if_int_ops.obj
   ks_tests.dir\Debug\expr_int_div.obj
+  ks_tests.dir\Debug\expr_io_eof.obj
+  ks_tests.dir\Debug\expr_io_pos.obj
   ks_tests.dir\Debug\expr_mod.obj
   ks_tests.dir\Debug\expr_sizeof_type_0.obj
   ks_tests.dir\Debug\expr_sizeof_type_1.obj
   ks_tests.dir\Debug\expr_sizeof_value_0.obj
+  ks_tests.dir\Debug\expr_sizeof_value_sized.obj
   ks_tests.dir\Debug\expr_str_ops.obj
   ks_tests.dir\Debug\fixed_contents.obj
   ks_tests.dir\Debug\fixed_struct.obj
@@ -291,11 +320,13 @@ Link:
   ks_tests.dir\Debug\index_to_param_eos.obj
   ks_tests.dir\Debug\index_to_param_expr.obj
   ks_tests.dir\Debug\index_to_param_until.obj
+  ks_tests.dir\Debug\instance_io_user.obj
   ks_tests.dir\Debug\instance_std.obj
   ks_tests.dir\Debug\instance_std_array.obj
   ks_tests.dir\Debug\instance_user_array.obj
   ks_tests.dir\Debug\integers.obj
   ks_tests.dir\Debug\integers_min_max.obj
+  ks_tests.dir\Debug\io_local_var.obj
   ks_tests.dir\Debug\js_signed_right_shift.obj
   ks_tests.dir\Debug\meta_tags.obj
   ks_tests.dir\Debug\meta_xref.obj
@@ -333,11 +364,14 @@ Link:
   ks_tests.dir\Debug\position_in_seq.obj
   ks_tests.dir\Debug\position_to_end.obj
   ks_tests.dir\Debug\process_coerce_bytes.obj
+  ks_tests.dir\Debug\process_coerce_usertype1.obj
+  ks_tests.dir\Debug\process_coerce_usertype2.obj
   ks_tests.dir\Debug\process_custom.obj
   ks_tests.dir\Debug\process_custom_no_args.obj
   ks_tests.dir\Debug\process_repeat_bytes.obj
   ks_tests.dir\Debug\process_repeat_usertype.obj
   ks_tests.dir\Debug\process_rotate.obj
+  ks_tests.dir\Debug\process_to_user.obj
   ks_tests.dir\Debug\process_xor4_const.obj
   ks_tests.dir\Debug\process_xor4_value.obj
   ks_tests.dir\Debug\process_xor_const.obj
@@ -369,6 +403,9 @@ Link:
   ks_tests.dir\Debug\switch_manual_enum_invalid_else.obj
   ks_tests.dir\Debug\switch_manual_int.obj
   ks_tests.dir\Debug\switch_manual_int_else.obj
+  ks_tests.dir\Debug\switch_manual_int_size.obj
+  ks_tests.dir\Debug\switch_manual_int_size_else.obj
+  ks_tests.dir\Debug\switch_manual_int_size_eos.obj
   ks_tests.dir\Debug\switch_manual_str.obj
   ks_tests.dir\Debug\switch_manual_str_else.obj
   ks_tests.dir\Debug\switch_multi_bool_ops.obj
@@ -379,7 +416,9 @@ Link:
   ks_tests.dir\Debug\to_string_custom.obj
   ks_tests.dir\Debug\ts_packet_header.obj
   ks_tests.dir\Debug\type_int_unary_op.obj
+  ks_tests.dir\Debug\type_ternary.obj
   ks_tests.dir\Debug\type_ternary_2nd_falsy.obj
+  ks_tests.dir\Debug\type_ternary_opaque.obj
   ks_tests.dir\Debug\user_type.obj
   ks_tests.dir\Debug\valid_fail_anyof_int.obj
   ks_tests.dir\Debug\valid_fail_contents.obj
@@ -399,6 +438,7 @@ Link:
   ks_tests.dir\Debug\valid_switch.obj
   ks_tests.dir\Debug\vlq_base128_le.obj
   ks_tests.dir\Debug\yaml_ints.obj
+  ks_tests.dir\Debug\zlib_surrounded.obj
   ks_tests.dir\Debug\zlib_with_header_78.obj
   ks_tests.vcxproj -> C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\Debug\ks_tests.exe
 PostBuildEvent:
@@ -423,4 +463,4 @@ Build succeeded.
     0 Warning(s)
     0 Error(s)
 
-Time Elapsed 00:00:06.55
+Time Elapsed 00:00:06.70
