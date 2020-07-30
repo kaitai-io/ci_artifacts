@@ -12,8 +12,8 @@
   <line>Command: /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/bin/ks_tests</line>
 </preamble>
 
-<pid>8327</pid>
-<ppid>8326</ppid>
+<pid>8267</pid>
+<ppid>8266</ppid>
 <tool>memcheck</tool>
 
 <args>
@@ -30,194 +30,14 @@
 
 <status>
   <state>RUNNING</state>
-  <time>00:00:00:00.407 </time>
+  <time>00:00:00:00.375 </time>
 </status>
 
 
 <status>
   <state>FINISHED</state>
-  <time>00:00:00:06.745 </time>
+  <time>00:00:00:05.876 </time>
 </status>
-
-<error>
-  <unique>0x2</unique>
-  <tid>1</tid>
-  <kind>Leak_DefinitelyLost</kind>
-  <xwhat>
-    <text>415 (384 direct, 31 indirect) bytes in 1 blocks are definitely lost in loss record 3 of 4</text>
-    <leakedbytes>415</leakedbytes>
-    <leakedblocks>1</leakedblocks>
-  </xwhat>
-  <stack>
-    <frame>
-      <ip>0x4C2B0E0</ip>
-      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
-      <fn>operator new(unsigned long)</fn>
-    </frame>
-    <frame>
-      <ip>0x867A4D</ip>
-      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_11/bin/ks_tests</obj>
-      <fn>eos_exception_bytes_t::_read()</fn>
-      <dir>/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11</dir>
-      <file>eos_exception_bytes.cpp</file>
-      <line>16</line>
-    </frame>
-    <frame>
-      <ip>0x8679AD</ip>
-      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_11/bin/ks_tests</obj>
-      <fn>eos_exception_bytes_t::eos_exception_bytes_t(kaitai::kstream*, kaitai::kstruct*, eos_exception_bytes_t*)</fn>
-      <dir>/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11</dir>
-      <file>eos_exception_bytes.cpp</file>
-      <line>11</line>
-    </frame>
-    <frame>
-      <ip>0x78F65D</ip>
-      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_11/bin/ks_tests</obj>
-      <fn>test_eos_exception_bytes::test_method()</fn>
-      <dir>/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11</dir>
-      <file>test_eos_exception_bytes.cpp</file>
-      <line>14</line>
-    </frame>
-    <frame>
-      <ip>0x78F571</ip>
-      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_11/bin/ks_tests</obj>
-      <fn>test_eos_exception_bytes_invoker()</fn>
-      <dir>/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11</dir>
-      <file>test_eos_exception_bytes.cpp</file>
-      <line>10</line>
-    </frame>
-    <frame>
-      <ip>0x71CF43</ip>
-      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_11/bin/ks_tests</obj>
-      <fn>boost::unit_test::ut_detail::unused boost::unit_test::ut_detail::invoker&lt;boost::unit_test::ut_detail::unused&gt;::invoke&lt;void (*)()&gt;(void (*&amp;)())</fn>
-      <dir>/usr/include/boost/test/utils</dir>
-      <file>callback.hpp</file>
-      <line>56</line>
-    </frame>
-    <frame>
-      <ip>0x71CE83</ip>
-      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_11/bin/ks_tests</obj>
-      <fn>boost::unit_test::ut_detail::callback0_impl_t&lt;boost::unit_test::ut_detail::unused, void (*)()&gt;::invoke()</fn>
-      <dir>/usr/include/boost/test/utils</dir>
-      <file>callback.hpp</file>
-      <line>89</line>
-    </frame>
-    <frame>
-      <ip>0x4E9F1F0</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
-    </frame>
-    <frame>
-      <ip>0x4E7A545</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
-      <fn>boost::execution_monitor::catch_signals(boost::unit_test::callback0&lt;int&gt; const&amp;)</fn>
-    </frame>
-    <frame>
-      <ip>0x4E7AD82</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
-      <fn>boost::execution_monitor::execute(boost::unit_test::callback0&lt;int&gt; const&amp;)</fn>
-    </frame>
-    <frame>
-      <ip>0x4E9F2F1</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
-      <fn>boost::unit_test::unit_test_monitor_t::execute_and_translate(boost::unit_test::test_case const&amp;)</fn>
-    </frame>
-    <frame>
-      <ip>0x4E88F93</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
-      <fn>boost::unit_test::framework_impl::visit(boost::unit_test::test_case const&amp;)</fn>
-    </frame>
-  </stack>
-</error>
-
-<error>
-  <unique>0x3</unique>
-  <tid>1</tid>
-  <kind>Leak_DefinitelyLost</kind>
-  <xwhat>
-    <text>415 (384 direct, 31 indirect) bytes in 1 blocks are definitely lost in loss record 4 of 4</text>
-    <leakedbytes>415</leakedbytes>
-    <leakedblocks>1</leakedblocks>
-  </xwhat>
-  <stack>
-    <frame>
-      <ip>0x4C2B0E0</ip>
-      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
-      <fn>operator new(unsigned long)</fn>
-    </frame>
-    <frame>
-      <ip>0x7F244F</ip>
-      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_11/bin/ks_tests</obj>
-      <fn>eos_exception_u4_t::_read()</fn>
-      <dir>/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11</dir>
-      <file>eos_exception_u4.cpp</file>
-      <line>16</line>
-    </frame>
-    <frame>
-      <ip>0x7F23AF</ip>
-      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_11/bin/ks_tests</obj>
-      <fn>eos_exception_u4_t::eos_exception_u4_t(kaitai::kstream*, kaitai::kstruct*, eos_exception_u4_t*)</fn>
-      <dir>/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11</dir>
-      <file>eos_exception_u4.cpp</file>
-      <line>11</line>
-    </frame>
-    <frame>
-      <ip>0x7921DD</ip>
-      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_11/bin/ks_tests</obj>
-      <fn>test_eos_exception_u4::test_method()</fn>
-      <dir>/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11</dir>
-      <file>test_eos_exception_u4.cpp</file>
-      <line>14</line>
-    </frame>
-    <frame>
-      <ip>0x7920F1</ip>
-      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_11/bin/ks_tests</obj>
-      <fn>test_eos_exception_u4_invoker()</fn>
-      <dir>/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11</dir>
-      <file>test_eos_exception_u4.cpp</file>
-      <line>10</line>
-    </frame>
-    <frame>
-      <ip>0x71CF43</ip>
-      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_11/bin/ks_tests</obj>
-      <fn>boost::unit_test::ut_detail::unused boost::unit_test::ut_detail::invoker&lt;boost::unit_test::ut_detail::unused&gt;::invoke&lt;void (*)()&gt;(void (*&amp;)())</fn>
-      <dir>/usr/include/boost/test/utils</dir>
-      <file>callback.hpp</file>
-      <line>56</line>
-    </frame>
-    <frame>
-      <ip>0x71CE83</ip>
-      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_11/bin/ks_tests</obj>
-      <fn>boost::unit_test::ut_detail::callback0_impl_t&lt;boost::unit_test::ut_detail::unused, void (*)()&gt;::invoke()</fn>
-      <dir>/usr/include/boost/test/utils</dir>
-      <file>callback.hpp</file>
-      <line>89</line>
-    </frame>
-    <frame>
-      <ip>0x4E9F1F0</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
-    </frame>
-    <frame>
-      <ip>0x4E7A545</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
-      <fn>boost::execution_monitor::catch_signals(boost::unit_test::callback0&lt;int&gt; const&amp;)</fn>
-    </frame>
-    <frame>
-      <ip>0x4E7AD82</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
-      <fn>boost::execution_monitor::execute(boost::unit_test::callback0&lt;int&gt; const&amp;)</fn>
-    </frame>
-    <frame>
-      <ip>0x4E9F2F1</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
-      <fn>boost::unit_test::unit_test_monitor_t::execute_and_translate(boost::unit_test::test_case const&amp;)</fn>
-    </frame>
-    <frame>
-      <ip>0x4E88F93</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
-      <fn>boost::unit_test::framework_impl::visit(boost::unit_test::test_case const&amp;)</fn>
-    </frame>
-  </stack>
-</error>
 
 <errorcounts>
 </errorcounts>
