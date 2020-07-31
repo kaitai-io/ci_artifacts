@@ -12,8 +12,8 @@
   <line>Command: /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/bin/ks_tests</line>
 </preamble>
 
-<pid>7799</pid>
-<ppid>7798</ppid>
+<pid>7917</pid>
+<ppid>7916</ppid>
 <tool>memcheck</tool>
 
 <args>
@@ -30,45 +30,348 @@
 
 <status>
   <state>RUNNING</state>
-  <time>00:00:00:00.350 </time>
-</status>
-
-
-<status>
-  <state>FINISHED</state>
-  <time>00:00:00:04.954 </time>
+  <time>00:00:00:00.236 </time>
 </status>
 
 <error>
-  <unique>0x6</unique>
+  <unique>0x0</unique>
   <tid>1</tid>
-  <kind>Leak_DefinitelyLost</kind>
-  <xwhat>
-    <text>286 (24 direct, 262 indirect) bytes in 1 blocks are definitely lost in loss record 7 of 9</text>
-    <leakedbytes>286</leakedbytes>
-    <leakedblocks>1</leakedblocks>
-  </xwhat>
+  <kind>InvalidRead</kind>
+  <what>Invalid read of size 4</what>
   <stack>
     <frame>
-      <ip>0x4C2B0E0</ip>
-      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
-      <fn>operator new(unsigned long)</fn>
+      <ip>0x57176AD</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19</obj>
     </frame>
     <frame>
-      <ip>0x5EA7C2</ip>
+      <ip>0x577636E</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19</obj>
+      <fn>std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::~basic_string()</fn>
+    </frame>
+    <frame>
+      <ip>0x6365E8</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>valid_fail_eq_bytes_t::valid_fail_eq_bytes_t(kaitai::kstream*, kaitai::kstruct*, valid_fail_eq_bytes_t*)</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98</dir>
+      <file>valid_fail_eq_bytes.cpp</file>
+      <line>17</line>
+    </frame>
+    <frame>
+      <ip>0x513BE0</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>test_valid_fail_eq_bytes::test_method()</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98</dir>
+      <file>test_valid_fail_eq_bytes.cpp</file>
+      <line>14</line>
+    </frame>
+    <frame>
+      <ip>0x513AC0</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>test_valid_fail_eq_bytes_invoker()</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98</dir>
+      <file>test_valid_fail_eq_bytes.cpp</file>
+      <line>10</line>
+    </frame>
+    <frame>
+      <ip>0x513505</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>boost::unit_test::ut_detail::unused boost::unit_test::ut_detail::invoker&lt;boost::unit_test::ut_detail::unused&gt;::invoke&lt;void (*)()&gt;(void (*&amp;)())</fn>
+    </frame>
+    <frame>
+      <ip>0x5134C7</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>boost::unit_test::ut_detail::callback0_impl_t&lt;boost::unit_test::ut_detail::unused, void (*)()&gt;::invoke()</fn>
+    </frame>
+    <frame>
+      <ip>0x4E9F1F0</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+    </frame>
+    <frame>
+      <ip>0x4E7A545</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::execution_monitor::catch_signals(boost::unit_test::callback0&lt;int&gt; const&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x4E7AD82</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::execution_monitor::execute(boost::unit_test::callback0&lt;int&gt; const&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x4E9F2F1</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::unit_test::unit_test_monitor_t::execute_and_translate(boost::unit_test::test_case const&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x4E88F93</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::unit_test::framework_impl::visit(boost::unit_test::test_case const&amp;)</fn>
+    </frame>
+  </stack>
+  <auxwhat>Address 0x6137340 is 16 bytes inside a block of size 27 free'd</auxwhat>
+  <stack>
+    <frame>
+      <ip>0x4C2C2BC</ip>
+      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
+      <fn>operator delete(void*)</fn>
+    </frame>
+    <frame>
+      <ip>0x577636E</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19</obj>
+      <fn>std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::~basic_string()</fn>
+    </frame>
+    <frame>
+      <ip>0x636979</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>valid_fail_eq_bytes_t::~valid_fail_eq_bytes_t()</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98</dir>
+      <file>valid_fail_eq_bytes.cpp</file>
+      <line>27</line>
+    </frame>
+    <frame>
+      <ip>0x6365BD</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>valid_fail_eq_bytes_t::valid_fail_eq_bytes_t(kaitai::kstream*, kaitai::kstruct*, valid_fail_eq_bytes_t*)</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98</dir>
+      <file>valid_fail_eq_bytes.cpp</file>
+      <line>14</line>
+    </frame>
+    <frame>
+      <ip>0x513BE0</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>test_valid_fail_eq_bytes::test_method()</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98</dir>
+      <file>test_valid_fail_eq_bytes.cpp</file>
+      <line>14</line>
+    </frame>
+    <frame>
+      <ip>0x513AC0</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>test_valid_fail_eq_bytes_invoker()</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98</dir>
+      <file>test_valid_fail_eq_bytes.cpp</file>
+      <line>10</line>
+    </frame>
+    <frame>
+      <ip>0x513505</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>boost::unit_test::ut_detail::unused boost::unit_test::ut_detail::invoker&lt;boost::unit_test::ut_detail::unused&gt;::invoke&lt;void (*)()&gt;(void (*&amp;)())</fn>
+    </frame>
+    <frame>
+      <ip>0x5134C7</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>boost::unit_test::ut_detail::callback0_impl_t&lt;boost::unit_test::ut_detail::unused, void (*)()&gt;::invoke()</fn>
+    </frame>
+    <frame>
+      <ip>0x4E9F1F0</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+    </frame>
+    <frame>
+      <ip>0x4E7A545</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::execution_monitor::catch_signals(boost::unit_test::callback0&lt;int&gt; const&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x4E7AD82</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::execution_monitor::execute(boost::unit_test::callback0&lt;int&gt; const&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x4E9F2F1</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::unit_test::unit_test_monitor_t::execute_and_translate(boost::unit_test::test_case const&amp;)</fn>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0x3</unique>
+  <tid>1</tid>
+  <kind>InvalidFree</kind>
+  <what>Invalid free() / delete / delete[] / realloc()</what>
+  <stack>
+    <frame>
+      <ip>0x4C2C2BC</ip>
+      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
+      <fn>operator delete(void*)</fn>
+    </frame>
+    <frame>
+      <ip>0x577636E</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19</obj>
+      <fn>std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::~basic_string()</fn>
+    </frame>
+    <frame>
+      <ip>0x6365E8</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>valid_fail_eq_bytes_t::valid_fail_eq_bytes_t(kaitai::kstream*, kaitai::kstruct*, valid_fail_eq_bytes_t*)</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98</dir>
+      <file>valid_fail_eq_bytes.cpp</file>
+      <line>17</line>
+    </frame>
+    <frame>
+      <ip>0x513BE0</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>test_valid_fail_eq_bytes::test_method()</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98</dir>
+      <file>test_valid_fail_eq_bytes.cpp</file>
+      <line>14</line>
+    </frame>
+    <frame>
+      <ip>0x513AC0</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>test_valid_fail_eq_bytes_invoker()</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98</dir>
+      <file>test_valid_fail_eq_bytes.cpp</file>
+      <line>10</line>
+    </frame>
+    <frame>
+      <ip>0x513505</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>boost::unit_test::ut_detail::unused boost::unit_test::ut_detail::invoker&lt;boost::unit_test::ut_detail::unused&gt;::invoke&lt;void (*)()&gt;(void (*&amp;)())</fn>
+    </frame>
+    <frame>
+      <ip>0x5134C7</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>boost::unit_test::ut_detail::callback0_impl_t&lt;boost::unit_test::ut_detail::unused, void (*)()&gt;::invoke()</fn>
+    </frame>
+    <frame>
+      <ip>0x4E9F1F0</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+    </frame>
+    <frame>
+      <ip>0x4E7A545</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::execution_monitor::catch_signals(boost::unit_test::callback0&lt;int&gt; const&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x4E7AD82</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::execution_monitor::execute(boost::unit_test::callback0&lt;int&gt; const&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x4E9F2F1</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::unit_test::unit_test_monitor_t::execute_and_translate(boost::unit_test::test_case const&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x4E88F93</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::unit_test::framework_impl::visit(boost::unit_test::test_case const&amp;)</fn>
+    </frame>
+  </stack>
+  <auxwhat>Address 0x6137330 is 0 bytes inside a block of size 27 free'd</auxwhat>
+  <stack>
+    <frame>
+      <ip>0x4C2C2BC</ip>
+      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
+      <fn>operator delete(void*)</fn>
+    </frame>
+    <frame>
+      <ip>0x577636E</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19</obj>
+      <fn>std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::~basic_string()</fn>
+    </frame>
+    <frame>
+      <ip>0x636979</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>valid_fail_eq_bytes_t::~valid_fail_eq_bytes_t()</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98</dir>
+      <file>valid_fail_eq_bytes.cpp</file>
+      <line>27</line>
+    </frame>
+    <frame>
+      <ip>0x6365BD</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>valid_fail_eq_bytes_t::valid_fail_eq_bytes_t(kaitai::kstream*, kaitai::kstruct*, valid_fail_eq_bytes_t*)</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98</dir>
+      <file>valid_fail_eq_bytes.cpp</file>
+      <line>14</line>
+    </frame>
+    <frame>
+      <ip>0x513BE0</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>test_valid_fail_eq_bytes::test_method()</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98</dir>
+      <file>test_valid_fail_eq_bytes.cpp</file>
+      <line>14</line>
+    </frame>
+    <frame>
+      <ip>0x513AC0</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>test_valid_fail_eq_bytes_invoker()</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98</dir>
+      <file>test_valid_fail_eq_bytes.cpp</file>
+      <line>10</line>
+    </frame>
+    <frame>
+      <ip>0x513505</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>boost::unit_test::ut_detail::unused boost::unit_test::ut_detail::invoker&lt;boost::unit_test::ut_detail::unused&gt;::invoke&lt;void (*)()&gt;(void (*&amp;)())</fn>
+    </frame>
+    <frame>
+      <ip>0x5134C7</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>boost::unit_test::ut_detail::callback0_impl_t&lt;boost::unit_test::ut_detail::unused, void (*)()&gt;::invoke()</fn>
+    </frame>
+    <frame>
+      <ip>0x4E9F1F0</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+    </frame>
+    <frame>
+      <ip>0x4E7A545</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::execution_monitor::catch_signals(boost::unit_test::callback0&lt;int&gt; const&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x4E7AD82</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::execution_monitor::execute(boost::unit_test::callback0&lt;int&gt; const&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x4E9F2F1</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::unit_test::unit_test_monitor_t::execute_and_translate(boost::unit_test::test_case const&amp;)</fn>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0x4</unique>
+  <tid>1</tid>
+  <kind>InvalidRead</kind>
+  <what>Invalid read of size 4</what>
+  <stack>
+    <frame>
+      <ip>0x57176AD</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19</obj>
+    </frame>
+    <frame>
+      <ip>0x577636E</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19</obj>
+      <fn>std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::~basic_string()</fn>
+    </frame>
+    <frame>
+      <ip>0x5EC684</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>default_endian_expr_exception_t::doc_t::doc_t(kaitai::kstream*, default_endian_expr_exception_t*, default_endian_expr_exception_t*)</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98</dir>
+      <file>default_endian_expr_exception.cpp</file>
+      <line>49</line>
+    </frame>
+    <frame>
+      <ip>0x5EC380</ip>
       <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
       <fn>default_endian_expr_exception_t::_read()</fn>
       <dir>/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98</dir>
       <file>default_endian_expr_exception.cpp</file>
-      <line>15</line>
+      <line>25</line>
     </frame>
     <frame>
-      <ip>0x5EA762</ip>
+      <ip>0x5EC252</ip>
       <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
       <fn>default_endian_expr_exception_t::default_endian_expr_exception_t(kaitai::kstream*, kaitai::kstruct*, default_endian_expr_exception_t*)</fn>
       <dir>/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98</dir>
       <file>default_endian_expr_exception.cpp</file>
-      <line>11</line>
+      <line>13</line>
     </frame>
     <frame>
       <ip>0x51CF60</ip>
@@ -110,6 +413,315 @@
       <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
       <fn>boost::execution_monitor::execute(boost::unit_test::callback0&lt;int&gt; const&amp;)</fn>
     </frame>
+  </stack>
+  <auxwhat>Address 0x616d0a0 is 16 bytes inside a block of size 27 free'd</auxwhat>
+  <stack>
+    <frame>
+      <ip>0x4C2C2BC</ip>
+      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
+      <fn>operator delete(void*)</fn>
+    </frame>
+    <frame>
+      <ip>0x577636E</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19</obj>
+      <fn>std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::~basic_string()</fn>
+    </frame>
+    <frame>
+      <ip>0x5EC810</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>default_endian_expr_exception_t::doc_t::~doc_t()</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98</dir>
+      <file>default_endian_expr_exception.cpp</file>
+      <line>58</line>
+    </frame>
+    <frame>
+      <ip>0x5EC659</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>default_endian_expr_exception_t::doc_t::doc_t(kaitai::kstream*, default_endian_expr_exception_t*, default_endian_expr_exception_t*)</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98</dir>
+      <file>default_endian_expr_exception.cpp</file>
+      <line>46</line>
+    </frame>
+    <frame>
+      <ip>0x5EC380</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>default_endian_expr_exception_t::_read()</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98</dir>
+      <file>default_endian_expr_exception.cpp</file>
+      <line>25</line>
+    </frame>
+    <frame>
+      <ip>0x5EC252</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>default_endian_expr_exception_t::default_endian_expr_exception_t(kaitai::kstream*, kaitai::kstruct*, default_endian_expr_exception_t*)</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98</dir>
+      <file>default_endian_expr_exception.cpp</file>
+      <line>13</line>
+    </frame>
+    <frame>
+      <ip>0x51CF60</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>test_default_endian_expr_exception::test_method()</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98</dir>
+      <file>test_default_endian_expr_exception.cpp</file>
+      <line>14</line>
+    </frame>
+    <frame>
+      <ip>0x51CE40</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>test_default_endian_expr_exception_invoker()</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98</dir>
+      <file>test_default_endian_expr_exception.cpp</file>
+      <line>10</line>
+    </frame>
+    <frame>
+      <ip>0x513505</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>boost::unit_test::ut_detail::unused boost::unit_test::ut_detail::invoker&lt;boost::unit_test::ut_detail::unused&gt;::invoke&lt;void (*)()&gt;(void (*&amp;)())</fn>
+    </frame>
+    <frame>
+      <ip>0x5134C7</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>boost::unit_test::ut_detail::callback0_impl_t&lt;boost::unit_test::ut_detail::unused, void (*)()&gt;::invoke()</fn>
+    </frame>
+    <frame>
+      <ip>0x4E9F1F0</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+    </frame>
+    <frame>
+      <ip>0x4E7A545</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::execution_monitor::catch_signals(boost::unit_test::callback0&lt;int&gt; const&amp;)</fn>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0x7</unique>
+  <tid>1</tid>
+  <kind>InvalidFree</kind>
+  <what>Invalid free() / delete / delete[] / realloc()</what>
+  <stack>
+    <frame>
+      <ip>0x4C2C2BC</ip>
+      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
+      <fn>operator delete(void*)</fn>
+    </frame>
+    <frame>
+      <ip>0x577636E</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19</obj>
+      <fn>std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::~basic_string()</fn>
+    </frame>
+    <frame>
+      <ip>0x5EC684</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>default_endian_expr_exception_t::doc_t::doc_t(kaitai::kstream*, default_endian_expr_exception_t*, default_endian_expr_exception_t*)</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98</dir>
+      <file>default_endian_expr_exception.cpp</file>
+      <line>49</line>
+    </frame>
+    <frame>
+      <ip>0x5EC380</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>default_endian_expr_exception_t::_read()</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98</dir>
+      <file>default_endian_expr_exception.cpp</file>
+      <line>25</line>
+    </frame>
+    <frame>
+      <ip>0x5EC252</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>default_endian_expr_exception_t::default_endian_expr_exception_t(kaitai::kstream*, kaitai::kstruct*, default_endian_expr_exception_t*)</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98</dir>
+      <file>default_endian_expr_exception.cpp</file>
+      <line>13</line>
+    </frame>
+    <frame>
+      <ip>0x51CF60</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>test_default_endian_expr_exception::test_method()</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98</dir>
+      <file>test_default_endian_expr_exception.cpp</file>
+      <line>14</line>
+    </frame>
+    <frame>
+      <ip>0x51CE40</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>test_default_endian_expr_exception_invoker()</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98</dir>
+      <file>test_default_endian_expr_exception.cpp</file>
+      <line>10</line>
+    </frame>
+    <frame>
+      <ip>0x513505</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>boost::unit_test::ut_detail::unused boost::unit_test::ut_detail::invoker&lt;boost::unit_test::ut_detail::unused&gt;::invoke&lt;void (*)()&gt;(void (*&amp;)())</fn>
+    </frame>
+    <frame>
+      <ip>0x5134C7</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>boost::unit_test::ut_detail::callback0_impl_t&lt;boost::unit_test::ut_detail::unused, void (*)()&gt;::invoke()</fn>
+    </frame>
+    <frame>
+      <ip>0x4E9F1F0</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+    </frame>
+    <frame>
+      <ip>0x4E7A545</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::execution_monitor::catch_signals(boost::unit_test::callback0&lt;int&gt; const&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x4E7AD82</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::execution_monitor::execute(boost::unit_test::callback0&lt;int&gt; const&amp;)</fn>
+    </frame>
+  </stack>
+  <auxwhat>Address 0x616d090 is 0 bytes inside a block of size 27 free'd</auxwhat>
+  <stack>
+    <frame>
+      <ip>0x4C2C2BC</ip>
+      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
+      <fn>operator delete(void*)</fn>
+    </frame>
+    <frame>
+      <ip>0x577636E</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19</obj>
+      <fn>std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::~basic_string()</fn>
+    </frame>
+    <frame>
+      <ip>0x5EC810</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>default_endian_expr_exception_t::doc_t::~doc_t()</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98</dir>
+      <file>default_endian_expr_exception.cpp</file>
+      <line>58</line>
+    </frame>
+    <frame>
+      <ip>0x5EC659</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>default_endian_expr_exception_t::doc_t::doc_t(kaitai::kstream*, default_endian_expr_exception_t*, default_endian_expr_exception_t*)</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98</dir>
+      <file>default_endian_expr_exception.cpp</file>
+      <line>46</line>
+    </frame>
+    <frame>
+      <ip>0x5EC380</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>default_endian_expr_exception_t::_read()</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98</dir>
+      <file>default_endian_expr_exception.cpp</file>
+      <line>25</line>
+    </frame>
+    <frame>
+      <ip>0x5EC252</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>default_endian_expr_exception_t::default_endian_expr_exception_t(kaitai::kstream*, kaitai::kstruct*, default_endian_expr_exception_t*)</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98</dir>
+      <file>default_endian_expr_exception.cpp</file>
+      <line>13</line>
+    </frame>
+    <frame>
+      <ip>0x51CF60</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>test_default_endian_expr_exception::test_method()</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98</dir>
+      <file>test_default_endian_expr_exception.cpp</file>
+      <line>14</line>
+    </frame>
+    <frame>
+      <ip>0x51CE40</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>test_default_endian_expr_exception_invoker()</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98</dir>
+      <file>test_default_endian_expr_exception.cpp</file>
+      <line>10</line>
+    </frame>
+    <frame>
+      <ip>0x513505</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>boost::unit_test::ut_detail::unused boost::unit_test::ut_detail::invoker&lt;boost::unit_test::ut_detail::unused&gt;::invoke&lt;void (*)()&gt;(void (*&amp;)())</fn>
+    </frame>
+    <frame>
+      <ip>0x5134C7</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>boost::unit_test::ut_detail::callback0_impl_t&lt;boost::unit_test::ut_detail::unused, void (*)()&gt;::invoke()</fn>
+    </frame>
+    <frame>
+      <ip>0x4E9F1F0</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+    </frame>
+    <frame>
+      <ip>0x4E7A545</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::execution_monitor::catch_signals(boost::unit_test::callback0&lt;int&gt; const&amp;)</fn>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0x8</unique>
+  <tid>1</tid>
+  <kind>InvalidRead</kind>
+  <what>Invalid read of size 4</what>
+  <stack>
+    <frame>
+      <ip>0x57176AD</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19</obj>
+    </frame>
+    <frame>
+      <ip>0x577636E</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19</obj>
+      <fn>std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::~basic_string()</fn>
+    </frame>
+    <frame>
+      <ip>0x659458</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>valid_fail_range_str_t::valid_fail_range_str_t(kaitai::kstream*, kaitai::kstruct*, valid_fail_range_str_t*)</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98</dir>
+      <file>valid_fail_range_str.cpp</file>
+      <line>17</line>
+    </frame>
+    <frame>
+      <ip>0x525B50</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>test_valid_fail_range_str::test_method()</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98</dir>
+      <file>test_valid_fail_range_str.cpp</file>
+      <line>14</line>
+    </frame>
+    <frame>
+      <ip>0x525A30</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>test_valid_fail_range_str_invoker()</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98</dir>
+      <file>test_valid_fail_range_str.cpp</file>
+      <line>10</line>
+    </frame>
+    <frame>
+      <ip>0x513505</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>boost::unit_test::ut_detail::unused boost::unit_test::ut_detail::invoker&lt;boost::unit_test::ut_detail::unused&gt;::invoke&lt;void (*)()&gt;(void (*&amp;)())</fn>
+    </frame>
+    <frame>
+      <ip>0x5134C7</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>boost::unit_test::ut_detail::callback0_impl_t&lt;boost::unit_test::ut_detail::unused, void (*)()&gt;::invoke()</fn>
+    </frame>
+    <frame>
+      <ip>0x4E9F1F0</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+    </frame>
+    <frame>
+      <ip>0x4E7A545</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::execution_monitor::catch_signals(boost::unit_test::callback0&lt;int&gt; const&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x4E7AD82</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::execution_monitor::execute(boost::unit_test::callback0&lt;int&gt; const&amp;)</fn>
+    </frame>
     <frame>
       <ip>0x4E9F2F1</ip>
       <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
@@ -121,38 +733,857 @@
       <fn>boost::unit_test::framework_impl::visit(boost::unit_test::test_case const&amp;)</fn>
     </frame>
   </stack>
+  <auxwhat>Address 0x61ab1d0 is 16 bytes inside a block of size 29 free'd</auxwhat>
+  <stack>
+    <frame>
+      <ip>0x4C2C2BC</ip>
+      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
+      <fn>operator delete(void*)</fn>
+    </frame>
+    <frame>
+      <ip>0x577636E</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19</obj>
+      <fn>std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::~basic_string()</fn>
+    </frame>
+    <frame>
+      <ip>0x659B79</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>valid_fail_range_str_t::~valid_fail_range_str_t()</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98</dir>
+      <file>valid_fail_range_str.cpp</file>
+      <line>30</line>
+    </frame>
+    <frame>
+      <ip>0x65942D</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>valid_fail_range_str_t::valid_fail_range_str_t(kaitai::kstream*, kaitai::kstruct*, valid_fail_range_str_t*)</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98</dir>
+      <file>valid_fail_range_str.cpp</file>
+      <line>14</line>
+    </frame>
+    <frame>
+      <ip>0x525B50</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>test_valid_fail_range_str::test_method()</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98</dir>
+      <file>test_valid_fail_range_str.cpp</file>
+      <line>14</line>
+    </frame>
+    <frame>
+      <ip>0x525A30</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>test_valid_fail_range_str_invoker()</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98</dir>
+      <file>test_valid_fail_range_str.cpp</file>
+      <line>10</line>
+    </frame>
+    <frame>
+      <ip>0x513505</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>boost::unit_test::ut_detail::unused boost::unit_test::ut_detail::invoker&lt;boost::unit_test::ut_detail::unused&gt;::invoke&lt;void (*)()&gt;(void (*&amp;)())</fn>
+    </frame>
+    <frame>
+      <ip>0x5134C7</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>boost::unit_test::ut_detail::callback0_impl_t&lt;boost::unit_test::ut_detail::unused, void (*)()&gt;::invoke()</fn>
+    </frame>
+    <frame>
+      <ip>0x4E9F1F0</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+    </frame>
+    <frame>
+      <ip>0x4E7A545</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::execution_monitor::catch_signals(boost::unit_test::callback0&lt;int&gt; const&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x4E7AD82</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::execution_monitor::execute(boost::unit_test::callback0&lt;int&gt; const&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x4E9F2F1</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::unit_test::unit_test_monitor_t::execute_and_translate(boost::unit_test::test_case const&amp;)</fn>
+    </frame>
+  </stack>
 </error>
 
 <error>
-  <unique>0x7</unique>
+  <unique>0xb</unique>
   <tid>1</tid>
-  <kind>Leak_DefinitelyLost</kind>
-  <xwhat>
-    <text>415 (384 direct, 31 indirect) bytes in 1 blocks are definitely lost in loss record 8 of 9</text>
-    <leakedbytes>415</leakedbytes>
-    <leakedblocks>1</leakedblocks>
-  </xwhat>
+  <kind>InvalidFree</kind>
+  <what>Invalid free() / delete / delete[] / realloc()</what>
   <stack>
     <frame>
-      <ip>0x4C2B0E0</ip>
+      <ip>0x4C2C2BC</ip>
       <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
-      <fn>operator new(unsigned long)</fn>
+      <fn>operator delete(void*)</fn>
     </frame>
     <frame>
-      <ip>0x659070</ip>
+      <ip>0x577636E</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19</obj>
+      <fn>std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::~basic_string()</fn>
+    </frame>
+    <frame>
+      <ip>0x659458</ip>
       <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
-      <fn>eos_exception_bytes_t::_read()</fn>
+      <fn>valid_fail_range_str_t::valid_fail_range_str_t(kaitai::kstream*, kaitai::kstruct*, valid_fail_range_str_t*)</fn>
       <dir>/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98</dir>
-      <file>eos_exception_bytes.cpp</file>
-      <line>15</line>
+      <file>valid_fail_range_str.cpp</file>
+      <line>17</line>
     </frame>
     <frame>
-      <ip>0x658FAB</ip>
+      <ip>0x525B50</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>test_valid_fail_range_str::test_method()</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98</dir>
+      <file>test_valid_fail_range_str.cpp</file>
+      <line>14</line>
+    </frame>
+    <frame>
+      <ip>0x525A30</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>test_valid_fail_range_str_invoker()</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98</dir>
+      <file>test_valid_fail_range_str.cpp</file>
+      <line>10</line>
+    </frame>
+    <frame>
+      <ip>0x513505</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>boost::unit_test::ut_detail::unused boost::unit_test::ut_detail::invoker&lt;boost::unit_test::ut_detail::unused&gt;::invoke&lt;void (*)()&gt;(void (*&amp;)())</fn>
+    </frame>
+    <frame>
+      <ip>0x5134C7</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>boost::unit_test::ut_detail::callback0_impl_t&lt;boost::unit_test::ut_detail::unused, void (*)()&gt;::invoke()</fn>
+    </frame>
+    <frame>
+      <ip>0x4E9F1F0</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+    </frame>
+    <frame>
+      <ip>0x4E7A545</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::execution_monitor::catch_signals(boost::unit_test::callback0&lt;int&gt; const&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x4E7AD82</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::execution_monitor::execute(boost::unit_test::callback0&lt;int&gt; const&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x4E9F2F1</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::unit_test::unit_test_monitor_t::execute_and_translate(boost::unit_test::test_case const&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x4E88F93</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::unit_test::framework_impl::visit(boost::unit_test::test_case const&amp;)</fn>
+    </frame>
+  </stack>
+  <auxwhat>Address 0x61ab1c0 is 0 bytes inside a block of size 29 free'd</auxwhat>
+  <stack>
+    <frame>
+      <ip>0x4C2C2BC</ip>
+      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
+      <fn>operator delete(void*)</fn>
+    </frame>
+    <frame>
+      <ip>0x577636E</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19</obj>
+      <fn>std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::~basic_string()</fn>
+    </frame>
+    <frame>
+      <ip>0x659B79</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>valid_fail_range_str_t::~valid_fail_range_str_t()</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98</dir>
+      <file>valid_fail_range_str.cpp</file>
+      <line>30</line>
+    </frame>
+    <frame>
+      <ip>0x65942D</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>valid_fail_range_str_t::valid_fail_range_str_t(kaitai::kstream*, kaitai::kstruct*, valid_fail_range_str_t*)</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98</dir>
+      <file>valid_fail_range_str.cpp</file>
+      <line>14</line>
+    </frame>
+    <frame>
+      <ip>0x525B50</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>test_valid_fail_range_str::test_method()</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98</dir>
+      <file>test_valid_fail_range_str.cpp</file>
+      <line>14</line>
+    </frame>
+    <frame>
+      <ip>0x525A30</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>test_valid_fail_range_str_invoker()</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98</dir>
+      <file>test_valid_fail_range_str.cpp</file>
+      <line>10</line>
+    </frame>
+    <frame>
+      <ip>0x513505</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>boost::unit_test::ut_detail::unused boost::unit_test::ut_detail::invoker&lt;boost::unit_test::ut_detail::unused&gt;::invoke&lt;void (*)()&gt;(void (*&amp;)())</fn>
+    </frame>
+    <frame>
+      <ip>0x5134C7</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>boost::unit_test::ut_detail::callback0_impl_t&lt;boost::unit_test::ut_detail::unused, void (*)()&gt;::invoke()</fn>
+    </frame>
+    <frame>
+      <ip>0x4E9F1F0</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+    </frame>
+    <frame>
+      <ip>0x4E7A545</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::execution_monitor::catch_signals(boost::unit_test::callback0&lt;int&gt; const&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x4E7AD82</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::execution_monitor::execute(boost::unit_test::callback0&lt;int&gt; const&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x4E9F2F1</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::unit_test::unit_test_monitor_t::execute_and_translate(boost::unit_test::test_case const&amp;)</fn>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0xc</unique>
+  <tid>1</tid>
+  <kind>InvalidRead</kind>
+  <what>Invalid read of size 4</what>
+  <stack>
+    <frame>
+      <ip>0x57176AD</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19</obj>
+    </frame>
+    <frame>
+      <ip>0x577636E</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19</obj>
+      <fn>std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::~basic_string()</fn>
+    </frame>
+    <frame>
+      <ip>0x5D7C18</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>eof_exception_u4_t::eof_exception_u4_t(kaitai::kstream*, kaitai::kstruct*, eof_exception_u4_t*)</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98</dir>
+      <file>eof_exception_u4.cpp</file>
+      <line>16</line>
+    </frame>
+    <frame>
+      <ip>0x542DD0</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>test_eof_exception_u4::test_method()</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98</dir>
+      <file>test_eof_exception_u4.cpp</file>
+      <line>14</line>
+    </frame>
+    <frame>
+      <ip>0x542CB0</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>test_eof_exception_u4_invoker()</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98</dir>
+      <file>test_eof_exception_u4.cpp</file>
+      <line>10</line>
+    </frame>
+    <frame>
+      <ip>0x513505</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>boost::unit_test::ut_detail::unused boost::unit_test::ut_detail::invoker&lt;boost::unit_test::ut_detail::unused&gt;::invoke&lt;void (*)()&gt;(void (*&amp;)())</fn>
+    </frame>
+    <frame>
+      <ip>0x5134C7</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>boost::unit_test::ut_detail::callback0_impl_t&lt;boost::unit_test::ut_detail::unused, void (*)()&gt;::invoke()</fn>
+    </frame>
+    <frame>
+      <ip>0x4E9F1F0</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+    </frame>
+    <frame>
+      <ip>0x4E7A545</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::execution_monitor::catch_signals(boost::unit_test::callback0&lt;int&gt; const&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x4E7AD82</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::execution_monitor::execute(boost::unit_test::callback0&lt;int&gt; const&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x4E9F2F1</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::unit_test::unit_test_monitor_t::execute_and_translate(boost::unit_test::test_case const&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x4E88F93</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::unit_test::framework_impl::visit(boost::unit_test::test_case const&amp;)</fn>
+    </frame>
+  </stack>
+  <auxwhat>Address 0x6213090 is 16 bytes inside a block of size 34 free'd</auxwhat>
+  <stack>
+    <frame>
+      <ip>0x4C2C2BC</ip>
+      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
+      <fn>operator delete(void*)</fn>
+    </frame>
+    <frame>
+      <ip>0x577636E</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19</obj>
+      <fn>std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::~basic_string()</fn>
+    </frame>
+    <frame>
+      <ip>0x5D7D39</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>eof_exception_u4_t::~eof_exception_u4_t()</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98</dir>
+      <file>eof_exception_u4.cpp</file>
+      <line>24</line>
+    </frame>
+    <frame>
+      <ip>0x5D7BED</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>eof_exception_u4_t::eof_exception_u4_t(kaitai::kstream*, kaitai::kstruct*, eof_exception_u4_t*)</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98</dir>
+      <file>eof_exception_u4.cpp</file>
+      <line>13</line>
+    </frame>
+    <frame>
+      <ip>0x542DD0</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>test_eof_exception_u4::test_method()</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98</dir>
+      <file>test_eof_exception_u4.cpp</file>
+      <line>14</line>
+    </frame>
+    <frame>
+      <ip>0x542CB0</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>test_eof_exception_u4_invoker()</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98</dir>
+      <file>test_eof_exception_u4.cpp</file>
+      <line>10</line>
+    </frame>
+    <frame>
+      <ip>0x513505</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>boost::unit_test::ut_detail::unused boost::unit_test::ut_detail::invoker&lt;boost::unit_test::ut_detail::unused&gt;::invoke&lt;void (*)()&gt;(void (*&amp;)())</fn>
+    </frame>
+    <frame>
+      <ip>0x5134C7</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>boost::unit_test::ut_detail::callback0_impl_t&lt;boost::unit_test::ut_detail::unused, void (*)()&gt;::invoke()</fn>
+    </frame>
+    <frame>
+      <ip>0x4E9F1F0</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+    </frame>
+    <frame>
+      <ip>0x4E7A545</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::execution_monitor::catch_signals(boost::unit_test::callback0&lt;int&gt; const&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x4E7AD82</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::execution_monitor::execute(boost::unit_test::callback0&lt;int&gt; const&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x4E9F2F1</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::unit_test::unit_test_monitor_t::execute_and_translate(boost::unit_test::test_case const&amp;)</fn>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0xf</unique>
+  <tid>1</tid>
+  <kind>InvalidFree</kind>
+  <what>Invalid free() / delete / delete[] / realloc()</what>
+  <stack>
+    <frame>
+      <ip>0x4C2C2BC</ip>
+      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
+      <fn>operator delete(void*)</fn>
+    </frame>
+    <frame>
+      <ip>0x577636E</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19</obj>
+      <fn>std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::~basic_string()</fn>
+    </frame>
+    <frame>
+      <ip>0x5D7C18</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>eof_exception_u4_t::eof_exception_u4_t(kaitai::kstream*, kaitai::kstruct*, eof_exception_u4_t*)</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98</dir>
+      <file>eof_exception_u4.cpp</file>
+      <line>16</line>
+    </frame>
+    <frame>
+      <ip>0x542DD0</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>test_eof_exception_u4::test_method()</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98</dir>
+      <file>test_eof_exception_u4.cpp</file>
+      <line>14</line>
+    </frame>
+    <frame>
+      <ip>0x542CB0</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>test_eof_exception_u4_invoker()</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98</dir>
+      <file>test_eof_exception_u4.cpp</file>
+      <line>10</line>
+    </frame>
+    <frame>
+      <ip>0x513505</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>boost::unit_test::ut_detail::unused boost::unit_test::ut_detail::invoker&lt;boost::unit_test::ut_detail::unused&gt;::invoke&lt;void (*)()&gt;(void (*&amp;)())</fn>
+    </frame>
+    <frame>
+      <ip>0x5134C7</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>boost::unit_test::ut_detail::callback0_impl_t&lt;boost::unit_test::ut_detail::unused, void (*)()&gt;::invoke()</fn>
+    </frame>
+    <frame>
+      <ip>0x4E9F1F0</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+    </frame>
+    <frame>
+      <ip>0x4E7A545</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::execution_monitor::catch_signals(boost::unit_test::callback0&lt;int&gt; const&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x4E7AD82</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::execution_monitor::execute(boost::unit_test::callback0&lt;int&gt; const&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x4E9F2F1</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::unit_test::unit_test_monitor_t::execute_and_translate(boost::unit_test::test_case const&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x4E88F93</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::unit_test::framework_impl::visit(boost::unit_test::test_case const&amp;)</fn>
+    </frame>
+  </stack>
+  <auxwhat>Address 0x6213080 is 0 bytes inside a block of size 34 free'd</auxwhat>
+  <stack>
+    <frame>
+      <ip>0x4C2C2BC</ip>
+      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
+      <fn>operator delete(void*)</fn>
+    </frame>
+    <frame>
+      <ip>0x577636E</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19</obj>
+      <fn>std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::~basic_string()</fn>
+    </frame>
+    <frame>
+      <ip>0x5D7D39</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>eof_exception_u4_t::~eof_exception_u4_t()</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98</dir>
+      <file>eof_exception_u4.cpp</file>
+      <line>24</line>
+    </frame>
+    <frame>
+      <ip>0x5D7BED</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>eof_exception_u4_t::eof_exception_u4_t(kaitai::kstream*, kaitai::kstruct*, eof_exception_u4_t*)</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98</dir>
+      <file>eof_exception_u4.cpp</file>
+      <line>13</line>
+    </frame>
+    <frame>
+      <ip>0x542DD0</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>test_eof_exception_u4::test_method()</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98</dir>
+      <file>test_eof_exception_u4.cpp</file>
+      <line>14</line>
+    </frame>
+    <frame>
+      <ip>0x542CB0</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>test_eof_exception_u4_invoker()</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98</dir>
+      <file>test_eof_exception_u4.cpp</file>
+      <line>10</line>
+    </frame>
+    <frame>
+      <ip>0x513505</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>boost::unit_test::ut_detail::unused boost::unit_test::ut_detail::invoker&lt;boost::unit_test::ut_detail::unused&gt;::invoke&lt;void (*)()&gt;(void (*&amp;)())</fn>
+    </frame>
+    <frame>
+      <ip>0x5134C7</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>boost::unit_test::ut_detail::callback0_impl_t&lt;boost::unit_test::ut_detail::unused, void (*)()&gt;::invoke()</fn>
+    </frame>
+    <frame>
+      <ip>0x4E9F1F0</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+    </frame>
+    <frame>
+      <ip>0x4E7A545</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::execution_monitor::catch_signals(boost::unit_test::callback0&lt;int&gt; const&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x4E7AD82</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::execution_monitor::execute(boost::unit_test::callback0&lt;int&gt; const&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x4E9F2F1</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::unit_test::unit_test_monitor_t::execute_and_translate(boost::unit_test::test_case const&amp;)</fn>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0x10</unique>
+  <tid>1</tid>
+  <kind>InvalidRead</kind>
+  <what>Invalid read of size 4</what>
+  <stack>
+    <frame>
+      <ip>0x57176AD</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19</obj>
+    </frame>
+    <frame>
+      <ip>0x577636E</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19</obj>
+      <fn>std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::~basic_string()</fn>
+    </frame>
+    <frame>
+      <ip>0x5D0358</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>valid_fail_contents_t::valid_fail_contents_t(kaitai::kstream*, kaitai::kstruct*, valid_fail_contents_t*)</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98</dir>
+      <file>valid_fail_contents.cpp</file>
+      <line>17</line>
+    </frame>
+    <frame>
+      <ip>0x566220</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>test_valid_fail_contents::test_method()</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98</dir>
+      <file>test_valid_fail_contents.cpp</file>
+      <line>14</line>
+    </frame>
+    <frame>
+      <ip>0x566100</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>test_valid_fail_contents_invoker()</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98</dir>
+      <file>test_valid_fail_contents.cpp</file>
+      <line>10</line>
+    </frame>
+    <frame>
+      <ip>0x513505</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>boost::unit_test::ut_detail::unused boost::unit_test::ut_detail::invoker&lt;boost::unit_test::ut_detail::unused&gt;::invoke&lt;void (*)()&gt;(void (*&amp;)())</fn>
+    </frame>
+    <frame>
+      <ip>0x5134C7</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>boost::unit_test::ut_detail::callback0_impl_t&lt;boost::unit_test::ut_detail::unused, void (*)()&gt;::invoke()</fn>
+    </frame>
+    <frame>
+      <ip>0x4E9F1F0</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+    </frame>
+    <frame>
+      <ip>0x4E7A545</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::execution_monitor::catch_signals(boost::unit_test::callback0&lt;int&gt; const&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x4E7AD82</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::execution_monitor::execute(boost::unit_test::callback0&lt;int&gt; const&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x4E9F2F1</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::unit_test::unit_test_monitor_t::execute_and_translate(boost::unit_test::test_case const&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x4E88F93</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::unit_test::framework_impl::visit(boost::unit_test::test_case const&amp;)</fn>
+    </frame>
+  </stack>
+  <auxwhat>Address 0x6323f50 is 16 bytes inside a block of size 27 free'd</auxwhat>
+  <stack>
+    <frame>
+      <ip>0x4C2C2BC</ip>
+      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
+      <fn>operator delete(void*)</fn>
+    </frame>
+    <frame>
+      <ip>0x577636E</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19</obj>
+      <fn>std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::~basic_string()</fn>
+    </frame>
+    <frame>
+      <ip>0x5D06E9</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>valid_fail_contents_t::~valid_fail_contents_t()</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98</dir>
+      <file>valid_fail_contents.cpp</file>
+      <line>27</line>
+    </frame>
+    <frame>
+      <ip>0x5D032D</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>valid_fail_contents_t::valid_fail_contents_t(kaitai::kstream*, kaitai::kstruct*, valid_fail_contents_t*)</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98</dir>
+      <file>valid_fail_contents.cpp</file>
+      <line>14</line>
+    </frame>
+    <frame>
+      <ip>0x566220</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>test_valid_fail_contents::test_method()</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98</dir>
+      <file>test_valid_fail_contents.cpp</file>
+      <line>14</line>
+    </frame>
+    <frame>
+      <ip>0x566100</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>test_valid_fail_contents_invoker()</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98</dir>
+      <file>test_valid_fail_contents.cpp</file>
+      <line>10</line>
+    </frame>
+    <frame>
+      <ip>0x513505</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>boost::unit_test::ut_detail::unused boost::unit_test::ut_detail::invoker&lt;boost::unit_test::ut_detail::unused&gt;::invoke&lt;void (*)()&gt;(void (*&amp;)())</fn>
+    </frame>
+    <frame>
+      <ip>0x5134C7</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>boost::unit_test::ut_detail::callback0_impl_t&lt;boost::unit_test::ut_detail::unused, void (*)()&gt;::invoke()</fn>
+    </frame>
+    <frame>
+      <ip>0x4E9F1F0</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+    </frame>
+    <frame>
+      <ip>0x4E7A545</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::execution_monitor::catch_signals(boost::unit_test::callback0&lt;int&gt; const&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x4E7AD82</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::execution_monitor::execute(boost::unit_test::callback0&lt;int&gt; const&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x4E9F2F1</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::unit_test::unit_test_monitor_t::execute_and_translate(boost::unit_test::test_case const&amp;)</fn>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0x13</unique>
+  <tid>1</tid>
+  <kind>InvalidFree</kind>
+  <what>Invalid free() / delete / delete[] / realloc()</what>
+  <stack>
+    <frame>
+      <ip>0x4C2C2BC</ip>
+      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
+      <fn>operator delete(void*)</fn>
+    </frame>
+    <frame>
+      <ip>0x577636E</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19</obj>
+      <fn>std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::~basic_string()</fn>
+    </frame>
+    <frame>
+      <ip>0x5D0358</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>valid_fail_contents_t::valid_fail_contents_t(kaitai::kstream*, kaitai::kstruct*, valid_fail_contents_t*)</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98</dir>
+      <file>valid_fail_contents.cpp</file>
+      <line>17</line>
+    </frame>
+    <frame>
+      <ip>0x566220</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>test_valid_fail_contents::test_method()</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98</dir>
+      <file>test_valid_fail_contents.cpp</file>
+      <line>14</line>
+    </frame>
+    <frame>
+      <ip>0x566100</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>test_valid_fail_contents_invoker()</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98</dir>
+      <file>test_valid_fail_contents.cpp</file>
+      <line>10</line>
+    </frame>
+    <frame>
+      <ip>0x513505</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>boost::unit_test::ut_detail::unused boost::unit_test::ut_detail::invoker&lt;boost::unit_test::ut_detail::unused&gt;::invoke&lt;void (*)()&gt;(void (*&amp;)())</fn>
+    </frame>
+    <frame>
+      <ip>0x5134C7</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>boost::unit_test::ut_detail::callback0_impl_t&lt;boost::unit_test::ut_detail::unused, void (*)()&gt;::invoke()</fn>
+    </frame>
+    <frame>
+      <ip>0x4E9F1F0</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+    </frame>
+    <frame>
+      <ip>0x4E7A545</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::execution_monitor::catch_signals(boost::unit_test::callback0&lt;int&gt; const&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x4E7AD82</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::execution_monitor::execute(boost::unit_test::callback0&lt;int&gt; const&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x4E9F2F1</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::unit_test::unit_test_monitor_t::execute_and_translate(boost::unit_test::test_case const&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x4E88F93</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::unit_test::framework_impl::visit(boost::unit_test::test_case const&amp;)</fn>
+    </frame>
+  </stack>
+  <auxwhat>Address 0x6323f40 is 0 bytes inside a block of size 27 free'd</auxwhat>
+  <stack>
+    <frame>
+      <ip>0x4C2C2BC</ip>
+      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
+      <fn>operator delete(void*)</fn>
+    </frame>
+    <frame>
+      <ip>0x577636E</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19</obj>
+      <fn>std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::~basic_string()</fn>
+    </frame>
+    <frame>
+      <ip>0x5D06E9</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>valid_fail_contents_t::~valid_fail_contents_t()</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98</dir>
+      <file>valid_fail_contents.cpp</file>
+      <line>27</line>
+    </frame>
+    <frame>
+      <ip>0x5D032D</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>valid_fail_contents_t::valid_fail_contents_t(kaitai::kstream*, kaitai::kstruct*, valid_fail_contents_t*)</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98</dir>
+      <file>valid_fail_contents.cpp</file>
+      <line>14</line>
+    </frame>
+    <frame>
+      <ip>0x566220</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>test_valid_fail_contents::test_method()</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98</dir>
+      <file>test_valid_fail_contents.cpp</file>
+      <line>14</line>
+    </frame>
+    <frame>
+      <ip>0x566100</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>test_valid_fail_contents_invoker()</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98</dir>
+      <file>test_valid_fail_contents.cpp</file>
+      <line>10</line>
+    </frame>
+    <frame>
+      <ip>0x513505</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>boost::unit_test::ut_detail::unused boost::unit_test::ut_detail::invoker&lt;boost::unit_test::ut_detail::unused&gt;::invoke&lt;void (*)()&gt;(void (*&amp;)())</fn>
+    </frame>
+    <frame>
+      <ip>0x5134C7</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>boost::unit_test::ut_detail::callback0_impl_t&lt;boost::unit_test::ut_detail::unused, void (*)()&gt;::invoke()</fn>
+    </frame>
+    <frame>
+      <ip>0x4E9F1F0</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+    </frame>
+    <frame>
+      <ip>0x4E7A545</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::execution_monitor::catch_signals(boost::unit_test::callback0&lt;int&gt; const&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x4E7AD82</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::execution_monitor::execute(boost::unit_test::callback0&lt;int&gt; const&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x4E9F2F1</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::unit_test::unit_test_monitor_t::execute_and_translate(boost::unit_test::test_case const&amp;)</fn>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0x14</unique>
+  <tid>1</tid>
+  <kind>InvalidRead</kind>
+  <what>Invalid read of size 4</what>
+  <stack>
+    <frame>
+      <ip>0x57176AD</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19</obj>
+    </frame>
+    <frame>
+      <ip>0x577636E</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19</obj>
+      <fn>std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::~basic_string()</fn>
+    </frame>
+    <frame>
+      <ip>0x65F348</ip>
       <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
       <fn>eos_exception_bytes_t::eos_exception_bytes_t(kaitai::kstream*, kaitai::kstruct*, eos_exception_bytes_t*)</fn>
       <dir>/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98</dir>
       <file>eos_exception_bytes.cpp</file>
-      <line>10</line>
+      <line>18</line>
     </frame>
     <frame>
       <ip>0x599C40</ip>
@@ -205,38 +1636,580 @@
       <fn>boost::unit_test::framework_impl::visit(boost::unit_test::test_case const&amp;)</fn>
     </frame>
   </stack>
+  <auxwhat>Address 0x652ad50 is 16 bytes inside a block of size 31 free'd</auxwhat>
+  <stack>
+    <frame>
+      <ip>0x4C2C2BC</ip>
+      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
+      <fn>operator delete(void*)</fn>
+    </frame>
+    <frame>
+      <ip>0x577636E</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19</obj>
+      <fn>std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::~basic_string()</fn>
+    </frame>
+    <frame>
+      <ip>0x65F560</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>eos_exception_bytes_t::~eos_exception_bytes_t()</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98</dir>
+      <file>eos_exception_bytes.cpp</file>
+      <line>29</line>
+    </frame>
+    <frame>
+      <ip>0x65F31D</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>eos_exception_bytes_t::eos_exception_bytes_t(kaitai::kstream*, kaitai::kstruct*, eos_exception_bytes_t*)</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98</dir>
+      <file>eos_exception_bytes.cpp</file>
+      <line>15</line>
+    </frame>
+    <frame>
+      <ip>0x599C40</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>test_eos_exception_bytes::test_method()</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98</dir>
+      <file>test_eos_exception_bytes.cpp</file>
+      <line>14</line>
+    </frame>
+    <frame>
+      <ip>0x599B20</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>test_eos_exception_bytes_invoker()</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98</dir>
+      <file>test_eos_exception_bytes.cpp</file>
+      <line>10</line>
+    </frame>
+    <frame>
+      <ip>0x513505</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>boost::unit_test::ut_detail::unused boost::unit_test::ut_detail::invoker&lt;boost::unit_test::ut_detail::unused&gt;::invoke&lt;void (*)()&gt;(void (*&amp;)())</fn>
+    </frame>
+    <frame>
+      <ip>0x5134C7</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>boost::unit_test::ut_detail::callback0_impl_t&lt;boost::unit_test::ut_detail::unused, void (*)()&gt;::invoke()</fn>
+    </frame>
+    <frame>
+      <ip>0x4E9F1F0</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+    </frame>
+    <frame>
+      <ip>0x4E7A545</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::execution_monitor::catch_signals(boost::unit_test::callback0&lt;int&gt; const&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x4E7AD82</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::execution_monitor::execute(boost::unit_test::callback0&lt;int&gt; const&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x4E9F2F1</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::unit_test::unit_test_monitor_t::execute_and_translate(boost::unit_test::test_case const&amp;)</fn>
+    </frame>
+  </stack>
 </error>
 
 <error>
-  <unique>0x8</unique>
+  <unique>0x17</unique>
   <tid>1</tid>
-  <kind>Leak_DefinitelyLost</kind>
-  <xwhat>
-    <text>415 (384 direct, 31 indirect) bytes in 1 blocks are definitely lost in loss record 9 of 9</text>
-    <leakedbytes>415</leakedbytes>
-    <leakedblocks>1</leakedblocks>
-  </xwhat>
+  <kind>InvalidFree</kind>
+  <what>Invalid free() / delete / delete[] / realloc()</what>
   <stack>
     <frame>
-      <ip>0x4C2B0E0</ip>
+      <ip>0x4C2C2BC</ip>
       <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
-      <fn>operator new(unsigned long)</fn>
+      <fn>operator delete(void*)</fn>
     </frame>
     <frame>
-      <ip>0x5F57A0</ip>
+      <ip>0x577636E</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19</obj>
+      <fn>std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::~basic_string()</fn>
+    </frame>
+    <frame>
+      <ip>0x65F348</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>eos_exception_bytes_t::eos_exception_bytes_t(kaitai::kstream*, kaitai::kstruct*, eos_exception_bytes_t*)</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98</dir>
+      <file>eos_exception_bytes.cpp</file>
+      <line>18</line>
+    </frame>
+    <frame>
+      <ip>0x599C40</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>test_eos_exception_bytes::test_method()</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98</dir>
+      <file>test_eos_exception_bytes.cpp</file>
+      <line>14</line>
+    </frame>
+    <frame>
+      <ip>0x599B20</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>test_eos_exception_bytes_invoker()</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98</dir>
+      <file>test_eos_exception_bytes.cpp</file>
+      <line>10</line>
+    </frame>
+    <frame>
+      <ip>0x513505</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>boost::unit_test::ut_detail::unused boost::unit_test::ut_detail::invoker&lt;boost::unit_test::ut_detail::unused&gt;::invoke&lt;void (*)()&gt;(void (*&amp;)())</fn>
+    </frame>
+    <frame>
+      <ip>0x5134C7</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>boost::unit_test::ut_detail::callback0_impl_t&lt;boost::unit_test::ut_detail::unused, void (*)()&gt;::invoke()</fn>
+    </frame>
+    <frame>
+      <ip>0x4E9F1F0</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+    </frame>
+    <frame>
+      <ip>0x4E7A545</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::execution_monitor::catch_signals(boost::unit_test::callback0&lt;int&gt; const&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x4E7AD82</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::execution_monitor::execute(boost::unit_test::callback0&lt;int&gt; const&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x4E9F2F1</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::unit_test::unit_test_monitor_t::execute_and_translate(boost::unit_test::test_case const&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x4E88F93</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::unit_test::framework_impl::visit(boost::unit_test::test_case const&amp;)</fn>
+    </frame>
+  </stack>
+  <auxwhat>Address 0x652ad40 is 0 bytes inside a block of size 31 free'd</auxwhat>
+  <stack>
+    <frame>
+      <ip>0x4C2C2BC</ip>
+      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
+      <fn>operator delete(void*)</fn>
+    </frame>
+    <frame>
+      <ip>0x577636E</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19</obj>
+      <fn>std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::~basic_string()</fn>
+    </frame>
+    <frame>
+      <ip>0x65F560</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>eos_exception_bytes_t::~eos_exception_bytes_t()</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98</dir>
+      <file>eos_exception_bytes.cpp</file>
+      <line>29</line>
+    </frame>
+    <frame>
+      <ip>0x65F31D</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>eos_exception_bytes_t::eos_exception_bytes_t(kaitai::kstream*, kaitai::kstruct*, eos_exception_bytes_t*)</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98</dir>
+      <file>eos_exception_bytes.cpp</file>
+      <line>15</line>
+    </frame>
+    <frame>
+      <ip>0x599C40</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>test_eos_exception_bytes::test_method()</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98</dir>
+      <file>test_eos_exception_bytes.cpp</file>
+      <line>14</line>
+    </frame>
+    <frame>
+      <ip>0x599B20</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>test_eos_exception_bytes_invoker()</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98</dir>
+      <file>test_eos_exception_bytes.cpp</file>
+      <line>10</line>
+    </frame>
+    <frame>
+      <ip>0x513505</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>boost::unit_test::ut_detail::unused boost::unit_test::ut_detail::invoker&lt;boost::unit_test::ut_detail::unused&gt;::invoke&lt;void (*)()&gt;(void (*&amp;)())</fn>
+    </frame>
+    <frame>
+      <ip>0x5134C7</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>boost::unit_test::ut_detail::callback0_impl_t&lt;boost::unit_test::ut_detail::unused, void (*)()&gt;::invoke()</fn>
+    </frame>
+    <frame>
+      <ip>0x4E9F1F0</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+    </frame>
+    <frame>
+      <ip>0x4E7A545</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::execution_monitor::catch_signals(boost::unit_test::callback0&lt;int&gt; const&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x4E7AD82</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::execution_monitor::execute(boost::unit_test::callback0&lt;int&gt; const&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x4E9F2F1</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::unit_test::unit_test_monitor_t::execute_and_translate(boost::unit_test::test_case const&amp;)</fn>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0x18</unique>
+  <tid>1</tid>
+  <kind>InvalidRead</kind>
+  <what>Invalid read of size 4</what>
+  <stack>
+    <frame>
+      <ip>0x57176AD</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19</obj>
+    </frame>
+    <frame>
+      <ip>0x577636E</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19</obj>
+      <fn>std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::~basic_string()</fn>
+    </frame>
+    <frame>
+      <ip>0x5F7B9C</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>eos_exception_u4_t::data_t::data_t(kaitai::kstream*, eos_exception_u4_t*, eos_exception_u4_t*)</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98</dir>
+      <file>eos_exception_u4.cpp</file>
+      <line>41</line>
+    </frame>
+    <frame>
+      <ip>0x5F78D7</ip>
       <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
       <fn>eos_exception_u4_t::_read()</fn>
       <dir>/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98</dir>
       <file>eos_exception_u4.cpp</file>
-      <line>15</line>
+      <line>23</line>
     </frame>
     <frame>
-      <ip>0x5F56DB</ip>
+      <ip>0x5F7763</ip>
       <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
       <fn>eos_exception_u4_t::eos_exception_u4_t(kaitai::kstream*, kaitai::kstruct*, eos_exception_u4_t*)</fn>
       <dir>/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98</dir>
       <file>eos_exception_u4.cpp</file>
+      <line>13</line>
+    </frame>
+    <frame>
+      <ip>0x59D3E0</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>test_eos_exception_u4::test_method()</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98</dir>
+      <file>test_eos_exception_u4.cpp</file>
+      <line>14</line>
+    </frame>
+    <frame>
+      <ip>0x59D2C0</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>test_eos_exception_u4_invoker()</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98</dir>
+      <file>test_eos_exception_u4.cpp</file>
       <line>10</line>
+    </frame>
+    <frame>
+      <ip>0x513505</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>boost::unit_test::ut_detail::unused boost::unit_test::ut_detail::invoker&lt;boost::unit_test::ut_detail::unused&gt;::invoke&lt;void (*)()&gt;(void (*&amp;)())</fn>
+    </frame>
+    <frame>
+      <ip>0x5134C7</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>boost::unit_test::ut_detail::callback0_impl_t&lt;boost::unit_test::ut_detail::unused, void (*)()&gt;::invoke()</fn>
+    </frame>
+    <frame>
+      <ip>0x4E9F1F0</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+    </frame>
+    <frame>
+      <ip>0x4E7A545</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::execution_monitor::catch_signals(boost::unit_test::callback0&lt;int&gt; const&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x4E7AD82</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::execution_monitor::execute(boost::unit_test::callback0&lt;int&gt; const&amp;)</fn>
+    </frame>
+  </stack>
+  <auxwhat>Address 0x655aa20 is 16 bytes inside a block of size 28 free'd</auxwhat>
+  <stack>
+    <frame>
+      <ip>0x4C2C2BC</ip>
+      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
+      <fn>operator delete(void*)</fn>
+    </frame>
+    <frame>
+      <ip>0x577636E</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19</obj>
+      <fn>std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::~basic_string()</fn>
+    </frame>
+    <frame>
+      <ip>0x5F7CB9</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>eos_exception_u4_t::data_t::~data_t()</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98</dir>
+      <file>eos_exception_u4.cpp</file>
+      <line>49</line>
+    </frame>
+    <frame>
+      <ip>0x5F7B71</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>eos_exception_u4_t::data_t::data_t(kaitai::kstream*, eos_exception_u4_t*, eos_exception_u4_t*)</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98</dir>
+      <file>eos_exception_u4.cpp</file>
+      <line>38</line>
+    </frame>
+    <frame>
+      <ip>0x5F78D7</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>eos_exception_u4_t::_read()</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98</dir>
+      <file>eos_exception_u4.cpp</file>
+      <line>23</line>
+    </frame>
+    <frame>
+      <ip>0x5F7763</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>eos_exception_u4_t::eos_exception_u4_t(kaitai::kstream*, kaitai::kstruct*, eos_exception_u4_t*)</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98</dir>
+      <file>eos_exception_u4.cpp</file>
+      <line>13</line>
+    </frame>
+    <frame>
+      <ip>0x59D3E0</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>test_eos_exception_u4::test_method()</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98</dir>
+      <file>test_eos_exception_u4.cpp</file>
+      <line>14</line>
+    </frame>
+    <frame>
+      <ip>0x59D2C0</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>test_eos_exception_u4_invoker()</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98</dir>
+      <file>test_eos_exception_u4.cpp</file>
+      <line>10</line>
+    </frame>
+    <frame>
+      <ip>0x513505</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>boost::unit_test::ut_detail::unused boost::unit_test::ut_detail::invoker&lt;boost::unit_test::ut_detail::unused&gt;::invoke&lt;void (*)()&gt;(void (*&amp;)())</fn>
+    </frame>
+    <frame>
+      <ip>0x5134C7</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>boost::unit_test::ut_detail::callback0_impl_t&lt;boost::unit_test::ut_detail::unused, void (*)()&gt;::invoke()</fn>
+    </frame>
+    <frame>
+      <ip>0x4E9F1F0</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+    </frame>
+    <frame>
+      <ip>0x4E7A545</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::execution_monitor::catch_signals(boost::unit_test::callback0&lt;int&gt; const&amp;)</fn>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0x1b</unique>
+  <tid>1</tid>
+  <kind>InvalidFree</kind>
+  <what>Invalid free() / delete / delete[] / realloc()</what>
+  <stack>
+    <frame>
+      <ip>0x4C2C2BC</ip>
+      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
+      <fn>operator delete(void*)</fn>
+    </frame>
+    <frame>
+      <ip>0x577636E</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19</obj>
+      <fn>std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::~basic_string()</fn>
+    </frame>
+    <frame>
+      <ip>0x5F7B9C</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>eos_exception_u4_t::data_t::data_t(kaitai::kstream*, eos_exception_u4_t*, eos_exception_u4_t*)</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98</dir>
+      <file>eos_exception_u4.cpp</file>
+      <line>41</line>
+    </frame>
+    <frame>
+      <ip>0x5F78D7</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>eos_exception_u4_t::_read()</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98</dir>
+      <file>eos_exception_u4.cpp</file>
+      <line>23</line>
+    </frame>
+    <frame>
+      <ip>0x5F7763</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>eos_exception_u4_t::eos_exception_u4_t(kaitai::kstream*, kaitai::kstruct*, eos_exception_u4_t*)</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98</dir>
+      <file>eos_exception_u4.cpp</file>
+      <line>13</line>
+    </frame>
+    <frame>
+      <ip>0x59D3E0</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>test_eos_exception_u4::test_method()</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98</dir>
+      <file>test_eos_exception_u4.cpp</file>
+      <line>14</line>
+    </frame>
+    <frame>
+      <ip>0x59D2C0</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>test_eos_exception_u4_invoker()</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98</dir>
+      <file>test_eos_exception_u4.cpp</file>
+      <line>10</line>
+    </frame>
+    <frame>
+      <ip>0x513505</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>boost::unit_test::ut_detail::unused boost::unit_test::ut_detail::invoker&lt;boost::unit_test::ut_detail::unused&gt;::invoke&lt;void (*)()&gt;(void (*&amp;)())</fn>
+    </frame>
+    <frame>
+      <ip>0x5134C7</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>boost::unit_test::ut_detail::callback0_impl_t&lt;boost::unit_test::ut_detail::unused, void (*)()&gt;::invoke()</fn>
+    </frame>
+    <frame>
+      <ip>0x4E9F1F0</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+    </frame>
+    <frame>
+      <ip>0x4E7A545</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::execution_monitor::catch_signals(boost::unit_test::callback0&lt;int&gt; const&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x4E7AD82</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::execution_monitor::execute(boost::unit_test::callback0&lt;int&gt; const&amp;)</fn>
+    </frame>
+  </stack>
+  <auxwhat>Address 0x655aa10 is 0 bytes inside a block of size 28 free'd</auxwhat>
+  <stack>
+    <frame>
+      <ip>0x4C2C2BC</ip>
+      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
+      <fn>operator delete(void*)</fn>
+    </frame>
+    <frame>
+      <ip>0x577636E</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19</obj>
+      <fn>std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::~basic_string()</fn>
+    </frame>
+    <frame>
+      <ip>0x5F7CB9</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>eos_exception_u4_t::data_t::~data_t()</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98</dir>
+      <file>eos_exception_u4.cpp</file>
+      <line>49</line>
+    </frame>
+    <frame>
+      <ip>0x5F7B71</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>eos_exception_u4_t::data_t::data_t(kaitai::kstream*, eos_exception_u4_t*, eos_exception_u4_t*)</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98</dir>
+      <file>eos_exception_u4.cpp</file>
+      <line>38</line>
+    </frame>
+    <frame>
+      <ip>0x5F78D7</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>eos_exception_u4_t::_read()</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98</dir>
+      <file>eos_exception_u4.cpp</file>
+      <line>23</line>
+    </frame>
+    <frame>
+      <ip>0x5F7763</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>eos_exception_u4_t::eos_exception_u4_t(kaitai::kstream*, kaitai::kstruct*, eos_exception_u4_t*)</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98</dir>
+      <file>eos_exception_u4.cpp</file>
+      <line>13</line>
+    </frame>
+    <frame>
+      <ip>0x59D3E0</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>test_eos_exception_u4::test_method()</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98</dir>
+      <file>test_eos_exception_u4.cpp</file>
+      <line>14</line>
+    </frame>
+    <frame>
+      <ip>0x59D2C0</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>test_eos_exception_u4_invoker()</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98</dir>
+      <file>test_eos_exception_u4.cpp</file>
+      <line>10</line>
+    </frame>
+    <frame>
+      <ip>0x513505</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>boost::unit_test::ut_detail::unused boost::unit_test::ut_detail::invoker&lt;boost::unit_test::ut_detail::unused&gt;::invoke&lt;void (*)()&gt;(void (*&amp;)())</fn>
+    </frame>
+    <frame>
+      <ip>0x5134C7</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>boost::unit_test::ut_detail::callback0_impl_t&lt;boost::unit_test::ut_detail::unused, void (*)()&gt;::invoke()</fn>
+    </frame>
+    <frame>
+      <ip>0x4E9F1F0</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+    </frame>
+    <frame>
+      <ip>0x4E7A545</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::execution_monitor::catch_signals(boost::unit_test::callback0&lt;int&gt; const&amp;)</fn>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0x1c</unique>
+  <tid>1</tid>
+  <kind>InvalidRead</kind>
+  <what>Invalid read of size 4</what>
+  <stack>
+    <frame>
+      <ip>0x57176AD</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19</obj>
+    </frame>
+    <frame>
+      <ip>0x577636E</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19</obj>
+      <fn>std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::~basic_string()</fn>
+    </frame>
+    <frame>
+      <ip>0x5F77C8</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>eos_exception_u4_t::eos_exception_u4_t(kaitai::kstream*, kaitai::kstruct*, eos_exception_u4_t*)</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98</dir>
+      <file>eos_exception_u4.cpp</file>
+      <line>18</line>
     </frame>
     <frame>
       <ip>0x59D3E0</ip>
@@ -289,9 +2262,613 @@
       <fn>boost::unit_test::framework_impl::visit(boost::unit_test::test_case const&amp;)</fn>
     </frame>
   </stack>
+  <auxwhat>Address 0x655a6e0 is 16 bytes inside a block of size 31 free'd</auxwhat>
+  <stack>
+    <frame>
+      <ip>0x4C2C2BC</ip>
+      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
+      <fn>operator delete(void*)</fn>
+    </frame>
+    <frame>
+      <ip>0x577636E</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19</obj>
+      <fn>std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::~basic_string()</fn>
+    </frame>
+    <frame>
+      <ip>0x5F79E0</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>eos_exception_u4_t::~eos_exception_u4_t()</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98</dir>
+      <file>eos_exception_u4.cpp</file>
+      <line>29</line>
+    </frame>
+    <frame>
+      <ip>0x5F779D</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>eos_exception_u4_t::eos_exception_u4_t(kaitai::kstream*, kaitai::kstruct*, eos_exception_u4_t*)</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98</dir>
+      <file>eos_exception_u4.cpp</file>
+      <line>15</line>
+    </frame>
+    <frame>
+      <ip>0x59D3E0</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>test_eos_exception_u4::test_method()</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98</dir>
+      <file>test_eos_exception_u4.cpp</file>
+      <line>14</line>
+    </frame>
+    <frame>
+      <ip>0x59D2C0</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>test_eos_exception_u4_invoker()</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98</dir>
+      <file>test_eos_exception_u4.cpp</file>
+      <line>10</line>
+    </frame>
+    <frame>
+      <ip>0x513505</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>boost::unit_test::ut_detail::unused boost::unit_test::ut_detail::invoker&lt;boost::unit_test::ut_detail::unused&gt;::invoke&lt;void (*)()&gt;(void (*&amp;)())</fn>
+    </frame>
+    <frame>
+      <ip>0x5134C7</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>boost::unit_test::ut_detail::callback0_impl_t&lt;boost::unit_test::ut_detail::unused, void (*)()&gt;::invoke()</fn>
+    </frame>
+    <frame>
+      <ip>0x4E9F1F0</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+    </frame>
+    <frame>
+      <ip>0x4E7A545</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::execution_monitor::catch_signals(boost::unit_test::callback0&lt;int&gt; const&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x4E7AD82</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::execution_monitor::execute(boost::unit_test::callback0&lt;int&gt; const&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x4E9F2F1</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::unit_test::unit_test_monitor_t::execute_and_translate(boost::unit_test::test_case const&amp;)</fn>
+    </frame>
+  </stack>
 </error>
 
+<error>
+  <unique>0x1f</unique>
+  <tid>1</tid>
+  <kind>InvalidFree</kind>
+  <what>Invalid free() / delete / delete[] / realloc()</what>
+  <stack>
+    <frame>
+      <ip>0x4C2C2BC</ip>
+      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
+      <fn>operator delete(void*)</fn>
+    </frame>
+    <frame>
+      <ip>0x577636E</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19</obj>
+      <fn>std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::~basic_string()</fn>
+    </frame>
+    <frame>
+      <ip>0x5F77C8</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>eos_exception_u4_t::eos_exception_u4_t(kaitai::kstream*, kaitai::kstruct*, eos_exception_u4_t*)</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98</dir>
+      <file>eos_exception_u4.cpp</file>
+      <line>18</line>
+    </frame>
+    <frame>
+      <ip>0x59D3E0</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>test_eos_exception_u4::test_method()</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98</dir>
+      <file>test_eos_exception_u4.cpp</file>
+      <line>14</line>
+    </frame>
+    <frame>
+      <ip>0x59D2C0</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>test_eos_exception_u4_invoker()</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98</dir>
+      <file>test_eos_exception_u4.cpp</file>
+      <line>10</line>
+    </frame>
+    <frame>
+      <ip>0x513505</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>boost::unit_test::ut_detail::unused boost::unit_test::ut_detail::invoker&lt;boost::unit_test::ut_detail::unused&gt;::invoke&lt;void (*)()&gt;(void (*&amp;)())</fn>
+    </frame>
+    <frame>
+      <ip>0x5134C7</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>boost::unit_test::ut_detail::callback0_impl_t&lt;boost::unit_test::ut_detail::unused, void (*)()&gt;::invoke()</fn>
+    </frame>
+    <frame>
+      <ip>0x4E9F1F0</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+    </frame>
+    <frame>
+      <ip>0x4E7A545</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::execution_monitor::catch_signals(boost::unit_test::callback0&lt;int&gt; const&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x4E7AD82</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::execution_monitor::execute(boost::unit_test::callback0&lt;int&gt; const&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x4E9F2F1</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::unit_test::unit_test_monitor_t::execute_and_translate(boost::unit_test::test_case const&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x4E88F93</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::unit_test::framework_impl::visit(boost::unit_test::test_case const&amp;)</fn>
+    </frame>
+  </stack>
+  <auxwhat>Address 0x655a6d0 is 0 bytes inside a block of size 31 free'd</auxwhat>
+  <stack>
+    <frame>
+      <ip>0x4C2C2BC</ip>
+      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
+      <fn>operator delete(void*)</fn>
+    </frame>
+    <frame>
+      <ip>0x577636E</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19</obj>
+      <fn>std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::~basic_string()</fn>
+    </frame>
+    <frame>
+      <ip>0x5F79E0</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>eos_exception_u4_t::~eos_exception_u4_t()</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98</dir>
+      <file>eos_exception_u4.cpp</file>
+      <line>29</line>
+    </frame>
+    <frame>
+      <ip>0x5F779D</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>eos_exception_u4_t::eos_exception_u4_t(kaitai::kstream*, kaitai::kstruct*, eos_exception_u4_t*)</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98</dir>
+      <file>eos_exception_u4.cpp</file>
+      <line>15</line>
+    </frame>
+    <frame>
+      <ip>0x59D3E0</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>test_eos_exception_u4::test_method()</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98</dir>
+      <file>test_eos_exception_u4.cpp</file>
+      <line>14</line>
+    </frame>
+    <frame>
+      <ip>0x59D2C0</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>test_eos_exception_u4_invoker()</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98</dir>
+      <file>test_eos_exception_u4.cpp</file>
+      <line>10</line>
+    </frame>
+    <frame>
+      <ip>0x513505</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>boost::unit_test::ut_detail::unused boost::unit_test::ut_detail::invoker&lt;boost::unit_test::ut_detail::unused&gt;::invoke&lt;void (*)()&gt;(void (*&amp;)())</fn>
+    </frame>
+    <frame>
+      <ip>0x5134C7</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>boost::unit_test::ut_detail::callback0_impl_t&lt;boost::unit_test::ut_detail::unused, void (*)()&gt;::invoke()</fn>
+    </frame>
+    <frame>
+      <ip>0x4E9F1F0</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+    </frame>
+    <frame>
+      <ip>0x4E7A545</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::execution_monitor::catch_signals(boost::unit_test::callback0&lt;int&gt; const&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x4E7AD82</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::execution_monitor::execute(boost::unit_test::callback0&lt;int&gt; const&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x4E9F2F1</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::unit_test::unit_test_monitor_t::execute_and_translate(boost::unit_test::test_case const&amp;)</fn>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0x20</unique>
+  <tid>1</tid>
+  <kind>InvalidRead</kind>
+  <what>Invalid read of size 4</what>
+  <stack>
+    <frame>
+      <ip>0x57176AD</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19</obj>
+    </frame>
+    <frame>
+      <ip>0x577636E</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19</obj>
+      <fn>std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::~basic_string()</fn>
+    </frame>
+    <frame>
+      <ip>0x6111C8</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>valid_fail_range_bytes_t::valid_fail_range_bytes_t(kaitai::kstream*, kaitai::kstruct*, valid_fail_range_bytes_t*)</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98</dir>
+      <file>valid_fail_range_bytes.cpp</file>
+      <line>17</line>
+    </frame>
+    <frame>
+      <ip>0x5B5A60</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>test_valid_fail_range_bytes::test_method()</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98</dir>
+      <file>test_valid_fail_range_bytes.cpp</file>
+      <line>14</line>
+    </frame>
+    <frame>
+      <ip>0x5B5940</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>test_valid_fail_range_bytes_invoker()</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98</dir>
+      <file>test_valid_fail_range_bytes.cpp</file>
+      <line>10</line>
+    </frame>
+    <frame>
+      <ip>0x513505</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>boost::unit_test::ut_detail::unused boost::unit_test::ut_detail::invoker&lt;boost::unit_test::ut_detail::unused&gt;::invoke&lt;void (*)()&gt;(void (*&amp;)())</fn>
+    </frame>
+    <frame>
+      <ip>0x5134C7</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>boost::unit_test::ut_detail::callback0_impl_t&lt;boost::unit_test::ut_detail::unused, void (*)()&gt;::invoke()</fn>
+    </frame>
+    <frame>
+      <ip>0x4E9F1F0</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+    </frame>
+    <frame>
+      <ip>0x4E7A545</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::execution_monitor::catch_signals(boost::unit_test::callback0&lt;int&gt; const&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x4E7AD82</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::execution_monitor::execute(boost::unit_test::callback0&lt;int&gt; const&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x4E9F2F1</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::unit_test::unit_test_monitor_t::execute_and_translate(boost::unit_test::test_case const&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x4E88F93</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::unit_test::framework_impl::visit(boost::unit_test::test_case const&amp;)</fn>
+    </frame>
+  </stack>
+  <auxwhat>Address 0x65dda40 is 16 bytes inside a block of size 27 free'd</auxwhat>
+  <stack>
+    <frame>
+      <ip>0x4C2C2BC</ip>
+      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
+      <fn>operator delete(void*)</fn>
+    </frame>
+    <frame>
+      <ip>0x577636E</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19</obj>
+      <fn>std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::~basic_string()</fn>
+    </frame>
+    <frame>
+      <ip>0x611829</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>valid_fail_range_bytes_t::~valid_fail_range_bytes_t()</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98</dir>
+      <file>valid_fail_range_bytes.cpp</file>
+      <line>30</line>
+    </frame>
+    <frame>
+      <ip>0x61119D</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>valid_fail_range_bytes_t::valid_fail_range_bytes_t(kaitai::kstream*, kaitai::kstruct*, valid_fail_range_bytes_t*)</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98</dir>
+      <file>valid_fail_range_bytes.cpp</file>
+      <line>14</line>
+    </frame>
+    <frame>
+      <ip>0x5B5A60</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>test_valid_fail_range_bytes::test_method()</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98</dir>
+      <file>test_valid_fail_range_bytes.cpp</file>
+      <line>14</line>
+    </frame>
+    <frame>
+      <ip>0x5B5940</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>test_valid_fail_range_bytes_invoker()</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98</dir>
+      <file>test_valid_fail_range_bytes.cpp</file>
+      <line>10</line>
+    </frame>
+    <frame>
+      <ip>0x513505</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>boost::unit_test::ut_detail::unused boost::unit_test::ut_detail::invoker&lt;boost::unit_test::ut_detail::unused&gt;::invoke&lt;void (*)()&gt;(void (*&amp;)())</fn>
+    </frame>
+    <frame>
+      <ip>0x5134C7</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>boost::unit_test::ut_detail::callback0_impl_t&lt;boost::unit_test::ut_detail::unused, void (*)()&gt;::invoke()</fn>
+    </frame>
+    <frame>
+      <ip>0x4E9F1F0</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+    </frame>
+    <frame>
+      <ip>0x4E7A545</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::execution_monitor::catch_signals(boost::unit_test::callback0&lt;int&gt; const&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x4E7AD82</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::execution_monitor::execute(boost::unit_test::callback0&lt;int&gt; const&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x4E9F2F1</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::unit_test::unit_test_monitor_t::execute_and_translate(boost::unit_test::test_case const&amp;)</fn>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0x23</unique>
+  <tid>1</tid>
+  <kind>InvalidFree</kind>
+  <what>Invalid free() / delete / delete[] / realloc()</what>
+  <stack>
+    <frame>
+      <ip>0x4C2C2BC</ip>
+      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
+      <fn>operator delete(void*)</fn>
+    </frame>
+    <frame>
+      <ip>0x577636E</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19</obj>
+      <fn>std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::~basic_string()</fn>
+    </frame>
+    <frame>
+      <ip>0x6111C8</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>valid_fail_range_bytes_t::valid_fail_range_bytes_t(kaitai::kstream*, kaitai::kstruct*, valid_fail_range_bytes_t*)</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98</dir>
+      <file>valid_fail_range_bytes.cpp</file>
+      <line>17</line>
+    </frame>
+    <frame>
+      <ip>0x5B5A60</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>test_valid_fail_range_bytes::test_method()</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98</dir>
+      <file>test_valid_fail_range_bytes.cpp</file>
+      <line>14</line>
+    </frame>
+    <frame>
+      <ip>0x5B5940</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>test_valid_fail_range_bytes_invoker()</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98</dir>
+      <file>test_valid_fail_range_bytes.cpp</file>
+      <line>10</line>
+    </frame>
+    <frame>
+      <ip>0x513505</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>boost::unit_test::ut_detail::unused boost::unit_test::ut_detail::invoker&lt;boost::unit_test::ut_detail::unused&gt;::invoke&lt;void (*)()&gt;(void (*&amp;)())</fn>
+    </frame>
+    <frame>
+      <ip>0x5134C7</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>boost::unit_test::ut_detail::callback0_impl_t&lt;boost::unit_test::ut_detail::unused, void (*)()&gt;::invoke()</fn>
+    </frame>
+    <frame>
+      <ip>0x4E9F1F0</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+    </frame>
+    <frame>
+      <ip>0x4E7A545</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::execution_monitor::catch_signals(boost::unit_test::callback0&lt;int&gt; const&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x4E7AD82</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::execution_monitor::execute(boost::unit_test::callback0&lt;int&gt; const&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x4E9F2F1</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::unit_test::unit_test_monitor_t::execute_and_translate(boost::unit_test::test_case const&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x4E88F93</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::unit_test::framework_impl::visit(boost::unit_test::test_case const&amp;)</fn>
+    </frame>
+  </stack>
+  <auxwhat>Address 0x65dda30 is 0 bytes inside a block of size 27 free'd</auxwhat>
+  <stack>
+    <frame>
+      <ip>0x4C2C2BC</ip>
+      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
+      <fn>operator delete(void*)</fn>
+    </frame>
+    <frame>
+      <ip>0x577636E</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19</obj>
+      <fn>std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::~basic_string()</fn>
+    </frame>
+    <frame>
+      <ip>0x611829</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>valid_fail_range_bytes_t::~valid_fail_range_bytes_t()</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98</dir>
+      <file>valid_fail_range_bytes.cpp</file>
+      <line>30</line>
+    </frame>
+    <frame>
+      <ip>0x61119D</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>valid_fail_range_bytes_t::valid_fail_range_bytes_t(kaitai::kstream*, kaitai::kstruct*, valid_fail_range_bytes_t*)</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98</dir>
+      <file>valid_fail_range_bytes.cpp</file>
+      <line>14</line>
+    </frame>
+    <frame>
+      <ip>0x5B5A60</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>test_valid_fail_range_bytes::test_method()</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98</dir>
+      <file>test_valid_fail_range_bytes.cpp</file>
+      <line>14</line>
+    </frame>
+    <frame>
+      <ip>0x5B5940</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>test_valid_fail_range_bytes_invoker()</fn>
+      <dir>/home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98</dir>
+      <file>test_valid_fail_range_bytes.cpp</file>
+      <line>10</line>
+    </frame>
+    <frame>
+      <ip>0x513505</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>boost::unit_test::ut_detail::unused boost::unit_test::ut_detail::invoker&lt;boost::unit_test::ut_detail::unused&gt;::invoke&lt;void (*)()&gt;(void (*&amp;)())</fn>
+    </frame>
+    <frame>
+      <ip>0x5134C7</ip>
+      <obj>/home/travis/build/kaitai-io/ci_targets/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>boost::unit_test::ut_detail::callback0_impl_t&lt;boost::unit_test::ut_detail::unused, void (*)()&gt;::invoke()</fn>
+    </frame>
+    <frame>
+      <ip>0x4E9F1F0</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+    </frame>
+    <frame>
+      <ip>0x4E7A545</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::execution_monitor::catch_signals(boost::unit_test::callback0&lt;int&gt; const&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x4E7AD82</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::execution_monitor::execute(boost::unit_test::callback0&lt;int&gt; const&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x4E9F2F1</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.54.0</obj>
+      <fn>boost::unit_test::unit_test_monitor_t::execute_and_translate(boost::unit_test::test_case const&amp;)</fn>
+    </frame>
+  </stack>
+</error>
+
+
+<status>
+  <state>FINISHED</state>
+  <time>00:00:00:04.874 </time>
+</status>
+
 <errorcounts>
+  <pair>
+    <count>1</count>
+    <unique>0x23</unique>
+  </pair>
+  <pair>
+    <count>3</count>
+    <unique>0x20</unique>
+  </pair>
+  <pair>
+    <count>1</count>
+    <unique>0x1f</unique>
+  </pair>
+  <pair>
+    <count>3</count>
+    <unique>0x1c</unique>
+  </pair>
+  <pair>
+    <count>1</count>
+    <unique>0x1b</unique>
+  </pair>
+  <pair>
+    <count>3</count>
+    <unique>0x18</unique>
+  </pair>
+  <pair>
+    <count>1</count>
+    <unique>0x17</unique>
+  </pair>
+  <pair>
+    <count>3</count>
+    <unique>0x14</unique>
+  </pair>
+  <pair>
+    <count>1</count>
+    <unique>0x13</unique>
+  </pair>
+  <pair>
+    <count>3</count>
+    <unique>0x10</unique>
+  </pair>
+  <pair>
+    <count>1</count>
+    <unique>0xf</unique>
+  </pair>
+  <pair>
+    <count>3</count>
+    <unique>0xc</unique>
+  </pair>
+  <pair>
+    <count>1</count>
+    <unique>0xb</unique>
+  </pair>
+  <pair>
+    <count>3</count>
+    <unique>0x8</unique>
+  </pair>
+  <pair>
+    <count>1</count>
+    <unique>0x7</unique>
+  </pair>
+  <pair>
+    <count>3</count>
+    <unique>0x4</unique>
+  </pair>
+  <pair>
+    <count>1</count>
+    <unique>0x3</unique>
+  </pair>
+  <pair>
+    <count>3</count>
+    <unique>0x0</unique>
+  </pair>
 </errorcounts>
 
 <suppcounts>
