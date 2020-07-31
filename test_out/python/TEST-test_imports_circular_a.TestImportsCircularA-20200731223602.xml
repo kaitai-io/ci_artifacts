@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="test_imports_circular_a.TestImportsCircularA-20200731223602" tests="1" file="test_imports_circular_a.py" time="0.001" timestamp="2020-07-31T22:36:02" failures="0" errors="1" skipped="0">
+	<testcase classname="test_imports_circular_a.TestImportsCircularA" name="test_imports_circular_a" time="0.001" timestamp="2020-07-31T22:36:02" file="spec/python/test_imports_circular_a.py" line="8">
+		<error type="AttributeError" message="'ImportsCircularB' object has no attribute 'back_ref'"><![CDATA[Traceback (most recent call last):
+  File "/home/travis/build/kaitai-io/ci_targets/tests/spec/python/test_imports_circular_a.py", line 15, in test_imports_circular_a
+    self.assertIsNone(r.two.back_ref.two.back_ref)
+AttributeError: 'ImportsCircularB' object has no attribute 'back_ref'
+]]></error>
+		<system-out><![CDATA[]]></system-out>
+		<system-err><![CDATA[]]></system-err>
+	</testcase>
+</testsuite>
