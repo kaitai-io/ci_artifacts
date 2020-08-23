@@ -1,5 +1,5 @@
 <testsuites>
-  <testsuite tests="177" failures="0" errors="67" name="tests">
+  <testsuite tests="182" failures="0" errors="71" name="tests">
     <testcase time="0.00000000" name="tbcd_user_type_be">
       <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/bcd_user_type_be.nim(144, 21) Error: type mismatch: got &lt;int, typeof(nil)&gt;
 but expected one of: 
@@ -48,9 +48,9 @@ proc `==`[T: tuple | object](x, y: T): bool
 expression: this.asIntInst == nil
 " />
     </testcase>
-    <testcase time="0.001925230026245117" name="tbits_byte_aligned" />
-    <testcase time="0.002020120620727539" name="tbits_enum" />
-    <testcase time="0.001871109008789062" name="tbits_seq_endian_combo" />
+    <testcase time="0.001734256744384766" name="tbits_byte_aligned" />
+    <testcase time="0.001618385314941406" name="tbits_enum" />
+    <testcase time="0.001729249954223633" name="tbits_seq_endian_combo" />
     <testcase time="0.00000000" name="tbits_simple">
       <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/bits_simple.nim(63, 24) Error: type mismatch: got &lt;int8, typeof(nil)&gt;
 but expected one of: 
@@ -123,8 +123,8 @@ proc `==`[T: tuple | object](x, y: T): bool
 expression: this.testIfB1Inst == nil
 " />
     </testcase>
-    <testcase time="0.001878738403320312" name="tbuffered_struct" />
-    <testcase time="0.001815319061279297" name="tbytes_pad_term" />
+    <testcase time="0.001752376556396484" name="tbuffered_struct" />
+    <testcase time="0.001848697662353516" name="tbytes_pad_term" />
     <testcase time="0.00000000" name="tcast_nested">
       <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/cast_nested.nim(73, 32) Error: type mismatch: got &lt;uint8, typeof(nil)&gt;
 but expected one of: 
@@ -161,8 +161,8 @@ proc `==`[T: tuple | object](x, y: T): bool
 expression: this.opcodes1IntValueInst == nil
 " />
     </testcase>
-    <testcase time="0.001863956451416016" name="tcast_to_imported" />
-    <testcase time="0.001836299896240234" name="tcast_to_top" />
+    <testcase time="0.001784324645996094" name="tcast_to_imported" />
+    <testcase time="0.001764059066772461" name="tcast_to_top" />
     <testcase time="0.00000000" name="tcombine_bool">
       <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/combine_bool.nim(28, 24) Error: type mismatch: got &lt;bool, typeof(nil)&gt;
 but expected one of: 
@@ -183,11 +183,31 @@ proc `==`[T: tuple | object](x, y: T): bool
 expression: this.boolCalcInst == nil
 " />
     </testcase>
-    <testcase time="0.009922266006469727" name="tcombine_bytes" />
-    <testcase time="0.001924276351928711" name="tcombine_str" />
-    <testcase time="0.001914501190185547" name="tdebug_switch_user" />
-    <testcase time="0.001822471618652344" name="tdefault_big_endian" />
-    <testcase time="0.001806259155273438" name="tdefault_bit_endian_mod" />
+    <testcase time="0.001783132553100586" name="tcombine_bytes" />
+    <testcase time="0.00000000" name="tcombine_enum">
+      <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/combine_enum.nim(32, 24) Error: type mismatch: got &lt;CombineEnum_Animal, typeof(nil)&gt;
+but expected one of: 
+proc `==`(a, b: Option): bool
+  first type mismatch at position: 2
+  required type for b: Option
+  but expression 'nil' is of type: typeof(nil)
+proc `==`[Enum: enum](x, y: Enum): bool
+  first type mismatch at position: 2
+  required type for y: Enum: enum
+  but expression 'nil' is of type: typeof(nil)
+proc `==`[T: tuple | object](x, y: T): bool
+  first type mismatch at position: 2
+  required type for y: T: tuple or object
+  but expression 'nil' is of type: typeof(nil)
+26 other mismatching symbols have been suppressed; compile with --showAllMismatches:on to see them
+
+expression: this.enumU4U2Inst == nil
+" />
+    </testcase>
+    <testcase time="0.001859664916992188" name="tcombine_str" />
+    <testcase time="0.001751899719238281" name="tdebug_switch_user" />
+    <testcase time="0.001715660095214844" name="tdefault_big_endian" />
+    <testcase time="0.001694440841674805" name="tdefault_bit_endian_mod" />
     <testcase time="0.00000000" name="tdefault_endian_expr_inherited">
       <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/default_endian_expr_inherited.nim(168, 24) Error: type mismatch: got &lt;uint32, typeof(nil)&gt;
 but expected one of: 
@@ -244,8 +264,8 @@ proc `==`[T: tuple | object](x, y: T): bool
 expression: this.instIntInst == nil
 " />
     </testcase>
-    <testcase time="0.001847982406616211" name="tdefault_endian_expr_is_le" />
-    <testcase time="0.001779317855834961" name="tdefault_endian_mod" />
+    <testcase time="0.00176692008972168" name="tdefault_endian_expr_is_le" />
+    <testcase time="0.001770496368408203" name="tdefault_endian_mod" />
     <testcase time="0.00000000" name="tdocstrings">
       <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/docstrings.nim(43, 19) Error: type mismatch: got &lt;uint8, typeof(nil)&gt;
 but expected one of: 
@@ -302,10 +322,10 @@ proc `==`[T: tuple | object](x, y: T): bool
 expression: this.fooInst == nil
 " />
     </testcase>
-    <testcase time="0.00182342529296875" name="tdocstrings_docref_multi" />
-    <testcase time="0.001842260360717773" name="tenum_0" />
-    <testcase time="0.001804828643798828" name="tenum_1" />
-    <testcase time="0.001795291900634766" name="tenum_deep" />
+    <testcase time="0.001801252365112305" name="tdocstrings_docref_multi" />
+    <testcase time="0.001693487167358398" name="tenum_0" />
+    <testcase time="0.001772642135620117" name="tenum_1" />
+    <testcase time="0.001860857009887695" name="tenum_deep" />
     <testcase time="0.00000000" name="tenum_deep_literals">
       <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/enum_deep_literals.nim(45, 24) Error: type mismatch: got &lt;bool, typeof(nil)&gt;
 but expected one of: 
@@ -326,12 +346,12 @@ proc `==`[T: tuple | object](x, y: T): bool
 expression: this.isPet1OkInst == nil
 " />
     </testcase>
-    <testcase time="0.001821517944335938" name="tenum_fancy" />
-    <testcase time="0.001844644546508789" name="tenum_if" />
-    <testcase time="0.001908302307128906" name="tenum_import" />
-    <testcase time="0.001803874969482422" name="tenum_int_range_s" />
-    <testcase time="0.001801729202270508" name="tenum_int_range_u" />
-    <testcase time="0.001868009567260742" name="tenum_invalid" />
+    <testcase time="0.0016937255859375" name="tenum_fancy" />
+    <testcase time="0.001770734786987305" name="tenum_if" />
+    <testcase time="0.001726388931274414" name="tenum_import" />
+    <testcase time="0.001761436462402344" name="tenum_int_range_s" />
+    <testcase time="0.001698970794677734" name="tenum_int_range_u" />
+    <testcase time="0.001745939254760742" name="tenum_invalid" />
     <testcase time="0.00000000" name="tenum_long_range_s">
       <failure message="fatal.nim(49)            sysFatal
 Error: unhandled exception: over- or underflow [OverflowError]
@@ -342,7 +362,7 @@ Error: unhandled exception: over- or underflow [OverflowError]
 Error: unhandled exception: over- or underflow [OverflowError]
 " />
     </testcase>
-    <testcase time="0.001820564270019531" name="tenum_negative" />
+    <testcase time="0.001722812652587891" name="tenum_negative" />
     <testcase time="0.00000000" name="tenum_of_value_inst">
       <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/enum_of_value_inst.nim(35, 20) Error: type mismatch: got &lt;EnumOfValueInst_Animal, typeof(nil)&gt;
 but expected one of: 
@@ -364,7 +384,7 @@ expression: this.pet3Inst == nil
 " />
     </testcase>
     <testcase time="0.00000000" name="tenum_to_i">
-      <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/enum_to_i.nim(37, 21) Error: type mismatch: got &lt;int, typeof(nil)&gt;
+      <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/enum_to_i.nim(41, 21) Error: type mismatch: got &lt;int, typeof(nil)&gt;
 but expected one of: 
 proc `==`(a, b: Option): bool
   first type mismatch at position: 2
@@ -638,6 +658,50 @@ proc `==`[T: tuple | object](x, y: T): bool
 expression: this.constDogInst == nil
 " />
     </testcase>
+    <testcase time="0.00000000" name="texpr_if_int_ops">
+      <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/expr_if_int_ops.nim(36, 24) Error: type mismatch: got &lt;bool, typeof(nil)&gt;
+but expected one of: 
+proc `==`(a, b: Option): bool
+  first type mismatch at position: 2
+  required type for b: Option
+  but expression 'nil' is of type: typeof(nil)
+proc `==`(x, y: bool): bool
+  first type mismatch at position: 2
+  required type for y: bool
+  but expression 'nil' is of type: typeof(nil)
+proc `==`[T: tuple | object](x, y: T): bool
+  first type mismatch at position: 2
+  required type for y: T: tuple or object
+  but expression 'nil' is of type: typeof(nil)
+26 other mismatching symbols have been suppressed; compile with --showAllMismatches:on to see them
+
+expression: this.isEqPrimInst == nil
+" />
+    </testcase>
+    <testcase time="0.00000000" name="texpr_int_div">
+      <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/expr_int_div.nim(35, 27) Error: type mismatch: got &lt;int, typeof(nil)&gt;
+but expected one of: 
+proc `==`(a, b: Option): bool
+  first type mismatch at position: 2
+  required type for b: Option
+  but expression 'nil' is of type: typeof(nil)
+proc `==`(x, y: int): bool
+  first type mismatch at position: 2
+  required type for y: int
+  but expression 'nil' is of type: typeof(nil)
+proc `==`(x, y: int64): bool
+  first type mismatch at position: 2
+  required type for y: int64
+  but expression 'nil' is of type: typeof(nil)
+proc `==`[T: tuple | object](x, y: T): bool
+  first type mismatch at position: 2
+  required type for y: T: tuple or object
+  but expression 'nil' is of type: typeof(nil)
+25 other mismatching symbols have been suppressed; compile with --showAllMismatches:on to see them
+
+expression: this.divPosConstInst == nil
+" />
+    </testcase>
     <testcase time="0.00000000" name="texpr_io_eof">
       <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/expr_io_eof.nim(59, 26) Error: type mismatch: got &lt;bool, typeof(nil)&gt;
 but expected one of: 
@@ -658,7 +722,7 @@ proc `==`[T: tuple | object](x, y: T): bool
 expression: this.reflectEofInst == nil
 " />
     </testcase>
-    <testcase time="0.001917362213134766" name="texpr_io_pos" />
+    <testcase time="0.001973390579223633" name="texpr_io_pos" />
     <testcase time="0.00000000" name="texpr_mod">
       <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/expr_mod.nim(35, 27) Error: type mismatch: got &lt;int, typeof(nil)&gt;
 but expected one of: 
@@ -827,8 +891,8 @@ proc `==`[T: tuple | object](x, y: T): bool
 expression: this.toIR8Inst == nil
 " />
     </testcase>
-    <testcase time="0.001783132553100586" name="tfixed_contents" />
-    <testcase time="0.001840829849243164" name="tfixed_struct" />
+    <testcase time="0.001647233963012695" name="tfixed_contents" />
+    <testcase time="0.001763582229614258" name="tfixed_struct" />
     <testcase time="0.00000000" name="tfloat_to_i">
       <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/float_to_i.nim(47, 23) Error: type mismatch: got &lt;int, typeof(nil)&gt;
 but expected one of: 
@@ -877,7 +941,7 @@ proc `==`[T: tuple | object](x, y: T): bool
 expression: this.singleValuePlusIntInst == nil
 " />
     </testcase>
-    <testcase time="0.001960992813110352" name="thello_world" />
+    <testcase time="0.0017852783203125" name="thello_world" />
     <testcase time="0.00000000" name="tif_instances">
       <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/if_instances.nim(23, 28) Error: type mismatch: got &lt;uint8, typeof(nil)&gt;
 but expected one of: 
@@ -914,7 +978,7 @@ proc `==`[T: tuple | object](x, y: T): bool
 expression: this.neverHappensInst == nil
 " />
     </testcase>
-    <testcase time="0.002045154571533203" name="tif_struct" />
+    <testcase time="0.001759767532348633" name="tif_struct" />
     <testcase time="0.00000000" name="tif_values">
       <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/if_values.nim(45, 26) Error: type mismatch: got &lt;int, typeof(nil)&gt;
 but expected one of: 
@@ -1010,16 +1074,36 @@ This might be caused by a recursive module dependency:
       <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/imports_rel_1.nim(3, 23) Error: cannot open file: for_rel_imports/imported_1
 " />
     </testcase>
-    <testcase time="0.002100467681884766" name="tindex_sizes" />
-    <testcase time="0.002116203308105469" name="tindex_to_param_eos" />
-    <testcase time="0.00212860107421875" name="tindex_to_param_expr" />
-    <testcase time="0.002513408660888672" name="tindex_to_param_until" />
-    <testcase time="0.001951217651367188" name="tinstance_io_user" />
-    <testcase time="0.001914262771606445" name="tinstance_std" />
-    <testcase time="0.001933097839355469" name="tinstance_std_array" />
-    <testcase time="0.001821279525756836" name="tinstance_user_array" />
-    <testcase time="0.001830816268920898" name="tintegers" />
-    <testcase time="0.001806735992431641" name="tintegers_min_max" />
+    <testcase time="0.001753330230712891" name="tindex_sizes" />
+    <testcase time="0.001824378967285156" name="tindex_to_param_eos" />
+    <testcase time="0.001913070678710938" name="tindex_to_param_expr" />
+    <testcase time="0.001848459243774414" name="tindex_to_param_until" />
+    <testcase time="0.001868247985839844" name="tinstance_io_user" />
+    <testcase time="0.001807689666748047" name="tinstance_std" />
+    <testcase time="0.001840114593505859" name="tinstance_std_array" />
+    <testcase time="0.001763582229614258" name="tinstance_user_array" />
+    <testcase time="0.001738786697387695" name="tintegers" />
+    <testcase time="0.00000000" name="tintegers_double_overflow">
+      <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/integers_double_overflow.nim(53, 33) Error: type mismatch: got &lt;uint64, typeof(nil)&gt;
+but expected one of: 
+proc `==`(a, b: Option): bool
+  first type mismatch at position: 2
+  required type for b: Option
+  but expression 'nil' is of type: typeof(nil)
+proc `==`(x, y: uint64): bool
+  first type mismatch at position: 2
+  required type for y: uint64
+  but expression 'nil' is of type: typeof(nil)
+proc `==`[T: tuple | object](x, y: T): bool
+  first type mismatch at position: 2
+  required type for y: T: tuple or object
+  but expression 'nil' is of type: typeof(nil)
+26 other mismatching symbols have been suppressed; compile with --showAllMismatches:on to see them
+
+expression: this.unsignedSafeMaxBeInst == nil
+" />
+    </testcase>
+    <testcase time="0.001771211624145508" name="tintegers_min_max" />
     <testcase time="0.00000000" name="tio_local_var">
       <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/io_local_var.nim(58, 25) Error: type mismatch: got &lt;seq[byte]&gt; but expected 'KaitaiStruct = ref KaitaiStruct:ObjectType'
 " />
@@ -1048,16 +1132,16 @@ proc `==`[T: tuple | object](x, y: T): bool
 expression: this.shouldBe40000000Inst == nil
 " />
     </testcase>
-    <testcase time="0.001874446868896484" name="tmeta_tags" />
-    <testcase time="0.00176239013671875" name="tmeta_xref" />
-    <testcase time="0.001799583435058594" name="tmultiple_use" />
-    <testcase time="0.001931190490722656" name="tnav_parent" />
-    <testcase time="0.001976251602172852" name="tnav_parent2" />
-    <testcase time="0.001936435699462891" name="tnav_parent3" />
-    <testcase time="0.001844644546508789" name="tnav_parent_false" />
-    <testcase time="0.001870155334472656" name="tnav_parent_false2" />
-    <testcase time="0.001845836639404297" name="tnav_parent_override" />
-    <testcase time="0.001774072647094727" name="tnav_parent_switch" />
+    <testcase time="0.001707553863525391" name="tmeta_tags" />
+    <testcase time="0.001697301864624023" name="tmeta_xref" />
+    <testcase time="0.001769781112670898" name="tmultiple_use" />
+    <testcase time="0.001892566680908203" name="tnav_parent" />
+    <testcase time="0.001823663711547852" name="tnav_parent2" />
+    <testcase time="0.001828908920288086" name="tnav_parent3" />
+    <testcase time="0.001702070236206055" name="tnav_parent_false" />
+    <testcase time="0.001693248748779297" name="tnav_parent_false2" />
+    <testcase time="0.001724481582641602" name="tnav_parent_override" />
+    <testcase time="0.001683712005615234" name="tnav_parent_switch" />
     <testcase time="0.00000000" name="tnav_parent_switch_cast">
       <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/nav_parent_switch_cast.nim(117, 20) Error: type mismatch: got &lt;uint8, typeof(nil)&gt;
 but expected one of: 
@@ -1114,13 +1198,17 @@ proc `==`[T: tuple | object](x, y: T): bool
 expression: this.doSomethingInst == nil
 " />
     </testcase>
-    <testcase time="0.001979589462280273" name="tnav_root" />
-    <testcase time="0.00179743766784668" name="tnested_same_name" />
-    <testcase time="0.001907587051391602" name="tnested_same_name2" />
-    <testcase time="0.001979589462280273" name="tnested_type_param" />
-    <testcase time="0.001868963241577148" name="tnested_types" />
-    <testcase time="0.001888036727905273" name="tnested_types2" />
-    <testcase time="0.00180816650390625" name="tnested_types3" />
+    <testcase time="0.001819849014282227" name="tnav_root" />
+    <testcase time="0.001787900924682617" name="tnested_same_name" />
+    <testcase time="0.001726150512695312" name="tnested_same_name2" />
+    <testcase time="0.00205230712890625" name="tnested_type_param" />
+    <testcase time="0.001894474029541016" name="tnested_types" />
+    <testcase time="0.001818656921386719" name="tnested_types2" />
+    <testcase time="0.001830577850341797" name="tnested_types3" />
+    <testcase time="0.00000000" name="tnested_types_imported">
+      <failure message="/home/travis/build/kaitai-io/ci_targets/tests/spec/nim/tests/tnested_types_imported.nim(4, 29) Error: cannot open file: ../../../compiled/nim/nested_types_imported
+" />
+    </testcase>
     <testcase time="0.00000000" name="tnon_standard">
       <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/non_standard.nim(37, 18) Error: type mismatch: got &lt;uint8, typeof(nil)&gt;
 but expected one of: 
@@ -1157,8 +1245,8 @@ proc `==`[T: tuple | object](x, y: T): bool
 expression: this.viInst == nil
 " />
     </testcase>
-    <testcase time="0.001959800720214844" name="tparams_call_extra_parens" />
-    <testcase time="0.001972436904907227" name="tparams_call_short" />
+    <testcase time="0.001845359802246094" name="tparams_call_extra_parens" />
+    <testcase time="0.001805543899536133" name="tparams_call_short" />
     <testcase time="0.00000000" name="tparams_enum">
       <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/params_enum.nim(51, 21) Error: type mismatch: got &lt;bool, typeof(nil)&gt;
 but expected one of: 
@@ -1186,23 +1274,23 @@ expression: this.isCatInst == nil
 /home/travis/build/kaitai-io/ci_targets/compiled/nim/params_pass_array_int.nim(54, 29) Error: type mismatch: got &lt;seq[int]&gt; but expected 'seq[uint16]'
 " />
     </testcase>
-    <testcase time="0.002006769180297852" name="tparams_pass_array_str" />
-    <testcase time="0.001803398132324219" name="tparams_pass_array_struct" />
-    <testcase time="0.001832485198974609" name="tparams_pass_array_usertype" />
-    <testcase time="0.001861095428466797" name="tparams_pass_struct" />
-    <testcase time="0.001855850219726562" name="tparams_pass_usertype" />
-    <testcase time="0.001856327056884766" name="tposition_abs" />
-    <testcase time="0.001820802688598633" name="tposition_in_seq" />
-    <testcase time="0.001897573471069336" name="tposition_to_end" />
-    <testcase time="0.001965761184692383" name="tprocess_coerce_bytes" />
+    <testcase time="0.001821756362915039" name="tparams_pass_array_str" />
+    <testcase time="0.001802921295166016" name="tparams_pass_array_struct" />
+    <testcase time="0.001781463623046875" name="tparams_pass_array_usertype" />
+    <testcase time="0.00172734260559082" name="tparams_pass_struct" />
+    <testcase time="0.001791000366210938" name="tparams_pass_usertype" />
+    <testcase time="0.001819133758544922" name="tposition_abs" />
+    <testcase time="0.001663684844970703" name="tposition_in_seq" />
+    <testcase time="0.001778841018676758" name="tposition_to_end" />
+    <testcase time="0.001776933670043945" name="tprocess_coerce_bytes" />
     <testcase time="0.00000000" name="tprocess_coerce_switch">
       <failure message="/home/travis/build/kaitai-io/ci_targets/tests/spec/nim/tests/tprocess_coerce_switch.nim(7, 28) template/generic instantiation of `fromFile` from here
 /home/travis/build/kaitai-io/ci_targets/compiled/nim/process_coerce_switch.nim(74, 22) template/generic instantiation of `read` from here
 /home/travis/build/kaitai-io/ci_targets/compiled/nim/process_coerce_switch.nim(47, 26) Error: type mismatch: got &lt;seq[byte]&gt; but expected 'KaitaiStruct = ref KaitaiStruct:ObjectType'
 " />
     </testcase>
-    <testcase time="0.001847028732299805" name="tprocess_coerce_usertype1" />
-    <testcase time="0.001847982406616211" name="tprocess_coerce_usertype2" />
+    <testcase time="0.001760244369506836" name="tprocess_coerce_usertype1" />
+    <testcase time="0.001717805862426758" name="tprocess_coerce_usertype2" />
     <testcase time="0.00000000" name="tprocess_custom">
       <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/process_custom.nim(3, 8) Error: cannot open file: my_custom_fx
 " />
@@ -1211,45 +1299,41 @@ expression: this.isCatInst == nil
       <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/process_custom_no_args.nim(3, 8) Error: cannot open file: custom_fx_no_args
 " />
     </testcase>
-    <testcase time="0.002084970474243164" name="tprocess_repeat_bytes" />
+    <testcase time="0.001776933670043945" name="tprocess_repeat_bytes" />
     <testcase time="0.00000000" name="tprocess_repeat_usertype">
       <failure message="/home/travis/build/kaitai-io/ci_targets/tests/spec/nim/tests/tprocess_repeat_usertype.nim(7, 30) template/generic instantiation of `fromFile` from here
 /home/travis/build/kaitai-io/ci_targets/compiled/nim/process_repeat_usertype.nim(37, 24) template/generic instantiation of `read` from here
 /home/travis/build/kaitai-io/ci_targets/compiled/nim/process_repeat_usertype.nim(30, 9) Error: redefinition of 'buf'; previous declaration here: /home/travis/build/kaitai-io/ci_targets/compiled/nim/process_repeat_usertype.nim(28, 9)
 " />
     </testcase>
-    <testcase time="0.001898288726806641" name="tprocess_rotate" />
-    <testcase time="0.001927852630615234" name="tprocess_to_user" />
-    <testcase time="0.001847028732299805" name="tprocess_xor4_const" />
-    <testcase time="0.00187373161315918" name="tprocess_xor4_value" />
-    <testcase time="0.001794099807739258" name="tprocess_xor_const" />
-    <testcase time="0.00187993049621582" name="tprocess_xor_value" />
-    <testcase time="0.002027511596679688" name="trecursive_one" />
-    <testcase time="0.001799821853637695" name="trepeat_eos_bit" />
-    <testcase time="0.001794576644897461" name="trepeat_eos_struct" />
-    <testcase time="0.001842975616455078" name="trepeat_eos_u4" />
-    <testcase time="0.00182032585144043" name="trepeat_n_struct" />
-    <testcase time="0.001895666122436523" name="trepeat_n_strz" />
-    <testcase time="0.001992464065551758" name="trepeat_n_strz_double" />
-    <testcase time="0.001888513565063477" name="trepeat_until_calc_array_type" />
-    <testcase time="0.001866817474365234" name="trepeat_until_complex" />
-    <testcase time="0.001763820648193359" name="trepeat_until_s4" />
-    <testcase time="0.001816272735595703" name="trepeat_until_sized" />
-    <testcase time="0.004988431930541992" name="tstr_encodings" />
-    <testcase time="0.002032041549682617" name="tstr_encodings_default" />
-    <testcase time="0.001886606216430664" name="tstr_eos" />
-    <testcase time="0.001860141754150391" name="tstr_literals2" />
-    <testcase time="0.001875877380371094" name="tstr_pad_term" />
-    <testcase time="0.001929759979248047" name="tstr_pad_term_empty" />
-    <testcase time="0.001918792724609375" name="tswitch_bytearray" />
-    <testcase time="0.00000000" name="tswitch_else_only">
-      <failure message="/home/travis/build/kaitai-io/ci_targets/tests/spec/nim/tests/tswitch_else_only.nim(9, 6) template/generic instantiation of `test` from here
-/home/travis/build/kaitai-io/ci_targets/tests/spec/nim/tests/tswitch_else_only.nim(13, 10) Error: undeclared field: 'struct' for type switch_else_only.SwitchElseOnly [declared in /home/travis/build/kaitai-io/ci_targets/compiled/nim/switch_else_only.nim(5, 3)] 
-" />
-    </testcase>
-    <testcase time="0.001785993576049805" name="tswitch_integers" />
-    <testcase time="0.001776456832885742" name="tswitch_integers2" />
-    <testcase time="0.001923561096191406" name="tswitch_manual_enum" />
+    <testcase time="0.001906633377075195" name="tprocess_rotate" />
+    <testcase time="0.001845359802246094" name="tprocess_to_user" />
+    <testcase time="0.00170588493347168" name="tprocess_xor4_const" />
+    <testcase time="0.001746892929077148" name="tprocess_xor4_value" />
+    <testcase time="0.001791238784790039" name="tprocess_xor_const" />
+    <testcase time="0.001801729202270508" name="tprocess_xor_value" />
+    <testcase time="0.001754522323608398" name="trecursive_one" />
+    <testcase time="0.00173640251159668" name="trepeat_eos_bit" />
+    <testcase time="0.001784086227416992" name="trepeat_eos_struct" />
+    <testcase time="0.001742839813232422" name="trepeat_eos_u4" />
+    <testcase time="0.001738309860229492" name="trepeat_n_struct" />
+    <testcase time="0.001848459243774414" name="trepeat_n_strz" />
+    <testcase time="0.001834869384765625" name="trepeat_n_strz_double" />
+    <testcase time="0.00178837776184082" name="trepeat_until_calc_array_type" />
+    <testcase time="0.001785039901733398" name="trepeat_until_complex" />
+    <testcase time="0.00188136100769043" name="trepeat_until_s4" />
+    <testcase time="0.001977682113647461" name="trepeat_until_sized" />
+    <testcase time="0.005171060562133789" name="tstr_encodings" />
+    <testcase time="0.001950502395629883" name="tstr_encodings_default" />
+    <testcase time="0.001857280731201172" name="tstr_eos" />
+    <testcase time="0.001771926879882812" name="tstr_literals2" />
+    <testcase time="0.001851081848144531" name="tstr_pad_term" />
+    <testcase time="0.00189661979675293" name="tstr_pad_term_empty" />
+    <testcase time="0.001839876174926758" name="tswitch_bytearray" />
+    <testcase time="0.001996278762817383" name="tswitch_else_only" />
+    <testcase time="0.001734256744384766" name="tswitch_integers" />
+    <testcase time="0.001761436462402344" name="tswitch_integers2" />
+    <testcase time="0.001819610595703125" name="tswitch_manual_enum" />
     <testcase time="0.00000000" name="tswitch_manual_enum_invalid">
       <failure message="/opt/Nim-1.2.0/lib/pure/unittest.nim(647, 43) Error: conversion from int literal(255) to SwitchManualEnumInvalid_Opcode_CodeEnum is invalid
 " />
@@ -1290,8 +1374,8 @@ proc `==`[T: tuple | object](x, y: T): bool
 expression: this.valueInst == nil
 " />
     </testcase>
-    <testcase time="0.001917839050292969" name="tswitch_manual_int" />
-    <testcase time="0.001837491989135742" name="tswitch_manual_int_else" />
+    <testcase time="0.001998424530029297" name="tswitch_manual_int" />
+    <testcase time="0.001849889755249023" name="tswitch_manual_int_else" />
     <testcase time="0.00000000" name="tswitch_manual_int_size">
       <failure message="/home/travis/build/kaitai-io/ci_targets/tests/spec/nim/tests/tswitch_manual_int_size.nim(7, 28) template/generic instantiation of `fromFile` from here
 /home/travis/build/kaitai-io/ci_targets/compiled/nim/switch_manual_int_size.nim(44, 22) template/generic instantiation of `read` from here
@@ -1305,8 +1389,8 @@ expression: this.valueInst == nil
 /opt/Nim-1.2.0/lib/pure/unittest.nim(647, 43) Error: cannot infer the type of the sequence
 " />
     </testcase>
-    <testcase time="0.002085447311401367" name="tswitch_manual_str" />
-    <testcase time="0.001939535140991211" name="tswitch_manual_str_else" />
+    <testcase time="0.001877546310424805" name="tswitch_manual_str" />
+    <testcase time="0.001909732818603516" name="tswitch_manual_str_else" />
     <testcase time="0.00000000" name="tswitch_repeat_expr">
       <failure message="/home/travis/build/kaitai-io/ci_targets/tests/spec/nim/tests/tswitch_repeat_expr.nim(7, 25) template/generic instantiation of `fromFile` from here
 /home/travis/build/kaitai-io/ci_targets/compiled/nim/switch_repeat_expr.nim(55, 19) template/generic instantiation of `read` from here
@@ -1343,9 +1427,9 @@ proc add[T](x: var seq[T]; y: openArray[T])
 expression: add(result.body, it)
 " />
     </testcase>
-    <testcase time="0.001922845840454102" name="tterm_bytes" />
-    <testcase time="0.001936674118041992" name="tterm_strz" />
-    <testcase time="0.001902341842651367" name="tts_packet_header" />
+    <testcase time="0.001760005950927734" name="tterm_bytes" />
+    <testcase time="0.001783847808837891" name="tterm_strz" />
+    <testcase time="0.00170588493347168" name="tts_packet_header" />
     <testcase time="0.00000000" name="ttype_int_unary_op">
       <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/type_int_unary_op.nim(31, 23) Error: type mismatch: got &lt;int, typeof(nil)&gt;
 but expected one of: 
@@ -1414,11 +1498,11 @@ proc `==`[T: tuple | object](x, y: T): bool
 expression: this.vFloatZeroInst == nil
 " />
     </testcase>
-    <testcase time="0.001953840255737305" name="tuser_type" />
-    <testcase time="0.002003192901611328" name="tvalid_long" />
-    <testcase time="0.00211644172668457" name="tvalid_not_parsed_if" />
-    <testcase time="0.001908779144287109" name="tvalid_short" />
-    <testcase time="0.001991987228393555" name="tvalid_switch" />
+    <testcase time="0.001649856567382812" name="tuser_type" />
+    <testcase time="0.001738548278808594" name="tvalid_long" />
+    <testcase time="0.001708745956420898" name="tvalid_not_parsed_if" />
+    <testcase time="0.001844406127929688" name="tvalid_short" />
+    <testcase time="0.001686334609985352" name="tvalid_switch" />
     <testcase time="0.00000000" name="tyaml_ints">
       <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/yaml_ints.nim(29, 25) Error: type mismatch: got &lt;int, typeof(nil)&gt;
 but expected one of: 
