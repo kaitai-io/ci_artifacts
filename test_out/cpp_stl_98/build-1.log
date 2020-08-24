@@ -4,9 +4,9 @@ Scanning dependencies of target ks_tests
 [  0%] Building CXX object CMakeFiles/ks_tests.dir/prereq/custom_fx.cpp.o
 [  0%] Building CXX object CMakeFiles/ks_tests.dir/prereq/custom_fx_no_args.cpp.o
 [  1%] Building CXX object CMakeFiles/ks_tests.dir/main.cpp.o
+[  1%] Building CXX object CMakeFiles/ks_tests.dir/test_bcd_user_type_le.cpp.o
 [  1%] Building CXX object CMakeFiles/ks_tests.dir/test_bcd_user_type_be.cpp.o
 [  1%] Building CXX object CMakeFiles/ks_tests.dir/test_bits_byte_aligned.cpp.o
-[  1%] Building CXX object CMakeFiles/ks_tests.dir/test_bcd_user_type_le.cpp.o
 [  2%] Building CXX object CMakeFiles/ks_tests.dir/test_bits_enum.cpp.o
 [  2%] Building CXX object CMakeFiles/ks_tests.dir/test_bits_seq_endian_combo.cpp.o
 [  2%] Building CXX object CMakeFiles/ks_tests.dir/test_bits_simple.cpp.o
@@ -43,22 +43,22 @@ Scanning dependencies of target ks_tests
 [  9%] Building CXX object CMakeFiles/ks_tests.dir/test_enum_if.cpp.o
 [  9%] Building CXX object CMakeFiles/ks_tests.dir/test_enum_import.cpp.o
 [ 10%] Building CXX object CMakeFiles/ks_tests.dir/test_enum_int_range_s.cpp.o
-[ 10%] Building CXX object CMakeFiles/ks_tests.dir/test_enum_int_range_u.cpp.o
-[ 10%] Building CXX object CMakeFiles/ks_tests.dir/test_enum_invalid.cpp.o
 In file included from /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_enum_import.cpp:4:
 /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_import.h:27:5: error: use of undeclared identifier 'enum_0_t'
     enum_0_t::animal_t m_pet_1;
     ^
+[ 10%] Building CXX object CMakeFiles/ks_tests.dir/test_enum_int_range_u.cpp.o
 /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_import.h:28:5: error: use of undeclared identifier 'enum_deep_t'
     enum_deep_t::container1_t::container2_t::animal_t m_pet_2;
     ^
-[ 10%] Building CXX object CMakeFiles/ks_tests.dir/test_enum_long_range_s.cpp.o
 /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_import.h:33:5: error: use of undeclared identifier 'enum_0_t'
     enum_0_t::animal_t pet_1() const { return m_pet_1; }
     ^
 /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_import.h:34:5: error: use of undeclared identifier 'enum_deep_t'
     enum_deep_t::container1_t::container2_t::animal_t pet_2() const { return m_pet_2; }
     ^
+[ 10%] Building CXX object CMakeFiles/ks_tests.dir/test_enum_long_range_s.cpp.o
+[ 10%] Building CXX object CMakeFiles/ks_tests.dir/test_enum_invalid.cpp.o
 [ 10%] Building CXX object CMakeFiles/ks_tests.dir/test_enum_long_range_u.cpp.o
 4 errors generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/test_enum_import.cpp.o] Error 1
@@ -75,8 +75,8 @@ In file included from /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_st
          ^
 [ 12%] Building CXX object CMakeFiles/ks_tests.dir/test_eof_exception_bytes.cpp.o
 [ 12%] Building CXX object CMakeFiles/ks_tests.dir/test_eof_exception_u4.cpp.o
-2 warnings generated.
 [ 12%] Building CXX object CMakeFiles/ks_tests.dir/test_eos_exception_bytes.cpp.o
+2 warnings generated.
 [ 12%] Building CXX object CMakeFiles/ks_tests.dir/test_eos_exception_u4.cpp.o
 [ 13%] Building CXX object CMakeFiles/ks_tests.dir/test_expr_0.cpp.o
 [ 13%] Building CXX object CMakeFiles/ks_tests.dir/test_expr_1.cpp.o
@@ -175,20 +175,20 @@ make[2]: *** [CMakeFiles/ks_tests.dir/test_expr_calc_array_ops.cpp.o] Error 1
 /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_params_pass_array_int.cpp:4:10: fatal error: 'params_pass_array_int.h' file not found
 #include "params_pass_array_int.h"
          ^~~~~~~~~~~~~~~~~~~~~~~~~
-/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_params_pass_array_str.cpp:4:10: 1 error generated.
-fatal error: 'params_pass_array_str.h' file not found
-#include "params_pass_array_str.h"
-         ^~~~~~~~~~~~~~~~~~~~~~~~~
+1 error generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/test_params_pass_array_int.cpp.o] Error 1
 [ 32%] Building CXX object CMakeFiles/ks_tests.dir/test_position_in_seq.cpp.o
-1 error generated.
-make[2]: *** [CMakeFiles/ks_tests.dir/test_params_pass_array_str.cpp.o] Error 1
-[ 32%] Building CXX object CMakeFiles/ks_tests.dir/test_position_to_end.cpp.o
 /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_params_pass_array_struct.cpp:4:10: fatal error: 'params_pass_array_struct.h' file not found
 #include "params_pass_array_struct.h"
          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_params_pass_array_str.cpp:4:10: fatal error: 'params_pass_array_str.h' file not found
+#include "params_pass_array_str.h"
+         ^~~~~~~~~~~~~~~~~~~~~~~~~
+1 error generated.
+make[2]: *** [CMakeFiles/ks_tests.dir/test_params_pass_array_str.cpp.o] Error 1
 1 error generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/test_params_pass_array_struct.cpp.o] Error 1
+[ 32%] Building CXX object CMakeFiles/ks_tests.dir/test_position_to_end.cpp.o
 [ 32%] Building CXX object CMakeFiles/ks_tests.dir/test_process_coerce_bytes.cpp.o
 [ 32%] Building CXX object CMakeFiles/ks_tests.dir/test_process_coerce_switch.cpp.o
 [ 33%] Building CXX object CMakeFiles/ks_tests.dir/test_process_coerce_usertype1.cpp.o
@@ -339,7 +339,6 @@ make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/te
 [ 60%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_of_value_inst.cpp.o
 [ 60%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_to_i.cpp.o
 [ 60%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_to_i_class_border_1.cpp.o
-[ 60%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_to_i_class_border_2.cpp.o
 In file included from /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_long_range_s.cpp:3:
 /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_long_range_s.h:18:31: warning: integer literal is too large to be represented in type 'long' and is subject to undefined behavior under C++98, interpreting as 'unsigned long'; this literal will be ill-formed in C++11 onwards [-Wc++11-compat]
         CONSTANTS_LONG_MIN = -9223372036854775808,
@@ -347,8 +346,9 @@ In file included from /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cp
 /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_long_range_s.h:17:10: warning: enumeration values exceed range of largest integer [-Wenum-too-large]
     enum constants_t {
          ^
-[ 61%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/eof_exception_bytes.cpp.o
+[ 60%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_to_i_class_border_2.cpp.o
 2 warnings generated.
+[ 61%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/eof_exception_bytes.cpp.o
 [ 61%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/eof_exception_u4.cpp.o
 [ 61%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/eos_exception_bytes.cpp.o
 [ 61%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/eos_exception_u4.cpp.o
@@ -397,8 +397,7 @@ make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/te
 /Applications/Xcode-9.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/string:3779:1: note: candidate template ignored: deduced conflicting types for parameter '_CharT' ('char' vs. 'unsigned long')
 operator+(const basic_string<_CharT, _Traits, _Allocator>& __lhs, _CharT __rhs)
 ^
-/Applications/Xcode-9.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/iterator:[ 66%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/fixed_contents.cpp.o
-765:1: note: candidate template ignored: could not match 'reverse_iterator<type-parameter-0-0>' against 'unsigned long'
+/Applications/Xcode-9.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/iterator:765:1: note: candidate template ignored: could not match 'reverse_iterator<type-parameter-0-0>' against 'unsigned long'
 operator+(typename reverse_iterator<_Iter>::difference_type __n, const reverse_iterator<_Iter>& __x)
 ^
 /Applications/Xcode-9.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/iterator:1184:1: note: candidate template ignored: could not match 'move_iterator<type-parameter-0-0>' against 'unsigned long'
@@ -421,6 +420,7 @@ operator+(const basic_string<_CharT, _Traits, _Allocator>& __lhs, const _CharT* 
 ^
 1 error generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/expr_ops_parens.cpp.o] Error 1
+[ 66%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/fixed_contents.cpp.o
 [ 66%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/fixed_struct.cpp.o
 [ 67%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/float_to_i.cpp.o
 [ 67%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/floating_points.cpp.o
@@ -581,8 +581,8 @@ make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/te
 /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/yaml_ints.cpp:58:21: warning: implicit conversion from 'unsigned long long' to 'int32_t' (aka 'int') changes value from 18446744073709551615 to -1 [-Wconstant-conversion]
     m_test_u8_hex = 18446744073709551615ULL;
                   ~ ^~~~~~~~~~~~~~~~~~~~~~~
-2 warnings generated.
-/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/vlq_base128_le.cpp:98:335: warning: shift count >= width of type [-Wshift-count-overflow]
+/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/vlq_base128_le.cpp2 warnings generated.
+:98:335: warning: shift count >= width of type [-Wshift-count-overflow]
     m_value = (((((((groups()->at(0)->value() + ((len() >= 2) ? ((groups()->at(1)->value() << 7)) : (0))) + ((len() >= 3) ? ((groups()->at(2)->value() << 14)) : (0))) + ((len() >= 4) ? ((groups()->at(3)->value() << 21)) : (0))) + ((len() >= 5) ? ((groups()->at(4)->value() << 28)) : (0))) + ((len() >= 6) ? ((groups()->at(5)->value() << 35)) : (0))) + ((len() >= 7) ? ((groups()->at(6)->value() << 42)) : (0))) + ((len() >= 8) ? ((groups()->at(7)->value() << 49)) : (0)));
                                                                                                                                                                                                                                                                                                                                               ^  ~~
 /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/vlq_base128_le.cpp:98:396: warning: shift count >= width of type [-Wshift-count-overflow]
