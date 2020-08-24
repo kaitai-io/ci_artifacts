@@ -1,37 +1,61 @@
-spec/java/src/io/kaitai/struct/spec/TestExprOpsParens.java:5: error: cannot find symbol
-import io.kaitai.struct.testformats.ExprOpsParens;
+spec/java/src/io/kaitai/struct/spec/TestEnumLongRangeS.java:5: error: cannot find symbol
+import io.kaitai.struct.testformats.EnumLongRangeS;
                                    ^
-  symbol:   class ExprOpsParens
+  symbol:   class EnumLongRangeS
   location: package io.kaitai.struct.testformats
-spec/java/src/io/kaitai/struct/spec/TestExprBits.java:5: error: cannot find symbol
-import io.kaitai.struct.testformats.ExprBits;
+spec/java/src/io/kaitai/struct/spec/TestExprBytesLiteral.java:5: error: cannot find symbol
+import io.kaitai.struct.testformats.ExprBytesLiteral;
                                    ^
-  symbol:   class ExprBits
+  symbol:   class ExprBytesLiteral
   location: package io.kaitai.struct.testformats
-spec/java/src/io/kaitai/struct/spec/TestExprOpsParens.java:12: error: cannot find symbol
-        ExprOpsParens r = ExprOpsParens.fromFile(SRC_DIR + "enum_negative.bin");
+spec/java/src/io/kaitai/struct/spec/TestEnumLongRangeS.java:12: error: cannot find symbol
+        EnumLongRangeS r = EnumLongRangeS.fromFile(SRC_DIR + "enum_long_range_s.bin");
         ^
-  symbol:   class ExprOpsParens
-  location: class TestExprOpsParens
-spec/java/src/io/kaitai/struct/spec/TestExprOpsParens.java:12: error: cannot find symbol
-        ExprOpsParens r = ExprOpsParens.fromFile(SRC_DIR + "enum_negative.bin");
-                          ^
-  symbol:   variable ExprOpsParens
-  location: class TestExprOpsParens
-spec/java/src/io/kaitai/struct/spec/TestExprBits.java:12: error: cannot find symbol
-        ExprBits r = ExprBits.fromFile(SRC_DIR + "switch_opcodes.bin");
-        ^
-  symbol:   class ExprBits
-  location: class TestExprBits
-spec/java/src/io/kaitai/struct/spec/TestExprBits.java:12: error: cannot find symbol
-        ExprBits r = ExprBits.fromFile(SRC_DIR + "switch_opcodes.bin");
-                     ^
-  symbol:   variable ExprBits
-  location: class TestExprBits
-spec/java/src/io/kaitai/struct/spec/TestExprBits.java:15: error: package ExprBits does not exist
-        assertEquals(r.enumSeq(), ExprBits.Items.FOO);
-                                          ^
-spec/java/src/io/kaitai/struct/spec/TestExprBits.java:22: error: package ExprBits does not exist
-        assertEquals(r.enumInst(), ExprBits.Items.BAR);
+  symbol:   class EnumLongRangeS
+  location: class TestEnumLongRangeS
+spec/java/src/io/kaitai/struct/spec/TestEnumLongRangeS.java:12: error: cannot find symbol
+        EnumLongRangeS r = EnumLongRangeS.fromFile(SRC_DIR + "enum_long_range_s.bin");
+                           ^
+  symbol:   variable EnumLongRangeS
+  location: class TestEnumLongRangeS
+spec/java/src/io/kaitai/struct/spec/TestEnumLongRangeS.java:14: error: package EnumLongRangeS does not exist
+        assertEquals(r.f1(), EnumLongRangeS.Constants.LONG_MIN);
                                            ^
-8 errors
+spec/java/src/io/kaitai/struct/spec/TestEnumLongRangeS.java:15: error: package EnumLongRangeS does not exist
+        assertEquals(r.f2(), EnumLongRangeS.Constants.INT_BELOW_MIN);
+                                           ^
+spec/java/src/io/kaitai/struct/spec/TestEnumLongRangeS.java:16: error: package EnumLongRangeS does not exist
+        assertEquals(r.f3(), EnumLongRangeS.Constants.INT_MIN);
+                                           ^
+spec/java/src/io/kaitai/struct/spec/TestEnumLongRangeS.java:17: error: package EnumLongRangeS does not exist
+        assertEquals(r.f4(), EnumLongRangeS.Constants.ZERO);
+                                           ^
+spec/java/src/io/kaitai/struct/spec/TestEnumLongRangeS.java:18: error: package EnumLongRangeS does not exist
+        assertEquals(r.f5(), EnumLongRangeS.Constants.INT_MAX);
+                                           ^
+spec/java/src/io/kaitai/struct/spec/TestEnumLongRangeS.java:19: error: package EnumLongRangeS does not exist
+        assertEquals(r.f6(), EnumLongRangeS.Constants.INT_OVER_MAX);
+                                           ^
+spec/java/src/io/kaitai/struct/spec/TestEnumLongRangeS.java:20: error: package EnumLongRangeS does not exist
+        assertEquals(r.f7(), EnumLongRangeS.Constants.LONG_MAX);
+                                           ^
+spec/java/src/io/kaitai/struct/spec/TestExprBytesLiteral.java:12: error: cannot find symbol
+        ExprBytesLiteral r = ExprBytesLiteral.fromFile(SRC_DIR + "enum_negative.bin");
+        ^
+  symbol:   class ExprBytesLiteral
+  location: class TestExprBytesLiteral
+spec/java/src/io/kaitai/struct/spec/TestExprBytesLiteral.java:12: error: cannot find symbol
+        ExprBytesLiteral r = ExprBytesLiteral.fromFile(SRC_DIR + "enum_negative.bin");
+                             ^
+  symbol:   variable ExprBytesLiteral
+  location: class TestExprBytesLiteral
+compiled/java/src/io/kaitai/struct/testformats/ExprBits.java:56: error: incompatible types: possible lossy conversion from long to int
+        switch (a()) {
+               ^
+compiled/java/src/io/kaitai/struct/testformats/ExprBits.java:85: error: incompatible types: possible lossy conversion from long to int
+            switch (_parent().a()) {
+                   ^
+compiled/java/src/io/kaitai/struct/testformats/ExprOpsParens.java:97: error: incompatible types: String cannot be converted to int
+        int _tmp = (int) (str0To4() + str5To9().length());
+                         ^
+16 errors
