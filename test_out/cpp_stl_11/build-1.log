@@ -1,8 +1,8 @@
 Scanning dependencies of target ks_tests
 [  0%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/runtime/cpp_stl/kaitai/kaitaistream.cpp.o
-[  0%] Building CXX object CMakeFiles/ks_tests.dir/prereq/my_custom_fx.cpp.o
 [  0%] Building CXX object CMakeFiles/ks_tests.dir/prereq/custom_fx.cpp.o
 [  0%] Building CXX object CMakeFiles/ks_tests.dir/prereq/custom_fx_no_args.cpp.o
+[  0%] Building CXX object CMakeFiles/ks_tests.dir/prereq/my_custom_fx.cpp.o
 [  1%] Building CXX object CMakeFiles/ks_tests.dir/test_valid_fail_max_int.cpp.o
 [  1%] Building CXX object CMakeFiles/ks_tests.dir/test_expr_str_ops.cpp.o
 [  1%] Building CXX object CMakeFiles/ks_tests.dir/test_valid_fail_eq_bytes.cpp.o
@@ -10,11 +10,11 @@ Scanning dependencies of target ks_tests
 [  2%] Building CXX object CMakeFiles/ks_tests.dir/test_cast_nested.cpp.o
 [  2%] Building CXX object CMakeFiles/ks_tests.dir/test_imports_circular_a.cpp.o
 [  2%] Building CXX object CMakeFiles/ks_tests.dir/test_enum_long_range_s.cpp.o
+[  2%] Building CXX object CMakeFiles/ks_tests.dir/test_imports_rel_1.cpp.o
 In file included from /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/test_enum_long_range_s.cpp:4:0:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/enum_long_range_s.h:18:31: warning: integer constant is so large that it is unsigned [enabled by default]
          CONSTANTS_LONG_MIN = -9223372036854775808,
                                ^
-[  2%] Building CXX object CMakeFiles/ks_tests.dir/test_imports_rel_1.cpp.o
 [  2%] Building CXX object CMakeFiles/ks_tests.dir/test_process_coerce_usertype1.cpp.o
 [  3%] Building CXX object CMakeFiles/ks_tests.dir/test_expr_sizeof_type_1.cpp.o
 [  3%] Building CXX object CMakeFiles/ks_tests.dir/test_opaque_external_type.cpp.o
@@ -121,8 +121,8 @@ compilation terminated.
 [ 20%] Building CXX object CMakeFiles/ks_tests.dir/test_term_strz.cpp.o
 [ 20%] Building CXX object CMakeFiles/ks_tests.dir/test_expr_bits.cpp.o
 [ 20%] Building CXX object CMakeFiles/ks_tests.dir/test_process_custom_no_args.cpp.o
-[ 20%] Building CXX object CMakeFiles/ks_tests.dir/test_combine_enum.cpp.o
 make[2]: *** [CMakeFiles/ks_tests.dir/test_expr_bytes_literal.cpp.o] Error 1
+[ 20%] Building CXX object CMakeFiles/ks_tests.dir/test_combine_enum.cpp.o
 [ 21%] Building CXX object CMakeFiles/ks_tests.dir/test_enum_deep.cpp.o
 [ 21%] Building CXX object CMakeFiles/ks_tests.dir/test_repeat_n_struct.cpp.o
 [ 21%] Building CXX object CMakeFiles/ks_tests.dir/test_nav_parent.cpp.o
@@ -241,11 +241,11 @@ make[2]: *** [CMakeFiles/ks_tests.dir/test_expr_bytes_literal.cpp.o] Error 1
 [ 47%] Building CXX object CMakeFiles/ks_tests.dir/test_process_coerce_switch.cpp.o
 [ 47%] Building CXX object CMakeFiles/ks_tests.dir/test_switch_multi_bool_ops.cpp.o
 [ 47%] Building CXX object CMakeFiles/ks_tests.dir/test_params_pass_array_struct.cpp.o
+[ 47%] Building CXX object CMakeFiles/ks_tests.dir/test_instance_user_array.cpp.o
 /home/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/test_process_coerce_switch.cpp:4:35: fatal error: process_coerce_switch.h: No such file or directory
  #include "process_coerce_switch.h"
                                    ^
 compilation terminated.
-[ 47%] Building CXX object CMakeFiles/ks_tests.dir/test_instance_user_array.cpp.o
 [ 47%] Building CXX object CMakeFiles/ks_tests.dir/test_position_in_seq.cpp.o
 [ 48%] Building CXX object CMakeFiles/ks_tests.dir/test_process_xor_value.cpp.o
 [ 48%] Building CXX object CMakeFiles/ks_tests.dir/test_index_to_param_expr.cpp.o
@@ -671,7 +671,6 @@ In file included from /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp
 [ 78%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_enum.cpp.o
 [ 78%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/debug_array_user.cpp.o
 [ 78%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent_override.cpp.o
-[ 79%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/meta_xref.cpp.o
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/enum_to_i_class_border_2.cpp: In member function ‘bool enum_to_i_class_border_2_t::is_dog()’:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/enum_to_i_class_border_2.cpp:27:24: error: invalid use of incomplete type ‘class enum_to_i_class_border_2_t::enum_to_i_class_border_1_t’
      m_is_dog = parent()->some_dog() == 4;
@@ -681,6 +680,7 @@ In file included from /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp
      class enum_to_i_class_border_1_t;
            ^
 make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/enum_to_i_class_border_2.cpp.o] Error 1
+[ 79%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/meta_xref.cpp.o
 [ 79%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/repeat_until_calc_array_type.cpp.o
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/vlq_base128_le.cpp: In member function ‘int32_t vlq_base128_le_t::value()’:
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/vlq_base128_le.cpp:80:338: warning: left shift count >= width of type [enabled by default]
@@ -799,7 +799,6 @@ In file included from /usr/include/c++/4.8/memory:81:0,
        constexpr unique_ptr() noexcept
                  ^
 /usr/include/c++/4.8/bits/unique_ptr.h:135:17: note:   candidate expects 0 arguments, 1 provided
-[ 83%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/default_bit_endian_mod.cpp.o
 /home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/debug_switch_user.cpp:23:51: error: no matching function for call to ‘std::unique_ptr<debug_switch_user_t::two_t>::unique_ptr(std::unique_ptr<kaitai::kstruct>&)’
          static_cast<std::unique_ptr<two_t>>(m_data)->_read();
                                                    ^
@@ -846,6 +845,7 @@ In file included from /usr/include/c++/4.8/memory:81:0,
                  ^
 /usr/include/c++/4.8/bits/unique_ptr.h:135:17: note:   candidate expects 0 arguments, 1 provided
 make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/debug_switch_user.cpp.o] Error 1
+[ 83%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/default_bit_endian_mod.cpp.o
 [ 83%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/repeat_until_sized.cpp.o
 [ 83%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/instance_std.cpp.o
 [ 84%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/position_in_seq.cpp.o
