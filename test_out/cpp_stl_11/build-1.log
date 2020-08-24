@@ -1,9 +1,9 @@
 Scanning dependencies of target ks_tests
-[  0%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/runtime/cpp_stl/kaitai/kaitaistream.cpp.o
 [  0%] Building CXX object CMakeFiles/ks_tests.dir/prereq/my_custom_fx.cpp.o
+[  0%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/runtime/cpp_stl/kaitai/kaitaistream.cpp.o
 [  0%] Building CXX object CMakeFiles/ks_tests.dir/prereq/custom_fx.cpp.o
-[  0%] Building CXX object CMakeFiles/ks_tests.dir/prereq/custom_fx_no_args.cpp.o
 [  1%] Building CXX object CMakeFiles/ks_tests.dir/main.cpp.o
+[  1%] Building CXX object CMakeFiles/ks_tests.dir/prereq/custom_fx_no_args.cpp.o
 [  1%] Building CXX object CMakeFiles/ks_tests.dir/test_bcd_user_type_be.cpp.o
 [  1%] Building CXX object CMakeFiles/ks_tests.dir/test_bcd_user_type_le.cpp.o
 [  1%] Building CXX object CMakeFiles/ks_tests.dir/test_bits_byte_aligned.cpp.o
@@ -44,6 +44,9 @@ Scanning dependencies of target ks_tests
 [  9%] Building CXX object CMakeFiles/ks_tests.dir/test_enum_import.cpp.o
 [  9%] Building CXX object CMakeFiles/ks_tests.dir/test_enum_int_range_s.cpp.o
 [ 10%] Building CXX object CMakeFiles/ks_tests.dir/test_enum_int_range_u.cpp.o
+[ 10%] Building CXX object CMakeFiles/ks_tests.dir/test_enum_invalid.cpp.o
+[ 10%] Building CXX object CMakeFiles/ks_tests.dir/test_enum_long_range_s.cpp.o
+[ 10%] Building CXX object CMakeFiles/ks_tests.dir/test_enum_long_range_u.cpp.o
 In file included from /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_11/test_enum_import.cpp:4:
 /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/enum_import.h:27:5: error: use of undeclared identifier 'enum_0_t'
     enum_0_t::animal_t m_pet_1;
@@ -51,18 +54,15 @@ In file included from /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_st
 /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/enum_import.h:28:5: error: use of undeclared identifier 'enum_deep_t'
     enum_deep_t::container1_t::container2_t::animal_t m_pet_2;
     ^
-[ 10%] Building CXX object CMakeFiles/ks_tests.dir/test_enum_invalid.cpp.o
 /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/enum_import.h:33:5: error: use of undeclared identifier 'enum_0_t'
     enum_0_t::animal_t pet_1() const { return m_pet_1; }
     ^
 /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/enum_import.h:34:5: error: use of undeclared identifier 'enum_deep_t'
     enum_deep_t::container1_t::container2_t::animal_t pet_2() const { return m_pet_2; }
     ^
-[ 10%] Building CXX object CMakeFiles/ks_tests.dir/test_enum_long_range_s.cpp.o
-[ 10%] Building CXX object CMakeFiles/ks_tests.dir/test_enum_long_range_u.cpp.o
+[ 11%] Building CXX object CMakeFiles/ks_tests.dir/test_enum_negative.cpp.o
 4 errors generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/test_enum_import.cpp.o] Error 1
-[ 11%] Building CXX object CMakeFiles/ks_tests.dir/test_enum_negative.cpp.o
 [ 11%] Building CXX object CMakeFiles/ks_tests.dir/test_enum_of_value_inst.cpp.o
 [ 11%] Building CXX object CMakeFiles/ks_tests.dir/test_enum_to_i.cpp.o
 [ 11%] Building CXX object CMakeFiles/ks_tests.dir/test_enum_to_i_class_border_1.cpp.o
@@ -532,8 +532,8 @@ make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/te
     if (static_cast<io_local_var_t::dummy_t*>(mess_up())->_io()->pos() < 0) {
         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ^ ~
 [ 74%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent3.cpp.o
-[ 75%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent_false.cpp.o
 1 warning generated.
+[ 75%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent_false.cpp.o
 [ 75%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent_false2.cpp.o
 [ 75%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent_override.cpp.o
 [ 75%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/nav_parent_switch.cpp.o
@@ -578,9 +578,10 @@ make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/te
 /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_pass_array_int.h:28:11: note: candidate constructor (the implicit copy constructor) not viable: requires 1 argument, but 4 were provided
     class wants_ints_t : public kaitai::kstruct {
           ^
-1 error generated.
+/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_pass_array_usertype.cpp:20:55:1 error generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_pass_array_int.cpp.o] Error 1
-/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_pass_array_usertype.cpp:20:55: error: no matching constructor for initialization of 'params_pass_array_usertype_t::param_type_t'
+[ 82%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/position_to_end.cpp.o
+ error: no matching constructor for initialization of 'params_pass_array_usertype_t::param_type_t'
     m_pass_blocks = std::unique_ptr<param_type_t>(new param_type_t(blocks(), m__io, this, m__root));
                                                       ^            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_pass_array_usertype.h:57:9: note: candidate constructor not viable: no known conversion from 'std::vector<std::unique_ptr<block_t> > *' to 'std::vector<block_t *> *' for 1st argument
@@ -589,7 +590,6 @@ make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/te
 /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_pass_array_usertype.h:53:11: note: candidate constructor (the implicit copy constructor) not viable: requires 1 argument, but 4 were provided
     class param_type_t : public kaitai::kstruct {
           ^
-[ 82%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/position_to_end.cpp.o
 1 error generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/params_pass_array_usertype.cpp.o] Error 1
 [ 82%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/process_coerce_bytes.cpp.o
@@ -617,10 +617,10 @@ make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/te
 [ 87%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/repeat_until_s4.cpp.o
 [ 87%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/repeat_until_sized.cpp.o
 [ 87%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/str_encodings.cpp.o
-[ 88%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/str_encodings_default.cpp.o
 /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/repeat_until_calc_array_type.cpp:71:36: error: assigning to 'repeat_until_calc_array_type_t::record_t *' from incompatible type 'std::__1::__vector_base<std::__1::unique_ptr<repeat_until_calc_array_type_t::record_t, std::__1::default_delete<repeat_until_calc_array_type_t::record_t> >, std::__1::allocator<std::__1::unique_ptr<repeat_until_calc_array_type_t::record_t, std::__1::default_delete<repeat_until_calc_array_type_t::record_t> > > >::value_type' (aka 'std::__1::unique_ptr<repeat_until_calc_array_type_t::record_t, std::__1::default_delete<repeat_until_calc_array_type_t::record_t> >')
     m_first_rec = recs_accessor()->front();
                   ~~~~~~~~~~~~~~~~~^~~~~~~
+[ 88%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/str_encodings_default.cpp.o
 [ 88%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/str_eos.cpp.o
 [ 88%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_11/str_literals.cpp.o
 1 error generated.
