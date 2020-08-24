@@ -1,6 +1,6 @@
 Scanning dependencies of target ks_tests
-[  0%] Building CXX object CMakeFiles/ks_tests.dir/prereq/my_custom_fx.cpp.o
 [  0%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/runtime/cpp_stl/kaitai/kaitaistream.cpp.o
+[  0%] Building CXX object CMakeFiles/ks_tests.dir/prereq/my_custom_fx.cpp.o
 [  0%] Building CXX object CMakeFiles/ks_tests.dir/prereq/custom_fx.cpp.o
 [  0%] Building CXX object CMakeFiles/ks_tests.dir/prereq/custom_fx_no_args.cpp.o
 [  1%] Building CXX object CMakeFiles/ks_tests.dir/main.cpp.o
@@ -93,11 +93,12 @@ make[2]: *** [CMakeFiles/ks_tests.dir/test_default_endian_expr_exception.cpp.o] 
 [ 10%] Building CXX object CMakeFiles/ks_tests.dir/test_enum_int_range_s.cpp.o
 [ 10%] Building CXX object CMakeFiles/ks_tests.dir/test_enum_int_range_u.cpp.o
 [ 10%] Building CXX object CMakeFiles/ks_tests.dir/test_enum_invalid.cpp.o
+[ 10%] Building CXX object CMakeFiles/ks_tests.dir/test_enum_long_range_s.cpp.o
+[ 10%] Building CXX object CMakeFiles/ks_tests.dir/test_enum_long_range_u.cpp.o
 In file included from /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_enum_import.cpp:4:
 /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_import.h:27:5: error: use of undeclared identifier 'enum_0_t'
     enum_0_t::animal_t m_pet_1;
     ^
-[ 10%] Building CXX object CMakeFiles/ks_tests.dir/test_enum_long_range_s.cpp.o
 /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_import.h:28:5: error: use of undeclared identifier 'enum_deep_t'
     enum_deep_t::container1_t::container2_t::animal_t m_pet_2;
     ^
@@ -107,10 +108,9 @@ In file included from /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_st
 /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_import.h:34:5: error: use of undeclared identifier 'enum_deep_t'
     enum_deep_t::container1_t::container2_t::animal_t pet_2() const { return m_pet_2; }
     ^
-[ 10%] Building CXX object CMakeFiles/ks_tests.dir/test_enum_long_range_u.cpp.o
+[ 11%] Building CXX object CMakeFiles/ks_tests.dir/test_enum_negative.cpp.o
 4 errors generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/test_enum_import.cpp.o] Error 1
-[ 11%] Building CXX object CMakeFiles/ks_tests.dir/test_enum_negative.cpp.o
 [ 11%] Building CXX object CMakeFiles/ks_tests.dir/test_enum_of_value_inst.cpp.o
 [ 11%] Building CXX object CMakeFiles/ks_tests.dir/test_enum_to_i.cpp.o
 [ 11%] Building CXX object CMakeFiles/ks_tests.dir/test_enum_to_i_class_border_1.cpp.o
@@ -122,8 +122,8 @@ In file included from /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_st
     enum constants_t {
          ^
 [ 12%] Building CXX object CMakeFiles/ks_tests.dir/test_eof_exception_bytes.cpp.o
-2 warnings generated.
 [ 12%] Building CXX object CMakeFiles/ks_tests.dir/test_eof_exception_u4.cpp.o
+2 warnings generated.
 [ 12%] Building CXX object CMakeFiles/ks_tests.dir/test_eos_exception_bytes.cpp.o
 [ 12%] Building CXX object CMakeFiles/ks_tests.dir/test_eos_exception_u4.cpp.o
 [ 13%] Building CXX object CMakeFiles/ks_tests.dir/test_expr_0.cpp.o
@@ -176,8 +176,9 @@ class validation_failed_error: public kstruct_error {
 /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:60:7: note: candidate constructor (the implicit copy constructor) not viable: requires 1 argument, but 3 were provided
 class validation_failed_error: public kstruct_error {
       ^
-In file included from /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_eos_exception_bytes.cpp:8:
-/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:84:9: error: no matching constructor for initialization of 'kaitai::validation_failed_error'
+5 errors generated.
+make[2]: *** [CMakeFiles/ks_tests.dir/test_eof_exception_bytes.cpp.o] Error 1
+[ 13%] Building CXX object CMakeFiles/ks_tests.dir/test_expr_array.cpp.o
 In file included from /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_eof_exception_u4.cpp:8:
 /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:84:9: error: no matching constructor for initialization of 'kaitai::validation_failed_error'
         validation_failed_error("not equal", io, src_path),
@@ -224,6 +225,8 @@ class validation_failed_error: public kstruct_error {
 /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:60:7: note: candidate constructor (the implicit copy constructor) not viable: requires 1 argument, but 3 were provided
 class validation_failed_error: public kstruct_error {
       ^
+In file included from /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_eos_exception_bytes.cpp:8:
+/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:84:9: error: no matching constructor for initialization of 'kaitai::validation_failed_error'
         validation_failed_error("not equal", io, src_path),
         ^                       ~~~~~~~~~~~~~~~~~~~~~~~~~
 /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:62:5: note: candidate constructor not viable: 2nd argument ('const kaitai::kstream *') would lose const qualifier
@@ -315,16 +318,13 @@ class validation_failed_error: public kstruct_error {
 class validation_failed_error: public kstruct_error {
       ^
 5 errors generated.
-make[2]: *** [CMakeFiles/ks_tests.dir/test_eof_exception_bytes.cpp.o] Error 1
-[ 13%] Building CXX object CMakeFiles/ks_tests.dir/test_expr_array.cpp.o
-5 errors generated.
-make[2]: *** [CMakeFiles/ks_tests.dir/test_eos_exception_bytes.cpp.o] Error 1
+make[2]: *** [CMakeFiles/ks_tests.dir/test_eof_exception_u4.cpp.o] Error 1
 [ 14%] Building CXX object CMakeFiles/ks_tests.dir/test_expr_bits.cpp.o
 5 errors generated.
-make[2]: *** [CMakeFiles/ks_tests.dir/test_eof_exception_u4.cpp.o] Error 1
+make[2]: *** [CMakeFiles/ks_tests.dir/test_eos_exception_bytes.cpp.o] Error 1
+[ 14%] Building CXX object CMakeFiles/ks_tests.dir/test_expr_bytes_cmp.cpp.o
 5 errors generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/test_eos_exception_u4.cpp.o] Error 1
-[ 14%] Building CXX object CMakeFiles/ks_tests.dir/test_expr_bytes_cmp.cpp.o
 [ 14%] Building CXX object CMakeFiles/ks_tests.dir/test_expr_bytes_literal.cpp.o
 [ 14%] Building CXX object CMakeFiles/ks_tests.dir/test_expr_bytes_ops.cpp.o
 [ 15%] Building CXX object CMakeFiles/ks_tests.dir/test_expr_calc_array_ops.cpp.o
@@ -338,12 +338,12 @@ make[2]: *** [CMakeFiles/ks_tests.dir/test_expr_bytes_literal.cpp.o] Error 1
 [ 15%] Building CXX object CMakeFiles/ks_tests.dir/test_expr_int_div.cpp.o
 [ 15%] Building CXX object CMakeFiles/ks_tests.dir/test_expr_io_eof.cpp.o
 [ 16%] Building CXX object CMakeFiles/ks_tests.dir/test_expr_io_pos.cpp.o
+[ 16%] Building CXX object CMakeFiles/ks_tests.dir/test_expr_mod.cpp.o
 /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_expr_calc_array_ops.cpp:4:10: fatal error: 'expr_calc_array_ops.h' file not found
 #include "expr_calc_array_ops.h"
          ^~~~~~~~~~~~~~~~~~~~~~~
 1 error generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/test_expr_calc_array_ops.cpp.o] Error 1
-[ 16%] Building CXX object CMakeFiles/ks_tests.dir/test_expr_mod.cpp.o
 [ 16%] Building CXX object CMakeFiles/ks_tests.dir/test_expr_ops_parens.cpp.o
 [ 16%] Building CXX object CMakeFiles/ks_tests.dir/test_expr_sizeof_type_0.cpp.o
 [ 17%] Building CXX object CMakeFiles/ks_tests.dir/test_expr_sizeof_type_1.cpp.o
@@ -415,21 +415,21 @@ make[2]: *** [CMakeFiles/ks_tests.dir/test_expr_calc_array_ops.cpp.o] Error 1
 /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_params_pass_array_int.cpp:4:10: fatal error: 'params_pass_array_int.h' file not found
 #include "params_pass_array_int.h"
          ^~~~~~~~~~~~~~~~~~~~~~~~~
-/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_params_pass_array_str.cpp:4:10: fatal error: 'params_pass_array_str.h' file not found
-#include "params_pass_array_str.h"
-         ^~~~~~~~~~~~~~~~~~~~~~~~~
 1 error generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/test_params_pass_array_int.cpp.o] Error 1
 [ 32%] Building CXX object CMakeFiles/ks_tests.dir/test_position_in_seq.cpp.o
-1 error generated.
-make[2]: *** [CMakeFiles/ks_tests.dir/test_params_pass_array_str.cpp.o] Error 1
-[ 32%] Building CXX object CMakeFiles/ks_tests.dir/test_position_to_end.cpp.o
-[ 32%] Building CXX object CMakeFiles/ks_tests.dir/test_process_coerce_bytes.cpp.o
+/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_params_pass_array_str.cpp:4:10: fatal error: 'params_pass_array_str.h' file not found
+#include "params_pass_array_str.h"
+         ^~~~~~~~~~~~~~~~~~~~~~~~~
 /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_params_pass_array_struct.cpp:4:10: fatal error: 'params_pass_array_struct.h' file not found
 #include "params_pass_array_struct.h"
          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
 1 error generated.
+make[2]: *** [CMakeFiles/ks_tests.dir/test_params_pass_array_str.cpp.o] Error 1
+[ 32%] Building CXX object CMakeFiles/ks_tests.dir/test_position_to_end.cpp.o
+1 error generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/test_params_pass_array_struct.cpp.o] Error 1
+[ 32%] Building CXX object CMakeFiles/ks_tests.dir/test_process_coerce_bytes.cpp.o
 [ 32%] Building CXX object CMakeFiles/ks_tests.dir/test_process_coerce_switch.cpp.o
 [ 33%] Building CXX object CMakeFiles/ks_tests.dir/test_process_coerce_usertype1.cpp.o
 [ 33%] Building CXX object CMakeFiles/ks_tests.dir/test_process_coerce_usertype2.cpp.o
@@ -499,7 +499,6 @@ make[2]: *** [CMakeFiles/ks_tests.dir/test_process_coerce_switch.cpp.o] Error 1
 [ 46%] Building CXX object CMakeFiles/ks_tests.dir/test_valid_fail_expr.cpp.o
 [ 47%] Building CXX object CMakeFiles/ks_tests.dir/test_valid_fail_inst.cpp.o
 [ 47%] Building CXX object CMakeFiles/ks_tests.dir/test_valid_fail_max_int.cpp.o
-[ 47%] Building CXX object CMakeFiles/ks_tests.dir/test_valid_fail_min_int.cpp.o
 In file included from /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_valid_fail_anyof_int.cpp:8:
 /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:84:9: error: no matching constructor for initialization of 'kaitai::validation_failed_error'
         validation_failed_error("not equal", io, src_path),
@@ -544,6 +543,7 @@ class validation_failed_error: public kstruct_error {
     validation_failed_error(const std::string what, kstream* io, const std::string src_path):
     ^
 /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:60:7: note: candidate constructor (the implicit copy constructor) not viable: requires 1 argument, but 3 were provided
+[ 47%] Building CXX object CMakeFiles/ks_tests.dir/test_valid_fail_min_int.cpp.o
 class validation_failed_error: public kstruct_error {
       ^
 In file included from /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_valid_fail_contents.cpp:8:
@@ -885,13 +885,10 @@ class validation_failed_error: public kstruct_error {
       ^
 5 errors generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/test_valid_fail_inst.cpp.o] Error 1
-[ 48%] Building CXX object CMakeFiles/ks_tests.dir/test_valid_not_parsed_if.cpp.o
 5 errors generated.
+[ 48%] Building CXX object CMakeFiles/ks_tests.dir/test_valid_not_parsed_if.cpp.o
 make[2]: *** [CMakeFiles/ks_tests.dir/test_valid_fail_max_int.cpp.o] Error 1
 [ 49%] Building CXX object CMakeFiles/ks_tests.dir/test_valid_short.cpp.o
-5 errors generated.
-make[2]: *** [CMakeFiles/ks_tests.dir/test_valid_fail_min_int.cpp.o] Error 1
-[ 49%] Building CXX object CMakeFiles/ks_tests.dir/test_valid_switch.cpp.o
 In file included from /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_valid_fail_range_bytes.cpp:8:
 /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:84:9: error: no matching constructor for initialization of 'kaitai::validation_failed_error'
         validation_failed_error("not equal", io, src_path),
@@ -938,6 +935,9 @@ class validation_failed_error: public kstruct_error {
 /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:60:7: note: candidate constructor (the implicit copy constructor) not viable: requires 1 argument, but 3 were provided
 class validation_failed_error: public kstruct_error {
       ^
+5 errors generated.
+make[2]: *** [CMakeFiles/ks_tests.dir/test_valid_fail_min_int.cpp.o] Error 1
+[ 49%] Building CXX object CMakeFiles/ks_tests.dir/test_valid_switch.cpp.o
 In file included from /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_valid_fail_range_float.cpp:8:
 /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:84:9: error: no matching constructor for initialization of 'kaitai::validation_failed_error'
         validation_failed_error("not equal", io, src_path),
@@ -1348,6 +1348,7 @@ make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/te
 [ 60%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_to_i.cpp.o
 [ 60%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_to_i_class_border_1.cpp.o
 [ 60%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_to_i_class_border_2.cpp.o
+[ 61%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/eof_exception_bytes.cpp.o
 In file included from /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_long_range_s.cpp:3:
 /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_long_range_s.h:18:31: warning: integer literal is too large to be represented in type 'long' and is subject to undefined behavior under C++98, interpreting as 'unsigned long'; this literal will be ill-formed in C++11 onwards [-Wc++11-compat]
         CONSTANTS_LONG_MIN = -9223372036854775808,
@@ -1355,9 +1356,8 @@ In file included from /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cp
 /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_long_range_s.h:17:10: warning: enumeration values exceed range of largest integer [-Wenum-too-large]
     enum constants_t {
          ^
-[ 61%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/eof_exception_bytes.cpp.o
-2 warnings generated.
 [ 61%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/eof_exception_u4.cpp.o
+2 warnings generated.
 [ 61%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/eos_exception_bytes.cpp.o
 [ 61%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/eos_exception_u4.cpp.o
 [ 62%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/expr_0.cpp.o
@@ -1472,12 +1472,12 @@ operator+(const _CharT* __lhs , const basic_string<_CharT,_Traits,_Allocator>& _
 /Applications/Xcode-9.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/string:3756:1: note: candidate template ignored: could not match 'basic_string<type-parameter-0-0, type-parameter-0-1, type-parameter-0-2>' against 'unsigned long'
 operator+(_CharT __lhs, const basic_string<_CharT,_Traits,_Allocator>& __rhs)
 ^
-/Applications/Xcode-9.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/string:3767:[ 66%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/fixed_struct.cpp.o
-1: note: candidate template ignored: could not match 'const _CharT *' against 'std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::size_type' (aka 'unsigned long')
+/Applications/Xcode-9.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/string:3767:1: note: candidate template ignored: could not match 'const _CharT *' against 'std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::size_type' (aka 'unsigned long')
 operator+(const basic_string<_CharT, _Traits, _Allocator>& __lhs, const _CharT* __rhs)
 ^
 1 error generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/expr_ops_parens.cpp.o] Error 1
+[ 66%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/fixed_struct.cpp.o
 [ 67%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/float_to_i.cpp.o
 [ 67%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/floating_points.cpp.o
 [ 67%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/hello_world.cpp.o
@@ -1851,6 +1851,7 @@ make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/te
 [ 95%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/valid_fail_eq_bytes.cpp.o
 [ 96%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/valid_fail_eq_int.cpp.o
 [ 96%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/valid_fail_expr.cpp.o
+[ 96%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/valid_fail_inst.cpp.o
 In file included from /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/valid_fail_anyof_int.cpp:4:
 /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:84:9: error: no matching constructor for initialization of 'kaitai::validation_failed_error'
         validation_failed_error("not equal", io, src_path),
@@ -1861,46 +1862,7 @@ In file included from /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cp
 /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:60:7: note: candidate constructor (the implicit copy constructor) not viable: requires 1 argument, but 3 were provided
 class validation_failed_error: public kstruct_error {
       ^
-/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:107:9: error: no matching constructor for initialization of 'kaitai::validation_failed_error'
-        validation_failed_error("not in range", io, src_path),
-        ^                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:62:5: note: candidate constructor not viable: 2nd argument ('const kaitai::kstream *') would lose const qualifier
-    validation_failed_error(const std::string what, kstream* io, const std::string src_path):
-    ^
-/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:60:7: note: candidate constructor (the implicit copy constructor) not viable: requires 1 argument, but 3 were provided
-class validation_failed_error: public kstruct_error {
-      ^
-/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:130:9: error: no matching constructor for initialization of 'kaitai::validation_failed_error'
-        validation_failed_error("not in range", io, src_path),
-        ^                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:62:5: note: candidate constructor not viable: 2nd argument ('const kaitai::kstream *') would lose const qualifier
-    validation_failed_error(const std::string what, kstream* io, const std::string src_path):
-    ^
-/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:60:7: note: candidate constructor (the implicit copy constructor) not viable: requires 1 argument, but 3 were provided
-class validation_failed_error: public kstruct_error {
-      ^
-/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:153:9: error: no matching constructor for initialization of 'kaitai::validation_failed_error'
-        validation_failed_error("not any of the list", io, src_path),
-        ^                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:62:5: note: candidate constructor not viable: 2nd argument ('const kaitai::kstream *') would lose const qualifier
-    validation_failed_error(const std::string what, kstream* io, const std::string src_path):
-    ^
-/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:60:7: note: candidate constructor (the implicit copy constructor) not viable: requires 1 argument, but 3 were provided
-class validation_failed_error: public kstruct_error {
-      ^
-/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:174:9: error: no matching constructor for initialization of 'kaitai::validation_failed_error'
-        validation_failed_error("not matching the expression", io, src_path),
-        ^                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:62:5: note: candidate constructor not viable: 2nd argument ('const kaitai::kstream *') would lose const qualifier
-    validation_failed_error(const std::string what, kstream* io, const std::string src_path):
-    ^
-/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:60:7: note: candidate constructor (the implicit copy constructor) not viable: requires 1 argument, but 3 were provided
-class validation_failed_error: public kstruct_error {
-      ^
-5 errors generated.
-make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/valid_fail_anyof_int.cpp.o] Error 1
-[ 96%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/valid_fail_inst.cpp.o
-In file included from /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/valid_fail_contents.cpp:4:
+/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.hIn file included from /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/valid_fail_contents.cpp:4:
 /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:84:9: error: no matching constructor for initialization of 'kaitai::validation_failed_error'
         validation_failed_error("not equal", io, src_path),
         ^                       ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1910,7 +1872,10 @@ In file included from /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cp
 /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:60:7: note: candidate constructor (the implicit copy constructor) not viable: requires 1 argument, but 3 were provided
 class validation_failed_error: public kstruct_error {
       ^
-/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:107:9: error: no matching constructor for initialization of 'kaitai::validation_failed_error'
+/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:107:9: error: no matching constructor for initialization of 'kaitai::validation_failed_error':107:9: error: no matching constructor for initialization of 'kaitai::validation_failed_error'
+        validation_failed_error("not in range", io, src_path),
+        ^                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:62
         validation_failed_error("not in range", io, src_path),
         ^                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:62:5: note: candidate constructor not viable: 2nd argument ('const kaitai::kstream *') would lose const qualifier
@@ -1946,10 +1911,45 @@ class validation_failed_error: public kstruct_error {
 /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:60:7: note: candidate constructor (the implicit copy constructor) not viable: requires 1 argument, but 3 were provided
 class validation_failed_error: public kstruct_error {
       ^
-[ 96%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/valid_fail_max_int.cpp.o
-[ 97%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/valid_fail_min_int.cpp.o
+:5: note: candidate constructor not viable: 2nd argument ('const kaitai::kstream *') would lose const qualifier
+    validation_failed_error(const std::string what, kstream* io, const std::string src_path):
+    ^
+/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:60:7: note: candidate constructor (the implicit copy constructor) not viable: requires 1 argument, but 3 were provided
+class validation_failed_error: public kstruct_error {
+      ^
+/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:130:9: error: no matching constructor for initialization of 'kaitai::validation_failed_error'
+        validation_failed_error("not in range", io, src_path),
+        ^                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:62:5: note: candidate constructor not viable: 2nd argument ('const kaitai::kstream *') would lose const qualifier
+    validation_failed_error(const std::string what, kstream* io, const std::string src_path):
+    ^
+/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:60:7: note: candidate constructor (the implicit copy constructor) not viable: requires 1 argument, but 3 were provided
+class validation_failed_error: public kstruct_error {
+      ^
+/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:153:9: error: no matching constructor for initialization of 'kaitai::validation_failed_error'
+        validation_failed_error("not any of the list", io, src_path),
+        ^                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:62:5: note: candidate constructor not viable: 2nd argument ('const kaitai::kstream *') would lose const qualifier
+    validation_failed_error(const std::string what, kstream* io, const std::string src_path):
+    ^
+/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:60:7: note: candidate constructor (the implicit copy constructor) not viable: requires 1 argument, but 3 were provided
+class validation_failed_error: public kstruct_error {
+      ^
+/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:174:9: error: no matching constructor for initialization of 'kaitai::validation_failed_error'
+        validation_failed_error("not matching the expression", io, src_path),
+        ^                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:62:5: note: candidate constructor not viable: 2nd argument ('const kaitai::kstream *') would lose const qualifier
+    validation_failed_error(const std::string what, kstream* io, const std::string src_path):
+    ^
+/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:60:7: note: candidate constructor (the implicit copy constructor) not viable: requires 1 argument, but 3 were provided
+class validation_failed_error: public kstruct_error {
+      ^
 5 errors generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/valid_fail_contents.cpp.o] Error 1
+[ 96%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/valid_fail_max_int.cpp.o
+5 errors generated.
+make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/valid_fail_anyof_int.cpp.o] Error 1
+[ 97%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/valid_fail_min_int.cpp.o
 [ 97%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/valid_fail_range_bytes.cpp.o
 [ 97%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/valid_fail_range_float.cpp.o
 In file included from /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/valid_fail_eq_bytes.cpp:4:
@@ -2148,53 +2148,8 @@ class validation_failed_error: public kstruct_error {
 5 errors generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/valid_fail_inst.cpp.o] Error 1
 [ 98%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/valid_not_parsed_if.cpp.o
-In file included from /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/valid_fail_range_bytes.cpp:4:
-/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:84:9: error: no matching constructor for initialization of 'kaitai::validation_failed_error'
-        validation_failed_error("not equal", io, src_path),
-        ^                       ~~~~~~~~~~~~~~~~~~~~~~~~~
-/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:62:5: note: candidate constructor not viable: 2nd argument ('const kaitai::kstream *') would lose const qualifier
-    validation_failed_error(const std::string what, kstream* io, const std::string src_path):
-    ^
-/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:60:7: note: candidate constructor (the implicit copy constructor) not viable: requires 1 argument, but 3 were provided
-class validation_failed_error: public kstruct_error {
-      ^
-/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:107:9: error: no matching constructor for initialization of 'kaitai::validation_failed_error'
-        validation_failed_error("not in range", io, src_path),
-        ^                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:62:5: note: candidate constructor not viable: 2nd argument ('const kaitai::kstream *') would lose const qualifier
-    validation_failed_error(const std::string what, kstream* io, const std::string src_path):
-    ^
-/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:60:7: note: candidate constructor (the implicit copy constructor) not viable: requires 1 argument, but 3 were provided
-class validation_failed_error: public kstruct_error {
-      ^
-/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:130:9: error: no matching constructor for initialization of 'kaitai::validation_failed_error'
-        validation_failed_error("not in range", io, src_path),
-        ^                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:62:5: note: candidate constructor not viable: 2nd argument ('const kaitai::kstream *') would lose const qualifier
-    validation_failed_error(const std::string what, kstream* io, const std::string src_path):
-    ^
-/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:60:7: note: candidate constructor (the implicit copy constructor) not viable: requires 1 argument, but 3 were provided
-class validation_failed_error: public kstruct_error {
-      ^
-/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:153:9: error: no matching constructor for initialization of 'kaitai::validation_failed_error'
-        validation_failed_error("not any of the list", io, src_path),
-        ^                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:62:5: note: candidate constructor not viable: 2nd argument ('const kaitai::kstream *') would lose const qualifier
-    validation_failed_error(const std::string what, kstream* io, const std::string src_path):
-    ^
-/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:60:7: note: candidate constructor (the implicit copy constructor) not viable: requires 1 argument, but 3 were provided
-class validation_failed_error: public kstruct_error {
-      ^
-/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:174:9: error: no matching constructor for initialization of 'kaitai::validation_failed_error'
-        validation_failed_error("not matching the expression", io, src_path),
-        ^                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:62:5: note: candidate constructor not viable: 2nd argument ('const kaitai::kstream *') would lose const qualifier
-    validation_failed_error(const std::string what, kstream* io, const std::string src_path):
-    ^
-/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:60:7: note: candidate constructor (the implicit copy constructor) not viable: requires 1 argument, but 3 were provided
-class validation_failed_error: public kstruct_error {
-      ^
 In file included from /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/valid_fail_min_int.cpp:4:
+/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:84In file included from /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/valid_fail_max_int.cpp:4:
 /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:84:9: error: no matching constructor for initialization of 'kaitai::validation_failed_error'
         validation_failed_error("not equal", io, src_path),
         ^                       ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -2234,13 +2189,64 @@ class validation_failed_error: public kstruct_error {
 /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:174:9: error: no matching constructor for initialization of 'kaitai::validation_failed_error'
         validation_failed_error("not matching the expression", io, src_path),
         ^                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:62:9: :error: no matching constructor for initialization of 'kaitai::validation_failed_error'
+5:         validation_failed_error("not equal", io, src_path),
+        ^                       ~~~~~~~~~~~~~~~~~~~~~~~~~
+note: candidate constructor not viable: 2nd argument ('const kaitai::kstream *') would lose const qualifier
 /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:62:5: note: candidate constructor not viable: 2nd argument ('const kaitai::kstream *') would lose const qualifier
     validation_failed_error(const std::string what, kstream* io, const std::string src_path):
     ^
 /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:60:7: note: candidate constructor (the implicit copy constructor) not viable: requires 1 argument, but 3 were provided
 class validation_failed_error: public kstruct_error {
       ^
-In file included from /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/valid_fail_max_int.cpp:4:
+    validation_failed_error(const std::string what, kstream* io, const std::string src_path):
+    ^
+/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:60:7: note/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:107:9: error: no matching constructor for initialization of 'kaitai::validation_failed_error'
+: candidate constructor (the implicit copy constructor) not viable: requires 1 argument, but 3 were provided        validation_failed_error("not in range", io, src_path),
+
+        ^                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~class validation_failed_error: public kstruct_error {
+      ^
+
+/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:62:5: note: candidate constructor not viable: 2nd argument ('const kaitai::kstream *') would lose const qualifier
+    validation_failed_error(const std::string what, kstream* io, const std::string src_path):
+    ^
+/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:60:7: note: candidate constructor (the implicit copy constructor) not viable: requires 1 argument, but 3 were provided
+class validation_failed_error: public kstruct_error {
+      ^
+/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:130:9: error: no matching constructor for initialization of 'kaitai::validation_failed_error'
+        validation_failed_error("not in range", io, src_path),
+        ^                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:62:5: note: candidate constructor not viable: 2nd argument ('const kaitai::kstream *') would lose const qualifier
+    validation_failed_error(const std::string what, kstream* io, const std::string src_path):
+    ^
+/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:60:7: note: candidate constructor (the implicit copy constructor) not viable: requires 1 argument, but 3 were provided
+class validation_failed_error: public kstruct_error {
+      ^
+/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:153:9: error: no matching constructor for initialization of 'kaitai::validation_failed_error'
+        validation_failed_error("not any of the list", io, src_path),
+        ^                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:62:5: note: candidate constructor not viable: 2nd argument ('const kaitai::kstream *') would lose const qualifier
+    validation_failed_error(const std::string what, kstream* io, const std::string src_path):
+    ^
+/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:60:7: note: candidate constructor (the implicit copy constructor) not viable: requires 1 argument, but 3 were provided
+class validation_failed_error: public kstruct_error {
+      ^
+/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:174:9: error: no matching constructor for initialization of 'kaitai::validation_failed_error'
+        validation_failed_error("not matching the expression", io, src_path),
+        ^                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:62:5: note: candidate constructor not viable: 2nd argument ('const kaitai::kstream *') would lose const qualifier
+    validation_failed_error(const std::string what, kstream* io, const std::string src_path):
+    ^
+/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:60:7: note: candidate constructor (the implicit copy constructor) not viable: requires 1 argument, but 3 were provided
+class validation_failed_error: public kstruct_error {
+      ^
+5 errors generated.
+make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/valid_fail_max_int.cpp.o] Error 1
+5 errors generated.
+make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/valid_fail_min_int.cpp.o] Error 1
+[ 98%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/valid_short.cpp.o
+[ 98%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/valid_switch.cpp.o
+In file included from /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/valid_fail_range_bytes.cpp:4:
 /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:84:9: error: no matching constructor for initialization of 'kaitai::validation_failed_error'
         validation_failed_error("not equal", io, src_path),
         ^                       ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -2327,19 +2333,13 @@ class validation_failed_error: public kstruct_error {
         validation_failed_error("not matching the expression", io, src_path),
         ^                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:62:5: note: candidate constructor not viable: 2nd argument ('const kaitai::kstream *') would lose const qualifier
-5 errors generated.
     validation_failed_error(const std::string what, kstream* io, const std::string src_path):
     ^
 /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:60:7: note: candidate constructor (the implicit copy constructor) not viable: requires 1 argument, but 3 were provided
 class validation_failed_error: public kstruct_error {
       ^
-make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/valid_fail_max_int.cpp.o] Error 1
-[ 98%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/valid_short.cpp.o
 5 errors generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/valid_fail_range_bytes.cpp.o] Error 1
-[ 98%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/valid_switch.cpp.o
-5 errors generated.
-make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/valid_fail_min_int.cpp.o] Error 1
 [ 99%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/vlq_base128_le.cpp.o
 5 errors generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/valid_fail_range_float.cpp.o] Error 1
@@ -2559,7 +2559,14 @@ class validation_not_equal_error: public validation_failed_error {
 /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:81:7: note: candidate constructor (the implicit default constructor) not viable: requires 0 arguments, but 4 were provided
 6 errors generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/valid_not_parsed_if.cpp.o] Error 1
-In file included from /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/valid_short.cpp:4:
+In file included from /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/valid_switch.cpp:4:
+/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:84:9: error: no matching constructor for initialization of 'kaitai::validation_failed_error'
+        validation_failed_error("not equal", io, src_path),
+        ^                       ~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:62:5: note: candidate constructor not viable: 2nd argument ('const kaitai::kstream *') would lose const qualifier
+    validation_failed_error(const std::string what, kstream* io, const std::string src_path):
+    ^
+/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:60:7: In file included from /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/valid_short.cpp:4:
 /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:84:9: error: no matching constructor for initialization of 'kaitai::validation_failed_error'
         validation_failed_error("not equal", io, src_path),
         ^                       ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -2572,47 +2579,7 @@ class validation_failed_error: public kstruct_error {
 /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:107:9: error: no matching constructor for initialization of 'kaitai::validation_failed_error'
         validation_failed_error("not in range", io, src_path),
         ^                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:62:5: note: candidate constructor not viable: 2nd argument ('const kaitai::kstream *') would lose const qualifier
-    validation_failed_error(const std::string what, kstream* io, const std::string src_path):
-    ^
-/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:60:7: note: candidate constructor (the implicit copy constructor) not viable: requires 1 argument, but 3 were provided
-class validation_failed_error: public kstruct_error {
-      ^
-/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:130:9: error: no matching constructor for initialization of 'kaitai::validation_failed_error'
-        validation_failed_error("not in range", io, src_path),
-        ^                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:62:5: note: candidate constructor not viable: 2nd argument ('const kaitai::kstream *') would lose const qualifier
-    validation_failed_error(const std::string what, kstream* io, const std::string src_path):
-    ^
-/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:60:7: note: candidate constructor (the implicit copy constructor) not viable: requires 1 argument, but 3 were provided
-class validation_failed_error: public kstruct_error {
-      ^
-/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:153:9: error: no matching constructor for initialization of 'kaitai::validation_failed_error'
-        validation_failed_error("not any of the list", io, src_path),
-        ^                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:62:5: note: candidate constructor not viable: 2nd argument ('const kaitai::kstream *') would lose const qualifier
-    validation_failed_error(const std::string what, kstream* io, const std::string src_path):
-    ^
-/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:60:7: note: candidate constructor (the implicit copy constructor) not viable: requires 1 argument, but 3 were provided
-class validation_failed_error: public kstruct_error {
-      ^
-/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:174:9: error: no matching constructor for initialization of 'kaitai::validation_failed_error'
-        validation_failed_error("not matching the expression", io, src_path),
-        ^                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:62:5: note: candidate constructor not viable: 2nd argument ('const kaitai::kstream *') would lose const qualifier
-    validation_failed_error(const std::string what, kstream* io, const std::string src_path):
-    ^
-/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:60:7: note: candidate constructor (the implicit copy constructor) not viable: requires 1 argument, but 3 were provided
-class validation_failed_error: public kstruct_error {
-In file included from       ^/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/valid_switch.cpp:4:
-/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:84:9: error: no matching constructor for initialization of 'kaitai::validation_failed_error'
-
-        validation_failed_error("not equal", io, src_path),
-        ^                       ~~~~~~~~~~~~~~~~~~~~~~~~~
-/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:62:5: note: candidate constructor not viable: 2nd argument ('const kaitai::kstream *') would lose const qualifier
-    validation_failed_error(const std::string what, kstream* io, const std::string src_path):
-    ^
-/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:60:7: note: candidate constructor (the implicit copy constructor) not viable: requires 1 argument, but 3 were provided
+/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:62:5: note: candidate constructor (the implicit copy constructor) not viable: requires 1 argument, but 3 were provided
 class validation_failed_error: public kstruct_error {
       ^
 /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:107:9: error: no matching constructor for initialization of 'kaitai::validation_failed_error'
@@ -2622,10 +2589,16 @@ class validation_failed_error: public kstruct_error {
     validation_failed_error(const std::string what, kstream* io, const std::string src_path):
     ^
 /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:60:7: note: candidate constructor (the implicit copy constructor) not viable: requires 1 argument, but 3 were provided
+noteclass validation_failed_error: public kstruct_error {: 
+      ^
+candidate constructor not viable: 2nd argument ('const kaitai::kstream *') would lose const qualifier
+    validation_failed_error(const std::string what, kstream* io, const std::string src_path):
+    ^
+/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:60:7: note: candidate constructor (the implicit copy constructor) not viable: requires 1 argument, but 3 were provided
 class validation_failed_error: public kstruct_error {
       ^
-/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:130:9: error: no matching constructor for initialization of 'kaitai::validation_failed_error'
-        validation_failed_error("not in range", io, src_path),
+/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h::130:9: error: no matching constructor for initialization of 'kaitai::validation_failed_error'
+130:        validation_failed_error("not in range", io, src_path),9: error: no matching constructor for initialization of 'kaitai::validation_failed_error'
         ^                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:62:5: note: candidate constructor not viable: 2nd argument ('const kaitai::kstream *') would lose const qualifier
     validation_failed_error(const std::string what, kstream* io, const std::string src_path):
@@ -2665,9 +2638,36 @@ class validation_not_equal_error: public validation_failed_error {
 class validation_not_equal_error: public validation_failed_error {
       ^
 /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:81:7: note: candidate constructor (the implicit default constructor) not viable: requires 0 arguments, but 4 were provided
+
+        validation_failed_error("not in range", io, src_path),
+        ^                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:62:5: note: candidate constructor not viable: 2nd argument ('const kaitai::kstream *') would lose const qualifier
+    validation_failed_error(const std::string what, kstream* io, const std::string src_path):
+    ^
+/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:60:7: note: candidate constructor (the implicit copy constructor) not viable: requires 1 argument, but 3 were provided
+class validation_failed_error: public kstruct_error {
+      ^
+/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:153:9: error: no matching constructor for initialization of 'kaitai::validation_failed_error'
+        validation_failed_error("not any of the list", io, src_path),
+        ^                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:62:5: note: candidate constructor not viable: 2nd argument ('const kaitai::kstream *') would lose const qualifier
+    validation_failed_error(const std::string what, kstream* io, const std::string src_path):
+    ^
+/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:60:7: note: candidate constructor (the implicit copy constructor) not viable: requires 1 argument, but 3 were provided
+class validation_failed_error: public kstruct_error {
+      ^
+/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:174:9: error: no matching constructor for initialization of 'kaitai::validation_failed_error'
+        validation_failed_error("not matching the expression", io, src_path),
+        ^                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:62:5: note: candidate constructor not viable: 2nd argument ('const kaitai::kstream *') would lose const qualifier
+    validation_failed_error(const std::string what, kstream* io, const std::string src_path):
+    ^
+/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/exceptions.h:60:7: note: candidate constructor (the implicit copy constructor) not viable: requires 1 argument, but 3 were provided
+class validation_failed_error: public kstruct_error {
+      ^
 5 errors generated.
-7 errors generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/valid_switch.cpp.o] Error 1
+7 errors generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/valid_short.cpp.o] Error 1
 /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/yaml_ints.cpp:50:21: warning: implicit conversion from 'unsigned long long' to 'int32_t' (aka 'int') changes value from 18446744073709551615 to -1 [-Wconstant-conversion]
     m_test_u8_dec = 18446744073709551615ULL;
@@ -2675,6 +2675,7 @@ make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/te
 /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/yaml_ints.cpp:58:21: warning: implicit conversion from 'unsigned long long' to 'int32_t' (aka 'int') changes value from 18446744073709551615 to -1 [-Wconstant-conversion]
     m_test_u8_hex = 18446744073709551615ULL;
                   ~ ^~~~~~~~~~~~~~~~~~~~~~~
+2 warnings generated.
 /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/vlq_base128_le.cpp:98:335: warning: shift count >= width of type [-Wshift-count-overflow]
     m_value = (((((((groups()->at(0)->value() + ((len() >= 2) ? ((groups()->at(1)->value() << 7)) : (0))) + ((len() >= 3) ? ((groups()->at(2)->value() << 14)) : (0))) + ((len() >= 4) ? ((groups()->at(3)->value() << 21)) : (0))) + ((len() >= 5) ? ((groups()->at(4)->value() << 28)) : (0))) + ((len() >= 6) ? ((groups()->at(5)->value() << 35)) : (0))) + ((len() >= 7) ? ((groups()->at(6)->value() << 42)) : (0))) + ((len() >= 8) ? ((groups()->at(7)->value() << 49)) : (0)));
                                                                                                                                                                                                                                                                                                                                               ^  ~~
@@ -2684,7 +2685,6 @@ make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/te
 /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/vlq_base128_le.cpp:98:457: warning: shift count >= width of type [-Wshift-count-overflow]
     m_value = (((((((groups()->at(0)->value() + ((len() >= 2) ? ((groups()->at(1)->value() << 7)) : (0))) + ((len() >= 3) ? ((groups()->at(2)->value() << 14)) : (0))) + ((len() >= 4) ? ((groups()->at(3)->value() << 21)) : (0))) + ((len() >= 5) ? ((groups()->at(4)->value() << 28)) : (0))) + ((len() >= 6) ? ((groups()->at(5)->value() << 35)) : (0))) + ((len() >= 7) ? ((groups()->at(6)->value() << 42)) : (0))) + ((len() >= 8) ? ((groups()->at(7)->value() << 49)) : (0)));
                                                                                                                                                                                                                                                                                                                                                                                                                                                                         ^  ~~
-2 warnings generated.
 3 warnings generated.
 make[2]: Target `CMakeFiles/ks_tests.dir/build' not remade because of errors.
 make[1]: *** [CMakeFiles/ks_tests.dir/all] Error 2
