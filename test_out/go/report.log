@@ -20,6 +20,8 @@
 --- PASS: TestCombineBool (0.00s)
 === RUN   TestCombineBytes
 --- PASS: TestCombineBytes (0.00s)
+=== RUN   TestCombineEnum
+--- PASS: TestCombineEnum (0.00s)
 === RUN   TestCombineStr
 --- PASS: TestCombineStr (0.00s)
 === RUN   TestDebugArrayUser
@@ -131,9 +133,9 @@
         	Error:      	Expected nil, but got: 0x0
         	Test:       	TestExprIoEof
 === RUN   TestExprIoPos
---- PASS: TestExprIoPos (0.00s)
+--- PASS: TestExprIoPos (0.01s)
 === RUN   TestExprMod
---- PASS: TestExprMod (0.01s)
+--- PASS: TestExprMod (0.00s)
 === RUN   TestExprSizeofType0
 --- PASS: TestExprSizeofType0 (0.00s)
 === RUN   TestExprSizeofType1
@@ -237,28 +239,28 @@
 === RUN   TestNonStandard
 --- PASS: TestNonStandard (0.00s)
 === RUN   TestOpaqueExternalType02Parent
-goroutine 111 [running]:
+goroutine 112 [running]:
 runtime/debug.Stack(0x18, 0xc00005bbb8, 0x4869d2)
 	/home/travis/.gimme/versions/go1.13.linux.amd64/src/runtime/debug/stack.go:24 +0x9d
 runtime/debug.PrintStack()
 	/home/travis/.gimme/versions/go1.13.linux.amd64/src/runtime/debug/stack.go:16 +0x22
-github.com/kaitai-io/ci_targets/tests/spec/go.TestOpaqueExternalType02Parent.func1(0xc00014c900)
+github.com/kaitai-io/ci_targets/tests/spec/go.TestOpaqueExternalType02Parent.func1(0xc00014ca00)
 	/home/travis/gopath/src/github.com/kaitai-io/ci_targets/tests/spec/go/opaque_external_type_02_parent_test.go:15 +0x57
-panic(0x77ade0, 0xacaf10)
+panic(0x7844e0, 0xadaf10)
 	/home/travis/.gimme/versions/go1.13.linux.amd64/src/runtime/panic.go:679 +0x1b2
 test_formats.(*OpaqueExternalType02Child).SomeMethod(...)
 	/home/travis/gopath/src/github.com/kaitai-io/ci_targets/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:46
-test_formats.(*OpaqueExternalType02Child_OpaqueExternalType02ChildChild).Read(0xc00014aea0, 0xc00014ae40, 0xc00009e870, 0x0, 0xc000152234, 0x3)
+test_formats.(*OpaqueExternalType02Child_OpaqueExternalType02ChildChild).Read(0xc00014af30, 0xc00014aed0, 0xc00009e870, 0x0, 0xc000152294, 0x3)
 	/home/travis/gopath/src/github.com/kaitai-io/ci_targets/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:69 +0x50
-test_formats.(*OpaqueExternalType02Child).Read(0xc00009e870, 0xc00014ae40, 0x776a20, 0xc00000f600, 0x0, 0x7b0460, 0x1)
+test_formats.(*OpaqueExternalType02Child).Read(0xc00009e870, 0xc00014aed0, 0x77fe80, 0xc00000f600, 0x0, 0x7b9f80, 0x1)
 	/home/travis/gopath/src/github.com/kaitai-io/ci_targets/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:38 +0x18f
-test_formats.(*OpaqueExternalType02Parent_ParentObj).Read(0xc00000f600, 0xc00014ae40, 0xc00014ae70, 0xc00014ae70, 0x7b03a0, 0x1)
+test_formats.(*OpaqueExternalType02Parent_ParentObj).Read(0xc00000f600, 0xc00014aed0, 0xc00014af00, 0xc00014af00, 0x7b9ec0, 0x1)
 	/home/travis/gopath/src/github.com/kaitai-io/ci_targets/tests/compiled/go/src/test_formats/opaque_external_type_02_parent.go:48 +0x9c
-test_formats.(*OpaqueExternalType02Parent).Read(0xc00014ae70, 0xc00014ae40, 0x7769c0, 0xc00014ae70, 0xc00014ae70, 0x0, 0x0)
+test_formats.(*OpaqueExternalType02Parent).Read(0xc00014af00, 0xc00014aed0, 0x77fe20, 0xc00014af00, 0xc00014af00, 0x0, 0x0)
 	/home/travis/gopath/src/github.com/kaitai-io/ci_targets/tests/compiled/go/src/test_formats/opaque_external_type_02_parent.go:24 +0xa6
-github.com/kaitai-io/ci_targets/tests/spec/go.TestOpaqueExternalType02Parent(0xc00014c900)
+github.com/kaitai-io/ci_targets/tests/spec/go.TestOpaqueExternalType02Parent(0xc00014ca00)
 	/home/travis/gopath/src/github.com/kaitai-io/ci_targets/tests/spec/go/opaque_external_type_02_parent_test.go:25 +0x18d
-testing.tRunner(0xc00014c900, 0x80cdb0)
+testing.tRunner(0xc00014ca00, 0x817678)
 	/home/travis/.gimme/versions/go1.13.linux.amd64/src/testing/testing.go:909 +0xc9
 created by testing.(*T).Run
 	/home/travis/.gimme/versions/go1.13.linux.amd64/src/testing/testing.go:960 +0x350
@@ -287,7 +289,13 @@ created by testing.(*T).Run
 === RUN   TestPositionAbs
 --- PASS: TestPositionAbs (0.00s)
 === RUN   TestPositionInSeq
---- PASS: TestPositionInSeq (0.00s)
+--- FAIL: TestPositionInSeq (0.00s)
+    position_in_seq_test.go:32: 
+        	Error Trace:	position_in_seq_test.go:32
+        	Error:      	Not equal: 
+        	            	expected: []int([]int{1, 2, 3})
+        	            	actual  : []uint8([]byte{0x1, 0x2, 0x3})
+        	Test:       	TestPositionInSeq
 === RUN   TestPositionToEnd
 --- PASS: TestPositionToEnd (0.00s)
 === RUN   TestProcessCoerceBytes
@@ -297,7 +305,7 @@ created by testing.(*T).Run
 === RUN   TestProcessCoerceUsertype2
 --- PASS: TestProcessCoerceUsertype2 (0.00s)
 === RUN   TestProcessCustomNoArgs
---- FAIL: TestProcessCustomNoArgs (0.00s)
+--- FAIL: TestProcessCustomNoArgs (0.01s)
     process_custom_no_args_test.go:32: 
         	Error Trace:	process_custom_no_args_test.go:32
         	Error:      	Not equal: 
@@ -315,7 +323,7 @@ created by testing.(*T).Run
         	            	 }
         	Test:       	TestProcessCustomNoArgs
 === RUN   TestProcessCustom
---- FAIL: TestProcessCustom (0.01s)
+--- FAIL: TestProcessCustom (0.00s)
     process_custom_test.go:32: 
         	Error Trace:	process_custom_test.go:32
         	Error:      	Not equal: 
@@ -383,7 +391,13 @@ created by testing.(*T).Run
 === RUN   TestRepeatEosStruct
 --- PASS: TestRepeatEosStruct (0.00s)
 === RUN   TestRepeatEosU4
---- PASS: TestRepeatEosU4 (0.00s)
+--- FAIL: TestRepeatEosU4 (0.00s)
+    repeat_eos_u4_test.go:32: 
+        	Error Trace:	repeat_eos_u4_test.go:32
+        	Error:      	Not equal: 
+        	            	expected: []int([]int{0, 66, 66, 2069})
+        	            	actual  : []uint32([]uint32{0x0, 0x42, 0x42, 0x815})
+        	Test:       	TestRepeatEosU4
 === RUN   TestRepeatNStruct
 --- PASS: TestRepeatNStruct (0.00s)
 === RUN   TestRepeatNStrzDouble
@@ -391,13 +405,133 @@ created by testing.(*T).Run
 === RUN   TestRepeatNStrz
 --- PASS: TestRepeatNStrz (0.00s)
 === RUN   TestRepeatUntilComplex
---- PASS: TestRepeatUntilComplex (0.00s)
+--- FAIL: TestRepeatUntilComplex (0.00s)
+    repeat_until_complex_test.go:34: 
+        	Error Trace:	repeat_until_complex_test.go:34
+        	Error:      	Not equal: 
+        	            	expected: []int([]int{1, 2, 3, 4})
+        	            	actual  : []uint8([]byte{0x1, 0x2, 0x3, 0x4})
+        	Test:       	TestRepeatUntilComplex
+    repeat_until_complex_test.go:36: 
+        	Error Trace:	repeat_until_complex_test.go:36
+        	Error:      	Not equal: 
+        	            	expected: []int([]int{1, 2})
+        	            	actual  : []uint8([]byte{0x1, 0x2})
+        	Test:       	TestRepeatUntilComplex
+    repeat_until_complex_test.go:40: 
+        	Error Trace:	repeat_until_complex_test.go:40
+        	Error:      	Not equal: 
+        	            	expected: []int([]int{1, 2, 3, 4, 5, 6})
+        	            	actual  : []uint16([]uint16{0x1, 0x2, 0x3, 0x4, 0x5, 0x6})
+        	Test:       	TestRepeatUntilComplex
+    repeat_until_complex_test.go:42: 
+        	Error Trace:	repeat_until_complex_test.go:42
+        	Error:      	Not equal: 
+        	            	expected: []int([]int{1, 2, 3})
+        	            	actual  : []uint16([]uint16{0x1, 0x2, 0x3})
+        	Test:       	TestRepeatUntilComplex
+    repeat_until_complex_test.go:44: 
+        	Error Trace:	repeat_until_complex_test.go:44
+        	Error:      	Not equal: 
+        	            	expected: []int([]int{1, 2, 3, 4})
+        	            	actual  : []uint16([]uint16{0x1, 0x2, 0x3, 0x4})
+        	Test:       	TestRepeatUntilComplex
+    repeat_until_complex_test.go:46: 
+        	Error Trace:	repeat_until_complex_test.go:46
+        	Error:      	Not equal: 
+        	            	expected: []int([]int{102, 111, 111, 98, 97, 114, 0})
+        	            	actual  : []uint8([]byte{0x66, 0x6f, 0x6f, 0x62, 0x61, 0x72, 0x0})
+        	Test:       	TestRepeatUntilComplex
 === RUN   TestRepeatUntilS4
---- PASS: TestRepeatUntilS4 (0.00s)
+--- FAIL: TestRepeatUntilS4 (0.00s)
+    repeat_until_s4_test.go:32: 
+        	Error Trace:	repeat_until_s4_test.go:32
+        	Error:      	Not equal: 
+        	            	expected: []int([]int{66, 4919, -251658241, -1})
+        	            	actual  : []int32([]int32{66, 4919, -251658241, -1})
+        	Test:       	TestRepeatUntilS4
 === RUN   TestStrEncodingsDefault
---- PASS: TestStrEncodingsDefault (0.00s)
+--- FAIL: TestStrEncodingsDefault (0.00s)
+    str_encodings_default_test.go:33: 
+        	Error Trace:	str_encodings_default_test.go:33
+        	Error:      	Not equal: 
+        	            	expected: "ă�“ă‚“ă�\xabă�ˇă�Ż"
+        	            	actual  : "こんにちは"
+        	            	
+        	            	Diff:
+        	            	--- Expected
+        	            	+++ Actual
+        	            	@@ -1 +1 @@
+        	            	-ă�“ă‚“ă��ă�ˇă�Ż
+        	            	+こんにちは
+        	Test:       	TestStrEncodingsDefault
+    str_encodings_default_test.go:34: 
+        	Error Trace:	str_encodings_default_test.go:34
+        	Error:      	Not equal: 
+        	            	expected: "ă�“ă‚“ă�\xabă�ˇă�Ż"
+        	            	actual  : "こんにちは"
+        	            	
+        	            	Diff:
+        	            	--- Expected
+        	            	+++ Actual
+        	            	@@ -1 +1 @@
+        	            	-ă�“ă‚“ă��ă�ˇă�Ż
+        	            	+こんにちは
+        	Test:       	TestStrEncodingsDefault
+    str_encodings_default_test.go:35: 
+        	Error Trace:	str_encodings_default_test.go:35
+        	Error:      	Not equal: 
+        	            	expected: "\xe2–‘\xe2–’\xe2–“"
+        	            	actual  : "░▒▓"
+        	            	
+        	            	Diff:
+        	            	--- Expected
+        	            	+++ Actual
+        	            	@@ -1 +1 @@
+        	            	-�–‘�–’�–“
+        	            	+░▒▓
+        	Test:       	TestStrEncodingsDefault
 === RUN   TestStrEncodings
---- PASS: TestStrEncodings (0.00s)
+--- FAIL: TestStrEncodings (0.00s)
+    str_encodings_test.go:33: 
+        	Error Trace:	str_encodings_test.go:33
+        	Error:      	Not equal: 
+        	            	expected: "ă�“ă‚“ă�\xabă�ˇă�Ż"
+        	            	actual  : "こんにちは"
+        	            	
+        	            	Diff:
+        	            	--- Expected
+        	            	+++ Actual
+        	            	@@ -1 +1 @@
+        	            	-ă�“ă‚“ă��ă�ˇă�Ż
+        	            	+こんにちは
+        	Test:       	TestStrEncodings
+    str_encodings_test.go:34: 
+        	Error Trace:	str_encodings_test.go:34
+        	Error:      	Not equal: 
+        	            	expected: "ă�“ă‚“ă�\xabă�ˇă�Ż"
+        	            	actual  : "こんにちは"
+        	            	
+        	            	Diff:
+        	            	--- Expected
+        	            	+++ Actual
+        	            	@@ -1 +1 @@
+        	            	-ă�“ă‚“ă��ă�ˇă�Ż
+        	            	+こんにちは
+        	Test:       	TestStrEncodings
+    str_encodings_test.go:35: 
+        	Error Trace:	str_encodings_test.go:35
+        	Error:      	Not equal: 
+        	            	expected: "\xe2–‘\xe2–’\xe2–“"
+        	            	actual  : "░▒▓"
+        	            	
+        	            	Diff:
+        	            	--- Expected
+        	            	+++ Actual
+        	            	@@ -1 +1 @@
+        	            	-�–‘�–’�–“
+        	            	+░▒▓
+        	Test:       	TestStrEncodings
 === RUN   TestStrEos
 --- PASS: TestStrEos (0.00s)
 === RUN   TestStrLiterals2
@@ -432,18 +566,28 @@ created by testing.(*T).Run
 --- PASS: TestTypeTernary (0.00s)
 === RUN   TestUserType
 --- PASS: TestUserType (0.00s)
+=== RUN   TestValidFailAnyofInt
+--- PASS: TestValidFailAnyofInt (0.00s)
 === RUN   TestValidFailContents
---- FAIL: TestValidFailContents (0.00s)
-    valid_fail_contents_test.go:31: expected kaitai.ValidationNotEqualError, got <nil>
+--- PASS: TestValidFailContents (0.00s)
 === RUN   TestValidFailEqBytes
---- FAIL: TestValidFailEqBytes (0.00s)
-    valid_fail_eq_bytes_test.go:31: expected kaitai.ValidationNotEqualError, got <nil>
+--- PASS: TestValidFailEqBytes (0.00s)
 === RUN   TestValidFailEqInt
---- FAIL: TestValidFailEqInt (0.00s)
-    valid_fail_eq_int_test.go:31: expected kaitai.ValidationNotEqualError, got <nil>
+--- PASS: TestValidFailEqInt (0.00s)
 === RUN   TestValidFailInst
---- FAIL: TestValidFailInst (0.00s)
-    valid_fail_inst_test.go:31: expected kaitai.ValidationNotEqualError, got <nil>
+--- PASS: TestValidFailInst (0.00s)
+=== RUN   TestValidFailMaxInt
+--- PASS: TestValidFailMaxInt (0.00s)
+=== RUN   TestValidFailMinInt
+--- PASS: TestValidFailMinInt (0.00s)
+=== RUN   TestValidFailRangeBytes
+--- PASS: TestValidFailRangeBytes (0.00s)
+=== RUN   TestValidFailRangeFloat
+--- PASS: TestValidFailRangeFloat (0.00s)
+=== RUN   TestValidFailRangeInt
+--- PASS: TestValidFailRangeInt (0.00s)
+=== RUN   TestValidFailRangeStr
+--- PASS: TestValidFailRangeStr (0.00s)
 === RUN   TestValidLong
 --- PASS: TestValidLong (0.00s)
 === RUN   TestValidNotParsedIf
@@ -455,5 +599,5 @@ created by testing.(*T).Run
 === RUN   TestZlibWithHeader78
 --- PASS: TestZlibWithHeader78 (0.00s)
 FAIL
-FAIL	github.com/kaitai-io/ci_targets/tests/spec/go	0.031s
+FAIL	github.com/kaitai-io/ci_targets/tests/spec/go	0.034s
 FAIL

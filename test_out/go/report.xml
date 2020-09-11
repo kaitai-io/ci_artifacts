@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-	<testsuite tests="166" failures="15" time="0.031" name="github.com/kaitai-io/ci_targets/tests/spec/go">
+	<testsuite tests="174" failures="17" time="0.034" name="github.com/kaitai-io/ci_targets/tests/spec/go">
 		<properties>
 			<property name="go.version" value="go1.13"></property>
 		</properties>
@@ -15,6 +15,7 @@
 		<testcase classname="go" name="TestBytesPadTerm" time="0.000"></testcase>
 		<testcase classname="go" name="TestCombineBool" time="0.000"></testcase>
 		<testcase classname="go" name="TestCombineBytes" time="0.000"></testcase>
+		<testcase classname="go" name="TestCombineEnum" time="0.000"></testcase>
 		<testcase classname="go" name="TestCombineStr" time="0.000"></testcase>
 		<testcase classname="go" name="TestDebugArrayUser" time="0.000"></testcase>
 		<testcase classname="go" name="TestDefaultBigEndian" time="0.000"></testcase>
@@ -72,8 +73,8 @@
 		<testcase classname="go" name="TestExprIoEof" time="0.000">
 			<failure message="Failed" type="">expr_io_eof_test.go:33: &#xA;Error Trace:&#x9;expr_io_eof_test.go:33&#xA;Error:      &#x9;Expected nil, but got: 0x0&#xA;Test:       &#x9;TestExprIoEof</failure>
 		</testcase>
-		<testcase classname="go" name="TestExprIoPos" time="0.000"></testcase>
-		<testcase classname="go" name="TestExprMod" time="0.010"></testcase>
+		<testcase classname="go" name="TestExprIoPos" time="0.010"></testcase>
+		<testcase classname="go" name="TestExprMod" time="0.000"></testcase>
 		<testcase classname="go" name="TestExprSizeofType0" time="0.000"></testcase>
 		<testcase classname="go" name="TestExprSizeofType1" time="0.000"></testcase>
 		<testcase classname="go" name="TestExprSizeofValue0" time="0.000"></testcase>
@@ -124,7 +125,7 @@
 		<testcase classname="go" name="TestNestedTypes" time="0.000"></testcase>
 		<testcase classname="go" name="TestNonStandard" time="0.000"></testcase>
 		<testcase classname="go" name="TestOpaqueExternalType02Parent" time="0.000">
-			<failure message="Failed" type="">goroutine 111 [running]:&#xA;runtime/debug.Stack(0x18, 0xc00005bbb8, 0x4869d2)&#xA;runtime/debug.PrintStack()&#xA;github.com/kaitai-io/ci_targets/tests/spec/go.TestOpaqueExternalType02Parent.func1(0xc00014c900)&#xA;panic(0x77ade0, 0xacaf10)&#xA;test_formats.(*OpaqueExternalType02Child).SomeMethod(...)&#xA;test_formats.(*OpaqueExternalType02Child_OpaqueExternalType02ChildChild).Read(0xc00014aea0, 0xc00014ae40, 0xc00009e870, 0x0, 0xc000152234, 0x3)&#xA;test_formats.(*OpaqueExternalType02Child).Read(0xc00009e870, 0xc00014ae40, 0x776a20, 0xc00000f600, 0x0, 0x7b0460, 0x1)&#xA;test_formats.(*OpaqueExternalType02Parent_ParentObj).Read(0xc00000f600, 0xc00014ae40, 0xc00014ae70, 0xc00014ae70, 0x7b03a0, 0x1)&#xA;test_formats.(*OpaqueExternalType02Parent).Read(0xc00014ae70, 0xc00014ae40, 0x7769c0, 0xc00014ae70, 0xc00014ae70, 0x0, 0x0)&#xA;github.com/kaitai-io/ci_targets/tests/spec/go.TestOpaqueExternalType02Parent(0xc00014c900)&#xA;testing.tRunner(0xc00014c900, 0x80cdb0)&#xA;created by testing.(*T).Run&#xA;opaque_external_type_02_parent_test.go:16: unexpected panic: runtime error: invalid memory address or nil pointer dereference</failure>
+			<failure message="Failed" type="">goroutine 112 [running]:&#xA;runtime/debug.Stack(0x18, 0xc00005bbb8, 0x4869d2)&#xA;runtime/debug.PrintStack()&#xA;github.com/kaitai-io/ci_targets/tests/spec/go.TestOpaqueExternalType02Parent.func1(0xc00014ca00)&#xA;panic(0x7844e0, 0xadaf10)&#xA;test_formats.(*OpaqueExternalType02Child).SomeMethod(...)&#xA;test_formats.(*OpaqueExternalType02Child_OpaqueExternalType02ChildChild).Read(0xc00014af30, 0xc00014aed0, 0xc00009e870, 0x0, 0xc000152294, 0x3)&#xA;test_formats.(*OpaqueExternalType02Child).Read(0xc00009e870, 0xc00014aed0, 0x77fe80, 0xc00000f600, 0x0, 0x7b9f80, 0x1)&#xA;test_formats.(*OpaqueExternalType02Parent_ParentObj).Read(0xc00000f600, 0xc00014aed0, 0xc00014af00, 0xc00014af00, 0x7b9ec0, 0x1)&#xA;test_formats.(*OpaqueExternalType02Parent).Read(0xc00014af00, 0xc00014aed0, 0x77fe20, 0xc00014af00, 0xc00014af00, 0x0, 0x0)&#xA;github.com/kaitai-io/ci_targets/tests/spec/go.TestOpaqueExternalType02Parent(0xc00014ca00)&#xA;testing.tRunner(0xc00014ca00, 0x817678)&#xA;created by testing.(*T).Run&#xA;opaque_external_type_02_parent_test.go:16: unexpected panic: runtime error: invalid memory address or nil pointer dereference</failure>
 		</testcase>
 		<testcase classname="go" name="TestOpaqueExternalType" time="0.000"></testcase>
 		<testcase classname="go" name="TestOpaqueWithParam" time="0.000"></testcase>
@@ -137,15 +138,17 @@
 		<testcase classname="go" name="TestParamsPassBool" time="0.000"></testcase>
 		<testcase classname="go" name="TestParamsPassUsertype" time="0.000"></testcase>
 		<testcase classname="go" name="TestPositionAbs" time="0.000"></testcase>
-		<testcase classname="go" name="TestPositionInSeq" time="0.000"></testcase>
+		<testcase classname="go" name="TestPositionInSeq" time="0.000">
+			<failure message="Failed" type="">position_in_seq_test.go:32: &#xA;Error Trace:&#x9;position_in_seq_test.go:32&#xA;Error:      &#x9;Not equal: &#xA;            &#x9;expected: []int([]int{1, 2, 3})&#xA;            &#x9;actual  : []uint8([]byte{0x1, 0x2, 0x3})&#xA;Test:       &#x9;TestPositionInSeq</failure>
+		</testcase>
 		<testcase classname="go" name="TestPositionToEnd" time="0.000"></testcase>
 		<testcase classname="go" name="TestProcessCoerceBytes" time="0.000"></testcase>
 		<testcase classname="go" name="TestProcessCoerceUsertype1" time="0.000"></testcase>
 		<testcase classname="go" name="TestProcessCoerceUsertype2" time="0.000"></testcase>
-		<testcase classname="go" name="TestProcessCustomNoArgs" time="0.000">
+		<testcase classname="go" name="TestProcessCustomNoArgs" time="0.010">
 			<failure message="Failed" type="">process_custom_no_args_test.go:32: &#xA;Error Trace:&#x9;process_custom_no_args_test.go:32&#xA;Error:      &#x9;Not equal: &#xA;            &#x9;expected: []byte{0x5f, 0x9, 0xac, 0x8d, 0x8d, 0xed, 0x5f}&#xA;            &#x9;actual  : []byte{0x9, 0xac, 0x8d, 0x8d, 0xed}&#xA;            &#x9;&#xA;            &#x9;Diff:&#xA;            &#x9;--- Expected&#xA;            &#x9;+++ Actual&#xA;            &#x9;@@ -1,3 +1,3 @@&#xA;            &#x9;-([]uint8) (len=7) {&#xA;            &#x9;- 00000000  5f 09 ac 8d 8d ed 5f                              |_....._|&#xA;            &#x9;+([]uint8) (len=5) {&#xA;            &#x9;+ 00000000  09 ac 8d 8d ed                                    |.....|&#xA;            &#x9; }&#xA;Test:       &#x9;TestProcessCustomNoArgs</failure>
 		</testcase>
-		<testcase classname="go" name="TestProcessCustom" time="0.010">
+		<testcase classname="go" name="TestProcessCustom" time="0.000">
 			<failure message="Failed" type="">process_custom_test.go:32: &#xA;Error Trace:&#x9;process_custom_test.go:32&#xA;Error:      &#x9;Not equal: &#xA;            &#x9;expected: []byte{0x10, 0xb3, 0x94, 0x94, 0xf4}&#xA;            &#x9;actual  : []byte{0x9, 0xac, 0x8d, 0x8d, 0xed}&#xA;            &#x9;&#xA;            &#x9;Diff:&#xA;            &#x9;--- Expected&#xA;            &#x9;+++ Actual&#xA;            &#x9;@@ -1,3 +1,3 @@&#xA;            &#x9; ([]uint8) (len=5) {&#xA;            &#x9;- 00000000  10 b3 94 94 f4                                    |.....|&#xA;            &#x9;+ 00000000  09 ac 8d 8d ed                                    |.....|&#xA;            &#x9; }&#xA;Test:       &#x9;TestProcessCustom&#xA;process_custom_test.go:33: &#xA;Error Trace:&#x9;process_custom_test.go:33&#xA;Error:      &#x9;Not equal: &#xA;            &#x9;expected: []byte{0x5f, 0xba, 0x7b, 0x93, 0x63, 0x23, 0x5f}&#xA;            &#x9;actual  : []byte{0xba, 0x7b, 0x93, 0x63, 0x23}&#xA;            &#x9;&#xA;            &#x9;Diff:&#xA;            &#x9;--- Expected&#xA;            &#x9;+++ Actual&#xA;            &#x9;@@ -1,3 +1,3 @@&#xA;            &#x9;-([]uint8) (len=7) {&#xA;            &#x9;- 00000000  5f ba 7b 93 63 23 5f                              |_.{.c#_|&#xA;            &#x9;+([]uint8) (len=5) {&#xA;            &#x9;+ 00000000  ba 7b 93 63 23                                    |.{.c#|&#xA;            &#x9; }&#xA;Test:       &#x9;TestProcessCustom&#xA;process_custom_test.go:34: &#xA;Error Trace:&#x9;process_custom_test.go:34&#xA;Error:      &#x9;Not equal: &#xA;            &#x9;expected: []byte{0x29, 0x33, 0xb1, 0x38, 0xb1}&#xA;            &#x9;actual  : []byte{0x2a, 0x34, 0xb2, 0x39, 0xb2}&#xA;            &#x9;&#xA;            &#x9;Diff:&#xA;            &#x9;--- Expected&#xA;            &#x9;+++ Actual&#xA;            &#x9;@@ -1,3 +1,3 @@&#xA;            &#x9; ([]uint8) (len=5) {&#xA;            &#x9;- 00000000  29 33 b1 38 b1                                    |)3.8.|&#xA;            &#x9;+ 00000000  2a 34 b2 39 b2                                    |*4.9.|&#xA;            &#x9; }&#xA;Test:       &#x9;TestProcessCustom</failure>
 		</testcase>
 		<testcase classname="go" name="TestProcessRepeatBytes" time="0.000"></testcase>
@@ -158,14 +161,24 @@
 		<testcase classname="go" name="TestProcessXorValue" time="0.000"></testcase>
 		<testcase classname="go" name="TestRepeatEosBit" time="0.000"></testcase>
 		<testcase classname="go" name="TestRepeatEosStruct" time="0.000"></testcase>
-		<testcase classname="go" name="TestRepeatEosU4" time="0.000"></testcase>
+		<testcase classname="go" name="TestRepeatEosU4" time="0.000">
+			<failure message="Failed" type="">repeat_eos_u4_test.go:32: &#xA;Error Trace:&#x9;repeat_eos_u4_test.go:32&#xA;Error:      &#x9;Not equal: &#xA;            &#x9;expected: []int([]int{0, 66, 66, 2069})&#xA;            &#x9;actual  : []uint32([]uint32{0x0, 0x42, 0x42, 0x815})&#xA;Test:       &#x9;TestRepeatEosU4</failure>
+		</testcase>
 		<testcase classname="go" name="TestRepeatNStruct" time="0.000"></testcase>
 		<testcase classname="go" name="TestRepeatNStrzDouble" time="0.000"></testcase>
 		<testcase classname="go" name="TestRepeatNStrz" time="0.000"></testcase>
-		<testcase classname="go" name="TestRepeatUntilComplex" time="0.000"></testcase>
-		<testcase classname="go" name="TestRepeatUntilS4" time="0.000"></testcase>
-		<testcase classname="go" name="TestStrEncodingsDefault" time="0.000"></testcase>
-		<testcase classname="go" name="TestStrEncodings" time="0.000"></testcase>
+		<testcase classname="go" name="TestRepeatUntilComplex" time="0.000">
+			<failure message="Failed" type="">repeat_until_complex_test.go:34: &#xA;Error Trace:&#x9;repeat_until_complex_test.go:34&#xA;Error:      &#x9;Not equal: &#xA;            &#x9;expected: []int([]int{1, 2, 3, 4})&#xA;            &#x9;actual  : []uint8([]byte{0x1, 0x2, 0x3, 0x4})&#xA;Test:       &#x9;TestRepeatUntilComplex&#xA;repeat_until_complex_test.go:36: &#xA;Error Trace:&#x9;repeat_until_complex_test.go:36&#xA;Error:      &#x9;Not equal: &#xA;            &#x9;expected: []int([]int{1, 2})&#xA;            &#x9;actual  : []uint8([]byte{0x1, 0x2})&#xA;Test:       &#x9;TestRepeatUntilComplex&#xA;repeat_until_complex_test.go:40: &#xA;Error Trace:&#x9;repeat_until_complex_test.go:40&#xA;Error:      &#x9;Not equal: &#xA;            &#x9;expected: []int([]int{1, 2, 3, 4, 5, 6})&#xA;            &#x9;actual  : []uint16([]uint16{0x1, 0x2, 0x3, 0x4, 0x5, 0x6})&#xA;Test:       &#x9;TestRepeatUntilComplex&#xA;repeat_until_complex_test.go:42: &#xA;Error Trace:&#x9;repeat_until_complex_test.go:42&#xA;Error:      &#x9;Not equal: &#xA;            &#x9;expected: []int([]int{1, 2, 3})&#xA;            &#x9;actual  : []uint16([]uint16{0x1, 0x2, 0x3})&#xA;Test:       &#x9;TestRepeatUntilComplex&#xA;repeat_until_complex_test.go:44: &#xA;Error Trace:&#x9;repeat_until_complex_test.go:44&#xA;Error:      &#x9;Not equal: &#xA;            &#x9;expected: []int([]int{1, 2, 3, 4})&#xA;            &#x9;actual  : []uint16([]uint16{0x1, 0x2, 0x3, 0x4})&#xA;Test:       &#x9;TestRepeatUntilComplex&#xA;repeat_until_complex_test.go:46: &#xA;Error Trace:&#x9;repeat_until_complex_test.go:46&#xA;Error:      &#x9;Not equal: &#xA;            &#x9;expected: []int([]int{102, 111, 111, 98, 97, 114, 0})&#xA;            &#x9;actual  : []uint8([]byte{0x66, 0x6f, 0x6f, 0x62, 0x61, 0x72, 0x0})&#xA;Test:       &#x9;TestRepeatUntilComplex</failure>
+		</testcase>
+		<testcase classname="go" name="TestRepeatUntilS4" time="0.000">
+			<failure message="Failed" type="">repeat_until_s4_test.go:32: &#xA;Error Trace:&#x9;repeat_until_s4_test.go:32&#xA;Error:      &#x9;Not equal: &#xA;            &#x9;expected: []int([]int{66, 4919, -251658241, -1})&#xA;            &#x9;actual  : []int32([]int32{66, 4919, -251658241, -1})&#xA;Test:       &#x9;TestRepeatUntilS4</failure>
+		</testcase>
+		<testcase classname="go" name="TestStrEncodingsDefault" time="0.000">
+			<failure message="Failed" type="">str_encodings_default_test.go:33: &#xA;Error Trace:&#x9;str_encodings_default_test.go:33&#xA;Error:      &#x9;Not equal: &#xA;            &#x9;expected: &#34;ă�“ă‚“ă�\xabă�ˇă�Ż&#34;&#xA;            &#x9;actual  : &#34;こんにちは&#34;&#xA;            &#x9;&#xA;            &#x9;Diff:&#xA;            &#x9;--- Expected&#xA;            &#x9;+++ Actual&#xA;            &#x9;@@ -1 +1 @@&#xA;            &#x9;-ă�“ă‚“ă��ă�ˇă�Ż&#xA;            &#x9;+こんにちは&#xA;Test:       &#x9;TestStrEncodingsDefault&#xA;str_encodings_default_test.go:34: &#xA;Error Trace:&#x9;str_encodings_default_test.go:34&#xA;Error:      &#x9;Not equal: &#xA;            &#x9;expected: &#34;ă�“ă‚“ă�\xabă�ˇă�Ż&#34;&#xA;            &#x9;actual  : &#34;こんにちは&#34;&#xA;            &#x9;&#xA;            &#x9;Diff:&#xA;            &#x9;--- Expected&#xA;            &#x9;+++ Actual&#xA;            &#x9;@@ -1 +1 @@&#xA;            &#x9;-ă�“ă‚“ă��ă�ˇă�Ż&#xA;            &#x9;+こんにちは&#xA;Test:       &#x9;TestStrEncodingsDefault&#xA;str_encodings_default_test.go:35: &#xA;Error Trace:&#x9;str_encodings_default_test.go:35&#xA;Error:      &#x9;Not equal: &#xA;            &#x9;expected: &#34;\xe2–‘\xe2–’\xe2–“&#34;&#xA;            &#x9;actual  : &#34;░▒▓&#34;&#xA;            &#x9;&#xA;            &#x9;Diff:&#xA;            &#x9;--- Expected&#xA;            &#x9;+++ Actual&#xA;            &#x9;@@ -1 +1 @@&#xA;            &#x9;-�–‘�–’�–“&#xA;            &#x9;+░▒▓&#xA;Test:       &#x9;TestStrEncodingsDefault</failure>
+		</testcase>
+		<testcase classname="go" name="TestStrEncodings" time="0.000">
+			<failure message="Failed" type="">str_encodings_test.go:33: &#xA;Error Trace:&#x9;str_encodings_test.go:33&#xA;Error:      &#x9;Not equal: &#xA;            &#x9;expected: &#34;ă�“ă‚“ă�\xabă�ˇă�Ż&#34;&#xA;            &#x9;actual  : &#34;こんにちは&#34;&#xA;            &#x9;&#xA;            &#x9;Diff:&#xA;            &#x9;--- Expected&#xA;            &#x9;+++ Actual&#xA;            &#x9;@@ -1 +1 @@&#xA;            &#x9;-ă�“ă‚“ă��ă�ˇă�Ż&#xA;            &#x9;+こんにちは&#xA;Test:       &#x9;TestStrEncodings&#xA;str_encodings_test.go:34: &#xA;Error Trace:&#x9;str_encodings_test.go:34&#xA;Error:      &#x9;Not equal: &#xA;            &#x9;expected: &#34;ă�“ă‚“ă�\xabă�ˇă�Ż&#34;&#xA;            &#x9;actual  : &#34;こんにちは&#34;&#xA;            &#x9;&#xA;            &#x9;Diff:&#xA;            &#x9;--- Expected&#xA;            &#x9;+++ Actual&#xA;            &#x9;@@ -1 +1 @@&#xA;            &#x9;-ă�“ă‚“ă��ă�ˇă�Ż&#xA;            &#x9;+こんにちは&#xA;Test:       &#x9;TestStrEncodings&#xA;str_encodings_test.go:35: &#xA;Error Trace:&#x9;str_encodings_test.go:35&#xA;Error:      &#x9;Not equal: &#xA;            &#x9;expected: &#34;\xe2–‘\xe2–’\xe2–“&#34;&#xA;            &#x9;actual  : &#34;░▒▓&#34;&#xA;            &#x9;&#xA;            &#x9;Diff:&#xA;            &#x9;--- Expected&#xA;            &#x9;+++ Actual&#xA;            &#x9;@@ -1 +1 @@&#xA;            &#x9;-�–‘�–’�–“&#xA;            &#x9;+░▒▓&#xA;Test:       &#x9;TestStrEncodings</failure>
+		</testcase>
 		<testcase classname="go" name="TestStrEos" time="0.000"></testcase>
 		<testcase classname="go" name="TestStrLiterals2" time="0.000"></testcase>
 		<testcase classname="go" name="TestStrLiterals" time="0.000"></testcase>
@@ -183,18 +196,17 @@
 		<testcase classname="go" name="TestTypeTernaryOpaque" time="0.000"></testcase>
 		<testcase classname="go" name="TestTypeTernary" time="0.000"></testcase>
 		<testcase classname="go" name="TestUserType" time="0.000"></testcase>
-		<testcase classname="go" name="TestValidFailContents" time="0.000">
-			<failure message="Failed" type="">valid_fail_contents_test.go:31: expected kaitai.ValidationNotEqualError, got &lt;nil&gt;</failure>
-		</testcase>
-		<testcase classname="go" name="TestValidFailEqBytes" time="0.000">
-			<failure message="Failed" type="">valid_fail_eq_bytes_test.go:31: expected kaitai.ValidationNotEqualError, got &lt;nil&gt;</failure>
-		</testcase>
-		<testcase classname="go" name="TestValidFailEqInt" time="0.000">
-			<failure message="Failed" type="">valid_fail_eq_int_test.go:31: expected kaitai.ValidationNotEqualError, got &lt;nil&gt;</failure>
-		</testcase>
-		<testcase classname="go" name="TestValidFailInst" time="0.000">
-			<failure message="Failed" type="">valid_fail_inst_test.go:31: expected kaitai.ValidationNotEqualError, got &lt;nil&gt;</failure>
-		</testcase>
+		<testcase classname="go" name="TestValidFailAnyofInt" time="0.000"></testcase>
+		<testcase classname="go" name="TestValidFailContents" time="0.000"></testcase>
+		<testcase classname="go" name="TestValidFailEqBytes" time="0.000"></testcase>
+		<testcase classname="go" name="TestValidFailEqInt" time="0.000"></testcase>
+		<testcase classname="go" name="TestValidFailInst" time="0.000"></testcase>
+		<testcase classname="go" name="TestValidFailMaxInt" time="0.000"></testcase>
+		<testcase classname="go" name="TestValidFailMinInt" time="0.000"></testcase>
+		<testcase classname="go" name="TestValidFailRangeBytes" time="0.000"></testcase>
+		<testcase classname="go" name="TestValidFailRangeFloat" time="0.000"></testcase>
+		<testcase classname="go" name="TestValidFailRangeInt" time="0.000"></testcase>
+		<testcase classname="go" name="TestValidFailRangeStr" time="0.000"></testcase>
 		<testcase classname="go" name="TestValidLong" time="0.000"></testcase>
 		<testcase classname="go" name="TestValidNotParsedIf" time="0.000"></testcase>
 		<testcase classname="go" name="TestValidShort" time="0.000"></testcase>

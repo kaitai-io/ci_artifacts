@@ -54,6 +54,11 @@
     "elapsed": 0.0,
     "is_kst": true
   },
+  "CombineEnum": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
   "CombineStr": {
     "status": "passed",
     "elapsed": 0.0,
@@ -328,12 +333,12 @@
   },
   "ExprIoPos": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.01,
     "is_kst": true
   },
   "ExprMod": {
     "status": "passed",
-    "elapsed": 0.01,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "ExprSizeofType0": {
@@ -582,7 +587,7 @@
       "line_num": null,
       "message": "Failed",
       "trace": [
-        "goroutine 111 [running]:&#xA;runtime/debug.Stack(0x18, 0xc00005bbb8, 0x4869d2)&#xA;runtime/debug.PrintStack()&#xA;github.com/kaitai-io/ci_targets/tests/spec/go.TestOpaqueExternalType02Parent.func1(0xc00014c900)&#xA;panic(0x77ade0, 0xacaf10)&#xA;test_formats.(*OpaqueExternalType02Child).SomeMethod(...)&#xA;test_formats.(*OpaqueExternalType02Child_OpaqueExternalType02ChildChild).Read(0xc00014aea0, 0xc00014ae40, 0xc00009e870, 0x0, 0xc000152234, 0x3)&#xA;test_formats.(*OpaqueExternalType02Child).Read(0xc00009e870, 0xc00014ae40, 0x776a20, 0xc00000f600, 0x0, 0x7b0460, 0x1)&#xA;test_formats.(*OpaqueExternalType02Parent_ParentObj).Read(0xc00000f600, 0xc00014ae40, 0xc00014ae70, 0xc00014ae70, 0x7b03a0, 0x1)&#xA;test_formats.(*OpaqueExternalType02Parent).Read(0xc00014ae70, 0xc00014ae40, 0x7769c0, 0xc00014ae70, 0xc00014ae70, 0x0, 0x0)&#xA;github.com/kaitai-io/ci_targets/tests/spec/go.TestOpaqueExternalType02Parent(0xc00014c900)&#xA;testing.tRunner(0xc00014c900, 0x80cdb0)&#xA;created by testing.(*T).Run&#xA;opaque_external_type_02_parent_test.go:16: unexpected panic: runtime error: invalid memory address or nil pointer dereference"
+        "goroutine 112 [running]:&#xA;runtime/debug.Stack(0x18, 0xc00005bbb8, 0x4869d2)&#xA;runtime/debug.PrintStack()&#xA;github.com/kaitai-io/ci_targets/tests/spec/go.TestOpaqueExternalType02Parent.func1(0xc00014ca00)&#xA;panic(0x7844e0, 0xadaf10)&#xA;test_formats.(*OpaqueExternalType02Child).SomeMethod(...)&#xA;test_formats.(*OpaqueExternalType02Child_OpaqueExternalType02ChildChild).Read(0xc00014af30, 0xc00014aed0, 0xc00009e870, 0x0, 0xc000152294, 0x3)&#xA;test_formats.(*OpaqueExternalType02Child).Read(0xc00009e870, 0xc00014aed0, 0x77fe80, 0xc00000f600, 0x0, 0x7b9f80, 0x1)&#xA;test_formats.(*OpaqueExternalType02Parent_ParentObj).Read(0xc00000f600, 0xc00014aed0, 0xc00014af00, 0xc00014af00, 0x7b9ec0, 0x1)&#xA;test_formats.(*OpaqueExternalType02Parent).Read(0xc00014af00, 0xc00014aed0, 0x77fe20, 0xc00014af00, 0xc00014af00, 0x0, 0x0)&#xA;github.com/kaitai-io/ci_targets/tests/spec/go.TestOpaqueExternalType02Parent(0xc00014ca00)&#xA;testing.tRunner(0xc00014ca00, 0x817678)&#xA;created by testing.(*T).Run&#xA;opaque_external_type_02_parent_test.go:16: unexpected panic: runtime error: invalid memory address or nil pointer dereference"
       ]
     }
   },
@@ -639,8 +644,17 @@
     "is_kst": true
   },
   "PositionInSeq": {
-    "status": "passed",
-    "elapsed": 0.0
+    "status": "failed",
+    "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": "Failed",
+      "trace": [
+        "position_in_seq_test.go:32: &#xA;Error Trace:&#x9;position_in_seq_test.go:32&#xA;Error:      &#x9;Not equal: &#xA;            &#x9;expected: []int([]int{1, 2, 3})&#xA;            &#x9;actual  : []uint8([]byte{0x1, 0x2, 0x3})&#xA;Test:       &#x9;TestPositionInSeq"
+      ]
+    },
+    "is_kst": true
   },
   "PositionToEnd": {
     "status": "passed",
@@ -664,7 +678,7 @@
   },
   "ProcessCustomNoArgs": {
     "status": "failed",
-    "elapsed": 0.0,
+    "elapsed": 0.01,
     "failure": {
       "file_name": null,
       "line_num": null,
@@ -677,7 +691,7 @@
   },
   "ProcessCustom": {
     "status": "failed",
-    "elapsed": 0.01,
+    "elapsed": 0.0,
     "failure": {
       "file_name": null,
       "line_num": null,
@@ -739,8 +753,17 @@
     "is_kst": true
   },
   "RepeatEosU4": {
-    "status": "passed",
-    "elapsed": 0.0
+    "status": "failed",
+    "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": "Failed",
+      "trace": [
+        "repeat_eos_u4_test.go:32: &#xA;Error Trace:&#x9;repeat_eos_u4_test.go:32&#xA;Error:      &#x9;Not equal: &#xA;            &#x9;expected: []int([]int{0, 66, 66, 2069})&#xA;            &#x9;actual  : []uint32([]uint32{0x0, 0x42, 0x42, 0x815})&#xA;Test:       &#x9;TestRepeatEosU4"
+      ]
+    },
+    "is_kst": true
   },
   "RepeatNStruct": {
     "status": "passed",
@@ -758,21 +781,55 @@
     "is_kst": true
   },
   "RepeatUntilComplex": {
-    "status": "passed",
-    "elapsed": 0.0
+    "status": "failed",
+    "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": "Failed",
+      "trace": [
+        "repeat_until_complex_test.go:34: &#xA;Error Trace:&#x9;repeat_until_complex_test.go:34&#xA;Error:      &#x9;Not equal: &#xA;            &#x9;expected: []int([]int{1, 2, 3, 4})&#xA;            &#x9;actual  : []uint8([]byte{0x1, 0x2, 0x3, 0x4})&#xA;Test:       &#x9;TestRepeatUntilComplex&#xA;repeat_until_complex_test.go:36: &#xA;Error Trace:&#x9;repeat_until_complex_test.go:36&#xA;Error:      &#x9;Not equal: &#xA;            &#x9;expected: []int([]int{1, 2})&#xA;            &#x9;actual  : []uint8([]byte{0x1, 0x2})&#xA;Test:       &#x9;TestRepeatUntilComplex&#xA;repeat_until_complex_test.go:40: &#xA;Error Trace:&#x9;repeat_until_complex_test.go:40&#xA;Error:      &#x9;Not equal: &#xA;            &#x9;expected: []int([]int{1, 2, 3, 4, 5, 6})&#xA;            &#x9;actual  : []uint16([]uint16{0x1, 0x2, 0x3, 0x4, 0x5, 0x6})&#xA;Test:       &#x9;TestRepeatUntilComplex&#xA;repeat_until_complex_test.go:42: &#xA;Error Trace:&#x9;repeat_until_complex_test.go:42&#xA;Error:      &#x9;Not equal: &#xA;            &#x9;expected: []int([]int{1, 2, 3})&#xA;            &#x9;actual  : []uint16([]uint16{0x1, 0x2, 0x3})&#xA;Test:       &#x9;TestRepeatUntilComplex&#xA;repeat_until_complex_test.go:44: &#xA;Error Trace:&#x9;repeat_until_complex_test.go:44&#xA;Error:      &#x9;Not equal: &#xA;            &#x9;expected: []int([]int{1, 2, 3, 4})&#xA;            &#x9;actual  : []uint16([]uint16{0x1, 0x2, 0x3, 0x4})&#xA;Test:       &#x9;TestRepeatUntilComplex&#xA;repeat_until_complex_test.go:46: &#xA;Error Trace:&#x9;repeat_until_complex_test.go:46&#xA;Error:      &#x9;Not equal: &#xA;            &#x9;expected: []int([]int{102, 111, 111, 98, 97, 114, 0})&#xA;            &#x9;actual  : []uint8([]byte{0x66, 0x6f, 0x6f, 0x62, 0x61, 0x72, 0x0})&#xA;Test:       &#x9;TestRepeatUntilComplex"
+      ]
+    },
+    "is_kst": true
   },
   "RepeatUntilS4": {
-    "status": "passed",
-    "elapsed": 0.0
+    "status": "failed",
+    "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": "Failed",
+      "trace": [
+        "repeat_until_s4_test.go:32: &#xA;Error Trace:&#x9;repeat_until_s4_test.go:32&#xA;Error:      &#x9;Not equal: &#xA;            &#x9;expected: []int([]int{66, 4919, -251658241, -1})&#xA;            &#x9;actual  : []int32([]int32{66, 4919, -251658241, -1})&#xA;Test:       &#x9;TestRepeatUntilS4"
+      ]
+    },
+    "is_kst": true
   },
   "StrEncodingsDefault": {
-    "status": "passed",
+    "status": "failed",
     "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": "Failed",
+      "trace": [
+        "str_encodings_default_test.go:33: &#xA;Error Trace:&#x9;str_encodings_default_test.go:33&#xA;Error:      &#x9;Not equal: &#xA;            &#x9;expected: &#34;ă�“ă‚“ă�\\xabă�ˇă�Ż&#34;&#xA;            &#x9;actual  : &#34;こんにちは&#34;&#xA;            &#x9;&#xA;            &#x9;Diff:&#xA;            &#x9;--- Expected&#xA;            &#x9;+++ Actual&#xA;            &#x9;@@ -1 +1 @@&#xA;            &#x9;-ă�“ă‚“ă��ă�ˇă�Ż&#xA;            &#x9;+こんにちは&#xA;Test:       &#x9;TestStrEncodingsDefault&#xA;str_encodings_default_test.go:34: &#xA;Error Trace:&#x9;str_encodings_default_test.go:34&#xA;Error:      &#x9;Not equal: &#xA;            &#x9;expected: &#34;ă�“ă‚“ă�\\xabă�ˇă�Ż&#34;&#xA;            &#x9;actual  : &#34;こんにちは&#34;&#xA;            &#x9;&#xA;            &#x9;Diff:&#xA;            &#x9;--- Expected&#xA;            &#x9;+++ Actual&#xA;            &#x9;@@ -1 +1 @@&#xA;            &#x9;-ă�“ă‚“ă��ă�ˇă�Ż&#xA;            &#x9;+こんにちは&#xA;Test:       &#x9;TestStrEncodingsDefault&#xA;str_encodings_default_test.go:35: &#xA;Error Trace:&#x9;str_encodings_default_test.go:35&#xA;Error:      &#x9;Not equal: &#xA;            &#x9;expected: &#34;\\xe2–‘\\xe2–’\\xe2–“&#34;&#xA;            &#x9;actual  : &#34;░▒▓&#34;&#xA;            &#x9;&#xA;            &#x9;Diff:&#xA;            &#x9;--- Expected&#xA;            &#x9;+++ Actual&#xA;            &#x9;@@ -1 +1 @@&#xA;            &#x9;-�–‘�–’�–“&#xA;            &#x9;+░▒▓&#xA;Test:       &#x9;TestStrEncodingsDefault"
+      ]
+    },
     "is_kst": true
   },
   "StrEncodings": {
-    "status": "passed",
+    "status": "failed",
     "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": "Failed",
+      "trace": [
+        "str_encodings_test.go:33: &#xA;Error Trace:&#x9;str_encodings_test.go:33&#xA;Error:      &#x9;Not equal: &#xA;            &#x9;expected: &#34;ă�“ă‚“ă�\\xabă�ˇă�Ż&#34;&#xA;            &#x9;actual  : &#34;こんにちは&#34;&#xA;            &#x9;&#xA;            &#x9;Diff:&#xA;            &#x9;--- Expected&#xA;            &#x9;+++ Actual&#xA;            &#x9;@@ -1 +1 @@&#xA;            &#x9;-ă�“ă‚“ă��ă�ˇă�Ż&#xA;            &#x9;+こんにちは&#xA;Test:       &#x9;TestStrEncodings&#xA;str_encodings_test.go:34: &#xA;Error Trace:&#x9;str_encodings_test.go:34&#xA;Error:      &#x9;Not equal: &#xA;            &#x9;expected: &#34;ă�“ă‚“ă�\\xabă�ˇă�Ż&#34;&#xA;            &#x9;actual  : &#34;こんにちは&#34;&#xA;            &#x9;&#xA;            &#x9;Diff:&#xA;            &#x9;--- Expected&#xA;            &#x9;+++ Actual&#xA;            &#x9;@@ -1 +1 @@&#xA;            &#x9;-ă�“ă‚“ă��ă�ˇă�Ż&#xA;            &#x9;+こんにちは&#xA;Test:       &#x9;TestStrEncodings&#xA;str_encodings_test.go:35: &#xA;Error Trace:&#x9;str_encodings_test.go:35&#xA;Error:      &#x9;Not equal: &#xA;            &#x9;expected: &#34;\\xe2–‘\\xe2–’\\xe2–“&#34;&#xA;            &#x9;actual  : &#34;░▒▓&#34;&#xA;            &#x9;&#xA;            &#x9;Diff:&#xA;            &#x9;--- Expected&#xA;            &#x9;+++ Actual&#xA;            &#x9;@@ -1 +1 @@&#xA;            &#x9;-�–‘�–’�–“&#xA;            &#x9;+░▒▓&#xA;Test:       &#x9;TestStrEncodings"
+      ]
+    },
     "is_kst": true
   },
   "StrEos": {
@@ -857,56 +914,59 @@
     "elapsed": 0.0,
     "is_kst": true
   },
-  "ValidFailContents": {
-    "status": "failed",
+  "ValidFailAnyofInt": {
+    "status": "passed",
     "elapsed": 0.0,
-    "failure": {
-      "file_name": null,
-      "line_num": null,
-      "message": "Failed",
-      "trace": [
-        "valid_fail_contents_test.go:31: expected kaitai.ValidationNotEqualError, got &lt;nil&gt;"
-      ]
-    },
+    "is_kst": true
+  },
+  "ValidFailContents": {
+    "status": "passed",
+    "elapsed": 0.0,
     "is_kst": true
   },
   "ValidFailEqBytes": {
-    "status": "failed",
+    "status": "passed",
     "elapsed": 0.0,
-    "failure": {
-      "file_name": null,
-      "line_num": null,
-      "message": "Failed",
-      "trace": [
-        "valid_fail_eq_bytes_test.go:31: expected kaitai.ValidationNotEqualError, got &lt;nil&gt;"
-      ]
-    },
     "is_kst": true
   },
   "ValidFailEqInt": {
-    "status": "failed",
+    "status": "passed",
     "elapsed": 0.0,
-    "failure": {
-      "file_name": null,
-      "line_num": null,
-      "message": "Failed",
-      "trace": [
-        "valid_fail_eq_int_test.go:31: expected kaitai.ValidationNotEqualError, got &lt;nil&gt;"
-      ]
-    },
     "is_kst": true
   },
   "ValidFailInst": {
-    "status": "failed",
+    "status": "passed",
     "elapsed": 0.0,
-    "failure": {
-      "file_name": null,
-      "line_num": null,
-      "message": "Failed",
-      "trace": [
-        "valid_fail_inst_test.go:31: expected kaitai.ValidationNotEqualError, got &lt;nil&gt;"
-      ]
-    },
+    "is_kst": true
+  },
+  "ValidFailMaxInt": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "ValidFailMinInt": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "ValidFailRangeBytes": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "ValidFailRangeFloat": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "ValidFailRangeInt": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "ValidFailRangeStr": {
+    "status": "passed",
+    "elapsed": 0.0,
     "is_kst": true
   },
   "ValidLong": {
@@ -936,13 +996,13 @@
   },
   "$meta": {
     "lang": "go",
-    "timestamp": "2020-08-31T20:03:22Z",
+    "timestamp": "2020-09-11T17:21:47Z",
     "ci": {
       "ci": "travis",
-      "build_id": "722852519",
-      "job_id": "722852546",
-      "job_number": "406.25",
-      "url": "https://travis-ci.org/kaitai-io/ci_targets/jobs/722852546"
+      "build_id": "726355917",
+      "job_id": "726355942",
+      "job_number": "407.25",
+      "url": "https://travis-ci.org/kaitai-io/ci_targets/jobs/726355942"
     }
   }
 }
