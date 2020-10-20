@@ -8,6 +8,10 @@
 --- PASS: TestBitsEnum (0.00s)
 === RUN   TestBitsSeqEndianCombo
 --- PASS: TestBitsSeqEndianCombo (0.00s)
+=== RUN   TestBitsSignedB32Le
+--- PASS: TestBitsSignedB32Le (0.00s)
+=== RUN   TestBitsSignedB64Le
+--- PASS: TestBitsSignedB64Le (0.00s)
 === RUN   TestBitsSimpleLe
 --- PASS: TestBitsSimpleLe (0.00s)
 === RUN   TestBitsSimple
@@ -113,7 +117,7 @@
 === RUN   TestExprIfIntOps
 --- PASS: TestExprIfIntOps (0.00s)
 === RUN   TestExprIntDiv
---- FAIL: TestExprIntDiv (0.00s)
+--- FAIL: TestExprIntDiv (0.01s)
     expr_int_div_test.go:43: 
         	Error Trace:	expr_int_div_test.go:43
         	Error:      	Not equal: 
@@ -133,7 +137,7 @@
         	Error:      	Expected nil, but got: 0x0
         	Test:       	TestExprIoEof
 === RUN   TestExprIoPos
---- PASS: TestExprIoPos (0.01s)
+--- PASS: TestExprIoPos (0.00s)
 === RUN   TestExprMod
 --- PASS: TestExprMod (0.00s)
 === RUN   TestExprSizeofType0
@@ -239,28 +243,28 @@
 === RUN   TestNonStandard
 --- PASS: TestNonStandard (0.00s)
 === RUN   TestOpaqueExternalType02Parent
-goroutine 124 [running]:
+goroutine 126 [running]:
 runtime/debug.Stack(0x18, 0xc000056bb8, 0x4869d2)
 	/home/travis/.gimme/versions/go1.13.linux.amd64/src/runtime/debug/stack.go:24 +0x9d
 runtime/debug.PrintStack()
 	/home/travis/.gimme/versions/go1.13.linux.amd64/src/runtime/debug/stack.go:16 +0x22
-github.com/kaitai-io/ci_targets/tests/spec/go.TestOpaqueExternalType02Parent.func1(0xc000184a00)
+github.com/kaitai-io/ci_targets/tests/spec/go.TestOpaqueExternalType02Parent.func1(0xc00017ac00)
 	/home/travis/gopath/src/github.com/kaitai-io/ci_targets/tests/spec/go/opaque_external_type_02_parent_test.go:15 +0x57
-panic(0x7844e0, 0xadaf10)
+panic(0x786640, 0xadef10)
 	/home/travis/.gimme/versions/go1.13.linux.amd64/src/runtime/panic.go:679 +0x1b2
 test_formats.(*OpaqueExternalType02Child).SomeMethod(...)
 	/home/travis/gopath/src/github.com/kaitai-io/ci_targets/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:46
-test_formats.(*OpaqueExternalType02Child_OpaqueExternalType02ChildChild).Read(0xc000182f30, 0xc000182ed0, 0xc0000c0870, 0x0, 0xc00018a0d4, 0x3)
+test_formats.(*OpaqueExternalType02Child_OpaqueExternalType02ChildChild).Read(0xc000179050, 0xc000178ff0, 0xc0000c0870, 0x0, 0xc000180184, 0x3)
 	/home/travis/gopath/src/github.com/kaitai-io/ci_targets/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:69 +0x50
-test_formats.(*OpaqueExternalType02Child).Read(0xc0000c0870, 0xc000182ed0, 0x77fe80, 0xc0000a95c0, 0x0, 0x7b9f80, 0x1)
+test_formats.(*OpaqueExternalType02Child).Read(0xc0000c0870, 0xc000178ff0, 0x781fe0, 0xc0000a95c0, 0x0, 0x7bc0e0, 0x1)
 	/home/travis/gopath/src/github.com/kaitai-io/ci_targets/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:38 +0x18f
-test_formats.(*OpaqueExternalType02Parent_ParentObj).Read(0xc0000a95c0, 0xc000182ed0, 0xc000182f00, 0xc000182f00, 0x7b9ec0, 0x1)
+test_formats.(*OpaqueExternalType02Parent_ParentObj).Read(0xc0000a95c0, 0xc000178ff0, 0xc000179020, 0xc000179020, 0x7bc020, 0x1)
 	/home/travis/gopath/src/github.com/kaitai-io/ci_targets/tests/compiled/go/src/test_formats/opaque_external_type_02_parent.go:48 +0x9c
-test_formats.(*OpaqueExternalType02Parent).Read(0xc000182f00, 0xc000182ed0, 0x77fe20, 0xc000182f00, 0xc000182f00, 0x0, 0x0)
+test_formats.(*OpaqueExternalType02Parent).Read(0xc000179020, 0xc000178ff0, 0x781f80, 0xc000179020, 0xc000179020, 0x0, 0x0)
 	/home/travis/gopath/src/github.com/kaitai-io/ci_targets/tests/compiled/go/src/test_formats/opaque_external_type_02_parent.go:24 +0xa6
-github.com/kaitai-io/ci_targets/tests/spec/go.TestOpaqueExternalType02Parent(0xc000184a00)
+github.com/kaitai-io/ci_targets/tests/spec/go.TestOpaqueExternalType02Parent(0xc00017ac00)
 	/home/travis/gopath/src/github.com/kaitai-io/ci_targets/tests/spec/go/opaque_external_type_02_parent_test.go:25 +0x18d
-testing.tRunner(0xc000184a00, 0x817658)
+testing.tRunner(0xc00017ac00, 0x819a80)
 	/home/travis/.gimme/versions/go1.13.linux.amd64/src/testing/testing.go:909 +0xc9
 created by testing.(*T).Run
 	/home/travis/.gimme/versions/go1.13.linux.amd64/src/testing/testing.go:960 +0x350
@@ -301,11 +305,11 @@ created by testing.(*T).Run
 === RUN   TestProcessCoerceBytes
 --- PASS: TestProcessCoerceBytes (0.00s)
 === RUN   TestProcessCoerceUsertype1
---- PASS: TestProcessCoerceUsertype1 (0.00s)
+--- PASS: TestProcessCoerceUsertype1 (0.01s)
 === RUN   TestProcessCoerceUsertype2
 --- PASS: TestProcessCoerceUsertype2 (0.00s)
 === RUN   TestProcessCustomNoArgs
---- FAIL: TestProcessCustomNoArgs (0.01s)
+--- FAIL: TestProcessCustomNoArgs (0.00s)
     process_custom_no_args_test.go:32: 
         	Error Trace:	process_custom_no_args_test.go:32
         	Error:      	Not equal: 
@@ -521,5 +525,5 @@ created by testing.(*T).Run
 === RUN   TestZlibWithHeader78
 --- PASS: TestZlibWithHeader78 (0.00s)
 FAIL
-FAIL	github.com/kaitai-io/ci_targets/tests/spec/go	0.035s
+FAIL	github.com/kaitai-io/ci_targets/tests/spec/go	0.033s
 FAIL

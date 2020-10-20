@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-	<testsuite tests="174" failures="15" time="0.035" name="github.com/kaitai-io/ci_targets/tests/spec/go">
+	<testsuite tests="176" failures="15" time="0.033" name="github.com/kaitai-io/ci_targets/tests/spec/go">
 		<properties>
 			<property name="go.version" value="go1.13"></property>
 		</properties>
@@ -9,6 +9,8 @@
 		<testcase classname="go" name="TestBitsByteAligned" time="0.000"></testcase>
 		<testcase classname="go" name="TestBitsEnum" time="0.000"></testcase>
 		<testcase classname="go" name="TestBitsSeqEndianCombo" time="0.000"></testcase>
+		<testcase classname="go" name="TestBitsSignedB32Le" time="0.000"></testcase>
+		<testcase classname="go" name="TestBitsSignedB64Le" time="0.000"></testcase>
 		<testcase classname="go" name="TestBitsSimpleLe" time="0.000"></testcase>
 		<testcase classname="go" name="TestBitsSimple" time="0.000"></testcase>
 		<testcase classname="go" name="TestBufferedStruct" time="0.000"></testcase>
@@ -67,13 +69,13 @@
 		<testcase classname="go" name="TestExprCalcArrayOps" time="0.000"></testcase>
 		<testcase classname="go" name="TestExprEnum" time="0.000"></testcase>
 		<testcase classname="go" name="TestExprIfIntOps" time="0.000"></testcase>
-		<testcase classname="go" name="TestExprIntDiv" time="0.000">
+		<testcase classname="go" name="TestExprIntDiv" time="0.010">
 			<failure message="Failed" type="">expr_int_div_test.go:43: &#xA;Error Trace:&#x9;expr_int_div_test.go:43&#xA;Error:      &#x9;Not equal: &#xA;            &#x9;expected: -757&#xA;            &#x9;actual  : -756&#xA;Test:       &#x9;TestExprIntDiv&#xA;expr_int_div_test.go:53: &#xA;Error Trace:&#x9;expr_int_div_test.go:53&#xA;Error:      &#x9;Not equal: &#xA;            &#x9;expected: -4073&#xA;            &#x9;actual  : -4072&#xA;Test:       &#x9;TestExprIntDiv</failure>
 		</testcase>
 		<testcase classname="go" name="TestExprIoEof" time="0.000">
 			<failure message="Failed" type="">expr_io_eof_test.go:33: &#xA;Error Trace:&#x9;expr_io_eof_test.go:33&#xA;Error:      &#x9;Expected nil, but got: 0x0&#xA;Test:       &#x9;TestExprIoEof</failure>
 		</testcase>
-		<testcase classname="go" name="TestExprIoPos" time="0.010"></testcase>
+		<testcase classname="go" name="TestExprIoPos" time="0.000"></testcase>
 		<testcase classname="go" name="TestExprMod" time="0.000"></testcase>
 		<testcase classname="go" name="TestExprSizeofType0" time="0.000"></testcase>
 		<testcase classname="go" name="TestExprSizeofType1" time="0.000"></testcase>
@@ -125,7 +127,7 @@
 		<testcase classname="go" name="TestNestedTypes" time="0.000"></testcase>
 		<testcase classname="go" name="TestNonStandard" time="0.000"></testcase>
 		<testcase classname="go" name="TestOpaqueExternalType02Parent" time="0.000">
-			<failure message="Failed" type="">goroutine 124 [running]:&#xA;runtime/debug.Stack(0x18, 0xc000056bb8, 0x4869d2)&#xA;runtime/debug.PrintStack()&#xA;github.com/kaitai-io/ci_targets/tests/spec/go.TestOpaqueExternalType02Parent.func1(0xc000184a00)&#xA;panic(0x7844e0, 0xadaf10)&#xA;test_formats.(*OpaqueExternalType02Child).SomeMethod(...)&#xA;test_formats.(*OpaqueExternalType02Child_OpaqueExternalType02ChildChild).Read(0xc000182f30, 0xc000182ed0, 0xc0000c0870, 0x0, 0xc00018a0d4, 0x3)&#xA;test_formats.(*OpaqueExternalType02Child).Read(0xc0000c0870, 0xc000182ed0, 0x77fe80, 0xc0000a95c0, 0x0, 0x7b9f80, 0x1)&#xA;test_formats.(*OpaqueExternalType02Parent_ParentObj).Read(0xc0000a95c0, 0xc000182ed0, 0xc000182f00, 0xc000182f00, 0x7b9ec0, 0x1)&#xA;test_formats.(*OpaqueExternalType02Parent).Read(0xc000182f00, 0xc000182ed0, 0x77fe20, 0xc000182f00, 0xc000182f00, 0x0, 0x0)&#xA;github.com/kaitai-io/ci_targets/tests/spec/go.TestOpaqueExternalType02Parent(0xc000184a00)&#xA;testing.tRunner(0xc000184a00, 0x817658)&#xA;created by testing.(*T).Run&#xA;opaque_external_type_02_parent_test.go:16: unexpected panic: runtime error: invalid memory address or nil pointer dereference</failure>
+			<failure message="Failed" type="">goroutine 126 [running]:&#xA;runtime/debug.Stack(0x18, 0xc000056bb8, 0x4869d2)&#xA;runtime/debug.PrintStack()&#xA;github.com/kaitai-io/ci_targets/tests/spec/go.TestOpaqueExternalType02Parent.func1(0xc00017ac00)&#xA;panic(0x786640, 0xadef10)&#xA;test_formats.(*OpaqueExternalType02Child).SomeMethod(...)&#xA;test_formats.(*OpaqueExternalType02Child_OpaqueExternalType02ChildChild).Read(0xc000179050, 0xc000178ff0, 0xc0000c0870, 0x0, 0xc000180184, 0x3)&#xA;test_formats.(*OpaqueExternalType02Child).Read(0xc0000c0870, 0xc000178ff0, 0x781fe0, 0xc0000a95c0, 0x0, 0x7bc0e0, 0x1)&#xA;test_formats.(*OpaqueExternalType02Parent_ParentObj).Read(0xc0000a95c0, 0xc000178ff0, 0xc000179020, 0xc000179020, 0x7bc020, 0x1)&#xA;test_formats.(*OpaqueExternalType02Parent).Read(0xc000179020, 0xc000178ff0, 0x781f80, 0xc000179020, 0xc000179020, 0x0, 0x0)&#xA;github.com/kaitai-io/ci_targets/tests/spec/go.TestOpaqueExternalType02Parent(0xc00017ac00)&#xA;testing.tRunner(0xc00017ac00, 0x819a80)&#xA;created by testing.(*T).Run&#xA;opaque_external_type_02_parent_test.go:16: unexpected panic: runtime error: invalid memory address or nil pointer dereference</failure>
 		</testcase>
 		<testcase classname="go" name="TestOpaqueExternalType" time="0.000"></testcase>
 		<testcase classname="go" name="TestOpaqueWithParam" time="0.000"></testcase>
@@ -143,9 +145,9 @@
 		</testcase>
 		<testcase classname="go" name="TestPositionToEnd" time="0.000"></testcase>
 		<testcase classname="go" name="TestProcessCoerceBytes" time="0.000"></testcase>
-		<testcase classname="go" name="TestProcessCoerceUsertype1" time="0.000"></testcase>
+		<testcase classname="go" name="TestProcessCoerceUsertype1" time="0.010"></testcase>
 		<testcase classname="go" name="TestProcessCoerceUsertype2" time="0.000"></testcase>
-		<testcase classname="go" name="TestProcessCustomNoArgs" time="0.010">
+		<testcase classname="go" name="TestProcessCustomNoArgs" time="0.000">
 			<failure message="Failed" type="">process_custom_no_args_test.go:32: &#xA;Error Trace:&#x9;process_custom_no_args_test.go:32&#xA;Error:      &#x9;Not equal: &#xA;            &#x9;expected: []byte{0x5f, 0x9, 0xac, 0x8d, 0x8d, 0xed, 0x5f}&#xA;            &#x9;actual  : []byte{0x9, 0xac, 0x8d, 0x8d, 0xed}&#xA;            &#x9;&#xA;            &#x9;Diff:&#xA;            &#x9;--- Expected&#xA;            &#x9;+++ Actual&#xA;            &#x9;@@ -1,3 +1,3 @@&#xA;            &#x9;-([]uint8) (len=7) {&#xA;            &#x9;- 00000000  5f 09 ac 8d 8d ed 5f                              |_....._|&#xA;            &#x9;+([]uint8) (len=5) {&#xA;            &#x9;+ 00000000  09 ac 8d 8d ed                                    |.....|&#xA;            &#x9; }&#xA;Test:       &#x9;TestProcessCustomNoArgs</failure>
 		</testcase>
 		<testcase classname="go" name="TestProcessCustom" time="0.000">
