@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites>
-    <testsuite name="LuaUnit" id="00001" package="" hostname="localhost" tests="212" timestamp="2020-09-11T17:22:29" time="0.058" errors="5" failures="9">
+    <testsuite name="LuaUnit" id="00001" package="" hostname="localhost" tests="214" timestamp="2020-10-20T23:11:07" time="0.070" errors="5" failures="9">
         <properties>
             <property name="Lua Version" value="Lua 5.3"/>
             <property name="LuaUnit Version" value="3.3"/>
@@ -14,6 +14,10 @@
         <testcase classname="TestBitsEnum" name="TestBitsEnum.test_bits_enum" time="0.000">
         </testcase>
         <testcase classname="TestBitsSeqEndianCombo" name="TestBitsSeqEndianCombo.test_bits_seq_endian_combo" time="0.000">
+        </testcase>
+        <testcase classname="TestBitsSignedB32Le" name="TestBitsSignedB32Le.test_bits_signed_b32_le" time="0.000">
+        </testcase>
+        <testcase classname="TestBitsSignedB64Le" name="TestBitsSignedB64Le.test_bits_signed_b64_le" time="0.000">
         </testcase>
         <testcase classname="TestBitsSimple" name="TestBitsSimple.test_bits_simple" time="0.000">
         </testcase>
@@ -120,7 +124,7 @@
         </testcase>
         <testcase classname="TestExprBytesCmp" name="TestExprBytesCmp.test_expr_bytes_cmp" time="0.000">
         </testcase>
-        <testcase classname="TestExprBytesLiteral" name="TestExprBytesLiteral.test_expr_bytes_literal" time="0.007">
+        <testcase classname="TestExprBytesLiteral" name="TestExprBytesLiteral.test_expr_bytes_literal" time="0.010">
             <failure type="spec/lua/run_test_suite.lua:18: spec/lua/test_expr_bytes_literal.lua:5: module &apos;expr_bytes_literal&apos; not found:
 	no field package.preload[&apos;expr_bytes_literal&apos;]
 	no file &apos;../runtime/lua/expr_bytes_literal.lua&apos;
@@ -294,7 +298,7 @@
         </testcase>
         <testcase classname="TestParamsPassArrayUsertype" name="TestParamsPassArrayUsertype.test_params_pass_array_usertype" time="0.000">
         </testcase>
-        <testcase classname="TestParamsPassBool" name="TestParamsPassBool.test_params_pass_bool" time="0.001">
+        <testcase classname="TestParamsPassBool" name="TestParamsPassBool.test_params_pass_bool" time="0.002">
             <failure type="spec/lua/test_params_pass_bool.lua:16: expected: false, actual: 0">
                 <![CDATA[stack traceback:
 	spec/lua/test_params_pass_bool.lua:16: in upvalue 'TestParamsPassBool.test_params_pass_bool']]></failure>
@@ -359,7 +363,7 @@
         </testcase>
         <testcase classname="TestRepeatUntilSized" name="TestRepeatUntilSized.test_repeat_until_sized" time="0.000">
         </testcase>
-        <testcase classname="TestStrEncodings" name="TestStrEncodings.test_str_encodings" time="0.001">
+        <testcase classname="TestStrEncodings" name="TestStrEncodings.test_str_encodings" time="0.002">
             <error type="../runtime/lua/string_decode.lua:42: Encoding SJIS not supported">
                 <![CDATA[stack traceback:
 	../runtime/lua/string_decode.lua:42: in function 'string_decode.decode'
@@ -452,7 +456,7 @@
         </testcase>
         <testcase classname="TestValidFailEqInt" name="TestValidFailEqInt.test_valid_fail_eq_int" time="0.000">
         </testcase>
-        <testcase classname="TestValidFailExpr" name="TestValidFailExpr.test_valid_fail_expr" time="0.008">
+        <testcase classname="TestValidFailExpr" name="TestValidFailExpr.test_valid_fail_expr" time="0.009">
             <failure type="spec/lua/run_test_suite.lua:18: spec/lua/test_valid_fail_expr.lua:5: module &apos;valid_fail_expr&apos; not found:
 	no field package.preload[&apos;valid_fail_expr&apos;]
 	no file &apos;../runtime/lua/valid_fail_expr.lua&apos;
@@ -483,7 +487,7 @@
         </testcase>
         <testcase classname="TestValidFailRangeStr" name="TestValidFailRangeStr.test_valid_fail_range_str" time="0.000">
         </testcase>
-        <testcase classname="TestValidLong" name="TestValidLong.test_valid_long" time="0.001">
+        <testcase classname="TestValidLong" name="TestValidLong.test_valid_long" time="0.002">
             <error type="compiled/lua/valid_long.lua:45: not equal, expected 1.844674407371e+19, but got -1">
                 <![CDATA[stack traceback:
 	compiled/lua/valid_long.lua:45: in method '_read'
