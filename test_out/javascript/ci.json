@@ -6,7 +6,7 @@
   },
   "BcdUserTypeLe": {
     "status": "passed",
-    "elapsed": 0.003,
+    "elapsed": 0.002,
     "is_kst": true
   },
   "BitsByteAligned": {
@@ -22,6 +22,24 @@
   "BitsSeqEndianCombo": {
     "status": "passed",
     "elapsed": 0.001,
+    "is_kst": true
+  },
+  "BitsSignedB32Le": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "BitsSignedB64Le": {
+    "status": "failed",
+    "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": null,
+      "trace": [
+        "readBitsIntLe: the maximum supported bit length is 32 (tried to read 63 bits)\nError: readBitsIntLe: the maximum supported bit length is 32 (tried to read 63 bits)\n    at Object.KaitaiStream.readBitsIntLe (/home/travis/build/kaitai-io/ci_targets/runtime/javascript/KaitaiStream.js:461:11)\n    at BitsSignedB64Le._read (/home/travis/build/kaitai-io/ci_targets/compiled/javascript/BitsSignedB64Le.js:21:26)\n    at new BitsSignedB64Le (/home/travis/build/kaitai-io/ci_targets/compiled/javascript/BitsSignedB64Le.js:18:10)\n    at /home/travis/build/kaitai-io/ci_targets/tests/helpers/javascript/testHelper.js:14:17\n    at FSReqWrap.readFileAfterClose [as oncomplete] (fs.js:380:3)"
+      ]
+    },
     "is_kst": true
   },
   "BitsSimple": {
@@ -77,7 +95,7 @@
   },
   "CombineBool": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "CombineBytes": {
@@ -92,7 +110,7 @@
   },
   "CombineStr": {
     "status": "passed",
-    "elapsed": 0.002,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "Debug0": {
@@ -109,11 +127,11 @@
   },
   "DebugSwitchUser": {
     "status": "passed",
-    "elapsed": 0.001
+    "elapsed": 0.002
   },
   "DefaultBigEndian": {
     "status": "passed",
-    "elapsed": 0.002,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "DefaultBitEndianMod": {
@@ -133,32 +151,32 @@
   },
   "DefaultEndianExprIsBe": {
     "status": "passed",
-    "elapsed": 0.002,
+    "elapsed": 0.006,
     "is_kst": true
   },
   "DefaultEndianExprIsLe": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.002,
     "is_kst": true
   },
   "DefaultEndianMod": {
     "status": "passed",
-    "elapsed": 0.005,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "Docstrings": {
     "status": "passed",
-    "elapsed": 0.004,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "DocstringsDocref": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "DocstringsDocrefMulti": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "Enum0": {
@@ -197,7 +215,7 @@
   },
   "EnumImport": {
     "status": "failed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "failure": {
       "file_name": null,
       "line_num": null,
@@ -210,17 +228,17 @@
   },
   "EnumIntRangeS": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "EnumIntRangeU": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "EnumInvalid": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "EnumLongRangeS": {
@@ -258,7 +276,7 @@
   },
   "EnumToIClassBorder1": {
     "status": "passed",
-    "elapsed": 0.002,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "EofExceptionBytes": {
@@ -268,7 +286,7 @@
   },
   "EofExceptionU4": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "EosExceptionBytes": {
@@ -293,7 +311,7 @@
   },
   "Expr2": {
     "status": "passed",
-    "elapsed": 0.002,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "Expr3": {
@@ -303,12 +321,12 @@
   },
   "ExprArray": {
     "status": "passed",
-    "elapsed": 0.002,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "ExprBits": {
     "status": "passed",
-    "elapsed": 0.002,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "ExprBytesCmp": {
@@ -318,7 +336,7 @@
   },
   "ExprBytesLiteral": {
     "status": "failed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "failure": {
       "file_name": null,
       "line_num": null,
@@ -331,7 +349,7 @@
   },
   "ExprBytesOps": {
     "status": "passed",
-    "elapsed": 0.002,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "ExprCalcArrayOps": {
@@ -346,7 +364,7 @@
   },
   "ExprIfIntOps": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "ExprIntDiv": {
@@ -356,7 +374,7 @@
   },
   "ExprIoEof": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.002,
     "is_kst": true
   },
   "ExprIoPos": {
@@ -366,7 +384,7 @@
   },
   "ExprMod": {
     "status": "passed",
-    "elapsed": 0.003,
+    "elapsed": 0.002,
     "is_kst": true
   },
   "ExprOpsParens": {
@@ -384,12 +402,12 @@
   },
   "ExprSizeofType0": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "ExprSizeofType1": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "ExprSizeofValue0": {
@@ -409,7 +427,7 @@
   },
   "FixedContents": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "FixedStruct": {
@@ -419,7 +437,7 @@
   },
   "FloatToI": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.004,
     "is_kst": true
   },
   "FloatingPoints": {
@@ -429,7 +447,7 @@
   },
   "HelloWorld": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "IfInstances": {
@@ -444,7 +462,7 @@
   },
   "IfValues": {
     "status": "passed",
-    "elapsed": 0.003,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "Imports0": {
@@ -462,7 +480,7 @@
   },
   "ImportsAbsRel": {
     "status": "passed",
-    "elapsed": 0.001
+    "elapsed": 0.002
   },
   "ImportsCircularA": {
     "status": "failed",
@@ -479,22 +497,22 @@
   },
   "ImportsRel1": {
     "status": "passed",
-    "elapsed": 0.002,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "IndexSizes": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "IndexToParamEos": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.002,
     "is_kst": true
   },
   "IndexToParamExpr": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "IndexToParamUntil": {
@@ -514,7 +532,7 @@
   },
   "InstanceStdArray": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.002,
     "is_kst": true
   },
   "InstanceUserArray": {
@@ -524,7 +542,7 @@
   },
   "Integers": {
     "status": "passed",
-    "elapsed": 0.002,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "IntegersDoubleOverflow": {
@@ -570,7 +588,7 @@
   },
   "MetaXref": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "MultipleUse": {
@@ -585,7 +603,7 @@
   },
   "NavParent2": {
     "status": "passed",
-    "elapsed": 0.002,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "NavParent3": {
@@ -600,7 +618,7 @@
   },
   "NavParentFalse2": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "NavParentOverride": {
@@ -615,7 +633,7 @@
   },
   "NavParentSwitchCast": {
     "status": "passed",
-    "elapsed": 0.002,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "NavParentVsValueInst": {
@@ -625,17 +643,17 @@
   },
   "NavRoot": {
     "status": "passed",
-    "elapsed": 0.002,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "NestedSameName": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.002,
     "is_kst": true
   },
   "NestedSameName2": {
     "status": "passed",
-    "elapsed": 0.002,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "NestedTypeParam": {
@@ -655,12 +673,12 @@
   },
   "NestedTypes3": {
     "status": "passed",
-    "elapsed": 0.002,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "NonStandard": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "OpaqueExternalType": {
@@ -669,7 +687,7 @@
   },
   "OpaqueExternalType02Parent": {
     "status": "passed",
-    "elapsed": 0.002
+    "elapsed": 0.001
   },
   "OpaqueWithParam": {
     "status": "passed",
@@ -681,12 +699,12 @@
   },
   "ParamsCallExtraParens": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "ParamsCallShort": {
     "status": "passed",
-    "elapsed": 0.002,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "ParamsDef": {
@@ -700,7 +718,7 @@
   },
   "ParamsPassArrayInt": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.005,
     "is_kst": true
   },
   "ParamsPassArrayStr": {
@@ -710,12 +728,12 @@
   },
   "ParamsPassArrayStruct": {
     "status": "passed",
-    "elapsed": 0.002,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "ParamsPassArrayUsertype": {
     "status": "passed",
-    "elapsed": 0.006,
+    "elapsed": 0.002,
     "is_kst": true
   },
   "ParamsPassBool": {
@@ -730,7 +748,7 @@
   },
   "ParamsPassUsertype": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "PositionAbs": {
@@ -740,12 +758,12 @@
   },
   "PositionInSeq": {
     "status": "passed",
-    "elapsed": 0.002,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "PositionToEnd": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "ProcessCoerceBytes": {
@@ -765,22 +783,22 @@
   },
   "ProcessCoerceUsertype2": {
     "status": "passed",
-    "elapsed": 0.002,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "ProcessCustom": {
     "status": "passed",
-    "elapsed": 0.002,
+    "elapsed": 0.004,
     "is_kst": true
   },
   "ProcessCustomNoArgs": {
     "status": "passed",
-    "elapsed": 0.004,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "ProcessRepeatBytes": {
     "status": "passed",
-    "elapsed": 0.002,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "ProcessRepeatUsertype": {
@@ -840,12 +858,12 @@
   },
   "RepeatNStruct": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "RepeatNStrz": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "RepeatNStrzDouble": {
@@ -855,12 +873,12 @@
   },
   "RepeatUntilCalcArrayType": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.002,
     "is_kst": true
   },
   "RepeatUntilComplex": {
     "status": "passed",
-    "elapsed": 0.002,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "RepeatUntilS4": {
@@ -875,7 +893,7 @@
   },
   "StrEncodings": {
     "status": "passed",
-    "elapsed": 0.024,
+    "elapsed": 0.023,
     "is_kst": true
   },
   "StrEncodingsDefault": {
@@ -899,12 +917,12 @@
   },
   "StrPadTerm": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "StrPadTermEmpty": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "SwitchBytearray": {
@@ -914,7 +932,7 @@
   },
   "SwitchCast": {
     "status": "passed",
-    "elapsed": 0.001
+    "elapsed": 0.002
   },
   "SwitchElseOnly": {
     "status": "passed",
@@ -928,7 +946,7 @@
   },
   "SwitchIntegers2": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "SwitchManualEnum": {
@@ -948,7 +966,7 @@
   },
   "SwitchManualInt": {
     "status": "passed",
-    "elapsed": 0.002,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "SwitchManualIntElse": {
@@ -958,7 +976,7 @@
   },
   "SwitchManualIntSize": {
     "status": "passed",
-    "elapsed": 0.002,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "SwitchManualIntSizeElse": {
@@ -968,30 +986,30 @@
   },
   "SwitchManualIntSizeEos": {
     "status": "passed",
-    "elapsed": 0.001
+    "elapsed": 0.002
   },
   "SwitchManualStr": {
-    "status": "passed",
-    "elapsed": 0.002,
-    "is_kst": true
-  },
-  "SwitchManualStrElse": {
     "status": "passed",
     "elapsed": 0.001,
     "is_kst": true
   },
-  "SwitchMultiBoolOps": {
-    "status": "passed",
-    "elapsed": 0.001
-  },
-  "SwitchRepeatExpr": {
+  "SwitchManualStrElse": {
     "status": "passed",
     "elapsed": 0.002,
     "is_kst": true
   },
+  "SwitchMultiBoolOps": {
+    "status": "passed",
+    "elapsed": 0.002
+  },
+  "SwitchRepeatExpr": {
+    "status": "passed",
+    "elapsed": 0.001,
+    "is_kst": true
+  },
   "SwitchRepeatExprInvalid": {
     "status": "passed",
-    "elapsed": 0.002,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "TermBytes": {
@@ -1010,7 +1028,7 @@
   },
   "TsPacketHeader": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "TypeIntUnaryOp": {
@@ -1043,7 +1061,7 @@
   },
   "ValidFailContents": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "ValidFailEqBytes": {
@@ -1058,22 +1076,22 @@
   },
   "ValidFailExpr": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "ValidFailInst": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "ValidFailMaxInt": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "ValidFailMinInt": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "ValidFailRangeBytes": {
@@ -1098,7 +1116,7 @@
   },
   "ValidLong": {
     "status": "passed",
-    "elapsed": 0.002,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "ValidNotParsedIf": {
@@ -1123,7 +1141,7 @@
   },
   "ZlibSurrounded": {
     "status": "passed",
-    "elapsed": 0.004,
+    "elapsed": 0.007,
     "is_kst": true
   },
   "ZlibWithHeader78": {
@@ -1133,13 +1151,13 @@
   },
   "$meta": {
     "lang": "javascript",
-    "timestamp": "2020-09-11T17:16:16Z",
+    "timestamp": "2020-10-20T22:46:52Z",
     "ci": {
       "ci": "travis",
-      "build_id": "726355917",
-      "job_id": "726355927",
-      "job_number": "407.10",
-      "url": "https://travis-ci.org/kaitai-io/ci_targets/jobs/726355927"
+      "build_id": "737556191",
+      "job_id": "737556201",
+      "job_number": "408.10",
+      "url": "https://travis-ci.org/kaitai-io/ci_targets/jobs/737556201"
     }
   }
 }
