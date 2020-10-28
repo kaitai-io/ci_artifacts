@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="1" failures="0" file="test_bcd_user_type_le.py" name="test_bcd_user_type_le.TestBcdUserTypeLe-20201028041155" skipped="0" tests="1" time="0.001" timestamp="2020-10-28T04:11:55">
+	<testcase classname="test_bcd_user_type_le.TestBcdUserTypeLe" file="spec/construct/test_bcd_user_type_le.py" line="8" name="test_bcd_user_type_le" time="0.001" timestamp="2020-10-28T04:11:55">
+		<error message="digit8" type="AttributeError">
+<![CDATA[Traceback (most recent call last):
+  File "/home/travis/virtualenv/python3.4.6/lib/python3.4/site-packages/construct/lib/containers.py", line 100, in __getattr__
+    return self[name]
+KeyError: 'digit8'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/travis/build/kaitai-io/ci_targets/tests/spec/construct/test_bcd_user_type_le.py", line 9, in test_bcd_user_type_le
+    r = _schema.parse_file('src/bcd_user_type_le.bin')
+  File "/home/travis/virtualenv/python3.4.6/lib/python3.4/site-packages/construct/core.py", line 309, in parse_file
+    return self.parse_stream(f, **contextkw)
+  File "/home/travis/virtualenv/python3.4.6/lib/python3.4/site-packages/construct/core.py", line 300, in parse_stream
+    return self._parsereport(stream, context, "(parsing)")
+  File "/home/travis/virtualenv/python3.4.6/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.6/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.6/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.6/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.6/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.6/lib/python3.4/site-packages/construct/core.py", line 4497, in _parse
+    return self.subcon._parsereport(io.BytesIO(data), context, path)
+  File "/home/travis/virtualenv/python3.4.6/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.6/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.6/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.6/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.6/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.6/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.6/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.6/lib/python3.4/site-packages/construct/core.py", line 2576, in _parse
+    return self.func(context) if callable(self.func) else self.func
+  File "/home/travis/build/kaitai-io/ci_targets/tests/compiled/construct/bcd_user_type_le.py", line 9, in <lambda>
+    'as_int' / Computed(lambda this: ((((((((this.digit8 * 1) + (this.digit7 * 10)) + (this.digit6 * 100)) + (this.digit5 * 1000)) + (this.digit4 * 10000)) + (this.digit3 * 100000)) + (this.digit2 * 1000000)) + (this.digit1 * 10000000))),
+  File "/home/travis/virtualenv/python3.4.6/lib/python3.4/site-packages/construct/lib/containers.py", line 102, in __getattr__
+    raise AttributeError(name)
+AttributeError: digit8
+]]>		</error>
+		<system-out>
+<![CDATA[]]>		</system-out>
+		<system-err>
+<![CDATA[]]>		</system-err>
+	</testcase>
+</testsuite>
