@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="test_expr_bytes_ops.TestExprBytesOps-20201031095949" tests="1" file="test_expr_bytes_ops.py" time="0.001" timestamp="2020-10-31T09:59:49" failures="0" errors="1" skipped="0">
+	<testcase classname="test_expr_bytes_ops.TestExprBytesOps" name="test_expr_bytes_ops" time="0.001" timestamp="2020-10-31T09:59:49" file="spec/construct/test_expr_bytes_ops.py" line="8">
+		<error type="NameError" message="name 'KaitaiStream' is not defined"><![CDATA[Traceback (most recent call last):
+  File "/home/travis/build/kaitai-io/ci_targets/tests/spec/construct/test_expr_bytes_ops.py", line 9, in test_expr_bytes_ops
+    r = _schema.parse_file('src/fixed_struct.bin')
+  File "/home/travis/virtualenv/python3.9.0/lib/python3.9/site-packages/construct/core.py", line 309, in parse_file
+    return self.parse_stream(f, **contextkw)
+  File "/home/travis/virtualenv/python3.9.0/lib/python3.9/site-packages/construct/core.py", line 300, in parse_stream
+    return self._parsereport(stream, context, "(parsing)")
+  File "/home/travis/virtualenv/python3.9.0/lib/python3.9/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.9.0/lib/python3.9/site-packages/construct/core.py", line 1981, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.9.0/lib/python3.9/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.9.0/lib/python3.9/site-packages/construct/core.py", line 2439, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.9.0/lib/python3.9/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.9.0/lib/python3.9/site-packages/construct/core.py", line 2575, in _parse
+    return self.func(context) if callable(self.func) else self.func
+  File "/home/travis/build/kaitai-io/ci_targets/tests/compiled/construct/expr_bytes_ops.py", line 6, in <lambda>
+    'two_last' / Computed(lambda this: KaitaiStream.byte_array_index(this.two, -1)),
+NameError: name 'KaitaiStream' is not defined
+]]></error>
+	</testcase>
+</testsuite>
