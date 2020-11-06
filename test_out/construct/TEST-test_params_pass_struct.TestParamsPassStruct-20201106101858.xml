@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="test_params_pass_struct.TestParamsPassStruct-20201106101858" tests="1" file="test_params_pass_struct.py" time="0.001" timestamp="2020-11-06T10:18:58" failures="0" errors="1" skipped="0">
+	<testcase classname="test_params_pass_struct.TestParamsPassStruct" name="test_params_pass_struct" time="0.001" timestamp="2020-11-06T10:18:58" file="spec/construct/test_params_pass_struct.py" line="8">
+		<error type="AttributeError" message="foo"><![CDATA[Traceback (most recent call last):
+  File "/home/travis/virtualenv/python3.9.0/lib/python3.9/site-packages/construct/lib/containers.py", line 100, in __getattr__
+    return self[name]
+KeyError: 'foo'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/travis/build/kaitai-io/ci_targets/tests/spec/construct/test_params_pass_struct.py", line 13, in test_params_pass_struct
+    self.assertEqual(r.one.foo.foo, 255)
+  File "/home/travis/virtualenv/python3.9.0/lib/python3.9/site-packages/construct/lib/containers.py", line 102, in __getattr__
+    raise AttributeError(name)
+AttributeError: foo
+]]></error>
+	</testcase>
+</testsuite>
