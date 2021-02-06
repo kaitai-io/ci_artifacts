@@ -5,7 +5,7 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "/home/travis/build/kaitai-io/ci_targets/compiled/nim/bcd_user_type_be.nim(144, 21) Error: type mismatch: got <int, typeof(nil)>\nbut expected one of: \nproc `==`(a, b: Option): bool\n  first type mismatch at position: 2\n  required type for b: Option\n  but expression 'nil' is of type: typeof(nil)\nproc `==`(x, y: int): bool\n  first type mismatch at position: 2\n  required type for y: int\n  but expression 'nil' is of type: typeof(nil)\nproc `==`(x, y: int64): bool\n  first type mismatch at position: 2\n  required type for y: int64\n  but expression 'nil' is of type: typeof(nil)\nproc `==`[T: tuple | object](x, y: T): bool\n  first type mismatch at position: 2\n  required type for y: T: tuple or object\n  but expression 'nil' is of type: typeof(nil)\n25 other mismatching symbols have been suppressed; compile with --showAllMismatches:on to see them\n\nexpression: this.asIntInst == nil\n",
+      "message": "/home/travis/build/kaitai-io/ci_targets/tests/spec/nim/tests/tbcd_user_type_be.nim(4, 29) Error: cannot open file: ../../../compiled/nim/bcd_user_type_be\n",
       "trace": [
 
       ]
@@ -18,7 +18,7 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "/home/travis/build/kaitai-io/ci_targets/compiled/nim/bcd_user_type_le.nim(144, 21) Error: type mismatch: got <int, typeof(nil)>\nbut expected one of: \nproc `==`(a, b: Option): bool\n  first type mismatch at position: 2\n  required type for b: Option\n  but expression 'nil' is of type: typeof(nil)\nproc `==`(x, y: int): bool\n  first type mismatch at position: 2\n  required type for y: int\n  but expression 'nil' is of type: typeof(nil)\nproc `==`(x, y: int64): bool\n  first type mismatch at position: 2\n  required type for y: int64\n  but expression 'nil' is of type: typeof(nil)\nproc `==`[T: tuple | object](x, y: T): bool\n  first type mismatch at position: 2\n  required type for y: T: tuple or object\n  but expression 'nil' is of type: typeof(nil)\n25 other mismatching symbols have been suppressed; compile with --showAllMismatches:on to see them\n\nexpression: this.asIntInst == nil\n",
+      "message": "/home/travis/build/kaitai-io/ci_targets/tests/spec/nim/tests/tbcd_user_type_le.nim(4, 29) Error: cannot open file: ../../../compiled/nim/bcd_user_type_le\n",
       "trace": [
 
       ]
@@ -27,27 +27,27 @@
   },
   "BitsByteAligned": {
     "status": "passed",
-    "elapsed": 0.001919746398925781,
+    "elapsed": 0.002023935317993164,
     "is_kst": true
   },
   "BitsEnum": {
     "status": "passed",
-    "elapsed": 0.001701116561889648,
+    "elapsed": 0.00193333625793457,
     "is_kst": true
   },
   "BitsSeqEndianCombo": {
     "status": "passed",
-    "elapsed": 0.001755237579345703,
+    "elapsed": 0.001935005187988281,
     "is_kst": true
   },
   "BitsSignedB32Le": {
     "status": "passed",
-    "elapsed": 0.001704692840576172,
+    "elapsed": 0.001856327056884766,
     "is_kst": true
   },
   "BitsSignedB64Le": {
     "status": "passed",
-    "elapsed": 0.00168609619140625,
+    "elapsed": 0.002731800079345703,
     "is_kst": true
   },
   "BitsSimple": {
@@ -78,12 +78,12 @@
   },
   "BufferedStruct": {
     "status": "passed",
-    "elapsed": 0.001759052276611328,
+    "elapsed": 0.004184484481811523,
     "is_kst": true
   },
   "BytesPadTerm": {
     "status": "passed",
-    "elapsed": 0.001644134521484375,
+    "elapsed": 0.001809835433959961,
     "is_kst": true
   },
   "CastNested": {
@@ -101,12 +101,12 @@
   },
   "CastToImported": {
     "status": "passed",
-    "elapsed": 0.001913547515869141,
+    "elapsed": 0.001988649368286133,
     "is_kst": true
   },
   "CastToTop": {
     "status": "passed",
-    "elapsed": 0.001685380935668945,
+    "elapsed": 0.001924514770507812,
     "is_kst": true
   },
   "CombineBool": {
@@ -123,8 +123,16 @@
     "is_kst": true
   },
   "CombineBytes": {
-    "status": "passed",
-    "elapsed": 0.001703023910522461,
+    "status": "failed",
+    "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": "/home/travis/build/kaitai-io/ci_targets/tests/spec/nim/tests/tcombine_bytes.nim(4, 29) Error: cannot open file: ../../../compiled/nim/combine_bytes\n",
+      "trace": [
+
+      ]
+    },
     "is_kst": true
   },
   "CombineEnum": {
@@ -141,23 +149,31 @@
     "is_kst": true
   },
   "CombineStr": {
-    "status": "passed",
-    "elapsed": 0.001796960830688477,
+    "status": "failed",
+    "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": "/home/travis/build/kaitai-io/ci_targets/tests/spec/nim/tests/tcombine_str.nim(4, 29) Error: cannot open file: ../../../compiled/nim/combine_str\n",
+      "trace": [
+
+      ]
+    },
     "is_kst": true
   },
   "DebugSwitchUser": {
     "status": "passed",
-    "elapsed": 0.001737356185913086,
+    "elapsed": 0.001785755157470703,
     "is_kst": true
   },
   "DefaultBigEndian": {
     "status": "passed",
-    "elapsed": 0.001787424087524414,
+    "elapsed": 0.001878023147583008,
     "is_kst": true
   },
   "DefaultBitEndianMod": {
     "status": "passed",
-    "elapsed": 0.001744270324707031,
+    "elapsed": 0.00190281867980957,
     "is_kst": true
   },
   "DefaultEndianExprInherited": {
@@ -188,12 +204,12 @@
   },
   "DefaultEndianExprIsLe": {
     "status": "passed",
-    "elapsed": 0.001725196838378906,
+    "elapsed": 0.001878499984741211,
     "is_kst": true
   },
   "DefaultEndianMod": {
     "status": "passed",
-    "elapsed": 0.001696109771728516,
+    "elapsed": 0.001829624176025391,
     "is_kst": true
   },
   "Docstrings": {
@@ -224,22 +240,22 @@
   },
   "DocstringsDocrefMulti": {
     "status": "passed",
-    "elapsed": 0.001802682876586914,
+    "elapsed": 0.001828193664550781,
     "is_kst": true
   },
   "Enum0": {
     "status": "passed",
-    "elapsed": 0.001679420471191406,
+    "elapsed": 0.001886129379272461,
     "is_kst": true
   },
   "Enum1": {
     "status": "passed",
-    "elapsed": 0.001780033111572266,
+    "elapsed": 0.001871109008789062,
     "is_kst": true
   },
   "EnumDeep": {
     "status": "passed",
-    "elapsed": 0.001697540283203125,
+    "elapsed": 0.001877069473266602,
     "is_kst": true
   },
   "EnumDeepLiterals": {
@@ -257,32 +273,32 @@
   },
   "EnumFancy": {
     "status": "passed",
-    "elapsed": 0.001739501953125,
+    "elapsed": 0.00183415412902832,
     "is_kst": true
   },
   "EnumIf": {
     "status": "passed",
-    "elapsed": 0.001853704452514648,
+    "elapsed": 0.001896858215332031,
     "is_kst": true
   },
   "EnumImport": {
     "status": "passed",
-    "elapsed": 0.001700639724731445,
+    "elapsed": 0.001911401748657227,
     "is_kst": true
   },
   "EnumIntRangeS": {
     "status": "passed",
-    "elapsed": 0.001736879348754883,
+    "elapsed": 0.001767873764038086,
     "is_kst": true
   },
   "EnumIntRangeU": {
     "status": "passed",
-    "elapsed": 0.001715183258056641,
+    "elapsed": 0.001900434494018555,
     "is_kst": true
   },
   "EnumInvalid": {
     "status": "passed",
-    "elapsed": 0.001681804656982422,
+    "elapsed": 0.001874923706054688,
     "is_kst": true
   },
   "EnumLongRangeS": {
@@ -313,7 +329,7 @@
   },
   "EnumNegative": {
     "status": "passed",
-    "elapsed": 0.001884222030639648,
+    "elapsed": 0.002036094665527344,
     "is_kst": true
   },
   "EnumOfValueInst": {
@@ -348,7 +364,7 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "/home/travis/build/kaitai-io/ci_targets/compiled/nim/enum_to_i_class_border_1.nim(12, 21) Error: undeclared identifier: 'EnumToIClassBorder2'\nThis might be caused by a recursive module dependency:\n/home/travis/build/kaitai-io/ci_targets/compiled/nim/enum_to_i_class_border_2.nim imports /home/travis/build/kaitai-io/ci_targets/compiled/nim/enum_to_i_class_border_1.nim\n/home/travis/build/kaitai-io/ci_targets/compiled/nim/enum_to_i_class_border_1.nim imports /home/travis/build/kaitai-io/ci_targets/compiled/nim/enum_to_i_class_border_2.nim\n",
+      "message": "/home/travis/build/kaitai-io/ci_targets/tests/spec/nim/tests/tenum_to_i_class_border_1.nim(3, 29) Error: cannot open file: ../../../compiled/nim/enum_to_i_class_border_2\n",
       "trace": [
 
       ]
@@ -387,7 +403,7 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "/home/travis/build/kaitai-io/ci_targets/compiled/nim/expr_2.nim(62, 26) Error: type mismatch: got <int, typeof(nil)>\nbut expected one of: \nproc `==`(a, b: Option): bool\n  first type mismatch at position: 2\n  required type for b: Option\n  but expression 'nil' is of type: typeof(nil)\nproc `==`(x, y: int): bool\n  first type mismatch at position: 2\n  required type for y: int\n  but expression 'nil' is of type: typeof(nil)\nproc `==`(x, y: int64): bool\n  first type mismatch at position: 2\n  required type for y: int64\n  but expression 'nil' is of type: typeof(nil)\nproc `==`[T: tuple | object](x, y: T): bool\n  first type mismatch at position: 2\n  required type for y: T: tuple or object\n  but expression 'nil' is of type: typeof(nil)\n25 other mismatching symbols have been suppressed; compile with --showAllMismatches:on to see them\n\nexpression: this.str1LenModInst == nil\n",
+      "message": "/home/travis/build/kaitai-io/ci_targets/tests/spec/nim/tests/texpr_2.nim(4, 29) Error: cannot open file: ../../../compiled/nim/expr_2\n",
       "trace": [
 
       ]
@@ -439,7 +455,7 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "/home/travis/build/kaitai-io/ci_targets/compiled/nim/expr_bytes_cmp.nim(49, 20) Error: type mismatch: got <bool, typeof(nil)>\nbut expected one of: \nproc `==`(a, b: Option): bool\n  first type mismatch at position: 2\n  required type for b: Option\n  but expression 'nil' is of type: typeof(nil)\nproc `==`(x, y: bool): bool\n  first type mismatch at position: 2\n  required type for y: bool\n  but expression 'nil' is of type: typeof(nil)\nproc `==`[T: tuple | object](x, y: T): bool\n  first type mismatch at position: 2\n  required type for y: T: tuple or object\n  but expression 'nil' is of type: typeof(nil)\n26 other mismatching symbols have been suppressed; compile with --showAllMismatches:on to see them\n\nexpression: this.isLeInst == nil\n",
+      "message": "/home/travis/build/kaitai-io/ci_targets/tests/spec/nim/tests/texpr_bytes_cmp.nim(4, 29) Error: cannot open file: ../../../compiled/nim/expr_bytes_cmp\n",
       "trace": [
 
       ]
@@ -465,7 +481,7 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "/home/travis/build/kaitai-io/ci_targets/compiled/nim/expr_bytes_ops.nim(50, 23) Error: type mismatch: got <uint8, typeof(nil)>\nbut expected one of: \nproc `==`(a, b: Option): bool\n  first type mismatch at position: 2\n  required type for b: Option\n  but expression 'nil' is of type: typeof(nil)\nproc `==`(x, y: uint): bool\n  first type mismatch at position: 2\n  required type for y: uint\n  but expression 'nil' is of type: typeof(nil)\nproc `==`(x, y: uint16): bool\n  first type mismatch at position: 2\n  required type for y: uint16\n  but expression 'nil' is of type: typeof(nil)\nproc `==`(x, y: uint32): bool\n  first type mismatch at position: 2\n  required type for y: uint32\n  but expression 'nil' is of type: typeof(nil)\nproc `==`(x, y: uint64): bool\n  first type mismatch at position: 2\n  required type for y: uint64\n  but expression 'nil' is of type: typeof(nil)\nproc `==`(x, y: uint8): bool\n  first type mismatch at position: 2\n  required type for y: uint8\n  but expression 'nil' is of type: typeof(nil)\nproc `==`[T: tuple | object](x, y: T): bool\n  first type mismatch at position: 2\n  required type for y: T: tuple or object\n  but expression 'nil' is of type: typeof(nil)\n22 other mismatching symbols have been suppressed; compile with --showAllMismatches:on to see them\n\nexpression: this.twoLastInst == nil\n",
+      "message": "/home/travis/build/kaitai-io/ci_targets/tests/spec/nim/tests/texpr_bytes_ops.nim(4, 29) Error: cannot open file: ../../../compiled/nim/expr_bytes_ops\n",
       "trace": [
 
       ]
@@ -478,7 +494,7 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "/home/travis/build/kaitai-io/ci_targets/compiled/nim/expr_calc_array_ops.nim(71, 28) Error: type mismatch: got <int, typeof(nil)>\nbut expected one of: \nproc `==`(a, b: Option): bool\n  first type mismatch at position: 2\n  required type for b: Option\n  but expression 'nil' is of type: typeof(nil)\nproc `==`(x, y: int): bool\n  first type mismatch at position: 2\n  required type for y: int\n  but expression 'nil' is of type: typeof(nil)\nproc `==`(x, y: int64): bool\n  first type mismatch at position: 2\n  required type for y: int64\n  but expression 'nil' is of type: typeof(nil)\nproc `==`[T: tuple | object](x, y: T): bool\n  first type mismatch at position: 2\n  required type for y: T: tuple or object\n  but expression 'nil' is of type: typeof(nil)\n25 other mismatching symbols have been suppressed; compile with --showAllMismatches:on to see them\n\nexpression: this.intArraySizeInst == nil\n",
+      "message": "/home/travis/build/kaitai-io/ci_targets/tests/spec/nim/tests/texpr_calc_array_ops.nim(4, 29) Error: cannot open file: ../../../compiled/nim/expr_calc_array_ops\n",
       "trace": [
 
       ]
@@ -539,7 +555,7 @@
   },
   "ExprIoPos": {
     "status": "passed",
-    "elapsed": 0.001767635345458984,
+    "elapsed": 0.002000331878662109,
     "is_kst": true
   },
   "ExprMod": {
@@ -561,7 +577,7 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "/home/travis/build/kaitai-io/ci_targets/compiled/nim/expr_ops_parens.nim(53, 23) Error: type mismatch: got <int, typeof(nil)>\nbut expected one of: \nproc `==`(a, b: Option): bool\n  first type mismatch at position: 2\n  required type for b: Option\n  but expression 'nil' is of type: typeof(nil)\nproc `==`(x, y: int): bool\n  first type mismatch at position: 2\n  required type for y: int\n  but expression 'nil' is of type: typeof(nil)\nproc `==`(x, y: int64): bool\n  first type mismatch at position: 2\n  required type for y: int64\n  but expression 'nil' is of type: typeof(nil)\nproc `==`[T: tuple | object](x, y: T): bool\n  first type mismatch at position: 2\n  required type for y: T: tuple or object\n  but expression 'nil' is of type: typeof(nil)\n26 other mismatching symbols have been suppressed; compile with --showAllMismatches:on to see them\n\nexpression: this.boolAndInst == nil\n",
+      "message": "/home/travis/build/kaitai-io/ci_targets/tests/spec/nim/tests/texpr_ops_parens.nim(4, 29) Error: cannot open file: ../../../compiled/nim/expr_ops_parens\n",
       "trace": [
 
       ]
@@ -626,7 +642,7 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "/home/travis/build/kaitai-io/ci_targets/compiled/nim/expr_str_ops.nim(65, 21) Error: type mismatch: got <int, typeof(nil)>\nbut expected one of: \nproc `==`(a, b: Option): bool\n  first type mismatch at position: 2\n  required type for b: Option\n  but expression 'nil' is of type: typeof(nil)\nproc `==`(x, y: int): bool\n  first type mismatch at position: 2\n  required type for y: int\n  but expression 'nil' is of type: typeof(nil)\nproc `==`(x, y: int64): bool\n  first type mismatch at position: 2\n  required type for y: int64\n  but expression 'nil' is of type: typeof(nil)\nproc `==`[T: tuple | object](x, y: T): bool\n  first type mismatch at position: 2\n  required type for y: T: tuple or object\n  but expression 'nil' is of type: typeof(nil)\n26 other mismatching symbols have been suppressed; compile with --showAllMismatches:on to see them\n\nexpression: this.toIR8Inst == nil\n",
+      "message": "/home/travis/build/kaitai-io/ci_targets/tests/spec/nim/tests/texpr_str_ops.nim(4, 29) Error: cannot open file: ../../../compiled/nim/expr_str_ops\n",
       "trace": [
 
       ]
@@ -635,12 +651,12 @@
   },
   "FixedContents": {
     "status": "passed",
-    "elapsed": 0.001698970794677734,
+    "elapsed": 0.001873493194580078,
     "is_kst": true
   },
   "FixedStruct": {
     "status": "passed",
-    "elapsed": 0.00167536735534668,
+    "elapsed": 0.001901149749755859,
     "is_kst": true
   },
   "FloatToI": {
@@ -649,7 +665,7 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "/home/travis/build/kaitai-io/ci_targets/compiled/nim/float_to_i.nim(47, 23) Error: type mismatch: got <int, typeof(nil)>\nbut expected one of: \nproc `==`(a, b: Option): bool\n  first type mismatch at position: 2\n  required type for b: Option\n  but expression 'nil' is of type: typeof(nil)\nproc `==`(x, y: int): bool\n  first type mismatch at position: 2\n  required type for y: int\n  but expression 'nil' is of type: typeof(nil)\nproc `==`(x, y: int64): bool\n  first type mismatch at position: 2\n  required type for y: int64\n  but expression 'nil' is of type: typeof(nil)\nproc `==`[T: tuple | object](x, y: T): bool\n  first type mismatch at position: 2\n  required type for y: T: tuple or object\n  but expression 'nil' is of type: typeof(nil)\n25 other mismatching symbols have been suppressed; compile with --showAllMismatches:on to see them\n\nexpression: this.float2IInst == nil\n",
+      "message": "/home/travis/build/kaitai-io/ci_targets/tests/spec/nim/tests/tfloat_to_i.nim(4, 29) Error: cannot open file: ../../../compiled/nim/float_to_i\n",
       "trace": [
 
       ]
@@ -671,7 +687,7 @@
   },
   "HelloWorld": {
     "status": "passed",
-    "elapsed": 0.001717567443847656,
+    "elapsed": 0.001883983612060547,
     "is_kst": true
   },
   "IfInstances": {
@@ -689,7 +705,7 @@
   },
   "IfStruct": {
     "status": "passed",
-    "elapsed": 0.001769542694091797,
+    "elapsed": 0.001958608627319336,
     "is_kst": true
   },
   "IfValues": {
@@ -724,7 +740,7 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "/home/travis/build/kaitai-io/ci_targets/compiled/nim/vlq_base128_le.nim(65, 19) Error: type mismatch: got <int, typeof(nil)>\nbut expected one of: \nproc `==`(a, b: Option): bool\n  first type mismatch at position: 2\n  required type for b: Option\n  but expression 'nil' is of type: typeof(nil)\nproc `==`(x, y: int): bool\n  first type mismatch at position: 2\n  required type for y: int\n  but expression 'nil' is of type: typeof(nil)\nproc `==`(x, y: int64): bool\n  first type mismatch at position: 2\n  required type for y: int64\n  but expression 'nil' is of type: typeof(nil)\nproc `==`[T: tuple | object](x, y: T): bool\n  first type mismatch at position: 2\n  required type for y: T: tuple or object\n  but expression 'nil' is of type: typeof(nil)\n25 other mismatching symbols have been suppressed; compile with --showAllMismatches:on to see them\n\nexpression: this.lenInst == nil\n",
+      "message": "/home/travis/build/kaitai-io/ci_targets/tests/spec/nim/tests/timports_abs.nim(3, 29) Error: cannot open file: ../../../compiled/nim/vlq_base128_le\n",
       "trace": [
 
       ]
@@ -759,47 +775,47 @@
   },
   "IndexSizes": {
     "status": "passed",
-    "elapsed": 0.001875162124633789,
+    "elapsed": 0.001949548721313477,
     "is_kst": true
   },
   "IndexToParamEos": {
     "status": "passed",
-    "elapsed": 0.001811742782592773,
+    "elapsed": 0.001947164535522461,
     "is_kst": true
   },
   "IndexToParamExpr": {
     "status": "passed",
-    "elapsed": 0.001768112182617188,
+    "elapsed": 0.002028226852416992,
     "is_kst": true
   },
   "IndexToParamUntil": {
     "status": "passed",
-    "elapsed": 0.001837730407714844,
+    "elapsed": 0.002086400985717773,
     "is_kst": true
   },
   "InstanceIoUser": {
     "status": "passed",
-    "elapsed": 0.001814603805541992,
+    "elapsed": 0.001971721649169922,
     "is_kst": true
   },
   "InstanceStd": {
     "status": "passed",
-    "elapsed": 0.001753568649291992,
+    "elapsed": 0.001953601837158203,
     "is_kst": true
   },
   "InstanceStdArray": {
     "status": "passed",
-    "elapsed": 0.001682281494140625,
+    "elapsed": 0.002083778381347656,
     "is_kst": true
   },
   "InstanceUserArray": {
     "status": "passed",
-    "elapsed": 0.001730442047119141,
+    "elapsed": 0.001944541931152344,
     "is_kst": true
   },
   "Integers": {
     "status": "passed",
-    "elapsed": 0.001860618591308594,
+    "elapsed": 0.002061128616333008,
     "is_kst": true
   },
   "IntegersDoubleOverflow": {
@@ -817,7 +833,7 @@
   },
   "IntegersMinMax": {
     "status": "passed",
-    "elapsed": 0.001677989959716797,
+    "elapsed": 0.001858711242675781,
     "is_kst": true
   },
   "IoLocalVar": {
@@ -848,52 +864,52 @@
   },
   "MetaTags": {
     "status": "passed",
-    "elapsed": 0.00171661376953125,
+    "elapsed": 0.001869916915893555,
     "is_kst": true
   },
   "MetaXref": {
     "status": "passed",
-    "elapsed": 0.001736640930175781,
+    "elapsed": 0.001822471618652344,
     "is_kst": true
   },
   "MultipleUse": {
     "status": "passed",
-    "elapsed": 0.001662731170654297,
+    "elapsed": 0.001863241195678711,
     "is_kst": true
   },
   "NavParent": {
     "status": "passed",
-    "elapsed": 0.001794099807739258,
+    "elapsed": 0.001989126205444336,
     "is_kst": true
   },
   "NavParent2": {
     "status": "passed",
-    "elapsed": 0.001736879348754883,
+    "elapsed": 0.001964569091796875,
     "is_kst": true
   },
   "NavParent3": {
     "status": "passed",
-    "elapsed": 0.001823902130126953,
+    "elapsed": 0.001981973648071289,
     "is_kst": true
   },
   "NavParentFalse": {
     "status": "passed",
-    "elapsed": 0.001672029495239258,
+    "elapsed": 0.001874685287475586,
     "is_kst": true
   },
   "NavParentFalse2": {
     "status": "passed",
-    "elapsed": 0.001817226409912109,
+    "elapsed": 0.001977682113647461,
     "is_kst": true
   },
   "NavParentOverride": {
     "status": "passed",
-    "elapsed": 0.001771926879882812,
+    "elapsed": 0.001890420913696289,
     "is_kst": true
   },
   "NavParentSwitch": {
     "status": "passed",
-    "elapsed": 0.00170135498046875,
+    "elapsed": 0.00187373161315918,
     "is_kst": true
   },
   "NavParentSwitchCast": {
@@ -924,37 +940,37 @@
   },
   "NavRoot": {
     "status": "passed",
-    "elapsed": 0.001743078231811523,
+    "elapsed": 0.001928329467773438,
     "is_kst": true
   },
   "NestedSameName": {
     "status": "passed",
-    "elapsed": 0.001788616180419922,
+    "elapsed": 0.001903057098388672,
     "is_kst": true
   },
   "NestedSameName2": {
     "status": "passed",
-    "elapsed": 0.001748800277709961,
+    "elapsed": 0.001869916915893555,
     "is_kst": true
   },
   "NestedTypeParam": {
     "status": "passed",
-    "elapsed": 0.001796483993530273,
+    "elapsed": 0.00194549560546875,
     "is_kst": true
   },
   "NestedTypes": {
     "status": "passed",
-    "elapsed": 0.001675605773925781,
+    "elapsed": 0.00188446044921875,
     "is_kst": true
   },
   "NestedTypes2": {
     "status": "passed",
-    "elapsed": 0.001676082611083984,
+    "elapsed": 0.001905918121337891,
     "is_kst": true
   },
   "NestedTypes3": {
     "status": "passed",
-    "elapsed": 0.001714706420898438,
+    "elapsed": 0.001862287521362305,
     "is_kst": true
   },
   "NestedTypesImported": {
@@ -985,12 +1001,12 @@
   },
   "ParamsCallExtraParens": {
     "status": "passed",
-    "elapsed": 0.001863479614257812,
+    "elapsed": 0.001982927322387695,
     "is_kst": true
   },
   "ParamsCallShort": {
     "status": "passed",
-    "elapsed": 0.001776933670043945,
+    "elapsed": 0.002078771591186523,
     "is_kst": true
   },
   "ParamsEnum": {
@@ -1021,17 +1037,17 @@
   },
   "ParamsPassArrayStr": {
     "status": "passed",
-    "elapsed": 0.001805305480957031,
+    "elapsed": 0.001967430114746094,
     "is_kst": true
   },
   "ParamsPassArrayStruct": {
     "status": "passed",
-    "elapsed": 0.001776456832885742,
+    "elapsed": 0.00194239616394043,
     "is_kst": true
   },
   "ParamsPassArrayUsertype": {
     "status": "passed",
-    "elapsed": 0.00171208381652832,
+    "elapsed": 0.001832485198974609,
     "is_kst": true
   },
   "ParamsPassBool": {
@@ -1049,32 +1065,32 @@
   },
   "ParamsPassStruct": {
     "status": "passed",
-    "elapsed": 0.001731157302856445,
+    "elapsed": 0.002039432525634766,
     "is_kst": true
   },
   "ParamsPassUsertype": {
     "status": "passed",
-    "elapsed": 0.001779317855834961,
+    "elapsed": 0.001885175704956055,
     "is_kst": true
   },
   "PositionAbs": {
     "status": "passed",
-    "elapsed": 0.001794099807739258,
+    "elapsed": 0.00199127197265625,
     "is_kst": true
   },
   "PositionInSeq": {
     "status": "passed",
-    "elapsed": 0.001816272735595703,
+    "elapsed": 0.001930713653564453,
     "is_kst": true
   },
   "PositionToEnd": {
     "status": "passed",
-    "elapsed": 0.001722812652587891,
+    "elapsed": 0.001824140548706055,
     "is_kst": true
   },
   "ProcessCoerceBytes": {
     "status": "passed",
-    "elapsed": 0.001751899719238281,
+    "elapsed": 0.001918554306030273,
     "is_kst": true
   },
   "ProcessCoerceSwitch": {
@@ -1092,12 +1108,12 @@
   },
   "ProcessCoerceUsertype1": {
     "status": "passed",
-    "elapsed": 0.001818656921386719,
+    "elapsed": 0.001934051513671875,
     "is_kst": true
   },
   "ProcessCoerceUsertype2": {
     "status": "passed",
-    "elapsed": 0.001768112182617188,
+    "elapsed": 0.001927614212036133,
     "is_kst": true
   },
   "ProcessCustom": {
@@ -1128,7 +1144,7 @@
   },
   "ProcessRepeatBytes": {
     "status": "passed",
-    "elapsed": 0.001704692840576172,
+    "elapsed": 0.001993417739868164,
     "is_kst": true
   },
   "ProcessRepeatUsertype": {
@@ -1146,142 +1162,142 @@
   },
   "ProcessRotate": {
     "status": "passed",
-    "elapsed": 0.001828432083129883,
+    "elapsed": 0.001911640167236328,
     "is_kst": true
   },
   "ProcessToUser": {
     "status": "passed",
-    "elapsed": 0.001858234405517578,
+    "elapsed": 0.001923799514770508,
     "is_kst": true
   },
   "ProcessXor4Const": {
     "status": "passed",
-    "elapsed": 0.001746892929077148,
+    "elapsed": 0.00179290771484375,
     "is_kst": true
   },
   "ProcessXor4Value": {
     "status": "passed",
-    "elapsed": 0.001760244369506836,
+    "elapsed": 0.002025842666625977,
     "is_kst": true
   },
   "ProcessXorConst": {
     "status": "passed",
-    "elapsed": 0.001804351806640625,
+    "elapsed": 0.001901626586914062,
     "is_kst": true
   },
   "ProcessXorValue": {
     "status": "passed",
-    "elapsed": 0.001721620559692383,
+    "elapsed": 0.00176548957824707,
     "is_kst": true
   },
   "RecursiveOne": {
     "status": "passed",
-    "elapsed": 0.001807689666748047,
+    "elapsed": 0.001996994018554688,
     "is_kst": true
   },
   "RepeatEosBit": {
     "status": "passed",
-    "elapsed": 0.001755475997924805,
+    "elapsed": 0.001832246780395508,
     "is_kst": true
   },
   "RepeatEosStruct": {
     "status": "passed",
-    "elapsed": 0.00182342529296875,
+    "elapsed": 0.001816034317016602,
     "is_kst": true
   },
   "RepeatEosU4": {
     "status": "passed",
-    "elapsed": 0.001753330230712891,
+    "elapsed": 0.001890182495117188,
     "is_kst": true
   },
   "RepeatNStruct": {
     "status": "passed",
-    "elapsed": 0.001745700836181641,
+    "elapsed": 0.001955032348632812,
     "is_kst": true
   },
   "RepeatNStrz": {
     "status": "passed",
-    "elapsed": 0.001838207244873047,
+    "elapsed": 0.001921653747558594,
     "is_kst": true
   },
   "RepeatNStrzDouble": {
     "status": "passed",
-    "elapsed": 0.001867532730102539,
+    "elapsed": 0.001996278762817383,
     "is_kst": true
   },
   "RepeatUntilCalcArrayType": {
     "status": "passed",
-    "elapsed": 0.001721620559692383,
+    "elapsed": 0.00184178352355957,
     "is_kst": true
   },
   "RepeatUntilComplex": {
     "status": "passed",
-    "elapsed": 0.001964569091796875,
+    "elapsed": 0.001886129379272461,
     "is_kst": true
   },
   "RepeatUntilS4": {
     "status": "passed",
-    "elapsed": 0.001848220825195312,
+    "elapsed": 0.001944303512573242,
     "is_kst": true
   },
   "RepeatUntilSized": {
     "status": "passed",
-    "elapsed": 0.001840591430664062,
+    "elapsed": 0.001977443695068359,
     "is_kst": true
   },
   "StrEncodings": {
     "status": "passed",
-    "elapsed": 0.004927396774291992,
+    "elapsed": 0.004717111587524414,
     "is_kst": true
   },
   "StrEncodingsDefault": {
     "status": "passed",
-    "elapsed": 0.002033233642578125,
+    "elapsed": 0.001960277557373047,
     "is_kst": true
   },
   "StrEos": {
     "status": "passed",
-    "elapsed": 0.001801967620849609,
+    "elapsed": 0.001986980438232422,
     "is_kst": true
   },
   "StrLiterals2": {
     "status": "passed",
-    "elapsed": 0.001738548278808594,
+    "elapsed": 0.001857519149780273,
     "is_kst": true
   },
   "StrPadTerm": {
     "status": "passed",
-    "elapsed": 0.001794815063476562,
+    "elapsed": 0.001912117004394531,
     "is_kst": true
   },
   "StrPadTermEmpty": {
     "status": "passed",
-    "elapsed": 0.001914262771606445,
+    "elapsed": 0.001939773559570312,
     "is_kst": true
   },
   "SwitchBytearray": {
     "status": "passed",
-    "elapsed": 0.001934289932250977,
+    "elapsed": 0.002060890197753906,
     "is_kst": true
   },
   "SwitchElseOnly": {
     "status": "passed",
-    "elapsed": 0.001706600189208984,
+    "elapsed": 0.001819372177124023,
     "is_kst": true
   },
   "SwitchIntegers": {
     "status": "passed",
-    "elapsed": 0.001778364181518555,
+    "elapsed": 0.001846551895141602,
     "is_kst": true
   },
   "SwitchIntegers2": {
     "status": "passed",
-    "elapsed": 0.00173497200012207,
+    "elapsed": 0.001852273941040039,
     "is_kst": true
   },
   "SwitchManualEnum": {
     "status": "passed",
-    "elapsed": 0.001773834228515625,
+    "elapsed": 0.001957893371582031,
     "is_kst": true
   },
   "SwitchManualEnumInvalid": {
@@ -1312,12 +1328,12 @@
   },
   "SwitchManualInt": {
     "status": "passed",
-    "elapsed": 0.001819610595703125,
+    "elapsed": 0.001892566680908203,
     "is_kst": true
   },
   "SwitchManualIntElse": {
     "status": "passed",
-    "elapsed": 0.001899003982543945,
+    "elapsed": 0.001894235610961914,
     "is_kst": true
   },
   "SwitchManualIntSize": {
@@ -1348,12 +1364,12 @@
   },
   "SwitchManualStr": {
     "status": "passed",
-    "elapsed": 0.001801729202270508,
+    "elapsed": 0.002172470092773438,
     "is_kst": true
   },
   "SwitchManualStrElse": {
     "status": "passed",
-    "elapsed": 0.001918554306030273,
+    "elapsed": 0.001986980438232422,
     "is_kst": true
   },
   "SwitchRepeatExpr": {
@@ -1384,17 +1400,17 @@
   },
   "TermBytes": {
     "status": "passed",
-    "elapsed": 0.001748323440551758,
+    "elapsed": 0.001943588256835938,
     "is_kst": true
   },
   "TermStrz": {
     "status": "passed",
-    "elapsed": 0.001996994018554688,
+    "elapsed": 0.001966714859008789,
     "is_kst": true
   },
   "TsPacketHeader": {
     "status": "passed",
-    "elapsed": 0.001699209213256836,
+    "elapsed": 0.001789093017578125,
     "is_kst": true
   },
   "TypeIntUnaryOp": {
@@ -1429,7 +1445,7 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "/home/travis/build/kaitai-io/ci_targets/compiled/nim/type_ternary_2nd_falsy.nim(70, 26) Error: type mismatch: got <float64, typeof(nil)>\nbut expected one of: \nproc `==`(a, b: Option): bool\n  first type mismatch at position: 2\n  required type for b: Option\n  but expression 'nil' is of type: typeof(nil)\nproc `==`(x, y: float): bool\n  first type mismatch at position: 2\n  required type for y: float\n  but expression 'nil' is of type: typeof(nil)\nproc `==`(x, y: float32): bool\n  first type mismatch at position: 2\n  required type for y: float32\n  but expression 'nil' is of type: typeof(nil)\nproc `==`[T: tuple | object](x, y: T): bool\n  first type mismatch at position: 2\n  required type for y: T: tuple or object\n  but expression 'nil' is of type: typeof(nil)\n25 other mismatching symbols have been suppressed; compile with --showAllMismatches:on to see them\n\nexpression: this.vFloatZeroInst == nil\n",
+      "message": "/home/travis/build/kaitai-io/ci_targets/tests/spec/nim/tests/ttype_ternary_2nd_falsy.nim(4, 29) Error: cannot open file: ../../../compiled/nim/type_ternary_2nd_falsy\n",
       "trace": [
 
       ]
@@ -1438,27 +1454,27 @@
   },
   "UserType": {
     "status": "passed",
-    "elapsed": 0.001706361770629883,
+    "elapsed": 0.001863479614257812,
     "is_kst": true
   },
   "ValidLong": {
     "status": "passed",
-    "elapsed": 0.001844167709350586,
+    "elapsed": 0.002021551132202148,
     "is_kst": true
   },
   "ValidNotParsedIf": {
     "status": "passed",
-    "elapsed": 0.001816272735595703,
+    "elapsed": 0.002130985260009766,
     "is_kst": true
   },
   "ValidShort": {
     "status": "passed",
-    "elapsed": 0.001816749572753906,
+    "elapsed": 0.002037286758422852,
     "is_kst": true
   },
   "ValidSwitch": {
     "status": "passed",
-    "elapsed": 0.001800298690795898,
+    "elapsed": 0.002008199691772461,
     "is_kst": true
   },
   "YamlInts": {
@@ -1502,13 +1518,13 @@
   },
   "$meta": {
     "lang": "nim",
-    "timestamp": "2020-11-17T21:44:11Z",
+    "timestamp": "2021-02-06T14:48:15Z",
     "ci": {
       "ci": "travis",
-      "build_id": "202232417",
-      "job_id": "441932696",
-      "job_number": "427.30",
-      "url": "https://travis-ci.com/kaitai-io/ci_targets/jobs/441932696"
+      "build_id": "216294417",
+      "job_id": "480967093",
+      "job_number": "429.30",
+      "url": "https://travis-ci.com/kaitai-io/ci_targets/jobs/480967093"
     }
   }
 }
