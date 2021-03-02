@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="1" failures="0" file="test_index_to_param_until.py" name="test_index_to_param_until.TestIndexToParamUntil-20210302195815" skipped="0" tests="1" time="0.001" timestamp="2021-03-02T19:58:15">
+	<testcase classname="test_index_to_param_until.TestIndexToParamUntil" file="spec/construct/test_index_to_param_until.py" line="8" name="test_index_to_param_until" time="0.001" timestamp="2021-03-02T19:58:15">
+		<error message="list indices must be integers, not Path" type="TypeError">
+<![CDATA[Traceback (most recent call last):
+  File "/home/travis/build/kaitai-io/ci_targets/tests/spec/construct/test_index_to_param_until.py", line 9, in test_index_to_param_until
+    r = _schema.parse_file('src/index_sizes.bin')
+  File "/home/travis/virtualenv/python2.7.14/lib/python2.7/site-packages/construct/core.py", line 309, in parse_file
+    return self.parse_stream(f, **contextkw)
+  File "/home/travis/virtualenv/python2.7.14/lib/python2.7/site-packages/construct/core.py", line 300, in parse_stream
+    return self._parsereport(stream, context, "(parsing)")
+  File "/home/travis/virtualenv/python2.7.14/lib/python2.7/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python2.7.14/lib/python2.7/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python2.7.14/lib/python2.7/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python2.7.14/lib/python2.7/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python2.7.14/lib/python2.7/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python2.7.14/lib/python2.7/site-packages/construct/core.py", line 2362, in _parse
+    e = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python2.7.14/lib/python2.7/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python2.7.14/lib/python2.7/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python2.7.14/lib/python2.7/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python2.7.14/lib/python2.7/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python2.7.14/lib/python2.7/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python2.7.14/lib/python2.7/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python2.7.14/lib/python2.7/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python2.7.14/lib/python2.7/site-packages/construct/core.py", line 4489, in _parse
+    length = evaluate(self.length, context)
+  File "/home/travis/virtualenv/python2.7.14/lib/python2.7/site-packages/construct/core.py", line 197, in evaluate
+    return param(context) if callable(param) else param
+  File "/home/travis/virtualenv/python2.7.14/lib/python2.7/site-packages/construct/expr.py", line 188, in __call__
+    return self.__parent(obj)[self.__field]
+TypeError: list indices must be integers, not Path
+]]>		</error>
+		<system-out>
+<![CDATA[]]>		</system-out>
+		<system-err>
+<![CDATA[]]>		</system-err>
+	</testcase>
+</testsuite>
