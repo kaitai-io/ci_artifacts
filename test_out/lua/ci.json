@@ -228,7 +228,7 @@
   },
   "EnumToIClassBorder1": {
     "status": "failed",
-    "elapsed": 0.001,
+    "elapsed": 0.002,
     "failure": {
       "file_name": null,
       "line_num": null,
@@ -285,7 +285,7 @@
   },
   "ExprBytesLiteral": {
     "status": "failed",
-    "elapsed": 0.017,
+    "elapsed": 0.012,
     "failure": {
       "file_name": null,
       "line_num": null,
@@ -357,6 +357,17 @@
   "ExprSizeofValueSized": {
     "status": "passed",
     "elapsed": 0.0,
+    "is_kst": true
+  },
+  "ExprStrEncodings": {
+    "status": "failed",
+    "elapsed": 0.002,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": "../runtime/lua/string_decode.lua:42: Encoding SJIS not supported",
+      "trace": "stack traceback:\n\t../runtime/lua/string_decode.lua:42: in function 'string_decode.decode'\n\tcompiled/lua/expr_str_encodings.lua:24: in method '_read'\n\tcompiled/lua/expr_str_encodings.lua:15: in local 'init'\n\t../runtime/lua/class.lua:70: in function <../runtime/lua/class.lua:66>\n\t(...tail calls...)\n\tspec/lua/test_expr_str_encodings.lua:10: in upvalue 'TestExprStrEncodings.test_expr_str_encodings'"
+    },
     "is_kst": true
   },
   "ExprStrOps": {
@@ -839,7 +850,7 @@
   },
   "StrEncodings": {
     "status": "failed",
-    "elapsed": 0.001,
+    "elapsed": 0.003,
     "failure": {
       "file_name": null,
       "line_num": null,
@@ -1012,6 +1023,17 @@
     "elapsed": 0.0,
     "is_kst": true
   },
+  "ValidEqStrEncodings": {
+    "status": "failed",
+    "elapsed": 0.002,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": "../runtime/lua/string_decode.lua:42: Encoding SJIS not supported",
+      "trace": "stack traceback:\n\t../runtime/lua/string_decode.lua:42: in function 'string_decode.decode'\n\tcompiled/lua/valid_eq_str_encodings.lua:30: in method '_read'\n\tcompiled/lua/valid_eq_str_encodings.lua:15: in local 'init'\n\t../runtime/lua/class.lua:70: in function <../runtime/lua/class.lua:66>\n\t(...tail calls...)\n\tspec/lua/test_valid_eq_str_encodings.lua:10: in upvalue 'TestValidEqStrEncodings.test_valid_eq_str_encodings'"
+    },
+    "is_kst": true
+  },
   "ValidFailAnyofInt": {
     "status": "passed",
     "elapsed": 0.0,
@@ -1028,6 +1050,11 @@
     "is_kst": true
   },
   "ValidFailEqInt": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "ValidFailEqStr": {
     "status": "passed",
     "elapsed": 0.0,
     "is_kst": true
@@ -1139,13 +1166,13 @@
   },
   "$meta": {
     "lang": "lua",
-    "timestamp": "2021-04-03T17:37:28Z",
+    "timestamp": "2021-07-01T22:26:51Z",
     "ci": {
       "ci": "travis",
-      "build_id": "222071533",
-      "job_id": "495872567",
-      "job_number": "431.27",
-      "url": "https://travis-ci.com/kaitai-io/ci_targets/jobs/495872567"
+      "build_id": "231569755",
+      "job_id": "521035659",
+      "job_number": "432.27",
+      "url": "https://travis-ci.com/kaitai-io/ci_targets/jobs/521035659"
     }
   }
 }
