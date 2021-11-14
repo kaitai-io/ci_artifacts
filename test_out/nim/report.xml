@@ -1,362 +1,46 @@
 <testsuites>
-  <testsuite tests="187" failures="0" errors="77" name="nim">
-    <testcase time="0.00000000" name="tbcd_user_type_be">
-      <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/bcd_user_type_be.nim(144, 21) Error: type mismatch: got &lt;int, typeof(nil)&gt;
-but expected one of:
-proc `==`(x, y: int): bool
-  first type mismatch at position: 2
-  required type for y: int
-  but expression 'nil' is of type: typeof(nil)
-proc `==`(x, y: int64): bool
-  first type mismatch at position: 2
-  required type for y: int64
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T: tuple | object](x, y: T): bool
-  first type mismatch at position: 2
-  required type for y: T: tuple or object
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T](a, b: Option[T]): bool
-  first type mismatch at position: 2
-  required type for b: Option[==.T]
-  but expression 'nil' is of type: typeof(nil)
-25 other mismatching symbols have been suppressed; compile with --showAllMismatches:on to see them
-
-expression: this.asIntInst == nil
-" />
-    </testcase>
-    <testcase time="0.00000000" name="tbcd_user_type_le">
-      <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/bcd_user_type_le.nim(144, 21) Error: type mismatch: got &lt;int, typeof(nil)&gt;
-but expected one of:
-proc `==`(x, y: int): bool
-  first type mismatch at position: 2
-  required type for y: int
-  but expression 'nil' is of type: typeof(nil)
-proc `==`(x, y: int64): bool
-  first type mismatch at position: 2
-  required type for y: int64
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T: tuple | object](x, y: T): bool
-  first type mismatch at position: 2
-  required type for y: T: tuple or object
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T](a, b: Option[T]): bool
-  first type mismatch at position: 2
-  required type for b: Option[==.T]
-  but expression 'nil' is of type: typeof(nil)
-25 other mismatching symbols have been suppressed; compile with --showAllMismatches:on to see them
-
-expression: this.asIntInst == nil
-" />
-    </testcase>
+  <testsuite tests="187" failures="1" errors="31" name="nim">
+    <testcase time="0.001772403717041016" name="tbcd_user_type_be" />
+    <testcase time="0.001735925674438477" name="tbcd_user_type_le" />
     <testcase time="0.00000000" name="tbits_byte_aligned">
       <failure message="/home/travis/build/kaitai-io/ci_targets/tests/spec/nim/tbits_byte_aligned.nim(15, 22) Error: number out of range: '1'u8'
 " />
     </testcase>
-    <testcase time="0.001363754272460938" name="tbits_enum" />
-    <testcase time="0.001361846923828125" name="tbits_seq_endian_combo" />
-    <testcase time="0.00130009651184082" name="tbits_signed_b32_le" />
-    <testcase time="0.001335382461547852" name="tbits_signed_b64_le" />
-    <testcase time="0.00000000" name="tbits_simple">
-      <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/bits_simple.nim(63, 24) Error: type mismatch: got &lt;int8, typeof(nil)&gt;
-but expected one of:
-proc `==`(x, y: int): bool
-  first type mismatch at position: 2
-  required type for y: int
-  but expression 'nil' is of type: typeof(nil)
-proc `==`(x, y: int16): bool
-  first type mismatch at position: 2
-  required type for y: int16
-  but expression 'nil' is of type: typeof(nil)
-proc `==`(x, y: int32): bool
-  first type mismatch at position: 2
-  required type for y: int32
-  but expression 'nil' is of type: typeof(nil)
-proc `==`(x, y: int64): bool
-  first type mismatch at position: 2
-  required type for y: int64
-  but expression 'nil' is of type: typeof(nil)
-proc `==`(x, y: int8): bool
-  first type mismatch at position: 2
-  required type for y: int8
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T: tuple | object](x, y: T): bool
-  first type mismatch at position: 2
-  required type for y: T: tuple or object
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T](a, b: Option[T]): bool
-  first type mismatch at position: 2
-  required type for b: Option[==.T]
-  but expression 'nil' is of type: typeof(nil)
-22 other mismatching symbols have been suppressed; compile with --showAllMismatches:on to see them
-
-expression: this.testIfB1Inst == nil
-" />
-    </testcase>
-    <testcase time="0.00000000" name="tbits_simple_le">
-      <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/bits_simple_le.nim(63, 24) Error: type mismatch: got &lt;int8, typeof(nil)&gt;
-but expected one of:
-proc `==`(x, y: int): bool
-  first type mismatch at position: 2
-  required type for y: int
-  but expression 'nil' is of type: typeof(nil)
-proc `==`(x, y: int16): bool
-  first type mismatch at position: 2
-  required type for y: int16
-  but expression 'nil' is of type: typeof(nil)
-proc `==`(x, y: int32): bool
-  first type mismatch at position: 2
-  required type for y: int32
-  but expression 'nil' is of type: typeof(nil)
-proc `==`(x, y: int64): bool
-  first type mismatch at position: 2
-  required type for y: int64
-  but expression 'nil' is of type: typeof(nil)
-proc `==`(x, y: int8): bool
-  first type mismatch at position: 2
-  required type for y: int8
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T: tuple | object](x, y: T): bool
-  first type mismatch at position: 2
-  required type for y: T: tuple or object
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T](a, b: Option[T]): bool
-  first type mismatch at position: 2
-  required type for b: Option[==.T]
-  but expression 'nil' is of type: typeof(nil)
-22 other mismatching symbols have been suppressed; compile with --showAllMismatches:on to see them
-
-expression: this.testIfB1Inst == nil
-" />
-    </testcase>
-    <testcase time="0.001349687576293945" name="tbuffered_struct" />
-    <testcase time="0.001325368881225586" name="tbytes_pad_term" />
-    <testcase time="0.00000000" name="tcast_nested">
-      <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/cast_nested.nim(73, 32) Error: type mismatch: got &lt;uint8, typeof(nil)&gt;
-but expected one of:
-proc `==`(x, y: uint): bool
-  first type mismatch at position: 2
-  required type for y: uint
-  but expression 'nil' is of type: typeof(nil)
-proc `==`(x, y: uint16): bool
-  first type mismatch at position: 2
-  required type for y: uint16
-  but expression 'nil' is of type: typeof(nil)
-proc `==`(x, y: uint32): bool
-  first type mismatch at position: 2
-  required type for y: uint32
-  but expression 'nil' is of type: typeof(nil)
-proc `==`(x, y: uint64): bool
-  first type mismatch at position: 2
-  required type for y: uint64
-  but expression 'nil' is of type: typeof(nil)
-proc `==`(x, y: uint8): bool
-  first type mismatch at position: 2
-  required type for y: uint8
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T: tuple | object](x, y: T): bool
-  first type mismatch at position: 2
-  required type for y: T: tuple or object
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T](a, b: Option[T]): bool
-  first type mismatch at position: 2
-  required type for b: Option[==.T]
-  but expression 'nil' is of type: typeof(nil)
-22 other mismatching symbols have been suppressed; compile with --showAllMismatches:on to see them
-
-expression: this.opcodes1IntValueInst == nil
-" />
-    </testcase>
-    <testcase time="0.001323223114013672" name="tcast_to_imported" />
-    <testcase time="0.001333475112915039" name="tcast_to_top" />
-    <testcase time="0.00000000" name="tcombine_bool">
-      <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/combine_bool.nim(28, 24) Error: type mismatch: got &lt;bool, typeof(nil)&gt;
-but expected one of:
-proc `==`(x, y: bool): bool
-  first type mismatch at position: 2
-  required type for y: bool
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T: tuple | object](x, y: T): bool
-  first type mismatch at position: 2
-  required type for y: T: tuple or object
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T](a, b: Option[T]): bool
-  first type mismatch at position: 2
-  required type for b: Option[==.T]
-  but expression 'nil' is of type: typeof(nil)
-26 other mismatching symbols have been suppressed; compile with --showAllMismatches:on to see them
-
-expression: this.boolCalcInst == nil
-" />
-    </testcase>
-    <testcase time="0.001420497894287109" name="tcombine_bytes" />
-    <testcase time="0.00000000" name="tcombine_enum">
-      <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/combine_enum.nim(32, 24) Error: type mismatch: got &lt;CombineEnum_Animal, typeof(nil)&gt;
-but expected one of:
-proc `==`[Enum: enum](x, y: Enum): bool
-  first type mismatch at position: 2
-  required type for y: Enum: enum
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T: tuple | object](x, y: T): bool
-  first type mismatch at position: 2
-  required type for y: T: tuple or object
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T](a, b: Option[T]): bool
-  first type mismatch at position: 2
-  required type for b: Option[==.T]
-  but expression 'nil' is of type: typeof(nil)
-26 other mismatching symbols have been suppressed; compile with --showAllMismatches:on to see them
-
-expression: this.enumU4U2Inst == nil
-" />
-    </testcase>
-    <testcase time="0.001398324966430664" name="tcombine_str" />
-    <testcase time="0.001335859298706055" name="tdebug_switch_user" />
-    <testcase time="0.001295089721679688" name="tdefault_big_endian" />
-    <testcase time="0.001298666000366211" name="tdefault_bit_endian_mod" />
-    <testcase time="0.00000000" name="tdefault_endian_expr_inherited">
-      <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/default_endian_expr_inherited.nim(168, 24) Error: type mismatch: got &lt;uint32, typeof(nil)&gt;
-but expected one of:
-proc `==`(x, y: uint): bool
-  first type mismatch at position: 2
-  required type for y: uint
-  but expression 'nil' is of type: typeof(nil)
-proc `==`(x, y: uint32): bool
-  first type mismatch at position: 2
-  required type for y: uint32
-  but expression 'nil' is of type: typeof(nil)
-proc `==`(x, y: uint64): bool
-  first type mismatch at position: 2
-  required type for y: uint64
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T: tuple | object](x, y: T): bool
-  first type mismatch at position: 2
-  required type for y: T: tuple or object
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T](a, b: Option[T]): bool
-  first type mismatch at position: 2
-  required type for b: Option[==.T]
-  but expression 'nil' is of type: typeof(nil)
-24 other mismatching symbols have been suppressed; compile with --showAllMismatches:on to see them
-
-expression: this.someInstInst == nil
-" />
-    </testcase>
-    <testcase time="0.00000000" name="tdefault_endian_expr_is_be">
-      <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/default_endian_expr_is_be.nim(109, 23) Error: type mismatch: got &lt;uint32, typeof(nil)&gt;
-but expected one of:
-proc `==`(x, y: uint): bool
-  first type mismatch at position: 2
-  required type for y: uint
-  but expression 'nil' is of type: typeof(nil)
-proc `==`(x, y: uint32): bool
-  first type mismatch at position: 2
-  required type for y: uint32
-  but expression 'nil' is of type: typeof(nil)
-proc `==`(x, y: uint64): bool
-  first type mismatch at position: 2
-  required type for y: uint64
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T: tuple | object](x, y: T): bool
-  first type mismatch at position: 2
-  required type for y: T: tuple or object
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T](a, b: Option[T]): bool
-  first type mismatch at position: 2
-  required type for b: Option[==.T]
-  but expression 'nil' is of type: typeof(nil)
-24 other mismatching symbols have been suppressed; compile with --showAllMismatches:on to see them
-
-expression: this.instIntInst == nil
-" />
-    </testcase>
-    <testcase time="0.001395225524902344" name="tdefault_endian_expr_is_le" />
-    <testcase time="0.001306295394897461" name="tdefault_endian_mod" />
-    <testcase time="0.00000000" name="tdocstrings">
-      <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/docstrings.nim(43, 19) Error: type mismatch: got &lt;uint8, typeof(nil)&gt;
-but expected one of:
-proc `==`(x, y: uint): bool
-  first type mismatch at position: 2
-  required type for y: uint
-  but expression 'nil' is of type: typeof(nil)
-proc `==`(x, y: uint16): bool
-  first type mismatch at position: 2
-  required type for y: uint16
-  but expression 'nil' is of type: typeof(nil)
-proc `==`(x, y: uint32): bool
-  first type mismatch at position: 2
-  required type for y: uint32
-  but expression 'nil' is of type: typeof(nil)
-proc `==`(x, y: uint64): bool
-  first type mismatch at position: 2
-  required type for y: uint64
-  but expression 'nil' is of type: typeof(nil)
-proc `==`(x, y: uint8): bool
-  first type mismatch at position: 2
-  required type for y: uint8
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T: tuple | object](x, y: T): bool
-  first type mismatch at position: 2
-  required type for y: T: tuple or object
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T](a, b: Option[T]): bool
-  first type mismatch at position: 2
-  required type for b: Option[==.T]
-  but expression 'nil' is of type: typeof(nil)
-22 other mismatching symbols have been suppressed; compile with --showAllMismatches:on to see them
-
-expression: this.twoInst == nil
-" />
-    </testcase>
-    <testcase time="0.00000000" name="tdocstrings_docref">
-      <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/docstrings_docref.nim(56, 19) Error: type mismatch: got &lt;bool, typeof(nil)&gt;
-but expected one of:
-proc `==`(x, y: bool): bool
-  first type mismatch at position: 2
-  required type for y: bool
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T: tuple | object](x, y: T): bool
-  first type mismatch at position: 2
-  required type for y: T: tuple or object
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T](a, b: Option[T]): bool
-  first type mismatch at position: 2
-  required type for b: Option[==.T]
-  but expression 'nil' is of type: typeof(nil)
-26 other mismatching symbols have been suppressed; compile with --showAllMismatches:on to see them
-
-expression: this.fooInst == nil
-" />
-    </testcase>
-    <testcase time="0.001310825347900391" name="tdocstrings_docref_multi" />
-    <testcase time="0.001309871673583984" name="tenum_0" />
-    <testcase time="0.001314878463745117" name="tenum_1" />
-    <testcase time="0.001346588134765625" name="tenum_deep" />
-    <testcase time="0.00000000" name="tenum_deep_literals">
-      <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/enum_deep_literals.nim(45, 24) Error: type mismatch: got &lt;bool, typeof(nil)&gt;
-but expected one of:
-proc `==`(x, y: bool): bool
-  first type mismatch at position: 2
-  required type for y: bool
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T: tuple | object](x, y: T): bool
-  first type mismatch at position: 2
-  required type for y: T: tuple or object
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T](a, b: Option[T]): bool
-  first type mismatch at position: 2
-  required type for b: Option[==.T]
-  but expression 'nil' is of type: typeof(nil)
-26 other mismatching symbols have been suppressed; compile with --showAllMismatches:on to see them
-
-expression: this.isPet1OkInst == nil
-" />
-    </testcase>
-    <testcase time="0.001310110092163086" name="tenum_fancy" />
-    <testcase time="0.001482725143432617" name="tenum_if" />
-    <testcase time="0.001355409622192383" name="tenum_import" />
-    <testcase time="0.001318216323852539" name="tenum_int_range_s" />
-    <testcase time="0.001424074172973633" name="tenum_int_range_u" />
-    <testcase time="0.00133204460144043" name="tenum_invalid" />
+    <testcase time="0.001630783081054688" name="tbits_enum" />
+    <testcase time="0.001586198806762695" name="tbits_seq_endian_combo" />
+    <testcase time="0.001502752304077148" name="tbits_signed_b32_le" />
+    <testcase time="0.001578092575073242" name="tbits_signed_b64_le" />
+    <testcase time="0.001727581024169922" name="tbits_simple" />
+    <testcase time="0.001558065414428711" name="tbits_simple_le" />
+    <testcase time="0.001572132110595703" name="tbuffered_struct" />
+    <testcase time="0.001520872116088867" name="tbytes_pad_term" />
+    <testcase time="0.001703739166259766" name="tcast_nested" />
+    <testcase time="0.001556634902954102" name="tcast_to_imported" />
+    <testcase time="0.001516103744506836" name="tcast_to_top" />
+    <testcase time="0.001528501510620117" name="tcombine_bool" />
+    <testcase time="0.001601696014404297" name="tcombine_bytes" />
+    <testcase time="0.001556158065795898" name="tcombine_enum" />
+    <testcase time="0.001764535903930664" name="tcombine_str" />
+    <testcase time="0.001552820205688477" name="tdebug_switch_user" />
+    <testcase time="0.001524209976196289" name="tdefault_big_endian" />
+    <testcase time="0.001580238342285156" name="tdefault_bit_endian_mod" />
+    <testcase time="0.001623153686523438" name="tdefault_endian_expr_inherited" />
+    <testcase time="0.001527070999145508" name="tdefault_endian_expr_is_be" />
+    <testcase time="0.001569032669067383" name="tdefault_endian_expr_is_le" />
+    <testcase time="0.001544952392578125" name="tdefault_endian_mod" />
+    <testcase time="0.001551628112792969" name="tdocstrings" />
+    <testcase time="0.001494169235229492" name="tdocstrings_docref" />
+    <testcase time="0.001508951187133789" name="tdocstrings_docref_multi" />
+    <testcase time="0.00159764289855957" name="tenum_0" />
+    <testcase time="0.001509428024291992" name="tenum_1" />
+    <testcase time="0.00150752067565918" name="tenum_deep" />
+    <testcase time="0.001564264297485352" name="tenum_deep_literals" />
+    <testcase time="0.001555681228637695" name="tenum_fancy" />
+    <testcase time="0.001530647277832031" name="tenum_if" />
+    <testcase time="0.001703500747680664" name="tenum_import" />
+    <testcase time="0.001627683639526367" name="tenum_int_range_s" />
+    <testcase time="0.001579999923706055" name="tenum_int_range_u" />
+    <testcase time="0.001500606536865234" name="tenum_invalid" />
     <testcase time="0.00000000" name="tenum_long_range_s">
       <failure message="fatal.nim(53)            sysFatal
 Error: unhandled exception: over- or underflow [OverflowDefect]
@@ -367,53 +51,11 @@ Error: unhandled exception: over- or underflow [OverflowDefect]
 Error: unhandled exception: over- or underflow [OverflowDefect]
 " />
     </testcase>
-    <testcase time="0.001328229904174805" name="tenum_negative" />
-    <testcase time="0.00000000" name="tenum_of_value_inst">
-      <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/enum_of_value_inst.nim(35, 20) Error: type mismatch: got &lt;EnumOfValueInst_Animal, typeof(nil)&gt;
-but expected one of:
-proc `==`[Enum: enum](x, y: Enum): bool
-  first type mismatch at position: 2
-  required type for y: Enum: enum
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T: tuple | object](x, y: T): bool
-  first type mismatch at position: 2
-  required type for y: T: tuple or object
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T](a, b: Option[T]): bool
-  first type mismatch at position: 2
-  required type for b: Option[==.T]
-  but expression 'nil' is of type: typeof(nil)
-26 other mismatching symbols have been suppressed; compile with --showAllMismatches:on to see them
-
-expression: this.pet3Inst == nil
-" />
-    </testcase>
-    <testcase time="0.00000000" name="tenum_to_i">
-      <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/enum_to_i.nim(41, 21) Error: type mismatch: got &lt;int, typeof(nil)&gt;
-but expected one of:
-proc `==`(x, y: int): bool
-  first type mismatch at position: 2
-  required type for y: int
-  but expression 'nil' is of type: typeof(nil)
-proc `==`(x, y: int64): bool
-  first type mismatch at position: 2
-  required type for y: int64
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T: tuple | object](x, y: T): bool
-  first type mismatch at position: 2
-  required type for y: T: tuple or object
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T](a, b: Option[T]): bool
-  first type mismatch at position: 2
-  required type for b: Option[==.T]
-  but expression 'nil' is of type: typeof(nil)
-25 other mismatching symbols have been suppressed; compile with --showAllMismatches:on to see them
-
-expression: this.pet1IInst == nil
-" />
-    </testcase>
+    <testcase time="0.001544475555419922" name="tenum_negative" />
+    <testcase time="0.001540422439575195" name="tenum_of_value_inst" />
+    <testcase time="0.00153803825378418" name="tenum_to_i" />
     <testcase time="0.00000000" name="tenum_to_i_class_border_1">
-      <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/enum_to_i_class_border_1.nim(12, 21) Error: undeclared identifier: 'EnumToIClassBorder2'
+      <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/enum_to_i_class_border_1.nim(13, 20) Error: undeclared identifier: 'EnumToIClassBorder2'
 candidates (edit distance, scope distance); see '--spellSuggest': 
  (1, 0): 'EnumToIClassBorder1' [type declared in /home/travis/build/kaitai-io/ci_targets/compiled/nim/enum_to_i_class_border_1.nim(7, 3)]
  (1, 0): 'enum_to_i_class_border_2' [module declared in /home/travis/build/kaitai-io/ci_targets/compiled/nim/enum_to_i_class_border_1.nim(5, 8)]
@@ -422,164 +64,14 @@ This might be caused by a recursive module dependency:
 /home/travis/build/kaitai-io/ci_targets/compiled/nim/enum_to_i_class_border_1.nim imports /home/travis/build/kaitai-io/ci_targets/compiled/nim/enum_to_i_class_border_2.nim
 " />
     </testcase>
-    <testcase time="0.00000000" name="texpr_0">
-      <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/expr_0.nim(28, 24) Error: type mismatch: got &lt;int, typeof(nil)&gt;
-but expected one of:
-proc `==`(x, y: int): bool
-  first type mismatch at position: 2
-  required type for y: int
-  but expression 'nil' is of type: typeof(nil)
-proc `==`(x, y: int64): bool
-  first type mismatch at position: 2
-  required type for y: int64
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T: tuple | object](x, y: T): bool
-  first type mismatch at position: 2
-  required type for y: T: tuple or object
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T](a, b: Option[T]): bool
-  first type mismatch at position: 2
-  required type for b: Option[==.T]
-  but expression 'nil' is of type: typeof(nil)
-25 other mismatching symbols have been suppressed; compile with --showAllMismatches:on to see them
-
-expression: this.mustBeF7Inst == nil
-" />
-    </testcase>
-    <testcase time="0.00000000" name="texpr_1">
-      <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/expr_1.nim(31, 25) Error: type mismatch: got &lt;int, typeof(nil)&gt;
-but expected one of:
-proc `==`(x, y: int): bool
-  first type mismatch at position: 2
-  required type for y: int
-  but expression 'nil' is of type: typeof(nil)
-proc `==`(x, y: int64): bool
-  first type mismatch at position: 2
-  required type for y: int64
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T: tuple | object](x, y: T): bool
-  first type mismatch at position: 2
-  required type for y: T: tuple or object
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T](a, b: Option[T]): bool
-  first type mismatch at position: 2
-  required type for b: Option[==.T]
-  but expression 'nil' is of type: typeof(nil)
-25 other mismatching symbols have been suppressed; compile with --showAllMismatches:on to see them
-
-expression: this.lenOf1ModInst == nil
-" />
-    </testcase>
-    <testcase time="0.00000000" name="texpr_2">
-      <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/expr_2.nim(62, 26) Error: type mismatch: got &lt;int, typeof(nil)&gt;
-but expected one of:
-proc `==`(x, y: int): bool
-  first type mismatch at position: 2
-  required type for y: int
-  but expression 'nil' is of type: typeof(nil)
-proc `==`(x, y: int64): bool
-  first type mismatch at position: 2
-  required type for y: int64
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T: tuple | object](x, y: T): bool
-  first type mismatch at position: 2
-  required type for y: T: tuple or object
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T](a, b: Option[T]): bool
-  first type mismatch at position: 2
-  required type for b: Option[==.T]
-  but expression 'nil' is of type: typeof(nil)
-25 other mismatching symbols have been suppressed; compile with --showAllMismatches:on to see them
-
-expression: this.str1LenModInst == nil
-" />
-    </testcase>
-    <testcase time="0.00000000" name="texpr_3">
-      <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/expr_3.nim(55, 23) Error: type mismatch: got &lt;bool, typeof(nil)&gt;
-but expected one of:
-proc `==`(x, y: bool): bool
-  first type mismatch at position: 2
-  required type for y: bool
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T: tuple | object](x, y: T): bool
-  first type mismatch at position: 2
-  required type for y: T: tuple or object
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T](a, b: Option[T]): bool
-  first type mismatch at position: 2
-  required type for b: Option[==.T]
-  but expression 'nil' is of type: typeof(nil)
-26 other mismatching symbols have been suppressed; compile with --showAllMismatches:on to see them
-
-expression: this.isStrGeInst == nil
-" />
-    </testcase>
-    <testcase time="0.00000000" name="texpr_array">
-      <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/expr_array.nim(63, 25) Error: type mismatch: got &lt;uint32, typeof(nil)&gt;
-but expected one of:
-proc `==`(x, y: uint): bool
-  first type mismatch at position: 2
-  required type for y: uint
-  but expression 'nil' is of type: typeof(nil)
-proc `==`(x, y: uint32): bool
-  first type mismatch at position: 2
-  required type for y: uint32
-  but expression 'nil' is of type: typeof(nil)
-proc `==`(x, y: uint64): bool
-  first type mismatch at position: 2
-  required type for y: uint64
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T: tuple | object](x, y: T): bool
-  first type mismatch at position: 2
-  required type for y: T: tuple or object
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T](a, b: Option[T]): bool
-  first type mismatch at position: 2
-  required type for b: Option[==.T]
-  but expression 'nil' is of type: typeof(nil)
-24 other mismatching symbols have been suppressed; compile with --showAllMismatches:on to see them
-
-expression: this.aintFirstInst == nil
-" />
-    </testcase>
-    <testcase time="0.00000000" name="texpr_bits">
-      <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/expr_bits.nim(56, 24) Error: type mismatch: got &lt;ExprBits_Items, typeof(nil)&gt;
-but expected one of:
-proc `==`[Enum: enum](x, y: Enum): bool
-  first type mismatch at position: 2
-  required type for y: Enum: enum
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T: tuple | object](x, y: T): bool
-  first type mismatch at position: 2
-  required type for y: T: tuple or object
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T](a, b: Option[T]): bool
-  first type mismatch at position: 2
-  required type for b: Option[==.T]
-  but expression 'nil' is of type: typeof(nil)
-26 other mismatching symbols have been suppressed; compile with --showAllMismatches:on to see them
-
-expression: this.enumInstInst == nil
-" />
-    </testcase>
+    <testcase time="0.001627445220947266" name="texpr_0" />
+    <testcase time="0.00153803825378418" name="texpr_1" />
+    <testcase time="0.001808881759643555" name="texpr_2" />
+    <testcase time="0.001646280288696289" name="texpr_3" />
+    <testcase time="0.001603603363037109" name="texpr_array" />
+    <testcase time="0.001585960388183594" name="texpr_bits" />
     <testcase time="0.00000000" name="texpr_bytes_cmp">
-      <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/expr_bytes_cmp.nim(49, 20) Error: type mismatch: got &lt;bool, typeof(nil)&gt;
-but expected one of:
-proc `==`(x, y: bool): bool
-  first type mismatch at position: 2
-  required type for y: bool
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T: tuple | object](x, y: T): bool
-  first type mismatch at position: 2
-  required type for y: T: tuple or object
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T](a, b: Option[T]): bool
-  first type mismatch at position: 2
-  required type for b: Option[==.T]
-  but expression 'nil' is of type: typeof(nil)
-26 other mismatching symbols have been suppressed; compile with --showAllMismatches:on to see them
-
-expression: this.isLeInst == nil
+      <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/expr_bytes_cmp.nim(126, 36) Error: number out of range: '112'u8'
 " />
     </testcase>
     <testcase time="0.00000000" name="texpr_bytes_literal">
@@ -587,492 +79,44 @@ expression: this.isLeInst == nil
 " />
     </testcase>
     <testcase time="0.00000000" name="texpr_bytes_ops">
-      <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/expr_bytes_ops.nim(50, 23) Error: type mismatch: got &lt;uint8, typeof(nil)&gt;
-but expected one of:
-proc `==`(x, y: uint): bool
-  first type mismatch at position: 2
-  required type for y: uint
-  but expression 'nil' is of type: typeof(nil)
-proc `==`(x, y: uint16): bool
-  first type mismatch at position: 2
-  required type for y: uint16
-  but expression 'nil' is of type: typeof(nil)
-proc `==`(x, y: uint32): bool
-  first type mismatch at position: 2
-  required type for y: uint32
-  but expression 'nil' is of type: typeof(nil)
-proc `==`(x, y: uint64): bool
-  first type mismatch at position: 2
-  required type for y: uint64
-  but expression 'nil' is of type: typeof(nil)
-proc `==`(x, y: uint8): bool
-  first type mismatch at position: 2
-  required type for y: uint8
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T: tuple | object](x, y: T): bool
-  first type mismatch at position: 2
-  required type for y: T: tuple or object
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T](a, b: Option[T]): bool
-  first type mismatch at position: 2
-  required type for b: Option[==.T]
-  but expression 'nil' is of type: typeof(nil)
-22 other mismatching symbols have been suppressed; compile with --showAllMismatches:on to see them
-
-expression: this.twoLastInst == nil
+      <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/expr_bytes_ops.nim(105, 41) Error: number out of range: '1'u8'
 " />
     </testcase>
-    <testcase time="0.00000000" name="texpr_calc_array_ops">
-      <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/expr_calc_array_ops.nim(71, 28) Error: type mismatch: got &lt;int, typeof(nil)&gt;
-but expected one of:
-proc `==`(x, y: int): bool
-  first type mismatch at position: 2
-  required type for y: int
-  but expression 'nil' is of type: typeof(nil)
-proc `==`(x, y: int64): bool
-  first type mismatch at position: 2
-  required type for y: int64
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T: tuple | object](x, y: T): bool
-  first type mismatch at position: 2
-  required type for y: T: tuple or object
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T](a, b: Option[T]): bool
-  first type mismatch at position: 2
-  required type for b: Option[==.T]
-  but expression 'nil' is of type: typeof(nil)
-25 other mismatching symbols have been suppressed; compile with --showAllMismatches:on to see them
-
-expression: this.intArraySizeInst == nil
+    <testcase time="0.001537322998046875" name="texpr_calc_array_ops" />
+    <testcase time="0.001444578170776367" name="texpr_enum" />
+    <testcase time="0.001557588577270508" name="texpr_if_int_ops" />
+    <testcase time="0.001504182815551758" name="texpr_int_div">
+      <failure message="/home/travis/build/kaitai-io/ci_targets/tests/spec/nim/texpr_int_div.nim(12) texpr_int_div
+/opt/Nim-1.6.0/lib/system/assertions.nim(38) failedAssertImpl
+/opt/Nim-1.6.0/lib/system/assertions.nim(28) raiseAssert
+/opt/Nim-1.6.0/lib/system/fatal.nim(53) sysFatal
+Error: unhandled exception: /home/travis/build/kaitai-io/ci_targets/tests/spec/nim/texpr_int_div.nim(12, 8) `r.divNegConst == int(-757)`  [AssertionDefect]
 " />
     </testcase>
-    <testcase time="0.00000000" name="texpr_enum">
-      <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/expr_enum.nim(35, 24) Error: type mismatch: got &lt;ExprEnum_Animal, typeof(nil)&gt;
-but expected one of:
-proc `==`[Enum: enum](x, y: Enum): bool
-  first type mismatch at position: 2
-  required type for y: Enum: enum
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T: tuple | object](x, y: T): bool
-  first type mismatch at position: 2
-  required type for y: T: tuple or object
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T](a, b: Option[T]): bool
-  first type mismatch at position: 2
-  required type for b: Option[==.T]
-  but expression 'nil' is of type: typeof(nil)
-26 other mismatching symbols have been suppressed; compile with --showAllMismatches:on to see them
-
-expression: this.constDogInst == nil
-" />
-    </testcase>
-    <testcase time="0.00000000" name="texpr_if_int_ops">
-      <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/expr_if_int_ops.nim(36, 24) Error: type mismatch: got &lt;bool, typeof(nil)&gt;
-but expected one of:
-proc `==`(x, y: bool): bool
-  first type mismatch at position: 2
-  required type for y: bool
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T: tuple | object](x, y: T): bool
-  first type mismatch at position: 2
-  required type for y: T: tuple or object
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T](a, b: Option[T]): bool
-  first type mismatch at position: 2
-  required type for b: Option[==.T]
-  but expression 'nil' is of type: typeof(nil)
-26 other mismatching symbols have been suppressed; compile with --showAllMismatches:on to see them
-
-expression: this.isEqPrimInst == nil
-" />
-    </testcase>
-    <testcase time="0.00000000" name="texpr_int_div">
-      <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/expr_int_div.nim(35, 27) Error: type mismatch: got &lt;int, typeof(nil)&gt;
-but expected one of:
-proc `==`(x, y: int): bool
-  first type mismatch at position: 2
-  required type for y: int
-  but expression 'nil' is of type: typeof(nil)
-proc `==`(x, y: int64): bool
-  first type mismatch at position: 2
-  required type for y: int64
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T: tuple | object](x, y: T): bool
-  first type mismatch at position: 2
-  required type for y: T: tuple or object
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T](a, b: Option[T]): bool
-  first type mismatch at position: 2
-  required type for b: Option[==.T]
-  but expression 'nil' is of type: typeof(nil)
-25 other mismatching symbols have been suppressed; compile with --showAllMismatches:on to see them
-
-expression: this.divPosConstInst == nil
-" />
-    </testcase>
-    <testcase time="0.00000000" name="texpr_io_eof">
-      <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/expr_io_eof.nim(59, 26) Error: type mismatch: got &lt;bool, typeof(nil)&gt;
-but expected one of:
-proc `==`(x, y: bool): bool
-  first type mismatch at position: 2
-  required type for y: bool
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T: tuple | object](x, y: T): bool
-  first type mismatch at position: 2
-  required type for y: T: tuple or object
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T](a, b: Option[T]): bool
-  first type mismatch at position: 2
-  required type for b: Option[==.T]
-  but expression 'nil' is of type: typeof(nil)
-26 other mismatching symbols have been suppressed; compile with --showAllMismatches:on to see them
-
-expression: this.reflectEofInst == nil
-" />
-    </testcase>
-    <testcase time="0.001412630081176758" name="texpr_io_pos" />
-    <testcase time="0.00000000" name="texpr_mod">
-      <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/expr_mod.nim(35, 27) Error: type mismatch: got &lt;int, typeof(nil)&gt;
-but expected one of:
-proc `==`(x, y: int): bool
-  first type mismatch at position: 2
-  required type for y: int
-  but expression 'nil' is of type: typeof(nil)
-proc `==`(x, y: int64): bool
-  first type mismatch at position: 2
-  required type for y: int64
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T: tuple | object](x, y: T): bool
-  first type mismatch at position: 2
-  required type for y: T: tuple or object
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T](a, b: Option[T]): bool
-  first type mismatch at position: 2
-  required type for b: Option[==.T]
-  but expression 'nil' is of type: typeof(nil)
-25 other mismatching symbols have been suppressed; compile with --showAllMismatches:on to see them
-
-expression: this.modPosConstInst == nil
-" />
-    </testcase>
-    <testcase time="0.00000000" name="texpr_ops_parens">
-      <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/expr_ops_parens.nim(53, 23) Error: type mismatch: got &lt;int, typeof(nil)&gt;
-but expected one of:
-proc `==`(x, y: int): bool
-  first type mismatch at position: 2
-  required type for y: int
-  but expression 'nil' is of type: typeof(nil)
-proc `==`(x, y: int64): bool
-  first type mismatch at position: 2
-  required type for y: int64
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T: tuple | object](x, y: T): bool
-  first type mismatch at position: 2
-  required type for y: T: tuple or object
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T](a, b: Option[T]): bool
-  first type mismatch at position: 2
-  required type for b: Option[==.T]
-  but expression 'nil' is of type: typeof(nil)
-26 other mismatching symbols have been suppressed; compile with --showAllMismatches:on to see them
-
-expression: this.boolAndInst == nil
-" />
-    </testcase>
-    <testcase time="0.00000000" name="texpr_sizeof_type_0">
-      <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/expr_sizeof_type_0.nim(29, 27) Error: type mismatch: got &lt;int, typeof(nil)&gt;
-but expected one of:
-proc `==`(x, y: int): bool
-  first type mismatch at position: 2
-  required type for y: int
-  but expression 'nil' is of type: typeof(nil)
-proc `==`(x, y: int64): bool
-  first type mismatch at position: 2
-  required type for y: int64
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T: tuple | object](x, y: T): bool
-  first type mismatch at position: 2
-  required type for y: T: tuple or object
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T](a, b: Option[T]): bool
-  first type mismatch at position: 2
-  required type for b: Option[==.T]
-  but expression 'nil' is of type: typeof(nil)
-25 other mismatching symbols have been suppressed; compile with --showAllMismatches:on to see them
-
-expression: this.sizeofBlockInst == nil
-" />
-    </testcase>
-    <testcase time="0.00000000" name="texpr_sizeof_type_1">
-      <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/expr_sizeof_type_1.nim(36, 27) Error: type mismatch: got &lt;int, typeof(nil)&gt;
-but expected one of:
-proc `==`(x, y: int): bool
-  first type mismatch at position: 2
-  required type for y: int
-  but expression 'nil' is of type: typeof(nil)
-proc `==`(x, y: int64): bool
-  first type mismatch at position: 2
-  required type for y: int64
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T: tuple | object](x, y: T): bool
-  first type mismatch at position: 2
-  required type for y: T: tuple or object
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T](a, b: Option[T]): bool
-  first type mismatch at position: 2
-  required type for b: Option[==.T]
-  but expression 'nil' is of type: typeof(nil)
-25 other mismatching symbols have been suppressed; compile with --showAllMismatches:on to see them
-
-expression: this.sizeofBlockInst == nil
-" />
-    </testcase>
-    <testcase time="0.00000000" name="texpr_sizeof_value_0">
-      <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/expr_sizeof_value_0.nim(43, 26) Error: type mismatch: got &lt;int, typeof(nil)&gt;
-but expected one of:
-proc `==`(x, y: int): bool
-  first type mismatch at position: 2
-  required type for y: int
-  but expression 'nil' is of type: typeof(nil)
-proc `==`(x, y: int64): bool
-  first type mismatch at position: 2
-  required type for y: int64
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T: tuple | object](x, y: T): bool
-  first type mismatch at position: 2
-  required type for y: T: tuple or object
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T](a, b: Option[T]): bool
-  first type mismatch at position: 2
-  required type for b: Option[==.T]
-  but expression 'nil' is of type: typeof(nil)
-25 other mismatching symbols have been suppressed; compile with --showAllMismatches:on to see them
-
-expression: this.selfSizeofInst == nil
-" />
-    </testcase>
-    <testcase time="0.00000000" name="texpr_sizeof_value_sized">
-      <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/expr_sizeof_value_sized.nim(47, 26) Error: type mismatch: got &lt;int, typeof(nil)&gt;
-but expected one of:
-proc `==`(x, y: int): bool
-  first type mismatch at position: 2
-  required type for y: int
-  but expression 'nil' is of type: typeof(nil)
-proc `==`(x, y: int64): bool
-  first type mismatch at position: 2
-  required type for y: int64
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T: tuple | object](x, y: T): bool
-  first type mismatch at position: 2
-  required type for y: T: tuple or object
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T](a, b: Option[T]): bool
-  first type mismatch at position: 2
-  required type for b: Option[==.T]
-  but expression 'nil' is of type: typeof(nil)
-25 other mismatching symbols have been suppressed; compile with --showAllMismatches:on to see them
-
-expression: this.selfSizeofInst == nil
-" />
-    </testcase>
+    <testcase time="0.001534700393676758" name="texpr_io_eof" />
+    <testcase time="0.00165867805480957" name="texpr_io_pos" />
+    <testcase time="0.001689910888671875" name="texpr_mod" />
+    <testcase time="0.001604080200195312" name="texpr_ops_parens" />
+    <testcase time="0.001528263092041016" name="texpr_sizeof_type_0" />
+    <testcase time="0.001509428024291992" name="texpr_sizeof_type_1" />
+    <testcase time="0.001527786254882812" name="texpr_sizeof_value_0" />
+    <testcase time="0.001552343368530273" name="texpr_sizeof_value_sized" />
     <testcase time="0.00000000" name="texpr_str_encodings">
-      <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/expr_str_encodings.nim(61, 63) Error: number out of range: '76'u8'
+      <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/expr_str_encodings.nim(68, 63) Error: number out of range: '76'u8'
 " />
     </testcase>
-    <testcase time="0.00000000" name="texpr_str_ops">
-      <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/expr_str_ops.nim(65, 21) Error: type mismatch: got &lt;int, typeof(nil)&gt;
-but expected one of:
-proc `==`(x, y: int): bool
-  first type mismatch at position: 2
-  required type for y: int
-  but expression 'nil' is of type: typeof(nil)
-proc `==`(x, y: int64): bool
-  first type mismatch at position: 2
-  required type for y: int64
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T: tuple | object](x, y: T): bool
-  first type mismatch at position: 2
-  required type for y: T: tuple or object
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T](a, b: Option[T]): bool
-  first type mismatch at position: 2
-  required type for b: Option[==.T]
-  but expression 'nil' is of type: typeof(nil)
-26 other mismatching symbols have been suppressed; compile with --showAllMismatches:on to see them
-
-expression: this.toIR8Inst == nil
-" />
-    </testcase>
-    <testcase time="0.001319646835327148" name="tfixed_contents" />
-    <testcase time="0.001331567764282227" name="tfixed_struct" />
-    <testcase time="0.00000000" name="tfloat_to_i">
-      <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/float_to_i.nim(47, 23) Error: type mismatch: got &lt;int, typeof(nil)&gt;
-but expected one of:
-proc `==`(x, y: int): bool
-  first type mismatch at position: 2
-  required type for y: int
-  but expression 'nil' is of type: typeof(nil)
-proc `==`(x, y: int64): bool
-  first type mismatch at position: 2
-  required type for y: int64
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T: tuple | object](x, y: T): bool
-  first type mismatch at position: 2
-  required type for y: T: tuple or object
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T](a, b: Option[T]): bool
-  first type mismatch at position: 2
-  required type for b: Option[==.T]
-  but expression 'nil' is of type: typeof(nil)
-25 other mismatching symbols have been suppressed; compile with --showAllMismatches:on to see them
-
-expression: this.float2IInst == nil
-" />
-    </testcase>
-    <testcase time="0.00000000" name="tfloating_points">
-      <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/floating_points.nim(42, 34) Error: type mismatch: got &lt;float64, typeof(nil)&gt;
-but expected one of:
-proc `==`(x, y: float): bool
-  first type mismatch at position: 2
-  required type for y: float
-  but expression 'nil' is of type: typeof(nil)
-proc `==`(x, y: float32): bool
-  first type mismatch at position: 2
-  required type for y: float32
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T: tuple | object](x, y: T): bool
-  first type mismatch at position: 2
-  required type for y: T: tuple or object
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T](a, b: Option[T]): bool
-  first type mismatch at position: 2
-  required type for b: Option[==.T]
-  but expression 'nil' is of type: typeof(nil)
-25 other mismatching symbols have been suppressed; compile with --showAllMismatches:on to see them
-
-expression: this.singleValuePlusIntInst == nil
-" />
-    </testcase>
-    <testcase time="0.001392364501953125" name="thello_world" />
-    <testcase time="0.00000000" name="tif_instances">
-      <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/if_instances.nim(23, 28) Error: type mismatch: got &lt;uint8, typeof(nil)&gt;
-but expected one of:
-proc `==`(x, y: uint): bool
-  first type mismatch at position: 2
-  required type for y: uint
-  but expression 'nil' is of type: typeof(nil)
-proc `==`(x, y: uint16): bool
-  first type mismatch at position: 2
-  required type for y: uint16
-  but expression 'nil' is of type: typeof(nil)
-proc `==`(x, y: uint32): bool
-  first type mismatch at position: 2
-  required type for y: uint32
-  but expression 'nil' is of type: typeof(nil)
-proc `==`(x, y: uint64): bool
-  first type mismatch at position: 2
-  required type for y: uint64
-  but expression 'nil' is of type: typeof(nil)
-proc `==`(x, y: uint8): bool
-  first type mismatch at position: 2
-  required type for y: uint8
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T: tuple | object](x, y: T): bool
-  first type mismatch at position: 2
-  required type for y: T: tuple or object
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T](a, b: Option[T]): bool
-  first type mismatch at position: 2
-  required type for b: Option[==.T]
-  but expression 'nil' is of type: typeof(nil)
-22 other mismatching symbols have been suppressed; compile with --showAllMismatches:on to see them
-
-expression: this.neverHappensInst == nil
-" />
-    </testcase>
-    <testcase time="0.001392602920532227" name="tif_struct" />
-    <testcase time="0.00000000" name="tif_values">
-      <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/if_values.nim(45, 26) Error: type mismatch: got &lt;int, typeof(nil)&gt;
-but expected one of:
-proc `==`(x, y: int): bool
-  first type mismatch at position: 2
-  required type for y: int
-  but expression 'nil' is of type: typeof(nil)
-proc `==`(x, y: int64): bool
-  first type mismatch at position: 2
-  required type for y: int64
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T: tuple | object](x, y: T): bool
-  first type mismatch at position: 2
-  required type for y: T: tuple or object
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T](a, b: Option[T]): bool
-  first type mismatch at position: 2
-  required type for b: Option[==.T]
-  but expression 'nil' is of type: typeof(nil)
-25 other mismatching symbols have been suppressed; compile with --showAllMismatches:on to see them
-
-expression: this.halfOpcodeInst == nil
-" />
-    </testcase>
-    <testcase time="0.00000000" name="timports0">
-      <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/imports0.nim(31, 21) Error: type mismatch: got &lt;uint8, typeof(nil)&gt;
-but expected one of:
-proc `==`(x, y: uint): bool
-  first type mismatch at position: 2
-  required type for y: uint
-  but expression 'nil' is of type: typeof(nil)
-proc `==`(x, y: uint16): bool
-  first type mismatch at position: 2
-  required type for y: uint16
-  but expression 'nil' is of type: typeof(nil)
-proc `==`(x, y: uint32): bool
-  first type mismatch at position: 2
-  required type for y: uint32
-  but expression 'nil' is of type: typeof(nil)
-proc `==`(x, y: uint64): bool
-  first type mismatch at position: 2
-  required type for y: uint64
-  but expression 'nil' is of type: typeof(nil)
-proc `==`(x, y: uint8): bool
-  first type mismatch at position: 2
-  required type for y: uint8
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T: tuple | object](x, y: T): bool
-  first type mismatch at position: 2
-  required type for y: T: tuple or object
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T](a, b: Option[T]): bool
-  first type mismatch at position: 2
-  required type for b: Option[==.T]
-  but expression 'nil' is of type: typeof(nil)
-22 other mismatching symbols have been suppressed; compile with --showAllMismatches:on to see them
-
-expression: this.hwOneInst == nil
-" />
-    </testcase>
+    <testcase time="0.001565694808959961" name="texpr_str_ops" />
+    <testcase time="0.001502037048339844" name="tfixed_contents" />
+    <testcase time="0.001574277877807617" name="tfixed_struct" />
+    <testcase time="0.00151371955871582" name="tfloat_to_i" />
+    <testcase time="0.001479864120483398" name="tfloating_points" />
+    <testcase time="0.001503944396972656" name="thello_world" />
+    <testcase time="0.001516342163085938" name="tif_instances" />
+    <testcase time="0.001656770706176758" name="tif_struct" />
+    <testcase time="0.00156855583190918" name="tif_values" />
+    <testcase time="0.001530647277832031" name="timports0" />
     <testcase time="0.00000000" name="timports_abs">
-      <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/vlq_base128_le.nim(65, 19) Error: type mismatch: got &lt;int, typeof(nil)&gt;
-but expected one of:
-proc `==`(x, y: int): bool
-  first type mismatch at position: 2
-  required type for y: int
-  but expression 'nil' is of type: typeof(nil)
-proc `==`(x, y: int64): bool
-  first type mismatch at position: 2
-  required type for y: int64
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T: tuple | object](x, y: T): bool
-  first type mismatch at position: 2
-  required type for y: T: tuple or object
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T](a, b: Option[T]): bool
-  first type mismatch at position: 2
-  required type for b: Option[==.T]
-  but expression 'nil' is of type: typeof(nil)
-25 other mismatching symbols have been suppressed; compile with --showAllMismatches:on to see them
-
-expression: this.lenInst == nil
+      <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/imports_abs.nim(3, 15) Error: cannot open file: /common/vlq_base128_le
 " />
     </testcase>
     <testcase time="0.00000000" name="timports_circular_a">
@@ -1089,242 +133,76 @@ This might be caused by a recursive module dependency:
       <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/imports_rel_1.nim(3, 23) Error: cannot open file: for_rel_imports/imported_1
 " />
     </testcase>
-    <testcase time="0.001453161239624023" name="tindex_sizes" />
-    <testcase time="0.001390695571899414" name="tindex_to_param_eos" />
-    <testcase time="0.001459836959838867" name="tindex_to_param_expr" />
-    <testcase time="0.001471519470214844" name="tindex_to_param_until" />
-    <testcase time="0.001551151275634766" name="tinstance_io_user" />
-    <testcase time="0.001627445220947266" name="tinstance_std" />
-    <testcase time="0.001394748687744141" name="tinstance_std_array" />
-    <testcase time="0.001377105712890625" name="tinstance_user_array" />
-    <testcase time="0.001341104507446289" name="tintegers" />
-    <testcase time="0.00000000" name="tintegers_double_overflow">
-      <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/integers_double_overflow.nim(53, 33) Error: type mismatch: got &lt;uint64, typeof(nil)&gt;
-but expected one of:
-proc `==`(x, y: uint64): bool
-  first type mismatch at position: 2
-  required type for y: uint64
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T: tuple | object](x, y: T): bool
-  first type mismatch at position: 2
-  required type for y: T: tuple or object
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T](a, b: Option[T]): bool
-  first type mismatch at position: 2
-  required type for b: Option[==.T]
-  but expression 'nil' is of type: typeof(nil)
-26 other mismatching symbols have been suppressed; compile with --showAllMismatches:on to see them
-
-expression: this.unsignedSafeMaxBeInst == nil
-" />
-    </testcase>
+    <testcase time="0.001550436019897461" name="tindex_sizes" />
+    <testcase time="0.001567602157592773" name="tindex_to_param_eos" />
+    <testcase time="0.001688241958618164" name="tindex_to_param_expr" />
+    <testcase time="0.001626014709472656" name="tindex_to_param_until" />
+    <testcase time="0.001593828201293945" name="tinstance_io_user" />
+    <testcase time="0.001556158065795898" name="tinstance_std" />
+    <testcase time="0.001584053039550781" name="tinstance_std_array" />
+    <testcase time="0.001688241958618164" name="tinstance_user_array" />
+    <testcase time="0.001527786254882812" name="tintegers" />
+    <testcase time="0.001520872116088867" name="tintegers_double_overflow" />
     <testcase time="0.00000000" name="tintegers_min_max">
       <failure message="/home/travis/build/kaitai-io/ci_targets/tests/spec/nim/tintegers_min_max.nim(26, 35) Error: number out of range: '9223372036854775808'u64'
 " />
     </testcase>
     <testcase time="0.00000000" name="tio_local_var">
-      <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/io_local_var.nim(58, 25) Error: type mismatch: got 'seq[byte]' for 'messUpInstExpr' but expected 'KaitaiStruct = ref KaitaiStruct:ObjectType'
+      <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/io_local_var.nim(59, 25) Error: type mismatch: got 'seq[byte]' for 'messUpInstExpr' but expected 'KaitaiStruct = ref KaitaiStruct:ObjectType'
 " />
     </testcase>
-    <testcase time="0.00000000" name="tjs_signed_right_shift">
-      <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/js_signed_right_shift.nim(25, 32) Error: type mismatch: got &lt;int, typeof(nil)&gt;
-but expected one of:
-proc `==`(x, y: int): bool
-  first type mismatch at position: 2
-  required type for y: int
-  but expression 'nil' is of type: typeof(nil)
-proc `==`(x, y: int64): bool
-  first type mismatch at position: 2
-  required type for y: int64
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T: tuple | object](x, y: T): bool
-  first type mismatch at position: 2
-  required type for y: T: tuple or object
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T](a, b: Option[T]): bool
-  first type mismatch at position: 2
-  required type for b: Option[==.T]
-  but expression 'nil' is of type: typeof(nil)
-25 other mismatching symbols have been suppressed; compile with --showAllMismatches:on to see them
-
-expression: this.shouldBe40000000Inst == nil
-" />
-    </testcase>
-    <testcase time="0.001420736312866211" name="tmeta_tags" />
-    <testcase time="0.001321315765380859" name="tmeta_xref" />
-    <testcase time="0.001389741897583008" name="tmultiple_use" />
-    <testcase time="0.001380681991577148" name="tnav_parent" />
-    <testcase time="0.00144195556640625" name="tnav_parent2" />
-    <testcase time="0.001420736312866211" name="tnav_parent3" />
-    <testcase time="0.001363039016723633" name="tnav_parent_false" />
-    <testcase time="0.001327991485595703" name="tnav_parent_false2" />
-    <testcase time="0.001353979110717773" name="tnav_parent_override" />
-    <testcase time="0.001375675201416016" name="tnav_parent_switch" />
+    <testcase time="0.001528024673461914" name="tjs_signed_right_shift" />
+    <testcase time="0.001514911651611328" name="tmeta_tags" />
+    <testcase time="0.001492023468017578" name="tmeta_xref" />
+    <testcase time="0.001654148101806641" name="tmultiple_use" />
+    <testcase time="0.001575946807861328" name="tnav_parent" />
+    <testcase time="0.001606941223144531" name="tnav_parent2" />
+    <testcase time="0.001757621765136719" name="tnav_parent3" />
+    <testcase time="0.001506567001342773" name="tnav_parent_false" />
+    <testcase time="0.002039194107055664" name="tnav_parent_false2" />
+    <testcase time="0.001519918441772461" name="tnav_parent_override" />
+    <testcase time="0.001662969589233398" name="tnav_parent_switch" />
     <testcase time="0.00000000" name="tnav_parent_switch_cast">
-      <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/nav_parent_switch_cast.nim(117, 20) Error: type mismatch: got &lt;uint8, typeof(nil)&gt;
-but expected one of:
-proc `==`(x, y: uint): bool
-  first type mismatch at position: 2
-  required type for y: uint
-  but expression 'nil' is of type: typeof(nil)
-proc `==`(x, y: uint16): bool
-  first type mismatch at position: 2
-  required type for y: uint16
-  but expression 'nil' is of type: typeof(nil)
-proc `==`(x, y: uint32): bool
-  first type mismatch at position: 2
-  required type for y: uint32
-  but expression 'nil' is of type: typeof(nil)
-proc `==`(x, y: uint64): bool
-  first type mismatch at position: 2
-  required type for y: uint64
-  but expression 'nil' is of type: typeof(nil)
-proc `==`(x, y: uint8): bool
-  first type mismatch at position: 2
-  required type for y: uint8
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T: tuple | object](x, y: T): bool
-  first type mismatch at position: 2
-  required type for y: T: tuple or object
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T](a, b: Option[T]): bool
-  first type mismatch at position: 2
-  required type for b: Option[==.T]
-  but expression 'nil' is of type: typeof(nil)
-22 other mismatching symbols have been suppressed; compile with --showAllMismatches:on to see them
-
-expression: this.flagInst == nil
+      <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/nav_parent_switch_cast.nim(120, 64) Error: undeclared field: 'parent' for type kaitai_struct_nim_runtime.KaitaiStruct [type declared in /home/travis/.nimble/pkgs/kaitai_struct_nim_runtime-0.9.0/kaitai_struct_nim_runtime.nim(5, 3)]
 " />
     </testcase>
-    <testcase time="0.00000000" name="tnav_parent_vs_value_inst">
-      <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/nav_parent_vs_value_inst.nim(44, 27) Error: type mismatch: got &lt;bool, typeof(nil)&gt;
-but expected one of:
-proc `==`(x, y: bool): bool
-  first type mismatch at position: 2
-  required type for y: bool
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T: tuple | object](x, y: T): bool
-  first type mismatch at position: 2
-  required type for y: T: tuple or object
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T](a, b: Option[T]): bool
-  first type mismatch at position: 2
-  required type for b: Option[==.T]
-  but expression 'nil' is of type: typeof(nil)
-26 other mismatching symbols have been suppressed; compile with --showAllMismatches:on to see them
-
-expression: this.doSomethingInst == nil
-" />
-    </testcase>
-    <testcase time="0.001366376876831055" name="tnav_root" />
-    <testcase time="0.001367568969726562" name="tnested_same_name" />
-    <testcase time="0.001343727111816406" name="tnested_same_name2" />
-    <testcase time="0.001420974731445312" name="tnested_type_param" />
-    <testcase time="0.001331329345703125" name="tnested_types" />
-    <testcase time="0.001371145248413086" name="tnested_types2" />
-    <testcase time="0.001421213150024414" name="tnested_types3" />
-    <testcase time="0.00000000" name="tnon_standard">
-      <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/non_standard.nim(37, 18) Error: type mismatch: got &lt;uint8, typeof(nil)&gt;
-but expected one of:
-proc `==`(x, y: uint): bool
-  first type mismatch at position: 2
-  required type for y: uint
-  but expression 'nil' is of type: typeof(nil)
-proc `==`(x, y: uint16): bool
-  first type mismatch at position: 2
-  required type for y: uint16
-  but expression 'nil' is of type: typeof(nil)
-proc `==`(x, y: uint32): bool
-  first type mismatch at position: 2
-  required type for y: uint32
-  but expression 'nil' is of type: typeof(nil)
-proc `==`(x, y: uint64): bool
-  first type mismatch at position: 2
-  required type for y: uint64
-  but expression 'nil' is of type: typeof(nil)
-proc `==`(x, y: uint8): bool
-  first type mismatch at position: 2
-  required type for y: uint8
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T: tuple | object](x, y: T): bool
-  first type mismatch at position: 2
-  required type for y: T: tuple or object
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T](a, b: Option[T]): bool
-  first type mismatch at position: 2
-  required type for b: Option[==.T]
-  but expression 'nil' is of type: typeof(nil)
-22 other mismatching symbols have been suppressed; compile with --showAllMismatches:on to see them
-
-expression: this.viInst == nil
-" />
-    </testcase>
-    <testcase time="0.001417160034179688" name="tparams_call_extra_parens" />
-    <testcase time="0.001441001892089844" name="tparams_call_short" />
-    <testcase time="0.00000000" name="tparams_enum">
-      <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/params_enum.nim(51, 21) Error: type mismatch: got &lt;bool, typeof(nil)&gt;
-but expected one of:
-proc `==`(x, y: bool): bool
-  first type mismatch at position: 2
-  required type for y: bool
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T: tuple | object](x, y: T): bool
-  first type mismatch at position: 2
-  required type for y: T: tuple or object
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T](a, b: Option[T]): bool
-  first type mismatch at position: 2
-  required type for b: Option[==.T]
-  but expression 'nil' is of type: typeof(nil)
-26 other mismatching symbols have been suppressed; compile with --showAllMismatches:on to see them
-
-expression: this.isCatInst == nil
-" />
-    </testcase>
+    <testcase time="0.00161290168762207" name="tnav_parent_vs_value_inst" />
+    <testcase time="0.001605033874511719" name="tnav_root" />
+    <testcase time="0.001658916473388672" name="tnested_same_name" />
+    <testcase time="0.001430511474609375" name="tnested_same_name2" />
+    <testcase time="0.00165104866027832" name="tnested_type_param" />
+    <testcase time="0.001505136489868164" name="tnested_types" />
+    <testcase time="0.001530647277832031" name="tnested_types2" />
+    <testcase time="0.001496076583862305" name="tnested_types3" />
+    <testcase time="0.001547574996948242" name="tnon_standard" />
+    <testcase time="0.001579523086547852" name="tparams_call_extra_parens" />
+    <testcase time="0.001604795455932617" name="tparams_call_short" />
+    <testcase time="0.001551389694213867" name="tparams_enum" />
     <testcase time="0.00000000" name="tparams_pass_array_int">
       <failure message="/home/travis/build/kaitai-io/ci_targets/tests/spec/nim/tparams_pass_array_int.nim(7, 27) template/generic instantiation of `fromFile` from here
-/home/travis/build/kaitai-io/ci_targets/compiled/nim/params_pass_array_int.nim(45, 21) template/generic instantiation of `read` from here
-/home/travis/build/kaitai-io/ci_targets/compiled/nim/params_pass_array_int.nim(33, 54) template/generic instantiation of `read` from here
-/home/travis/build/kaitai-io/ci_targets/compiled/nim/params_pass_array_int.nim(54, 29) Error: type mismatch: got 'seq[int]' for 'nums' but expected 'seq[uint16]'
+/home/travis/build/kaitai-io/ci_targets/compiled/nim/params_pass_array_int.nim(46, 21) template/generic instantiation of `read` from here
+/home/travis/build/kaitai-io/ci_targets/compiled/nim/params_pass_array_int.nim(34, 54) template/generic instantiation of `read` from here
+/home/travis/build/kaitai-io/ci_targets/compiled/nim/params_pass_array_int.nim(55, 29) Error: type mismatch: got 'seq[int]' for 'nums' but expected 'seq[uint16]'
 " />
     </testcase>
-    <testcase time="0.001437902450561523" name="tparams_pass_array_str" />
-    <testcase time="0.001370668411254883" name="tparams_pass_array_struct" />
-    <testcase time="0.001349210739135742" name="tparams_pass_array_usertype" />
-    <testcase time="0.00000000" name="tparams_pass_bool">
-      <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/params_pass_bool.nim(60, 22) Error: type mismatch: got &lt;bool, typeof(nil)&gt;
-but expected one of:
-proc `==`(x, y: bool): bool
-  first type mismatch at position: 2
-  required type for y: bool
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T: tuple | object](x, y: T): bool
-  first type mismatch at position: 2
-  required type for y: T: tuple or object
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T](a, b: Option[T]): bool
-  first type mismatch at position: 2
-  required type for b: Option[==.T]
-  but expression 'nil' is of type: typeof(nil)
-26 other mismatching symbols have been suppressed; compile with --showAllMismatches:on to see them
-
-expression: this.vFalseInst == nil
-" />
-    </testcase>
-    <testcase time="0.001452207565307617" name="tparams_pass_struct" />
-    <testcase time="0.001383066177368164" name="tparams_pass_usertype" />
-    <testcase time="0.001425027847290039" name="tposition_abs" />
-    <testcase time="0.00139927864074707" name="tposition_in_seq" />
-    <testcase time="0.001383781433105469" name="tposition_to_end" />
-    <testcase time="0.001376867294311523" name="tprocess_coerce_bytes" />
+    <testcase time="0.001656770706176758" name="tparams_pass_array_str" />
+    <testcase time="0.001507997512817383" name="tparams_pass_array_struct" />
+    <testcase time="0.001527547836303711" name="tparams_pass_array_usertype" />
+    <testcase time="0.001537322998046875" name="tparams_pass_bool" />
+    <testcase time="0.001480579376220703" name="tparams_pass_struct" />
+    <testcase time="0.00152277946472168" name="tparams_pass_usertype" />
+    <testcase time="0.001575946807861328" name="tposition_abs" />
+    <testcase time="0.001617670059204102" name="tposition_in_seq" />
+    <testcase time="0.001499652862548828" name="tposition_to_end" />
+    <testcase time="0.001715421676635742" name="tprocess_coerce_bytes" />
     <testcase time="0.00000000" name="tprocess_coerce_switch">
       <failure message="/home/travis/build/kaitai-io/ci_targets/tests/spec/nim/tprocess_coerce_switch.nim(7, 28) template/generic instantiation of `fromFile` from here
-/home/travis/build/kaitai-io/ci_targets/compiled/nim/process_coerce_switch.nim(74, 22) template/generic instantiation of `read` from here
-/home/travis/build/kaitai-io/ci_targets/compiled/nim/process_coerce_switch.nim(47, 26) Error: type mismatch: got 'seq[byte]' for 'bufUnprocExpr' but expected 'KaitaiStruct = ref KaitaiStruct:ObjectType'
+/home/travis/build/kaitai-io/ci_targets/compiled/nim/process_coerce_switch.nim(75, 22) template/generic instantiation of `read` from here
+/home/travis/build/kaitai-io/ci_targets/compiled/nim/process_coerce_switch.nim(48, 26) Error: type mismatch: got 'seq[byte]' for 'bufUnprocExpr' but expected 'KaitaiStruct = ref KaitaiStruct:ObjectType'
 " />
     </testcase>
-    <testcase time="0.001330375671386719" name="tprocess_coerce_usertype1" />
-    <testcase time="0.001340627670288086" name="tprocess_coerce_usertype2" />
+    <testcase time="0.001631259918212891" name="tprocess_coerce_usertype1" />
+    <testcase time="0.001610279083251953" name="tprocess_coerce_usertype2" />
     <testcase time="0.00000000" name="tprocess_custom">
       <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/process_custom.nim(3, 8) Error: cannot open file: my_custom_fx
 " />
@@ -1343,8 +221,8 @@ expression: this.vFalseInst == nil
 /home/travis/build/kaitai-io/ci_targets/compiled/nim/process_repeat_usertype.nim(30, 9) Error: redefinition of 'buf'; previous declaration here: /home/travis/build/kaitai-io/ci_targets/compiled/nim/process_repeat_usertype.nim(28, 9)
 " />
     </testcase>
-    <testcase time="0.001372814178466797" name="tprocess_rotate" />
-    <testcase time="0.001389265060424805" name="tprocess_to_user" />
+    <testcase time="0.001550674438476562" name="tprocess_rotate" />
+    <testcase time="0.00161433219909668" name="tprocess_to_user" />
     <testcase time="0.00000000" name="tprocess_xor4_const">
       <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/process_xor4_const.nim(26, 43) Error: number out of range: '20'u8'
 " />
@@ -1353,72 +231,40 @@ expression: this.vFalseInst == nil
       <failure message="/home/travis/build/kaitai-io/ci_targets/tests/spec/nim/tprocess_xor4_value.nim(9, 20) Error: number out of range: '20'u8'
 " />
     </testcase>
-    <testcase time="0.001361608505249023" name="tprocess_xor_const" />
-    <testcase time="0.001401662826538086" name="tprocess_xor_value" />
-    <testcase time="0.001397609710693359" name="trecursive_one" />
-    <testcase time="0.001445531845092773" name="trepeat_eos_bit" />
-    <testcase time="0.001406431198120117" name="trepeat_eos_struct" />
-    <testcase time="0.001569032669067383" name="trepeat_eos_u4" />
-    <testcase time="0.001318931579589844" name="trepeat_n_struct" />
-    <testcase time="0.001564741134643555" name="trepeat_n_strz" />
-    <testcase time="0.001413822174072266" name="trepeat_n_strz_double" />
-    <testcase time="0.001387357711791992" name="trepeat_until_calc_array_type" />
-    <testcase time="0.001439809799194336" name="trepeat_until_complex" />
-    <testcase time="0.00145268440246582" name="trepeat_until_s4" />
-    <testcase time="0.001363515853881836" name="trepeat_until_sized" />
-    <testcase time="0.003119707107543945" name="tstr_encodings" />
-    <testcase time="0.001515865325927734" name="tstr_encodings_default" />
-    <testcase time="0.001447677612304688" name="tstr_eos" />
-    <testcase time="0.001358985900878906" name="tstr_literals2" />
-    <testcase time="0.001444101333618164" name="tstr_pad_term" />
-    <testcase time="0.001517057418823242" name="tstr_pad_term_empty" />
-    <testcase time="0.001551628112792969" name="tswitch_bytearray" />
-    <testcase time="0.0013885498046875" name="tswitch_else_only" />
-    <testcase time="0.001344203948974609" name="tswitch_integers" />
-    <testcase time="0.00136876106262207" name="tswitch_integers2" />
-    <testcase time="0.001505613327026367" name="tswitch_manual_enum" />
+    <testcase time="0.001553773880004883" name="tprocess_xor_const" />
+    <testcase time="0.001515865325927734" name="tprocess_xor_value" />
+    <testcase time="0.001517534255981445" name="trecursive_one" />
+    <testcase time="0.001503705978393555" name="trepeat_eos_bit" />
+    <testcase time="0.001500844955444336" name="trepeat_eos_struct" />
+    <testcase time="0.001505136489868164" name="trepeat_eos_u4" />
+    <testcase time="0.001606464385986328" name="trepeat_n_struct" />
+    <testcase time="0.001603126525878906" name="trepeat_n_strz" />
+    <testcase time="0.001610279083251953" name="trepeat_n_strz_double" />
+    <testcase time="0.001501083374023438" name="trepeat_until_calc_array_type" />
+    <testcase time="0.001623868942260742" name="trepeat_until_complex" />
+    <testcase time="0.001749992370605469" name="trepeat_until_s4" />
+    <testcase time="0.001571178436279297" name="trepeat_until_sized" />
+    <testcase time="0.003816366195678711" name="tstr_encodings" />
+    <testcase time="0.001714706420898438" name="tstr_encodings_default" />
+    <testcase time="0.00156712532043457" name="tstr_eos" />
+    <testcase time="0.001523017883300781" name="tstr_literals2" />
+    <testcase time="0.001618146896362305" name="tstr_pad_term" />
+    <testcase time="0.001587629318237305" name="tstr_pad_term_empty" />
+    <testcase time="0.001615047454833984" name="tswitch_bytearray" />
+    <testcase time="0.001526832580566406" name="tswitch_else_only" />
+    <testcase time="0.001486063003540039" name="tswitch_integers" />
+    <testcase time="0.00159001350402832" name="tswitch_integers2" />
+    <testcase time="0.001572132110595703" name="tswitch_manual_enum" />
     <testcase time="0.00000000" name="tswitch_manual_enum_invalid">
       <failure message="/home/travis/build/kaitai-io/ci_targets/tests/spec/nim/tswitch_manual_enum_invalid.nim(10, 11) Error: conversion from int literal(255) to SwitchManualEnumInvalid_Opcode_CodeEnum is invalid
 " />
     </testcase>
     <testcase time="0.00000000" name="tswitch_manual_enum_invalid_else">
-      <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/switch_manual_enum_invalid_else.nim(114, 21) Error: type mismatch: got &lt;int8, typeof(nil)&gt;
-but expected one of:
-proc `==`(x, y: int): bool
-  first type mismatch at position: 2
-  required type for y: int
-  but expression 'nil' is of type: typeof(nil)
-proc `==`(x, y: int16): bool
-  first type mismatch at position: 2
-  required type for y: int16
-  but expression 'nil' is of type: typeof(nil)
-proc `==`(x, y: int32): bool
-  first type mismatch at position: 2
-  required type for y: int32
-  but expression 'nil' is of type: typeof(nil)
-proc `==`(x, y: int64): bool
-  first type mismatch at position: 2
-  required type for y: int64
-  but expression 'nil' is of type: typeof(nil)
-proc `==`(x, y: int8): bool
-  first type mismatch at position: 2
-  required type for y: int8
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T: tuple | object](x, y: T): bool
-  first type mismatch at position: 2
-  required type for y: T: tuple or object
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T](a, b: Option[T]): bool
-  first type mismatch at position: 2
-  required type for b: Option[==.T]
-  but expression 'nil' is of type: typeof(nil)
-22 other mismatching symbols have been suppressed; compile with --showAllMismatches:on to see them
-
-expression: this.valueInst == nil
+      <failure message="/home/travis/build/kaitai-io/ci_targets/tests/spec/nim/tswitch_manual_enum_invalid_else.nim(10, 11) Error: conversion from int literal(255) to SwitchManualEnumInvalidElse_Opcode_CodeEnum is invalid
 " />
     </testcase>
-    <testcase time="0.00154423713684082" name="tswitch_manual_int" />
-    <testcase time="0.001462221145629883" name="tswitch_manual_int_else" />
+    <testcase time="0.001615285873413086" name="tswitch_manual_int" />
+    <testcase time="0.001652002334594727" name="tswitch_manual_int_else" />
     <testcase time="0.00000000" name="tswitch_manual_int_size">
       <failure message="/home/travis/build/kaitai-io/ci_targets/tests/spec/nim/tswitch_manual_int_size.nim(16, 94) Error: number out of range: '128'u8'
 " />
@@ -1427,8 +273,8 @@ expression: this.valueInst == nil
       <failure message="/home/travis/build/kaitai-io/ci_targets/tests/spec/nim/tswitch_manual_int_size_else.nim(16, 125) Error: number out of range: '128'u8'
 " />
     </testcase>
-    <testcase time="0.001472234725952148" name="tswitch_manual_str" />
-    <testcase time="0.001426219940185547" name="tswitch_manual_str_else" />
+    <testcase time="0.001590728759765625" name="tswitch_manual_str" />
+    <testcase time="0.001592636108398438" name="tswitch_manual_str_else" />
     <testcase time="0.00000000" name="tswitch_repeat_expr">
       <failure message="/home/travis/build/kaitai-io/ci_targets/tests/spec/nim/tswitch_repeat_expr.nim(7, 25) template/generic instantiation of `fromFile` from here
 /home/travis/build/kaitai-io/ci_targets/compiled/nim/switch_repeat_expr.nim(55, 19) template/generic instantiation of `read` from here
@@ -1465,106 +311,21 @@ proc add[T](x: var seq[T]; y: sink T)
 expression: add(result.body, it)
 " />
     </testcase>
-    <testcase time="0.00137019157409668" name="tterm_bytes" />
-    <testcase time="0.001354217529296875" name="tterm_strz" />
-    <testcase time="0.001456260681152344" name="tterm_u1_val" />
-    <testcase time="0.001407623291015625" name="tts_packet_header" />
-    <testcase time="0.00000000" name="ttype_int_unary_op">
-      <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/type_int_unary_op.nim(31, 23) Error: type mismatch: got &lt;int, typeof(nil)&gt;
-but expected one of:
-proc `==`(x, y: int): bool
-  first type mismatch at position: 2
-  required type for y: int
-  but expression 'nil' is of type: typeof(nil)
-proc `==`(x, y: int64): bool
-  first type mismatch at position: 2
-  required type for y: int64
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T: tuple | object](x, y: T): bool
-  first type mismatch at position: 2
-  required type for y: T: tuple or object
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T](a, b: Option[T]): bool
-  first type mismatch at position: 2
-  required type for b: Option[==.T]
-  but expression 'nil' is of type: typeof(nil)
-25 other mismatching symbols have been suppressed; compile with --showAllMismatches:on to see them
-
-expression: this.unaryS2Inst == nil
-" />
-    </testcase>
-    <testcase time="0.00000000" name="ttype_ternary">
-      <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/type_ternary.nim(49, 22) Error: type mismatch: got &lt;bool, typeof(nil)&gt;
-but expected one of:
-proc `==`(x, y: bool): bool
-  first type mismatch at position: 2
-  required type for y: bool
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T: tuple | object](x, y: T): bool
-  first type mismatch at position: 2
-  required type for y: T: tuple or object
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T](a, b: Option[T]): bool
-  first type mismatch at position: 2
-  required type for b: Option[==.T]
-  but expression 'nil' is of type: typeof(nil)
-26 other mismatching symbols have been suppressed; compile with --showAllMismatches:on to see them
-
-expression: this.isHackInst == nil
-" />
-    </testcase>
-    <testcase time="0.00000000" name="ttype_ternary_2nd_falsy">
-      <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/type_ternary_2nd_falsy.nim(70, 26) Error: type mismatch: got &lt;float64, typeof(nil)&gt;
-but expected one of:
-proc `==`(x, y: float): bool
-  first type mismatch at position: 2
-  required type for y: float
-  but expression 'nil' is of type: typeof(nil)
-proc `==`(x, y: float32): bool
-  first type mismatch at position: 2
-  required type for y: float32
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T: tuple | object](x, y: T): bool
-  first type mismatch at position: 2
-  required type for y: T: tuple or object
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T](a, b: Option[T]): bool
-  first type mismatch at position: 2
-  required type for b: Option[==.T]
-  but expression 'nil' is of type: typeof(nil)
-25 other mismatching symbols have been suppressed; compile with --showAllMismatches:on to see them
-
-expression: this.vFloatZeroInst == nil
-" />
-    </testcase>
-    <testcase time="0.00137782096862793" name="tuser_type" />
-    <testcase time="0.001541376113891602" name="tvalid_eq_str_encodings" />
-    <testcase time="0.001481771469116211" name="tvalid_long" />
-    <testcase time="0.001356363296508789" name="tvalid_not_parsed_if" />
-    <testcase time="0.001431703567504883" name="tvalid_short" />
-    <testcase time="0.00133204460144043" name="tvalid_switch" />
+    <testcase time="0.001585721969604492" name="tterm_bytes" />
+    <testcase time="0.001861810684204102" name="tterm_strz" />
+    <testcase time="0.001715898513793945" name="tterm_u1_val" />
+    <testcase time="0.001494169235229492" name="tts_packet_header" />
+    <testcase time="0.001672744750976562" name="ttype_int_unary_op" />
+    <testcase time="0.001655101776123047" name="ttype_ternary" />
+    <testcase time="0.001766204833984375" name="ttype_ternary_2nd_falsy" />
+    <testcase time="0.001618385314941406" name="tuser_type" />
+    <testcase time="0.001672983169555664" name="tvalid_eq_str_encodings" />
+    <testcase time="0.001704216003417969" name="tvalid_long" />
+    <testcase time="0.001505613327026367" name="tvalid_not_parsed_if" />
+    <testcase time="0.001641511917114258" name="tvalid_short" />
+    <testcase time="0.001504659652709961" name="tvalid_switch" />
     <testcase time="0.00000000" name="tyaml_ints">
-      <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/yaml_ints.nim(29, 25) Error: type mismatch: got &lt;int, typeof(nil)&gt;
-but expected one of:
-proc `==`(x, y: int): bool
-  first type mismatch at position: 2
-  required type for y: int
-  but expression 'nil' is of type: typeof(nil)
-proc `==`(x, y: int64): bool
-  first type mismatch at position: 2
-  required type for y: int64
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T: tuple | object](x, y: T): bool
-  first type mismatch at position: 2
-  required type for y: T: tuple or object
-  but expression 'nil' is of type: typeof(nil)
-proc `==`[T](a, b: Option[T]): bool
-  first type mismatch at position: 2
-  required type for b: Option[==.T]
-  but expression 'nil' is of type: typeof(nil)
-25 other mismatching symbols have been suppressed; compile with --showAllMismatches:on to see them
-
-expression: this.testU4DecInst == nil
+      <failure message="/home/travis/build/kaitai-io/ci_targets/compiled/nim/yaml_ints.nim(51, 30) Error: 18446744073709551615 can't be converted to int
 " />
     </testcase>
     <testcase time="0.00000000" name="tzlib_surrounded">
