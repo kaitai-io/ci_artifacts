@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-	<testsuite tests="180" failures="15" time="0.042" name="github.com/kaitai-io/ci_targets/tests/spec/go">
+	<testsuite tests="180" failures="15" time="0.040" name="github.com/kaitai-io/ci_targets/tests/spec/go">
 		<properties>
 			<property name="go.version" value="go1.13"></property>
 		</properties>
@@ -69,7 +69,7 @@
 		<testcase classname="go" name="TestExprCalcArrayOps" time="0.000"></testcase>
 		<testcase classname="go" name="TestExprEnum" time="0.000"></testcase>
 		<testcase classname="go" name="TestExprIfIntOps" time="0.000"></testcase>
-		<testcase classname="go" name="TestExprIntDiv" time="0.010">
+		<testcase classname="go" name="TestExprIntDiv" time="0.020">
 			<failure message="Failed" type="">expr_int_div_test.go:43: &#xA;Error Trace:&#x9;expr_int_div_test.go:43&#xA;Error:      &#x9;Not equal: &#xA;            &#x9;expected: -757&#xA;            &#x9;actual  : -756&#xA;Test:       &#x9;TestExprIntDiv&#xA;expr_int_div_test.go:53: &#xA;Error Trace:&#x9;expr_int_div_test.go:53&#xA;Error:      &#x9;Not equal: &#xA;            &#x9;expected: -4073&#xA;            &#x9;actual  : -4072&#xA;Test:       &#x9;TestExprIntDiv</failure>
 		</testcase>
 		<testcase classname="go" name="TestExprIoEof" time="0.000">
@@ -128,7 +128,7 @@
 		<testcase classname="go" name="TestNestedTypes" time="0.000"></testcase>
 		<testcase classname="go" name="TestNonStandard" time="0.000"></testcase>
 		<testcase classname="go" name="TestOpaqueExternalType02Parent" time="0.000">
-			<failure message="Failed" type="">goroutine 115 [running]:&#xA;runtime/debug.Stack(0x18, 0xc000056bb8, 0x4869d2)&#xA;runtime/debug.PrintStack()&#xA;github.com/kaitai-io/ci_targets/tests/spec/go.TestOpaqueExternalType02Parent.func1(0xc000183100)&#xA;panic(0x789940, 0xae3f10)&#xA;test_formats.(*OpaqueExternalType02Child).SomeMethod(...)&#xA;test_formats.(*OpaqueExternalType02Child_OpaqueExternalType02ChildChild).Read(0xc00017f2f0, 0xc00017f290, 0xc00014a410, 0x0, 0xc00010dc04, 0x3)&#xA;test_formats.(*OpaqueExternalType02Child).Read(0xc00014a410, 0xc00017f290, 0x7851c0, 0xc000122860, 0x0, 0x7bf3e0, 0x1)&#xA;test_formats.(*OpaqueExternalType02Parent_ParentObj).Read(0xc000122860, 0xc00017f290, 0xc00017f2c0, 0xc00017f2c0, 0x7bf320, 0x1)&#xA;test_formats.(*OpaqueExternalType02Parent).Read(0xc00017f2c0, 0xc00017f290, 0x785160, 0xc00017f2c0, 0xc00017f2c0, 0x0, 0x0)&#xA;github.com/kaitai-io/ci_targets/tests/spec/go.TestOpaqueExternalType02Parent(0xc000183100)&#xA;testing.tRunner(0xc000183100, 0x81d4c8)&#xA;created by testing.(*T).Run&#xA;opaque_external_type_02_parent_test.go:16: unexpected panic: runtime error: invalid memory address or nil pointer dereference</failure>
+			<failure message="Failed" type="">goroutine 115 [running]:&#xA;runtime/debug.Stack(0x18, 0xc00005bbb8, 0x4869d2)&#xA;runtime/debug.PrintStack()&#xA;github.com/kaitai-io/ci_targets/tests/spec/go.TestOpaqueExternalType02Parent.func1(0xc000156d00)&#xA;panic(0x789940, 0xae3f10)&#xA;test_formats.(*OpaqueExternalType02Child).SomeMethod(...)&#xA;test_formats.(*OpaqueExternalType02Child_OpaqueExternalType02ChildChild).Read(0xc000153170, 0xc000153110, 0xc00009e870, 0x0, 0xc000158424, 0x3)&#xA;test_formats.(*OpaqueExternalType02Child).Read(0xc00009e870, 0xc000153110, 0x7851c0, 0xc00000f660, 0x0, 0x7bf3e0, 0x1)&#xA;test_formats.(*OpaqueExternalType02Parent_ParentObj).Read(0xc00000f660, 0xc000153110, 0xc000153140, 0xc000153140, 0x7bf320, 0x1)&#xA;test_formats.(*OpaqueExternalType02Parent).Read(0xc000153140, 0xc000153110, 0x785160, 0xc000153140, 0xc000153140, 0x0, 0x0)&#xA;github.com/kaitai-io/ci_targets/tests/spec/go.TestOpaqueExternalType02Parent(0xc000156d00)&#xA;testing.tRunner(0xc000156d00, 0x81d4c8)&#xA;created by testing.(*T).Run&#xA;opaque_external_type_02_parent_test.go:16: unexpected panic: runtime error: invalid memory address or nil pointer dereference</failure>
 		</testcase>
 		<testcase classname="go" name="TestOpaqueExternalType" time="0.000"></testcase>
 		<testcase classname="go" name="TestOpaqueWithParam" time="0.000"></testcase>
