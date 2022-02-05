@@ -1,7 +1,31 @@
-compiled/java/src/io/kaitai/struct/testformats/EnumLongRangeS.java:18: error: integer number too large: -9223372036854775808
-        LONG_MIN(-9223372036854775808),
-                  ^
-compiled/java/src/io/kaitai/struct/testformats/EnumLongRangeS.java:19: error: integer number too large: -2147483649
-        INT_BELOW_MIN(-2147483649),
-                       ^
-2 errors
+spec/java/src/io/kaitai/struct/spec/TestExprBytesLiteral.java:5: error: cannot find symbol
+import io.kaitai.struct.testformats.ExprBytesLiteral;
+                                   ^
+  symbol:   class ExprBytesLiteral
+  location: package io.kaitai.struct.testformats
+spec/java/src/io/kaitai/struct/spec/TestExprBytesLiteral.java:12: error: cannot find symbol
+        ExprBytesLiteral r = ExprBytesLiteral.fromFile(SRC_DIR + "enum_negative.bin");
+        ^
+  symbol:   class ExprBytesLiteral
+  location: class TestExprBytesLiteral
+spec/java/src/io/kaitai/struct/spec/TestExprBytesLiteral.java:12: error: cannot find symbol
+        ExprBytesLiteral r = ExprBytesLiteral.fromFile(SRC_DIR + "enum_negative.bin");
+                             ^
+  symbol:   variable ExprBytesLiteral
+  location: class TestExprBytesLiteral
+compiled/java/src/io/kaitai/struct/testformats/ExprBits.java:56: error: possible loss of precision
+        switch (a()) {
+                 ^
+  required: int
+  found:    long
+compiled/java/src/io/kaitai/struct/testformats/ExprBits.java:85: error: possible loss of precision
+            switch (_parent().a()) {
+                               ^
+  required: int
+  found:    long
+compiled/java/src/io/kaitai/struct/testformats/ExprOpsParens.java:97: error: inconvertible types
+        int _tmp = (int) (str0To4() + str5To9().length());
+                         ^
+  required: int
+  found:    String
+6 errors
