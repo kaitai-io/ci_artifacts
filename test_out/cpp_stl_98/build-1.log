@@ -3,8 +3,8 @@ Scanning dependencies of target ks_tests
 [  0%] Building CXX object CMakeFiles/ks_tests.dir/prereq/my_custom_fx.cpp.o
 [  0%] Building CXX object CMakeFiles/ks_tests.dir/prereq/custom_fx.cpp.o
 [  0%] Building CXX object CMakeFiles/ks_tests.dir/prereq/custom_fx_no_args.cpp.o
+[  0%] Building CXX object CMakeFiles/ks_tests.dir/test_bcd_user_type_be.cpp.o
 [  1%] Building CXX object CMakeFiles/ks_tests.dir/main.cpp.o
-[  1%] Building CXX object CMakeFiles/ks_tests.dir/test_bcd_user_type_be.cpp.o
 [  1%] Building CXX object CMakeFiles/ks_tests.dir/test_bcd_user_type_le.cpp.o
 [  1%] Building CXX object CMakeFiles/ks_tests.dir/test_bits_byte_aligned.cpp.o
 [  1%] Building CXX object CMakeFiles/ks_tests.dir/test_bits_enum.cpp.o
@@ -67,6 +67,7 @@ In file included from /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_st
 4 errors generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/test_enum_import.cpp.o] Error 1
 [ 11%] Building CXX object CMakeFiles/ks_tests.dir/test_enum_to_i.cpp.o
+[ 11%] Building CXX object CMakeFiles/ks_tests.dir/test_enum_to_i_class_border_1.cpp.o
 In file included from /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_enum_long_range_s.cpp:4:
 /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_long_range_s.h:18:31: warning: integer literal is too large to be represented in type 'long' and is subject to undefined behavior under C++98, interpreting as 'unsigned long'; this literal will be ill-formed in C++11 onwards [-Wc++11-compat]
         CONSTANTS_LONG_MIN = -9223372036854775808,
@@ -74,10 +75,9 @@ In file included from /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_st
 /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_long_range_s.h:17:10: warning: enumeration values exceed range of largest integer [-Wenum-too-large]
     enum constants_t {
          ^
-[ 11%] Building CXX object CMakeFiles/ks_tests.dir/test_enum_to_i_class_border_1.cpp.o
 [ 12%] Building CXX object CMakeFiles/ks_tests.dir/test_eof_exception_bytes.cpp.o
-[ 12%] Building CXX object CMakeFiles/ks_tests.dir/test_eof_exception_u4.cpp.o
 2 warnings generated.
+[ 12%] Building CXX object CMakeFiles/ks_tests.dir/test_eof_exception_u4.cpp.o
 [ 12%] Building CXX object CMakeFiles/ks_tests.dir/test_eos_exception_bytes.cpp.o
 [ 12%] Building CXX object CMakeFiles/ks_tests.dir/test_eos_exception_u4.cpp.o
 [ 13%] Building CXX object CMakeFiles/ks_tests.dir/test_expr_0.cpp.o
@@ -178,18 +178,18 @@ make[2]: *** [CMakeFiles/ks_tests.dir/test_expr_calc_array_ops.cpp.o] Error 1
 /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_params_pass_array_int.cpp:4:10: fatal error: 'params_pass_array_int.h' file not found
 #include "params_pass_array_int.h"
          ^~~~~~~~~~~~~~~~~~~~~~~~~
-/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_params_pass_array_str.cpp:4:10: fatal error: 'params_pass_array_str.h' file not found
-#include "params_pass_array_str.h"
-         ^~~~~~~~~~~~~~~~~~~~~~~~~
 1 error generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/test_params_pass_array_int.cpp.o] Error 1
 [ 31%] Building CXX object CMakeFiles/ks_tests.dir/test_position_abs.cpp.o
-1 error generated.
-make[2]: *** [CMakeFiles/ks_tests.dir/test_params_pass_array_str.cpp.o] Error 1
-[ 32%] Building CXX object CMakeFiles/ks_tests.dir/test_position_in_seq.cpp.o
+/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_params_pass_array_str.cpp:4:10: fatal error: 'params_pass_array_str.h' file not found
+#include "params_pass_array_str.h"
+         ^~~~~~~~~~~~~~~~~~~~~~~~~
 /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_params_pass_array_struct.cpp:4:10: fatal error: 'params_pass_array_struct.h' file not found
 #include "params_pass_array_struct.h"
          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1 error generated.
+make[2]: *** [CMakeFiles/ks_tests.dir/test_params_pass_array_str.cpp.o] Error 1
+[ 32%] Building CXX object CMakeFiles/ks_tests.dir/test_position_in_seq.cpp.o
 1 error generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/test_params_pass_array_struct.cpp.o] Error 1
 [ 32%] Building CXX object CMakeFiles/ks_tests.dir/test_position_to_end.cpp.o
@@ -201,12 +201,12 @@ make[2]: *** [CMakeFiles/ks_tests.dir/test_params_pass_array_struct.cpp.o] Error
 [ 33%] Building CXX object CMakeFiles/ks_tests.dir/test_process_custom_no_args.cpp.o
 [ 33%] Building CXX object CMakeFiles/ks_tests.dir/test_process_repeat_bytes.cpp.o
 [ 34%] Building CXX object CMakeFiles/ks_tests.dir/test_process_repeat_usertype.cpp.o
-[ 34%] Building CXX object CMakeFiles/ks_tests.dir/test_process_rotate.cpp.o
 /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_process_coerce_switch.cpp:4:10: fatal error: 'process_coerce_switch.h' file not found
 #include "process_coerce_switch.h"
          ^~~~~~~~~~~~~~~~~~~~~~~~~
 1 error generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/test_process_coerce_switch.cpp.o] Error 1
+[ 34%] Building CXX object CMakeFiles/ks_tests.dir/test_process_rotate.cpp.o
 [ 34%] Building CXX object CMakeFiles/ks_tests.dir/test_process_to_user.cpp.o
 [ 34%] Building CXX object CMakeFiles/ks_tests.dir/test_process_xor4_const.cpp.o
 [ 34%] Building CXX object CMakeFiles/ks_tests.dir/test_process_xor4_value.cpp.o
@@ -349,6 +349,7 @@ make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/te
 [ 60%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_to_i.cpp.o
 [ 60%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_to_i_class_border_1.cpp.o
 [ 61%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_to_i_class_border_2.cpp.o
+[ 61%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/eof_exception_bytes.cpp.o
 In file included from /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_long_range_s.cpp:3:
 /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_long_range_s.h:18:31: warning: integer literal is too large to be represented in type 'long' and is subject to undefined behavior under C++98, interpreting as 'unsigned long'; this literal will be ill-formed in C++11 onwards [-Wc++11-compat]
         CONSTANTS_LONG_MIN = -9223372036854775808,
@@ -357,7 +358,6 @@ In file included from /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cp
     enum constants_t {
          ^
 2 warnings generated.
-[ 61%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/eof_exception_bytes.cpp.o
 [ 61%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/eof_exception_u4.cpp.o
 [ 61%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/eos_exception_bytes.cpp.o
 [ 61%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/eos_exception_u4.cpp.o
@@ -400,6 +400,7 @@ make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/te
 [ 65%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/expr_sizeof_value_0.cpp.o
 [ 66%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/expr_sizeof_value_sized.cpp.o
 [ 66%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/expr_str_encodings.cpp.o
+[ 66%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/expr_str_ops.cpp.o
 /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/expr_ops_parens.cpp:109:37: error: invalid operands to binary expression ('std::string' (aka 'basic_string<char, char_traits<char>, allocator<char> >') and 'std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::size_type' (aka 'unsigned long'))
     m_str_concat_len = str_0_to_4() + str_5_to_9().length();
                        ~~~~~~~~~~~~ ^ ~~~~~~~~~~~~~~~~~~~~~
@@ -427,7 +428,6 @@ operator+(_CharT __lhs, const basic_string<_CharT,_Traits,_Allocator>& __rhs)
 /Applications/Xcode-9.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/string:3767:1: note: candidate template ignored: could not match 'const _CharT *' against 'std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::size_type' (aka 'unsigned long')
 operator+(const basic_string<_CharT, _Traits, _Allocator>& __lhs, const _CharT* __rhs)
 ^
-[ 66%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/expr_str_ops.cpp.o
 1 error generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/expr_ops_parens.cpp.o] Error 1
 [ 66%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/fixed_contents.cpp.o
@@ -468,13 +468,13 @@ make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/te
 [ 74%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/multiple_use.cpp.o
 [ 74%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/nav_parent.cpp.o
 [ 75%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/nav_parent2.cpp.o
-[ 75%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/nav_parent3.cpp.o
-/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/io_local_var.cpp:22:72: warning: comparison of unsigned expression < 0 is always false [-Wtautological-compare]
+/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/io_local_var.cpp:22:72:[ 75%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/nav_parent3.cpp.o
+ warning: comparison of unsigned expression < 0 is always false [-Wtautological-compare]
     if (static_cast<io_local_var_t::dummy_t*>(mess_up())->_io()->pos() < 0) {
         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ^ ~
 [ 75%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/nav_parent_false.cpp.o
-[ 75%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/nav_parent_false2.cpp.o
 1 warning generated.
+[ 75%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/nav_parent_false2.cpp.o
 [ 75%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/nav_parent_override.cpp.o
 [ 76%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/nav_parent_switch.cpp.o
 [ 76%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/nav_parent_switch_cast.cpp.o
@@ -563,16 +563,16 @@ make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/te
 [ 93%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/to_string_custom.cpp.o
 [ 93%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/ts_packet_header.cpp.o
 [ 94%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/type_int_unary_op.cpp.o
-[ 94%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/type_ternary.cpp.o
-[ 94%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/type_ternary_2nd_falsy.cpp.o
 /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/term_u1_val.cpp:18:36: warning: implicit conversion from 'int' to 'char' changes value from 227 to -29 [-Wconstant-conversion]
     m_foo = m__io->read_bytes_term(227, false, false, true);
                    ~~~~~~~~~~~~~~~ ^~~
 /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/term_u1_val.cpp:19:66: warning: implicit conversion from 'int' to 'char' changes value from 171 to -85 [-Wconstant-conversion]
     m_bar = kaitai::kstream::bytes_to_str(m__io->read_bytes_term(171, true, true, true), std::string("UTF-8"));
                                                  ~~~~~~~~~~~~~~~ ^~~
-[ 94%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/type_ternary_opaque.cpp.o
+[ 94%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/type_ternary.cpp.o
+[ 94%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/type_ternary_2nd_falsy.cpp.o
 2 warnings generated.
+[ 94%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/type_ternary_opaque.cpp.o
 [ 94%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/user_type.cpp.o
 [ 95%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/valid_eq_str_encodings.cpp.o
 [ 95%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/valid_fail_anyof_int.cpp.o
@@ -596,6 +596,13 @@ make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/te
 [ 99%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/yaml_ints.cpp.o
 [ 99%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/zlib_surrounded.cpp.o
 [ 99%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/zlib_with_header_78.cpp.o
+/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/yaml_ints.cpp:50:21: warning: implicit conversion from 'unsigned long long' to 'int32_t' (aka 'int') changes value from 18446744073709551615 to -1 [-Wconstant-conversion]
+    m_test_u8_dec = 18446744073709551615ULL;
+                  ~ ^~~~~~~~~~~~~~~~~~~~~~~
+/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/yaml_ints.cpp:58:21: warning: implicit conversion from 'unsigned long long' to 'int32_t' (aka 'int') changes value from 18446744073709551615 to -1 [-Wconstant-conversion]
+    m_test_u8_hex = 18446744073709551615ULL;
+                  ~ ^~~~~~~~~~~~~~~~~~~~~~~
+2 warnings generated.
 /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/vlq_base128_le.cpp:98:335: warning: shift count >= width of type [-Wshift-count-overflow]
     m_value = (((((((groups()->at(0)->value() + ((len() >= 2) ? ((groups()->at(1)->value() << 7)) : (0))) + ((len() >= 3) ? ((groups()->at(2)->value() << 14)) : (0))) + ((len() >= 4) ? ((groups()->at(3)->value() << 21)) : (0))) + ((len() >= 5) ? ((groups()->at(4)->value() << 28)) : (0))) + ((len() >= 6) ? ((groups()->at(5)->value() << 35)) : (0))) + ((len() >= 7) ? ((groups()->at(6)->value() << 42)) : (0))) + ((len() >= 8) ? ((groups()->at(7)->value() << 49)) : (0)));
                                                                                                                                                                                                                                                                                                                                               ^  ~~
@@ -606,13 +613,6 @@ make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/te
     m_value = (((((((groups()->at(0)->value() + ((len() >= 2) ? ((groups()->at(1)->value() << 7)) : (0))) + ((len() >= 3) ? ((groups()->at(2)->value() << 14)) : (0))) + ((len() >= 4) ? ((groups()->at(3)->value() << 21)) : (0))) + ((len() >= 5) ? ((groups()->at(4)->value() << 28)) : (0))) + ((len() >= 6) ? ((groups()->at(5)->value() << 35)) : (0))) + ((len() >= 7) ? ((groups()->at(6)->value() << 42)) : (0))) + ((len() >= 8) ? ((groups()->at(7)->value() << 49)) : (0)));
                                                                                                                                                                                                                                                                                                                                                                                                                                                                         ^  ~~
 3 warnings generated.
-/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/yaml_ints.cpp:50:21: warning: implicit conversion from 'unsigned long long' to 'int32_t' (aka 'int') changes value from 18446744073709551615 to -1 [-Wconstant-conversion]
-    m_test_u8_dec = 18446744073709551615ULL;
-                  ~ ^~~~~~~~~~~~~~~~~~~~~~~
-/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/yaml_ints.cpp:58:21: warning: implicit conversion from 'unsigned long long' to 'int32_t' (aka 'int') changes value from 18446744073709551615 to -1 [-Wconstant-conversion]
-    m_test_u8_hex = 18446744073709551615ULL;
-                  ~ ^~~~~~~~~~~~~~~~~~~~~~~
-2 warnings generated.
 make[2]: Target `CMakeFiles/ks_tests.dir/build' not remade because of errors.
 make[1]: *** [CMakeFiles/ks_tests.dir/all] Error 2
 make[1]: Target `all' not remade because of errors.
