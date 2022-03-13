@@ -7,10 +7,12 @@
     </packages>
     <classes>
       <class name="io.kaitai.struct.spec.TestValidNotParsedIf"/>
+      <class name="io.kaitai.struct.spec.TestBitsUnalignedB64Be"/>
       <class name="io.kaitai.struct.spec.TestDefaultEndianExprIsLe"/>
       <class name="io.kaitai.struct.spec.TestSwitchManualEnum"/>
       <class name="io.kaitai.struct.spec.TestExpr1"/>
       <class name="io.kaitai.struct.spec.TestProcessCustomNoArgs"/>
+      <class name="io.kaitai.struct.spec.TestBitsShiftByB64Le"/>
       <class name="io.kaitai.struct.spec.TestSwitchManualIntElse"/>
       <class name="io.kaitai.struct.spec.TestRepeatNStrzDouble"/>
       <class name="io.kaitai.struct.spec.TestEnumLongRangeS"/>
@@ -21,6 +23,7 @@
       <class name="io.kaitai.struct.spec.TestExprIntDiv"/>
       <class name="io.kaitai.struct.spec.TestEosExceptionU4"/>
       <class name="io.kaitai.struct.spec.TestMetaXref"/>
+      <class name="io.kaitai.struct.spec.TestBitsSignedResB32Le"/>
       <class name="io.kaitai.struct.spec.TestProcessRepeatBytes"/>
       <class name="io.kaitai.struct.spec.TestTypeTernaryOpaque"/>
       <class name="io.kaitai.struct.spec.TestCombineBytes"/>
@@ -40,6 +43,7 @@
       <class name="io.kaitai.struct.spec.TestNavParent"/>
       <class name="io.kaitai.struct.spec.TestNavRoot"/>
       <class name="io.kaitai.struct.spec.TestImportsAbs"/>
+      <class name="io.kaitai.struct.spec.TestBitsSignedShiftB64Le"/>
       <class name="io.kaitai.struct.spec.TestValidFailInst"/>
       <class name="io.kaitai.struct.spec.TestExprStrOps"/>
       <class name="io.kaitai.struct.spec.TestTermU1Val"/>
@@ -52,6 +56,7 @@
       <class name="io.kaitai.struct.spec.TestSwitchElseOnly"/>
       <class name="io.kaitai.struct.spec.TestNestedTypes2"/>
       <class name="io.kaitai.struct.spec.TestEnumToI"/>
+      <class name="io.kaitai.struct.spec.TestBitsUnalignedB64Le"/>
       <class name="io.kaitai.struct.spec.TestTsPacketHeader"/>
       <class name="io.kaitai.struct.spec.TestImportsRel1"/>
       <class name="io.kaitai.struct.spec.TestValidFailEqInt"/>
@@ -67,6 +72,7 @@
       <class name="io.kaitai.struct.spec.TestEnumInvalid"/>
       <class name="io.kaitai.struct.spec.TestExpr2"/>
       <class name="io.kaitai.struct.spec.TestStrEncodingsDefault"/>
+      <class name="io.kaitai.struct.spec.TestBitsUnalignedB32Le"/>
       <class name="io.kaitai.struct.spec.TestValidEqStrEncodings"/>
       <class name="io.kaitai.struct.spec.TestTypeIntUnaryOp"/>
       <class name="io.kaitai.struct.spec.TestProcessXorConst"/>
@@ -108,6 +114,7 @@
       <class name="io.kaitai.struct.spec.TestExpr3"/>
       <class name="io.kaitai.struct.spec.TestImportsCircularA"/>
       <class name="io.kaitai.struct.spec.TestExprArray"/>
+      <class name="io.kaitai.struct.spec.TestBitsUnalignedB32Be"/>
       <class name="io.kaitai.struct.spec.TestCastToTop"/>
       <class name="io.kaitai.struct.spec.TestHelloWorld"/>
       <class name="io.kaitai.struct.spec.TestEnumToIClassBorder1"/>
@@ -177,6 +184,7 @@
       <class name="io.kaitai.struct.spec.TestNestedTypeParam"/>
       <class name="io.kaitai.struct.spec.TestExprSizeofValueSized"/>
       <class name="io.kaitai.struct.spec.TestRepeatNStrz"/>
+      <class name="io.kaitai.struct.spec.TestBitsSignedShiftB32Le"/>
       <class name="io.kaitai.struct.spec.TestExprIfIntOps"/>
       <class name="io.kaitai.struct.spec.TestProcessRepeatUsertype"/>
       <class name="io.kaitai.struct.spec.TestParamsPassBool"/>
@@ -195,9 +203,9 @@
       <class name="io.kaitai.struct.spec.TestImportsAbsAbs"/>
       <class name="io.kaitai.struct.spec.TestCastNested"/>
       <class name="io.kaitai.struct.spec.TestParamsEnum"/>
+      <class name="io.kaitai.struct.spec.TestBitsShiftByB32Le"/>
       <class name="io.kaitai.struct.spec.TestRepeatEosU4"/>
       <class name="io.kaitai.struct.spec.TestNavParent2"/>
-      <class name="io.kaitai.struct.spec.TestBitsSignedB32Le"/>
       <class name="io.kaitai.struct.spec.TestProcessCoerceSwitch"/>
       <class name="io.kaitai.struct.spec.TestBcdUserTypeLe"/>
       <class name="io.kaitai.struct.spec.TestExprStrEncodings"/>
@@ -217,9 +225,9 @@
       <class name="io.kaitai.struct.spec.TestExprSizeofType1"/>
       <class name="io.kaitai.struct.spec.TestParamsCallShort"/>
       <class name="io.kaitai.struct.spec.TestRepeatUntilComplex"/>
+      <class name="io.kaitai.struct.spec.TestBitsSignedResB32Be"/>
       <class name="io.kaitai.struct.spec.TestValidFailRangeFloat"/>
       <class name="io.kaitai.struct.spec.TestImportsAbsRel"/>
-      <class name="io.kaitai.struct.spec.TestBitsSignedB64Le"/>
       <class name="io.kaitai.struct.spec.TestEnum1"/>
       <class name="io.kaitai.struct.spec.TestOpaqueWithParam"/>
       <class name="io.kaitai.struct.spec.TestProcessXor4Const"/>
@@ -230,11 +238,6 @@
   </test> <!-- all -->
   <test name="all(failed)">
     <classes>
-      <class name="io.kaitai.struct.spec.TestExprIfIntOps">
-        <methods>
-          <include name="testExprIfIntOps"/>
-        </methods>
-      </class> <!-- io.kaitai.struct.spec.TestExprIfIntOps -->
       <class name="io.kaitai.struct.spec.TestExprBytesOps">
         <methods>
           <include name="testExprBytesOps"/>
@@ -245,6 +248,11 @@
           <include name="testExprIntDiv"/>
         </methods>
       </class> <!-- io.kaitai.struct.spec.TestExprIntDiv -->
+      <class name="io.kaitai.struct.spec.TestExprIfIntOps">
+        <methods>
+          <include name="testExprIfIntOps"/>
+        </methods>
+      </class> <!-- io.kaitai.struct.spec.TestExprIfIntOps -->
     </classes>
   </test> <!-- all(failed) -->
 </suite> <!-- Failed suite [Kaitai Struct Java specs] -->
