@@ -24,19 +24,45 @@
     "elapsed": 0.001,
     "is_kst": true
   },
-  "BitsSignedB32Le": {
+  "BitsShiftByB32Le": {
     "status": "passed",
     "elapsed": 0.001,
     "is_kst": true
   },
-  "BitsSignedB64Le": {
+  "BitsShiftByB64Le": {
     "status": "failed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "failure": {
       "file_name": null,
       "line_num": null,
       "message": null,
-      "trace": "readBitsIntLe: the maximum supported bit length is 32 (tried to read 63 bits)\nError: readBitsIntLe: the maximum supported bit length is 32 (tried to read 63 bits)\n    at KaitaiStream.readBitsIntLe (/home/travis/build/kaitai-io/ci_targets/runtime/javascript/KaitaiStream.js:461:11)\n    at BitsSignedB64Le._read (/home/travis/build/kaitai-io/ci_targets/compiled/javascript/BitsSignedB64Le.js:21:26)\n    at new BitsSignedB64Le (/home/travis/build/kaitai-io/ci_targets/compiled/javascript/BitsSignedB64Le.js:18:10)\n    at /home/travis/build/kaitai-io/ci_targets/tests/helpers/javascript/testHelper.js:14:17\n    at FSReqWrap.readFileAfterClose [as oncomplete] (internal/fs/read_file_context.js:53:3)"
+      "trace": "readBitsIntLe: the maximum supported bit length is 32 (tried to read 64 bits)\nError: readBitsIntLe: the maximum supported bit length is 32 (tried to read 64 bits)\n    at KaitaiStream.readBitsIntLe (/home/travis/build/kaitai-io/ci_targets/runtime/javascript/KaitaiStream.js:489:11)\n    at BitsShiftByB64Le._read (/home/travis/build/kaitai-io/ci_targets/compiled/javascript/BitsShiftByB64Le.js:21:23)\n    at new BitsShiftByB64Le (/home/travis/build/kaitai-io/ci_targets/compiled/javascript/BitsShiftByB64Le.js:18:10)\n    at /home/travis/build/kaitai-io/ci_targets/tests/helpers/javascript/testHelper.js:14:17\n    at FSReqWrap.readFileAfterClose [as oncomplete] (internal/fs/read_file_context.js:53:3)"
+    },
+    "is_kst": true
+  },
+  "BitsSignedResB32Be": {
+    "status": "passed",
+    "elapsed": 0.001,
+    "is_kst": true
+  },
+  "BitsSignedResB32Le": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "BitsSignedShiftB32Le": {
+    "status": "passed",
+    "elapsed": 0.001,
+    "is_kst": true
+  },
+  "BitsSignedShiftB64Le": {
+    "status": "failed",
+    "elapsed": 0.004,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": null,
+      "trace": "readBitsIntLe: the maximum supported bit length is 32 (tried to read 63 bits)\nError: readBitsIntLe: the maximum supported bit length is 32 (tried to read 63 bits)\n    at KaitaiStream.readBitsIntLe (/home/travis/build/kaitai-io/ci_targets/runtime/javascript/KaitaiStream.js:489:11)\n    at BitsSignedShiftB64Le._read (/home/travis/build/kaitai-io/ci_targets/compiled/javascript/BitsSignedShiftB64Le.js:21:23)\n    at new BitsSignedShiftB64Le (/home/travis/build/kaitai-io/ci_targets/compiled/javascript/BitsSignedShiftB64Le.js:18:10)\n    at /home/travis/build/kaitai-io/ci_targets/tests/helpers/javascript/testHelper.js:14:17\n    at FSReqWrap.readFileAfterClose [as oncomplete] (internal/fs/read_file_context.js:53:3)"
     },
     "is_kst": true
   },
@@ -47,7 +73,7 @@
       "file_name": null,
       "line_num": null,
       "message": null,
-      "trace": "readBitsIntBe: the maximum supported bit length is 32 (tried to read 40 bits)\nError: readBitsIntBe: the maximum supported bit length is 32 (tried to read 40 bits)\n    at KaitaiStream.readBitsIntBe (/home/travis/build/kaitai-io/ci_targets/runtime/javascript/KaitaiStream.js:422:11)\n    at BitsSimple._read (/home/travis/build/kaitai-io/ci_targets/compiled/javascript/BitsSimple.js:33:32)\n    at new BitsSimple (/home/travis/build/kaitai-io/ci_targets/compiled/javascript/BitsSimple.js:18:10)\n    at /home/travis/build/kaitai-io/ci_targets/tests/helpers/javascript/testHelper.js:14:17\n    at FSReqWrap.readFileAfterClose [as oncomplete] (internal/fs/read_file_context.js:53:3)"
+      "trace": "readBitsIntBe: the maximum supported bit length is 32 (tried to read 40 bits)\nError: readBitsIntBe: the maximum supported bit length is 32 (tried to read 40 bits)\n    at KaitaiStream.readBitsIntBe (/home/travis/build/kaitai-io/ci_targets/runtime/javascript/KaitaiStream.js:431:11)\n    at BitsSimple._read (/home/travis/build/kaitai-io/ci_targets/compiled/javascript/BitsSimple.js:33:32)\n    at new BitsSimple (/home/travis/build/kaitai-io/ci_targets/compiled/javascript/BitsSimple.js:18:10)\n    at /home/travis/build/kaitai-io/ci_targets/tests/helpers/javascript/testHelper.js:14:17\n    at FSReqWrap.readFileAfterClose [as oncomplete] (internal/fs/read_file_context.js:53:3)"
     },
     "is_kst": true
   },
@@ -58,7 +84,39 @@
       "file_name": null,
       "line_num": null,
       "message": null,
-      "trace": "readBitsIntLe: the maximum supported bit length is 32 (tried to read 40 bits)\nError: readBitsIntLe: the maximum supported bit length is 32 (tried to read 40 bits)\n    at KaitaiStream.readBitsIntLe (/home/travis/build/kaitai-io/ci_targets/runtime/javascript/KaitaiStream.js:461:11)\n    at BitsSimpleLe._read (/home/travis/build/kaitai-io/ci_targets/compiled/javascript/BitsSimpleLe.js:33:32)\n    at new BitsSimpleLe (/home/travis/build/kaitai-io/ci_targets/compiled/javascript/BitsSimpleLe.js:18:10)\n    at /home/travis/build/kaitai-io/ci_targets/tests/helpers/javascript/testHelper.js:14:17\n    at FSReqWrap.readFileAfterClose [as oncomplete] (internal/fs/read_file_context.js:53:3)"
+      "trace": "readBitsIntLe: the maximum supported bit length is 32 (tried to read 40 bits)\nError: readBitsIntLe: the maximum supported bit length is 32 (tried to read 40 bits)\n    at KaitaiStream.readBitsIntLe (/home/travis/build/kaitai-io/ci_targets/runtime/javascript/KaitaiStream.js:489:11)\n    at BitsSimpleLe._read (/home/travis/build/kaitai-io/ci_targets/compiled/javascript/BitsSimpleLe.js:33:32)\n    at new BitsSimpleLe (/home/travis/build/kaitai-io/ci_targets/compiled/javascript/BitsSimpleLe.js:18:10)\n    at /home/travis/build/kaitai-io/ci_targets/tests/helpers/javascript/testHelper.js:14:17\n    at FSReqWrap.readFileAfterClose [as oncomplete] (internal/fs/read_file_context.js:53:3)"
+    },
+    "is_kst": true
+  },
+  "BitsUnalignedB32Be": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "BitsUnalignedB32Le": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "BitsUnalignedB64Be": {
+    "status": "failed",
+    "elapsed": 0.001,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": null,
+      "trace": "readBitsIntBe: the maximum supported bit length is 32 (tried to read 64 bits)\nError: readBitsIntBe: the maximum supported bit length is 32 (tried to read 64 bits)\n    at KaitaiStream.readBitsIntBe (/home/travis/build/kaitai-io/ci_targets/runtime/javascript/KaitaiStream.js:431:11)\n    at BitsUnalignedB64Be._read (/home/travis/build/kaitai-io/ci_targets/compiled/javascript/BitsUnalignedB64Be.js:22:23)\n    at new BitsUnalignedB64Be (/home/travis/build/kaitai-io/ci_targets/compiled/javascript/BitsUnalignedB64Be.js:18:10)\n    at /home/travis/build/kaitai-io/ci_targets/tests/helpers/javascript/testHelper.js:14:17\n    at FSReqWrap.readFileAfterClose [as oncomplete] (internal/fs/read_file_context.js:53:3)"
+    },
+    "is_kst": true
+  },
+  "BitsUnalignedB64Le": {
+    "status": "failed",
+    "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": null,
+      "trace": "readBitsIntLe: the maximum supported bit length is 32 (tried to read 64 bits)\nError: readBitsIntLe: the maximum supported bit length is 32 (tried to read 64 bits)\n    at KaitaiStream.readBitsIntLe (/home/travis/build/kaitai-io/ci_targets/runtime/javascript/KaitaiStream.js:489:11)\n    at BitsUnalignedB64Le._read (/home/travis/build/kaitai-io/ci_targets/compiled/javascript/BitsUnalignedB64Le.js:22:23)\n    at new BitsUnalignedB64Le (/home/travis/build/kaitai-io/ci_targets/compiled/javascript/BitsUnalignedB64Le.js:18:10)\n    at /home/travis/build/kaitai-io/ci_targets/tests/helpers/javascript/testHelper.js:14:17\n    at FSReqWrap.readFileAfterClose [as oncomplete] (internal/fs/read_file_context.js:53:3)"
     },
     "is_kst": true
   },
@@ -69,7 +127,7 @@
   },
   "BytesPadTerm": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "CastNested": {
@@ -79,7 +137,7 @@
   },
   "CastToImported": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "CastToTop": {
@@ -121,11 +179,11 @@
   },
   "DebugSwitchUser": {
     "status": "passed",
-    "elapsed": 0.0
+    "elapsed": 0.001
   },
   "DefaultBigEndian": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "DefaultBitEndianMod": {
@@ -150,7 +208,7 @@
   },
   "DefaultEndianExprIsLe": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "DefaultEndianMod": {
@@ -160,12 +218,12 @@
   },
   "Docstrings": {
     "status": "passed",
-    "elapsed": 0.004,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "DocstringsDocref": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "DocstringsDocrefMulti": {
@@ -175,7 +233,7 @@
   },
   "Enum0": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "Enum1": {
@@ -225,17 +283,17 @@
   },
   "EnumIntRangeU": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "EnumInvalid": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "EnumLongRangeS": {
     "status": "failed",
-    "elapsed": 0.001,
+    "elapsed": 0.002,
     "failure": {
       "file_name": null,
       "line_num": null,
@@ -246,7 +304,7 @@
   },
   "EnumLongRangeU": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "EnumNegative": {
@@ -256,12 +314,12 @@
   },
   "EnumOfValueInst": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "EnumToI": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "EnumToIClassBorder1": {
@@ -271,7 +329,7 @@
   },
   "EofExceptionBytes": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "EofExceptionU4": {
@@ -281,7 +339,7 @@
   },
   "EosExceptionBytes": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "EosExceptionU4": {
@@ -301,7 +359,7 @@
   },
   "Expr2": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.002,
     "is_kst": true
   },
   "Expr3": {
@@ -326,7 +384,7 @@
   },
   "ExprBytesLiteral": {
     "status": "failed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "failure": {
       "file_name": null,
       "line_num": null,
@@ -398,7 +456,7 @@
   },
   "ExprSizeofValue0": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "ExprSizeofValueSized": {
@@ -408,22 +466,22 @@
   },
   "ExprStrEncodings": {
     "status": "passed",
-    "elapsed": 0.019,
+    "elapsed": 0.022,
     "is_kst": true
   },
   "ExprStrOps": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.01,
     "is_kst": true
   },
   "FixedContents": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.002,
     "is_kst": true
   },
   "FixedStruct": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.002,
     "is_kst": true
   },
   "FloatToI": {
@@ -433,7 +491,7 @@
   },
   "FloatingPoints": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "HelloWorld": {
@@ -443,35 +501,35 @@
   },
   "IfInstances": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "IfStruct": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "IfValues": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "Imports0": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "ImportsAbs": {
     "status": "passed",
-    "elapsed": 0.002
+    "elapsed": 0.001
   },
   "ImportsAbsAbs": {
     "status": "passed",
-    "elapsed": 0.009
+    "elapsed": 0.002
   },
   "ImportsAbsRel": {
     "status": "passed",
-    "elapsed": 0.003
+    "elapsed": 0.001
   },
   "ImportsCircularA": {
     "status": "failed",
@@ -496,7 +554,7 @@
   },
   "IndexToParamEos": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "IndexToParamExpr": {
@@ -506,7 +564,7 @@
   },
   "IndexToParamUntil": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "InstanceIoUser": {
@@ -521,12 +579,12 @@
   },
   "InstanceStdArray": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "InstanceUserArray": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "Integers": {
@@ -563,22 +621,22 @@
   },
   "JsSignedRightShift": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "MetaTags": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "MetaXref": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "MultipleUse": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "NavParent": {
@@ -603,12 +661,12 @@
   },
   "NavParentFalse2": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "NavParentOverride": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "NavParentSwitch": {
@@ -618,12 +676,12 @@
   },
   "NavParentSwitchCast": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "NavParentVsValueInst": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "NavRoot": {
@@ -638,27 +696,27 @@
   },
   "NestedSameName2": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "NestedTypeParam": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "NestedTypes": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "NestedTypes2": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "NestedTypes3": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "NonStandard": {
@@ -676,7 +734,7 @@
   },
   "OpaqueWithParam": {
     "status": "passed",
-    "elapsed": 0.001
+    "elapsed": 0.0
   },
   "OptionalId": {
     "status": "passed",
@@ -684,7 +742,7 @@
   },
   "ParamsCallExtraParens": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "ParamsCallShort": {
@@ -708,27 +766,27 @@
   },
   "ParamsPassArrayStr": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "ParamsPassArrayStruct": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "ParamsPassArrayUsertype": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "ParamsPassBool": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "ParamsPassStruct": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "ParamsPassUsertype": {
@@ -743,17 +801,17 @@
   },
   "PositionInSeq": {
     "status": "passed",
-    "elapsed": 0.002,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "PositionToEnd": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "ProcessCoerceBytes": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "ProcessCoerceSwitch": {
@@ -793,7 +851,7 @@
   },
   "ProcessRotate": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "ProcessToUser": {
@@ -803,7 +861,7 @@
   },
   "ProcessXor4Const": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "ProcessXor4Value": {
@@ -813,12 +871,12 @@
   },
   "ProcessXorConst": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "ProcessXorValue": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "RecursiveOne": {
@@ -828,12 +886,12 @@
   },
   "RepeatEosBit": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "RepeatEosStruct": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "RepeatEosU4": {
@@ -853,7 +911,7 @@
   },
   "RepeatNStrzDouble": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "RepeatUntilCalcArrayType": {
@@ -873,12 +931,12 @@
   },
   "RepeatUntilSized": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "StrEncodings": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "StrEncodingsDefault": {
@@ -893,11 +951,11 @@
   },
   "StrLiterals": {
     "status": "passed",
-    "elapsed": 0.001
+    "elapsed": 0.007
   },
   "StrLiterals2": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "StrPadTerm": {
@@ -921,27 +979,27 @@
   },
   "SwitchElseOnly": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "SwitchIntegers": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "SwitchIntegers2": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "SwitchManualEnum": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "SwitchManualEnumInvalid": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "SwitchManualEnumInvalidElse": {
@@ -956,7 +1014,7 @@
   },
   "SwitchManualIntElse": {
     "status": "passed",
-    "elapsed": 0.007,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "SwitchManualIntSize": {
@@ -985,16 +1043,16 @@
   },
   "SwitchMultiBoolOps": {
     "status": "passed",
-    "elapsed": 0.001
+    "elapsed": 0.0
   },
   "SwitchRepeatExpr": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "SwitchRepeatExprInvalid": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "TermBytes": {
@@ -1018,26 +1076,32 @@
   },
   "TsPacketHeader": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "TypeIntUnaryOp": {
     "status": "passed",
-    "elapsed": 0.0
+    "elapsed": 0.001
   },
   "TypeTernary": {
-    "status": "passed",
-    "elapsed": 0.0,
-    "is_kst": true
-  },
-  "TypeTernary2ndFalsy": {
     "status": "passed",
     "elapsed": 0.001,
     "is_kst": true
   },
+  "TypeTernary2ndFalsy": {
+    "status": "failed",
+    "elapsed": 0.001,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": null,
+      "trace": "Input A expected to strictly equal input B:\n+ expected - actual\n\n- 0\n+ -0\n\n      + expected - actual\n\n      -0\n      +-0\n      \nAssertionError [ERR_ASSERTION]: Input A expected to strictly equal input B:\n+ expected - actual\n\n- 0\n+ -0\n    at /home/travis/build/kaitai-io/ci_targets/tests/spec/javascript/test_type_ternary_2nd_falsy.js:10:10\n    at /home/travis/build/kaitai-io/ci_targets/tests/helpers/javascript/testHelper.js:16:11\n    at FSReqWrap.readFileAfterClose [as oncomplete] (internal/fs/read_file_context.js:53:3)"
+    },
+    "is_kst": true
+  },
   "TypeTernaryOpaque": {
     "status": "passed",
-    "elapsed": 0.0
+    "elapsed": 0.001
   },
   "UserType": {
     "status": "passed",
@@ -1046,7 +1110,7 @@
   },
   "ValidEqStrEncodings": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "ValidFailAnyofInt": {
@@ -1056,12 +1120,12 @@
   },
   "ValidFailContents": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "ValidFailEqBytes": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "ValidFailEqInt": {
@@ -1071,7 +1135,7 @@
   },
   "ValidFailEqStr": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "ValidFailExpr": {
@@ -1081,12 +1145,12 @@
   },
   "ValidFailInst": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "ValidFailMaxInt": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "ValidFailMinInt": {
@@ -1096,7 +1160,7 @@
   },
   "ValidFailRangeBytes": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "ValidFailRangeFloat": {
@@ -1111,32 +1175,32 @@
   },
   "ValidFailRangeStr": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "ValidLong": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "ValidNotParsedIf": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "ValidShort": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "ValidSwitch": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "YamlInts": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "ZlibSurrounded": {
@@ -1146,18 +1210,18 @@
   },
   "ZlibWithHeader78": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "$meta": {
     "lang": "javascript",
-    "timestamp": "2022-02-10T22:11:41Z",
+    "timestamp": "2022-03-13T10:34:28Z",
     "ci": {
       "ci": "travis",
-      "build_id": "246264164",
-      "job_id": "559241260",
-      "job_number": "438.12",
-      "url": "https://app.travis-ci.com/kaitai-io/ci_targets/jobs/559241260"
+      "build_id": "247810357",
+      "job_id": "563116028",
+      "job_number": "440.12",
+      "url": "https://app.travis-ci.com/kaitai-io/ci_targets/jobs/563116028"
     }
   }
 }
