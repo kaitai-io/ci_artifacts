@@ -8,14 +8,30 @@
 --- PASS: TestBitsEnum (0.00s)
 === RUN   TestBitsSeqEndianCombo
 --- PASS: TestBitsSeqEndianCombo (0.00s)
-=== RUN   TestBitsSignedB32Le
---- PASS: TestBitsSignedB32Le (0.00s)
-=== RUN   TestBitsSignedB64Le
---- PASS: TestBitsSignedB64Le (0.00s)
+=== RUN   TestBitsShiftByB32Le
+--- PASS: TestBitsShiftByB32Le (0.00s)
+=== RUN   TestBitsShiftByB64Le
+--- PASS: TestBitsShiftByB64Le (0.00s)
+=== RUN   TestBitsSignedResB32Be
+--- PASS: TestBitsSignedResB32Be (0.00s)
+=== RUN   TestBitsSignedResB32Le
+--- PASS: TestBitsSignedResB32Le (0.00s)
+=== RUN   TestBitsSignedShiftB32Le
+--- PASS: TestBitsSignedShiftB32Le (0.00s)
+=== RUN   TestBitsSignedShiftB64Le
+--- PASS: TestBitsSignedShiftB64Le (0.00s)
 === RUN   TestBitsSimpleLe
 --- PASS: TestBitsSimpleLe (0.00s)
 === RUN   TestBitsSimple
 --- PASS: TestBitsSimple (0.00s)
+=== RUN   TestBitsUnalignedB32Be
+--- PASS: TestBitsUnalignedB32Be (0.00s)
+=== RUN   TestBitsUnalignedB32Le
+--- PASS: TestBitsUnalignedB32Le (0.00s)
+=== RUN   TestBitsUnalignedB64Be
+--- PASS: TestBitsUnalignedB64Be (0.00s)
+=== RUN   TestBitsUnalignedB64Le
+--- PASS: TestBitsUnalignedB64Le (0.00s)
 === RUN   TestBufferedStruct
 --- PASS: TestBufferedStruct (0.00s)
 === RUN   TestBytesPadTerm
@@ -101,7 +117,7 @@
 === RUN   TestExpr2
 --- PASS: TestExpr2 (0.00s)
 === RUN   TestExpr3
---- PASS: TestExpr3 (0.00s)
+--- PASS: TestExpr3 (0.01s)
 === RUN   TestExprArray
 --- PASS: TestExprArray (0.00s)
 === RUN   TestExprBits
@@ -117,7 +133,7 @@
 === RUN   TestExprIfIntOps
 --- PASS: TestExprIfIntOps (0.00s)
 === RUN   TestExprIntDiv
---- FAIL: TestExprIntDiv (0.01s)
+--- FAIL: TestExprIntDiv (0.00s)
     expr_int_div_test.go:43: 
         	Error Trace:	expr_int_div_test.go:43
         	Error:      	Not equal: 
@@ -245,28 +261,28 @@
 === RUN   TestNonStandard
 --- PASS: TestNonStandard (0.00s)
 === RUN   TestOpaqueExternalType02Parent
-goroutine 127 [running]:
-runtime/debug.Stack(0x18, 0xc000056bb8, 0x4869d2)
+goroutine 123 [running]:
+runtime/debug.Stack(0x18, 0xc00005bbb8, 0x486a42)
 	/home/travis/.gimme/versions/go1.13.linux.amd64/src/runtime/debug/stack.go:24 +0x9d
 runtime/debug.PrintStack()
 	/home/travis/.gimme/versions/go1.13.linux.amd64/src/runtime/debug/stack.go:16 +0x22
-github.com/kaitai-io/ci_targets/tests/spec/go.TestOpaqueExternalType02Parent.func1(0xc00018ed00)
+github.com/kaitai-io/ci_targets/tests/spec/go.TestOpaqueExternalType02Parent.func1(0xc000155500)
 	/home/travis/gopath/src/github.com/kaitai-io/ci_targets/tests/spec/go/opaque_external_type_02_parent_test.go:15 +0x57
-panic(0x789980, 0xae3f10)
+panic(0x78ce60, 0xaeaf20)
 	/home/travis/.gimme/versions/go1.13.linux.amd64/src/runtime/panic.go:679 +0x1b2
 test_formats.(*OpaqueExternalType02Child).SomeMethod(...)
 	/home/travis/gopath/src/github.com/kaitai-io/ci_targets/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:46
-test_formats.(*OpaqueExternalType02Child_OpaqueExternalType02ChildChild).Read(0xc00018b170, 0xc00018b110, 0xc0000c8870, 0x0, 0xc000192274, 0x3)
+test_formats.(*OpaqueExternalType02Child_OpaqueExternalType02ChildChild).Read(0xc00014f710, 0xc00014f6b0, 0xc00009e870, 0x0, 0xc000158654, 0x3)
 	/home/travis/gopath/src/github.com/kaitai-io/ci_targets/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:69 +0x50
-test_formats.(*OpaqueExternalType02Child).Read(0xc0000c8870, 0xc00018b110, 0x785200, 0xc0000b1620, 0x0, 0x7bf440, 0x1)
+test_formats.(*OpaqueExternalType02Child).Read(0xc00009e870, 0xc00014f6b0, 0x7886e0, 0xc00000f680, 0x0, 0x7c2aa0, 0x1)
 	/home/travis/gopath/src/github.com/kaitai-io/ci_targets/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:38 +0x18f
-test_formats.(*OpaqueExternalType02Parent_ParentObj).Read(0xc0000b1620, 0xc00018b110, 0xc00018b140, 0xc00018b140, 0x7bf380, 0x1)
+test_formats.(*OpaqueExternalType02Parent_ParentObj).Read(0xc00000f680, 0xc00014f6b0, 0xc00014f6e0, 0xc00014f6e0, 0x7c29e0, 0x1)
 	/home/travis/gopath/src/github.com/kaitai-io/ci_targets/tests/compiled/go/src/test_formats/opaque_external_type_02_parent.go:48 +0x9c
-test_formats.(*OpaqueExternalType02Parent).Read(0xc00018b140, 0xc00018b110, 0x7851a0, 0xc00018b140, 0xc00018b140, 0x0, 0x0)
+test_formats.(*OpaqueExternalType02Parent).Read(0xc00014f6e0, 0xc00014f6b0, 0x788680, 0xc00014f6e0, 0xc00014f6e0, 0x0, 0x0)
 	/home/travis/gopath/src/github.com/kaitai-io/ci_targets/tests/compiled/go/src/test_formats/opaque_external_type_02_parent.go:24 +0xa6
-github.com/kaitai-io/ci_targets/tests/spec/go.TestOpaqueExternalType02Parent(0xc00018ed00)
+github.com/kaitai-io/ci_targets/tests/spec/go.TestOpaqueExternalType02Parent(0xc000155500)
 	/home/travis/gopath/src/github.com/kaitai-io/ci_targets/tests/spec/go/opaque_external_type_02_parent_test.go:25 +0x18d
-testing.tRunner(0xc00018ed00, 0x81d588)
+testing.tRunner(0xc000155500, 0x8212c0)
 	/home/travis/.gimme/versions/go1.13.linux.amd64/src/testing/testing.go:909 +0xc9
 created by testing.(*T).Run
 	/home/travis/.gimme/versions/go1.13.linux.amd64/src/testing/testing.go:960 +0x350
@@ -283,7 +299,7 @@ created by testing.(*T).Run
 === RUN   TestParamsDef
 --- PASS: TestParamsDef (0.00s)
 === RUN   TestParamsEnum
---- PASS: TestParamsEnum (0.00s)
+--- PASS: TestParamsEnum (0.01s)
 === RUN   TestParamsPassArrayStr
 --- PASS: TestParamsPassArrayStr (0.00s)
 === RUN   TestParamsPassArrayUsertype
@@ -305,7 +321,7 @@ created by testing.(*T).Run
 === RUN   TestPositionToEnd
 --- PASS: TestPositionToEnd (0.00s)
 === RUN   TestProcessCoerceBytes
---- PASS: TestProcessCoerceBytes (0.01s)
+--- PASS: TestProcessCoerceBytes (0.00s)
 === RUN   TestProcessCoerceUsertype1
 --- PASS: TestProcessCoerceUsertype1 (0.00s)
 === RUN   TestProcessCoerceUsertype2

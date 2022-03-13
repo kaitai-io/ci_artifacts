@@ -24,12 +24,32 @@
     "elapsed": 0.0,
     "is_kst": true
   },
-  "BitsSignedB32Le": {
+  "BitsShiftByB32Le": {
     "status": "passed",
     "elapsed": 0.0,
     "is_kst": true
   },
-  "BitsSignedB64Le": {
+  "BitsShiftByB64Le": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "BitsSignedResB32Be": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "BitsSignedResB32Le": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "BitsSignedShiftB32Le": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "BitsSignedShiftB64Le": {
     "status": "passed",
     "elapsed": 0.0,
     "is_kst": true
@@ -40,6 +60,26 @@
     "is_kst": true
   },
   "BitsSimple": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "BitsUnalignedB32Be": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "BitsUnalignedB32Le": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "BitsUnalignedB64Be": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "BitsUnalignedB64Le": {
     "status": "passed",
     "elapsed": 0.0,
     "is_kst": true
@@ -269,7 +309,7 @@
   },
   "Expr3": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.01,
     "is_kst": true
   },
   "ExprArray": {
@@ -309,7 +349,7 @@
   },
   "ExprIntDiv": {
     "status": "failed",
-    "elapsed": 0.01,
+    "elapsed": 0.0,
     "failure": {
       "file_name": null,
       "line_num": null,
@@ -585,7 +625,7 @@
       "file_name": null,
       "line_num": null,
       "message": "Failed",
-      "trace": "goroutine 127 [running]:\nruntime/debug.Stack(0x18, 0xc000056bb8, 0x4869d2)\nruntime/debug.PrintStack()\ngithub.com/kaitai-io/ci_targets/tests/spec/go.TestOpaqueExternalType02Parent.func1(0xc00018ed00)\npanic(0x789980, 0xae3f10)\ntest_formats.(*OpaqueExternalType02Child).SomeMethod(...)\ntest_formats.(*OpaqueExternalType02Child_OpaqueExternalType02ChildChild).Read(0xc00018b170, 0xc00018b110, 0xc0000c8870, 0x0, 0xc000192274, 0x3)\ntest_formats.(*OpaqueExternalType02Child).Read(0xc0000c8870, 0xc00018b110, 0x785200, 0xc0000b1620, 0x0, 0x7bf440, 0x1)\ntest_formats.(*OpaqueExternalType02Parent_ParentObj).Read(0xc0000b1620, 0xc00018b110, 0xc00018b140, 0xc00018b140, 0x7bf380, 0x1)\ntest_formats.(*OpaqueExternalType02Parent).Read(0xc00018b140, 0xc00018b110, 0x7851a0, 0xc00018b140, 0xc00018b140, 0x0, 0x0)\ngithub.com/kaitai-io/ci_targets/tests/spec/go.TestOpaqueExternalType02Parent(0xc00018ed00)\ntesting.tRunner(0xc00018ed00, 0x81d588)\ncreated by testing.(*T).Run\nopaque_external_type_02_parent_test.go:16: unexpected panic: runtime error: invalid memory address or nil pointer dereference"
+      "trace": "goroutine 123 [running]:\nruntime/debug.Stack(0x18, 0xc00005bbb8, 0x486a42)\nruntime/debug.PrintStack()\ngithub.com/kaitai-io/ci_targets/tests/spec/go.TestOpaqueExternalType02Parent.func1(0xc000155500)\npanic(0x78ce60, 0xaeaf20)\ntest_formats.(*OpaqueExternalType02Child).SomeMethod(...)\ntest_formats.(*OpaqueExternalType02Child_OpaqueExternalType02ChildChild).Read(0xc00014f710, 0xc00014f6b0, 0xc00009e870, 0x0, 0xc000158654, 0x3)\ntest_formats.(*OpaqueExternalType02Child).Read(0xc00009e870, 0xc00014f6b0, 0x7886e0, 0xc00000f680, 0x0, 0x7c2aa0, 0x1)\ntest_formats.(*OpaqueExternalType02Parent_ParentObj).Read(0xc00000f680, 0xc00014f6b0, 0xc00014f6e0, 0xc00014f6e0, 0x7c29e0, 0x1)\ntest_formats.(*OpaqueExternalType02Parent).Read(0xc00014f6e0, 0xc00014f6b0, 0x788680, 0xc00014f6e0, 0xc00014f6e0, 0x0, 0x0)\ngithub.com/kaitai-io/ci_targets/tests/spec/go.TestOpaqueExternalType02Parent(0xc000155500)\ntesting.tRunner(0xc000155500, 0x8212c0)\ncreated by testing.(*T).Run\nopaque_external_type_02_parent_test.go:16: unexpected panic: runtime error: invalid memory address or nil pointer dereference"
     }
   },
   "OpaqueExternalType": {
@@ -612,7 +652,7 @@
   },
   "ParamsEnum": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.01,
     "is_kst": true
   },
   "ParamsPassArrayStr": {
@@ -658,7 +698,7 @@
   },
   "ProcessCoerceBytes": {
     "status": "passed",
-    "elapsed": 0.01,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "ProcessCoerceUsertype1": {
@@ -980,13 +1020,13 @@
   },
   "$meta": {
     "lang": "go",
-    "timestamp": "2022-02-10T22:13:28Z",
+    "timestamp": "2022-03-13T10:36:32Z",
     "ci": {
       "ci": "travis",
-      "build_id": "246264164",
-      "job_id": "559241273",
-      "job_number": "438.25",
-      "url": "https://app.travis-ci.com/kaitai-io/ci_targets/jobs/559241273"
+      "build_id": "247810357",
+      "job_id": "563116041",
+      "job_number": "440.25",
+      "url": "https://app.travis-ci.com/kaitai-io/ci_targets/jobs/563116041"
     }
   }
 }
