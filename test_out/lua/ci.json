@@ -24,12 +24,32 @@
     "elapsed": 0.0,
     "is_kst": true
   },
-  "BitsSignedB32Le": {
+  "BitsShiftByB32Le": {
     "status": "passed",
     "elapsed": 0.0,
     "is_kst": true
   },
-  "BitsSignedB64Le": {
+  "BitsShiftByB64Le": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "BitsSignedResB32Be": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "BitsSignedResB32Le": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "BitsSignedShiftB32Le": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "BitsSignedShiftB64Le": {
     "status": "passed",
     "elapsed": 0.0,
     "is_kst": true
@@ -41,6 +61,26 @@
   "BitsSimpleLe": {
     "status": "passed",
     "elapsed": 0.0
+  },
+  "BitsUnalignedB32Be": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "BitsUnalignedB32Le": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "BitsUnalignedB64Be": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "BitsUnalignedB64Le": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
   },
   "BufferedStruct": {
     "status": "passed",
@@ -285,7 +325,7 @@
   },
   "ExprBytesLiteral": {
     "status": "failed",
-    "elapsed": 0.015,
+    "elapsed": 0.018,
     "failure": {
       "file_name": null,
       "line_num": null,
@@ -361,7 +401,7 @@
   },
   "ExprStrEncodings": {
     "status": "failed",
-    "elapsed": 0.002,
+    "elapsed": 0.001,
     "failure": {
       "file_name": null,
       "line_num": null,
@@ -513,7 +553,7 @@
   },
   "IntegersMinMax": {
     "status": "failed",
-    "elapsed": 0.002,
+    "elapsed": 0.001,
     "failure": {
       "file_name": null,
       "line_num": null,
@@ -689,7 +729,7 @@
   },
   "ParamsPassBool": {
     "status": "failed",
-    "elapsed": 0.001,
+    "elapsed": 0.002,
     "failure": {
       "file_name": null,
       "line_num": null,
@@ -850,7 +890,7 @@
   },
   "StrEncodings": {
     "status": "failed",
-    "elapsed": 0.001,
+    "elapsed": 0.002,
     "failure": {
       "file_name": null,
       "line_num": null,
@@ -1061,7 +1101,7 @@
   },
   "ValidFailExpr": {
     "status": "failed",
-    "elapsed": 0.015,
+    "elapsed": 0.016,
     "failure": {
       "file_name": null,
       "line_num": null,
@@ -1106,14 +1146,8 @@
     "is_kst": true
   },
   "ValidLong": {
-    "status": "failed",
-    "elapsed": 0.002,
-    "failure": {
-      "file_name": null,
-      "line_num": null,
-      "message": "compiled/lua/valid_long.lua:45: not equal, expected 1.844674407371e+19, but got -1",
-      "trace": "stack traceback:\n\tcompiled/lua/valid_long.lua:45: in method '_read'\n\tcompiled/lua/valid_long.lua:15: in local 'init'\n\t../runtime/lua/class.lua:70: in function <../runtime/lua/class.lua:66>\n\t(...tail calls...)\n\tspec/lua/test_valid_long.lua:10: in upvalue 'TestValidLong.test_valid_long'"
-    },
+    "status": "passed",
+    "elapsed": 0.0,
     "is_kst": true
   },
   "ValidNotParsedIf": {
@@ -1122,14 +1156,8 @@
     "is_kst": true
   },
   "ValidShort": {
-    "status": "failed",
-    "elapsed": 0.001,
-    "failure": {
-      "file_name": null,
-      "line_num": null,
-      "message": "compiled/lua/valid_short.lua:45: not equal, expected 1.844674407371e+19, but got -1",
-      "trace": "stack traceback:\n\tcompiled/lua/valid_short.lua:45: in method '_read'\n\tcompiled/lua/valid_short.lua:15: in local 'init'\n\t../runtime/lua/class.lua:70: in function <../runtime/lua/class.lua:66>\n\t(...tail calls...)\n\tspec/lua/test_valid_short.lua:10: in upvalue 'TestValidShort.test_valid_short'"
-    },
+    "status": "passed",
+    "elapsed": 0.0,
     "is_kst": true
   },
   "ValidSwitch": {
@@ -1138,13 +1166,19 @@
     "is_kst": true
   },
   "YamlInts": {
-    "status": "passed",
-    "elapsed": 0.0,
+    "status": "failed",
+    "elapsed": 0.001,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": "spec/lua/test_yaml_ints.lua:14: expected: 1.844674407371e+19, actual: -1",
+      "trace": "stack traceback:\n\tspec/lua/test_yaml_ints.lua:14: in upvalue 'TestYamlInts.test_yaml_ints'"
+    },
     "is_kst": true
   },
   "ZlibSurrounded": {
     "status": "failed",
-    "elapsed": 0.015,
+    "elapsed": 0.016,
     "failure": {
       "file_name": null,
       "line_num": null,
@@ -1155,7 +1189,7 @@
   },
   "ZlibWithHeader78": {
     "status": "failed",
-    "elapsed": 0.019,
+    "elapsed": 0.017,
     "failure": {
       "file_name": null,
       "line_num": null,
@@ -1166,13 +1200,13 @@
   },
   "$meta": {
     "lang": "lua",
-    "timestamp": "2022-02-10T22:13:15Z",
+    "timestamp": "2022-03-13T10:36:22Z",
     "ci": {
       "ci": "travis",
-      "build_id": "246264164",
-      "job_id": "559241275",
-      "job_number": "438.27",
-      "url": "https://app.travis-ci.com/kaitai-io/ci_targets/jobs/559241275"
+      "build_id": "247810357",
+      "job_id": "563116043",
+      "job_number": "440.27",
+      "url": "https://app.travis-ci.com/kaitai-io/ci_targets/jobs/563116043"
     }
   }
 }
