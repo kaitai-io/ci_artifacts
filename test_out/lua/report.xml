@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites>
-    <testsuite name="LuaUnit" id="00001" package="" hostname="localhost" tests="227" timestamp="2022-03-13T10:36:22" time="0.100" errors="5" failures="10" skipped="0">
+    <testsuite name="LuaUnit" id="00001" package="" hostname="localhost" tests="228" timestamp="2022-03-18T13:05:14" time="0.092" errors="5" failures="6" skipped="0">
         <properties>
             <property name="Lua Version" value="Lua 5.3"/>
             <property name="LuaUnit Version" value="3.4"/>
@@ -140,9 +140,11 @@
         </testcase>
         <testcase classname="TestExprArray" name="TestExprArray.test_expr_array" time="0.000">
         </testcase>
+        <testcase classname="TestExprBits" name="TestExprBits.test_expr_bits" time="0.000">
+        </testcase>
         <testcase classname="TestExprBytesCmp" name="TestExprBytesCmp.test_expr_bytes_cmp" time="0.000">
         </testcase>
-        <testcase classname="TestExprBytesLiteral" name="TestExprBytesLiteral.test_expr_bytes_literal" time="0.018">
+        <testcase classname="TestExprBytesLiteral" name="TestExprBytesLiteral.test_expr_bytes_literal" time="0.015">
             <failure type="spec/lua/run_test_suite.lua:18: spec/lua/test_expr_bytes_literal.lua:5: module &apos;expr_bytes_literal&apos; not found:
 	no field package.preload[&apos;expr_bytes_literal&apos;]
 	no file &apos;../runtime/lua/expr_bytes_literal.lua&apos;
@@ -185,7 +187,7 @@
         </testcase>
         <testcase classname="TestExprSizeofValueSized" name="TestExprSizeofValueSized.test_expr_sizeof_value_sized" time="0.000">
         </testcase>
-        <testcase classname="TestExprStrEncodings" name="TestExprStrEncodings.test_expr_str_encodings" time="0.001">
+        <testcase classname="TestExprStrEncodings" name="TestExprStrEncodings.test_expr_str_encodings" time="0.002">
             <error type="../runtime/lua/string_decode.lua:42: Encoding SJIS not supported">
                 <![CDATA[stack traceback:
 	../runtime/lua/string_decode.lua:42: in function 'string_decode.decode'
@@ -199,10 +201,7 @@
         </testcase>
         <testcase classname="TestFixedContents" name="TestFixedContents.test_fixed_contents" time="0.000">
         </testcase>
-        <testcase classname="TestFixedStruct" name="TestFixedStruct.test_fixed_struct" time="0.001">
-            <failure type="spec/lua/test_fixed_struct.lua:15: expected: 1.844674407371e+19, actual: -1">
-                <![CDATA[stack traceback:
-	spec/lua/test_fixed_struct.lua:15: in upvalue 'TestFixedStruct.test_fixed_struct']]></failure>
+        <testcase classname="TestFixedStruct" name="TestFixedStruct.test_fixed_struct" time="0.000">
         </testcase>
         <testcase classname="TestFloatToI" name="TestFloatToI.test_float_to_i" time="0.000">
         </testcase>
@@ -248,17 +247,11 @@
         </testcase>
         <testcase classname="TestInstanceUserArray" name="TestInstanceUserArray.test_instance_user_array" time="0.000">
         </testcase>
-        <testcase classname="TestIntegers" name="TestIntegers.test_integers" time="0.001">
-            <failure type="spec/lua/test_integers.lua:15: expected: 1.844674407371e+19, actual: -1">
-                <![CDATA[stack traceback:
-	spec/lua/test_integers.lua:15: in upvalue 'TestIntegers.test_integers']]></failure>
+        <testcase classname="TestIntegers" name="TestIntegers.test_integers" time="0.000">
         </testcase>
         <testcase classname="TestIntegersDoubleOverflow" name="TestIntegersDoubleOverflow.test_integers_double_overflow" time="0.000">
         </testcase>
-        <testcase classname="TestIntegersMinMax" name="TestIntegersMinMax.test_integers_min_max" time="0.001">
-            <failure type="spec/lua/test_integers_min_max.lua:22: expected: 1.844674407371e+19, actual: -1">
-                <![CDATA[stack traceback:
-	spec/lua/test_integers_min_max.lua:22: in upvalue 'TestIntegersMinMax.test_integers_min_max']]></failure>
+        <testcase classname="TestIntegersMinMax" name="TestIntegersMinMax.test_integers_min_max" time="0.000">
         </testcase>
         <testcase classname="TestIoLocalVar" name="TestIoLocalVar.test_io_local_var" time="0.000">
         </testcase>
@@ -393,7 +386,7 @@
         </testcase>
         <testcase classname="TestRepeatUntilSized" name="TestRepeatUntilSized.test_repeat_until_sized" time="0.000">
         </testcase>
-        <testcase classname="TestStrEncodings" name="TestStrEncodings.test_str_encodings" time="0.002">
+        <testcase classname="TestStrEncodings" name="TestStrEncodings.test_str_encodings" time="0.003">
             <error type="../runtime/lua/string_decode.lua:42: Encoding SJIS not supported">
                 <![CDATA[stack traceback:
 	../runtime/lua/string_decode.lua:42: in function 'string_decode.decode'
@@ -480,7 +473,7 @@
         </testcase>
         <testcase classname="TestUserType" name="TestUserType.test_user_type" time="0.000">
         </testcase>
-        <testcase classname="TestValidEqStrEncodings" name="TestValidEqStrEncodings.test_valid_eq_str_encodings" time="0.001">
+        <testcase classname="TestValidEqStrEncodings" name="TestValidEqStrEncodings.test_valid_eq_str_encodings" time="0.002">
             <error type="../runtime/lua/string_decode.lua:42: Encoding SJIS not supported">
                 <![CDATA[stack traceback:
 	../runtime/lua/string_decode.lua:42: in function 'string_decode.decode'
@@ -500,7 +493,7 @@
         </testcase>
         <testcase classname="TestValidFailEqStr" name="TestValidFailEqStr.test_valid_fail_eq_str" time="0.000">
         </testcase>
-        <testcase classname="TestValidFailExpr" name="TestValidFailExpr.test_valid_fail_expr" time="0.016">
+        <testcase classname="TestValidFailExpr" name="TestValidFailExpr.test_valid_fail_expr" time="0.014">
             <failure type="spec/lua/run_test_suite.lua:18: spec/lua/test_valid_fail_expr.lua:5: module &apos;valid_fail_expr&apos; not found:
 	no field package.preload[&apos;valid_fail_expr&apos;]
 	no file &apos;../runtime/lua/valid_fail_expr.lua&apos;
@@ -539,12 +532,9 @@
         </testcase>
         <testcase classname="TestValidSwitch" name="TestValidSwitch.test_valid_switch" time="0.000">
         </testcase>
-        <testcase classname="TestYamlInts" name="TestYamlInts.test_yaml_ints" time="0.001">
-            <failure type="spec/lua/test_yaml_ints.lua:14: expected: 1.844674407371e+19, actual: -1">
-                <![CDATA[stack traceback:
-	spec/lua/test_yaml_ints.lua:14: in upvalue 'TestYamlInts.test_yaml_ints']]></failure>
+        <testcase classname="TestYamlInts" name="TestYamlInts.test_yaml_ints" time="0.000">
         </testcase>
-        <testcase classname="TestZlibSurrounded" name="TestZlibSurrounded.test_zlib_surrounded" time="0.016">
+        <testcase classname="TestZlibSurrounded" name="TestZlibSurrounded.test_zlib_surrounded" time="0.014">
             <failure type="spec/lua/run_test_suite.lua:18: spec/lua/test_zlib_surrounded.lua:5: module &apos;zlib_surrounded&apos; not found:
 	no field package.preload[&apos;zlib_surrounded&apos;]
 	no file &apos;../runtime/lua/zlib_surrounded.lua&apos;
@@ -561,7 +551,7 @@
                 <![CDATA[stack traceback:
 	spec/lua/run_test_suite.lua:18: in upvalue 'TestZlibSurrounded.test_zlib_surrounded']]></failure>
         </testcase>
-        <testcase classname="TestZlibWithHeader78" name="TestZlibWithHeader78.test_zlib_with_header_78" time="0.017">
+        <testcase classname="TestZlibWithHeader78" name="TestZlibWithHeader78.test_zlib_with_header_78" time="0.015">
             <failure type="spec/lua/run_test_suite.lua:18: spec/lua/test_zlib_with_header_78.lua:5: module &apos;zlib_with_header_78&apos; not found:
 	no field package.preload[&apos;zlib_with_header_78&apos;]
 	no file &apos;../runtime/lua/zlib_with_header_78.lua&apos;

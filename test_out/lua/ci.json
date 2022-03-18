@@ -56,11 +56,13 @@
   },
   "BitsSimple": {
     "status": "passed",
-    "elapsed": 0.0
+    "elapsed": 0.0,
+    "is_kst": true
   },
   "BitsSimpleLe": {
     "status": "passed",
-    "elapsed": 0.0
+    "elapsed": 0.0,
+    "is_kst": true
   },
   "BitsUnalignedB32Be": {
     "status": "passed",
@@ -318,6 +320,11 @@
     "elapsed": 0.0,
     "is_kst": true
   },
+  "ExprBits": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
   "ExprBytesCmp": {
     "status": "passed",
     "elapsed": 0.0,
@@ -325,7 +332,7 @@
   },
   "ExprBytesLiteral": {
     "status": "failed",
-    "elapsed": 0.018,
+    "elapsed": 0.015,
     "failure": {
       "file_name": null,
       "line_num": null,
@@ -401,7 +408,7 @@
   },
   "ExprStrEncodings": {
     "status": "failed",
-    "elapsed": 0.001,
+    "elapsed": 0.002,
     "failure": {
       "file_name": null,
       "line_num": null,
@@ -421,14 +428,8 @@
     "is_kst": true
   },
   "FixedStruct": {
-    "status": "failed",
-    "elapsed": 0.001,
-    "failure": {
-      "file_name": null,
-      "line_num": null,
-      "message": "spec/lua/test_fixed_struct.lua:15: expected: 1.844674407371e+19, actual: -1",
-      "trace": "stack traceback:\n\tspec/lua/test_fixed_struct.lua:15: in upvalue 'TestFixedStruct.test_fixed_struct'"
-    },
+    "status": "passed",
+    "elapsed": 0.0,
     "is_kst": true
   },
   "FloatToI": {
@@ -536,14 +537,8 @@
     "is_kst": true
   },
   "Integers": {
-    "status": "failed",
-    "elapsed": 0.001,
-    "failure": {
-      "file_name": null,
-      "line_num": null,
-      "message": "spec/lua/test_integers.lua:15: expected: 1.844674407371e+19, actual: -1",
-      "trace": "stack traceback:\n\tspec/lua/test_integers.lua:15: in upvalue 'TestIntegers.test_integers'"
-    },
+    "status": "passed",
+    "elapsed": 0.0,
     "is_kst": true
   },
   "IntegersDoubleOverflow": {
@@ -552,14 +547,8 @@
     "is_kst": true
   },
   "IntegersMinMax": {
-    "status": "failed",
-    "elapsed": 0.001,
-    "failure": {
-      "file_name": null,
-      "line_num": null,
-      "message": "spec/lua/test_integers_min_max.lua:22: expected: 1.844674407371e+19, actual: -1",
-      "trace": "stack traceback:\n\tspec/lua/test_integers_min_max.lua:22: in upvalue 'TestIntegersMinMax.test_integers_min_max'"
-    },
+    "status": "passed",
+    "elapsed": 0.0,
     "is_kst": true
   },
   "IoLocalVar": {
@@ -890,7 +879,7 @@
   },
   "StrEncodings": {
     "status": "failed",
-    "elapsed": 0.002,
+    "elapsed": 0.003,
     "failure": {
       "file_name": null,
       "line_num": null,
@@ -993,7 +982,8 @@
   },
   "SwitchManualIntSizeEos": {
     "status": "passed",
-    "elapsed": 0.0
+    "elapsed": 0.0,
+    "is_kst": true
   },
   "SwitchManualStr": {
     "status": "passed",
@@ -1007,7 +997,8 @@
   },
   "SwitchMultiBoolOps": {
     "status": "passed",
-    "elapsed": 0.0
+    "elapsed": 0.0,
+    "is_kst": true
   },
   "SwitchRepeatExpr": {
     "status": "passed",
@@ -1065,7 +1056,7 @@
   },
   "ValidEqStrEncodings": {
     "status": "failed",
-    "elapsed": 0.001,
+    "elapsed": 0.002,
     "failure": {
       "file_name": null,
       "line_num": null,
@@ -1101,7 +1092,7 @@
   },
   "ValidFailExpr": {
     "status": "failed",
-    "elapsed": 0.016,
+    "elapsed": 0.014,
     "failure": {
       "file_name": null,
       "line_num": null,
@@ -1166,19 +1157,13 @@
     "is_kst": true
   },
   "YamlInts": {
-    "status": "failed",
-    "elapsed": 0.001,
-    "failure": {
-      "file_name": null,
-      "line_num": null,
-      "message": "spec/lua/test_yaml_ints.lua:14: expected: 1.844674407371e+19, actual: -1",
-      "trace": "stack traceback:\n\tspec/lua/test_yaml_ints.lua:14: in upvalue 'TestYamlInts.test_yaml_ints'"
-    },
+    "status": "passed",
+    "elapsed": 0.0,
     "is_kst": true
   },
   "ZlibSurrounded": {
     "status": "failed",
-    "elapsed": 0.016,
+    "elapsed": 0.014,
     "failure": {
       "file_name": null,
       "line_num": null,
@@ -1189,7 +1174,7 @@
   },
   "ZlibWithHeader78": {
     "status": "failed",
-    "elapsed": 0.017,
+    "elapsed": 0.015,
     "failure": {
       "file_name": null,
       "line_num": null,
@@ -1200,13 +1185,13 @@
   },
   "$meta": {
     "lang": "lua",
-    "timestamp": "2022-03-13T10:36:22Z",
+    "timestamp": "2022-03-18T13:05:14Z",
     "ci": {
       "ci": "travis",
-      "build_id": "247810357",
-      "job_id": "563116043",
-      "job_number": "440.27",
-      "url": "https://app.travis-ci.com/kaitai-io/ci_targets/jobs/563116043"
+      "build_id": "248102986",
+      "job_id": "563860117",
+      "job_number": "442.31",
+      "url": "https://app.travis-ci.com/kaitai-io/ci_targets/jobs/563860117"
     }
   }
 }
