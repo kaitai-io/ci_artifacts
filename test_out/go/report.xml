@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-	<testsuite tests="190" failures="15" time="0.052" name="github.com/kaitai-io/ci_targets/tests/spec/go">
+	<testsuite tests="191" failures="15" time="0.048" name="github.com/kaitai-io/ci_targets/tests/spec/go">
 		<properties>
 			<property name="go.version" value="go1.13"></property>
 		</properties>
@@ -69,7 +69,7 @@
 		</testcase>
 		<testcase classname="go" name="TestExpr0" time="0.000"></testcase>
 		<testcase classname="go" name="TestExpr1" time="0.000"></testcase>
-		<testcase classname="go" name="TestExpr2" time="0.020"></testcase>
+		<testcase classname="go" name="TestExpr2" time="0.010"></testcase>
 		<testcase classname="go" name="TestExpr3" time="0.000"></testcase>
 		<testcase classname="go" name="TestExprArray" time="0.000"></testcase>
 		<testcase classname="go" name="TestExprBits" time="0.000"></testcase>
@@ -137,7 +137,7 @@
 		<testcase classname="go" name="TestNestedTypes" time="0.000"></testcase>
 		<testcase classname="go" name="TestNonStandard" time="0.000"></testcase>
 		<testcase classname="go" name="TestOpaqueExternalType02Parent" time="0.000">
-			<failure message="Failed" type="">goroutine 124 [running]:&#xA;runtime/debug.Stack(0x18, 0xc000056bb8, 0x486a42)&#xA;runtime/debug.PrintStack()&#xA;github.com/kaitai-io/ci_targets/tests/spec/go.TestOpaqueExternalType02Parent.func1(0xc00018ba00)&#xA;panic(0x78f160, 0xaedf20)&#xA;test_formats.(*OpaqueExternalType02Child).SomeMethod(...)&#xA;test_formats.(*OpaqueExternalType02Child_OpaqueExternalType02ChildChild).Read(0xc0001879e0, 0xc000187980, 0xc000142460, 0x0, 0xc00019a354, 0x3)&#xA;test_formats.(*OpaqueExternalType02Child).Read(0xc000142460, 0xc000187980, 0x78a920, 0xc000134920, 0x0, 0x7c4e60, 0x1)&#xA;test_formats.(*OpaqueExternalType02Parent_ParentObj).Read(0xc000134920, 0xc000187980, 0xc0001879b0, 0xc0001879b0, 0x7c4da0, 0x1)&#xA;test_formats.(*OpaqueExternalType02Parent).Read(0xc0001879b0, 0xc000187980, 0x78a8c0, 0xc0001879b0, 0xc0001879b0, 0x0, 0x0)&#xA;github.com/kaitai-io/ci_targets/tests/spec/go.TestOpaqueExternalType02Parent(0xc00018ba00)&#xA;testing.tRunner(0xc00018ba00, 0x823860)&#xA;created by testing.(*T).Run&#xA;opaque_external_type_02_parent_test.go:16: unexpected panic: runtime error: invalid memory address or nil pointer dereference</failure>
+			<failure message="Failed" type="">goroutine 124 [running]:&#xA;runtime/debug.Stack(0x18, 0xc00005bbb8, 0x486ae2)&#xA;runtime/debug.PrintStack()&#xA;github.com/kaitai-io/ci_targets/tests/spec/go.TestOpaqueExternalType02Parent.func1(0xc000163600)&#xA;panic(0x792ca0, 0xaf60f0)&#xA;test_formats.(*OpaqueExternalType02Child).SomeMethod(...)&#xA;test_formats.(*OpaqueExternalType02Child_OpaqueExternalType02ChildChild).Read(0xc00015b800, 0xc00015b7a0, 0xc0000a2870, 0x0, 0xc00016a6b4, 0x3)&#xA;test_formats.(*OpaqueExternalType02Child).Read(0xc0000a2870, 0xc00015b7a0, 0x78e2e0, 0xc00000f680, 0x0, 0x7c9220, 0x1)&#xA;test_formats.(*OpaqueExternalType02Parent_ParentObj).Read(0xc00000f680, 0xc00015b7a0, 0xc00015b7d0, 0xc00015b7d0, 0x7c9160, 0x1)&#xA;test_formats.(*OpaqueExternalType02Parent).Read(0xc00015b7d0, 0xc00015b7a0, 0x78e280, 0xc00015b7d0, 0xc00015b7d0, 0x0, 0x0)&#xA;github.com/kaitai-io/ci_targets/tests/spec/go.TestOpaqueExternalType02Parent(0xc000163600)&#xA;testing.tRunner(0xc000163600, 0x828150)&#xA;created by testing.(*T).Run&#xA;opaque_external_type_02_parent_test.go:16: unexpected panic: runtime error: invalid memory address or nil pointer dereference</failure>
 		</testcase>
 		<testcase classname="go" name="TestOpaqueExternalType" time="0.000"></testcase>
 		<testcase classname="go" name="TestOpaqueWithParam" time="0.000"></testcase>
@@ -187,6 +187,7 @@
 		</testcase>
 		<testcase classname="go" name="TestStrEncodingsDefault" time="0.000"></testcase>
 		<testcase classname="go" name="TestStrEncodings" time="0.000"></testcase>
+		<testcase classname="go" name="TestStrEncodingsUtf16" time="0.000"></testcase>
 		<testcase classname="go" name="TestStrEos" time="0.000"></testcase>
 		<testcase classname="go" name="TestStrLiterals2" time="0.000"></testcase>
 		<testcase classname="go" name="TestStrLiterals" time="0.000"></testcase>
