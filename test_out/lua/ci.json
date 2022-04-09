@@ -153,7 +153,8 @@
   },
   "DefaultEndianExprException": {
     "status": "passed",
-    "elapsed": 0.0
+    "elapsed": 0.0,
+    "is_kst": true
   },
   "DefaultEndianExprInherited": {
     "status": "passed",
@@ -281,19 +282,23 @@
   },
   "EofExceptionBytes": {
     "status": "passed",
-    "elapsed": 0.0
+    "elapsed": 0.0,
+    "is_kst": true
   },
   "EofExceptionU4": {
     "status": "passed",
-    "elapsed": 0.0
+    "elapsed": 0.0,
+    "is_kst": true
   },
   "EosExceptionBytes": {
     "status": "passed",
-    "elapsed": 0.0
+    "elapsed": 0.0,
+    "is_kst": true
   },
   "EosExceptionU4": {
     "status": "passed",
-    "elapsed": 0.0
+    "elapsed": 0.0,
+    "is_kst": true
   },
   "Expr0": {
     "status": "passed",
@@ -332,7 +337,7 @@
   },
   "ExprBytesLiteral": {
     "status": "failed",
-    "elapsed": 0.014,
+    "elapsed": 0.015,
     "failure": {
       "file_name": null,
       "line_num": null,
@@ -482,7 +487,7 @@
   },
   "ImportsCircularA": {
     "status": "failed",
-    "elapsed": 0.002,
+    "elapsed": 0.003,
     "failure": {
       "file_name": null,
       "line_num": null,
@@ -718,7 +723,7 @@
   },
   "ParamsPassBool": {
     "status": "failed",
-    "elapsed": 0.001,
+    "elapsed": 0.003,
     "failure": {
       "file_name": null,
       "line_num": null,
@@ -896,6 +901,17 @@
       "line_num": null,
       "message": "../runtime/lua/string_decode.lua:42: Encoding SJIS not supported",
       "trace": "stack traceback:\n\t../runtime/lua/string_decode.lua:42: in function 'string_decode.decode'\n\tcompiled/lua/str_encodings_default.lua:38: in method '_read'\n\tcompiled/lua/str_encodings_default.lua:31: in local 'init'\n\t../runtime/lua/class.lua:70: in field 'Subtype'\n\tcompiled/lua/str_encodings_default.lua:21: in method '_read'\n\tcompiled/lua/str_encodings_default.lua:15: in local 'init'\n\t../runtime/lua/class.lua:70: in function <../runtime/lua/class.lua:66>\n\t(...tail calls...)\n\tspec/lua/test_str_encodings_default.lua:10: in upvalue 'TestStrEncodingsDefault.test_str_encodings_default'"
+    },
+    "is_kst": true
+  },
+  "StrEncodingsUtf16": {
+    "status": "failed",
+    "elapsed": 0.002,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": "../runtime/lua/string_decode.lua:42: Encoding UTF-16BE not supported",
+      "trace": "stack traceback:\n\t../runtime/lua/string_decode.lua:42: in function 'string_decode.decode'\n\tcompiled/lua/str_encodings_utf16.lua:42: in method '_read'\n\tcompiled/lua/str_encodings_utf16.lua:37: in local 'init'\n\t../runtime/lua/class.lua:70: in field 'StrBeBomRemoved'\n\tcompiled/lua/str_encodings_utf16.lua:23: in method '_read'\n\tcompiled/lua/str_encodings_utf16.lua:16: in local 'init'\n\t../runtime/lua/class.lua:70: in function <../runtime/lua/class.lua:66>\n\t(...tail calls...)\n\tspec/lua/test_str_encodings_utf16.lua:10: in upvalue 'TestStrEncodingsUtf16.test_str_encodings_utf16'"
     },
     "is_kst": true
   },
@@ -1092,7 +1108,7 @@
   },
   "ValidFailExpr": {
     "status": "failed",
-    "elapsed": 0.013,
+    "elapsed": 0.014,
     "failure": {
       "file_name": null,
       "line_num": null,
@@ -1163,7 +1179,7 @@
   },
   "ZlibSurrounded": {
     "status": "failed",
-    "elapsed": 0.012,
+    "elapsed": 0.014,
     "failure": {
       "file_name": null,
       "line_num": null,
@@ -1174,7 +1190,7 @@
   },
   "ZlibWithHeader78": {
     "status": "failed",
-    "elapsed": 0.014,
+    "elapsed": 0.016,
     "failure": {
       "file_name": null,
       "line_num": null,
@@ -1185,13 +1201,13 @@
   },
   "$meta": {
     "lang": "lua",
-    "timestamp": "2022-03-19T21:43:32Z",
+    "timestamp": "2022-04-09T01:24:11Z",
     "ci": {
       "ci": "travis",
-      "build_id": "248141268",
-      "job_id": "563954443",
-      "job_number": "443.31",
-      "url": "https://app.travis-ci.com/kaitai-io/ci_targets/jobs/563954443"
+      "build_id": "249169301",
+      "job_id": "566499006",
+      "job_number": "446.31",
+      "url": "https://app.travis-ci.com/kaitai-io/ci_targets/jobs/566499006"
     }
   }
 }
