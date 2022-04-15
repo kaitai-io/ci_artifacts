@@ -309,7 +309,7 @@
   },
   "Expr2": {
     "status": "passed",
-    "elapsed": 0.01,
+    "elapsed": 0.02,
     "is_kst": true
   },
   "Expr3": {
@@ -630,7 +630,7 @@
       "file_name": null,
       "line_num": null,
       "message": "Failed",
-      "trace": "goroutine 124 [running]:\nruntime/debug.Stack(0x18, 0xc00005bbb8, 0x486ae2)\nruntime/debug.PrintStack()\ngithub.com/kaitai-io/ci_targets/tests/spec/go.TestOpaqueExternalType02Parent.func1(0xc000163600)\npanic(0x792ca0, 0xaf60f0)\ntest_formats.(*OpaqueExternalType02Child).SomeMethod(...)\ntest_formats.(*OpaqueExternalType02Child_OpaqueExternalType02ChildChild).Read(0xc00015b800, 0xc00015b7a0, 0xc0000a2870, 0x0, 0xc00016a6b4, 0x3)\ntest_formats.(*OpaqueExternalType02Child).Read(0xc0000a2870, 0xc00015b7a0, 0x78e2e0, 0xc00000f680, 0x0, 0x7c9220, 0x1)\ntest_formats.(*OpaqueExternalType02Parent_ParentObj).Read(0xc00000f680, 0xc00015b7a0, 0xc00015b7d0, 0xc00015b7d0, 0x7c9160, 0x1)\ntest_formats.(*OpaqueExternalType02Parent).Read(0xc00015b7d0, 0xc00015b7a0, 0x78e280, 0xc00015b7d0, 0xc00015b7d0, 0x0, 0x0)\ngithub.com/kaitai-io/ci_targets/tests/spec/go.TestOpaqueExternalType02Parent(0xc000163600)\ntesting.tRunner(0xc000163600, 0x828150)\ncreated by testing.(*T).Run\nopaque_external_type_02_parent_test.go:16: unexpected panic: runtime error: invalid memory address or nil pointer dereference"
+      "trace": "goroutine 136 [running]:\nruntime/debug.Stack(0x18, 0xc000056bb8, 0x486ae2)\nruntime/debug.PrintStack()\ngithub.com/kaitai-io/ci_targets/tests/spec/go.TestOpaqueExternalType02Parent.func1(0xc00017f600)\npanic(0x795000, 0xaf90f0)\ntest_formats.(*OpaqueExternalType02Child).SomeMethod(...)\ntest_formats.(*OpaqueExternalType02Child_OpaqueExternalType02ChildChild).Read(0xc00017d800, 0xc00017d7a0, 0xc0000c27d0, 0x0, 0xc000186514, 0x3)\ntest_formats.(*OpaqueExternalType02Child).Read(0xc0000c27d0, 0xc00017d7a0, 0x790520, 0xc0000a96c0, 0x0, 0x7cb600, 0x1)\ntest_formats.(*OpaqueExternalType02Parent_ParentObj).Read(0xc0000a96c0, 0xc00017d7a0, 0xc00017d7d0, 0xc00017d7d0, 0x7cb540, 0x1)\ntest_formats.(*OpaqueExternalType02Parent).Read(0xc00017d7d0, 0xc00017d7a0, 0x7904c0, 0xc00017d7d0, 0xc00017d7d0, 0x0, 0x0)\ngithub.com/kaitai-io/ci_targets/tests/spec/go.TestOpaqueExternalType02Parent(0xc00017f600)\ntesting.tRunner(0xc00017f600, 0x82a960)\ncreated by testing.(*T).Run\nopaque_external_type_02_parent_test.go:16: unexpected panic: runtime error: invalid memory address or nil pointer dereference"
     }
   },
   "OpaqueExternalType": {
@@ -814,6 +814,11 @@
     "elapsed": 0.0,
     "is_kst": true
   },
+  "RepeatUntilCalcArrayType": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
   "RepeatUntilComplex": {
     "status": "failed",
     "elapsed": 0.0,
@@ -834,6 +839,11 @@
       "message": "Failed",
       "trace": "repeat_until_s4_test.go:32: \nError Trace:\trepeat_until_s4_test.go:32\nError:      \tNot equal: \n            \texpected: []int([]int{66, 4919, -251658241, -1})\n            \tactual  : []int32([]int32{66, 4919, -251658241, -1})\nTest:       \tTestRepeatUntilS4"
     },
+    "is_kst": true
+  },
+  "RepeatUntilSized": {
+    "status": "passed",
+    "elapsed": 0.0,
     "is_kst": true
   },
   "StrEncodingsDefault": {
@@ -1035,13 +1045,13 @@
   },
   "$meta": {
     "lang": "go",
-    "timestamp": "2022-04-09T01:24:06Z",
+    "timestamp": "2022-04-15T20:33:35Z",
     "ci": {
       "ci": "travis",
-      "build_id": "249169301",
-      "job_id": "566499004",
-      "job_number": "446.29",
-      "url": "https://app.travis-ci.com/kaitai-io/ci_targets/jobs/566499004"
+      "build_id": "249482232",
+      "job_id": "567272872",
+      "job_number": "447.29",
+      "url": "https://app.travis-ci.com/kaitai-io/ci_targets/jobs/567272872"
     }
   }
 }

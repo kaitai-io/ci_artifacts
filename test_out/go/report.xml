@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-	<testsuite tests="191" failures="15" time="0.048" name="github.com/kaitai-io/ci_targets/tests/spec/go">
+	<testsuite tests="193" failures="15" time="0.054" name="github.com/kaitai-io/ci_targets/tests/spec/go">
 		<properties>
 			<property name="go.version" value="go1.13"></property>
 		</properties>
@@ -69,7 +69,7 @@
 		</testcase>
 		<testcase classname="go" name="TestExpr0" time="0.000"></testcase>
 		<testcase classname="go" name="TestExpr1" time="0.000"></testcase>
-		<testcase classname="go" name="TestExpr2" time="0.010"></testcase>
+		<testcase classname="go" name="TestExpr2" time="0.020"></testcase>
 		<testcase classname="go" name="TestExpr3" time="0.000"></testcase>
 		<testcase classname="go" name="TestExprArray" time="0.000"></testcase>
 		<testcase classname="go" name="TestExprBits" time="0.000"></testcase>
@@ -137,7 +137,7 @@
 		<testcase classname="go" name="TestNestedTypes" time="0.000"></testcase>
 		<testcase classname="go" name="TestNonStandard" time="0.000"></testcase>
 		<testcase classname="go" name="TestOpaqueExternalType02Parent" time="0.000">
-			<failure message="Failed" type="">goroutine 124 [running]:&#xA;runtime/debug.Stack(0x18, 0xc00005bbb8, 0x486ae2)&#xA;runtime/debug.PrintStack()&#xA;github.com/kaitai-io/ci_targets/tests/spec/go.TestOpaqueExternalType02Parent.func1(0xc000163600)&#xA;panic(0x792ca0, 0xaf60f0)&#xA;test_formats.(*OpaqueExternalType02Child).SomeMethod(...)&#xA;test_formats.(*OpaqueExternalType02Child_OpaqueExternalType02ChildChild).Read(0xc00015b800, 0xc00015b7a0, 0xc0000a2870, 0x0, 0xc00016a6b4, 0x3)&#xA;test_formats.(*OpaqueExternalType02Child).Read(0xc0000a2870, 0xc00015b7a0, 0x78e2e0, 0xc00000f680, 0x0, 0x7c9220, 0x1)&#xA;test_formats.(*OpaqueExternalType02Parent_ParentObj).Read(0xc00000f680, 0xc00015b7a0, 0xc00015b7d0, 0xc00015b7d0, 0x7c9160, 0x1)&#xA;test_formats.(*OpaqueExternalType02Parent).Read(0xc00015b7d0, 0xc00015b7a0, 0x78e280, 0xc00015b7d0, 0xc00015b7d0, 0x0, 0x0)&#xA;github.com/kaitai-io/ci_targets/tests/spec/go.TestOpaqueExternalType02Parent(0xc000163600)&#xA;testing.tRunner(0xc000163600, 0x828150)&#xA;created by testing.(*T).Run&#xA;opaque_external_type_02_parent_test.go:16: unexpected panic: runtime error: invalid memory address or nil pointer dereference</failure>
+			<failure message="Failed" type="">goroutine 136 [running]:&#xA;runtime/debug.Stack(0x18, 0xc000056bb8, 0x486ae2)&#xA;runtime/debug.PrintStack()&#xA;github.com/kaitai-io/ci_targets/tests/spec/go.TestOpaqueExternalType02Parent.func1(0xc00017f600)&#xA;panic(0x795000, 0xaf90f0)&#xA;test_formats.(*OpaqueExternalType02Child).SomeMethod(...)&#xA;test_formats.(*OpaqueExternalType02Child_OpaqueExternalType02ChildChild).Read(0xc00017d800, 0xc00017d7a0, 0xc0000c27d0, 0x0, 0xc000186514, 0x3)&#xA;test_formats.(*OpaqueExternalType02Child).Read(0xc0000c27d0, 0xc00017d7a0, 0x790520, 0xc0000a96c0, 0x0, 0x7cb600, 0x1)&#xA;test_formats.(*OpaqueExternalType02Parent_ParentObj).Read(0xc0000a96c0, 0xc00017d7a0, 0xc00017d7d0, 0xc00017d7d0, 0x7cb540, 0x1)&#xA;test_formats.(*OpaqueExternalType02Parent).Read(0xc00017d7d0, 0xc00017d7a0, 0x7904c0, 0xc00017d7d0, 0xc00017d7d0, 0x0, 0x0)&#xA;github.com/kaitai-io/ci_targets/tests/spec/go.TestOpaqueExternalType02Parent(0xc00017f600)&#xA;testing.tRunner(0xc00017f600, 0x82a960)&#xA;created by testing.(*T).Run&#xA;opaque_external_type_02_parent_test.go:16: unexpected panic: runtime error: invalid memory address or nil pointer dereference</failure>
 		</testcase>
 		<testcase classname="go" name="TestOpaqueExternalType" time="0.000"></testcase>
 		<testcase classname="go" name="TestOpaqueWithParam" time="0.000"></testcase>
@@ -179,12 +179,14 @@
 		<testcase classname="go" name="TestRepeatNStruct" time="0.000"></testcase>
 		<testcase classname="go" name="TestRepeatNStrzDouble" time="0.000"></testcase>
 		<testcase classname="go" name="TestRepeatNStrz" time="0.000"></testcase>
+		<testcase classname="go" name="TestRepeatUntilCalcArrayType" time="0.000"></testcase>
 		<testcase classname="go" name="TestRepeatUntilComplex" time="0.000">
 			<failure message="Failed" type="">repeat_until_complex_test.go:34: &#xA;Error Trace:&#x9;repeat_until_complex_test.go:34&#xA;Error:      &#x9;Not equal: &#xA;            &#x9;expected: []int([]int{1, 2, 3, 4})&#xA;            &#x9;actual  : []uint8([]byte{0x1, 0x2, 0x3, 0x4})&#xA;Test:       &#x9;TestRepeatUntilComplex&#xA;repeat_until_complex_test.go:36: &#xA;Error Trace:&#x9;repeat_until_complex_test.go:36&#xA;Error:      &#x9;Not equal: &#xA;            &#x9;expected: []int([]int{1, 2})&#xA;            &#x9;actual  : []uint8([]byte{0x1, 0x2})&#xA;Test:       &#x9;TestRepeatUntilComplex&#xA;repeat_until_complex_test.go:40: &#xA;Error Trace:&#x9;repeat_until_complex_test.go:40&#xA;Error:      &#x9;Not equal: &#xA;            &#x9;expected: []int([]int{1, 2, 3, 4, 5, 6})&#xA;            &#x9;actual  : []uint16([]uint16{0x1, 0x2, 0x3, 0x4, 0x5, 0x6})&#xA;Test:       &#x9;TestRepeatUntilComplex&#xA;repeat_until_complex_test.go:42: &#xA;Error Trace:&#x9;repeat_until_complex_test.go:42&#xA;Error:      &#x9;Not equal: &#xA;            &#x9;expected: []int([]int{1, 2, 3})&#xA;            &#x9;actual  : []uint16([]uint16{0x1, 0x2, 0x3})&#xA;Test:       &#x9;TestRepeatUntilComplex&#xA;repeat_until_complex_test.go:44: &#xA;Error Trace:&#x9;repeat_until_complex_test.go:44&#xA;Error:      &#x9;Not equal: &#xA;            &#x9;expected: []int([]int{1, 2, 3, 4})&#xA;            &#x9;actual  : []uint16([]uint16{0x1, 0x2, 0x3, 0x4})&#xA;Test:       &#x9;TestRepeatUntilComplex&#xA;repeat_until_complex_test.go:46: &#xA;Error Trace:&#x9;repeat_until_complex_test.go:46&#xA;Error:      &#x9;Not equal: &#xA;            &#x9;expected: []int([]int{102, 111, 111, 98, 97, 114, 0})&#xA;            &#x9;actual  : []uint8([]byte{0x66, 0x6f, 0x6f, 0x62, 0x61, 0x72, 0x0})&#xA;Test:       &#x9;TestRepeatUntilComplex</failure>
 		</testcase>
 		<testcase classname="go" name="TestRepeatUntilS4" time="0.000">
 			<failure message="Failed" type="">repeat_until_s4_test.go:32: &#xA;Error Trace:&#x9;repeat_until_s4_test.go:32&#xA;Error:      &#x9;Not equal: &#xA;            &#x9;expected: []int([]int{66, 4919, -251658241, -1})&#xA;            &#x9;actual  : []int32([]int32{66, 4919, -251658241, -1})&#xA;Test:       &#x9;TestRepeatUntilS4</failure>
 		</testcase>
+		<testcase classname="go" name="TestRepeatUntilSized" time="0.000"></testcase>
 		<testcase classname="go" name="TestStrEncodingsDefault" time="0.000"></testcase>
 		<testcase classname="go" name="TestStrEncodings" time="0.000"></testcase>
 		<testcase classname="go" name="TestStrEncodingsUtf16" time="0.000"></testcase>
