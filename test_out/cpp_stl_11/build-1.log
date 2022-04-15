@@ -2,7 +2,7 @@ Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
 Copyright (C) Microsoft Corporation. All rights reserved.
 
 Building the projects in this solution one at a time. To enable parallel build, please add the "/m" switch.
-Build started 4/9/2022 1:33:16 AM.
+Build started 4/15/2022 8:42:09 PM.
 Project "C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\KS_TEST_CPP_STL.sln" on node 1 (default targets).
 ValidateSolutionConfiguration:
   Building solution configuration "Debug|x64".
@@ -625,11 +625,12 @@ C:\projects\ci-targets\tests\compiled\cpp_stl_11\expr_2.cpp(132): warning C4267:
   Compiling...
   expr_3.cpp
   expr_array.cpp
-C:\projects\ci-targets\tests\compiled\cpp_stl_11\expr_array.cpp(69): warning C4267: '=': conversion from 'size_t' to 'int32_t', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
-C:\projects\ci-targets\tests\compiled\cpp_stl_11\expr_array.cpp(77): warning C4267: '=': conversion from 'size_t' to 'int32_t', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
-C:\projects\ci-targets\tests\compiled\cpp_stl_11\expr_array.cpp(101): warning C4267: '=': conversion from 'size_t' to 'int32_t', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
+C:\projects\ci-targets\tests\compiled\cpp_stl_11\expr_array.cpp(66): warning C4267: '=': conversion from 'size_t' to 'int32_t', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
+C:\projects\ci-targets\tests\compiled\cpp_stl_11\expr_array.cpp(74): warning C4267: '=': conversion from 'size_t' to 'int32_t', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
+C:\projects\ci-targets\tests\compiled\cpp_stl_11\expr_array.cpp(98): warning C4267: '=': conversion from 'size_t' to 'int32_t', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
   expr_bits.cpp
-C:\projects\ci-targets\tests\compiled\cpp_stl_11\expr_bits.cpp(21): warning C4244: 'initializing': conversion from 'uint64_t' to 'int', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
+C:\projects\ci-targets\tests\compiled\cpp_stl_11\expr_bits.cpp(22): warning C4244: 'initializing': conversion from 'uint64_t' to 'int', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
+C:\projects\ci-targets\tests\compiled\cpp_stl_11\expr_bits.cpp(22): warning C4244: 'initializing': conversion from 'uint64_t' to 'const int', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
 C:\projects\ci-targets\runtime\cpp_stl\kaitai/kaitaistream.h(249): warning C4146: unary minus operator applied to unsigned type, result still unsigned [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
   C:\projects\ci-targets\runtime\cpp_stl\kaitai/exceptions.h(63): note: see reference to function template instantiation 'std::basic_string<char,std::char_traits<char>,std::allocator<char>> kaitai::kstream::to_string<uint64_t>(I)' being compiled
           with
@@ -751,7 +752,7 @@ C:\projects\ci-targets\tests\compiled\cpp_stl_11\nav_parent_switch_cast.cpp(121)
   Compiling...
   params_enum.cpp
   params_pass_array_int.cpp
-C:\projects\ci-targets\tests\compiled\cpp_stl_11\params_pass_array_int.cpp(23): error C2664: 'params_pass_array_int_t::wants_ints_t::wants_ints_t(const params_pass_array_int_t::wants_ints_t &)': cannot convert argument 1 from 'std::vector<int32_t,std::allocator<_Ty>> *' to 'std::vector<uint16_t,std::allocator<_Ty>> *' [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
+C:\projects\ci-targets\tests\compiled\cpp_stl_11\params_pass_array_int.cpp(22): error C2664: 'params_pass_array_int_t::wants_ints_t::wants_ints_t(const params_pass_array_int_t::wants_ints_t &)': cannot convert argument 1 from 'std::vector<int32_t,std::allocator<_Ty>> *' to 'std::vector<uint16_t,std::allocator<_Ty>> *' [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
           with
           [
               _Ty=int32_t
@@ -760,16 +761,16 @@ C:\projects\ci-targets\tests\compiled\cpp_stl_11\params_pass_array_int.cpp(23): 
           [
               _Ty=uint16_t
           ]
-  C:\projects\ci-targets\tests\compiled\cpp_stl_11\params_pass_array_int.cpp(23): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+  C:\projects\ci-targets\tests\compiled\cpp_stl_11\params_pass_array_int.cpp(22): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
   params_pass_array_str.cpp
   params_pass_array_struct.cpp
   params_pass_array_usertype.cpp
-C:\projects\ci-targets\tests\compiled\cpp_stl_11\params_pass_array_usertype.cpp(20): error C2664: 'params_pass_array_usertype_t::param_type_t::param_type_t(const params_pass_array_usertype_t::param_type_t &)': cannot convert argument 1 from 'std::vector<std::unique_ptr<params_pass_array_usertype_t::block_t,std::default_delete<_Ty>>,std::allocator<std::unique_ptr<_Ty,std::default_delete<_Ty>>>> *' to 'std::vector<params_pass_array_usertype_t::block_t *,std::allocator<_Ty>> *' [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
+C:\projects\ci-targets\tests\compiled\cpp_stl_11\params_pass_array_usertype.cpp(19): error C2664: 'params_pass_array_usertype_t::param_type_t::param_type_t(const params_pass_array_usertype_t::param_type_t &)': cannot convert argument 1 from 'std::vector<std::unique_ptr<params_pass_array_usertype_t::block_t,std::default_delete<_Ty>>,std::allocator<std::unique_ptr<_Ty,std::default_delete<_Ty>>>> *' to 'std::vector<params_pass_array_usertype_t::block_t *,std::allocator<_Ty>> *' [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
           with
           [
               _Ty=params_pass_array_usertype_t::block_t
           ]
-  C:\projects\ci-targets\tests\compiled\cpp_stl_11\params_pass_array_usertype.cpp(20): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+  C:\projects\ci-targets\tests\compiled\cpp_stl_11\params_pass_array_usertype.cpp(19): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
   params_pass_bool.cpp
   params_pass_struct.cpp
   params_pass_usertype.cpp
@@ -1055,10 +1056,11 @@ Build FAILED.
   c:\projects\ci-targets\tests\compiled\cpp_stl_11\enum_long_range_u.h(22): warning C4309: 'initializing': truncation of constant value [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
   C:\projects\ci-targets\tests\compiled\cpp_stl_11\expr_1.cpp(36): warning C4267: '=': conversion from 'size_t' to 'int32_t', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
   C:\projects\ci-targets\tests\compiled\cpp_stl_11\expr_2.cpp(132): warning C4267: '=': conversion from 'size_t' to 'int32_t', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
-  C:\projects\ci-targets\tests\compiled\cpp_stl_11\expr_array.cpp(69): warning C4267: '=': conversion from 'size_t' to 'int32_t', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
-  C:\projects\ci-targets\tests\compiled\cpp_stl_11\expr_array.cpp(77): warning C4267: '=': conversion from 'size_t' to 'int32_t', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
-  C:\projects\ci-targets\tests\compiled\cpp_stl_11\expr_array.cpp(101): warning C4267: '=': conversion from 'size_t' to 'int32_t', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
-  C:\projects\ci-targets\tests\compiled\cpp_stl_11\expr_bits.cpp(21): warning C4244: 'initializing': conversion from 'uint64_t' to 'int', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
+  C:\projects\ci-targets\tests\compiled\cpp_stl_11\expr_array.cpp(66): warning C4267: '=': conversion from 'size_t' to 'int32_t', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
+  C:\projects\ci-targets\tests\compiled\cpp_stl_11\expr_array.cpp(74): warning C4267: '=': conversion from 'size_t' to 'int32_t', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
+  C:\projects\ci-targets\tests\compiled\cpp_stl_11\expr_array.cpp(98): warning C4267: '=': conversion from 'size_t' to 'int32_t', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
+  C:\projects\ci-targets\tests\compiled\cpp_stl_11\expr_bits.cpp(22): warning C4244: 'initializing': conversion from 'uint64_t' to 'int', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
+  C:\projects\ci-targets\tests\compiled\cpp_stl_11\expr_bits.cpp(22): warning C4244: 'initializing': conversion from 'uint64_t' to 'const int', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
   C:\projects\ci-targets\runtime\cpp_stl\kaitai/kaitaistream.h(249): warning C4146: unary minus operator applied to unsigned type, result still unsigned [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
   C:\projects\ci-targets\tests\compiled\cpp_stl_11\expr_bytes_ops.cpp(102): warning C4267: '=': conversion from 'size_t' to 'int32_t', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
   C:\projects\ci-targets\tests\compiled\cpp_stl_11\expr_bytes_ops.cpp(118): warning C4267: '=': conversion from 'size_t' to 'int32_t', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
@@ -1159,11 +1161,11 @@ Build FAILED.
   C:\projects\ci-targets\tests\compiled\cpp_stl_11\enum_to_i_class_border_2.cpp(27): error C2027: use of undefined type 'enum_to_i_class_border_2_t::enum_to_i_class_border_1_t' [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
   C:\projects\ci-targets\tests\compiled\cpp_stl_11\expr_ops_parens.cpp(103): error C2676: binary '+': 'std::string' does not define this operator or a conversion to a type acceptable to the predefined operator [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
   C:\projects\ci-targets\tests\compiled\cpp_stl_11\nav_parent_switch_cast.cpp(121): error C2039: '_parent': is not a member of 'kaitai::kstruct' [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
-  C:\projects\ci-targets\tests\compiled\cpp_stl_11\params_pass_array_int.cpp(23): error C2664: 'params_pass_array_int_t::wants_ints_t::wants_ints_t(const params_pass_array_int_t::wants_ints_t &)': cannot convert argument 1 from 'std::vector<int32_t,std::allocator<_Ty>> *' to 'std::vector<uint16_t,std::allocator<_Ty>> *' [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
-  C:\projects\ci-targets\tests\compiled\cpp_stl_11\params_pass_array_usertype.cpp(20): error C2664: 'params_pass_array_usertype_t::param_type_t::param_type_t(const params_pass_array_usertype_t::param_type_t &)': cannot convert argument 1 from 'std::vector<std::unique_ptr<params_pass_array_usertype_t::block_t,std::default_delete<_Ty>>,std::allocator<std::unique_ptr<_Ty,std::default_delete<_Ty>>>> *' to 'std::vector<params_pass_array_usertype_t::block_t *,std::allocator<_Ty>> *' [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
+  C:\projects\ci-targets\tests\compiled\cpp_stl_11\params_pass_array_int.cpp(22): error C2664: 'params_pass_array_int_t::wants_ints_t::wants_ints_t(const params_pass_array_int_t::wants_ints_t &)': cannot convert argument 1 from 'std::vector<int32_t,std::allocator<_Ty>> *' to 'std::vector<uint16_t,std::allocator<_Ty>> *' [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
+  C:\projects\ci-targets\tests\compiled\cpp_stl_11\params_pass_array_usertype.cpp(19): error C2664: 'params_pass_array_usertype_t::param_type_t::param_type_t(const params_pass_array_usertype_t::param_type_t &)': cannot convert argument 1 from 'std::vector<std::unique_ptr<params_pass_array_usertype_t::block_t,std::default_delete<_Ty>>,std::allocator<std::unique_ptr<_Ty,std::default_delete<_Ty>>>> *' to 'std::vector<params_pass_array_usertype_t::block_t *,std::allocator<_Ty>> *' [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
   C:\projects\ci-targets\tests\compiled\cpp_stl_11\repeat_until_calc_array_type.cpp(71): error C2440: '=': cannot convert from '_Ty' to 'repeat_until_calc_array_type_t::record_t *' [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
 
-    84 Warning(s)
+    85 Warning(s)
     59 Error(s)
 
-Time Elapsed 00:07:09.59
+Time Elapsed 00:07:21.33
