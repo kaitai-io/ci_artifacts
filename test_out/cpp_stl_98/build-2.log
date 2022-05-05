@@ -1,34 +1,39 @@
 Scanning dependencies of target ks_tests
-[  0%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/expr_ops_parens.cpp.o
-/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/expr_ops_parens.cpp:109:37: error: invalid operands to binary expression ('std::string' (aka 'basic_string<char, char_traits<char>, allocator<char> >') and 'std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::size_type' (aka 'unsigned long'))
-    m_str_concat_len = str_0_to_4() + str_5_to_9().length();
-                       ~~~~~~~~~~~~ ^ ~~~~~~~~~~~~~~~~~~~~~
-/Applications/Xcode-9.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/string:3779:1: note: candidate template ignored: deduced conflicting types for parameter '_CharT' ('char' vs. 'unsigned long')
-operator+(const basic_string<_CharT, _Traits, _Allocator>& __lhs, _CharT __rhs)
-^
-/Applications/Xcode-9.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/iterator:765:1: note: candidate template ignored: could not match 'reverse_iterator<type-parameter-0-0>' against 'unsigned long'
-operator+(typename reverse_iterator<_Iter>::difference_type __n, const reverse_iterator<_Iter>& __x)
-^
-/Applications/Xcode-9.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/iterator:1184:1: note: candidate template ignored: could not match 'move_iterator<type-parameter-0-0>' against 'unsigned long'
-operator+(typename move_iterator<_Iter>::difference_type __n, const move_iterator<_Iter>& __x)
-^
-/Applications/Xcode-9.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/iterator:1597:1: note: candidate template ignored: could not match '__wrap_iter<type-parameter-0-0>' against 'unsigned long'
-operator+(typename __wrap_iter<_Iter>::difference_type __n,
-^
-/Applications/Xcode-9.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/string:3731:1: note: candidate template ignored: could not match 'basic_string<type-parameter-0-0, type-parameter-0-1, type-parameter-0-2>' against 'unsigned long'
-operator+(const basic_string<_CharT, _Traits, _Allocator>& __lhs,
-^
-/Applications/Xcode-9.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/string:3744:1: note: candidate template ignored: could not match 'const _CharT *' against 'std::string' (aka 'basic_string<char, char_traits<char>, allocator<char> >')
-operator+(const _CharT* __lhs , const basic_string<_CharT,_Traits,_Allocator>& __rhs)
-^
-/Applications/Xcode-9.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/string:3756:1: note: candidate template ignored: could not match 'basic_string<type-parameter-0-0, type-parameter-0-1, type-parameter-0-2>' against 'unsigned long'
-operator+(_CharT __lhs, const basic_string<_CharT,_Traits,_Allocator>& __rhs)
-^
-/Applications/Xcode-9.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/string:3767:1: note: candidate template ignored: could not match 'const _CharT *' against 'std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::size_type' (aka 'unsigned long')
-operator+(const basic_string<_CharT, _Traits, _Allocator>& __lhs, const _CharT* __rhs)
-^
-1 error generated.
-make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/expr_ops_parens.cpp.o] Error 1
+[  1%] Linking CXX executable ks_tests
+Undefined symbols for architecture x86_64:
+  "expr_ops_parens_t::f_sum_to_int()", referenced from:
+      test_expr_ops_parens::test_method() in test_expr_ops_parens.cpp.o
+  "expr_ops_parens_t::i_sum_to_str()", referenced from:
+      test_expr_ops_parens::test_method() in test_expr_ops_parens.cpp.o
+  "expr_ops_parens_t::str_concat_len()", referenced from:
+      test_expr_ops_parens::test_method() in test_expr_ops_parens.cpp.o
+  "expr_ops_parens_t::str_concat_rev()", referenced from:
+      test_expr_ops_parens::test_method() in test_expr_ops_parens.cpp.o
+  "expr_ops_parens_t::str_concat_to_i()", referenced from:
+      test_expr_ops_parens::test_method() in test_expr_ops_parens.cpp.o
+  "expr_ops_parens_t::str_concat_substr_2_to_7()", referenced from:
+      test_expr_ops_parens::test_method() in test_expr_ops_parens.cpp.o
+  "expr_ops_parens_t::bool_eq()", referenced from:
+      test_expr_ops_parens::test_method() in test_expr_ops_parens.cpp.o
+  "expr_ops_parens_t::bool_or()", referenced from:
+      test_expr_ops_parens::test_method() in test_expr_ops_parens.cpp.o
+  "expr_ops_parens_t::bool_and()", referenced from:
+      test_expr_ops_parens::test_method() in test_expr_ops_parens.cpp.o
+  "expr_ops_parens_t::expr_ops_parens_t(kaitai::kstream*, kaitai::kstruct*, expr_ops_parens_t*)", referenced from:
+      test_expr_ops_parens::test_method() in test_expr_ops_parens.cpp.o
+  "nav_parent_switch_cast_t::foo_t::common_t::flag()", referenced from:
+      test_nav_parent_switch_cast::test_method() in test_nav_parent_switch_cast.cpp.o
+  "nav_parent_switch_cast_t::nav_parent_switch_cast_t(kaitai::kstream*, kaitai::kstruct*, nav_parent_switch_cast_t*)", referenced from:
+      test_nav_parent_switch_cast::test_method() in test_nav_parent_switch_cast.cpp.o
+  "enum_to_i_class_border_1_t::checker()", referenced from:
+      test_enum_to_i_class_border_1::test_method() in test_enum_to_i_class_border_1.cpp.o
+  "enum_to_i_class_border_1_t::enum_to_i_class_border_1_t(kaitai::kstream*, kaitai::kstruct*, enum_to_i_class_border_1_t*)", referenced from:
+      test_enum_to_i_class_border_1::test_method() in test_enum_to_i_class_border_1.cpp.o
+  "enum_to_i_class_border_2_t::is_dog()", referenced from:
+      test_enum_to_i_class_border_1::test_method() in test_enum_to_i_class_border_1.cpp.o
+ld: symbol(s) not found for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make[2]: *** [ks_tests] Error 1
 make[2]: Target `CMakeFiles/ks_tests.dir/build' not remade because of errors.
 make[1]: *** [CMakeFiles/ks_tests.dir/all] Error 2
 make[1]: Target `all' not remade because of errors.
