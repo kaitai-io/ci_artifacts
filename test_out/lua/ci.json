@@ -1,4 +1,15 @@
 {
+  "$meta": {
+    "lang": "lua",
+    "timestamp": "2022-05-05T21:04:38Z",
+    "ci": {
+      "ci": "travis",
+      "build_id": "250289177",
+      "job_id": "569276016",
+      "job_number": "448.31",
+      "url": "https://app.travis-ci.com/kaitai-io/ci_targets/jobs/569276016"
+    }
+  },
   "BcdUserTypeBe": {
     "status": "passed",
     "elapsed": 0.0,
@@ -271,7 +282,7 @@
   },
   "EnumToIClassBorder1": {
     "status": "failed",
-    "elapsed": 0.001,
+    "elapsed": 0.002,
     "failure": {
       "file_name": null,
       "line_num": null,
@@ -337,7 +348,7 @@
   },
   "ExprBytesLiteral": {
     "status": "failed",
-    "elapsed": 0.015,
+    "elapsed": 0.014,
     "failure": {
       "file_name": null,
       "line_num": null,
@@ -413,7 +424,7 @@
   },
   "ExprStrEncodings": {
     "status": "failed",
-    "elapsed": 0.003,
+    "elapsed": 0.002,
     "failure": {
       "file_name": null,
       "line_num": null,
@@ -424,7 +435,7 @@
   },
   "ExprStrOps": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "FixedContents": {
@@ -487,7 +498,7 @@
   },
   "ImportsCircularA": {
     "status": "failed",
-    "elapsed": 0.003,
+    "elapsed": 0.002,
     "failure": {
       "file_name": null,
       "line_num": null,
@@ -723,7 +734,7 @@
   },
   "ParamsPassBool": {
     "status": "failed",
-    "elapsed": 0.001,
+    "elapsed": 0.002,
     "failure": {
       "file_name": null,
       "line_num": null,
@@ -1179,35 +1190,24 @@
   },
   "ZlibSurrounded": {
     "status": "failed",
-    "elapsed": 0.013,
+    "elapsed": 0.017,
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "spec/lua/run_test_suite.lua:18: spec/lua/test_zlib_surrounded.lua:5: module 'zlib_surrounded' not found:\n\tno field package.preload['zlib_surrounded']\n\tno file '../runtime/lua/zlib_surrounded.lua'\n\tno file 'spec/lua/zlib_surrounded.lua'\n\tno file 'spec/lua/extra/zlib_surrounded.lua'\n\tno file 'compiled/lua/zlib_surrounded.lua'\n\tno file '/home/travis/build/kaitai-io/ci_targets/lua_install/share/lua/5.3/zlib_surrounded.lua'\n\tno file '/home/travis/build/kaitai-io/ci_targets/lua_install/share/lua/5.3/zlib_surrounded/init.lua'\n\tno file './zlib_surrounded.lua'\n\tno file './zlib_surrounded/init.lua'\n\tno file '/home/travis/build/kaitai-io/ci_targets/lua_install/lib/lua/5.3/zlib_surrounded.so'\n\tno file '/home/travis/build/kaitai-io/ci_targets/lua_install/lib/lua/5.3/loadall.so'\n\tno file './zlib_surrounded.so'",
-      "trace": "stack traceback:\n\tspec/lua/run_test_suite.lua:18: in upvalue 'TestZlibSurrounded.test_zlib_surrounded'"
+      "message": "../runtime/lua/kaitaistruct.lua:440: can't decompress zlib - failed to load submodule 'zzlib': ../runtime/lua/kaitaistruct.lua:420: module 'zzlib' not found:\n\tno field package.preload['zzlib']\n\tno file '../runtime/lua/zzlib/zzlib.lua'\n\tno file '../runtime/lua/zzlib.lua'\n\tno file 'spec/lua/zzlib.lua'\n\tno file 'spec/lua/extra/zzlib.lua'\n\tno file 'compiled/lua/zzlib.lua'\n\tno file '/home/travis/build/kaitai-io/ci_targets/lua_install/share/lua/5.3/zzlib.lua'\n\tno file '/home/travis/build/kaitai-io/ci_targets/lua_install/share/lua/5.3/zzlib/init.lua'\n\tno file './zzlib.lua'\n\tno file './zzlib/init.lua'\n\tno file '/home/travis/build/kaitai-io/ci_targets/lua_install/lib/lua/5.3/zzlib.so'\n\tno file '/home/travis/build/kaitai-io/ci_targets/lua_install/lib/lua/5.3/loadall.so'\n\tno file './zzlib.so'",
+      "trace": "stack traceback:\n\t../runtime/lua/kaitaistruct.lua:440: in field 'process_zlib'\n\tcompiled/lua/zlib_surrounded.lua:21: in method '_read'\n\tcompiled/lua/zlib_surrounded.lua:15: in local 'init'\n\t../runtime/lua/class.lua:70: in function <../runtime/lua/class.lua:66>\n\t(...tail calls...)\n\tspec/lua/test_zlib_surrounded.lua:10: in upvalue 'TestZlibSurrounded.test_zlib_surrounded'"
     },
     "is_kst": true
   },
   "ZlibWithHeader78": {
     "status": "failed",
-    "elapsed": 0.014,
+    "elapsed": 0.017,
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "spec/lua/run_test_suite.lua:18: spec/lua/test_zlib_with_header_78.lua:5: module 'zlib_with_header_78' not found:\n\tno field package.preload['zlib_with_header_78']\n\tno file '../runtime/lua/zlib_with_header_78.lua'\n\tno file 'spec/lua/zlib_with_header_78.lua'\n\tno file 'spec/lua/extra/zlib_with_header_78.lua'\n\tno file 'compiled/lua/zlib_with_header_78.lua'\n\tno file '/home/travis/build/kaitai-io/ci_targets/lua_install/share/lua/5.3/zlib_with_header_78.lua'\n\tno file '/home/travis/build/kaitai-io/ci_targets/lua_install/share/lua/5.3/zlib_with_header_78/init.lua'\n\tno file './zlib_with_header_78.lua'\n\tno file './zlib_with_header_78/init.lua'\n\tno file '/home/travis/build/kaitai-io/ci_targets/lua_install/lib/lua/5.3/zlib_with_header_78.so'\n\tno file '/home/travis/build/kaitai-io/ci_targets/lua_install/lib/lua/5.3/loadall.so'\n\tno file './zlib_with_header_78.so'",
-      "trace": "stack traceback:\n\tspec/lua/run_test_suite.lua:18: in upvalue 'TestZlibWithHeader78.test_zlib_with_header_78'"
+      "message": "../runtime/lua/kaitaistruct.lua:440: can't decompress zlib - failed to load submodule 'zzlib': ../runtime/lua/kaitaistruct.lua:420: module 'zzlib' not found:\n\tno field package.preload['zzlib']\n\tno file '../runtime/lua/zzlib/zzlib.lua'\n\tno file '../runtime/lua/zzlib.lua'\n\tno file 'spec/lua/zzlib.lua'\n\tno file 'spec/lua/extra/zzlib.lua'\n\tno file 'compiled/lua/zzlib.lua'\n\tno file '/home/travis/build/kaitai-io/ci_targets/lua_install/share/lua/5.3/zzlib.lua'\n\tno file '/home/travis/build/kaitai-io/ci_targets/lua_install/share/lua/5.3/zzlib/init.lua'\n\tno file './zzlib.lua'\n\tno file './zzlib/init.lua'\n\tno file '/home/travis/build/kaitai-io/ci_targets/lua_install/lib/lua/5.3/zzlib.so'\n\tno file '/home/travis/build/kaitai-io/ci_targets/lua_install/lib/lua/5.3/loadall.so'\n\tno file './zzlib.so'",
+      "trace": "stack traceback:\n\t../runtime/lua/kaitaistruct.lua:440: in field 'process_zlib'\n\tcompiled/lua/zlib_with_header_78.lua:19: in method '_read'\n\tcompiled/lua/zlib_with_header_78.lua:14: in local 'init'\n\t../runtime/lua/class.lua:70: in function <../runtime/lua/class.lua:66>\n\t(...tail calls...)\n\tspec/lua/test_zlib_with_header_78.lua:10: in upvalue 'TestZlibWithHeader78.test_zlib_with_header_78'"
     },
     "is_kst": true
-  },
-  "$meta": {
-    "lang": "lua",
-    "timestamp": "2022-04-15T20:33:49Z",
-    "ci": {
-      "ci": "travis",
-      "build_id": "249482232",
-      "job_id": "567272874",
-      "job_number": "447.31",
-      "url": "https://app.travis-ci.com/kaitai-io/ci_targets/jobs/567272874"
-    }
   }
 }
