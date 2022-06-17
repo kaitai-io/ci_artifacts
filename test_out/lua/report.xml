@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites>
-    <testsuite name="LuaUnit" id="00001" package="" hostname="localhost" tests="229" timestamp="2022-05-05T23:31:36" time="0.059" errors="6" failures="4" skipped="0">
+    <testsuite name="LuaUnit" id="00001" package="" hostname="localhost" tests="230" timestamp="2022-06-17T12:28:07" time="0.057" errors="6" failures="3" skipped="0">
         <properties>
             <property name="Lua Version" value="Lua 5.3"/>
             <property name="LuaUnit Version" value="3.4"/>
@@ -115,7 +115,7 @@
         </testcase>
         <testcase classname="TestEnumToI" name="TestEnumToI.test_enum_to_i" time="0.000">
         </testcase>
-        <testcase classname="TestEnumToIClassBorder1" name="TestEnumToIClassBorder1.test_enum_to_i_class_border_1" time="0.001">
+        <testcase classname="TestEnumToIClassBorder1" name="TestEnumToIClassBorder1.test_enum_to_i_class_border_1" time="0.002">
             <error type="compiled/lua/enum_to_i_class_border_2.lua:27: attempt to index a nil value (field &apos;parent&apos;)">
                 <![CDATA[stack traceback:
 	compiled/lua/enum_to_i_class_border_2.lua:27: in function <compiled/lua/enum_to_i_class_border_2.lua:22>
@@ -144,7 +144,7 @@
         </testcase>
         <testcase classname="TestExprBytesCmp" name="TestExprBytesCmp.test_expr_bytes_cmp" time="0.000">
         </testcase>
-        <testcase classname="TestExprBytesLiteral" name="TestExprBytesLiteral.test_expr_bytes_literal" time="0.014">
+        <testcase classname="TestExprBytesLiteral" name="TestExprBytesLiteral.test_expr_bytes_literal" time="0.015">
             <failure type="spec/lua/run_test_suite.lua:18: spec/lua/test_expr_bytes_literal.lua:5: module &apos;expr_bytes_literal&apos; not found:
 	no field package.preload[&apos;expr_bytes_literal&apos;]
 	no file &apos;../runtime/lua/expr_bytes_literal.lua&apos;
@@ -321,7 +321,7 @@
         </testcase>
         <testcase classname="TestParamsPassArrayUsertype" name="TestParamsPassArrayUsertype.test_params_pass_array_usertype" time="0.000">
         </testcase>
-        <testcase classname="TestParamsPassBool" name="TestParamsPassBool.test_params_pass_bool" time="0.001">
+        <testcase classname="TestParamsPassBool" name="TestParamsPassBool.test_params_pass_bool" time="0.002">
             <failure type="spec/lua/test_params_pass_bool.lua:16: expected: false, actual: 0">
                 <![CDATA[stack traceback:
 	spec/lua/test_params_pass_bool.lua:16: in upvalue 'TestParamsPassBool.test_params_pass_bool']]></failure>
@@ -409,7 +409,7 @@
 	(...tail calls...)
 	spec/lua/test_str_encodings_default.lua:10: in upvalue 'TestStrEncodingsDefault.test_str_encodings_default']]></error>
         </testcase>
-        <testcase classname="TestStrEncodingsUtf16" name="TestStrEncodingsUtf16.test_str_encodings_utf16" time="0.003">
+        <testcase classname="TestStrEncodingsUtf16" name="TestStrEncodingsUtf16.test_str_encodings_utf16" time="0.002">
             <error type="../runtime/lua/string_decode.lua:42: Encoding UTF-16BE not supported">
                 <![CDATA[stack traceback:
 	../runtime/lua/string_decode.lua:42: in function 'string_decode.decode'
@@ -486,7 +486,7 @@
         </testcase>
         <testcase classname="TestUserType" name="TestUserType.test_user_type" time="0.000">
         </testcase>
-        <testcase classname="TestValidEqStrEncodings" name="TestValidEqStrEncodings.test_valid_eq_str_encodings" time="0.002">
+        <testcase classname="TestValidEqStrEncodings" name="TestValidEqStrEncodings.test_valid_eq_str_encodings" time="0.003">
             <error type="../runtime/lua/string_decode.lua:42: Encoding SJIS not supported">
                 <![CDATA[stack traceback:
 	../runtime/lua/string_decode.lua:42: in function 'string_decode.decode'
@@ -506,22 +506,7 @@
         </testcase>
         <testcase classname="TestValidFailEqStr" name="TestValidFailEqStr.test_valid_fail_eq_str" time="0.000">
         </testcase>
-        <testcase classname="TestValidFailExpr" name="TestValidFailExpr.test_valid_fail_expr" time="0.013">
-            <failure type="spec/lua/run_test_suite.lua:18: spec/lua/test_valid_fail_expr.lua:5: module &apos;valid_fail_expr&apos; not found:
-	no field package.preload[&apos;valid_fail_expr&apos;]
-	no file &apos;../runtime/lua/valid_fail_expr.lua&apos;
-	no file &apos;spec/lua/valid_fail_expr.lua&apos;
-	no file &apos;spec/lua/extra/valid_fail_expr.lua&apos;
-	no file &apos;compiled/lua/valid_fail_expr.lua&apos;
-	no file &apos;/home/travis/build/kaitai-io/ci_targets/lua_install/share/lua/5.3/valid_fail_expr.lua&apos;
-	no file &apos;/home/travis/build/kaitai-io/ci_targets/lua_install/share/lua/5.3/valid_fail_expr/init.lua&apos;
-	no file &apos;./valid_fail_expr.lua&apos;
-	no file &apos;./valid_fail_expr/init.lua&apos;
-	no file &apos;/home/travis/build/kaitai-io/ci_targets/lua_install/lib/lua/5.3/valid_fail_expr.so&apos;
-	no file &apos;/home/travis/build/kaitai-io/ci_targets/lua_install/lib/lua/5.3/loadall.so&apos;
-	no file &apos;./valid_fail_expr.so&apos;">
-                <![CDATA[stack traceback:
-	spec/lua/run_test_suite.lua:18: in upvalue 'TestValidFailExpr.test_valid_fail_expr']]></failure>
+        <testcase classname="TestValidFailExpr" name="TestValidFailExpr.test_valid_fail_expr" time="0.000">
         </testcase>
         <testcase classname="TestValidFailInst" name="TestValidFailInst.test_valid_fail_inst" time="0.000">
         </testcase>
@@ -541,13 +526,15 @@
         </testcase>
         <testcase classname="TestValidNotParsedIf" name="TestValidNotParsedIf.test_valid_not_parsed_if" time="0.000">
         </testcase>
+        <testcase classname="TestValidOptionalId" name="TestValidOptionalId.test_valid_optional_id" time="0.000">
+        </testcase>
         <testcase classname="TestValidShort" name="TestValidShort.test_valid_short" time="0.000">
         </testcase>
         <testcase classname="TestValidSwitch" name="TestValidSwitch.test_valid_switch" time="0.000">
         </testcase>
         <testcase classname="TestYamlInts" name="TestYamlInts.test_yaml_ints" time="0.000">
         </testcase>
-        <testcase classname="TestZlibSurrounded" name="TestZlibSurrounded.test_zlib_surrounded" time="0.001">
+        <testcase classname="TestZlibSurrounded" name="TestZlibSurrounded.test_zlib_surrounded" time="0.002">
         </testcase>
         <testcase classname="TestZlibWithHeader78" name="TestZlibWithHeader78.test_zlib_with_header_78" time="0.001">
         </testcase>
