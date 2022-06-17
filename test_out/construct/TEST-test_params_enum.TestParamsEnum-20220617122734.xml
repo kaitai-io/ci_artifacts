@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="1" failures="0" file="test_params_enum.py" name="test_params_enum.TestParamsEnum-20220617122734" skipped="0" tests="1" time="0.001" timestamp="2022-06-17T12:27:34">
+	<testcase classname="test_params_enum.TestParamsEnum" file="spec/construct/test_params_enum.py" line="7" name="test_params_enum" time="0.001" timestamp="2022-06-17T12:27:34">
+		<error message="enumerated_one" type="AttributeError">
+<![CDATA[Traceback (most recent call last):
+  File "/home/travis/build/kaitai-io/ci_targets/tests/spec/construct/test_params_enum.py", line 8, in test_params_enum
+    r = _schema.parse_file('src/enum_0.bin')
+  File "/home/travis/virtualenv/python2.7.15/lib/python2.7/site-packages/construct/core.py", line 309, in parse_file
+    return self.parse_stream(f, **contextkw)
+  File "/home/travis/virtualenv/python2.7.15/lib/python2.7/site-packages/construct/core.py", line 300, in parse_stream
+    return self._parsereport(stream, context, "(parsing)")
+  File "/home/travis/virtualenv/python2.7.15/lib/python2.7/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python2.7.15/lib/python2.7/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python2.7.15/lib/python2.7/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python2.7.15/lib/python2.7/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python2.7.15/lib/python2.7/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python2.7.15/lib/python2.7/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python2.7.15/lib/python2.7/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python2.7.15/lib/python2.7/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python2.7.15/lib/python2.7/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python2.7.15/lib/python2.7/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python2.7.15/lib/python2.7/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python2.7.15/lib/python2.7/site-packages/construct/core.py", line 2576, in _parse
+    return self.func(context) if callable(self.func) else self.func
+  File "/home/travis/build/kaitai-io/ci_targets/tests/compiled/construct/params_enum.py", line 11, in <lambda>
+    'is_cat' / Computed(lambda this: this.enumerated_one == 'cat'),
+  File "/home/travis/virtualenv/python2.7.15/lib/python2.7/site-packages/construct/lib/containers.py", line 102, in __getattr__
+    raise AttributeError(name)
+AttributeError: enumerated_one
+]]>		</error>
+		<system-out>
+<![CDATA[]]>		</system-out>
+		<system-err>
+<![CDATA[]]>		</system-err>
+	</testcase>
+</testsuite>
