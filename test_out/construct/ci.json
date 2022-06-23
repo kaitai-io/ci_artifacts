@@ -1,13 +1,13 @@
 {
   "$meta": {
     "lang": "construct",
-    "timestamp": "2022-06-23T17:14:00Z",
+    "timestamp": "2022-06-23T17:29:01Z",
     "ci": {
       "ci": "travis",
-      "build_id": "252347676",
-      "job_id": "574554521",
-      "job_number": "456.23",
-      "url": "https://app.travis-ci.com/kaitai-io/ci_targets/jobs/574554521"
+      "build_id": "252348341",
+      "job_id": "574556195",
+      "job_number": "457.23",
+      "url": "https://app.travis-ci.com/kaitai-io/ci_targets/jobs/574556195"
     }
   },
   "BcdUserTypeBe": {
@@ -225,7 +225,7 @@
   },
   "CastToTop": {
     "status": "failed",
-    "elapsed": 0.013,
+    "elapsed": 0.012,
     "failure": {
       "file_name": null,
       "line_num": null,
@@ -258,12 +258,12 @@
   },
   "CombineEnum": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "CombineStr": {
     "status": "failed",
-    "elapsed": 0.001,
+    "elapsed": 0.002,
     "failure": {
       "file_name": null,
       "line_num": null,
@@ -274,7 +274,7 @@
   },
   "DebugSwitchUser": {
     "status": "failed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "failure": {
       "file_name": null,
       "line_num": null,
@@ -368,7 +368,7 @@
   },
   "EnumDeepLiterals": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "EnumFancy": {
@@ -399,7 +399,7 @@
   },
   "EnumIntRangeS": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "EnumIntRangeU": {
@@ -462,7 +462,7 @@
   },
   "Expr0": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "Expr1": {
@@ -521,12 +521,12 @@
   },
   "ExprBytesNonLiteral": {
     "status": "failed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "Failed to import test module: test_expr_bytes_non_literal\nTraceback (most recent call last):\n  File \"/opt/python/2.7.15/lib/python2.7/unittest/loader.py\", line 254, in _find_tests\n    module = self._get_module_from_name(name)\n  File \"/opt/python/2.7.15/lib/python2.7/unittest/loader.py\", line 232, in _get_module_from_name\n    __import__(name)\n  File \"/home/travis/build/kaitai-io/ci_targets/tests/spec/construct/test_expr_bytes_non_literal.py\", line 5, in <module>\n    from expr_bytes_non_literal import _schema\nImportError: No module named expr_bytes_non_literal\n",
-      "trace": "ImportError: Failed to import test module: test_expr_bytes_non_literal\nTraceback (most recent call last):\n  File \"/opt/python/2.7.15/lib/python2.7/unittest/loader.py\", line 254, in _find_tests\n    module = self._get_module_from_name(name)\n  File \"/opt/python/2.7.15/lib/python2.7/unittest/loader.py\", line 232, in _get_module_from_name\n    __import__(name)\n  File \"/home/travis/build/kaitai-io/ci_targets/tests/spec/construct/test_expr_bytes_non_literal.py\", line 5, in <module>\n    from expr_bytes_non_literal import _schema\nImportError: No module named expr_bytes_non_literal"
+      "message": "byte format requires -128 <= number <= 127",
+      "trace": "Traceback (most recent call last):\n  File \"/home/travis/build/kaitai-io/ci_targets/tests/spec/construct/test_expr_bytes_non_literal.py\", line 9, in test_expr_bytes_non_literal\n    r = _schema.parse_file('src/enum_negative.bin')\n  File \"/home/travis/virtualenv/python2.7.15/lib/python2.7/site-packages/construct/core.py\", line 309, in parse_file\n    return self.parse_stream(f, **contextkw)\n  File \"/home/travis/virtualenv/python2.7.15/lib/python2.7/site-packages/construct/core.py\", line 300, in parse_stream\n    return self._parsereport(stream, context, \"(parsing)\")\n  File \"/home/travis/virtualenv/python2.7.15/lib/python2.7/site-packages/construct/core.py\", line 312, in _parsereport\n    obj = self._parse(stream, context, path)\n  File \"/home/travis/virtualenv/python2.7.15/lib/python2.7/site-packages/construct/core.py\", line 1982, in _parse\n    subobj = sc._parsereport(stream, context, path)\n  File \"/home/travis/virtualenv/python2.7.15/lib/python2.7/site-packages/construct/core.py\", line 312, in _parsereport\n    obj = self._parse(stream, context, path)\n  File \"/home/travis/virtualenv/python2.7.15/lib/python2.7/site-packages/construct/core.py\", line 2440, in _parse\n    return self.subcon._parsereport(stream, context, path)\n  File \"/home/travis/virtualenv/python2.7.15/lib/python2.7/site-packages/construct/core.py\", line 312, in _parsereport\n    obj = self._parse(stream, context, path)\n  File \"/home/travis/virtualenv/python2.7.15/lib/python2.7/site-packages/construct/core.py\", line 2576, in _parse\n    return self.func(context) if callable(self.func) else self.func\n  File \"/home/travis/build/kaitai-io/ci_targets/tests/compiled/construct/expr_bytes_non_literal.py\", line 8, in <lambda>\n    'calc_bytes' / Computed(lambda this: struct.pack('2b', this.one, this.two)),\nerror: byte format requires -128 <= number <= 127"
     },
     "is_kst": true
   },
@@ -565,7 +565,7 @@
   },
   "ExprIfIntOps": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "ExprIntDiv": {
@@ -623,7 +623,7 @@
   },
   "ExprSizeofValue0": {
     "status": "passed",
-    "elapsed": 0.002,
+    "elapsed": 0.004,
     "is_kst": true
   },
   "ExprSizeofValueSized": {
@@ -855,7 +855,7 @@
   },
   "JsSignedRightShift": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "MetaTags": {
@@ -895,7 +895,7 @@
   },
   "NavParentFalse2": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "NavParentOverride": {
@@ -1172,7 +1172,7 @@
   },
   "ProcessCustomNoArgs": {
     "status": "failed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "failure": {
       "file_name": null,
       "line_num": null,
@@ -1302,7 +1302,7 @@
   },
   "RepeatNStrz": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "RepeatNStrzDouble": {
@@ -1317,7 +1317,7 @@
   },
   "RepeatUntilComplex": {
     "status": "failed",
-    "elapsed": 0.001,
+    "elapsed": 0.002,
     "failure": {
       "file_name": null,
       "line_num": null,
@@ -1328,7 +1328,7 @@
   },
   "RepeatUntilS4": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "RepeatUntilSized": {
@@ -1368,7 +1368,7 @@
   },
   "StrPadTermEmpty": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "SwitchBytearray": {
@@ -1378,7 +1378,7 @@
   },
   "SwitchElseOnly": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "SwitchIntegers": {
@@ -1388,7 +1388,7 @@
   },
   "SwitchIntegers2": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "SwitchManualEnum": {
@@ -1459,12 +1459,12 @@
   },
   "SwitchRepeatExprInvalid": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "TermBytes": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "TermStrz": {
@@ -1474,7 +1474,7 @@
   },
   "TermU1Val": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "TypeIntUnaryOp": {
@@ -1506,12 +1506,12 @@
   },
   "UserType": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "ValidEqStrEncodings": {
     "status": "passed",
-    "elapsed": 0.007,
+    "elapsed": 0.006,
     "is_kst": true
   },
   "ValidLong": {
@@ -1536,7 +1536,7 @@
   },
   "YamlInts": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "ZlibSurrounded": {
@@ -1552,7 +1552,7 @@
   },
   "ZlibWithHeader78": {
     "status": "failed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "failure": {
       "file_name": null,
       "line_num": null,
