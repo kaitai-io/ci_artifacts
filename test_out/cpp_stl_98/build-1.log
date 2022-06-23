@@ -4,9 +4,9 @@ Scanning dependencies of target ks_tests
 [  0%] Building CXX object CMakeFiles/ks_tests.dir/prereq/custom_fx.cpp.o
 [  0%] Building CXX object CMakeFiles/ks_tests.dir/prereq/custom_fx_no_args.cpp.o
 [  1%] Building CXX object CMakeFiles/ks_tests.dir/main.cpp.o
+[  1%] Building CXX object CMakeFiles/ks_tests.dir/test_bits_byte_aligned.cpp.o
 [  1%] Building CXX object CMakeFiles/ks_tests.dir/test_bcd_user_type_be.cpp.o
 [  1%] Building CXX object CMakeFiles/ks_tests.dir/test_bcd_user_type_le.cpp.o
-[  1%] Building CXX object CMakeFiles/ks_tests.dir/test_bits_byte_aligned.cpp.o
 [  1%] Building CXX object CMakeFiles/ks_tests.dir/test_bits_enum.cpp.o
 [  2%] Building CXX object CMakeFiles/ks_tests.dir/test_bits_seq_endian_combo.cpp.o
 [  2%] Building CXX object CMakeFiles/ks_tests.dir/test_bits_shift_by_b32_le.cpp.o
@@ -58,6 +58,7 @@ Scanning dependencies of target ks_tests
 [ 12%] Building CXX object CMakeFiles/ks_tests.dir/test_enum_long_range_s.cpp.o
 [ 12%] Building CXX object CMakeFiles/ks_tests.dir/test_enum_long_range_u.cpp.o
 [ 12%] Building CXX object CMakeFiles/ks_tests.dir/test_enum_negative.cpp.o
+[ 12%] Building CXX object CMakeFiles/ks_tests.dir/test_enum_of_value_inst.cpp.o
 In file included from /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_enum_import.cpp:4:
 /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_import.h:27:5: error: use of undeclared identifier 'enum_0_t'
     enum_0_t::animal_t m_pet_1;
@@ -68,7 +69,6 @@ In file included from /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_st
 /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_import.h:33:5: error: use of undeclared identifier 'enum_0_t'
     enum_0_t::animal_t pet_1() const { return m_pet_1; }
     ^
-[ 12%] Building CXX object CMakeFiles/ks_tests.dir/test_enum_of_value_inst.cpp.o
 /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_import.h:34:5: error: use of undeclared identifier 'enum_deep_t'
     enum_deep_t::container1_t::container2_t::animal_t pet_2() const { return m_pet_2; }
     ^
@@ -87,16 +87,16 @@ make[2]: *** [CMakeFiles/ks_tests.dir/test_enum_import.cpp.o] Error 1
 [ 15%] Building CXX object CMakeFiles/ks_tests.dir/test_expr_array.cpp.o
 [ 15%] Building CXX object CMakeFiles/ks_tests.dir/test_expr_bits.cpp.o
 [ 15%] Building CXX object CMakeFiles/ks_tests.dir/test_expr_bytes_cmp.cpp.o
-[ 15%] Building CXX object CMakeFiles/ks_tests.dir/test_expr_bytes_literal.cpp.o
+[ 15%] Building CXX object CMakeFiles/ks_tests.dir/test_expr_bytes_non_literal.cpp.o
 [ 15%] Building CXX object CMakeFiles/ks_tests.dir/test_expr_bytes_ops.cpp.o
 [ 16%] Building CXX object CMakeFiles/ks_tests.dir/test_expr_calc_array_ops.cpp.o
 [ 16%] Building CXX object CMakeFiles/ks_tests.dir/test_expr_enum.cpp.o
-/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_expr_bytes_literal.cpp:4:10: fatal error: 'expr_bytes_literal.h' file not found
-#include "expr_bytes_literal.h"
-         ^~~~~~~~~~~~~~~~~~~~~~
-1 error generated.
-make[2]: *** [CMakeFiles/ks_tests.dir/test_expr_bytes_literal.cpp.o] Error 1
 [ 16%] Building CXX object CMakeFiles/ks_tests.dir/test_expr_if_int_ops.cpp.o
+/Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_expr_bytes_non_literal.cpp:4:10: fatal error: 'expr_bytes_non_literal.h' file not found
+#include "expr_bytes_non_literal.h"
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~
+1 error generated.
+make[2]: *** [CMakeFiles/ks_tests.dir/test_expr_bytes_non_literal.cpp.o] Error 1
 [ 16%] Building CXX object CMakeFiles/ks_tests.dir/test_expr_int_div.cpp.o
 [ 16%] Building CXX object CMakeFiles/ks_tests.dir/test_expr_io_eof.cpp.o
 [ 17%] Building CXX object CMakeFiles/ks_tests.dir/test_expr_io_pos.cpp.o
@@ -184,15 +184,15 @@ make[2]: *** [CMakeFiles/ks_tests.dir/test_params_pass_array_int.cpp.o] Error 1
 /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_params_pass_array_str.cpp:4:10: fatal error: 'params_pass_array_str.h' file not found
 #include "params_pass_array_str.h"
          ^~~~~~~~~~~~~~~~~~~~~~~~~
-[ 32%] Building CXX object CMakeFiles/ks_tests.dir/test_position_in_seq.cpp.o
 1 error generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/test_params_pass_array_str.cpp.o] Error 1
-[ 32%] Building CXX object CMakeFiles/ks_tests.dir/test_position_to_end.cpp.o
+[ 32%] Building CXX object CMakeFiles/ks_tests.dir/test_position_in_seq.cpp.o
 /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_params_pass_array_struct.cpp:4:10: fatal error: 'params_pass_array_struct.h' file not found
 #include "params_pass_array_struct.h"
          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
 1 error generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/test_params_pass_array_struct.cpp.o] Error 1
+[ 32%] Building CXX object CMakeFiles/ks_tests.dir/test_position_to_end.cpp.o
 [ 32%] Building CXX object CMakeFiles/ks_tests.dir/test_process_coerce_bytes.cpp.o
 [ 33%] Building CXX object CMakeFiles/ks_tests.dir/test_process_coerce_switch.cpp.o
 [ 33%] Building CXX object CMakeFiles/ks_tests.dir/test_process_coerce_usertype1.cpp.o
@@ -201,10 +201,10 @@ make[2]: *** [CMakeFiles/ks_tests.dir/test_params_pass_array_struct.cpp.o] Error
 [ 33%] Building CXX object CMakeFiles/ks_tests.dir/test_process_custom_no_args.cpp.o
 [ 34%] Building CXX object CMakeFiles/ks_tests.dir/test_process_repeat_bytes.cpp.o
 [ 34%] Building CXX object CMakeFiles/ks_tests.dir/test_process_repeat_usertype.cpp.o
-[ 34%] Building CXX object CMakeFiles/ks_tests.dir/test_process_rotate.cpp.o
 /Users/travis/build/kaitai-io/ci_targets/tests/spec/cpp_stl_98/test_process_coerce_switch.cpp:4:10: fatal error: 'process_coerce_switch.h' file not found
 #include "process_coerce_switch.h"
          ^~~~~~~~~~~~~~~~~~~~~~~~~
+[ 34%] Building CXX object CMakeFiles/ks_tests.dir/test_process_rotate.cpp.o
 1 error generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/test_process_coerce_switch.cpp.o] Error 1
 [ 34%] Building CXX object CMakeFiles/ks_tests.dir/test_process_to_user.cpp.o
@@ -414,8 +414,7 @@ operator+(typename reverse_iterator<_Iter>::difference_type __n, const reverse_i
 /Applications/Xcode-9.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/iterator:1184:1: note: candidate template ignored: could not match 'move_iterator<type-parameter-0-0>' against 'unsigned long'
 operator+(typename move_iterator<_Iter>::difference_type __n, const move_iterator<_Iter>& __x)
 ^
-/Applications/Xcode-9.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/iterator:1597[ 67%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/expr_str_ops.cpp.o
-:1: note: candidate template ignored: could not match '__wrap_iter<type-parameter-0-0>' against 'unsigned long'
+/Applications/Xcode-9.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/iterator:1597:1: note: candidate template ignored: could not match '__wrap_iter<type-parameter-0-0>' against 'unsigned long'
 operator+(typename __wrap_iter<_Iter>::difference_type __n,
 ^
 /Applications/Xcode-9.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/string:3731:1: note: candidate template ignored: could not match 'basic_string<type-parameter-0-0, type-parameter-0-1, type-parameter-0-2>' against 'unsigned long'
@@ -430,6 +429,7 @@ operator+(_CharT __lhs, const basic_string<_CharT,_Traits,_Allocator>& __rhs)
 /Applications/Xcode-9.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/string:3767:1: note: candidate template ignored: could not match 'const _CharT *' against 'std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::size_type' (aka 'unsigned long')
 operator+(const basic_string<_CharT, _Traits, _Allocator>& __lhs, const _CharT* __rhs)
 ^
+[ 67%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/expr_str_ops.cpp.o
 1 error generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/expr_ops_parens.cpp.o] Error 1
 [ 67%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/fixed_contents.cpp.o
@@ -568,13 +568,13 @@ make[2]: *** [CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/te
 [ 94%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/type_int_unary_op.cpp.o
 [ 94%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/type_ternary.cpp.o
 [ 94%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/type_ternary_2nd_falsy.cpp.o
+[ 94%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/type_ternary_opaque.cpp.o
 /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/term_u1_val.cpp:18:36: warning: implicit conversion from 'int' to 'char' changes value from 227 to -29 [-Wconstant-conversion]
     m_foo = m__io->read_bytes_term(227, false, false, true);
                    ~~~~~~~~~~~~~~~ ^~~
 /Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/term_u1_val.cpp:19:66: warning: implicit conversion from 'int' to 'char' changes value from 171 to -85 [-Wconstant-conversion]
     m_bar = kaitai::kstream::bytes_to_str(m__io->read_bytes_term(171, true, true, true), std::string("UTF-8"));
                                                  ~~~~~~~~~~~~~~~ ^~~
-[ 94%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/type_ternary_opaque.cpp.o
 2 warnings generated.
 [ 94%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/user_type.cpp.o
 [ 95%] Building CXX object CMakeFiles/ks_tests.dir/Users/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/valid_eq_str_encodings.cpp.o
