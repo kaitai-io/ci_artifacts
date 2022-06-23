@@ -1,13 +1,13 @@
 {
   "$meta": {
     "lang": "python",
-    "timestamp": "2022-06-23T17:13:58Z",
+    "timestamp": "2022-06-23T17:30:10Z",
     "ci": {
       "ci": "travis",
-      "build_id": "252347676",
-      "job_id": "574554518",
-      "job_number": "456.20",
-      "url": "https://app.travis-ci.com/kaitai-io/ci_targets/jobs/574554518"
+      "build_id": "252348341",
+      "job_id": "574556192",
+      "job_number": "457.20",
+      "url": "https://app.travis-ci.com/kaitai-io/ci_targets/jobs/574556192"
     }
   },
   "BcdUserTypeBe": {
@@ -37,7 +37,7 @@
   },
   "BitsShiftByB32Le": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "BitsShiftByB64Le": {
@@ -117,12 +117,12 @@
   },
   "CastToTop": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "CombineBool": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "CombineBytes": {
@@ -208,7 +208,7 @@
   },
   "Enum0": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "Enum1": {
@@ -259,12 +259,12 @@
   },
   "EnumIntRangeU": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "EnumInvalid": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "EnumLongRangeS": {
@@ -279,7 +279,7 @@
   },
   "EnumNegative": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "EnumOfValueInst": {
@@ -350,12 +350,12 @@
   },
   "ExprBytesNonLiteral": {
     "status": "failed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "Failed to import test module: test_expr_bytes_non_literal\nTraceback (most recent call last):\n  File \"/opt/python/2.7.15/lib/python2.7/unittest/loader.py\", line 254, in _find_tests\n    module = self._get_module_from_name(name)\n  File \"/opt/python/2.7.15/lib/python2.7/unittest/loader.py\", line 232, in _get_module_from_name\n    __import__(name)\n  File \"/home/travis/build/kaitai-io/ci_targets/tests/spec/python/test_expr_bytes_non_literal.py\", line 5, in <module>\n    from expr_bytes_non_literal import ExprBytesNonLiteral\nImportError: No module named expr_bytes_non_literal\n",
-      "trace": "ImportError: Failed to import test module: test_expr_bytes_non_literal\nTraceback (most recent call last):\n  File \"/opt/python/2.7.15/lib/python2.7/unittest/loader.py\", line 254, in _find_tests\n    module = self._get_module_from_name(name)\n  File \"/opt/python/2.7.15/lib/python2.7/unittest/loader.py\", line 232, in _get_module_from_name\n    __import__(name)\n  File \"/home/travis/build/kaitai-io/ci_targets/tests/spec/python/test_expr_bytes_non_literal.py\", line 5, in <module>\n    from expr_bytes_non_literal import ExprBytesNonLiteral\nImportError: No module named expr_bytes_non_literal"
+      "message": "byte format requires -128 <= number <= 127",
+      "trace": "Traceback (most recent call last):\n  File \"/home/travis/build/kaitai-io/ci_targets/tests/spec/python/test_expr_bytes_non_literal.py\", line 11, in test_expr_bytes_non_literal\n    self.assertEqual(len(r.calc_bytes), 2)\n  File \"/home/travis/build/kaitai-io/ci_targets/tests/compiled/python/expr_bytes_non_literal.py\", line 27, in calc_bytes\n    self._m_calc_bytes = struct.pack('2b', self.one, self.two)\nerror: byte format requires -128 <= number <= 127"
     },
     "is_kst": true
   },
@@ -371,7 +371,7 @@
   },
   "ExprEnum": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "ExprIfIntOps": {
@@ -415,7 +415,7 @@
   },
   "ExprSizeofValue0": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.003,
     "is_kst": true
   },
   "ExprSizeofValueSized": {
@@ -475,12 +475,12 @@
   },
   "Imports0": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "ImportsAbs": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "ImportsAbsAbs": {
@@ -614,7 +614,7 @@
   },
   "NavParentOverride": {
     "status": "passed",
-    "elapsed": 0.002,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "NavParentSwitch": {
@@ -639,7 +639,7 @@
   },
   "NestedSameName": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "NestedSameName2": {
@@ -649,7 +649,7 @@
   },
   "NestedTypeParam": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "NestedTypes": {
@@ -704,7 +704,7 @@
   },
   "ParamsEnum": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "ParamsPassArrayInt": {
@@ -784,7 +784,7 @@
   },
   "ProcessCustomNoArgs": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "ProcessRepeatBytes": {
@@ -804,7 +804,7 @@
   },
   "ProcessToUser": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "ProcessXor4Const": {
@@ -814,12 +814,12 @@
   },
   "ProcessXor4Value": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "ProcessXorConst": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "ProcessXorValue": {
@@ -854,7 +854,7 @@
   },
   "RepeatNStrz": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "RepeatNStrzDouble": {
@@ -874,7 +874,7 @@
   },
   "RepeatUntilS4": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "RepeatUntilSized": {
@@ -923,7 +923,7 @@
   },
   "SwitchBytearray": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.002,
     "is_kst": true
   },
   "SwitchCast": {
@@ -1050,7 +1050,7 @@
   },
   "TypeTernaryOpaque": {
     "status": "passed",
-    "elapsed": 0.001
+    "elapsed": 0.0
   },
   "UserType": {
     "status": "passed",
@@ -1059,7 +1059,7 @@
   },
   "ValidEqStrEncodings": {
     "status": "passed",
-    "elapsed": 0.008,
+    "elapsed": 0.007,
     "is_kst": true
   },
   "ValidFailAnyofInt": {
@@ -1079,7 +1079,7 @@
   },
   "ValidFailEqInt": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "ValidFailEqStr": {
@@ -1144,7 +1144,7 @@
   },
   "ValidShort": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "ValidSwitch": {
@@ -1154,12 +1154,12 @@
   },
   "YamlInts": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "ZlibSurrounded": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "ZlibWithHeader78": {
