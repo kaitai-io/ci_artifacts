@@ -1,13 +1,13 @@
 {
   "$meta": {
     "lang": "python",
-    "timestamp": "2022-06-23T17:13:57Z",
+    "timestamp": "2022-06-23T17:29:07Z",
     "ci": {
       "ci": "travis",
-      "build_id": "252347676",
-      "job_id": "574554519",
-      "job_number": "456.21",
-      "url": "https://app.travis-ci.com/kaitai-io/ci_targets/jobs/574554519"
+      "build_id": "252348341",
+      "job_id": "574556193",
+      "job_number": "457.21",
+      "url": "https://app.travis-ci.com/kaitai-io/ci_targets/jobs/574556193"
     }
   },
   "BcdUserTypeBe": {
@@ -193,17 +193,17 @@
   },
   "Docstrings": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "DocstringsDocref": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "DocstringsDocrefMulti": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "Enum0": {
@@ -335,7 +335,7 @@
   },
   "ExprArray": {
     "status": "passed",
-    "elapsed": 0.002,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "ExprBits": {
@@ -354,19 +354,19 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "Failed to import test module: test_expr_bytes_non_literal\nTraceback (most recent call last):\n  File \"/opt/python/3.4.8/lib/python3.4/unittest/loader.py\", line 323, in _find_tests\n    module = self._get_module_from_name(name)\n  File \"/opt/python/3.4.8/lib/python3.4/unittest/loader.py\", line 301, in _get_module_from_name\n    __import__(name)\n  File \"/home/travis/build/kaitai-io/ci_targets/tests/spec/python/test_expr_bytes_non_literal.py\", line 5, in <module>\n    from expr_bytes_non_literal import ExprBytesNonLiteral\nImportError: No module named 'expr_bytes_non_literal'\n",
-      "trace": "Traceback (most recent call last):\n  File \"/opt/python/3.4.8/lib/python3.4/unittest/case.py\", line 58, in testPartExecutor\n    yield\n  File \"/opt/python/3.4.8/lib/python3.4/unittest/case.py\", line 580, in run\n    testMethod()\n  File \"/opt/python/3.4.8/lib/python3.4/unittest/loader.py\", line 33, in testFailure\n    raise self._exception\nImportError: Failed to import test module: test_expr_bytes_non_literal\nTraceback (most recent call last):\n  File \"/opt/python/3.4.8/lib/python3.4/unittest/loader.py\", line 323, in _find_tests\n    module = self._get_module_from_name(name)\n  File \"/opt/python/3.4.8/lib/python3.4/unittest/loader.py\", line 301, in _get_module_from_name\n    __import__(name)\n  File \"/home/travis/build/kaitai-io/ci_targets/tests/spec/python/test_expr_bytes_non_literal.py\", line 5, in <module>\n    from expr_bytes_non_literal import ExprBytesNonLiteral\nImportError: No module named 'expr_bytes_non_literal'"
+      "message": "byte format requires -128 <= number <= 127",
+      "trace": "Traceback (most recent call last):\n  File \"/home/travis/build/kaitai-io/ci_targets/tests/spec/python/test_expr_bytes_non_literal.py\", line 11, in test_expr_bytes_non_literal\n    self.assertEqual(len(r.calc_bytes), 2)\n  File \"/home/travis/build/kaitai-io/ci_targets/tests/compiled/python/expr_bytes_non_literal.py\", line 27, in calc_bytes\n    self._m_calc_bytes = struct.pack('2b', self.one, self.two)\nstruct.error: byte format requires -128 <= number <= 127"
     },
     "is_kst": true
   },
   "ExprBytesOps": {
     "status": "passed",
-    "elapsed": 0.002,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "ExprCalcArrayOps": {
     "status": "passed",
-    "elapsed": 0.002,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "ExprEnum": {
@@ -430,12 +430,12 @@
   },
   "ExprStrOps": {
     "status": "passed",
-    "elapsed": 0.002,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "FixedContents": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "FixedStruct": {
@@ -455,7 +455,7 @@
   },
   "HelloWorld": {
     "status": "passed",
-    "elapsed": 0.001,
+    "elapsed": 0.0,
     "is_kst": true
   },
   "IfInstances": {
@@ -559,7 +559,7 @@
   },
   "IntegersMinMax": {
     "status": "passed",
-    "elapsed": 0.003,
+    "elapsed": 0.002,
     "is_kst": true
   },
   "IoLocalVar": {
@@ -729,7 +729,7 @@
   },
   "ParamsPassBool": {
     "status": "passed",
-    "elapsed": 0.002,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "ParamsPassStruct": {
@@ -749,7 +749,7 @@
   },
   "PositionInSeq": {
     "status": "passed",
-    "elapsed": 0.0,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "PositionToEnd": {
@@ -981,7 +981,7 @@
   },
   "SwitchManualIntSizeEos": {
     "status": "passed",
-    "elapsed": 0.002,
+    "elapsed": 0.001,
     "is_kst": true
   },
   "SwitchManualStr": {
