@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites>
-    <testsuite name="LuaUnit" id="00001" package="" hostname="localhost" tests="230" timestamp="2022-06-17T12:28:07" time="0.057" errors="6" failures="3" skipped="0">
+    <testsuite name="LuaUnit" id="00001" package="" hostname="localhost" tests="230" timestamp="2022-06-23T17:14:33" time="0.064" errors="6" failures="13" skipped="0">
         <properties>
             <property name="Lua Version" value="Lua 5.3"/>
             <property name="LuaUnit Version" value="3.4"/>
@@ -9,11 +9,17 @@
         </testcase>
         <testcase classname="TestBcdUserTypeLe" name="TestBcdUserTypeLe.test_bcd_user_type_le" time="0.000">
         </testcase>
-        <testcase classname="TestBitsByteAligned" name="TestBitsByteAligned.test_bits_byte_aligned" time="0.000">
+        <testcase classname="TestBitsByteAligned" name="TestBitsByteAligned.test_bits_byte_aligned" time="0.002">
+            <failure type="spec/lua/test_bits_byte_aligned.lua:15: expected: false, actual: 0">
+                <![CDATA[stack traceback:
+	spec/lua/test_bits_byte_aligned.lua:15: in upvalue 'TestBitsByteAligned.test_bits_byte_aligned']]></failure>
         </testcase>
         <testcase classname="TestBitsEnum" name="TestBitsEnum.test_bits_enum" time="0.000">
         </testcase>
-        <testcase classname="TestBitsSeqEndianCombo" name="TestBitsSeqEndianCombo.test_bits_seq_endian_combo" time="0.000">
+        <testcase classname="TestBitsSeqEndianCombo" name="TestBitsSeqEndianCombo.test_bits_seq_endian_combo" time="0.002">
+            <failure type="spec/lua/test_bits_seq_endian_combo.lua:19: expected: true, actual: 1">
+                <![CDATA[stack traceback:
+	spec/lua/test_bits_seq_endian_combo.lua:19: in upvalue 'TestBitsSeqEndianCombo.test_bits_seq_endian_combo']]></failure>
         </testcase>
         <testcase classname="TestBitsShiftByB32Le" name="TestBitsShiftByB32Le.test_bits_shift_by_b32_le" time="0.000">
         </testcase>
@@ -27,17 +33,35 @@
         </testcase>
         <testcase classname="TestBitsSignedShiftB64Le" name="TestBitsSignedShiftB64Le.test_bits_signed_shift_b64_le" time="0.000">
         </testcase>
-        <testcase classname="TestBitsSimple" name="TestBitsSimple.test_bits_simple" time="0.000">
+        <testcase classname="TestBitsSimple" name="TestBitsSimple.test_bits_simple" time="0.002">
+            <failure type="spec/lua/test_bits_simple.lua:14: expected: false, actual: 0">
+                <![CDATA[stack traceback:
+	spec/lua/test_bits_simple.lua:14: in upvalue 'TestBitsSimple.test_bits_simple']]></failure>
         </testcase>
-        <testcase classname="TestBitsSimpleLe" name="TestBitsSimpleLe.test_bits_simple_le" time="0.000">
+        <testcase classname="TestBitsSimpleLe" name="TestBitsSimpleLe.test_bits_simple_le" time="0.002">
+            <failure type="spec/lua/test_bits_simple_le.lua:14: expected: true, actual: 1">
+                <![CDATA[stack traceback:
+	spec/lua/test_bits_simple_le.lua:14: in upvalue 'TestBitsSimpleLe.test_bits_simple_le']]></failure>
         </testcase>
-        <testcase classname="TestBitsUnalignedB32Be" name="TestBitsUnalignedB32Be.test_bits_unaligned_b32_be" time="0.000">
+        <testcase classname="TestBitsUnalignedB32Be" name="TestBitsUnalignedB32Be.test_bits_unaligned_b32_be" time="0.002">
+            <failure type="spec/lua/test_bits_unaligned_b32_be.lua:12: expected: true, actual: 1">
+                <![CDATA[stack traceback:
+	spec/lua/test_bits_unaligned_b32_be.lua:12: in upvalue 'TestBitsUnalignedB32Be.test_bits_unaligned_b32_be']]></failure>
         </testcase>
-        <testcase classname="TestBitsUnalignedB32Le" name="TestBitsUnalignedB32Le.test_bits_unaligned_b32_le" time="0.000">
+        <testcase classname="TestBitsUnalignedB32Le" name="TestBitsUnalignedB32Le.test_bits_unaligned_b32_le" time="0.002">
+            <failure type="spec/lua/test_bits_unaligned_b32_le.lua:12: expected: false, actual: 0">
+                <![CDATA[stack traceback:
+	spec/lua/test_bits_unaligned_b32_le.lua:12: in upvalue 'TestBitsUnalignedB32Le.test_bits_unaligned_b32_le']]></failure>
         </testcase>
-        <testcase classname="TestBitsUnalignedB64Be" name="TestBitsUnalignedB64Be.test_bits_unaligned_b64_be" time="0.000">
+        <testcase classname="TestBitsUnalignedB64Be" name="TestBitsUnalignedB64Be.test_bits_unaligned_b64_be" time="0.002">
+            <failure type="spec/lua/test_bits_unaligned_b64_be.lua:12: expected: true, actual: 1">
+                <![CDATA[stack traceback:
+	spec/lua/test_bits_unaligned_b64_be.lua:12: in upvalue 'TestBitsUnalignedB64Be.test_bits_unaligned_b64_be']]></failure>
         </testcase>
-        <testcase classname="TestBitsUnalignedB64Le" name="TestBitsUnalignedB64Le.test_bits_unaligned_b64_le" time="0.000">
+        <testcase classname="TestBitsUnalignedB64Le" name="TestBitsUnalignedB64Le.test_bits_unaligned_b64_le" time="0.002">
+            <failure type="spec/lua/test_bits_unaligned_b64_le.lua:12: expected: false, actual: 0">
+                <![CDATA[stack traceback:
+	spec/lua/test_bits_unaligned_b64_le.lua:12: in upvalue 'TestBitsUnalignedB64Le.test_bits_unaligned_b64_le']]></failure>
         </testcase>
         <testcase classname="TestBufferedStruct" name="TestBufferedStruct.test_buffered_struct" time="0.000">
         </testcase>
@@ -49,7 +73,10 @@
         </testcase>
         <testcase classname="TestCastToTop" name="TestCastToTop.test_cast_to_top" time="0.000">
         </testcase>
-        <testcase classname="TestCombineBool" name="TestCombineBool.test_combine_bool" time="0.000">
+        <testcase classname="TestCombineBool" name="TestCombineBool.test_combine_bool" time="0.001">
+            <failure type="spec/lua/test_combine_bool.lua:12: expected: true, actual: 1">
+                <![CDATA[stack traceback:
+	spec/lua/test_combine_bool.lua:12: in upvalue 'TestCombineBool.test_combine_bool']]></failure>
         </testcase>
         <testcase classname="TestCombineBytes" name="TestCombineBytes.test_combine_bytes" time="0.000">
         </testcase>
@@ -144,22 +171,22 @@
         </testcase>
         <testcase classname="TestExprBytesCmp" name="TestExprBytesCmp.test_expr_bytes_cmp" time="0.000">
         </testcase>
-        <testcase classname="TestExprBytesLiteral" name="TestExprBytesLiteral.test_expr_bytes_literal" time="0.015">
-            <failure type="spec/lua/run_test_suite.lua:18: spec/lua/test_expr_bytes_literal.lua:5: module &apos;expr_bytes_literal&apos; not found:
-	no field package.preload[&apos;expr_bytes_literal&apos;]
-	no file &apos;../runtime/lua/expr_bytes_literal.lua&apos;
-	no file &apos;spec/lua/expr_bytes_literal.lua&apos;
-	no file &apos;spec/lua/extra/expr_bytes_literal.lua&apos;
-	no file &apos;compiled/lua/expr_bytes_literal.lua&apos;
-	no file &apos;/home/travis/build/kaitai-io/ci_targets/lua_install/share/lua/5.3/expr_bytes_literal.lua&apos;
-	no file &apos;/home/travis/build/kaitai-io/ci_targets/lua_install/share/lua/5.3/expr_bytes_literal/init.lua&apos;
-	no file &apos;./expr_bytes_literal.lua&apos;
-	no file &apos;./expr_bytes_literal/init.lua&apos;
-	no file &apos;/home/travis/build/kaitai-io/ci_targets/lua_install/lib/lua/5.3/expr_bytes_literal.so&apos;
+        <testcase classname="TestExprBytesNonLiteral" name="TestExprBytesNonLiteral.test_expr_bytes_non_literal" time="0.015">
+            <failure type="spec/lua/run_test_suite.lua:18: spec/lua/test_expr_bytes_non_literal.lua:5: module &apos;expr_bytes_non_literal&apos; not found:
+	no field package.preload[&apos;expr_bytes_non_literal&apos;]
+	no file &apos;../runtime/lua/expr_bytes_non_literal.lua&apos;
+	no file &apos;spec/lua/expr_bytes_non_literal.lua&apos;
+	no file &apos;spec/lua/extra/expr_bytes_non_literal.lua&apos;
+	no file &apos;compiled/lua/expr_bytes_non_literal.lua&apos;
+	no file &apos;/home/travis/build/kaitai-io/ci_targets/lua_install/share/lua/5.3/expr_bytes_non_literal.lua&apos;
+	no file &apos;/home/travis/build/kaitai-io/ci_targets/lua_install/share/lua/5.3/expr_bytes_non_literal/init.lua&apos;
+	no file &apos;./expr_bytes_non_literal.lua&apos;
+	no file &apos;./expr_bytes_non_literal/init.lua&apos;
+	no file &apos;/home/travis/build/kaitai-io/ci_targets/lua_install/lib/lua/5.3/expr_bytes_non_literal.so&apos;
 	no file &apos;/home/travis/build/kaitai-io/ci_targets/lua_install/lib/lua/5.3/loadall.so&apos;
-	no file &apos;./expr_bytes_literal.so&apos;">
+	no file &apos;./expr_bytes_non_literal.so&apos;">
                 <![CDATA[stack traceback:
-	spec/lua/run_test_suite.lua:18: in upvalue 'TestExprBytesLiteral.test_expr_bytes_literal']]></failure>
+	spec/lua/run_test_suite.lua:18: in upvalue 'TestExprBytesNonLiteral.test_expr_bytes_non_literal']]></failure>
         </testcase>
         <testcase classname="TestExprBytesOps" name="TestExprBytesOps.test_expr_bytes_ops" time="0.000">
         </testcase>
@@ -187,7 +214,7 @@
         </testcase>
         <testcase classname="TestExprSizeofValueSized" name="TestExprSizeofValueSized.test_expr_sizeof_value_sized" time="0.000">
         </testcase>
-        <testcase classname="TestExprStrEncodings" name="TestExprStrEncodings.test_expr_str_encodings" time="0.002">
+        <testcase classname="TestExprStrEncodings" name="TestExprStrEncodings.test_expr_str_encodings" time="0.003">
             <error type="../runtime/lua/string_decode.lua:42: Encoding SJIS not supported">
                 <![CDATA[stack traceback:
 	../runtime/lua/string_decode.lua:42: in function 'string_decode.decode'
@@ -239,7 +266,7 @@
         </testcase>
         <testcase classname="TestIndexToParamUntil" name="TestIndexToParamUntil.test_index_to_param_until" time="0.000">
         </testcase>
-        <testcase classname="TestInstanceIoUser" name="TestInstanceIoUser.test_instance_io_user" time="0.000">
+        <testcase classname="TestInstanceIoUser" name="TestInstanceIoUser.test_instance_io_user" time="0.001">
         </testcase>
         <testcase classname="TestInstanceStd" name="TestInstanceStd.test_instance_std" time="0.000">
         </testcase>
@@ -322,9 +349,9 @@
         <testcase classname="TestParamsPassArrayUsertype" name="TestParamsPassArrayUsertype.test_params_pass_array_usertype" time="0.000">
         </testcase>
         <testcase classname="TestParamsPassBool" name="TestParamsPassBool.test_params_pass_bool" time="0.002">
-            <failure type="spec/lua/test_params_pass_bool.lua:16: expected: false, actual: 0">
+            <failure type="spec/lua/test_params_pass_bool.lua:12: expected: false, actual: 0">
                 <![CDATA[stack traceback:
-	spec/lua/test_params_pass_bool.lua:16: in upvalue 'TestParamsPassBool.test_params_pass_bool']]></failure>
+	spec/lua/test_params_pass_bool.lua:12: in upvalue 'TestParamsPassBool.test_params_pass_bool']]></failure>
         </testcase>
         <testcase classname="TestParamsPassStruct" name="TestParamsPassStruct.test_params_pass_struct" time="0.000">
         </testcase>
@@ -474,7 +501,10 @@
         </testcase>
         <testcase classname="TestTermU1Val" name="TestTermU1Val.test_term_u1_val" time="0.000">
         </testcase>
-        <testcase classname="TestTsPacketHeader" name="TestTsPacketHeader.test_ts_packet_header" time="0.000">
+        <testcase classname="TestTsPacketHeader" name="TestTsPacketHeader.test_ts_packet_header" time="0.001">
+            <failure type="spec/lua/test_ts_packet_header.lua:13: expected: false, actual: 0">
+                <![CDATA[stack traceback:
+	spec/lua/test_ts_packet_header.lua:13: in upvalue 'TestTsPacketHeader.test_ts_packet_header']]></failure>
         </testcase>
         <testcase classname="TestTypeIntUnaryOp" name="TestTypeIntUnaryOp.test_type_int_unary_op" time="0.000">
         </testcase>
@@ -486,7 +516,7 @@
         </testcase>
         <testcase classname="TestUserType" name="TestUserType.test_user_type" time="0.000">
         </testcase>
-        <testcase classname="TestValidEqStrEncodings" name="TestValidEqStrEncodings.test_valid_eq_str_encodings" time="0.003">
+        <testcase classname="TestValidEqStrEncodings" name="TestValidEqStrEncodings.test_valid_eq_str_encodings" time="0.002">
             <error type="../runtime/lua/string_decode.lua:42: Encoding SJIS not supported">
                 <![CDATA[stack traceback:
 	../runtime/lua/string_decode.lua:42: in function 'string_decode.decode'
@@ -534,7 +564,7 @@
         </testcase>
         <testcase classname="TestYamlInts" name="TestYamlInts.test_yaml_ints" time="0.000">
         </testcase>
-        <testcase classname="TestZlibSurrounded" name="TestZlibSurrounded.test_zlib_surrounded" time="0.002">
+        <testcase classname="TestZlibSurrounded" name="TestZlibSurrounded.test_zlib_surrounded" time="0.001">
         </testcase>
         <testcase classname="TestZlibWithHeader78" name="TestZlibWithHeader78.test_zlib_with_header_78" time="0.001">
         </testcase>
