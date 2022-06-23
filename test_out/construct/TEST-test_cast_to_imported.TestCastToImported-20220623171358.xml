@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="1" failures="0" file="test_cast_to_imported.py" name="test_cast_to_imported.TestCastToImported-20220623171358" skipped="0" tests="1" time="0.001" timestamp="2022-06-23T17:13:58">
+	<testcase classname="test_cast_to_imported.TestCastToImported" file="spec/construct/test_cast_to_imported.py" line="8" name="test_cast_to_imported" time="0.001" timestamp="2022-06-23T17:13:58">
+		<error message="global name 'hello_world' is not defined" type="NameError">
+<![CDATA[Traceback (most recent call last):
+  File "/home/travis/build/kaitai-io/ci_targets/tests/spec/construct/test_cast_to_imported.py", line 9, in test_cast_to_imported
+    r = _schema.parse_file('src/fixed_struct.bin')
+  File "/home/travis/virtualenv/python2.7.15/lib/python2.7/site-packages/construct/core.py", line 309, in parse_file
+    return self.parse_stream(f, **contextkw)
+  File "/home/travis/virtualenv/python2.7.15/lib/python2.7/site-packages/construct/core.py", line 300, in parse_stream
+    return self._parsereport(stream, context, "(parsing)")
+  File "/home/travis/virtualenv/python2.7.15/lib/python2.7/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python2.7.15/lib/python2.7/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python2.7.15/lib/python2.7/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python2.7.15/lib/python2.7/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python2.7.15/lib/python2.7/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python2.7.15/lib/python2.7/site-packages/construct/core.py", line 5534, in _parse
+    sc = self.subconfunc()
+  File "/home/travis/build/kaitai-io/ci_targets/tests/compiled/construct/cast_to_imported.py", line 5, in <lambda>
+    'one' / LazyBound(lambda: hello_world),
+NameError: global name 'hello_world' is not defined
+]]>		</error>
+		<system-out>
+<![CDATA[]]>		</system-out>
+		<system-err>
+<![CDATA[]]>		</system-err>
+	</testcase>
+</testsuite>
