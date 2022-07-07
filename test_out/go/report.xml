@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites tests="196" failures="15">
-	<testsuite name="github.com/kaitai-io/ci_targets/tests/spec/go" tests="196" failures="15" errors="0" hostname="travis-job-472ba516-0ee9-4249-9012-dfa2b6bf5ff8" time="0.040" timestamp="2022-06-23T17:30:54Z">
+	<testsuite name="github.com/kaitai-io/ci_targets/tests/spec/go" tests="196" failures="15" errors="0" hostname="travis-job-e00644de-c1e6-4048-90a2-e5645fc1b662" time="0.038" timestamp="2022-07-07T22:59:01Z">
 		<testcase name="TestBcdUserTypeBe" classname="github.com/kaitai-io/ci_targets/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestBcdUserTypeLe" classname="github.com/kaitai-io/ci_targets/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestBitsByteAligned" classname="github.com/kaitai-io/ci_targets/tests/spec/go" time="0.000"></testcase>
@@ -78,13 +78,13 @@
 		<testcase name="TestExprIfIntOps" classname="github.com/kaitai-io/ci_targets/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestExprIntDiv" classname="github.com/kaitai-io/ci_targets/tests/spec/go" time="0.000">
 			<failure message="Failed"><![CDATA[expr_int_div_test.go:43: 
-    	Error Trace:	expr_int_div_test.go:43
+    	Error Trace:	/home/travis/gopath/src/github.com/kaitai-io/ci_targets/tests/spec/go/expr_int_div_test.go:43
     	Error:      	Not equal: 
     	            	expected: -757
     	            	actual  : -756
     	Test:       	TestExprIntDiv
 expr_int_div_test.go:53: 
-    	Error Trace:	expr_int_div_test.go:53
+    	Error Trace:	/home/travis/gopath/src/github.com/kaitai-io/ci_targets/tests/spec/go/expr_int_div_test.go:53
     	Error:      	Not equal: 
     	            	expected: -4073
     	            	actual  : -4072
@@ -92,7 +92,7 @@ expr_int_div_test.go:53:
 		</testcase>
 		<testcase name="TestExprIoEof" classname="github.com/kaitai-io/ci_targets/tests/spec/go" time="0.000">
 			<failure message="Failed"><![CDATA[expr_io_eof_test.go:33: 
-    	Error Trace:	expr_io_eof_test.go:33
+    	Error Trace:	/home/travis/gopath/src/github.com/kaitai-io/ci_targets/tests/spec/go/expr_io_eof_test.go:33
     	Error:      	Expected nil, but got: 0x0
     	Test:       	TestExprIoEof]]></failure>
 		</testcase>
@@ -111,18 +111,18 @@ expr_int_div_test.go:53:
 		<testcase name="TestHelloWorld" classname="github.com/kaitai-io/ci_targets/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestIfInstances" classname="github.com/kaitai-io/ci_targets/tests/spec/go" time="0.000">
 			<failure message="Failed"><![CDATA[if_instances_test.go:36: 
-    	Error Trace:	if_instances_test.go:36
+    	Error Trace:	/home/travis/gopath/src/github.com/kaitai-io/ci_targets/tests/spec/go/if_instances_test.go:36
     	Error:      	Expected nil, but got: 0x0
     	Test:       	TestIfInstances]]></failure>
 		</testcase>
 		<testcase name="TestIfStruct" classname="github.com/kaitai-io/ci_targets/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestIfValues" classname="github.com/kaitai-io/ci_targets/tests/spec/go" time="0.000">
 			<failure message="Failed"><![CDATA[if_values_test.go:43: 
-    	Error Trace:	if_values_test.go:43
+    	Error Trace:	/home/travis/gopath/src/github.com/kaitai-io/ci_targets/tests/spec/go/if_values_test.go:43
     	Error:      	Expected nil, but got: 0
     	Test:       	TestIfValues
 if_values_test.go:49: 
-    	Error Trace:	if_values_test.go:49
+    	Error Trace:	/home/travis/gopath/src/github.com/kaitai-io/ci_targets/tests/spec/go/if_values_test.go:49
     	Error:      	Expected nil, but got: 0
     	Test:       	TestIfValues]]></failure>
 		</testcase>
@@ -159,31 +159,31 @@ if_values_test.go:49:
 		<testcase name="TestNestedTypes" classname="github.com/kaitai-io/ci_targets/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestNonStandard" classname="github.com/kaitai-io/ci_targets/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestOpaqueExternalType02Parent" classname="github.com/kaitai-io/ci_targets/tests/spec/go" time="0.000">
-			<failure message="Failed"><![CDATA[goroutine 136 [running]:
+			<failure message="Failed"><![CDATA[goroutine 124 [running]:
 runtime/debug.Stack()
-/home/travis/.gimme/versions/go1.18.linux.amd64/src/runtime/debug/stack.go:24 +0x65
+/home/travis/.gimme/versions/go1.18.3.linux.amd64/src/runtime/debug/stack.go:24 +0x65
 runtime/debug.PrintStack()
-/home/travis/.gimme/versions/go1.18.linux.amd64/src/runtime/debug/stack.go:16 +0x19
+/home/travis/.gimme/versions/go1.18.3.linux.amd64/src/runtime/debug/stack.go:16 +0x19
 github.com/kaitai-io/ci_targets/tests/spec/go.TestOpaqueExternalType02Parent.func1()
 /home/travis/gopath/src/github.com/kaitai-io/ci_targets/tests/spec/go/opaque_external_type_02_parent_test.go:15 +0x3f
-panic({0x63aaa0, 0x84ee40})
-/home/travis/.gimme/versions/go1.18.linux.amd64/src/runtime/panic.go:838 +0x207
+panic({0x63ba20, 0x850e80})
+/home/travis/.gimme/versions/go1.18.3.linux.amd64/src/runtime/panic.go:838 +0x207
 test_formats.(*OpaqueExternalType02Child).SomeMethod(...)
 /home/travis/gopath/src/github.com/kaitai-io/ci_targets/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:46
-test_formats.(*OpaqueExternalType02Child_OpaqueExternalType02ChildChild).Read(0xc000192540?, 0xc0001865e0?, 0x3?, 0x66ee20?)
+test_formats.(*OpaqueExternalType02Child_OpaqueExternalType02ChildChild).Read(0xc000166540?, 0xc0001507a0?, 0x3?, 0x66fda0?)
 /home/travis/gopath/src/github.com/kaitai-io/ci_targets/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:69 +0x5a
-test_formats.(*OpaqueExternalType02Child).Read(0xc000080a00, 0xc000046688?, {0x6359a0?, 0xc0000e4a80?}, 0x6598c0?)
+test_formats.(*OpaqueExternalType02Child).Read(0xc000012a50, 0xc00004c688?, {0x636920?, 0xc000068aa0?}, 0x65a840?)
 /home/travis/gopath/src/github.com/kaitai-io/ci_targets/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:38 +0x13c
-test_formats.(*OpaqueExternalType02Parent_ParentObj).Read(0xc0000e4a80, 0x40ec07?, 0x28?, 0x659800?)
+test_formats.(*OpaqueExternalType02Parent_ParentObj).Read(0xc000068aa0, 0x40ec07?, 0x28?, 0x65a780?)
 /home/travis/gopath/src/github.com/kaitai-io/ci_targets/tests/compiled/go/src/test_formats/opaque_external_type_02_parent.go:48 +0x85
-test_formats.(*OpaqueExternalType02Parent).Read(0xc000192570, 0x17?, {0x635940?, 0xc000192570?}, 0xf?)
+test_formats.(*OpaqueExternalType02Parent).Read(0xc000166570, 0x17?, {0x6368c0?, 0xc000166570?}, 0xf?)
 /home/travis/gopath/src/github.com/kaitai-io/ci_targets/tests/compiled/go/src/test_formats/opaque_external_type_02_parent.go:24 +0xa5
-github.com/kaitai-io/ci_targets/tests/spec/go.TestOpaqueExternalType02Parent(0xc0001909c0)
+github.com/kaitai-io/ci_targets/tests/spec/go.TestOpaqueExternalType02Parent(0xc000168340)
 /home/travis/gopath/src/github.com/kaitai-io/ci_targets/tests/spec/go/opaque_external_type_02_parent_test.go:25 +0x12d
-testing.tRunner(0xc0001909c0, 0x69b768)
-/home/travis/.gimme/versions/go1.18.linux.amd64/src/testing/testing.go:1439 +0x102
+testing.tRunner(0xc000168340, 0x69c708)
+/home/travis/.gimme/versions/go1.18.3.linux.amd64/src/testing/testing.go:1439 +0x102
 created by testing.(*T).Run
-/home/travis/.gimme/versions/go1.18.linux.amd64/src/testing/testing.go:1486 +0x35f
+/home/travis/.gimme/versions/go1.18.3.linux.amd64/src/testing/testing.go:1486 +0x35f
 opaque_external_type_02_parent_test.go:16: unexpected panic: runtime error: invalid memory address or nil pointer dereference]]></failure>
 		</testcase>
 		<testcase name="TestOpaqueExternalType" classname="github.com/kaitai-io/ci_targets/tests/spec/go" time="0.000"></testcase>
@@ -199,7 +199,7 @@ opaque_external_type_02_parent_test.go:16: unexpected panic: runtime error: inva
 		<testcase name="TestPositionAbs" classname="github.com/kaitai-io/ci_targets/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestPositionInSeq" classname="github.com/kaitai-io/ci_targets/tests/spec/go" time="0.000">
 			<failure message="Failed"><![CDATA[position_in_seq_test.go:32: 
-    	Error Trace:	position_in_seq_test.go:32
+    	Error Trace:	/home/travis/gopath/src/github.com/kaitai-io/ci_targets/tests/spec/go/position_in_seq_test.go:32
     	Error:      	Not equal: 
     	            	expected: []int([]int{1, 2, 3})
     	            	actual  : []uint8([]byte{0x1, 0x2, 0x3})
@@ -211,7 +211,7 @@ opaque_external_type_02_parent_test.go:16: unexpected panic: runtime error: inva
 		<testcase name="TestProcessCoerceUsertype2" classname="github.com/kaitai-io/ci_targets/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestProcessCustomNoArgs" classname="github.com/kaitai-io/ci_targets/tests/spec/go" time="0.000">
 			<failure message="Failed"><![CDATA[process_custom_no_args_test.go:32: 
-    	Error Trace:	process_custom_no_args_test.go:32
+    	Error Trace:	/home/travis/gopath/src/github.com/kaitai-io/ci_targets/tests/spec/go/process_custom_no_args_test.go:32
     	Error:      	Not equal: 
     	            	expected: []byte{0x5f, 0x9, 0xac, 0x8d, 0x8d, 0xed, 0x5f}
     	            	actual  : []byte{0x9, 0xac, 0x8d, 0x8d, 0xed}
@@ -229,7 +229,7 @@ opaque_external_type_02_parent_test.go:16: unexpected panic: runtime error: inva
 		</testcase>
 		<testcase name="TestProcessCustom" classname="github.com/kaitai-io/ci_targets/tests/spec/go" time="0.000">
 			<failure message="Failed"><![CDATA[process_custom_test.go:32: 
-    	Error Trace:	process_custom_test.go:32
+    	Error Trace:	/home/travis/gopath/src/github.com/kaitai-io/ci_targets/tests/spec/go/process_custom_test.go:32
     	Error:      	Not equal: 
     	            	expected: []byte{0x10, 0xb3, 0x94, 0x94, 0xf4}
     	            	actual  : []byte{0x9, 0xac, 0x8d, 0x8d, 0xed}
@@ -244,7 +244,7 @@ opaque_external_type_02_parent_test.go:16: unexpected panic: runtime error: inva
     	            	 }
     	Test:       	TestProcessCustom
 process_custom_test.go:33: 
-    	Error Trace:	process_custom_test.go:33
+    	Error Trace:	/home/travis/gopath/src/github.com/kaitai-io/ci_targets/tests/spec/go/process_custom_test.go:33
     	Error:      	Not equal: 
     	            	expected: []byte{0x5f, 0xba, 0x7b, 0x93, 0x63, 0x23, 0x5f}
     	            	actual  : []byte{0xba, 0x7b, 0x93, 0x63, 0x23}
@@ -260,7 +260,7 @@ process_custom_test.go:33:
     	            	 }
     	Test:       	TestProcessCustom
 process_custom_test.go:34: 
-    	Error Trace:	process_custom_test.go:34
+    	Error Trace:	/home/travis/gopath/src/github.com/kaitai-io/ci_targets/tests/spec/go/process_custom_test.go:34
     	Error:      	Not equal: 
     	            	expected: []byte{0x29, 0x33, 0xb1, 0x38, 0xb1}
     	            	actual  : []byte{0x2a, 0x34, 0xb2, 0x39, 0xb2}
@@ -287,7 +287,7 @@ process_custom_test.go:34:
 		<testcase name="TestRepeatEosStruct" classname="github.com/kaitai-io/ci_targets/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestRepeatEosU4" classname="github.com/kaitai-io/ci_targets/tests/spec/go" time="0.000">
 			<failure message="Failed"><![CDATA[repeat_eos_u4_test.go:32: 
-    	Error Trace:	repeat_eos_u4_test.go:32
+    	Error Trace:	/home/travis/gopath/src/github.com/kaitai-io/ci_targets/tests/spec/go/repeat_eos_u4_test.go:32
     	Error:      	Not equal: 
     	            	expected: []int([]int{0, 66, 66, 2069})
     	            	actual  : []uint32([]uint32{0x0, 0x42, 0x42, 0x815})
@@ -299,37 +299,37 @@ process_custom_test.go:34:
 		<testcase name="TestRepeatUntilCalcArrayType" classname="github.com/kaitai-io/ci_targets/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestRepeatUntilComplex" classname="github.com/kaitai-io/ci_targets/tests/spec/go" time="0.000">
 			<failure message="Failed"><![CDATA[repeat_until_complex_test.go:34: 
-    	Error Trace:	repeat_until_complex_test.go:34
+    	Error Trace:	/home/travis/gopath/src/github.com/kaitai-io/ci_targets/tests/spec/go/repeat_until_complex_test.go:34
     	Error:      	Not equal: 
     	            	expected: []int([]int{1, 2, 3, 4})
     	            	actual  : []uint8([]byte{0x1, 0x2, 0x3, 0x4})
     	Test:       	TestRepeatUntilComplex
 repeat_until_complex_test.go:36: 
-    	Error Trace:	repeat_until_complex_test.go:36
+    	Error Trace:	/home/travis/gopath/src/github.com/kaitai-io/ci_targets/tests/spec/go/repeat_until_complex_test.go:36
     	Error:      	Not equal: 
     	            	expected: []int([]int{1, 2})
     	            	actual  : []uint8([]byte{0x1, 0x2})
     	Test:       	TestRepeatUntilComplex
 repeat_until_complex_test.go:40: 
-    	Error Trace:	repeat_until_complex_test.go:40
+    	Error Trace:	/home/travis/gopath/src/github.com/kaitai-io/ci_targets/tests/spec/go/repeat_until_complex_test.go:40
     	Error:      	Not equal: 
     	            	expected: []int([]int{1, 2, 3, 4, 5, 6})
     	            	actual  : []uint16([]uint16{0x1, 0x2, 0x3, 0x4, 0x5, 0x6})
     	Test:       	TestRepeatUntilComplex
 repeat_until_complex_test.go:42: 
-    	Error Trace:	repeat_until_complex_test.go:42
+    	Error Trace:	/home/travis/gopath/src/github.com/kaitai-io/ci_targets/tests/spec/go/repeat_until_complex_test.go:42
     	Error:      	Not equal: 
     	            	expected: []int([]int{1, 2, 3})
     	            	actual  : []uint16([]uint16{0x1, 0x2, 0x3})
     	Test:       	TestRepeatUntilComplex
 repeat_until_complex_test.go:44: 
-    	Error Trace:	repeat_until_complex_test.go:44
+    	Error Trace:	/home/travis/gopath/src/github.com/kaitai-io/ci_targets/tests/spec/go/repeat_until_complex_test.go:44
     	Error:      	Not equal: 
     	            	expected: []int([]int{1, 2, 3, 4})
     	            	actual  : []uint16([]uint16{0x1, 0x2, 0x3, 0x4})
     	Test:       	TestRepeatUntilComplex
 repeat_until_complex_test.go:46: 
-    	Error Trace:	repeat_until_complex_test.go:46
+    	Error Trace:	/home/travis/gopath/src/github.com/kaitai-io/ci_targets/tests/spec/go/repeat_until_complex_test.go:46
     	Error:      	Not equal: 
     	            	expected: []int([]int{102, 111, 111, 98, 97, 114, 0})
     	            	actual  : []uint8([]byte{0x66, 0x6f, 0x6f, 0x62, 0x61, 0x72, 0x0})
@@ -337,7 +337,7 @@ repeat_until_complex_test.go:46:
 		</testcase>
 		<testcase name="TestRepeatUntilS4" classname="github.com/kaitai-io/ci_targets/tests/spec/go" time="0.000">
 			<failure message="Failed"><![CDATA[repeat_until_s4_test.go:32: 
-    	Error Trace:	repeat_until_s4_test.go:32
+    	Error Trace:	/home/travis/gopath/src/github.com/kaitai-io/ci_targets/tests/spec/go/repeat_until_s4_test.go:32
     	Error:      	Not equal: 
     	            	expected: []int([]int{66, 4919, -251658241, -1})
     	            	actual  : []int32([]int32{66, 4919, -251658241, -1})
