@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites tests="196" failures="15">
-	<testsuite name="github.com/kaitai-io/ci_targets/tests/spec/go" tests="196" failures="15" errors="0" hostname="travis-job-bd3b2824-09a6-4d78-8ffd-1dbadb7db7d9" time="0.041" timestamp="2022-07-28T00:14:46Z">
+	<testsuite name="github.com/kaitai-io/ci_targets/tests/spec/go" tests="196" failures="15" errors="0" hostname="travis-job-6841e019-42a0-4db4-9706-00449148d52a" time="0.055" timestamp="2022-07-28T09:45:34Z">
 		<testcase name="TestBcdUserTypeBe" classname="github.com/kaitai-io/ci_targets/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestBcdUserTypeLe" classname="github.com/kaitai-io/ci_targets/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestBitsByteAligned" classname="github.com/kaitai-io/ci_targets/tests/spec/go" time="0.000"></testcase>
@@ -64,7 +64,7 @@
 		<testcase name="TestEosExceptionU4" classname="github.com/kaitai-io/ci_targets/tests/spec/go" time="0.000">
 			<failure message="Failed"><![CDATA[eos_exception_u4_test.go:31: expected kaitai.EndOfStreamError, got <nil>]]></failure>
 		</testcase>
-		<testcase name="TestExpr0" classname="github.com/kaitai-io/ci_targets/tests/spec/go" time="0.010"></testcase>
+		<testcase name="TestExpr0" classname="github.com/kaitai-io/ci_targets/tests/spec/go" time="0.020"></testcase>
 		<testcase name="TestExpr1" classname="github.com/kaitai-io/ci_targets/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestExpr2" classname="github.com/kaitai-io/ci_targets/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestExpr3" classname="github.com/kaitai-io/ci_targets/tests/spec/go" time="0.000"></testcase>
@@ -159,7 +159,7 @@ if_values_test.go:49:
 		<testcase name="TestNestedTypes" classname="github.com/kaitai-io/ci_targets/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestNonStandard" classname="github.com/kaitai-io/ci_targets/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestOpaqueExternalType02Parent" classname="github.com/kaitai-io/ci_targets/tests/spec/go" time="0.000">
-			<failure message="Failed"><![CDATA[goroutine 124 [running]:
+			<failure message="Failed"><![CDATA[goroutine 136 [running]:
 runtime/debug.Stack()
 /home/travis/.gimme/versions/go1.18.4.linux.amd64/src/runtime/debug/stack.go:24 +0x65
 runtime/debug.PrintStack()
@@ -170,24 +170,24 @@ panic({0x63ba20, 0x850e80})
 /home/travis/.gimme/versions/go1.18.4.linux.amd64/src/runtime/panic.go:838 +0x207
 test_formats.(*OpaqueExternalType02Child).SomeMethod(...)
 /home/travis/gopath/src/github.com/kaitai-io/ci_targets/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:46
-test_formats.(*OpaqueExternalType02Child_OpaqueExternalType02ChildChild).Read(0xc00015e540?, 0xc0001487a0?, 0x3?, 0x66fda0?)
+test_formats.(*OpaqueExternalType02Child_OpaqueExternalType02ChildChild).Read(0xc000192540?, 0xc0001845e0?, 0x3?, 0x66fda0?)
 /home/travis/gopath/src/github.com/kaitai-io/ci_targets/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:69 +0x5a
-test_formats.(*OpaqueExternalType02Child).Read(0xc000012a50, 0xc00004c688?, {0x636920?, 0xc000068aa0?}, 0x65a840?)
+test_formats.(*OpaqueExternalType02Child).Read(0xc000080a00, 0xc000046688?, {0x636920?, 0xc0000e4a80?}, 0x65a840?)
 /home/travis/gopath/src/github.com/kaitai-io/ci_targets/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:38 +0x13c
-test_formats.(*OpaqueExternalType02Parent_ParentObj).Read(0xc000068aa0, 0x40ebe7?, 0x28?, 0x65a780?)
+test_formats.(*OpaqueExternalType02Parent_ParentObj).Read(0xc0000e4a80, 0x40ebe7?, 0x28?, 0x65a780?)
 /home/travis/gopath/src/github.com/kaitai-io/ci_targets/tests/compiled/go/src/test_formats/opaque_external_type_02_parent.go:48 +0x85
-test_formats.(*OpaqueExternalType02Parent).Read(0xc00015e570, 0x17?, {0x6368c0?, 0xc00015e570?}, 0xf?)
+test_formats.(*OpaqueExternalType02Parent).Read(0xc000192570, 0x17?, {0x6368c0?, 0xc000192570?}, 0xf?)
 /home/travis/gopath/src/github.com/kaitai-io/ci_targets/tests/compiled/go/src/test_formats/opaque_external_type_02_parent.go:24 +0xa5
-github.com/kaitai-io/ci_targets/tests/spec/go.TestOpaqueExternalType02Parent(0xc000159a00)
+github.com/kaitai-io/ci_targets/tests/spec/go.TestOpaqueExternalType02Parent(0xc000194340)
 /home/travis/gopath/src/github.com/kaitai-io/ci_targets/tests/spec/go/opaque_external_type_02_parent_test.go:25 +0x12d
-testing.tRunner(0xc000159a00, 0x69c708)
+testing.tRunner(0xc000194340, 0x69c708)
 /home/travis/.gimme/versions/go1.18.4.linux.amd64/src/testing/testing.go:1439 +0x102
 created by testing.(*T).Run
 /home/travis/.gimme/versions/go1.18.4.linux.amd64/src/testing/testing.go:1486 +0x35f
 opaque_external_type_02_parent_test.go:16: unexpected panic: runtime error: invalid memory address or nil pointer dereference]]></failure>
 		</testcase>
 		<testcase name="TestOpaqueExternalType" classname="github.com/kaitai-io/ci_targets/tests/spec/go" time="0.000"></testcase>
-		<testcase name="TestOpaqueWithParam" classname="github.com/kaitai-io/ci_targets/tests/spec/go" time="0.010"></testcase>
+		<testcase name="TestOpaqueWithParam" classname="github.com/kaitai-io/ci_targets/tests/spec/go" time="0.020"></testcase>
 		<testcase name="TestParamsCallExtraParens" classname="github.com/kaitai-io/ci_targets/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestParamsCallShort" classname="github.com/kaitai-io/ci_targets/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestParamsDef" classname="github.com/kaitai-io/ci_targets/tests/spec/go" time="0.000"></testcase>
