@@ -117,7 +117,7 @@
 === RUN   TestExpr1
 --- PASS: TestExpr1 (0.00s)
 === RUN   TestExpr2
---- PASS: TestExpr2 (0.03s)
+--- PASS: TestExpr2 (0.02s)
 === RUN   TestExpr3
 --- PASS: TestExpr3 (0.00s)
 === RUN   TestExprArray
@@ -265,28 +265,28 @@
 === RUN   TestNonStandard
 --- PASS: TestNonStandard (0.00s)
 === RUN   TestOpaqueExternalType02Parent
-goroutine 125 [running]:
-runtime/debug.Stack(0x18, 0xc00005bbb8, 0x4870b2)
+goroutine 137 [running]:
+runtime/debug.Stack(0x18, 0xc000056bb8, 0x4870b2)
 	/home/travis/.gimme/versions/go1.13.15.linux.amd64/src/runtime/debug/stack.go:24 +0x9d
 runtime/debug.PrintStack()
 	/home/travis/.gimme/versions/go1.13.15.linux.amd64/src/runtime/debug/stack.go:16 +0x22
-github.com/kaitai-io/ci_targets/tests/spec/go.TestOpaqueExternalType02Parent.func1(0xc00015d700)
+github.com/kaitai-io/ci_targets/tests/spec/go.TestOpaqueExternalType02Parent.func1(0xc00018b700)
 	/home/travis/gopath/src/github.com/kaitai-io/ci_targets/tests/spec/go/opaque_external_type_02_parent_test.go:15 +0x57
 panic(0x7992e0, 0xb02130)
 	/home/travis/.gimme/versions/go1.13.15.linux.amd64/src/runtime/panic.go:679 +0x1b2
 test_formats.(*OpaqueExternalType02Child).SomeMethod(...)
 	/home/travis/gopath/src/github.com/kaitai-io/ci_targets/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:46
-test_formats.(*OpaqueExternalType02Child_OpaqueExternalType02ChildChild).Read(0xc000153890, 0xc000153830, 0xc0000a2820, 0x0, 0xc000162764, 0x3)
+test_formats.(*OpaqueExternalType02Child_OpaqueExternalType02ChildChild).Read(0xc000181890, 0xc000181830, 0xc0000c2820, 0x0, 0xc0001905a4, 0x3)
 	/home/travis/gopath/src/github.com/kaitai-io/ci_targets/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:69 +0x50
-test_formats.(*OpaqueExternalType02Child).Read(0xc0000a2820, 0xc000153830, 0x794740, 0xc00000f720, 0x0, 0x7cfd60, 0x1)
+test_formats.(*OpaqueExternalType02Child).Read(0xc0000c2820, 0xc000181830, 0x794740, 0xc0000a96e0, 0x0, 0x7cfd60, 0x1)
 	/home/travis/gopath/src/github.com/kaitai-io/ci_targets/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:38 +0x18f
-test_formats.(*OpaqueExternalType02Parent_ParentObj).Read(0xc00000f720, 0xc000153830, 0xc000153860, 0xc000153860, 0x7cfca0, 0x1)
+test_formats.(*OpaqueExternalType02Parent_ParentObj).Read(0xc0000a96e0, 0xc000181830, 0xc000181860, 0xc000181860, 0x7cfca0, 0x1)
 	/home/travis/gopath/src/github.com/kaitai-io/ci_targets/tests/compiled/go/src/test_formats/opaque_external_type_02_parent.go:48 +0x9c
-test_formats.(*OpaqueExternalType02Parent).Read(0xc000153860, 0xc000153830, 0x7946e0, 0xc000153860, 0xc000153860, 0x0, 0x0)
+test_formats.(*OpaqueExternalType02Parent).Read(0xc000181860, 0xc000181830, 0x7946e0, 0xc000181860, 0xc000181860, 0x0, 0x0)
 	/home/travis/gopath/src/github.com/kaitai-io/ci_targets/tests/compiled/go/src/test_formats/opaque_external_type_02_parent.go:24 +0xa6
-github.com/kaitai-io/ci_targets/tests/spec/go.TestOpaqueExternalType02Parent(0xc00015d700)
+github.com/kaitai-io/ci_targets/tests/spec/go.TestOpaqueExternalType02Parent(0xc00018b700)
 	/home/travis/gopath/src/github.com/kaitai-io/ci_targets/tests/spec/go/opaque_external_type_02_parent_test.go:25 +0x18d
-testing.tRunner(0xc00015d700, 0x82f630)
+testing.tRunner(0xc00018b700, 0x82f630)
 	/home/travis/.gimme/versions/go1.13.15.linux.amd64/src/testing/testing.go:909 +0xc9
 created by testing.(*T).Run
 	/home/travis/.gimme/versions/go1.13.15.linux.amd64/src/testing/testing.go:960 +0x350
@@ -565,5 +565,5 @@ created by testing.(*T).Run
 === RUN   TestZlibWithHeader78
 --- PASS: TestZlibWithHeader78 (0.00s)
 FAIL
-FAIL	github.com/kaitai-io/ci_targets/tests/spec/go	0.061s
+FAIL	github.com/kaitai-io/ci_targets/tests/spec/go	0.049s
 FAIL
