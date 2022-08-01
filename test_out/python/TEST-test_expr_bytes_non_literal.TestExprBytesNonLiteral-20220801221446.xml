@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="1" failures="0" file="test_expr_bytes_non_literal.py" name="test_expr_bytes_non_literal.TestExprBytesNonLiteral-20220801221446" skipped="0" tests="1" time="0.001" timestamp="2022-08-01T22:14:46">
+	<testcase classname="test_expr_bytes_non_literal.TestExprBytesNonLiteral" file="spec/python/test_expr_bytes_non_literal.py" line="8" name="test_expr_bytes_non_literal" time="0.001" timestamp="2022-08-01T22:14:46">
+		<error message="byte format requires -128 &lt;= number &lt;= 127" type="error">
+<![CDATA[Traceback (most recent call last):
+  File "/home/travis/build/kaitai-io/ci_targets/tests/spec/python/test_expr_bytes_non_literal.py", line 11, in test_expr_bytes_non_literal
+    self.assertEqual(len(r.calc_bytes), 2)
+  File "/home/travis/build/kaitai-io/ci_targets/tests/compiled/python/expr_bytes_non_literal.py", line 27, in calc_bytes
+    self._m_calc_bytes = struct.pack('2b', self.one, self.two)
+error: byte format requires -128 <= number <= 127
+]]>		</error>
+		<system-out>
+<![CDATA[]]>		</system-out>
+		<system-err>
+<![CDATA[]]>		</system-err>
+	</testcase>
+</testsuite>
