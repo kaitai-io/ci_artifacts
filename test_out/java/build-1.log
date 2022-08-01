@@ -1,3 +1,21 @@
+spec/java/src/io/kaitai/struct/spec/TestBufferedStruct.java:15: error: cannot find symbol
+        assertEquals(r._raw_block1(), new byte[] {
+                      ^
+  symbol:   method _raw_block1()
+  location: variable r of type BufferedStruct
+spec/java/src/io/kaitai/struct/spec/TestBufferedStruct.java:26: error: cannot find symbol
+        assertEquals(r._raw_block2(), new byte[] {
+                      ^
+  symbol:   method _raw_block2()
+  location: variable r of type BufferedStruct
+compiled/java/src/io/kaitai/struct/testformats/SwitchRepeatExpr.java:33: error: cannot find symbol
+        this._raw_body = new ArrayList<byte[]>();
+            ^
+  symbol: variable _raw_body
+compiled/java/src/io/kaitai/struct/testformats/RepeatUntilCalcArrayType.java:31: error: cannot find symbol
+        this._raw_records = new ArrayList<byte[]>();
+            ^
+  symbol: variable _raw_records
 compiled/java/src/io/kaitai/struct/testformats/ExprBytesNonLiteral.java:37: error: possible loss of precision
         this.calcBytes = new byte[] { one(), two() };
                                          ^
@@ -8,6 +26,10 @@ compiled/java/src/io/kaitai/struct/testformats/ExprBytesNonLiteral.java:37: erro
                                                 ^
   required: byte
   found:    int
+compiled/java/src/io/kaitai/struct/testformats/SwitchRepeatExprInvalid.java:33: error: cannot find symbol
+        this._raw_body = new ArrayList<byte[]>();
+            ^
+  symbol: variable _raw_body
 compiled/java/src/io/kaitai/struct/testformats/ExprBits.java:56: error: possible loss of precision
         switch (a()) {
                  ^
@@ -23,4 +45,12 @@ compiled/java/src/io/kaitai/struct/testformats/ExprOpsParens.java:97: error: inc
                          ^
   required: int
   found:    String
-5 errors
+compiled/java/src/io/kaitai/struct/testformats/RepeatUntilSized.java:31: error: cannot find symbol
+        this._raw_records = new ArrayList<byte[]>();
+            ^
+  symbol: variable _raw_records
+compiled/java/src/io/kaitai/struct/testformats/InstanceUserArray.java:74: error: cannot find symbol
+            this._raw_userEntries = new ArrayList<byte[]>();
+                ^
+  symbol: variable _raw_userEntries
+12 errors
