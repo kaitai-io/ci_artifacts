@@ -1,10 +1,16 @@
-[  0%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/nav_parent_switch_cast.cpp.o
-/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/nav_parent_switch_cast.cpp:166:71: error: no member named '_parent' in 'kaitai::kstruct'
-    m_flag = static_cast<nav_parent_switch_cast_t::foo_t*>(_parent()->_parent())->flag();
-                                                           ~~~~~~~~~  ^
+[  1%] Building CXX object CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_to_i_class_border_1.cpp.o
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_to_i_class_border_1.cpp:50:21: error: no matching constructor for initialization of 'enum_to_i_class_border_2_t'
+    m_checker = new enum_to_i_class_border_2_t(_root(), m__io);
+                    ^                          ~~~~~~~~~~~~~~
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_to_i_class_border_2.h:18:5: note: candidate constructor not viable: no known conversion from 'enum_to_i_class_border_1_t *' to 'enum_to_i_class_border_2_t::enum_to_i_class_border_1_t *' for 1st argument
+    enum_to_i_class_border_2_t(enum_to_i_class_border_1_t* p_parent, kaitai::kstream* p__io, kaitai::kstruct* p__parent = 0, enum_to_i_class_border_2_t* p__root = 0);
+    ^
+/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_to_i_class_border_2.h:13:7: note: candidate constructor (the implicit copy constructor) not viable: requires 1 argument, but 2 were provided
+class enum_to_i_class_border_2_t : public kaitai::kstruct {
+      ^
 1 error generated.
-CMakeFiles/ks_tests.dir/build.make:5087: recipe for target 'CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/nav_parent_switch_cast.cpp.o' failed
-make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/nav_parent_switch_cast.cpp.o] Error 1
+CMakeFiles/ks_tests.dir/build.make:4779: recipe for target 'CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_to_i_class_border_1.cpp.o' failed
+make[2]: *** [CMakeFiles/ks_tests.dir/home/travis/build/kaitai-io/ci_targets/tests/compiled/cpp_stl_98/enum_to_i_class_border_1.cpp.o] Error 1
 make[2]: Target 'CMakeFiles/ks_tests.dir/build' not remade because of errors.
 CMakeFiles/Makefile2:82: recipe for target 'CMakeFiles/ks_tests.dir/all' failed
 make[1]: *** [CMakeFiles/ks_tests.dir/all] Error 2
