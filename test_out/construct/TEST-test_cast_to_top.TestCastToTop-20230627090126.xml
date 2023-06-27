@@ -1,0 +1,1947 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="1" failures="0" file="test_cast_to_top.py" name="test_cast_to_top.TestCastToTop-20230627090126" skipped="0" tests="1" time="0.015" timestamp="2023-06-27T09:01:26">
+	<testcase classname="test_cast_to_top.TestCastToTop" file="spec/construct/test_cast_to_top.py" line="8" name="test_cast_to_top" time="0.015" timestamp="2023-06-27T09:01:26">
+		<error message="maximum recursion depth exceeded while calling a Python object" type="RuntimeError">
+<![CDATA[Traceback (most recent call last):
+  File "/home/travis/build/kaitai-io/ci_targets/tests/spec/construct/test_cast_to_top.py", line 9, in test_cast_to_top
+    r = _schema.parse_file('src/fixed_struct.bin')
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 309, in parse_file
+    return self.parse_stream(f, **contextkw)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 300, in parse_stream
+    return self._parsereport(stream, context, "(parsing)")
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 3988, in _parse
+    obj = self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 5535, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/core.py", line 1976, in _parse
+    obj = Container()
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/lib/containers.py", line 134, in __init__
+    self.__keys_order__ = []
+  File "/home/travis/virtualenv/python3.4.8/lib/python3.4/site-packages/construct/lib/containers.py", line 107, in __setattr__
+    return object.__setattr__(self, name, value)
+RuntimeError: maximum recursion depth exceeded while calling a Python object
+]]>		</error>
+		<system-out>
+<![CDATA[]]>		</system-out>
+		<system-err>
+<![CDATA[]]>		</system-err>
+	</testcase>
+</testsuite>
