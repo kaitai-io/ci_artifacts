@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="test_params_pass_usertype.TestParamsPassUsertype-20230628194709" tests="1" file="test_params_pass_usertype.py" time="0.001" timestamp="2023-06-28T19:47:09" failures="0" errors="1" skipped="0">
+	<testcase classname="test_params_pass_usertype.TestParamsPassUsertype" name="test_params_pass_usertype" time="0.001" timestamp="2023-06-28T19:47:09" file="spec/construct/test_params_pass_usertype.py" line="8">
+		<error type="KeyError" message="'foo'"><![CDATA[Traceback (most recent call last):
+  File "/home/travis/build/kaitai-io/ci_targets/tests/spec/construct/test_params_pass_usertype.py", line 9, in test_params_pass_usertype
+    r = _schema.parse_file('src/position_in_seq.bin')
+  File "/home/travis/virtualenv/python3.10.9/lib/python3.10/site-packages/construct/core.py", line 309, in parse_file
+    return self.parse_stream(f, **contextkw)
+  File "/home/travis/virtualenv/python3.10.9/lib/python3.10/site-packages/construct/core.py", line 300, in parse_stream
+    return self._parsereport(stream, context, "(parsing)")
+  File "/home/travis/virtualenv/python3.10.9/lib/python3.10/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.10.9/lib/python3.10/site-packages/construct/core.py", line 2120, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.10.9/lib/python3.10/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.10.9/lib/python3.10/site-packages/construct/core.py", line 2653, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.10.9/lib/python3.10/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.10.9/lib/python3.10/site-packages/construct/core.py", line 5912, in _parse
+    return sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.10.9/lib/python3.10/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.10.9/lib/python3.10/site-packages/construct/core.py", line 2120, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.10.9/lib/python3.10/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.10.9/lib/python3.10/site-packages/construct/core.py", line 2653, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/home/travis/virtualenv/python3.10.9/lib/python3.10/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/home/travis/virtualenv/python3.10.9/lib/python3.10/site-packages/construct/core.py", line 4829, in _parse
+    length = evaluate(self.length, context)
+  File "/home/travis/virtualenv/python3.10.9/lib/python3.10/site-packages/construct/core.py", line 198, in evaluate
+    return param(context) if callable(param) else param
+  File "/home/travis/virtualenv/python3.10.9/lib/python3.10/site-packages/construct/expr.py", line 188, in __call__
+    return self.__parent(obj)[self.__field]
+  File "/home/travis/virtualenv/python3.10.9/lib/python3.10/site-packages/construct/expr.py", line 188, in __call__
+    return self.__parent(obj)[self.__field]
+KeyError: 'foo'
+]]></error>
+	</testcase>
+</testsuite>
