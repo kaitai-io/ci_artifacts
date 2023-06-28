@@ -1,0 +1,1995 @@
+<html>
+<head>
+<title>TestNG:  all</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>all</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>219/3/0</td>
+</tr><tr>
+<td>Started on:</td><td>Wed Jun 28 16:35:57 UTC 2023</td>
+</tr>
+<tr><td>Total time:</td><td>0 seconds (445 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestExprBytesOps.testExprBytesOps()'><b>testExprBytesOps</b><br>Test class: io.kaitai.struct.spec.TestExprBytesOps</td>
+<td><div><pre>java.lang.AssertionError: expected [255] but found [-1]
+	at io.kaitai.struct.spec.CommonSpec.assertIntEquals(CommonSpec.java:36)
+	at io.kaitai.struct.spec.TestExprBytesOps.testExprBytesOps(TestExprBytesOps.java:17)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace221111433", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace221111433'><pre>java.lang.AssertionError: expected [255] but found [-1]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:389)
+	at org.testng.Assert.assertEquals(Assert.java:399)
+	at io.kaitai.struct.spec.CommonSpec.assertIntEquals(CommonSpec.java:36)
+	at io.kaitai.struct.spec.TestExprBytesOps.testExprBytesOps(TestExprBytesOps.java:17)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.TestNG.privateMain(TestNG.java:1385)
+	at org.testng.TestNG.main(TestNG.java:1354)
+</pre></div></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestExprBytesOps@5c90e579</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestExprIfIntOps.testExprIfIntOps()'><b>testExprIfIntOps</b><br>Test class: io.kaitai.struct.spec.TestExprIfIntOps</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at io.kaitai.struct.spec.CommonSpec.assertIntEquals(CommonSpec.java:48)
+	at io.kaitai.struct.spec.TestExprIfIntOps.testExprIfIntOps(TestExprIfIntOps.java:15)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace596910004", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace596910004'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:305)
+	at org.testng.Assert.assertEquals(Assert.java:315)
+	at io.kaitai.struct.spec.CommonSpec.assertIntEquals(CommonSpec.java:48)
+	at io.kaitai.struct.spec.TestExprIfIntOps.testExprIfIntOps(TestExprIfIntOps.java:15)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.TestNG.privateMain(TestNG.java:1385)
+	at org.testng.TestNG.main(TestNG.java:1354)
+</pre></div></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestExprIfIntOps@6f45df59</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestExprIntDiv.testExprIntDiv()'><b>testExprIntDiv</b><br>Test class: io.kaitai.struct.spec.TestExprIntDiv</td>
+<td><div><pre>java.lang.AssertionError: expected [-757] but found [-756]
+	at io.kaitai.struct.spec.CommonSpec.assertIntEquals(CommonSpec.java:36)
+	at io.kaitai.struct.spec.TestExprIntDiv.testExprIntDiv(TestExprIntDiv.java:17)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace418179060", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace418179060'><pre>java.lang.AssertionError: expected [-757] but found [-756]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:389)
+	at org.testng.Assert.assertEquals(Assert.java:399)
+	at io.kaitai.struct.spec.CommonSpec.assertIntEquals(CommonSpec.java:36)
+	at io.kaitai.struct.spec.TestExprIntDiv.testExprIntDiv(TestExprIntDiv.java:17)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.TestNG.privateMain(TestNG.java:1385)
+	at org.testng.TestNG.main(TestNG.java:1354)
+</pre></div></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestExprIntDiv@3098cf3b</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestBcdUserTypeBe.testBcdUserTypeBe()'><b>testBcdUserTypeBe</b><br>Test class: io.kaitai.struct.spec.TestBcdUserTypeBe</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestBcdUserTypeBe@865dd6</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestBcdUserTypeLe.testBcdUserTypeLe()'><b>testBcdUserTypeLe</b><br>Test class: io.kaitai.struct.spec.TestBcdUserTypeLe</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestBcdUserTypeLe@55b53d44</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestBitsByteAligned.testBitsByteAligned()'><b>testBitsByteAligned</b><br>Test class: io.kaitai.struct.spec.TestBitsByteAligned</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestBitsByteAligned@7530ad9c</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestBitsEnum.testBitsEnum()'><b>testBitsEnum</b><br>Test class: io.kaitai.struct.spec.TestBitsEnum</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestBitsEnum@58ea606c</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestBitsSeqEndianCombo.testBitsSeqEndianCombo()'><b>testBitsSeqEndianCombo</b><br>Test class: io.kaitai.struct.spec.TestBitsSeqEndianCombo</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestBitsSeqEndianCombo@36d585c</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestBitsShiftByB32Le.testBitsShiftByB32Le()'><b>testBitsShiftByB32Le</b><br>Test class: io.kaitai.struct.spec.TestBitsShiftByB32Le</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestBitsShiftByB32Le@36b4fe2a</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestBitsShiftByB64Le.testBitsShiftByB64Le()'><b>testBitsShiftByB64Le</b><br>Test class: io.kaitai.struct.spec.TestBitsShiftByB64Le</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestBitsShiftByB64Le@68267da0</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestBitsSignedResB32Be.testBitsSignedResB32Be()'><b>testBitsSignedResB32Be</b><br>Test class: io.kaitai.struct.spec.TestBitsSignedResB32Be</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestBitsSignedResB32Be@6a2f6f80</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestBitsSignedResB32Le.testBitsSignedResB32Le()'><b>testBitsSignedResB32Le</b><br>Test class: io.kaitai.struct.spec.TestBitsSignedResB32Le</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestBitsSignedResB32Le@1dac5ef</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestBitsSignedShiftB32Le.testBitsSignedShiftB32Le()'><b>testBitsSignedShiftB32Le</b><br>Test class: io.kaitai.struct.spec.TestBitsSignedShiftB32Le</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestBitsSignedShiftB32Le@6a2b953e</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestBitsSignedShiftB64Le.testBitsSignedShiftB64Le()'><b>testBitsSignedShiftB64Le</b><br>Test class: io.kaitai.struct.spec.TestBitsSignedShiftB64Le</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestBitsSignedShiftB64Le@1018bde2</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestBitsSimple.testBitsSimple()'><b>testBitsSimple</b><br>Test class: io.kaitai.struct.spec.TestBitsSimple</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestBitsSimple@2898ac89</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestBitsSimpleLe.testBitsSimpleLe()'><b>testBitsSimpleLe</b><br>Test class: io.kaitai.struct.spec.TestBitsSimpleLe</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestBitsSimpleLe@21b2e768</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestBitsUnalignedB32Be.testBitsUnalignedB32Be()'><b>testBitsUnalignedB32Be</b><br>Test class: io.kaitai.struct.spec.TestBitsUnalignedB32Be</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestBitsUnalignedB32Be@1757cd72</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestBitsUnalignedB32Le.testBitsUnalignedB32Le()'><b>testBitsUnalignedB32Le</b><br>Test class: io.kaitai.struct.spec.TestBitsUnalignedB32Le</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestBitsUnalignedB32Le@2638011</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestBitsUnalignedB64Be.testBitsUnalignedB64Be()'><b>testBitsUnalignedB64Be</b><br>Test class: io.kaitai.struct.spec.TestBitsUnalignedB64Be</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestBitsUnalignedB64Be@776b83cc</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestBitsUnalignedB64Le.testBitsUnalignedB64Le()'><b>testBitsUnalignedB64Le</b><br>Test class: io.kaitai.struct.spec.TestBitsUnalignedB64Le</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestBitsUnalignedB64Le@45b4c3a9</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestBytesPadTerm.testBytesPadTerm()'><b>testBytesPadTerm</b><br>Test class: io.kaitai.struct.spec.TestBytesPadTerm</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestBytesPadTerm@5c671d7f</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestCastNested.testCastNested()'><b>testCastNested</b><br>Test class: io.kaitai.struct.spec.TestCastNested</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestCastNested@2f465398</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestCastToImported.testCastToImported()'><b>testCastToImported</b><br>Test class: io.kaitai.struct.spec.TestCastToImported</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestCastToImported@ba54932</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestCastToTop.testCastToTop()'><b>testCastToTop</b><br>Test class: io.kaitai.struct.spec.TestCastToTop</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestCastToTop@49e5f737</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestCombineBool.testCombineBool()'><b>testCombineBool</b><br>Test class: io.kaitai.struct.spec.TestCombineBool</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestCombineBool@79d8407f</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestCombineBytes.testCombineBytes()'><b>testCombineBytes</b><br>Test class: io.kaitai.struct.spec.TestCombineBytes</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestCombineBytes@d21a74c</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestCombineEnum.testCombineEnum()'><b>testCombineEnum</b><br>Test class: io.kaitai.struct.spec.TestCombineEnum</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestCombineEnum@f2ff811</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestCombineStr.testCombineStr()'><b>testCombineStr</b><br>Test class: io.kaitai.struct.spec.TestCombineStr</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestCombineStr@55740540</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestDebug0.testDebug0()'><b>testDebug0</b><br>Test class: io.kaitai.struct.spec.TestDebug0</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestDebug0@11c9af63</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestDebugArrayUser.testDebugArrayUser()'><b>testDebugArrayUser</b><br>Test class: io.kaitai.struct.spec.TestDebugArrayUser</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestDebugArrayUser@683dbc2c</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestDebugEnumName.testDebugEnumName()'><b>testDebugEnumName</b><br>Test class: io.kaitai.struct.spec.TestDebugEnumName</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestDebugEnumName@2beee7ff</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestDebugSwitchUser.testDebugSwitchUser()'><b>testDebugSwitchUser</b><br>Test class: io.kaitai.struct.spec.TestDebugSwitchUser</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestDebugSwitchUser@3246fb96</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestDefaultBigEndian.testDefaultBigEndian()'><b>testDefaultBigEndian</b><br>Test class: io.kaitai.struct.spec.TestDefaultBigEndian</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestDefaultBigEndian@568ff82</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestDefaultBitEndianMod.testDefaultBitEndianMod()'><b>testDefaultBitEndianMod</b><br>Test class: io.kaitai.struct.spec.TestDefaultBitEndianMod</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestDefaultBitEndianMod@1e178745</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestDefaultEndianExprException.testDefaultEndianExprException()'><b>testDefaultEndianExprException</b><br>Test class: io.kaitai.struct.spec.TestDefaultEndianExprException</td>
+<td><div><pre>io.kaitai.struct.KaitaiStream$UndecidedEndiannessError
+	at io.kaitai.struct.testformats.DefaultEndianExprException$Doc$MainObj._read(DefaultEndianExprException.java:98)
+	at io.kaitai.struct.testformats.DefaultEndianExprException$Doc$MainObj.&lt;init&gt;(DefaultEndianExprException.java:82)
+	at io.kaitai.struct.testformats.DefaultEndianExprException$Doc._read(DefaultEndianExprException.java:62)
+	at io.kaitai.struct.testformats.DefaultEndianExprException$Doc.&lt;init&gt;(DefaultEndianExprException.java:58)
+	at io.kaitai.struct.testformats.DefaultEndianExprException._read(DefaultEndianExprException.java:36)
+	at io.kaitai.struct.testformats.DefaultEndianExprException.&lt;init&gt;(DefaultEndianExprException.java:29)
+	at io.kaitai.struct.testformats.DefaultEndianExprException.&lt;init&gt;(DefaultEndianExprException.java:18)
+	at io.kaitai.struct.testformats.DefaultEndianExprException.fromFile(DefaultEndianExprException.java:14)
+	at io.kaitai.struct.spec.TestDefaultEndianExprException.testDefaultEndianExprException(TestDefaultEndianExprException.java:13)
+... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace951031848", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace951031848'><pre>io.kaitai.struct.KaitaiStream$UndecidedEndiannessError
+	at io.kaitai.struct.testformats.DefaultEndianExprException$Doc$MainObj._read(DefaultEndianExprException.java:98)
+	at io.kaitai.struct.testformats.DefaultEndianExprException$Doc$MainObj.&lt;init&gt;(DefaultEndianExprException.java:82)
+	at io.kaitai.struct.testformats.DefaultEndianExprException$Doc._read(DefaultEndianExprException.java:62)
+	at io.kaitai.struct.testformats.DefaultEndianExprException$Doc.&lt;init&gt;(DefaultEndianExprException.java:58)
+	at io.kaitai.struct.testformats.DefaultEndianExprException._read(DefaultEndianExprException.java:36)
+	at io.kaitai.struct.testformats.DefaultEndianExprException.&lt;init&gt;(DefaultEndianExprException.java:29)
+	at io.kaitai.struct.testformats.DefaultEndianExprException.&lt;init&gt;(DefaultEndianExprException.java:18)
+	at io.kaitai.struct.testformats.DefaultEndianExprException.fromFile(DefaultEndianExprException.java:14)
+	at io.kaitai.struct.spec.TestDefaultEndianExprException.testDefaultEndianExprException(TestDefaultEndianExprException.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.TestNG.privateMain(TestNG.java:1385)
+	at org.testng.TestNG.main(TestNG.java:1354)
+</pre></div></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestDefaultEndianExprException@313b2ea6</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestDefaultEndianExprInherited.testDefaultEndianExprInherited()'><b>testDefaultEndianExprInherited</b><br>Test class: io.kaitai.struct.spec.TestDefaultEndianExprInherited</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestDefaultEndianExprInherited@46fa7c39</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestDefaultEndianExprIsBe.testDefaultEndianExprIsBe()'><b>testDefaultEndianExprIsBe</b><br>Test class: io.kaitai.struct.spec.TestDefaultEndianExprIsBe</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestDefaultEndianExprIsBe@4a668b6e</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestDefaultEndianExprIsLe.testDefaultEndianExprIsLe()'><b>testDefaultEndianExprIsLe</b><br>Test class: io.kaitai.struct.spec.TestDefaultEndianExprIsLe</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestDefaultEndianExprIsLe@1356d4d4</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestDefaultEndianMod.testDefaultEndianMod()'><b>testDefaultEndianMod</b><br>Test class: io.kaitai.struct.spec.TestDefaultEndianMod</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestDefaultEndianMod@52102734</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestDocstrings.testDocstrings()'><b>testDocstrings</b><br>Test class: io.kaitai.struct.spec.TestDocstrings</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestDocstrings@c03cf28</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestDocstringsDocref.testDocstringsDocref()'><b>testDocstringsDocref</b><br>Test class: io.kaitai.struct.spec.TestDocstringsDocref</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestDocstringsDocref@503d687a</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestDocstringsDocrefMulti.testDocstringsDocrefMulti()'><b>testDocstringsDocrefMulti</b><br>Test class: io.kaitai.struct.spec.TestDocstringsDocrefMulti</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestDocstringsDocrefMulti@37883b97</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestEnum0.testEnum0()'><b>testEnum0</b><br>Test class: io.kaitai.struct.spec.TestEnum0</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestEnum0@152aa092</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestEnum1.testEnum1()'><b>testEnum1</b><br>Test class: io.kaitai.struct.spec.TestEnum1</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestEnum1@68567e20</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestEnumDeep.testEnumDeep()'><b>testEnumDeep</b><br>Test class: io.kaitai.struct.spec.TestEnumDeep</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestEnumDeep@291caca8</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestEnumDeepLiterals.testEnumDeepLiterals()'><b>testEnumDeepLiterals</b><br>Test class: io.kaitai.struct.spec.TestEnumDeepLiterals</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestEnumDeepLiterals@3f56875e</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestEnumFancy.testEnumFancy()'><b>testEnumFancy</b><br>Test class: io.kaitai.struct.spec.TestEnumFancy</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestEnumFancy@19d481b</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestEnumForUnknownId.testEnumForUnknownId()'><b>testEnumForUnknownId</b><br>Test class: io.kaitai.struct.spec.TestEnumForUnknownId</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestEnumForUnknownId@fd07cbb</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestEnumIf.testEnumIf()'><b>testEnumIf</b><br>Test class: io.kaitai.struct.spec.TestEnumIf</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestEnumIf@4e3958e7</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestEnumImport.testEnumImport()'><b>testEnumImport</b><br>Test class: io.kaitai.struct.spec.TestEnumImport</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestEnumImport@26b3fd41</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestEnumIntRangeS.testEnumIntRangeS()'><b>testEnumIntRangeS</b><br>Test class: io.kaitai.struct.spec.TestEnumIntRangeS</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestEnumIntRangeS@6f27a732</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestEnumIntRangeU.testEnumIntRangeU()'><b>testEnumIntRangeU</b><br>Test class: io.kaitai.struct.spec.TestEnumIntRangeU</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestEnumIntRangeU@40cb8df7</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestEnumInvalid.testEnumInvalid()'><b>testEnumInvalid</b><br>Test class: io.kaitai.struct.spec.TestEnumInvalid</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestEnumInvalid@68e5eea7</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestEnumLongRangeS.testEnumLongRangeS()'><b>testEnumLongRangeS</b><br>Test class: io.kaitai.struct.spec.TestEnumLongRangeS</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestEnumLongRangeS@fa36558</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestEnumLongRangeU.testEnumLongRangeU()'><b>testEnumLongRangeU</b><br>Test class: io.kaitai.struct.spec.TestEnumLongRangeU</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestEnumLongRangeU@6aaceffd</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestEnumNegative.testEnumNegative()'><b>testEnumNegative</b><br>Test class: io.kaitai.struct.spec.TestEnumNegative</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestEnumNegative@65d09a04</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestEnumOfValueInst.testEnumOfValueInst()'><b>testEnumOfValueInst</b><br>Test class: io.kaitai.struct.spec.TestEnumOfValueInst</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestEnumOfValueInst@4da4253</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestEnumToI.testEnumToI()'><b>testEnumToI</b><br>Test class: io.kaitai.struct.spec.TestEnumToI</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestEnumToI@610f7aa</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestEnumToIClassBorder1.testEnumToIClassBorder1()'><b>testEnumToIClassBorder1</b><br>Test class: io.kaitai.struct.spec.TestEnumToIClassBorder1</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestEnumToIClassBorder1@671a5887</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestEofExceptionBytes.testEofExceptionBytes()'><b>testEofExceptionBytes</b><br>Test class: io.kaitai.struct.spec.TestEofExceptionBytes</td>
+<td><div><pre>java.nio.BufferUnderflowException
+	at java.base/java.nio.ByteBuffer.get(ByteBuffer.java:798)
+	at java.base/java.nio.ByteBuffer.get(ByteBuffer.java:826)
+	at io.kaitai.struct.ByteBufferKaitaiStream.readBytes(ByteBufferKaitaiStream.java:329)
+	at io.kaitai.struct.testformats.EofExceptionBytes._read(EofExceptionBytes.java:30)
+	at io.kaitai.struct.testformats.EofExceptionBytes.&lt;init&gt;(EofExceptionBytes.java:27)
+	at io.kaitai.struct.testformats.EofExceptionBytes.&lt;init&gt;(EofExceptionBytes.java:16)
+	at io.kaitai.struct.testformats.EofExceptionBytes.fromFile(EofExceptionBytes.java:12)
+	at io.kaitai.struct.spec.TestEofExceptionBytes.testEofExceptionBytes(TestEofExceptionBytes.java:13)
+... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace195984832", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace195984832'><pre>java.nio.BufferUnderflowException
+	at java.base/java.nio.ByteBuffer.get(ByteBuffer.java:798)
+	at java.base/java.nio.ByteBuffer.get(ByteBuffer.java:826)
+	at io.kaitai.struct.ByteBufferKaitaiStream.readBytes(ByteBufferKaitaiStream.java:329)
+	at io.kaitai.struct.testformats.EofExceptionBytes._read(EofExceptionBytes.java:30)
+	at io.kaitai.struct.testformats.EofExceptionBytes.&lt;init&gt;(EofExceptionBytes.java:27)
+	at io.kaitai.struct.testformats.EofExceptionBytes.&lt;init&gt;(EofExceptionBytes.java:16)
+	at io.kaitai.struct.testformats.EofExceptionBytes.fromFile(EofExceptionBytes.java:12)
+	at io.kaitai.struct.spec.TestEofExceptionBytes.testEofExceptionBytes(TestEofExceptionBytes.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.TestNG.privateMain(TestNG.java:1385)
+	at org.testng.TestNG.main(TestNG.java:1354)
+</pre></div></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestEofExceptionBytes@76f2bbc1</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestEofExceptionU4.testEofExceptionU4()'><b>testEofExceptionU4</b><br>Test class: io.kaitai.struct.spec.TestEofExceptionU4</td>
+<td><div><pre>java.nio.BufferUnderflowException
+	at java.base/java.nio.Buffer.nextGetIndex(Buffer.java:707)
+	at java.base/java.nio.DirectByteBuffer.getInt(DirectByteBuffer.java:684)
+	at io.kaitai.struct.ByteBufferKaitaiStream.readU4le(ByteBufferKaitaiStream.java:274)
+	at io.kaitai.struct.testformats.EofExceptionU4._read(EofExceptionU4.java:31)
+	at io.kaitai.struct.testformats.EofExceptionU4.&lt;init&gt;(EofExceptionU4.java:27)
+	at io.kaitai.struct.testformats.EofExceptionU4.&lt;init&gt;(EofExceptionU4.java:16)
+	at io.kaitai.struct.testformats.EofExceptionU4.fromFile(EofExceptionU4.java:12)
+	at io.kaitai.struct.spec.TestEofExceptionU4.testEofExceptionU4(TestEofExceptionU4.java:13)
+... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1293677337", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1293677337'><pre>java.nio.BufferUnderflowException
+	at java.base/java.nio.Buffer.nextGetIndex(Buffer.java:707)
+	at java.base/java.nio.DirectByteBuffer.getInt(DirectByteBuffer.java:684)
+	at io.kaitai.struct.ByteBufferKaitaiStream.readU4le(ByteBufferKaitaiStream.java:274)
+	at io.kaitai.struct.testformats.EofExceptionU4._read(EofExceptionU4.java:31)
+	at io.kaitai.struct.testformats.EofExceptionU4.&lt;init&gt;(EofExceptionU4.java:27)
+	at io.kaitai.struct.testformats.EofExceptionU4.&lt;init&gt;(EofExceptionU4.java:16)
+	at io.kaitai.struct.testformats.EofExceptionU4.fromFile(EofExceptionU4.java:12)
+	at io.kaitai.struct.spec.TestEofExceptionU4.testEofExceptionU4(TestEofExceptionU4.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.TestNG.privateMain(TestNG.java:1385)
+	at org.testng.TestNG.main(TestNG.java:1354)
+</pre></div></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestEofExceptionU4@366647c2</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestEosExceptionBytes.testEosExceptionBytes()'><b>testEosExceptionBytes</b><br>Test class: io.kaitai.struct.spec.TestEosExceptionBytes</td>
+<td><div><pre>java.nio.BufferUnderflowException
+	at java.base/java.nio.ByteBuffer.get(ByteBuffer.java:798)
+	at java.base/java.nio.ByteBuffer.get(ByteBuffer.java:826)
+	at io.kaitai.struct.ByteBufferKaitaiStream.readBytes(ByteBufferKaitaiStream.java:329)
+	at io.kaitai.struct.testformats.EosExceptionBytes$Data._read(EosExceptionBytes.java:53)
+	at io.kaitai.struct.testformats.EosExceptionBytes$Data.&lt;init&gt;(EosExceptionBytes.java:50)
+	at io.kaitai.struct.testformats.EosExceptionBytes._read(EosExceptionBytes.java:31)
+	at io.kaitai.struct.testformats.EosExceptionBytes.&lt;init&gt;(EosExceptionBytes.java:27)
+	at io.kaitai.struct.testformats.EosExceptionBytes.&lt;init&gt;(EosExceptionBytes.java:16)
+	at io.kaitai.struct.testformats.EosExceptionBytes.fromFile(EosExceptionBytes.java:12)
+	at io.kaitai.struct.spec.TestEosExceptionBytes.testEosExceptionBytes(TestEosExceptionBytes.java:13)
+... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace37981645", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace37981645'><pre>java.nio.BufferUnderflowException
+	at java.base/java.nio.ByteBuffer.get(ByteBuffer.java:798)
+	at java.base/java.nio.ByteBuffer.get(ByteBuffer.java:826)
+	at io.kaitai.struct.ByteBufferKaitaiStream.readBytes(ByteBufferKaitaiStream.java:329)
+	at io.kaitai.struct.testformats.EosExceptionBytes$Data._read(EosExceptionBytes.java:53)
+	at io.kaitai.struct.testformats.EosExceptionBytes$Data.&lt;init&gt;(EosExceptionBytes.java:50)
+	at io.kaitai.struct.testformats.EosExceptionBytes._read(EosExceptionBytes.java:31)
+	at io.kaitai.struct.testformats.EosExceptionBytes.&lt;init&gt;(EosExceptionBytes.java:27)
+	at io.kaitai.struct.testformats.EosExceptionBytes.&lt;init&gt;(EosExceptionBytes.java:16)
+	at io.kaitai.struct.testformats.EosExceptionBytes.fromFile(EosExceptionBytes.java:12)
+	at io.kaitai.struct.spec.TestEosExceptionBytes.testEosExceptionBytes(TestEosExceptionBytes.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.TestNG.privateMain(TestNG.java:1385)
+	at org.testng.TestNG.main(TestNG.java:1354)
+</pre></div></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestEosExceptionBytes@424e1977</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestEosExceptionU4.testEosExceptionU4()'><b>testEosExceptionU4</b><br>Test class: io.kaitai.struct.spec.TestEosExceptionU4</td>
+<td><div><pre>java.nio.BufferUnderflowException
+	at java.base/java.nio.Buffer.nextGetIndex(Buffer.java:707)
+	at java.base/java.nio.DirectByteBuffer.getInt(DirectByteBuffer.java:684)
+	at io.kaitai.struct.ByteBufferKaitaiStream.readU4le(ByteBufferKaitaiStream.java:274)
+	at io.kaitai.struct.testformats.EosExceptionU4$Data._read(EosExceptionU4.java:54)
+	at io.kaitai.struct.testformats.EosExceptionU4$Data.&lt;init&gt;(EosExceptionU4.java:50)
+	at io.kaitai.struct.testformats.EosExceptionU4._read(EosExceptionU4.java:31)
+	at io.kaitai.struct.testformats.EosExceptionU4.&lt;init&gt;(EosExceptionU4.java:27)
+	at io.kaitai.struct.testformats.EosExceptionU4.&lt;init&gt;(EosExceptionU4.java:16)
+	at io.kaitai.struct.testformats.EosExceptionU4.fromFile(EosExceptionU4.java:12)
+	at io.kaitai.struct.spec.TestEosExceptionU4.testEosExceptionU4(TestEosExceptionU4.java:13)
+... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1440621772", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1440621772'><pre>java.nio.BufferUnderflowException
+	at java.base/java.nio.Buffer.nextGetIndex(Buffer.java:707)
+	at java.base/java.nio.DirectByteBuffer.getInt(DirectByteBuffer.java:684)
+	at io.kaitai.struct.ByteBufferKaitaiStream.readU4le(ByteBufferKaitaiStream.java:274)
+	at io.kaitai.struct.testformats.EosExceptionU4$Data._read(EosExceptionU4.java:54)
+	at io.kaitai.struct.testformats.EosExceptionU4$Data.&lt;init&gt;(EosExceptionU4.java:50)
+	at io.kaitai.struct.testformats.EosExceptionU4._read(EosExceptionU4.java:31)
+	at io.kaitai.struct.testformats.EosExceptionU4.&lt;init&gt;(EosExceptionU4.java:27)
+	at io.kaitai.struct.testformats.EosExceptionU4.&lt;init&gt;(EosExceptionU4.java:16)
+	at io.kaitai.struct.testformats.EosExceptionU4.fromFile(EosExceptionU4.java:12)
+	at io.kaitai.struct.spec.TestEosExceptionU4.testEosExceptionU4(TestEosExceptionU4.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.TestNG.privateMain(TestNG.java:1385)
+	at org.testng.TestNG.main(TestNG.java:1354)
+</pre></div></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestEosExceptionU4@87a85e1</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestExpr0.testExpr0()'><b>testExpr0</b><br>Test class: io.kaitai.struct.spec.TestExpr0</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestExpr0@192c3f1e</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestExpr1.testExpr1()'><b>testExpr1</b><br>Test class: io.kaitai.struct.spec.TestExpr1</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestExpr1@62e7f11d</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestExpr2.testExpr2()'><b>testExpr2</b><br>Test class: io.kaitai.struct.spec.TestExpr2</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestExpr2@8317c52</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestExpr3.testExpr3()'><b>testExpr3</b><br>Test class: io.kaitai.struct.spec.TestExpr3</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestExpr3@57250572</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestExprArray.testExprArray()'><b>testExprArray</b><br>Test class: io.kaitai.struct.spec.TestExprArray</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestExprArray@3541cb24</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestExprBytesCmp.testExprBytesCmp()'><b>testExprBytesCmp</b><br>Test class: io.kaitai.struct.spec.TestExprBytesCmp</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestExprBytesCmp@1e66f1f5</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestExprCalcArrayOps.testExprCalcArrayOps()'><b>testExprCalcArrayOps</b><br>Test class: io.kaitai.struct.spec.TestExprCalcArrayOps</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestExprCalcArrayOps@10aa41f2</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestExprEnum.testExprEnum()'><b>testExprEnum</b><br>Test class: io.kaitai.struct.spec.TestExprEnum</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestExprEnum@6236eb5f</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestExprIoEof.testExprIoEof()'><b>testExprIoEof</b><br>Test class: io.kaitai.struct.spec.TestExprIoEof</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestExprIoEof@77eca502</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestExprIoPos.testExprIoPos()'><b>testExprIoPos</b><br>Test class: io.kaitai.struct.spec.TestExprIoPos</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestExprIoPos@7c83dc97</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestExprMod.testExprMod()'><b>testExprMod</b><br>Test class: io.kaitai.struct.spec.TestExprMod</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestExprMod@484970b0</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestExprSizeofType0.testExprSizeofType0()'><b>testExprSizeofType0</b><br>Test class: io.kaitai.struct.spec.TestExprSizeofType0</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestExprSizeofType0@6ff29830</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestExprSizeofType1.testExprSizeofType1()'><b>testExprSizeofType1</b><br>Test class: io.kaitai.struct.spec.TestExprSizeofType1</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestExprSizeofType1@6c779568</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestExprSizeofValue0.testExprSizeofValue0()'><b>testExprSizeofValue0</b><br>Test class: io.kaitai.struct.spec.TestExprSizeofValue0</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestExprSizeofValue0@71c3b41</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestExprSizeofValueSized.testExprSizeofValueSized()'><b>testExprSizeofValueSized</b><br>Test class: io.kaitai.struct.spec.TestExprSizeofValueSized</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestExprSizeofValueSized@2cdd0d4b</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestExprStrEncodings.testExprStrEncodings()'><b>testExprStrEncodings</b><br>Test class: io.kaitai.struct.spec.TestExprStrEncodings</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestExprStrEncodings@2e377400</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestExprStrOps.testExprStrOps()'><b>testExprStrOps</b><br>Test class: io.kaitai.struct.spec.TestExprStrOps</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestExprStrOps@5f683daf</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestFixedContents.testFixedContents()'><b>testFixedContents</b><br>Test class: io.kaitai.struct.spec.TestFixedContents</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestFixedContents@1d8bd0de</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestFixedStruct.testFixedStruct()'><b>testFixedStruct</b><br>Test class: io.kaitai.struct.spec.TestFixedStruct</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestFixedStruct@1bb266b3</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestFloatToI.testFloatToI()'><b>testFloatToI</b><br>Test class: io.kaitai.struct.spec.TestFloatToI</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestFloatToI@5552768b</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestFloatingPoints.testFloatingPoints()'><b>testFloatingPoints</b><br>Test class: io.kaitai.struct.spec.TestFloatingPoints</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestFloatingPoints@1649b0e6</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestHelloWorld.testHelloWorld()'><b>testHelloWorld</b><br>Test class: io.kaitai.struct.spec.TestHelloWorld</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestHelloWorld@1fb700ee</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestIfInstances.testIfInstances()'><b>testIfInstances</b><br>Test class: io.kaitai.struct.spec.TestIfInstances</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestIfInstances@186f8716</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestIfStruct.testIfStruct()'><b>testIfStruct</b><br>Test class: io.kaitai.struct.spec.TestIfStruct</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestIfStruct@2118cddf</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestIfValues.testIfValues()'><b>testIfValues</b><br>Test class: io.kaitai.struct.spec.TestIfValues</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestIfValues@385e9564</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestImports0.testImports0()'><b>testImports0</b><br>Test class: io.kaitai.struct.spec.TestImports0</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestImports0@623a8092</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestImportsAbs.testImportsAbs()'><b>testImportsAbs</b><br>Test class: io.kaitai.struct.spec.TestImportsAbs</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestImportsAbs@e1de817</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestImportsAbsAbs.testImportsAbsAbs()'><b>testImportsAbsAbs</b><br>Test class: io.kaitai.struct.spec.TestImportsAbsAbs</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestImportsAbsAbs@1329eff</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestImportsAbsRel.testImportsAbsRel()'><b>testImportsAbsRel</b><br>Test class: io.kaitai.struct.spec.TestImportsAbsRel</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestImportsAbsRel@757277dc</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestImportsCircularA.testImportsCircularA()'><b>testImportsCircularA</b><br>Test class: io.kaitai.struct.spec.TestImportsCircularA</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestImportsCircularA@5aebe890</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestImportsRel1.testImportsRel1()'><b>testImportsRel1</b><br>Test class: io.kaitai.struct.spec.TestImportsRel1</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestImportsRel1@3af9c5b7</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestIndexSizes.testIndexSizes()'><b>testIndexSizes</b><br>Test class: io.kaitai.struct.spec.TestIndexSizes</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestIndexSizes@63070bab</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestIndexToParamEos.testIndexToParamEos()'><b>testIndexToParamEos</b><br>Test class: io.kaitai.struct.spec.TestIndexToParamEos</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestIndexToParamEos@77f80c04</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestIndexToParamExpr.testIndexToParamExpr()'><b>testIndexToParamExpr</b><br>Test class: io.kaitai.struct.spec.TestIndexToParamExpr</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestIndexToParamExpr@f381794</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestIndexToParamUntil.testIndexToParamUntil()'><b>testIndexToParamUntil</b><br>Test class: io.kaitai.struct.spec.TestIndexToParamUntil</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestIndexToParamUntil@4e268090</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestInstanceIoUser.testInstanceIoUser()'><b>testInstanceIoUser</b><br>Test class: io.kaitai.struct.spec.TestInstanceIoUser</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestInstanceIoUser@5609159b</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestInstanceStd.testInstanceStd()'><b>testInstanceStd</b><br>Test class: io.kaitai.struct.spec.TestInstanceStd</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestInstanceStd@7c1e2a9e</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestInstanceStdArray.testInstanceStdArray()'><b>testInstanceStdArray</b><br>Test class: io.kaitai.struct.spec.TestInstanceStdArray</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestInstanceStdArray@561b6512</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestIntegers.testIntegers()'><b>testIntegers</b><br>Test class: io.kaitai.struct.spec.TestIntegers</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestIntegers@26275bef</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestIntegersDoubleOverflow.testIntegersDoubleOverflow()'><b>testIntegersDoubleOverflow</b><br>Test class: io.kaitai.struct.spec.TestIntegersDoubleOverflow</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestIntegersDoubleOverflow@11fc564b</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestIntegersMinMax.testIntegersMinMax()'><b>testIntegersMinMax</b><br>Test class: io.kaitai.struct.spec.TestIntegersMinMax</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestIntegersMinMax@7ee8290b</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestIoLocalVar.testIoLocalVar()'><b>testIoLocalVar</b><br>Test class: io.kaitai.struct.spec.TestIoLocalVar</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestIoLocalVar@6497b078</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestJsSignedRightShift.testJsSignedRightShift()'><b>testJsSignedRightShift</b><br>Test class: io.kaitai.struct.spec.TestJsSignedRightShift</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestJsSignedRightShift@6db9f5a4</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestMetaTags.testMetaTags()'><b>testMetaTags</b><br>Test class: io.kaitai.struct.spec.TestMetaTags</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestMetaTags@740773a3</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestMetaXref.testMetaXref()'><b>testMetaXref</b><br>Test class: io.kaitai.struct.spec.TestMetaXref</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestMetaXref@3c0be339</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestMultipleUse.testMultipleUse()'><b>testMultipleUse</b><br>Test class: io.kaitai.struct.spec.TestMultipleUse</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestMultipleUse@45ca843</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestNavParent.testNavParent()'><b>testNavParent</b><br>Test class: io.kaitai.struct.spec.TestNavParent</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestNavParent@78ffe6dc</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestNavParent2.testNavParent2()'><b>testNavParent2</b><br>Test class: io.kaitai.struct.spec.TestNavParent2</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestNavParent2@548e6d58</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestNavParent3.testNavParent3()'><b>testNavParent3</b><br>Test class: io.kaitai.struct.spec.TestNavParent3</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestNavParent3@7d8704ef</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestNavParentFalse.testNavParentFalse()'><b>testNavParentFalse</b><br>Test class: io.kaitai.struct.spec.TestNavParentFalse</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestNavParentFalse@306cf3ea</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestNavParentFalse2.testNavParentFalse2()'><b>testNavParentFalse2</b><br>Test class: io.kaitai.struct.spec.TestNavParentFalse2</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestNavParentFalse2@4961f6af</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestNavParentOverride.testNavParentOverride()'><b>testNavParentOverride</b><br>Test class: io.kaitai.struct.spec.TestNavParentOverride</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestNavParentOverride@50caa560</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestNavParentSwitch.testNavParentSwitch()'><b>testNavParentSwitch</b><br>Test class: io.kaitai.struct.spec.TestNavParentSwitch</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestNavParentSwitch@445b295b</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestNavParentSwitchCast.testNavParentSwitchCast()'><b>testNavParentSwitchCast</b><br>Test class: io.kaitai.struct.spec.TestNavParentSwitchCast</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestNavParentSwitchCast@3c947bc5</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestNavParentVsValueInst.testNavParentVsValueInst()'><b>testNavParentVsValueInst</b><br>Test class: io.kaitai.struct.spec.TestNavParentVsValueInst</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestNavParentVsValueInst@2abf4075</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestNavRoot.testNavRoot()'><b>testNavRoot</b><br>Test class: io.kaitai.struct.spec.TestNavRoot</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestNavRoot@68e965f5</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestNestedSameName.testNestedSameName()'><b>testNestedSameName</b><br>Test class: io.kaitai.struct.spec.TestNestedSameName</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestNestedSameName@6a6afff2</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestNestedSameName2.testNestedSameName2()'><b>testNestedSameName2</b><br>Test class: io.kaitai.struct.spec.TestNestedSameName2</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestNestedSameName2@53aad5d5</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestNestedTypeParam.testNestedTypeParam()'><b>testNestedTypeParam</b><br>Test class: io.kaitai.struct.spec.TestNestedTypeParam</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestNestedTypeParam@4e50c791</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestNestedTypes.testNestedTypes()'><b>testNestedTypes</b><br>Test class: io.kaitai.struct.spec.TestNestedTypes</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestNestedTypes@31f9b85e</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestNestedTypes2.testNestedTypes2()'><b>testNestedTypes2</b><br>Test class: io.kaitai.struct.spec.TestNestedTypes2</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestNestedTypes2@4470f8a6</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestNestedTypes3.testNestedTypes3()'><b>testNestedTypes3</b><br>Test class: io.kaitai.struct.spec.TestNestedTypes3</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestNestedTypes3@5ab9e72c</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestNonStandard.testNonStandard()'><b>testNonStandard</b><br>Test class: io.kaitai.struct.spec.TestNonStandard</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestNonStandard@6bf0219d</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestOpaqueExternalType.testOpaqueExternalType()'><b>testOpaqueExternalType</b><br>Test class: io.kaitai.struct.spec.TestOpaqueExternalType</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestOpaqueExternalType@2892dae4</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestOpaqueExternalType02Parent.testOpaqueExternalType02Parent()'><b>testOpaqueExternalType02Parent</b><br>Test class: io.kaitai.struct.spec.TestOpaqueExternalType02Parent</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestOpaqueExternalType02Parent@770d3326</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestOpaqueWithParam.testOpaqueWithParam()'><b>testOpaqueWithParam</b><br>Test class: io.kaitai.struct.spec.TestOpaqueWithParam</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestOpaqueWithParam@2f54a33d</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestOptionalId.testOptionalId()'><b>testOptionalId</b><br>Test class: io.kaitai.struct.spec.TestOptionalId</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestOptionalId@2177849e</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestParamsCallExtraParens.testParamsCallExtraParens()'><b>testParamsCallExtraParens</b><br>Test class: io.kaitai.struct.spec.TestParamsCallExtraParens</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestParamsCallExtraParens@2b4bac49</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestParamsCallShort.testParamsCallShort()'><b>testParamsCallShort</b><br>Test class: io.kaitai.struct.spec.TestParamsCallShort</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestParamsCallShort@3972a855</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestParamsDef.testParamsDef()'><b>testParamsDef</b><br>Test class: io.kaitai.struct.spec.TestParamsDef</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestParamsDef@2a266d09</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestParamsEnum.testParamsEnum()'><b>testParamsEnum</b><br>Test class: io.kaitai.struct.spec.TestParamsEnum</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestParamsEnum@5fa07e12</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestParamsPassArrayInt.testParamsPassArrayInt()'><b>testParamsPassArrayInt</b><br>Test class: io.kaitai.struct.spec.TestParamsPassArrayInt</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestParamsPassArrayInt@69fb6037</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestParamsPassArrayStr.testParamsPassArrayStr()'><b>testParamsPassArrayStr</b><br>Test class: io.kaitai.struct.spec.TestParamsPassArrayStr</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestParamsPassArrayStr@7a675056</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestParamsPassArrayStruct.testParamsPassArrayStruct()'><b>testParamsPassArrayStruct</b><br>Test class: io.kaitai.struct.spec.TestParamsPassArrayStruct</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestParamsPassArrayStruct@1190200a</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestParamsPassArrayUsertype.testParamsPassArrayUsertype()'><b>testParamsPassArrayUsertype</b><br>Test class: io.kaitai.struct.spec.TestParamsPassArrayUsertype</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestParamsPassArrayUsertype@37271612</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestParamsPassBool.testParamsPassBool()'><b>testParamsPassBool</b><br>Test class: io.kaitai.struct.spec.TestParamsPassBool</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestParamsPassBool@f79e</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestParamsPassStruct.testParamsPassStruct()'><b>testParamsPassStruct</b><br>Test class: io.kaitai.struct.spec.TestParamsPassStruct</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestParamsPassStruct@609db43b</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestParamsPassUsertype.testParamsPassUsertype()'><b>testParamsPassUsertype</b><br>Test class: io.kaitai.struct.spec.TestParamsPassUsertype</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestParamsPassUsertype@37f1104d</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestPositionAbs.testPositionAbs()'><b>testPositionAbs</b><br>Test class: io.kaitai.struct.spec.TestPositionAbs</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestPositionAbs@3315d2d7</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestPositionInSeq.testPositionInSeq()'><b>testPositionInSeq</b><br>Test class: io.kaitai.struct.spec.TestPositionInSeq</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestPositionInSeq@17a7f733</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestPositionToEnd.testPositionToEnd()'><b>testPositionToEnd</b><br>Test class: io.kaitai.struct.spec.TestPositionToEnd</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestPositionToEnd@58a9760d</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestProcessCoerceBytes.testProcessCoerceBytes()'><b>testProcessCoerceBytes</b><br>Test class: io.kaitai.struct.spec.TestProcessCoerceBytes</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestProcessCoerceBytes@2d2ffcb7</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestProcessCoerceSwitch.testProcessCoerceSwitch()'><b>testProcessCoerceSwitch</b><br>Test class: io.kaitai.struct.spec.TestProcessCoerceSwitch</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestProcessCoerceSwitch@4d910fd6</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestProcessCoerceUsertype1.testProcessCoerceUsertype1()'><b>testProcessCoerceUsertype1</b><br>Test class: io.kaitai.struct.spec.TestProcessCoerceUsertype1</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestProcessCoerceUsertype1@37858383</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestProcessCoerceUsertype2.testProcessCoerceUsertype2()'><b>testProcessCoerceUsertype2</b><br>Test class: io.kaitai.struct.spec.TestProcessCoerceUsertype2</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestProcessCoerceUsertype2@5b94b04d</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestProcessCustom.testProcessCustom()'><b>testProcessCustom</b><br>Test class: io.kaitai.struct.spec.TestProcessCustom</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestProcessCustom@15ca7889</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestProcessCustomNoArgs.testProcessCustomNoArgs()'><b>testProcessCustomNoArgs</b><br>Test class: io.kaitai.struct.spec.TestProcessCustomNoArgs</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestProcessCustomNoArgs@44a7bfbc</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestProcessRepeatBytes.testProcessRepeatBytes()'><b>testProcessRepeatBytes</b><br>Test class: io.kaitai.struct.spec.TestProcessRepeatBytes</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestProcessRepeatBytes@33c911a1</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestProcessRepeatUsertype.testProcessRepeatUsertype()'><b>testProcessRepeatUsertype</b><br>Test class: io.kaitai.struct.spec.TestProcessRepeatUsertype</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestProcessRepeatUsertype@762ef0ea</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestProcessRotate.testProcessRotate()'><b>testProcessRotate</b><br>Test class: io.kaitai.struct.spec.TestProcessRotate</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestProcessRotate@157853da</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestProcessToUser.testProcessToUser()'><b>testProcessToUser</b><br>Test class: io.kaitai.struct.spec.TestProcessToUser</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestProcessToUser@343570b7</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestProcessXor4Const.testProcessXor4Const()'><b>testProcessXor4Const</b><br>Test class: io.kaitai.struct.spec.TestProcessXor4Const</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestProcessXor4Const@dd0c991</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestProcessXor4Value.testProcessXor4Value()'><b>testProcessXor4Value</b><br>Test class: io.kaitai.struct.spec.TestProcessXor4Value</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestProcessXor4Value@394a2528</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestProcessXorConst.testProcessXorConst()'><b>testProcessXorConst</b><br>Test class: io.kaitai.struct.spec.TestProcessXorConst</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestProcessXorConst@175b9425</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestProcessXorValue.testProcessXorValue()'><b>testProcessXorValue</b><br>Test class: io.kaitai.struct.spec.TestProcessXorValue</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestProcessXorValue@c86b9e3</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestRecursiveOne.testRecursiveOne()'><b>testRecursiveOne</b><br>Test class: io.kaitai.struct.spec.TestRecursiveOne</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestRecursiveOne@1f97cf0d</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestRepeatEosBit.testRepeatEosBit()'><b>testRepeatEosBit</b><br>Test class: io.kaitai.struct.spec.TestRepeatEosBit</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestRepeatEosBit@707194ba</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestRepeatEosStruct.testRepeatEosStruct()'><b>testRepeatEosStruct</b><br>Test class: io.kaitai.struct.spec.TestRepeatEosStruct</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestRepeatEosStruct@3cc1435c</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestRepeatEosU4.testRepeatEosU4()'><b>testRepeatEosU4</b><br>Test class: io.kaitai.struct.spec.TestRepeatEosU4</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestRepeatEosU4@7e9131d5</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestRepeatNStruct.testRepeatNStruct()'><b>testRepeatNStruct</b><br>Test class: io.kaitai.struct.spec.TestRepeatNStruct</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestRepeatNStruct@757acd7b</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestRepeatNStrz.testRepeatNStrz()'><b>testRepeatNStrz</b><br>Test class: io.kaitai.struct.spec.TestRepeatNStrz</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestRepeatNStrz@6ab778a</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestRepeatNStrzDouble.testRepeatNStrzDouble()'><b>testRepeatNStrzDouble</b><br>Test class: io.kaitai.struct.spec.TestRepeatNStrzDouble</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestRepeatNStrzDouble@13b13b5d</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestRepeatUntilComplex.testRepeatUntilComplex()'><b>testRepeatUntilComplex</b><br>Test class: io.kaitai.struct.spec.TestRepeatUntilComplex</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestRepeatUntilComplex@4c39bec8</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestRepeatUntilS4.testRepeatUntilS4()'><b>testRepeatUntilS4</b><br>Test class: io.kaitai.struct.spec.TestRepeatUntilS4</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestRepeatUntilS4@574b560f</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestStrEncodings.testStrEncodings()'><b>testStrEncodings</b><br>Test class: io.kaitai.struct.spec.TestStrEncodings</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestStrEncodings@e4487af</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestStrEncodingsDefault.testStrEncodingsDefault()'><b>testStrEncodingsDefault</b><br>Test class: io.kaitai.struct.spec.TestStrEncodingsDefault</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestStrEncodingsDefault@482bce4f</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestStrEncodingsUtf16.testStrEncodingsUtf16()'><b>testStrEncodingsUtf16</b><br>Test class: io.kaitai.struct.spec.TestStrEncodingsUtf16</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestStrEncodingsUtf16@71e9ddb4</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestStrEos.testStrEos()'><b>testStrEos</b><br>Test class: io.kaitai.struct.spec.TestStrEos</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestStrEos@4f67eb2a</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestStrLiterals.testStrLiterals()'><b>testStrLiterals</b><br>Test class: io.kaitai.struct.spec.TestStrLiterals</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestStrLiterals@5939a379</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestStrLiterals2.testStrLiterals2()'><b>testStrLiterals2</b><br>Test class: io.kaitai.struct.spec.TestStrLiterals2</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestStrLiterals2@399c4be1</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestStrPadTerm.testStrPadTerm()'><b>testStrPadTerm</b><br>Test class: io.kaitai.struct.spec.TestStrPadTerm</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestStrPadTerm@524d6d96</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestStrPadTermEmpty.testStrPadTermEmpty()'><b>testStrPadTermEmpty</b><br>Test class: io.kaitai.struct.spec.TestStrPadTermEmpty</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestStrPadTermEmpty@55f616cf</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestSwitchBytearray.testSwitchBytearray()'><b>testSwitchBytearray</b><br>Test class: io.kaitai.struct.spec.TestSwitchBytearray</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestSwitchBytearray@3e96bacf</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestSwitchCast.testSwitchCast()'><b>testSwitchCast</b><br>Test class: io.kaitai.struct.spec.TestSwitchCast</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestSwitchCast@38102d01</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestSwitchElseOnly.testSwitchElseOnly()'><b>testSwitchElseOnly</b><br>Test class: io.kaitai.struct.spec.TestSwitchElseOnly</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestSwitchElseOnly@5fbe4146</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestSwitchIntegers.testSwitchIntegers()'><b>testSwitchIntegers</b><br>Test class: io.kaitai.struct.spec.TestSwitchIntegers</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestSwitchIntegers@7b02881e</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestSwitchIntegers2.testSwitchIntegers2()'><b>testSwitchIntegers2</b><br>Test class: io.kaitai.struct.spec.TestSwitchIntegers2</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestSwitchIntegers2@4c309d4d</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestSwitchManualEnum.testSwitchManualEnum()'><b>testSwitchManualEnum</b><br>Test class: io.kaitai.struct.spec.TestSwitchManualEnum</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestSwitchManualEnum@4cc8eb05</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestSwitchManualEnumInvalid.testSwitchManualEnumInvalid()'><b>testSwitchManualEnumInvalid</b><br>Test class: io.kaitai.struct.spec.TestSwitchManualEnumInvalid</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestSwitchManualEnumInvalid@28975c28</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestSwitchManualEnumInvalidElse.testSwitchManualEnumInvalidElse()'><b>testSwitchManualEnumInvalidElse</b><br>Test class: io.kaitai.struct.spec.TestSwitchManualEnumInvalidElse</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestSwitchManualEnumInvalidElse@2525ff7e</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestSwitchManualInt.testSwitchManualInt()'><b>testSwitchManualInt</b><br>Test class: io.kaitai.struct.spec.TestSwitchManualInt</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestSwitchManualInt@5f8edcc5</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestSwitchManualIntElse.testSwitchManualIntElse()'><b>testSwitchManualIntElse</b><br>Test class: io.kaitai.struct.spec.TestSwitchManualIntElse</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestSwitchManualIntElse@3943a2be</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestSwitchManualIntSize.testSwitchManualIntSize()'><b>testSwitchManualIntSize</b><br>Test class: io.kaitai.struct.spec.TestSwitchManualIntSize</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestSwitchManualIntSize@75db5df9</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestSwitchManualIntSizeElse.testSwitchManualIntSizeElse()'><b>testSwitchManualIntSizeElse</b><br>Test class: io.kaitai.struct.spec.TestSwitchManualIntSizeElse</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestSwitchManualIntSizeElse@3571b748</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestSwitchManualIntSizeEos.testSwitchManualIntSizeEos()'><b>testSwitchManualIntSizeEos</b><br>Test class: io.kaitai.struct.spec.TestSwitchManualIntSizeEos</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestSwitchManualIntSizeEos@6e509ffa</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestSwitchManualStr.testSwitchManualStr()'><b>testSwitchManualStr</b><br>Test class: io.kaitai.struct.spec.TestSwitchManualStr</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestSwitchManualStr@5136d012</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestSwitchManualStrElse.testSwitchManualStrElse()'><b>testSwitchManualStrElse</b><br>Test class: io.kaitai.struct.spec.TestSwitchManualStrElse</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestSwitchManualStrElse@a1cdc6d</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestSwitchMultiBoolOps.testSwitchMultiBoolOps()'><b>testSwitchMultiBoolOps</b><br>Test class: io.kaitai.struct.spec.TestSwitchMultiBoolOps</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestSwitchMultiBoolOps@61d6015a</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestTermBytes.testTermBytes()'><b>testTermBytes</b><br>Test class: io.kaitai.struct.spec.TestTermBytes</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestTermBytes@1ebd319f</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestTermStrz.testTermStrz()'><b>testTermStrz</b><br>Test class: io.kaitai.struct.spec.TestTermStrz</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestTermStrz@1f59a598</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestTermU1Val.testTermU1Val()'><b>testTermU1Val</b><br>Test class: io.kaitai.struct.spec.TestTermU1Val</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestTermU1Val@7748410a</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestTsPacketHeader.testTsPacketHeader()'><b>testTsPacketHeader</b><br>Test class: io.kaitai.struct.spec.TestTsPacketHeader</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestTsPacketHeader@6a370f4</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestTypeIntUnaryOp.testTypeIntUnaryOp()'><b>testTypeIntUnaryOp</b><br>Test class: io.kaitai.struct.spec.TestTypeIntUnaryOp</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestTypeIntUnaryOp@7690781</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestTypeTernary.testTypeTernary()'><b>testTypeTernary</b><br>Test class: io.kaitai.struct.spec.TestTypeTernary</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestTypeTernary@5f16132a</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestTypeTernary2ndFalsy.testTypeTernary2ndFalsy()'><b>testTypeTernary2ndFalsy</b><br>Test class: io.kaitai.struct.spec.TestTypeTernary2ndFalsy</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestTypeTernary2ndFalsy@7494f96a</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestTypeTernaryOpaque.testTypeTernaryOpaque()'><b>testTypeTernaryOpaque</b><br>Test class: io.kaitai.struct.spec.TestTypeTernaryOpaque</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestTypeTernaryOpaque@29647f75</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestUserType.testUserType()'><b>testUserType</b><br>Test class: io.kaitai.struct.spec.TestUserType</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestUserType@355ce81c</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestValidEqStrEncodings.testValidEqStrEncodings()'><b>testValidEqStrEncodings</b><br>Test class: io.kaitai.struct.spec.TestValidEqStrEncodings</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestValidEqStrEncodings@38e79ae3</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestValidFailAnyofInt.testValidFailAnyofInt()'><b>testValidFailAnyofInt</b><br>Test class: io.kaitai.struct.spec.TestValidFailAnyofInt</td>
+<td><div><pre>io.kaitai.struct.KaitaiStream$ValidationNotAnyOfError: /seq/0: at pos 1: validation failed: not any of the list, got 80
+	at io.kaitai.struct.testformats.ValidFailAnyofInt._read(ValidFailAnyofInt.java:32)
+	at io.kaitai.struct.testformats.ValidFailAnyofInt.&lt;init&gt;(ValidFailAnyofInt.java:27)
+	at io.kaitai.struct.testformats.ValidFailAnyofInt.&lt;init&gt;(ValidFailAnyofInt.java:16)
+	at io.kaitai.struct.testformats.ValidFailAnyofInt.fromFile(ValidFailAnyofInt.java:12)
+	at io.kaitai.struct.spec.TestValidFailAnyofInt.testValidFailAnyofInt(TestValidFailAnyofInt.java:13)
+... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace352367347", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace352367347'><pre>io.kaitai.struct.KaitaiStream$ValidationNotAnyOfError: /seq/0: at pos 1: validation failed: not any of the list, got 80
+	at io.kaitai.struct.testformats.ValidFailAnyofInt._read(ValidFailAnyofInt.java:32)
+	at io.kaitai.struct.testformats.ValidFailAnyofInt.&lt;init&gt;(ValidFailAnyofInt.java:27)
+	at io.kaitai.struct.testformats.ValidFailAnyofInt.&lt;init&gt;(ValidFailAnyofInt.java:16)
+	at io.kaitai.struct.testformats.ValidFailAnyofInt.fromFile(ValidFailAnyofInt.java:12)
+	at io.kaitai.struct.spec.TestValidFailAnyofInt.testValidFailAnyofInt(TestValidFailAnyofInt.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.TestNG.privateMain(TestNG.java:1385)
+	at org.testng.TestNG.main(TestNG.java:1354)
+</pre></div></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestValidFailAnyofInt@51f116b8</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestValidFailContents.testValidFailContents()'><b>testValidFailContents</b><br>Test class: io.kaitai.struct.spec.TestValidFailContents</td>
+<td><div><pre>io.kaitai.struct.KaitaiStream$ValidationNotEqualError: /seq/0: at pos 2: validation failed: not equal, expected [51 41], but got [50 41]
+	at io.kaitai.struct.testformats.ValidFailContents._read(ValidFailContents.java:33)
+	at io.kaitai.struct.testformats.ValidFailContents.&lt;init&gt;(ValidFailContents.java:28)
+	at io.kaitai.struct.testformats.ValidFailContents.&lt;init&gt;(ValidFailContents.java:17)
+	at io.kaitai.struct.testformats.ValidFailContents.fromFile(ValidFailContents.java:13)
+	at io.kaitai.struct.spec.TestValidFailContents.testValidFailContents(TestValidFailContents.java:13)
+... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace418958713", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace418958713'><pre>io.kaitai.struct.KaitaiStream$ValidationNotEqualError: /seq/0: at pos 2: validation failed: not equal, expected [51 41], but got [50 41]
+	at io.kaitai.struct.testformats.ValidFailContents._read(ValidFailContents.java:33)
+	at io.kaitai.struct.testformats.ValidFailContents.&lt;init&gt;(ValidFailContents.java:28)
+	at io.kaitai.struct.testformats.ValidFailContents.&lt;init&gt;(ValidFailContents.java:17)
+	at io.kaitai.struct.testformats.ValidFailContents.fromFile(ValidFailContents.java:13)
+	at io.kaitai.struct.spec.TestValidFailContents.testValidFailContents(TestValidFailContents.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.TestNG.privateMain(TestNG.java:1385)
+	at org.testng.TestNG.main(TestNG.java:1354)
+</pre></div></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestValidFailContents@117e949d</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestValidFailEqBytes.testValidFailEqBytes()'><b>testValidFailEqBytes</b><br>Test class: io.kaitai.struct.spec.TestValidFailEqBytes</td>
+<td><div><pre>io.kaitai.struct.KaitaiStream$ValidationNotEqualError: /seq/0: at pos 2: validation failed: not equal, expected [51 41], but got [50 41]
+	at io.kaitai.struct.testformats.ValidFailEqBytes._read(ValidFailEqBytes.java:33)
+	at io.kaitai.struct.testformats.ValidFailEqBytes.&lt;init&gt;(ValidFailEqBytes.java:28)
+	at io.kaitai.struct.testformats.ValidFailEqBytes.&lt;init&gt;(ValidFailEqBytes.java:17)
+	at io.kaitai.struct.testformats.ValidFailEqBytes.fromFile(ValidFailEqBytes.java:13)
+	at io.kaitai.struct.spec.TestValidFailEqBytes.testValidFailEqBytes(TestValidFailEqBytes.java:13)
+... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace194707680", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace194707680'><pre>io.kaitai.struct.KaitaiStream$ValidationNotEqualError: /seq/0: at pos 2: validation failed: not equal, expected [51 41], but got [50 41]
+	at io.kaitai.struct.testformats.ValidFailEqBytes._read(ValidFailEqBytes.java:33)
+	at io.kaitai.struct.testformats.ValidFailEqBytes.&lt;init&gt;(ValidFailEqBytes.java:28)
+	at io.kaitai.struct.testformats.ValidFailEqBytes.&lt;init&gt;(ValidFailEqBytes.java:17)
+	at io.kaitai.struct.testformats.ValidFailEqBytes.fromFile(ValidFailEqBytes.java:13)
+	at io.kaitai.struct.spec.TestValidFailEqBytes.testValidFailEqBytes(TestValidFailEqBytes.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.TestNG.privateMain(TestNG.java:1385)
+	at org.testng.TestNG.main(TestNG.java:1354)
+</pre></div></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestValidFailEqBytes@2e1d27ba</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestValidFailEqInt.testValidFailEqInt()'><b>testValidFailEqInt</b><br>Test class: io.kaitai.struct.spec.TestValidFailEqInt</td>
+<td><div><pre>io.kaitai.struct.KaitaiStream$ValidationNotEqualError: /seq/0: at pos 1: validation failed: not equal, expected 123, but got 80
+	at io.kaitai.struct.testformats.ValidFailEqInt._read(ValidFailEqInt.java:32)
+	at io.kaitai.struct.testformats.ValidFailEqInt.&lt;init&gt;(ValidFailEqInt.java:27)
+	at io.kaitai.struct.testformats.ValidFailEqInt.&lt;init&gt;(ValidFailEqInt.java:16)
+	at io.kaitai.struct.testformats.ValidFailEqInt.fromFile(ValidFailEqInt.java:12)
+	at io.kaitai.struct.spec.TestValidFailEqInt.testValidFailEqInt(TestValidFailEqInt.java:13)
+... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1862383967", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1862383967'><pre>io.kaitai.struct.KaitaiStream$ValidationNotEqualError: /seq/0: at pos 1: validation failed: not equal, expected 123, but got 80
+	at io.kaitai.struct.testformats.ValidFailEqInt._read(ValidFailEqInt.java:32)
+	at io.kaitai.struct.testformats.ValidFailEqInt.&lt;init&gt;(ValidFailEqInt.java:27)
+	at io.kaitai.struct.testformats.ValidFailEqInt.&lt;init&gt;(ValidFailEqInt.java:16)
+	at io.kaitai.struct.testformats.ValidFailEqInt.fromFile(ValidFailEqInt.java:12)
+	at io.kaitai.struct.spec.TestValidFailEqInt.testValidFailEqInt(TestValidFailEqInt.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.TestNG.privateMain(TestNG.java:1385)
+	at org.testng.TestNG.main(TestNG.java:1354)
+</pre></div></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestValidFailEqInt@236e3f4e</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestValidFailEqStr.testValidFailEqStr()'><b>testValidFailEqStr</b><br>Test class: io.kaitai.struct.spec.TestValidFailEqStr</td>
+<td><div><pre>io.kaitai.struct.KaitaiStream$ValidationNotEqualError: /seq/0: at pos 4: validation failed: not equal, expected BACK, but got PACK
+	at io.kaitai.struct.testformats.ValidFailEqStr._read(ValidFailEqStr.java:33)
+	at io.kaitai.struct.testformats.ValidFailEqStr.&lt;init&gt;(ValidFailEqStr.java:28)
+	at io.kaitai.struct.testformats.ValidFailEqStr.&lt;init&gt;(ValidFailEqStr.java:17)
+	at io.kaitai.struct.testformats.ValidFailEqStr.fromFile(ValidFailEqStr.java:13)
+	at io.kaitai.struct.spec.TestValidFailEqStr.testValidFailEqStr(TestValidFailEqStr.java:13)
+... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1436633036", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1436633036'><pre>io.kaitai.struct.KaitaiStream$ValidationNotEqualError: /seq/0: at pos 4: validation failed: not equal, expected BACK, but got PACK
+	at io.kaitai.struct.testformats.ValidFailEqStr._read(ValidFailEqStr.java:33)
+	at io.kaitai.struct.testformats.ValidFailEqStr.&lt;init&gt;(ValidFailEqStr.java:28)
+	at io.kaitai.struct.testformats.ValidFailEqStr.&lt;init&gt;(ValidFailEqStr.java:17)
+	at io.kaitai.struct.testformats.ValidFailEqStr.fromFile(ValidFailEqStr.java:13)
+	at io.kaitai.struct.spec.TestValidFailEqStr.testValidFailEqStr(TestValidFailEqStr.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.TestNG.privateMain(TestNG.java:1385)
+	at org.testng.TestNG.main(TestNG.java:1354)
+</pre></div></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestValidFailEqStr@60015ef5</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestValidFailExpr.testValidFailExpr()'><b>testValidFailExpr</b><br>Test class: io.kaitai.struct.spec.TestValidFailExpr</td>
+<td><div><pre>io.kaitai.struct.KaitaiStream$ValidationExprError: /seq/1: at pos 3: validation failed: not matching the expression, got -190
+	at io.kaitai.struct.testformats.ValidFailExpr._read(ValidFailExpr.java:41)
+	at io.kaitai.struct.testformats.ValidFailExpr.&lt;init&gt;(ValidFailExpr.java:27)
+	at io.kaitai.struct.testformats.ValidFailExpr.&lt;init&gt;(ValidFailExpr.java:16)
+	at io.kaitai.struct.testformats.ValidFailExpr.fromFile(ValidFailExpr.java:12)
+	at io.kaitai.struct.spec.TestValidFailExpr.testValidFailExpr(TestValidFailExpr.java:13)
+... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1330247343", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1330247343'><pre>io.kaitai.struct.KaitaiStream$ValidationExprError: /seq/1: at pos 3: validation failed: not matching the expression, got -190
+	at io.kaitai.struct.testformats.ValidFailExpr._read(ValidFailExpr.java:41)
+	at io.kaitai.struct.testformats.ValidFailExpr.&lt;init&gt;(ValidFailExpr.java:27)
+	at io.kaitai.struct.testformats.ValidFailExpr.&lt;init&gt;(ValidFailExpr.java:16)
+	at io.kaitai.struct.testformats.ValidFailExpr.fromFile(ValidFailExpr.java:12)
+	at io.kaitai.struct.spec.TestValidFailExpr.testValidFailExpr(TestValidFailExpr.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.TestNG.privateMain(TestNG.java:1385)
+	at org.testng.TestNG.main(TestNG.java:1354)
+</pre></div></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestValidFailExpr@291b4bf5</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestValidFailInst.testValidFailInst()'><b>testValidFailInst</b><br>Test class: io.kaitai.struct.spec.TestValidFailInst</td>
+<td><div><pre>io.kaitai.struct.KaitaiStream$ValidationNotEqualError: /instances/inst: at pos 0: validation failed: not equal, expected 80, but got 49
+	at io.kaitai.struct.testformats.ValidFailInst.inst(ValidFailInst.java:43)
+	at io.kaitai.struct.testformats.ValidFailInst._read(ValidFailInst.java:30)
+	at io.kaitai.struct.testformats.ValidFailInst.&lt;init&gt;(ValidFailInst.java:27)
+	at io.kaitai.struct.testformats.ValidFailInst.&lt;init&gt;(ValidFailInst.java:16)
+	at io.kaitai.struct.testformats.ValidFailInst.fromFile(ValidFailInst.java:12)
+	at io.kaitai.struct.spec.TestValidFailInst.testValidFailInst(TestValidFailInst.java:13)
+... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1561063579", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1561063579'><pre>io.kaitai.struct.KaitaiStream$ValidationNotEqualError: /instances/inst: at pos 0: validation failed: not equal, expected 80, but got 49
+	at io.kaitai.struct.testformats.ValidFailInst.inst(ValidFailInst.java:43)
+	at io.kaitai.struct.testformats.ValidFailInst._read(ValidFailInst.java:30)
+	at io.kaitai.struct.testformats.ValidFailInst.&lt;init&gt;(ValidFailInst.java:27)
+	at io.kaitai.struct.testformats.ValidFailInst.&lt;init&gt;(ValidFailInst.java:16)
+	at io.kaitai.struct.testformats.ValidFailInst.fromFile(ValidFailInst.java:12)
+	at io.kaitai.struct.spec.TestValidFailInst.testValidFailInst(TestValidFailInst.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.TestNG.privateMain(TestNG.java:1385)
+	at org.testng.TestNG.main(TestNG.java:1354)
+</pre></div></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestValidFailInst@8c3b9d</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestValidFailMaxInt.testValidFailMaxInt()'><b>testValidFailMaxInt</b><br>Test class: io.kaitai.struct.spec.TestValidFailMaxInt</td>
+<td><div><pre>io.kaitai.struct.KaitaiStream$ValidationGreaterThanError: /seq/0: at pos 1: validation failed: not in range, max 12, but got 80
+	at io.kaitai.struct.testformats.ValidFailMaxInt._read(ValidFailMaxInt.java:32)
+	at io.kaitai.struct.testformats.ValidFailMaxInt.&lt;init&gt;(ValidFailMaxInt.java:27)
+	at io.kaitai.struct.testformats.ValidFailMaxInt.&lt;init&gt;(ValidFailMaxInt.java:16)
+	at io.kaitai.struct.testformats.ValidFailMaxInt.fromFile(ValidFailMaxInt.java:12)
+	at io.kaitai.struct.spec.TestValidFailMaxInt.testValidFailMaxInt(TestValidFailMaxInt.java:13)
+... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace457247584", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace457247584'><pre>io.kaitai.struct.KaitaiStream$ValidationGreaterThanError: /seq/0: at pos 1: validation failed: not in range, max 12, but got 80
+	at io.kaitai.struct.testformats.ValidFailMaxInt._read(ValidFailMaxInt.java:32)
+	at io.kaitai.struct.testformats.ValidFailMaxInt.&lt;init&gt;(ValidFailMaxInt.java:27)
+	at io.kaitai.struct.testformats.ValidFailMaxInt.&lt;init&gt;(ValidFailMaxInt.java:16)
+	at io.kaitai.struct.testformats.ValidFailMaxInt.fromFile(ValidFailMaxInt.java:12)
+	at io.kaitai.struct.spec.TestValidFailMaxInt.testValidFailMaxInt(TestValidFailMaxInt.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.TestNG.privateMain(TestNG.java:1385)
+	at org.testng.TestNG.main(TestNG.java:1354)
+</pre></div></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestValidFailMaxInt@76ed1b7c</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestValidFailMinInt.testValidFailMinInt()'><b>testValidFailMinInt</b><br>Test class: io.kaitai.struct.spec.TestValidFailMinInt</td>
+<td><div><pre>io.kaitai.struct.KaitaiStream$ValidationLessThanError: /seq/0: at pos 1: validation failed: not in range, min 123, but got 80
+	at io.kaitai.struct.testformats.ValidFailMinInt._read(ValidFailMinInt.java:32)
+	at io.kaitai.struct.testformats.ValidFailMinInt.&lt;init&gt;(ValidFailMinInt.java:27)
+	at io.kaitai.struct.testformats.ValidFailMinInt.&lt;init&gt;(ValidFailMinInt.java:16)
+	at io.kaitai.struct.testformats.ValidFailMinInt.fromFile(ValidFailMinInt.java:12)
+	at io.kaitai.struct.spec.TestValidFailMinInt.testValidFailMinInt(TestValidFailMinInt.java:13)
+... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace106999035", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace106999035'><pre>io.kaitai.struct.KaitaiStream$ValidationLessThanError: /seq/0: at pos 1: validation failed: not in range, min 123, but got 80
+	at io.kaitai.struct.testformats.ValidFailMinInt._read(ValidFailMinInt.java:32)
+	at io.kaitai.struct.testformats.ValidFailMinInt.&lt;init&gt;(ValidFailMinInt.java:27)
+	at io.kaitai.struct.testformats.ValidFailMinInt.&lt;init&gt;(ValidFailMinInt.java:16)
+	at io.kaitai.struct.testformats.ValidFailMinInt.fromFile(ValidFailMinInt.java:12)
+	at io.kaitai.struct.spec.TestValidFailMinInt.testValidFailMinInt(TestValidFailMinInt.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.TestNG.privateMain(TestNG.java:1385)
+	at org.testng.TestNG.main(TestNG.java:1354)
+</pre></div></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestValidFailMinInt@41c2284a</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestValidFailRangeBytes.testValidFailRangeBytes()'><b>testValidFailRangeBytes</b><br>Test class: io.kaitai.struct.spec.TestValidFailRangeBytes</td>
+<td><div><pre>io.kaitai.struct.KaitaiStream$ValidationGreaterThanError: /seq/0: at pos 2: validation failed: not in range, max [50 31], but got [50 41]
+	at io.kaitai.struct.testformats.ValidFailRangeBytes._read(ValidFailRangeBytes.java:35)
+	at io.kaitai.struct.testformats.ValidFailRangeBytes.&lt;init&gt;(ValidFailRangeBytes.java:27)
+	at io.kaitai.struct.testformats.ValidFailRangeBytes.&lt;init&gt;(ValidFailRangeBytes.java:16)
+	at io.kaitai.struct.testformats.ValidFailRangeBytes.fromFile(ValidFailRangeBytes.java:12)
+	at io.kaitai.struct.spec.TestValidFailRangeBytes.testValidFailRangeBytes(TestValidFailRangeBytes.java:13)
+... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1833789138", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1833789138'><pre>io.kaitai.struct.KaitaiStream$ValidationGreaterThanError: /seq/0: at pos 2: validation failed: not in range, max [50 31], but got [50 41]
+	at io.kaitai.struct.testformats.ValidFailRangeBytes._read(ValidFailRangeBytes.java:35)
+	at io.kaitai.struct.testformats.ValidFailRangeBytes.&lt;init&gt;(ValidFailRangeBytes.java:27)
+	at io.kaitai.struct.testformats.ValidFailRangeBytes.&lt;init&gt;(ValidFailRangeBytes.java:16)
+	at io.kaitai.struct.testformats.ValidFailRangeBytes.fromFile(ValidFailRangeBytes.java:12)
+	at io.kaitai.struct.spec.TestValidFailRangeBytes.testValidFailRangeBytes(TestValidFailRangeBytes.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.TestNG.privateMain(TestNG.java:1385)
+	at org.testng.TestNG.main(TestNG.java:1354)
+</pre></div></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestValidFailRangeBytes@65b3f4a4</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestValidFailRangeFloat.testValidFailRangeFloat()'><b>testValidFailRangeFloat</b><br>Test class: io.kaitai.struct.spec.TestValidFailRangeFloat</td>
+<td><div><pre>io.kaitai.struct.KaitaiStream$ValidationGreaterThanError: /seq/0: at pos 4: validation failed: not in range, max 0.4, but got 0.5
+	at io.kaitai.struct.testformats.ValidFailRangeFloat._read(ValidFailRangeFloat.java:35)
+	at io.kaitai.struct.testformats.ValidFailRangeFloat.&lt;init&gt;(ValidFailRangeFloat.java:27)
+	at io.kaitai.struct.testformats.ValidFailRangeFloat.&lt;init&gt;(ValidFailRangeFloat.java:16)
+	at io.kaitai.struct.testformats.ValidFailRangeFloat.fromFile(ValidFailRangeFloat.java:12)
+	at io.kaitai.struct.spec.TestValidFailRangeFloat.testValidFailRangeFloat(TestValidFailRangeFloat.java:13)
+... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1665197552", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1665197552'><pre>io.kaitai.struct.KaitaiStream$ValidationGreaterThanError: /seq/0: at pos 4: validation failed: not in range, max 0.4, but got 0.5
+	at io.kaitai.struct.testformats.ValidFailRangeFloat._read(ValidFailRangeFloat.java:35)
+	at io.kaitai.struct.testformats.ValidFailRangeFloat.&lt;init&gt;(ValidFailRangeFloat.java:27)
+	at io.kaitai.struct.testformats.ValidFailRangeFloat.&lt;init&gt;(ValidFailRangeFloat.java:16)
+	at io.kaitai.struct.testformats.ValidFailRangeFloat.fromFile(ValidFailRangeFloat.java:12)
+	at io.kaitai.struct.spec.TestValidFailRangeFloat.testValidFailRangeFloat(TestValidFailRangeFloat.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.TestNG.privateMain(TestNG.java:1385)
+	at org.testng.TestNG.main(TestNG.java:1354)
+</pre></div></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestValidFailRangeFloat@4ef37659</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestValidFailRangeInt.testValidFailRangeInt()'><b>testValidFailRangeInt</b><br>Test class: io.kaitai.struct.spec.TestValidFailRangeInt</td>
+<td><div><pre>io.kaitai.struct.KaitaiStream$ValidationGreaterThanError: /seq/0: at pos 1: validation failed: not in range, max 10, but got 80
+	at io.kaitai.struct.testformats.ValidFailRangeInt._read(ValidFailRangeInt.java:35)
+	at io.kaitai.struct.testformats.ValidFailRangeInt.&lt;init&gt;(ValidFailRangeInt.java:27)
+	at io.kaitai.struct.testformats.ValidFailRangeInt.&lt;init&gt;(ValidFailRangeInt.java:16)
+	at io.kaitai.struct.testformats.ValidFailRangeInt.fromFile(ValidFailRangeInt.java:12)
+	at io.kaitai.struct.spec.TestValidFailRangeInt.testValidFailRangeInt(TestValidFailRangeInt.java:13)
+... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1551945522", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1551945522'><pre>io.kaitai.struct.KaitaiStream$ValidationGreaterThanError: /seq/0: at pos 1: validation failed: not in range, max 10, but got 80
+	at io.kaitai.struct.testformats.ValidFailRangeInt._read(ValidFailRangeInt.java:35)
+	at io.kaitai.struct.testformats.ValidFailRangeInt.&lt;init&gt;(ValidFailRangeInt.java:27)
+	at io.kaitai.struct.testformats.ValidFailRangeInt.&lt;init&gt;(ValidFailRangeInt.java:16)
+	at io.kaitai.struct.testformats.ValidFailRangeInt.fromFile(ValidFailRangeInt.java:12)
+	at io.kaitai.struct.spec.TestValidFailRangeInt.testValidFailRangeInt(TestValidFailRangeInt.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.TestNG.privateMain(TestNG.java:1385)
+	at org.testng.TestNG.main(TestNG.java:1354)
+</pre></div></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestValidFailRangeInt@687e99d8</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestValidFailRangeStr.testValidFailRangeStr()'><b>testValidFailRangeStr</b><br>Test class: io.kaitai.struct.spec.TestValidFailRangeStr</td>
+<td><div><pre>io.kaitai.struct.KaitaiStream$ValidationGreaterThanError: /seq/0: at pos 2: validation failed: not in range, max P1, but got PA
+	at io.kaitai.struct.testformats.ValidFailRangeStr._read(ValidFailRangeStr.java:36)
+	at io.kaitai.struct.testformats.ValidFailRangeStr.&lt;init&gt;(ValidFailRangeStr.java:28)
+	at io.kaitai.struct.testformats.ValidFailRangeStr.&lt;init&gt;(ValidFailRangeStr.java:17)
+	at io.kaitai.struct.testformats.ValidFailRangeStr.fromFile(ValidFailRangeStr.java:13)
+	at io.kaitai.struct.spec.TestValidFailRangeStr.testValidFailRangeStr(TestValidFailRangeStr.java:13)
+... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace350059321", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace350059321'><pre>io.kaitai.struct.KaitaiStream$ValidationGreaterThanError: /seq/0: at pos 2: validation failed: not in range, max P1, but got PA
+	at io.kaitai.struct.testformats.ValidFailRangeStr._read(ValidFailRangeStr.java:36)
+	at io.kaitai.struct.testformats.ValidFailRangeStr.&lt;init&gt;(ValidFailRangeStr.java:28)
+	at io.kaitai.struct.testformats.ValidFailRangeStr.&lt;init&gt;(ValidFailRangeStr.java:17)
+	at io.kaitai.struct.testformats.ValidFailRangeStr.fromFile(ValidFailRangeStr.java:13)
+	at io.kaitai.struct.spec.TestValidFailRangeStr.testValidFailRangeStr(TestValidFailRangeStr.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.TestNG.privateMain(TestNG.java:1385)
+	at org.testng.TestNG.main(TestNG.java:1354)
+</pre></div></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestValidFailRangeStr@140c9f39</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestValidLong.testValidLong()'><b>testValidLong</b><br>Test class: io.kaitai.struct.spec.TestValidLong</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestValidLong@394df057</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestValidNotParsedIf.testValidNotParsedIf()'><b>testValidNotParsedIf</b><br>Test class: io.kaitai.struct.spec.TestValidNotParsedIf</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestValidNotParsedIf@32910148</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestValidOptionalId.testValidOptionalId()'><b>testValidOptionalId</b><br>Test class: io.kaitai.struct.spec.TestValidOptionalId</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestValidOptionalId@2e222612</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestValidShort.testValidShort()'><b>testValidShort</b><br>Test class: io.kaitai.struct.spec.TestValidShort</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestValidShort@6a03bcb1</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestValidSwitch.testValidSwitch()'><b>testValidSwitch</b><br>Test class: io.kaitai.struct.spec.TestValidSwitch</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestValidSwitch@ed7f8b4</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestYamlInts.testYamlInts()'><b>testYamlInts</b><br>Test class: io.kaitai.struct.spec.TestYamlInts</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestYamlInts@10d68fcd</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestZlibSurrounded.testZlibSurrounded()'><b>testZlibSurrounded</b><br>Test class: io.kaitai.struct.spec.TestZlibSurrounded</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestZlibSurrounded@672872e1</td></tr>
+<tr>
+<td title='io.kaitai.struct.spec.TestZlibWithHeader78.testZlibWithHeader78()'><b>testZlibWithHeader78</b><br>Test class: io.kaitai.struct.spec.TestZlibWithHeader78</td>
+<td></td>
+<td>0</td>
+<td>io.kaitai.struct.spec.TestZlibWithHeader78@d6e7bab</td></tr>
+</table><p>
+</body>
+</html>
