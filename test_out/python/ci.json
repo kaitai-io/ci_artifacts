@@ -1,13 +1,13 @@
 {
   "$meta": {
     "lang": "python",
-    "timestamp": "2023-06-28T19:46:45Z",
+    "timestamp": "2023-07-05T11:41:28Z",
     "ci": {
-      "ci": "travis",
-      "build_id": "264160237",
-      "job_id": "605113350",
-      "job_number": "468.17",
-      "url": "https://app.travis-ci.com/kaitai-io/ci_targets/jobs/605113350"
+      "ci": "github",
+      "run_id": "5463838046",
+      "run_number": "241",
+      "job_id": "14791970656",
+      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/5463838046/jobs/9945040747"
     }
   },
   "BcdUserTypeBe": {
@@ -248,7 +248,7 @@
       "file_name": null,
       "line_num": null,
       "message": "name 'Enum0' is not defined",
-      "trace": "Traceback (most recent call last):\n  File \"/home/travis/build/kaitai-io/ci_targets/tests/spec/python/test_enum_import.py\", line 9, in test_enum_import\n    with EnumImport.from_file('src/enum_0.bin') as r:\n  File \"/home/travis/build/kaitai-io/ci_targets/runtime/python/kaitaistruct.py\", line 44, in from_file\n    return cls(KaitaiStream(f))\n  File \"/home/travis/build/kaitai-io/ci_targets/tests/compiled/python/enum_import.py\", line 15, in __init__\n    self._read()\n  File \"/home/travis/build/kaitai-io/ci_targets/tests/compiled/python/enum_import.py\", line 18, in _read\n    self.pet_1 = KaitaiStream.resolve_enum(Enum0.Animal, self._io.read_u4le())\nNameError: name 'Enum0' is not defined"
+      "trace": "Traceback (most recent call last):\n  File \"/tests/spec/python/test_enum_import.py\", line 9, in test_enum_import\n    with EnumImport.from_file('src/enum_0.bin') as r:\n  File \"/runtime/python/kaitaistruct.py\", line 44, in from_file\n    return cls(KaitaiStream(f))\n  File \"/tests/compiled/python/enum_import.py\", line 15, in __init__\n    self._read()\n  File \"/tests/compiled/python/enum_import.py\", line 18, in _read\n    self.pet_1 = KaitaiStream.resolve_enum(Enum0.Animal, self._io.read_u4le())\nNameError: name 'Enum0' is not defined"
     },
     "is_kst": true
   },
@@ -355,7 +355,7 @@
       "file_name": null,
       "line_num": null,
       "message": "byte format requires -128 <= number <= 127",
-      "trace": "Traceback (most recent call last):\n  File \"/home/travis/build/kaitai-io/ci_targets/tests/spec/python/test_expr_bytes_non_literal.py\", line 11, in test_expr_bytes_non_literal\n    self.assertEqual(len(r.calc_bytes), 2)\n  File \"/home/travis/build/kaitai-io/ci_targets/tests/compiled/python/expr_bytes_non_literal.py\", line 27, in calc_bytes\n    self._m_calc_bytes = struct.pack('2b', self.one, self.two)\nstruct.error: byte format requires -128 <= number <= 127"
+      "trace": "Traceback (most recent call last):\n  File \"/tests/spec/python/test_expr_bytes_non_literal.py\", line 11, in test_expr_bytes_non_literal\n    self.assertEqual(len(r.calc_bytes), 2)\n  File \"/tests/compiled/python/expr_bytes_non_literal.py\", line 27, in calc_bytes\n    self._m_calc_bytes = struct.pack('2b', self.one, self.two)\nstruct.error: byte format requires -128 <= number <= 127"
     },
     "is_kst": true
   },
@@ -498,7 +498,7 @@
       "file_name": null,
       "line_num": null,
       "message": "'ImportsCircularB' object has no attribute 'back_ref'",
-      "trace": "Traceback (most recent call last):\n  File \"/home/travis/build/kaitai-io/ci_targets/tests/spec/python/test_imports_circular_a.py\", line 15, in test_imports_circular_a\n    self.assertIsNone(r.two.back_ref.two.back_ref)\nAttributeError: 'ImportsCircularB' object has no attribute 'back_ref'"
+      "trace": "Traceback (most recent call last):\n  File \"/tests/spec/python/test_imports_circular_a.py\", line 15, in test_imports_circular_a\n    self.assertIsNone(r.two.back_ref.two.back_ref)\nAttributeError: 'ImportsCircularB' object has no attribute 'back_ref'"
     },
     "is_kst": true
   },
