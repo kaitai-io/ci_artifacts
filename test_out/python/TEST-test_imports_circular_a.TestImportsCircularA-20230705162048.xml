@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="1" failures="0" file="test_imports_circular_a.py" name="test_imports_circular_a.TestImportsCircularA-20230705162048" skipped="0" tests="1" time="0.001" timestamp="2023-07-05T16:20:48">
+	<testcase classname="test_imports_circular_a.TestImportsCircularA" file="spec/python/test_imports_circular_a.py" line="8" name="test_imports_circular_a" time="0.001" timestamp="2023-07-05T16:20:48">
+		<error message="'ImportsCircularB' object has no attribute 'back_ref'" type="AttributeError">
+<![CDATA[Traceback (most recent call last):
+  File "/tests/spec/python/test_imports_circular_a.py", line 15, in test_imports_circular_a
+    self.assertIsNone(r.two.back_ref.two.back_ref)
+AttributeError: 'ImportsCircularB' object has no attribute 'back_ref'
+]]>		</error>
+		<system-out>
+<![CDATA[]]>		</system-out>
+		<system-err>
+<![CDATA[]]>		</system-err>
+	</testcase>
+</testsuite>
