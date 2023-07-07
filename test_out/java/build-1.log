@@ -1,3 +1,8 @@
+spec/java/src/io/kaitai/struct/spec/TestToCustomString.java:3: error: cannot find symbol
+import io.kaitai.struct.testformats.ToCustomString;
+                                   ^
+  symbol:   class ToCustomString
+  location: package io.kaitai.struct.testformats
 spec/java/src/io/kaitai/struct/spec/TestBufferedStruct.java:15: error: cannot find symbol
         assertEquals(r._raw_block1(), new byte[] {
                       ^
@@ -8,6 +13,16 @@ spec/java/src/io/kaitai/struct/spec/TestBufferedStruct.java:26: error: cannot fi
                       ^
   symbol:   method _raw_block2()
   location: variable r of type BufferedStruct
+spec/java/src/io/kaitai/struct/spec/TestToCustomString.java:9: error: cannot find symbol
+        ToCustomString r = ToCustomString.fromFile(SRC_DIR + "term_strz.bin");
+        ^
+  symbol:   class ToCustomString
+  location: class TestToCustomString
+spec/java/src/io/kaitai/struct/spec/TestToCustomString.java:9: error: cannot find symbol
+        ToCustomString r = ToCustomString.fromFile(SRC_DIR + "term_strz.bin");
+                           ^
+  symbol:   variable ToCustomString
+  location: class TestToCustomString
 compiled/java/src/io/kaitai/struct/testformats/ExprBits.java:56: error: possible loss of precision
         switch (a()) {
                  ^
@@ -53,4 +68,4 @@ compiled/java/src/io/kaitai/struct/testformats/SwitchRepeatExprInvalid.java:33: 
         this._raw_body = new ArrayList<byte[]>();
             ^
   symbol: variable _raw_body
-12 errors
+15 errors
