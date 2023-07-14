@@ -2,7 +2,7 @@ Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
 Copyright (C) Microsoft Corporation. All rights reserved.
 
 Building the projects in this solution one at a time. To enable parallel build, please add the "/m" switch.
-Build started 7/14/2023 6:53:03 PM.
+Build started 7/14/2023 6:53:11 PM.
 Project "C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\KS_TEST_CPP_STL.sln" on node 1 (default targets).
 ValidateSolutionConfiguration:
   Building solution configuration "Debug|x64".
@@ -135,9 +135,6 @@ Link:
   ks_tests.dir\Debug\test_nested_types2.obj
   ks_tests.dir\Debug\test_nested_types3.obj
   ks_tests.dir\Debug\test_non_standard.obj
-  ks_tests.dir\Debug\test_opaque_external_type.obj
-  ks_tests.dir\Debug\test_opaque_external_type_02_parent.obj
-  ks_tests.dir\Debug\test_opaque_with_param.obj
   ks_tests.dir\Debug\test_optional_id.obj
   ks_tests.dir\Debug\test_params_enum.obj
   ks_tests.dir\Debug\test_params_pass_array_usertype.obj
@@ -300,8 +297,6 @@ Link:
   ks_tests.dir\Debug\nested_types2.obj
   ks_tests.dir\Debug\nested_types3.obj
   ks_tests.dir\Debug\non_standard.obj
-  ks_tests.dir\Debug\opaque_external_type.obj
-  ks_tests.dir\Debug\opaque_with_param.obj
   ks_tests.dir\Debug\optional_id.obj
   ks_tests.dir\Debug\params_enum.obj
   ks_tests.dir\Debug\params_pass_array_usertype.obj
@@ -339,7 +334,6 @@ Link:
   ks_tests.dir\Debug\type_int_unary_op.obj
   ks_tests.dir\Debug\type_ternary.obj
   ks_tests.dir\Debug\type_ternary_2nd_falsy.obj
-  ks_tests.dir\Debug\type_ternary_opaque.obj
   ks_tests.dir\Debug\user_type.obj
   ks_tests.dir\Debug\valid_fail_anyof_int.obj
   ks_tests.dir\Debug\valid_fail_contents.obj
@@ -359,11 +353,9 @@ Link:
   ks_tests.dir\Debug\yaml_ints.obj
   ks_tests.dir\Debug\zlib_surrounded.obj
   ks_tests.dir\Debug\zlib_with_header_78.obj
-test_opaque_external_type_02_parent.obj : error LNK2019: unresolved external symbol "public: __cdecl opaque_external_type_02_parent_t::opaque_external_type_02_parent_t(class kaitai::kstream *,class kaitai::kstruct *,class opaque_external_type_02_parent_t *)" (??0opaque_external_type_02_parent_t@@QEAA@PEAVkstream@kaitai@@PEAVkstruct@2@PEAV0@@Z) referenced in function "public: void __cdecl test_opaque_external_type_02_parent::test_method(void)" (?test_method@test_opaque_external_type_02_parent@@QEAAXXZ) [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-opaque_external_type.obj : error LNK2019: unresolved external symbol "public: __cdecl term_strz_t::term_strz_t(class kaitai::kstream *,class kaitai::kstruct *,class term_strz_t *)" (??0term_strz_t@@QEAA@PEAVkstream@kaitai@@PEAVkstruct@2@PEAV0@@Z) referenced in function "private: void __cdecl opaque_external_type_t::_read(void)" (?_read@opaque_external_type_t@@AEAAXXZ) [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-type_ternary_opaque.obj : error LNK2001: unresolved external symbol "public: __cdecl term_strz_t::term_strz_t(class kaitai::kstream *,class kaitai::kstruct *,class term_strz_t *)" (??0term_strz_t@@QEAA@PEAVkstream@kaitai@@PEAVkstruct@2@PEAV0@@Z) [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-opaque_with_param.obj : error LNK2019: unresolved external symbol "public: __cdecl params_def_t::params_def_t(unsigned int,bool,class kaitai::kstream *,class kaitai::kstruct *,class params_def_t *)" (??0params_def_t@@QEAA@I_NPEAVkstream@kaitai@@PEAVkstruct@2@PEAV0@@Z) referenced in function "private: void __cdecl opaque_with_param_t::_read(void)" (?_read@opaque_with_param_t@@AEAAXXZ) [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\Debug\ks_tests.exe : fatal error LNK1120: 3 unresolved externals [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
+test_type_ternary_opaque.obj : error LNK2019: unresolved external symbol "public: __cdecl type_ternary_opaque_t::type_ternary_opaque_t(class kaitai::kstream *,class kaitai::kstruct *,class type_ternary_opaque_t *)" (??0type_ternary_opaque_t@@QEAA@PEAVkstream@kaitai@@PEAVkstruct@2@PEAV0@@Z) referenced in function "public: void __cdecl test_type_ternary_opaque::test_method(void)" (?test_method@test_type_ternary_opaque@@QEAAXXZ) [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
+test_type_ternary_opaque.obj : error LNK2019: unresolved external symbol "public: class term_strz_t * __cdecl type_ternary_opaque_t::dif(void)" (?dif@type_ternary_opaque_t@@QEAAPEAVterm_strz_t@@XZ) referenced in function "public: void __cdecl test_type_ternary_opaque::test_method(void)" (?test_method@test_type_ternary_opaque@@QEAAXXZ) [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
+C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\Debug\ks_tests.exe : fatal error LNK1120: 2 unresolved externals [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
 Done Building Project "C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj" (default targets) -- FAILED.
 Done Building Project "C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj.metaproj" (default targets) -- FAILED.
 Done Building Project "C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\KS_TEST_CPP_STL.sln" (default targets) -- FAILED.
@@ -374,13 +366,11 @@ Build FAILED.
 "C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj.metaproj" (default target) (3) ->
 "C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj" (default target) (4) ->
 (Link target) -> 
-  test_opaque_external_type_02_parent.obj : error LNK2019: unresolved external symbol "public: __cdecl opaque_external_type_02_parent_t::opaque_external_type_02_parent_t(class kaitai::kstream *,class kaitai::kstruct *,class opaque_external_type_02_parent_t *)" (??0opaque_external_type_02_parent_t@@QEAA@PEAVkstream@kaitai@@PEAVkstruct@2@PEAV0@@Z) referenced in function "public: void __cdecl test_opaque_external_type_02_parent::test_method(void)" (?test_method@test_opaque_external_type_02_parent@@QEAAXXZ) [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-  opaque_external_type.obj : error LNK2019: unresolved external symbol "public: __cdecl term_strz_t::term_strz_t(class kaitai::kstream *,class kaitai::kstruct *,class term_strz_t *)" (??0term_strz_t@@QEAA@PEAVkstream@kaitai@@PEAVkstruct@2@PEAV0@@Z) referenced in function "private: void __cdecl opaque_external_type_t::_read(void)" (?_read@opaque_external_type_t@@AEAAXXZ) [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-  type_ternary_opaque.obj : error LNK2001: unresolved external symbol "public: __cdecl term_strz_t::term_strz_t(class kaitai::kstream *,class kaitai::kstruct *,class term_strz_t *)" (??0term_strz_t@@QEAA@PEAVkstream@kaitai@@PEAVkstruct@2@PEAV0@@Z) [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-  opaque_with_param.obj : error LNK2019: unresolved external symbol "public: __cdecl params_def_t::params_def_t(unsigned int,bool,class kaitai::kstream *,class kaitai::kstruct *,class params_def_t *)" (??0params_def_t@@QEAA@I_NPEAVkstream@kaitai@@PEAVkstruct@2@PEAV0@@Z) referenced in function "private: void __cdecl opaque_with_param_t::_read(void)" (?_read@opaque_with_param_t@@AEAAXXZ) [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-  C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\Debug\ks_tests.exe : fatal error LNK1120: 3 unresolved externals [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
+  test_type_ternary_opaque.obj : error LNK2019: unresolved external symbol "public: __cdecl type_ternary_opaque_t::type_ternary_opaque_t(class kaitai::kstream *,class kaitai::kstruct *,class type_ternary_opaque_t *)" (??0type_ternary_opaque_t@@QEAA@PEAVkstream@kaitai@@PEAVkstruct@2@PEAV0@@Z) referenced in function "public: void __cdecl test_type_ternary_opaque::test_method(void)" (?test_method@test_type_ternary_opaque@@QEAAXXZ) [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
+  test_type_ternary_opaque.obj : error LNK2019: unresolved external symbol "public: class term_strz_t * __cdecl type_ternary_opaque_t::dif(void)" (?dif@type_ternary_opaque_t@@QEAAPEAVterm_strz_t@@XZ) referenced in function "public: void __cdecl test_type_ternary_opaque::test_method(void)" (?test_method@test_type_ternary_opaque@@QEAAXXZ) [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
+  C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\Debug\ks_tests.exe : fatal error LNK1120: 2 unresolved externals [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
 
     0 Warning(s)
-    5 Error(s)
+    3 Error(s)
 
-Time Elapsed 00:00:02.83
+Time Elapsed 00:00:02.72
