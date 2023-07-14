@@ -2,7 +2,7 @@ Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
 Copyright (C) Microsoft Corporation. All rights reserved.
 
 Building the projects in this solution one at a time. To enable parallel build, please add the "/m" switch.
-Build started 7/14/2023 7:02:58 PM.
+Build started 7/14/2023 7:03:10 PM.
 Project "C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\KS_TEST_CPP_STL.sln" on node 1 (default targets).
 ValidateSolutionConfiguration:
   Building solution configuration "Debug|x64".
@@ -135,9 +135,6 @@ Link:
   ks_tests.dir\Debug\test_nested_types2.obj
   ks_tests.dir\Debug\test_nested_types3.obj
   ks_tests.dir\Debug\test_non_standard.obj
-  ks_tests.dir\Debug\test_opaque_external_type.obj
-  ks_tests.dir\Debug\test_opaque_external_type_02_parent.obj
-  ks_tests.dir\Debug\test_opaque_with_param.obj
   ks_tests.dir\Debug\test_optional_id.obj
   ks_tests.dir\Debug\test_params_enum.obj
   ks_tests.dir\Debug\test_params_pass_array_int.obj
@@ -176,7 +173,6 @@ Link:
   ks_tests.dir\Debug\test_type_int_unary_op.obj
   ks_tests.dir\Debug\test_type_ternary.obj
   ks_tests.dir\Debug\test_type_ternary_2nd_falsy.obj
-  ks_tests.dir\Debug\test_type_ternary_opaque.obj
   ks_tests.dir\Debug\test_user_type.obj
   ks_tests.dir\Debug\test_valid_fail_anyof_int.obj
   ks_tests.dir\Debug\test_valid_fail_contents.obj
@@ -301,8 +297,6 @@ Link:
   ks_tests.dir\Debug\nested_types2.obj
   ks_tests.dir\Debug\nested_types3.obj
   ks_tests.dir\Debug\non_standard.obj
-  ks_tests.dir\Debug\opaque_external_type.obj
-  ks_tests.dir\Debug\opaque_with_param.obj
   ks_tests.dir\Debug\optional_id.obj
   ks_tests.dir\Debug\params_enum.obj
   ks_tests.dir\Debug\params_pass_array_int.obj
@@ -341,7 +335,6 @@ Link:
   ks_tests.dir\Debug\type_int_unary_op.obj
   ks_tests.dir\Debug\type_ternary.obj
   ks_tests.dir\Debug\type_ternary_2nd_falsy.obj
-  ks_tests.dir\Debug\type_ternary_opaque.obj
   ks_tests.dir\Debug\user_type.obj
   ks_tests.dir\Debug\valid_fail_anyof_int.obj
   ks_tests.dir\Debug\valid_fail_contents.obj
@@ -361,28 +354,27 @@ Link:
   ks_tests.dir\Debug\yaml_ints.obj
   ks_tests.dir\Debug\zlib_surrounded.obj
   ks_tests.dir\Debug\zlib_with_header_78.obj
-test_opaque_external_type_02_parent.obj : error LNK2019: unresolved external symbol "public: __cdecl opaque_external_type_02_parent_t::opaque_external_type_02_parent_t(class kaitai::kstream *,class kaitai::kstruct *,class opaque_external_type_02_parent_t *)" (??0opaque_external_type_02_parent_t@@QEAA@PEAVkstream@kaitai@@PEAVkstruct@2@PEAV0@@Z) referenced in function "public: void __cdecl test_opaque_external_type_02_parent::test_method(void)" (?test_method@test_opaque_external_type_02_parent@@QEAAXXZ) [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
-opaque_external_type.obj : error LNK2019: unresolved external symbol "public: __cdecl term_strz_t::term_strz_t(class kaitai::kstream *,class kaitai::kstruct *,class term_strz_t *)" (??0term_strz_t@@QEAA@PEAVkstream@kaitai@@PEAVkstruct@2@PEAV0@@Z) referenced in function "private: void __cdecl opaque_external_type_t::_read(void)" (?_read@opaque_external_type_t@@AEAAXXZ) [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
-type_ternary_opaque.obj : error LNK2001: unresolved external symbol "public: __cdecl term_strz_t::term_strz_t(class kaitai::kstream *,class kaitai::kstruct *,class term_strz_t *)" (??0term_strz_t@@QEAA@PEAVkstream@kaitai@@PEAVkstruct@2@PEAV0@@Z) [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
-opaque_with_param.obj : error LNK2019: unresolved external symbol "public: __cdecl params_def_t::params_def_t(unsigned int,bool,class kaitai::kstream *,class kaitai::kstruct *,class params_def_t *)" (??0params_def_t@@QEAA@I_NPEAVkstream@kaitai@@PEAVkstruct@2@PEAV0@@Z) referenced in function "private: void __cdecl opaque_with_param_t::_read(void)" (?_read@opaque_with_param_t@@AEAAXXZ) [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
-C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\Debug\ks_tests.exe : fatal error LNK1120: 3 unresolved externals [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
-Done Building Project "C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj" (default targets) -- FAILED.
-Done Building Project "C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj.metaproj" (default targets) -- FAILED.
-Done Building Project "C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\KS_TEST_CPP_STL.sln" (default targets) -- FAILED.
+  ks_tests.vcxproj -> C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\Debug\ks_tests.exe
+PostBuildEvent:
+  setlocal
+  powershell -noprofile -executionpolicy Bypass -file C:/Tools/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary C:/projects/ci-targets/tests/compiled/cpp_stl_11/bin/Debug/ks_tests.exe -installedDir C:/Tools/vcpkg/installed/x64-windows/debug/bin -OutVariable out
+  if %errorlevel% neq 0 goto :cmEnd
+  :cmEnd
+  endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+  :cmErrorLevel
+  exit /b %1
+  :cmDone
+  if %errorlevel% neq 0 goto :VCEnd
+  :VCEnd
+FinalizeBuildStatus:
+  Deleting file "ks_tests.dir\Debug\ks_tests.tlog\unsuccessfulbuild".
+  Touching "ks_tests.dir\Debug\ks_tests.tlog\ks_tests.lastbuildstate".
+Done Building Project "C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj" (default targets).
+Done Building Project "C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj.metaproj" (default targets).
+Done Building Project "C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\KS_TEST_CPP_STL.sln" (default targets).
 
-Build FAILED.
-
-"C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\KS_TEST_CPP_STL.sln" (default target) (1) ->
-"C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj.metaproj" (default target) (3) ->
-"C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj" (default target) (4) ->
-(Link target) -> 
-  test_opaque_external_type_02_parent.obj : error LNK2019: unresolved external symbol "public: __cdecl opaque_external_type_02_parent_t::opaque_external_type_02_parent_t(class kaitai::kstream *,class kaitai::kstruct *,class opaque_external_type_02_parent_t *)" (??0opaque_external_type_02_parent_t@@QEAA@PEAVkstream@kaitai@@PEAVkstruct@2@PEAV0@@Z) referenced in function "public: void __cdecl test_opaque_external_type_02_parent::test_method(void)" (?test_method@test_opaque_external_type_02_parent@@QEAAXXZ) [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
-  opaque_external_type.obj : error LNK2019: unresolved external symbol "public: __cdecl term_strz_t::term_strz_t(class kaitai::kstream *,class kaitai::kstruct *,class term_strz_t *)" (??0term_strz_t@@QEAA@PEAVkstream@kaitai@@PEAVkstruct@2@PEAV0@@Z) referenced in function "private: void __cdecl opaque_external_type_t::_read(void)" (?_read@opaque_external_type_t@@AEAAXXZ) [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
-  type_ternary_opaque.obj : error LNK2001: unresolved external symbol "public: __cdecl term_strz_t::term_strz_t(class kaitai::kstream *,class kaitai::kstruct *,class term_strz_t *)" (??0term_strz_t@@QEAA@PEAVkstream@kaitai@@PEAVkstruct@2@PEAV0@@Z) [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
-  opaque_with_param.obj : error LNK2019: unresolved external symbol "public: __cdecl params_def_t::params_def_t(unsigned int,bool,class kaitai::kstream *,class kaitai::kstruct *,class params_def_t *)" (??0params_def_t@@QEAA@I_NPEAVkstream@kaitai@@PEAVkstruct@2@PEAV0@@Z) referenced in function "private: void __cdecl opaque_with_param_t::_read(void)" (?_read@opaque_with_param_t@@AEAAXXZ) [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
-  C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\Debug\ks_tests.exe : fatal error LNK1120: 3 unresolved externals [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
-
+Build succeeded.
     0 Warning(s)
-    5 Error(s)
+    0 Error(s)
 
-Time Elapsed 00:00:02.71
+Time Elapsed 00:00:05.97
