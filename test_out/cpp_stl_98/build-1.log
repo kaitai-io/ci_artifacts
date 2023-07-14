@@ -1,8 +1,8 @@
 [  0%] Building CXX object CMakeFiles/ks_tests.dir/runtime/cpp_stl/kaitai/kaitaistream.cpp.o
 [  0%] Building CXX object CMakeFiles/ks_tests.dir/prereq/my_custom_fx.cpp.o
+[  0%] Building CXX object CMakeFiles/ks_tests.dir/prereq/custom_fx.cpp.o
 [  0%] Building CXX object CMakeFiles/ks_tests.dir/prereq/custom_fx_no_args.cpp.o
 [  1%] Building CXX object CMakeFiles/ks_tests.dir/test_combine_enum.cpp.o
-[  1%] Building CXX object CMakeFiles/ks_tests.dir/prereq/custom_fx.cpp.o
 [  1%] Building CXX object CMakeFiles/ks_tests.dir/test_integers_double_overflow.cpp.o
 [  1%] Building CXX object CMakeFiles/ks_tests.dir/test_recursive_one.cpp.o
 [  1%] Building CXX object CMakeFiles/ks_tests.dir/test_nested_types3.cpp.o
@@ -83,8 +83,8 @@ compilation terminated.
 [ 14%] Building CXX object CMakeFiles/ks_tests.dir/test_enum_int_range_u.cpp.o
 [ 15%] Building CXX object CMakeFiles/ks_tests.dir/main.cpp.o
 [ 15%] Building CXX object CMakeFiles/ks_tests.dir/test_repeat_until_calc_array_type.cpp.o
-[ 15%] Building CXX object CMakeFiles/ks_tests.dir/test_enum_long_range_u.cpp.o
 make[2]: *** [CMakeFiles/ks_tests.dir/test_expr_bytes_non_literal.cpp.o] Error 1
+[ 15%] Building CXX object CMakeFiles/ks_tests.dir/test_enum_long_range_u.cpp.o
 [ 15%] Building CXX object CMakeFiles/ks_tests.dir/test_cast_nested.cpp.o
 [ 15%] Building CXX object CMakeFiles/ks_tests.dir/test_default_endian_expr_is_le.cpp.o
 make[2]: *** [CMakeFiles/ks_tests.dir/test_params_pass_array_struct.cpp.o] Error 1
@@ -181,15 +181,16 @@ make[2]: *** [CMakeFiles/ks_tests.dir/test_params_pass_array_struct.cpp.o] Error
 [ 35%] Building CXX object CMakeFiles/ks_tests.dir/test_params_pass_array_str.cpp.o
 [ 35%] Building CXX object CMakeFiles/ks_tests.dir/test_expr_2.cpp.o
 [ 35%] Building CXX object CMakeFiles/ks_tests.dir/test_multiple_use.cpp.o
+[ 35%] Building CXX object CMakeFiles/ks_tests.dir/test_zlib_surrounded.cpp.o
 /tests/spec/cpp_stl_98/test_params_pass_array_str.cpp:4:35: fatal error: params_pass_array_str.h: No such file or directory
  #include "params_pass_array_str.h"
                                    ^
 compilation terminated.
-[ 35%] Building CXX object CMakeFiles/ks_tests.dir/test_zlib_surrounded.cpp.o
 [ 35%] Building CXX object CMakeFiles/ks_tests.dir/test_enum_import.cpp.o
 [ 36%] Building CXX object CMakeFiles/ks_tests.dir/test_switch_multi_bool_ops.cpp.o
 [ 36%] Building CXX object CMakeFiles/ks_tests.dir/test_nested_types2.cpp.o
 [ 36%] Building CXX object CMakeFiles/ks_tests.dir/test_fixed_contents.cpp.o
+[ 36%] Building CXX object CMakeFiles/ks_tests.dir/test_docstrings_docref.cpp.o
 In file included from /tests/spec/cpp_stl_98/test_enum_import.cpp:4:0:
 /tests/compiled/cpp_stl_98/enum_import.h:27:5: error: 'enum_0_t' does not name a type
      enum_0_t::animal_t m_pet_1;
@@ -212,10 +213,9 @@ In file included from /usr/include/boost/test/unit_test.hpp:19:0,
 /tests/spec/cpp_stl_98/test_enum_import.cpp:17:26: error: 'class enum_import_t' has no member named 'pet_2'
      BOOST_CHECK_EQUAL(r->pet_2(), enum_deep_t::container1_t::container2_t::ANIMAL_HARE);
                           ^
-[ 36%] Building CXX object CMakeFiles/ks_tests.dir/test_docstrings_docref.cpp.o
-make[2]: *** [CMakeFiles/ks_tests.dir/test_enum_import.cpp.o] Error 1
 [ 36%] Building CXX object CMakeFiles/ks_tests.dir/test_bits_byte_aligned.cpp.o
 [ 37%] Building CXX object CMakeFiles/ks_tests.dir/test_integers_min_max.cpp.o
+make[2]: *** [CMakeFiles/ks_tests.dir/test_enum_import.cpp.o] Error 1
 [ 37%] Building CXX object CMakeFiles/ks_tests.dir/test_switch_manual_int_size_eos.cpp.o
 [ 37%] Building CXX object CMakeFiles/ks_tests.dir/test_str_pad_term_empty.cpp.o
 [ 37%] Building CXX object CMakeFiles/ks_tests.dir/test_enum_to_i_class_border_1.cpp.o
@@ -281,11 +281,11 @@ make[2]: *** [CMakeFiles/ks_tests.dir/test_process_coerce_switch.cpp.o] Error 1
 [ 49%] Building CXX object CMakeFiles/ks_tests.dir/test_expr_calc_array_ops.cpp.o
 [ 49%] Building CXX object CMakeFiles/ks_tests.dir/test_cast_to_imported.cpp.o
 [ 49%] Building CXX object CMakeFiles/ks_tests.dir/test_floating_points.cpp.o
-[ 49%] Building CXX object CMakeFiles/ks_tests.dir/test_repeat_eos_struct.cpp.o
 /tests/spec/cpp_stl_98/test_expr_calc_array_ops.cpp:4:33: fatal error: expr_calc_array_ops.h: No such file or directory
  #include "expr_calc_array_ops.h"
                                  ^
 compilation terminated.
+[ 49%] Building CXX object CMakeFiles/ks_tests.dir/test_repeat_eos_struct.cpp.o
 [ 50%] Building CXX object CMakeFiles/ks_tests.dir/test_valid_fail_range_float.cpp.o
 [ 50%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/repeat_n_strz.cpp.o
 [ 50%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/instance_std_array.cpp.o
@@ -307,7 +307,6 @@ make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/repeat_n_strz.cp
 [ 51%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/nav_parent_switch.cpp.o
 [ 51%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/params_def.cpp.o
 [ 51%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/imported_root.cpp.o
-[ 51%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/meta_tags.cpp.o
 /tests/compiled/cpp_stl_98/params_def.cpp: In member function 'void params_def_t::_read()':
 /tests/compiled/cpp_stl_98/params_def.cpp:20:89: error: no matching function for call to 'kaitai::kstream::bytes_to_str(std::string, std::string)'
      m_buf = kaitai::kstream::bytes_to_str(m__io->read_bytes(len()), std::string("UTF-8"));
@@ -321,6 +320,7 @@ In file included from /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kai
                         ^
 /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistream.h:168:24: note:   no known conversion for argument 2 from 'std::string {aka std::basic_string<char>}' to 'const char*'
 make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/params_def.cpp.o] Error 1
+[ 51%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/meta_tags.cpp.o
 [ 52%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/io_local_var.cpp.o
 [ 52%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/bcd_user_type_le.cpp.o
 [ 52%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/debug_0.cpp.o
@@ -331,6 +331,18 @@ make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/params_def.cpp.o
 [ 53%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/bits_byte_aligned.cpp.o
 [ 53%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/switch_manual_enum.cpp.o
 [ 53%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/bits_unaligned_b64_le.cpp.o
+[ 54%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/cast_to_top.cpp.o
+[ 54%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/repeat_until_complex.cpp.o
+make[2]: *** [CMakeFiles/ks_tests.dir/test_expr_calc_array_ops.cpp.o] Error 1
+[ 54%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/valid_fail_min_int.cpp.o
+/tests/compiled/cpp_stl_98/yaml_ints.cpp: In member function 'int32_t yaml_ints_t::test_u8_dec()':
+/tests/compiled/cpp_stl_98/yaml_ints.cpp:50:19: warning: overflow in implicit constant conversion [-Woverflow]
+     m_test_u8_dec = 18446744073709551615ULL;
+                   ^
+/tests/compiled/cpp_stl_98/yaml_ints.cpp: In member function 'int32_t yaml_ints_t::test_u8_hex()':
+/tests/compiled/cpp_stl_98/yaml_ints.cpp:58:19: warning: overflow in implicit constant conversion [-Woverflow]
+     m_test_u8_hex = 18446744073709551615ULL;
+                   ^
 /tests/compiled/cpp_stl_98/nav_parent.cpp: In member function 'void nav_parent_t::entry_t::_read()':
 /tests/compiled/cpp_stl_98/nav_parent.cpp:109:135: error: no matching function for call to 'kaitai::kstream::bytes_to_str(std::string, std::string)'
      m_filename = kaitai::kstream::bytes_to_str(m__io->read_bytes(_parent()->_parent()->header()->filename_len()), std::string("UTF-8"));
@@ -344,19 +356,9 @@ In file included from /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kai
                         ^
 /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistream.h:168:24: note:   no known conversion for argument 2 from 'std::string {aka std::basic_string<char>}' to 'const char*'
 make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/nav_parent.cpp.o] Error 1
-[ 54%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/cast_to_top.cpp.o
-[ 54%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/repeat_until_complex.cpp.o
-[ 54%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/valid_fail_min_int.cpp.o
-/tests/compiled/cpp_stl_98/yaml_ints.cpp: In member function 'int32_t yaml_ints_t::test_u8_dec()':
-/tests/compiled/cpp_stl_98/yaml_ints.cpp:50:19: warning: overflow in implicit constant conversion [-Woverflow]
-     m_test_u8_dec = 18446744073709551615ULL;
-                   ^
-/tests/compiled/cpp_stl_98/yaml_ints.cpp: In member function 'int32_t yaml_ints_t::test_u8_hex()':
-/tests/compiled/cpp_stl_98/yaml_ints.cpp:58:19: warning: overflow in implicit constant conversion [-Woverflow]
-     m_test_u8_hex = 18446744073709551615ULL;
-                   ^
 [ 54%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/integers.cpp.o
 [ 54%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/valid_fail_eq_str.cpp.o
+[ 55%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/combine_str.cpp.o
 /tests/compiled/cpp_stl_98/switch_manual_enum.cpp: In member function 'void switch_manual_enum_t::opcode_t::strval_t::_read()':
 /tests/compiled/cpp_stl_98/switch_manual_enum.cpp:119:111: error: no matching function for call to 'kaitai::kstream::bytes_to_str(std::string, std::string)'
      m_value = kaitai::kstream::bytes_to_str(m__io->read_bytes_term(0, false, true, true), std::string("ASCII"));
@@ -370,12 +372,13 @@ In file included from /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kai
                         ^
 /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistream.h:168:24: note:   no known conversion for argument 2 from 'std::string {aka std::basic_string<char>}' to 'const char*'
 make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/switch_manual_enum.cpp.o] Error 1
-[ 55%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/combine_str.cpp.o
-make[2]: *** [CMakeFiles/ks_tests.dir/test_expr_calc_array_ops.cpp.o] Error 1
 [ 55%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/valid_fail_expr.cpp.o
 [ 55%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/nav_parent3.cpp.o
 [ 55%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/imports_circular_b.cpp.o
-[ 56%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/integers_double_overflow.cpp.o
+/tests/compiled/cpp_stl_98/combine_str.cpp: In member function 'void combine_str_t::_read()':
+/tests/compiled/cpp_stl_98/combine_str.cpp:31:116: error: no matching function for call to 'kaitai::kstream::bytes_to_str(std::string, std::string)'
+     m_str_term = kaitai::kstream::bytes_to_str(m__io->read_bytes_term(124, false, true, true), std::string("ASCII"));
+                                                                                                                    ^
 /tests/compiled/cpp_stl_98/valid_fail_eq_str.cpp: In member function 'void valid_fail_eq_str_t::_read()':
 /tests/compiled/cpp_stl_98/valid_fail_eq_str.cpp:19:85: error: no matching function for call to 'kaitai::kstream::bytes_to_str(std::string, std::string)'
      m_foo = kaitai::kstream::bytes_to_str(m__io->read_bytes(4), std::string("ASCII"));
@@ -388,12 +391,6 @@ In file included from /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kai
      static std::string bytes_to_str(const std::string src, const char *src_enc);
                         ^
 /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistream.h:168:24: note:   no known conversion for argument 2 from 'std::string {aka std::basic_string<char>}' to 'const char*'
-make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/valid_fail_eq_str.cpp.o] Error 1
-[ 56%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/enum_deep_literals.cpp.o
-/tests/compiled/cpp_stl_98/combine_str.cpp: In member function 'void combine_str_t::_read()':
-/tests/compiled/cpp_stl_98/combine_str.cpp:31:116: error: no matching function for call to 'kaitai::kstream::bytes_to_str(std::string, std::string)'
-     m_str_term = kaitai::kstream::bytes_to_str(m__io->read_bytes_term(124, false, true, true), std::string("ASCII"));
-                                                                                                                    ^
 /tests/compiled/cpp_stl_98/combine_str.cpp:31:116: note: candidate is:
 In file included from /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistruct.h:4:0,
                  from /tests/compiled/cpp_stl_98/combine_str.h:6,
@@ -436,8 +433,12 @@ In file included from /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kai
      static std::string bytes_to_str(const std::string src, const char *src_enc);
                         ^
 /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistream.h:168:24: note:   no known conversion for argument 2 from 'std::string {aka std::basic_string<char>}' to 'const char*'
+[ 56%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/integers_double_overflow.cpp.o
+make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/valid_fail_eq_str.cpp.o] Error 1
 make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/combine_str.cpp.o] Error 1
+[ 56%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/enum_deep_literals.cpp.o
 [ 56%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/process_xor4_const.cpp.o
+[ 56%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/expr_bytes_cmp.cpp.o
 /tests/compiled/cpp_stl_98/nav_parent3.cpp: In member function 'void nav_parent3_t::tag_t::_read()':
 /tests/compiled/cpp_stl_98/nav_parent3.cpp:53:86: error: no matching function for call to 'kaitai::kstream::bytes_to_str(std::string, std::string)'
      m_name = kaitai::kstream::bytes_to_str(m__io->read_bytes(4), std::string("ASCII"));
@@ -462,10 +463,9 @@ In file included from /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kai
      static std::string bytes_to_str(const std::string src, const char *src_enc);
                         ^
 /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistream.h:168:24: note:   no known conversion for argument 2 from 'std::string {aka std::basic_string<char>}' to 'const char*'
-make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/nav_parent3.cpp.o] Error 1
-[ 56%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/expr_bytes_cmp.cpp.o
 [ 56%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/switch_manual_int_size_else.cpp.o
 [ 57%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/params_call_short.cpp.o
+make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/nav_parent3.cpp.o] Error 1
 [ 57%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/params_pass_usertype.cpp.o
 [ 57%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/enum_long_range_s.cpp.o
 [ 57%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/str_encodings_default.cpp.o
@@ -495,8 +495,9 @@ In file included from /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kai
      static std::string bytes_to_str(const std::string src, const char *src_enc);
                         ^
 /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistream.h:168:24: note:   no known conversion for argument 2 from 'std::string {aka std::basic_string<char>}' to 'const char*'
-[ 58%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/nav_parent_switch_cast.cpp.o
 make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/params_call_short.cpp.o] Error 1
+[ 58%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/nav_parent_switch_cast.cpp.o
+[ 58%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/expr_io_eof.cpp.o
 /tests/compiled/cpp_stl_98/switch_manual_int_size_else.cpp: In member function 'void switch_manual_int_size_else_t::chunk_t::chunk_meta_t::_read()':
 /tests/compiled/cpp_stl_98/switch_manual_int_size_else.cpp:106:111: error: no matching function for call to 'kaitai::kstream::bytes_to_str(std::string, std::string)'
      m_title = kaitai::kstream::bytes_to_str(m__io->read_bytes_term(0, false, true, true), std::string("UTF-8"));
@@ -532,7 +533,6 @@ In file included from /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kai
      static std::string bytes_to_str(const std::string src, const char *src_enc);
                         ^
 /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistream.h:168:24: note:   no known conversion for argument 2 from 'std::string {aka std::basic_string<char>}' to 'const char*'
-[ 58%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/expr_io_eof.cpp.o
 make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/switch_manual_int_size_else.cpp.o] Error 1
 [ 58%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/imported_2.cpp.o
 [ 58%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/if_values.cpp.o
@@ -596,7 +596,6 @@ make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/nav_parent_switc
 [ 60%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/repeat_eos_u4.cpp.o
 [ 60%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/imports_abs.cpp.o
 [ 60%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/bits_simple.cpp.o
-[ 60%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/optional_id.cpp.o
 /tests/compiled/cpp_stl_98/expr_str_ops.cpp: In member function 'void expr_str_ops_t::_read()':
 /tests/compiled/cpp_stl_98/expr_str_ops.cpp:34:85: error: no matching function for call to 'kaitai::kstream::bytes_to_str(std::string, std::string)'
      m_one = kaitai::kstream::bytes_to_str(m__io->read_bytes(5), std::string("ASCII"));
@@ -621,7 +620,6 @@ In file included from /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kai
 /tests/compiled/cpp_stl_98/expr_str_ops.cpp:103:17: error: 'stoi' is not a member of 'std'
      m_to_i_r2 = std::stoi(std::string("1010110"), 0, 2);
                  ^
-[ 61%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/instance_user_array.cpp.o
 /tests/compiled/cpp_stl_98/expr_str_ops.cpp: In member function 'int32_t expr_str_ops_t::to_i_r10()':
 /tests/compiled/cpp_stl_98/expr_str_ops.cpp:135:18: error: 'stoi' is not a member of 'std'
      m_to_i_r10 = std::stoi(std::string("-072"));
@@ -631,12 +629,15 @@ In file included from /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kai
      m_to_i_attr = std::stoi(std::string("9173"));
                    ^
 make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/expr_str_ops.cpp.o] Error 1
+[ 60%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/optional_id.cpp.o
+[ 61%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/instance_user_array.cpp.o
 [ 61%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/bits_signed_shift_b32_le.cpp.o
 [ 61%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/instance_io_user.cpp.o
 [ 61%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/switch_integers.cpp.o
 [ 61%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/type_ternary.cpp.o
 [ 62%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/non_standard.cpp.o
 [ 62%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/params_pass_array_usertype.cpp.o
+[ 62%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/js_signed_right_shift.cpp.o
 /tests/compiled/cpp_stl_98/instance_user_array.cpp: In member function 'std::vector<instance_user_array_t::entry_t*>* instance_user_array_t::user_entries()':
 /tests/compiled/cpp_stl_98/instance_user_array.cpp:88:33: error: cannot convert 'std::string {aka std::basic_string<char>}' to 'std::vector<std::basic_string<char> >*' in assignment
              m__raw_user_entries = m__io->read_bytes(entry_size());
@@ -673,10 +674,8 @@ In file included from /tests/compiled/cpp_stl_98/instance_user_array.cpp:3:0:
      class entry_t : public kaitai::kstruct {
            ^
 /tests/compiled/cpp_stl_98/instance_user_array.h:28:11: note:   candidate expects 1 argument, 3 provided
-make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/instance_user_array.cpp.o] Error 1
-[ 62%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/js_signed_right_shift.cpp.o
 [ 62%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/switch_manual_str_else.cpp.o
-[ 63%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/switch_manual_enum_invalid.cpp.o
+make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/instance_user_array.cpp.o] Error 1
 /tests/compiled/cpp_stl_98/instance_io_user.cpp: In member function 'std::string instance_io_user_t::entry_t::name()':
 /tests/compiled/cpp_stl_98/instance_io_user.cpp:84:107: error: no matching function for call to 'kaitai::kstream::bytes_to_str(std::string, std::string)'
      m_name = kaitai::kstream::bytes_to_str(io->read_bytes_term(0, false, true, true), std::string("UTF-8"));
@@ -689,6 +688,7 @@ In file included from /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kai
      static std::string bytes_to_str(const std::string src, const char *src_enc);
                         ^
 /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistream.h:168:24: note:   no known conversion for argument 2 from 'std::string {aka std::basic_string<char>}' to 'const char*'
+[ 63%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/switch_manual_enum_invalid.cpp.o
 /tests/compiled/cpp_stl_98/instance_io_user.cpp: In member function 'void instance_io_user_t::strings_obj_t::_read()':
 /tests/compiled/cpp_stl_98/instance_io_user.cpp:108:126: error: no matching function for call to 'kaitai::kstream::bytes_to_str(std::string, std::string)'
              m_str->push_back(kaitai::kstream::bytes_to_str(m__io->read_bytes_term(0, false, true, true), std::string("UTF-8")));
@@ -705,32 +705,8 @@ make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/instance_io_user
 [ 63%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/type_int_unary_op.cpp.o
 [ 63%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/bits_signed_res_b32_be.cpp.o
 [ 63%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/params_pass_struct.cpp.o
-/tests/compiled/cpp_stl_98/switch_manual_str_else.cpp: In member function 'void switch_manual_str_else_t::opcode_t::_read()':
-/tests/compiled/cpp_stl_98/switch_manual_str_else.cpp:55:86: error: no matching function for call to 'kaitai::kstream::bytes_to_str(std::string, std::string)'
-     m_code = kaitai::kstream::bytes_to_str(m__io->read_bytes(1), std::string("ASCII"));
-                                                                                      ^
-/tests/compiled/cpp_stl_98/switch_manual_str_else.cpp:55:86: note: candidate is:
-In file included from /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistruct.h:4:0,
-                 from /tests/compiled/cpp_stl_98/switch_manual_str_else.h:6,
-                 from /tests/compiled/cpp_stl_98/switch_manual_str_else.cpp:3:
-/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistream.h:168:24: note: static std::string kaitai::kstream::bytes_to_str(std::string, const char*)
-     static std::string bytes_to_str(const std::string src, const char *src_enc);
-                        ^
-/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistream.h:168:24: note:   no known conversion for argument 2 from 'std::string {aka std::basic_string<char>}' to 'const char*'
-/tests/compiled/cpp_stl_98/switch_manual_str_else.cpp: In member function 'void switch_manual_str_else_t::opcode_t::strval_t::_read()':
-/tests/compiled/cpp_stl_98/switch_manual_str_else.cpp:116:111: error: no matching function for call to 'kaitai::kstream::bytes_to_str(std::string, std::string)'
-     m_value = kaitai::kstream::bytes_to_str(m__io->read_bytes_term(0, false, true, true), std::string("ASCII"));
-                                                                                                               ^
-/tests/compiled/cpp_stl_98/switch_manual_str_else.cpp:116:111: note: candidate is:
-In file included from /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistruct.h:4:0,
-                 from /tests/compiled/cpp_stl_98/switch_manual_str_else.h:6,
-                 from /tests/compiled/cpp_stl_98/switch_manual_str_else.cpp:3:
-/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistream.h:168:24: note: static std::string kaitai::kstream::bytes_to_str(std::string, const char*)
-     static std::string bytes_to_str(const std::string src, const char *src_enc);
-                        ^
-/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistream.h:168:24: note:   no known conversion for argument 2 from 'std::string {aka std::basic_string<char>}' to 'const char*'
 [ 63%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/switch_manual_int_size.cpp.o
-make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/switch_manual_str_else.cpp.o] Error 1
+[ 64%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/process_to_user.cpp.o
 /tests/compiled/cpp_stl_98/switch_manual_enum_invalid.cpp: In member function 'void switch_manual_enum_invalid_t::opcode_t::strval_t::_read()':
 /tests/compiled/cpp_stl_98/switch_manual_enum_invalid.cpp:119:111: error: no matching function for call to 'kaitai::kstream::bytes_to_str(std::string, std::string)'
      m_value = kaitai::kstream::bytes_to_str(m__io->read_bytes_term(0, false, true, true), std::string("ASCII"));
@@ -743,26 +719,36 @@ In file included from /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kai
      static std::string bytes_to_str(const std::string src, const char *src_enc);
                         ^
 /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistream.h:168:24: note:   no known conversion for argument 2 from 'std::string {aka std::basic_string<char>}' to 'const char*'
-[ 64%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/process_to_user.cpp.o
-make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/switch_manual_enum_invalid.cpp.o] Error 1
-[ 64%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/nav_parent_vs_value_inst.cpp.o
-[ 64%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/expr_2.cpp.o
-[ 64%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/switch_cast.cpp.o
-[ 64%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/process_xor_value.cpp.o
-[ 65%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/bytes_pad_term.cpp.o
-/tests/compiled/cpp_stl_98/process_to_user.cpp: In member function 'void process_to_user_t::just_str_t::_read()':
-/tests/compiled/cpp_stl_98/process_to_user.cpp:52:89: error: no matching function for call to 'kaitai::kstream::bytes_to_str(std::string, std::string)'
-     m_str = kaitai::kstream::bytes_to_str(m__io->read_bytes_full(), std::string("UTF-8"));
-                                                                                         ^
-/tests/compiled/cpp_stl_98/process_to_user.cpp:52:89: note: candidate is:
+/tests/compiled/cpp_stl_98/switch_manual_str_else.cpp: In member function 'void switch_manual_str_else_t::opcode_t::_read()':
+/tests/compiled/cpp_stl_98/switch_manual_str_else.cpp:55:86: error: no matching function for call to 'kaitai::kstream::bytes_to_str(std::string, std::string)'
+     m_code = kaitai::kstream::bytes_to_str(m__io->read_bytes(1), std::string("ASCII"));
+                                                                                      ^
+/tests/compiled/cpp_stl_98/switch_manual_str_else.cpp:55:86: note: candidate is:
 In file included from /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistruct.h:4:0,
-                 from /tests/compiled/cpp_stl_98/process_to_user.h:6,
-                 from /tests/compiled/cpp_stl_98/process_to_user.cpp:3:
+                 from /tests/compiled/cpp_stl_98/switch_manual_str_else.h:6,
+                 from /tests/compiled/cpp_stl_98/switch_manual_str_else.cpp:3:
 /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistream.h:168:24: note: static std::string kaitai::kstream::bytes_to_str(std::string, const char*)
      static std::string bytes_to_str(const std::string src, const char *src_enc);
                         ^
 /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistream.h:168:24: note:   no known conversion for argument 2 from 'std::string {aka std::basic_string<char>}' to 'const char*'
-make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/process_to_user.cpp.o] Error 1
+make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/switch_manual_enum_invalid.cpp.o] Error 1
+/tests/compiled/cpp_stl_98/switch_manual_str_else.cpp: In member function 'void switch_manual_str_else_t::opcode_t::strval_t::_read()':
+/tests/compiled/cpp_stl_98/switch_manual_str_else.cpp:116:111: error: no matching function for call to 'kaitai::kstream::bytes_to_str(std::string, std::string)'
+     m_value = kaitai::kstream::bytes_to_str(m__io->read_bytes_term(0, false, true, true), std::string("ASCII"));
+                                                                                                               ^
+/tests/compiled/cpp_stl_98/switch_manual_str_else.cpp:116:111: note: candidate is:
+In file included from /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistruct.h:4:0,
+                 from /tests/compiled/cpp_stl_98/switch_manual_str_else.h:6,
+                 from /tests/compiled/cpp_stl_98/switch_manual_str_else.cpp:3:
+/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistream.h:168:24: note: static std::string kaitai::kstream::bytes_to_str(std::string, const char*)
+     static std::string bytes_to_str(const std::string src, const char *src_enc);
+                        ^
+/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistream.h:168:24: note:   no known conversion for argument 2 from 'std::string {aka std::basic_string<char>}' to 'const char*'
+[ 64%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/nav_parent_vs_value_inst.cpp.o
+make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/switch_manual_str_else.cpp.o] Error 1
+[ 64%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/expr_2.cpp.o
+[ 64%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/switch_cast.cpp.o
+[ 64%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/process_xor_value.cpp.o
 /tests/compiled/cpp_stl_98/switch_manual_int_size.cpp: In member function 'void switch_manual_int_size_t::chunk_t::chunk_meta_t::_read()':
 /tests/compiled/cpp_stl_98/switch_manual_int_size.cpp:109:111: error: no matching function for call to 'kaitai::kstream::bytes_to_str(std::string, std::string)'
      m_title = kaitai::kstream::bytes_to_str(m__io->read_bytes_term(0, false, true, true), std::string("UTF-8"));
@@ -786,10 +772,6 @@ In file included from /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kai
      static std::string bytes_to_str(const std::string src, const char *src_enc);
                         ^
 /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistream.h:168:24: note:   no known conversion for argument 2 from 'std::string {aka std::basic_string<char>}' to 'const char*'
-/tests/compiled/cpp_stl_98/nav_parent_vs_value_inst.cpp: In member function 'void nav_parent_vs_value_inst_t::_read()':
-/tests/compiled/cpp_stl_98/nav_parent_vs_value_inst.cpp:19:110: error: no matching function for call to 'kaitai::kstream::bytes_to_str(std::string, std::string)'
-     m_s1 = kaitai::kstream::bytes_to_str(m__io->read_bytes_term(124, false, true, true), std::string("UTF-8"));
-                                                                                                              ^
 /tests/compiled/cpp_stl_98/switch_manual_int_size.cpp: In member function 'void switch_manual_int_size_t::chunk_t::chunk_dir_t::_read()':
 /tests/compiled/cpp_stl_98/switch_manual_int_size.cpp:138:106: error: no matching function for call to 'kaitai::kstream::bytes_to_str(std::string, std::string)'
              m_entries->push_back(kaitai::kstream::bytes_to_str(m__io->read_bytes(4), std::string("UTF-8")));
@@ -802,6 +784,28 @@ In file included from /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kai
      static std::string bytes_to_str(const std::string src, const char *src_enc);
                         ^
 /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistream.h:168:24: note:   no known conversion for argument 2 from 'std::string {aka std::basic_string<char>}' to 'const char*'
+[ 65%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/bytes_pad_term.cpp.o
+/tests/compiled/cpp_stl_98/process_to_user.cpp: In member function 'void process_to_user_t::just_str_t::_read()':
+/tests/compiled/cpp_stl_98/process_to_user.cpp:52:89: error: no matching function for call to 'kaitai::kstream::bytes_to_str(std::string, std::string)'
+     m_str = kaitai::kstream::bytes_to_str(m__io->read_bytes_full(), std::string("UTF-8"));
+                                                                                         ^
+/tests/compiled/cpp_stl_98/process_to_user.cpp:52:89: note: candidate is:
+In file included from /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistruct.h:4:0,
+                 from /tests/compiled/cpp_stl_98/process_to_user.h:6,
+                 from /tests/compiled/cpp_stl_98/process_to_user.cpp:3:
+/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistream.h:168:24: note: static std::string kaitai::kstream::bytes_to_str(std::string, const char*)
+     static std::string bytes_to_str(const std::string src, const char *src_enc);
+                        ^
+/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistream.h:168:24: note:   no known conversion for argument 2 from 'std::string {aka std::basic_string<char>}' to 'const char*'
+[ 65%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/index_sizes.cpp.o
+make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/process_to_user.cpp.o] Error 1
+make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/switch_manual_int_size.cpp.o] Error 1
+[ 65%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/switch_bytearray.cpp.o
+[ 65%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/index_to_param_expr.cpp.o
+/tests/compiled/cpp_stl_98/nav_parent_vs_value_inst.cpp: In member function 'void nav_parent_vs_value_inst_t::_read()':
+/tests/compiled/cpp_stl_98/nav_parent_vs_value_inst.cpp:19:110: error: no matching function for call to 'kaitai::kstream::bytes_to_str(std::string, std::string)'
+     m_s1 = kaitai::kstream::bytes_to_str(m__io->read_bytes_term(124, false, true, true), std::string("UTF-8"));
+                                                                                                              ^
 /tests/compiled/cpp_stl_98/nav_parent_vs_value_inst.cpp:19:110: note: candidate is:
 In file included from /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistruct.h:4:0,
                  from /tests/compiled/cpp_stl_98/nav_parent_vs_value_inst.h:6,
@@ -810,13 +814,10 @@ In file included from /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kai
      static std::string bytes_to_str(const std::string src, const char *src_enc);
                         ^
 /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistream.h:168:24: note:   no known conversion for argument 2 from 'std::string {aka std::basic_string<char>}' to 'const char*'
-[ 65%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/index_sizes.cpp.o
 /tests/compiled/cpp_stl_98/expr_2.cpp: In member function 'void expr_2_t::mod_str_t::_read()':
 /tests/compiled/cpp_stl_98/expr_2.cpp:64:93: error: no matching function for call to 'kaitai::kstream::bytes_to_str(std::string, std::string)'
      m_str = kaitai::kstream::bytes_to_str(m__io->read_bytes(len_mod()), std::string("UTF-8"));
                                                                                              ^
-[ 65%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/switch_bytearray.cpp.o
-make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/switch_manual_int_size.cpp.o] Error 1
 /tests/compiled/cpp_stl_98/expr_2.cpp:64:93: note: candidate is:
 In file included from /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistruct.h:4:0,
                  from /tests/compiled/cpp_stl_98/expr_2.h:6,
@@ -837,11 +838,11 @@ In file included from /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kai
      static std::string bytes_to_str(const std::string src, const char *src_enc);
                         ^
 /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistream.h:168:24: note:   no known conversion for argument 2 from 'std::string {aka std::basic_string<char>}' to 'const char*'
-make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/nav_parent_vs_value_inst.cpp.o] Error 1
-[ 65%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/index_to_param_expr.cpp.o
 make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/expr_2.cpp.o] Error 1
 [ 65%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/process_xor4_value.cpp.o
+make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/nav_parent_vs_value_inst.cpp.o] Error 1
 [ 66%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/zlib_with_header_78.cpp.o
+[ 66%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/default_endian_expr_is_le.cpp.o
 /tests/compiled/cpp_stl_98/switch_cast.cpp: In member function 'void switch_cast_t::strval_t::_read()':
 /tests/compiled/cpp_stl_98/switch_cast.cpp:122:111: error: no matching function for call to 'kaitai::kstream::bytes_to_str(std::string, std::string)'
      m_value = kaitai::kstream::bytes_to_str(m__io->read_bytes_term(0, false, true, true), std::string("ASCII"));
@@ -855,8 +856,20 @@ In file included from /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kai
                         ^
 /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistream.h:168:24: note:   no known conversion for argument 2 from 'std::string {aka std::basic_string<char>}' to 'const char*'
 make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/switch_cast.cpp.o] Error 1
-[ 66%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/default_endian_expr_is_le.cpp.o
 [ 66%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/bcd_user_type_be.cpp.o
+/tests/compiled/cpp_stl_98/switch_bytearray.cpp: In member function 'void switch_bytearray_t::opcode_t::strval_t::_read()':
+/tests/compiled/cpp_stl_98/switch_bytearray.cpp:118:111: error: no matching function for call to 'kaitai::kstream::bytes_to_str(std::string, std::string)'
+     m_value = kaitai::kstream::bytes_to_str(m__io->read_bytes_term(0, false, true, true), std::string("ASCII"));
+                                                                                                               ^
+/tests/compiled/cpp_stl_98/switch_bytearray.cpp:118:111: note: candidate is:
+In file included from /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistruct.h:4:0,
+                 from /tests/compiled/cpp_stl_98/switch_bytearray.h:6,
+                 from /tests/compiled/cpp_stl_98/switch_bytearray.cpp:3:
+/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistream.h:168:24: note: static std::string kaitai::kstream::bytes_to_str(std::string, const char*)
+     static std::string bytes_to_str(const std::string src, const char *src_enc);
+                        ^
+/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistream.h:168:24: note:   no known conversion for argument 2 from 'std::string {aka std::basic_string<char>}' to 'const char*'
+make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/switch_bytearray.cpp.o] Error 1
 [ 66%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/enum_of_value_inst.cpp.o
 /tests/compiled/cpp_stl_98/index_sizes.cpp: In member function 'void index_sizes_t::_read()':
 /tests/compiled/cpp_stl_98/index_sizes.cpp:29:112: error: no matching function for call to 'kaitai::kstream::bytes_to_str(std::string, std::string)'
@@ -870,20 +883,6 @@ In file included from /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kai
      static std::string bytes_to_str(const std::string src, const char *src_enc);
                         ^
 /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistream.h:168:24: note:   no known conversion for argument 2 from 'std::string {aka std::basic_string<char>}' to 'const char*'
-make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/index_sizes.cpp.o] Error 1
-/tests/compiled/cpp_stl_98/switch_bytearray.cpp: In member function 'void switch_bytearray_t::opcode_t::strval_t::_read()':
-/tests/compiled/cpp_stl_98/switch_bytearray.cpp:118:111: error: no matching function for call to 'kaitai::kstream::bytes_to_str(std::string, std::string)'
-     m_value = kaitai::kstream::bytes_to_str(m__io->read_bytes_term(0, false, true, true), std::string("ASCII"));
-                                                                                                               ^
-/tests/compiled/cpp_stl_98/switch_bytearray.cpp:118:111: note: candidate is:
-In file included from /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistruct.h:4:0,
-                 from /tests/compiled/cpp_stl_98/switch_bytearray.h:6,
-                 from /tests/compiled/cpp_stl_98/switch_bytearray.cpp:3:
-/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistream.h:168:24: note: static std::string kaitai::kstream::bytes_to_str(std::string, const char*)
-     static std::string bytes_to_str(const std::string src, const char *src_enc);
-                        ^
-/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistream.h:168:24: note:   no known conversion for argument 2 from 'std::string {aka std::basic_string<char>}' to 'const char*'
-[ 67%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/str_pad_term.cpp.o
 /tests/compiled/cpp_stl_98/index_to_param_expr.cpp: In member function 'void index_to_param_expr_t::block_t::_read()':
 /tests/compiled/cpp_stl_98/index_to_param_expr.cpp:63:111: error: no matching function for call to 'kaitai::kstream::bytes_to_str(std::string, std::string)'
      m_buf = kaitai::kstream::bytes_to_str(m__io->read_bytes(_root()->sizes()->at(idx())), std::string("ASCII"));
@@ -896,12 +895,14 @@ In file included from /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kai
      static std::string bytes_to_str(const std::string src, const char *src_enc);
                         ^
 /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistream.h:168:24: note:   no known conversion for argument 2 from 'std::string {aka std::basic_string<char>}' to 'const char*'
-make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/switch_bytearray.cpp.o] Error 1
+[ 67%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/str_pad_term.cpp.o
+make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/index_sizes.cpp.o] Error 1
 [ 67%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/nested_type_param.cpp.o
 make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/index_to_param_expr.cpp.o] Error 1
 [ 67%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/nav_parent_false2.cpp.o
 [ 67%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/expr_if_int_ops.cpp.o
 [ 67%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/expr_sizeof_value_sized.cpp.o
+[ 68%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/if_instances.cpp.o
 /tests/compiled/cpp_stl_98/str_pad_term.cpp: In member function 'void str_pad_term_t::_read()':
 /tests/compiled/cpp_stl_98/str_pad_term.cpp:18:130: error: no matching function for call to 'kaitai::kstream::bytes_to_str(std::string, std::string)'
      m_str_pad = kaitai::kstream::bytes_to_str(kaitai::kstream::bytes_strip_right(m__io->read_bytes(20), 64), std::string("UTF-8"));
@@ -947,11 +948,8 @@ In file included from /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kai
      static std::string bytes_to_str(const std::string src, const char *src_enc);
                         ^
 /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistream.h:168:24: note:   no known conversion for argument 2 from 'std::string {aka std::basic_string<char>}' to 'const char*'
-[ 68%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/if_instances.cpp.o
 make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/str_pad_term.cpp.o] Error 1
 [ 68%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/valid_fail_range_bytes.cpp.o
-[ 68%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/combine_bool.cpp.o
-[ 68%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/term_bytes.cpp.o
 /tests/compiled/cpp_stl_98/nested_type_param.cpp: In member function 'void nested_type_param_t::nested_t::my_type_t::_read()':
 /tests/compiled/cpp_stl_98/nested_type_param.cpp:68:93: error: no matching function for call to 'kaitai::kstream::bytes_to_str(std::string, std::string)'
      m_body = kaitai::kstream::bytes_to_str(m__io->read_bytes(my_len()), std::string("ASCII"));
@@ -965,6 +963,8 @@ In file included from /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kai
                         ^
 /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistream.h:168:24: note:   no known conversion for argument 2 from 'std::string {aka std::basic_string<char>}' to 'const char*'
 make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/nested_type_param.cpp.o] Error 1
+[ 68%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/combine_bool.cpp.o
+[ 68%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/term_bytes.cpp.o
 [ 68%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/default_endian_expr_is_be.cpp.o
 [ 69%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/type_ternary_2nd_falsy.cpp.o
 [ 69%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/ts_packet_header.cpp.o
@@ -979,7 +979,6 @@ make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/nested_type_para
 /tests/compiled/cpp_stl_98/expr_str_encodings.cpp:26:95: error: no matching function for call to 'kaitai::kstream::bytes_to_str(std::string, std::string)'
      m_str1 = kaitai::kstream::bytes_to_str(m__io->read_bytes(len_of_1()), std::string("ASCII"));
                                                                                                ^
-[ 71%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/imports_abs_abs.cpp.o
 /tests/compiled/cpp_stl_98/expr_str_encodings.cpp:26:95: note: candidate is:
 In file included from /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistruct.h:4:0,
                  from /tests/compiled/cpp_stl_98/expr_str_encodings.h:6,
@@ -1034,9 +1033,12 @@ In file included from /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kai
                         ^
 /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistream.h:168:24: note:   no known conversion for argument 2 from 'std::string {aka std::basic_string<char>}' to 'const char*'
 make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/expr_str_encodings.cpp.o] Error 1
+[ 71%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/imports_abs_abs.cpp.o
 [ 71%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/nav_root.cpp.o
 [ 71%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/nested_same_name.cpp.o
 [ 71%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/float_to_i.cpp.o
+[ 71%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/bits_signed_shift_b64_le.cpp.o
+[ 72%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/enum_to_i.cpp.o
 /tests/compiled/cpp_stl_98/expr_array.cpp: In member function 'void expr_array_t::_read()':
 /tests/compiled/cpp_stl_98/expr_array.cpp:50:123: error: no matching function for call to 'kaitai::kstream::bytes_to_str(std::string, std::string)'
          m_astr->push_back(kaitai::kstream::bytes_to_str(m__io->read_bytes_term(0, false, true, true), std::string("UTF-8")));
@@ -1050,11 +1052,7 @@ In file included from /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kai
                         ^
 /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistream.h:168:24: note:   no known conversion for argument 2 from 'std::string {aka std::basic_string<char>}' to 'const char*'
 make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/expr_array.cpp.o] Error 1
-[ 71%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/bits_signed_shift_b64_le.cpp.o
-[ 72%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/enum_to_i.cpp.o
 [ 72%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/repeat_until_sized.cpp.o
-[ 72%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/bits_unaligned_b32_le.cpp.o
-[ 72%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/expr_ops_parens.cpp.o
 /tests/compiled/cpp_stl_98/nav_root.cpp: In member function 'void nav_root_t::entry_t::_read()':
 /tests/compiled/cpp_stl_98/nav_root.cpp:109:122: error: no matching function for call to 'kaitai::kstream::bytes_to_str(std::string, std::string)'
      m_filename = kaitai::kstream::bytes_to_str(m__io->read_bytes(_root()->header()->filename_len()), std::string("UTF-8"));
@@ -1067,8 +1065,10 @@ In file included from /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kai
      static std::string bytes_to_str(const std::string src, const char *src_enc);
                         ^
 /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistream.h:168:24: note:   no known conversion for argument 2 from 'std::string {aka std::basic_string<char>}' to 'const char*'
-[ 72%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/enum_if.cpp.o
+[ 72%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/bits_unaligned_b32_le.cpp.o
+[ 72%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/expr_ops_parens.cpp.o
 make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/nav_root.cpp.o] Error 1
+[ 72%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/enum_if.cpp.o
 [ 73%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/recursive_one.cpp.o
 [ 73%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/enum_negative.cpp.o
 [ 73%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/bits_signed_res_b32_le.cpp.o
@@ -1109,11 +1109,11 @@ In file included from /tests/compiled/cpp_stl_98/repeat_until_sized.cpp:3:0:
      class record_t : public kaitai::kstruct {
            ^
 /tests/compiled/cpp_stl_98/repeat_until_sized.h:28:11: note:   candidate expects 1 argument, 3 provided
-[ 73%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/eos_exception_bytes.cpp.o
 /tests/compiled/cpp_stl_98/expr_ops_parens.cpp: In member function 'int32_t expr_ops_parens_t::str_concat_len()':
 /tests/compiled/cpp_stl_98/expr_ops_parens.cpp:109:37: error: no match for 'operator+' (operand types are 'std::string {aka std::basic_string<char>}' and 'std::basic_string<char>::size_type {aka long unsigned int}')
      m_str_concat_len = str_0_to_4() + str_5_to_9().length();
                                      ^
+[ 73%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/eos_exception_bytes.cpp.o
 /tests/compiled/cpp_stl_98/expr_ops_parens.cpp:109:37: note: candidates are:
 In file included from /usr/include/c++/4.8/string:52:0,
                  from /usr/include/c++/4.8/bits/locale_classes.h:40,
@@ -1127,8 +1127,11 @@ In file included from /usr/include/c++/4.8/string:52:0,
 /usr/include/c++/4.8/bits/basic_string.h:2418:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::basic_string<_CharT, _Traits, _Alloc>&, _CharT)
      operator+(const basic_string<_CharT, _Traits, _Alloc>& __lhs, _CharT __rhs)
      ^
+/tests/compiled/cpp_stl_98/enum_if.cpp: In member function 'void enum_if_t::arg_str_t::_read()':
+/tests/compiled/cpp_stl_98/enum_if.cpp:125:89: error: no matching function for call to 'kaitai::kstream::bytes_to_str(std::string, std::string)'
+     m_str = kaitai::kstream::bytes_to_str(m__io->read_bytes(len()), std::string("UTF-8"));
+                                                                                         ^
 /usr/include/c++/4.8/bits/basic_string.h:2418:5: note:   template argument deduction/substitution failed:
-make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/repeat_until_sized.cpp.o] Error 1
 /tests/compiled/cpp_stl_98/expr_ops_parens.cpp:109:59: note:   deduced conflicting types for parameter '_CharT' ('char' and 'long unsigned int')
      m_str_concat_len = str_0_to_4() + str_5_to_9().length();
                                                            ^
@@ -1144,6 +1147,14 @@ In file included from /usr/include/c++/4.8/string:52:0,
 /usr/include/c++/4.8/bits/basic_string.h:2402:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::basic_string<_CharT, _Traits, _Alloc>&, const _CharT*)
      operator+(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
      ^
+/tests/compiled/cpp_stl_98/enum_if.cpp:125:89: note: candidate is:
+In file included from /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistruct.h:4:0,
+                 from /tests/compiled/cpp_stl_98/enum_if.h:6,
+                 from /tests/compiled/cpp_stl_98/enum_if.cpp:3:
+/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistream.h:168:24: note: static std::string kaitai::kstream::bytes_to_str(std::string, const char*)
+     static std::string bytes_to_str(const std::string src, const char *src_enc);
+                        ^
+/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistream.h:168:24: note:   no known conversion for argument 2 from 'std::string {aka std::basic_string<char>}' to 'const char*'
 /usr/include/c++/4.8/bits/basic_string.h:2402:5: note:   template argument deduction/substitution failed:
 /tests/compiled/cpp_stl_98/expr_ops_parens.cpp:109:59: note:   mismatched types 'const _CharT*' and 'long unsigned int'
      m_str_concat_len = str_0_to_4() + str_5_to_9().length();
@@ -1231,30 +1242,15 @@ In file included from /usr/include/c++/4.8/bits/stl_algobase.h:67:0,
      m_str_concat_to_i = std::stoi(str_0_to_4() + str_5_to_9());
                          ^
 make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/expr_ops_parens.cpp.o] Error 1
-[ 74%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/expr_bytes_ops.cpp.o
-[ 74%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/default_bit_endian_mod.cpp.o
-/tests/compiled/cpp_stl_98/enum_if.cpp: In member function 'void enum_if_t::arg_str_t::_read()':
-/tests/compiled/cpp_stl_98/enum_if.cpp:125:89: error: no matching function for call to 'kaitai::kstream::bytes_to_str(std::string, std::string)'
-     m_str = kaitai::kstream::bytes_to_str(m__io->read_bytes(len()), std::string("UTF-8"));
-                                                                                         ^
-/tests/compiled/cpp_stl_98/enum_if.cpp:125:89: note: candidate is:
-In file included from /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistruct.h:4:0,
-                 from /tests/compiled/cpp_stl_98/enum_if.h:6,
-                 from /tests/compiled/cpp_stl_98/enum_if.cpp:3:
-/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistream.h:168:24: note: static std::string kaitai::kstream::bytes_to_str(std::string, const char*)
-     static std::string bytes_to_str(const std::string src, const char *src_enc);
-                        ^
-/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistream.h:168:24: note:   no known conversion for argument 2 from 'std::string {aka std::basic_string<char>}' to 'const char*'
 make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/enum_if.cpp.o] Error 1
+[ 74%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/expr_bytes_ops.cpp.o
+make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/repeat_until_sized.cpp.o] Error 1
+[ 74%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/default_bit_endian_mod.cpp.o
 [ 74%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/valid_fail_eq_int.cpp.o
 [ 74%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/switch_repeat_expr_invalid.cpp.o
 [ 75%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/cast_nested.cpp.o
 [ 75%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/valid_optional_id.cpp.o
 [ 75%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/multiple_use.cpp.o
-[ 75%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/instance_std.cpp.o
-[ 75%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/enum_int_range_s.cpp.o
-[ 76%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/process_repeat_bytes.cpp.o
-[ 76%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/debug_switch_user.cpp.o
 /tests/compiled/cpp_stl_98/switch_repeat_expr_invalid.cpp: In member function 'void switch_repeat_expr_invalid_t::_read()':
 /tests/compiled/cpp_stl_98/switch_repeat_expr_invalid.cpp:30:25: error: cannot convert 'std::string {aka std::basic_string<char>}' to 'std::vector<std::basic_string<char> >*' in assignment
              m__raw_body = m__io->read_bytes(size());
@@ -1269,6 +1265,7 @@ In file included from /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kai
 /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistream.h:45:5: note: kaitai::kstream::kstream(const string&)
      kstream(const std::string& data);
      ^
+[ 75%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/instance_std.cpp.o
 /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistream.h:45:5: note:   no known conversion for argument 1 from 'std::vector<std::basic_string<char> >*' to 'const string& {aka const std::basic_string<char>&}'
 /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistream.h:38:5: note: kaitai::kstream::kstream(std::istream*)
      kstream(std::istream* io);
@@ -1326,7 +1323,10 @@ In file included from /tests/compiled/cpp_stl_98/switch_repeat_expr_invalid.cpp:
      class two_t : public kaitai::kstruct {
            ^
 /tests/compiled/cpp_stl_98/switch_repeat_expr_invalid.h:53:11: note:   candidate expects 1 argument, 3 provided
+[ 75%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/enum_int_range_s.cpp.o
+[ 76%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/process_repeat_bytes.cpp.o
 make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/switch_repeat_expr_invalid.cpp.o] Error 1
+[ 76%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/debug_switch_user.cpp.o
 [ 76%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/repeat_n_struct.cpp.o
 /tests/compiled/cpp_stl_98/cast_nested.cpp: In member function 'void cast_nested_t::opcode_t::strval_t::_read()':
 /tests/compiled/cpp_stl_98/cast_nested.cpp:123:111: error: no matching function for call to 'kaitai::kstream::bytes_to_str(std::string, std::string)'
@@ -1366,18 +1366,6 @@ make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/instance_std.cpp
 [ 78%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/expr_bits.cpp.o
 [ 78%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/repeat_n_strz_double.cpp.o
 [ 79%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/enum_to_i_class_border_1.cpp.o
-/tests/compiled/cpp_stl_98/index_to_param_eos.cpp: In member function 'void index_to_param_eos_t::block_t::_read()':
-/tests/compiled/cpp_stl_98/index_to_param_eos.cpp:66:111: error: no matching function for call to 'kaitai::kstream::bytes_to_str(std::string, std::string)'
-     m_buf = kaitai::kstream::bytes_to_str(m__io->read_bytes(_root()->sizes()->at(idx())), std::string("ASCII"));
-                                                                                                               ^
-/tests/compiled/cpp_stl_98/index_to_param_eos.cpp:66:111: note: candidate is:
-In file included from /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistruct.h:4:0,
-                 from /tests/compiled/cpp_stl_98/index_to_param_eos.h:6,
-                 from /tests/compiled/cpp_stl_98/index_to_param_eos.cpp:3:
-/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistream.h:168:24: note: static std::string kaitai::kstream::bytes_to_str(std::string, const char*)
-     static std::string bytes_to_str(const std::string src, const char *src_enc);
-                        ^
-/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistream.h:168:24: note:   no known conversion for argument 2 from 'std::string {aka std::basic_string<char>}' to 'const char*'
 /tests/compiled/cpp_stl_98/expr_1.cpp: In member function 'void expr_1_t::_read()':
 /tests/compiled/cpp_stl_98/expr_1.cpp:21:99: error: no matching function for call to 'kaitai::kstream::bytes_to_str(std::string, std::string)'
      m_str1 = kaitai::kstream::bytes_to_str(m__io->read_bytes(len_of_1_mod()), std::string("ASCII"));
@@ -1391,10 +1379,23 @@ In file included from /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kai
                         ^
 /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistream.h:168:24: note:   no known conversion for argument 2 from 'std::string {aka std::basic_string<char>}' to 'const char*'
 make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/expr_1.cpp.o] Error 1
-make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/index_to_param_eos.cpp.o] Error 1
+/tests/compiled/cpp_stl_98/index_to_param_eos.cpp: In member function 'void index_to_param_eos_t::block_t::_read()':
+/tests/compiled/cpp_stl_98/index_to_param_eos.cpp:66:111: error: no matching function for call to 'kaitai::kstream::bytes_to_str(std::string, std::string)'
+     m_buf = kaitai::kstream::bytes_to_str(m__io->read_bytes(_root()->sizes()->at(idx())), std::string("ASCII"));
+                                                                                                               ^
+/tests/compiled/cpp_stl_98/index_to_param_eos.cpp:66:111: note: candidate is:
+In file included from /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistruct.h:4:0,
+                 from /tests/compiled/cpp_stl_98/index_to_param_eos.h:6,
+                 from /tests/compiled/cpp_stl_98/index_to_param_eos.cpp:3:
+/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistream.h:168:24: note: static std::string kaitai::kstream::bytes_to_str(std::string, const char*)
+     static std::string bytes_to_str(const std::string src, const char *src_enc);
+                        ^
+/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistream.h:168:24: note:   no known conversion for argument 2 from 'std::string {aka std::basic_string<char>}' to 'const char*'
 [ 79%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/index_to_param_until.cpp.o
+make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/index_to_param_eos.cpp.o] Error 1
 [ 79%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/process_custom.cpp.o
 [ 79%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/bits_simple_le.cpp.o
+[ 79%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/valid_long.cpp.o
 /tests/compiled/cpp_stl_98/switch_manual_int_else.cpp: In member function 'void switch_manual_int_else_t::opcode_t::strval_t::_read()':
 /tests/compiled/cpp_stl_98/switch_manual_int_else.cpp:118:111: error: no matching function for call to 'kaitai::kstream::bytes_to_str(std::string, std::string)'
      m_value = kaitai::kstream::bytes_to_str(m__io->read_bytes_term(0, false, true, true), std::string("ASCII"));
@@ -1407,8 +1408,6 @@ In file included from /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kai
      static std::string bytes_to_str(const std::string src, const char *src_enc);
                         ^
 /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistream.h:168:24: note:   no known conversion for argument 2 from 'std::string {aka std::basic_string<char>}' to 'const char*'
-make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/switch_manual_int_else.cpp.o] Error 1
-[ 79%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/valid_long.cpp.o
 /tests/compiled/cpp_stl_98/enum_to_i_class_border_1.cpp: In member function 'enum_to_i_class_border_2_t* enum_to_i_class_border_1_t::checker()':
 /tests/compiled/cpp_stl_98/enum_to_i_class_border_1.cpp:50:62: error: no matching function for call to 'enum_to_i_class_border_2_t::enum_to_i_class_border_2_t(enum_to_i_class_border_1_t*, kaitai::kstream*&)'
      m_checker = new enum_to_i_class_border_2_t(_root(), m__io);
@@ -1425,12 +1424,13 @@ In file included from /tests/compiled/cpp_stl_98/enum_to_i_class_border_1.h:8:0,
        ^
 /tests/compiled/cpp_stl_98/enum_to_i_class_border_2.h:13:7: note:   candidate expects 1 argument, 2 provided
 make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/enum_to_i_class_border_1.cpp.o] Error 1
+make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/switch_manual_int_else.cpp.o] Error 1
 [ 80%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/switch_manual_int_size_eos.cpp.o
-[ 80%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/process_coerce_usertype1.cpp.o
 /tests/compiled/cpp_stl_98/repeat_n_strz_double.cpp: In member function 'void repeat_n_strz_double_t::_read()':
 /tests/compiled/cpp_stl_98/repeat_n_strz_double.cpp:24:125: error: no matching function for call to 'kaitai::kstream::bytes_to_str(std::string, std::string)'
          m_lines1->push_back(kaitai::kstream::bytes_to_str(m__io->read_bytes_term(0, false, true, true), std::string("UTF-8")));
                                                                                                                              ^
+[ 80%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/process_coerce_usertype1.cpp.o
 /tests/compiled/cpp_stl_98/repeat_n_strz_double.cpp:24:125: note: candidate is:
 In file included from /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistruct.h:4:0,
                  from /tests/compiled/cpp_stl_98/repeat_n_strz_double.h:6,
@@ -1467,12 +1467,10 @@ In file included from /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kai
 make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/index_to_param_until.cpp.o] Error 1
 [ 80%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/repeat_until_s4.cpp.o
 [ 80%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/valid_fail_range_float.cpp.o
-[ 81%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/params_call_extra_parens.cpp.o
 /tests/compiled/cpp_stl_98/valid_long.cpp: In member function 'void valid_long_t::_read()':
 /tests/compiled/cpp_stl_98/valid_long.cpp:31:93: error: no matching function for call to 'kaitai::kstream::bytes_to_str(std::string, std::string)'
      m_magic_uint = kaitai::kstream::bytes_to_str(m__io->read_bytes(10), std::string("UTF-8"));
                                                                                              ^
-[ 81%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/bits_shift_by_b64_le.cpp.o
 /tests/compiled/cpp_stl_98/valid_long.cpp:31:93: note: candidate is:
 In file included from /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistruct.h:4:0,
                  from /tests/compiled/cpp_stl_98/valid_long.h:6,
@@ -1492,31 +1490,10 @@ In file included from /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kai
      static std::string bytes_to_str(const std::string src, const char *src_enc);
                         ^
 /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistream.h:168:24: note:   no known conversion for argument 2 from 'std::string {aka std::basic_string<char>}' to 'const char*'
+[ 81%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/params_call_extra_parens.cpp.o
 make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/valid_long.cpp.o] Error 1
+[ 81%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/bits_shift_by_b64_le.cpp.o
 [ 81%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/buffered_struct.cpp.o
-/tests/compiled/cpp_stl_98/switch_manual_int_size_eos.cpp: In member function 'void switch_manual_int_size_eos_t::chunk_body_t::chunk_meta_t::_read()':
-/tests/compiled/cpp_stl_98/switch_manual_int_size_eos.cpp:142:111: error: no matching function for call to 'kaitai::kstream::bytes_to_str(std::string, std::string)'
-     m_title = kaitai::kstream::bytes_to_str(m__io->read_bytes_term(0, false, true, true), std::string("UTF-8"));
-                                                                                                               ^
-/tests/compiled/cpp_stl_98/switch_manual_int_size_eos.cpp:142:111: note: candidate is:
-In file included from /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistruct.h:4:0,
-                 from /tests/compiled/cpp_stl_98/switch_manual_int_size_eos.h:6,
-                 from /tests/compiled/cpp_stl_98/switch_manual_int_size_eos.cpp:3:
-/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistream.h:168:24: note: static std::string kaitai::kstream::bytes_to_str(std::string, const char*)
-     static std::string bytes_to_str(const std::string src, const char *src_enc);
-                        ^
-/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistream.h:168:24: note:   no known conversion for argument 2 from 'std::string {aka std::basic_string<char>}' to 'const char*'
-/tests/compiled/cpp_stl_98/switch_manual_int_size_eos.cpp:143:112: error: no matching function for call to 'kaitai::kstream::bytes_to_str(std::string, std::string)'
-     m_author = kaitai::kstream::bytes_to_str(m__io->read_bytes_term(0, false, true, true), std::string("UTF-8"));
-                                                                                                                ^
-/tests/compiled/cpp_stl_98/switch_manual_int_size_eos.cpp:143:112: note: candidate is:
-In file included from /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistruct.h:4:0,
-                 from /tests/compiled/cpp_stl_98/switch_manual_int_size_eos.h:6,
-                 from /tests/compiled/cpp_stl_98/switch_manual_int_size_eos.cpp:3:
-/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistream.h:168:24: note: static std::string kaitai::kstream::bytes_to_str(std::string, const char*)
-     static std::string bytes_to_str(const std::string src, const char *src_enc);
-                        ^
-/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistream.h:168:24: note:   no known conversion for argument 2 from 'std::string {aka std::basic_string<char>}' to 'const char*'
 /tests/compiled/cpp_stl_98/str_encodings_utf16.cpp: In member function 'void str_encodings_utf16_t::str_be_bom_removed_t::_read()':
 /tests/compiled/cpp_stl_98/str_encodings_utf16.cpp:65:92: error: no matching function for call to 'kaitai::kstream::bytes_to_str(std::string, std::string)'
      m_str = kaitai::kstream::bytes_to_str(m__io->read_bytes_full(), std::string("UTF-16BE"));
@@ -1541,6 +1518,30 @@ In file included from /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kai
      static std::string bytes_to_str(const std::string src, const char *src_enc);
                         ^
 /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistream.h:168:24: note:   no known conversion for argument 2 from 'std::string {aka std::basic_string<char>}' to 'const char*'
+/tests/compiled/cpp_stl_98/switch_manual_int_size_eos.cpp: In member function 'void switch_manual_int_size_eos_t::chunk_body_t::chunk_meta_t::_read()':
+/tests/compiled/cpp_stl_98/switch_manual_int_size_eos.cpp:142:111: error: no matching function for call to 'kaitai::kstream::bytes_to_str(std::string, std::string)'
+     m_title = kaitai::kstream::bytes_to_str(m__io->read_bytes_term(0, false, true, true), std::string("UTF-8"));
+                                                                                                               ^
+make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/str_encodings_utf16.cpp.o] Error 1
+/tests/compiled/cpp_stl_98/switch_manual_int_size_eos.cpp:142:111: note: candidate is:
+In file included from /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistruct.h:4:0,
+                 from /tests/compiled/cpp_stl_98/switch_manual_int_size_eos.h:6,
+                 from /tests/compiled/cpp_stl_98/switch_manual_int_size_eos.cpp:3:
+/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistream.h:168:24: note: static std::string kaitai::kstream::bytes_to_str(std::string, const char*)
+     static std::string bytes_to_str(const std::string src, const char *src_enc);
+                        ^
+/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistream.h:168:24: note:   no known conversion for argument 2 from 'std::string {aka std::basic_string<char>}' to 'const char*'
+/tests/compiled/cpp_stl_98/switch_manual_int_size_eos.cpp:143:112: error: no matching function for call to 'kaitai::kstream::bytes_to_str(std::string, std::string)'
+     m_author = kaitai::kstream::bytes_to_str(m__io->read_bytes_term(0, false, true, true), std::string("UTF-8"));
+                                                                                                                ^
+/tests/compiled/cpp_stl_98/switch_manual_int_size_eos.cpp:143:112: note: candidate is:
+In file included from /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistruct.h:4:0,
+                 from /tests/compiled/cpp_stl_98/switch_manual_int_size_eos.h:6,
+                 from /tests/compiled/cpp_stl_98/switch_manual_int_size_eos.cpp:3:
+/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistream.h:168:24: note: static std::string kaitai::kstream::bytes_to_str(std::string, const char*)
+     static std::string bytes_to_str(const std::string src, const char *src_enc);
+                        ^
+/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistream.h:168:24: note:   no known conversion for argument 2 from 'std::string {aka std::basic_string<char>}' to 'const char*'
 /tests/compiled/cpp_stl_98/switch_manual_int_size_eos.cpp: In member function 'void switch_manual_int_size_eos_t::chunk_body_t::chunk_dir_t::_read()':
 /tests/compiled/cpp_stl_98/switch_manual_int_size_eos.cpp:171:106: error: no matching function for call to 'kaitai::kstream::bytes_to_str(std::string, std::string)'
              m_entries->push_back(kaitai::kstream::bytes_to_str(m__io->read_bytes(4), std::string("UTF-8")));
@@ -1553,7 +1554,6 @@ In file included from /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kai
      static std::string bytes_to_str(const std::string src, const char *src_enc);
                         ^
 /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistream.h:168:24: note:   no known conversion for argument 2 from 'std::string {aka std::basic_string<char>}' to 'const char*'
-make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/str_encodings_utf16.cpp.o] Error 1
 [ 81%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/enum_long_range_u.cpp.o
 make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/switch_manual_int_size_eos.cpp.o] Error 1
 [ 82%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/integers_min_max.cpp.o
@@ -1569,6 +1569,8 @@ In file included from /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kai
      static std::string bytes_to_str(const std::string src, const char *src_enc);
                         ^
 /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistream.h:168:24: note:   no known conversion for argument 2 from 'std::string {aka std::basic_string<char>}' to 'const char*'
+make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/repeat_until_s4.cpp.o] Error 1
+[ 82%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/bits_unaligned_b64_be.cpp.o
 /tests/compiled/cpp_stl_98/params_call_extra_parens.cpp: In member function 'void params_call_extra_parens_t::my_str1_t::_read()':
 /tests/compiled/cpp_stl_98/params_call_extra_parens.cpp:46:90: error: no matching function for call to 'kaitai::kstream::bytes_to_str(std::string, std::string)'
      m_body = kaitai::kstream::bytes_to_str(m__io->read_bytes(len()), std::string("UTF-8"));
@@ -1581,9 +1583,7 @@ In file included from /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kai
      static std::string bytes_to_str(const std::string src, const char *src_enc);
                         ^
 /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistream.h:168:24: note:   no known conversion for argument 2 from 'std::string {aka std::basic_string<char>}' to 'const char*'
-make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/repeat_until_s4.cpp.o] Error 1
 make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/params_call_extra_parens.cpp.o] Error 1
-[ 82%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/bits_unaligned_b64_be.cpp.o
 [ 82%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/debug_array_user.cpp.o
 [ 82%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/imports_rel_1.cpp.o
 [ 82%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/str_literals2.cpp.o
@@ -1592,12 +1592,11 @@ make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/params_call_extr
 [ 83%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/process_xor_const.cpp.o
 [ 83%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/expr_int_div.cpp.o
 [ 83%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/expr_sizeof_value_0.cpp.o
-[ 84%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/zlib_surrounded.cpp.o
-[ 84%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/fixed_struct.cpp.o
 /tests/compiled/cpp_stl_98/opaque_external_type_02_child.cpp: In member function 'void opaque_external_type_02_child_t::_read()':
 /tests/compiled/cpp_stl_98/opaque_external_type_02_child.cpp:20:110: error: no matching function for call to 'kaitai::kstream::bytes_to_str(std::string, std::string)'
      m_s1 = kaitai::kstream::bytes_to_str(m__io->read_bytes_term(124, false, true, true), std::string("UTF-8"));
                                                                                                               ^
+[ 84%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/zlib_surrounded.cpp.o
 /tests/compiled/cpp_stl_98/opaque_external_type_02_child.cpp:20:110: note: candidate is:
 In file included from /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistruct.h:4:0,
                  from /tests/compiled/cpp_stl_98/opaque_external_type_02_child.h:6,
@@ -1630,11 +1629,13 @@ In file included from /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kai
                         ^
 /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistream.h:168:24: note:   no known conversion for argument 2 from 'std::string {aka std::basic_string<char>}' to 'const char*'
 make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/opaque_external_type_02_child.cpp.o] Error 1
+[ 84%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/fixed_struct.cpp.o
 [ 84%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/if_struct.cpp.o
 [ 84%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/expr_sizeof_type_1.cpp.o
 [ 84%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/valid_fail_max_int.cpp.o
 [ 85%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/expr_3.cpp.o
 [ 85%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/opaque_with_param.cpp.o
+[ 85%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/eof_exception_bytes.cpp.o
 /tests/compiled/cpp_stl_98/if_struct.cpp: In member function 'void if_struct_t::arg_str_t::_read()':
 /tests/compiled/cpp_stl_98/if_struct.cpp:125:89: error: no matching function for call to 'kaitai::kstream::bytes_to_str(std::string, std::string)'
      m_str = kaitai::kstream::bytes_to_str(m__io->read_bytes(len()), std::string("UTF-8"));
@@ -1648,7 +1649,6 @@ In file included from /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kai
                         ^
 /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistream.h:168:24: note:   no known conversion for argument 2 from 'std::string {aka std::basic_string<char>}' to 'const char*'
 make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/if_struct.cpp.o] Error 1
-[ 85%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/eof_exception_bytes.cpp.o
 [ 85%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/str_eos.cpp.o
 [ 86%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/params_enum.cpp.o
 /tests/compiled/cpp_stl_98/expr_3.cpp: In member function 'void expr_3_t::_read()':
@@ -1685,6 +1685,8 @@ make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/str_eos.cpp.o] E
 [ 87%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/docstrings.cpp.o
 [ 87%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/process_coerce_usertype2.cpp.o
 [ 87%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/valid_eq_str_encodings.cpp.o
+[ 87%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/params_pass_bool.cpp.o
+[ 88%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/nav_parent_override.cpp.o
 /tests/compiled/cpp_stl_98/str_pad_term_empty.cpp: In member function 'void str_pad_term_empty_t::_read()':
 /tests/compiled/cpp_stl_98/str_pad_term_empty.cpp:18:130: error: no matching function for call to 'kaitai::kstream::bytes_to_str(std::string, std::string)'
      m_str_pad = kaitai::kstream::bytes_to_str(kaitai::kstream::bytes_strip_right(m__io->read_bytes(20), 64), std::string("UTF-8"));
@@ -1730,12 +1732,8 @@ In file included from /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kai
      static std::string bytes_to_str(const std::string src, const char *src_enc);
                         ^
 /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistream.h:168:24: note:   no known conversion for argument 2 from 'std::string {aka std::basic_string<char>}' to 'const char*'
-[ 87%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/params_pass_bool.cpp.o
 make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/str_pad_term_empty.cpp.o] Error 1
-[ 88%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/nav_parent_override.cpp.o
 [ 88%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/vlq_base128_le.cpp.o
-[ 88%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/eof_exception_u4.cpp.o
-[ 88%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/nested_same_name2.cpp.o
 /tests/compiled/cpp_stl_98/valid_eq_str_encodings.cpp: In member function 'void valid_eq_str_encodings_t::_read()':
 /tests/compiled/cpp_stl_98/valid_eq_str_encodings.cpp:20:95: error: no matching function for call to 'kaitai::kstream::bytes_to_str(std::string, std::string)'
      m_str1 = kaitai::kstream::bytes_to_str(m__io->read_bytes(len_of_1()), std::string("ASCII"));
@@ -1782,6 +1780,8 @@ In file included from /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kai
                         ^
 /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistream.h:168:24: note:   no known conversion for argument 2 from 'std::string {aka std::basic_string<char>}' to 'const char*'
 make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/valid_eq_str_encodings.cpp.o] Error 1
+[ 88%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/eof_exception_u4.cpp.o
+[ 88%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/nested_same_name2.cpp.o
 [ 89%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/default_endian_mod.cpp.o
 [ 89%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/docstrings_docref.cpp.o
 /tests/compiled/cpp_stl_98/vlq_base128_le.cpp: In member function 'int32_t vlq_base128_le_t::value()':
@@ -1803,6 +1803,8 @@ make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/valid_eq_str_enc
 [ 90%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/default_big_endian.cpp.o
 [ 90%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/enum_fancy.cpp.o
 [ 91%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/valid_fail_contents.cpp.o
+[ 91%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/to_string_custom.cpp.o
+[ 91%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/position_abs.cpp.o
 /tests/compiled/cpp_stl_98/str_encodings.cpp: In member function 'void str_encodings_t::_read()':
 /tests/compiled/cpp_stl_98/str_encodings.cpp:19:95: error: no matching function for call to 'kaitai::kstream::bytes_to_str(std::string, std::string)'
      m_str1 = kaitai::kstream::bytes_to_str(m__io->read_bytes(len_of_1()), std::string("ASCII"));
@@ -1848,11 +1850,8 @@ In file included from /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kai
      static std::string bytes_to_str(const std::string src, const char *src_enc);
                         ^
 /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistream.h:168:24: note:   no known conversion for argument 2 from 'std::string {aka std::basic_string<char>}' to 'const char*'
-[ 91%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/to_string_custom.cpp.o
 make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/str_encodings.cpp.o] Error 1
-[ 91%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/position_abs.cpp.o
 [ 91%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/valid_fail_eq_bytes.cpp.o
-[ 91%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/switch_else_only.cpp.o
 /tests/compiled/cpp_stl_98/switch_manual_enum_invalid_else.cpp: In member function 'void switch_manual_enum_invalid_else_t::opcode_t::strval_t::_read()':
 /tests/compiled/cpp_stl_98/switch_manual_enum_invalid_else.cpp:118:111: error: no matching function for call to 'kaitai::kstream::bytes_to_str(std::string, std::string)'
      m_value = kaitai::kstream::bytes_to_str(m__io->read_bytes_term(0, false, true, true), std::string("ASCII"));
@@ -1866,13 +1865,13 @@ In file included from /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kai
                         ^
 /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistream.h:168:24: note:   no known conversion for argument 2 from 'std::string {aka std::basic_string<char>}' to 'const char*'
 make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/switch_manual_enum_invalid_else.cpp.o] Error 1
+[ 91%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/switch_else_only.cpp.o
 [ 92%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/repeat_until_calc_array_type.cpp.o
-[ 92%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/combine_bytes.cpp.o
-[ 92%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/bits_unaligned_b32_be.cpp.o
 /tests/compiled/cpp_stl_98/to_string_custom.cpp: In member function 'void to_string_custom_t::_read()':
 /tests/compiled/cpp_stl_98/to_string_custom.cpp:18:110: error: no matching function for call to 'kaitai::kstream::bytes_to_str(std::string, std::string)'
      m_s1 = kaitai::kstream::bytes_to_str(m__io->read_bytes_term(124, false, true, true), std::string("UTF-8"));
                                                                                                               ^
+[ 92%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/combine_bytes.cpp.o
 /tests/compiled/cpp_stl_98/to_string_custom.cpp:18:110: note: candidate is:
 In file included from /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistruct.h:4:0,
                  from /tests/compiled/cpp_stl_98/to_string_custom.h:6,
@@ -1892,12 +1891,13 @@ In file included from /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kai
      static std::string bytes_to_str(const std::string src, const char *src_enc);
                         ^
 /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistream.h:168:24: note:   no known conversion for argument 2 from 'std::string {aka std::basic_string<char>}' to 'const char*'
+[ 92%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/bits_unaligned_b32_be.cpp.o
 make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/to_string_custom.cpp.o] Error 1
-[ 92%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/nav_parent2.cpp.o
 /tests/compiled/cpp_stl_98/position_abs.cpp: In member function 'void position_abs_t::index_obj_t::_read()':
 /tests/compiled/cpp_stl_98/position_abs.cpp:48:111: error: no matching function for call to 'kaitai::kstream::bytes_to_str(std::string, std::string)'
      m_entry = kaitai::kstream::bytes_to_str(m__io->read_bytes_term(0, false, true, true), std::string("UTF-8"));
                                                                                                                ^
+[ 92%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/nav_parent2.cpp.o
 /tests/compiled/cpp_stl_98/position_abs.cpp:48:111: note: candidate is:
 In file included from /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistruct.h:4:0,
                  from /tests/compiled/cpp_stl_98/position_abs.h:6,
@@ -1951,9 +1951,7 @@ In file included from /tests/compiled/cpp_stl_98/repeat_until_calc_array_type.cp
 /tests/compiled/cpp_stl_98/repeat_until_calc_array_type.cpp:96:44: error: request for member 'get' in 'repeat_until_calc_array_type_t::recs_accessor()->std::vector<_Tp, _Alloc>::front<repeat_until_calc_array_type_t::record_t*, std::allocator<repeat_until_calc_array_type_t::record_t*> >()', which is of pointer type 'repeat_until_calc_array_type_t::record_t*' (maybe you meant to use '->' ?)
      m_first_rec = recs_accessor()->front().get();
                                             ^
-make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/repeat_until_calc_array_type.cpp.o] Error 1
 [ 93%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/type_ternary_opaque.cpp.o
-[ 94%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/enum_to_i_class_border_2.cpp.o
 /tests/compiled/cpp_stl_98/nav_parent2.cpp: In member function 'void nav_parent2_t::tag_t::_read()':
 /tests/compiled/cpp_stl_98/nav_parent2.cpp:55:86: error: no matching function for call to 'kaitai::kstream::bytes_to_str(std::string, std::string)'
      m_name = kaitai::kstream::bytes_to_str(m__io->read_bytes(4), std::string("ASCII"));
@@ -1970,29 +1968,25 @@ In file included from /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kai
 /tests/compiled/cpp_stl_98/nav_parent2.cpp:85:110: error: no matching function for call to 'kaitai::kstream::bytes_to_str(std::string, std::string)'
      m_content = kaitai::kstream::bytes_to_str(m__io->read_bytes(_parent()->num_items()), std::string("ASCII"));
                                                                                                               ^
+/tests/compiled/cpp_stl_98/switch_manual_str.cpp: In member function 'void switch_manual_str_t::opcode_t::_read()':
+/tests/compiled/cpp_stl_98/switch_manual_str.cpp:55:86: error: no matching function for call to 'kaitai::kstream::bytes_to_str(std::string, std::string)'
+     m_code = kaitai::kstream::bytes_to_str(m__io->read_bytes(1), std::string("ASCII"));
+                                                                                      ^
 /tests/compiled/cpp_stl_98/nav_parent2.cpp:85:110: note: candidate is:
+/tests/compiled/cpp_stl_98/switch_manual_str.cpp:55:86: note: candidate is:
 In file included from /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistruct.h:4:0,
                  from /tests/compiled/cpp_stl_98/nav_parent2.h:6,
                  from /tests/compiled/cpp_stl_98/nav_parent2.cpp:3:
 /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistream.h:168:24: note: static std::string kaitai::kstream::bytes_to_str(std::string, const char*)
      static std::string bytes_to_str(const std::string src, const char *src_enc);
                         ^
-/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistream.h:168:24: note:   no known conversion for argument 2 from 'std::string {aka std::basic_string<char>}' to 'const char*'
-[ 94%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/expr_io_pos.cpp.o
-make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/nav_parent2.cpp.o] Error 1
-[ 94%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/switch_repeat_expr.cpp.o
-[ 94%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/switch_manual_int.cpp.o
-/tests/compiled/cpp_stl_98/switch_manual_str.cpp: In member function 'void switch_manual_str_t::opcode_t::_read()':
-/tests/compiled/cpp_stl_98/switch_manual_str.cpp:55:86: error: no matching function for call to 'kaitai::kstream::bytes_to_str(std::string, std::string)'
-     m_code = kaitai::kstream::bytes_to_str(m__io->read_bytes(1), std::string("ASCII"));
-                                                                                      ^
-/tests/compiled/cpp_stl_98/switch_manual_str.cpp:55:86: note: candidate is:
 In file included from /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistruct.h:4:0,
                  from /tests/compiled/cpp_stl_98/switch_manual_str.h:6,
                  from /tests/compiled/cpp_stl_98/switch_manual_str.cpp:3:
 /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistream.h:168:24: note: static std::string kaitai::kstream::bytes_to_str(std::string, const char*)
      static std::string bytes_to_str(const std::string src, const char *src_enc);
                         ^
+/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistream.h:168:24: note:   no known conversion for argument 2 from 'std::string {aka std::basic_string<char>}' to 'const char*'
 /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistream.h:168:24: note:   no known conversion for argument 2 from 'std::string {aka std::basic_string<char>}' to 'const char*'
 /tests/compiled/cpp_stl_98/switch_manual_str.cpp: In member function 'void switch_manual_str_t::opcode_t::strval_t::_read()':
 /tests/compiled/cpp_stl_98/switch_manual_str.cpp:118:111: error: no matching function for call to 'kaitai::kstream::bytes_to_str(std::string, std::string)'
@@ -2006,24 +2000,30 @@ In file included from /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kai
      static std::string bytes_to_str(const std::string src, const char *src_enc);
                         ^
 /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistream.h:168:24: note:   no known conversion for argument 2 from 'std::string {aka std::basic_string<char>}' to 'const char*'
+[ 94%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/enum_to_i_class_border_2.cpp.o
+make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/nav_parent2.cpp.o] Error 1
+make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/repeat_until_calc_array_type.cpp.o] Error 1
 make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/switch_manual_str.cpp.o] Error 1
+[ 94%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/expr_io_pos.cpp.o
+[ 94%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/switch_repeat_expr.cpp.o
+[ 94%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/switch_manual_int.cpp.o
 [ 94%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/enum_int_range_u.cpp.o
-[ 95%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/nav_parent_false.cpp.o
 /tests/compiled/cpp_stl_98/enum_to_i_class_border_2.cpp: In member function 'bool enum_to_i_class_border_2_t::is_dog()':
 /tests/compiled/cpp_stl_98/enum_to_i_class_border_2.cpp:33:24: error: invalid use of incomplete type 'class enum_to_i_class_border_2_t::enum_to_i_class_border_1_t'
      m_is_dog = parent()->some_dog() == 4;
                         ^
+[ 95%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/nav_parent_false.cpp.o
 In file included from /tests/compiled/cpp_stl_98/enum_to_i_class_border_2.cpp:3:0:
 /tests/compiled/cpp_stl_98/enum_to_i_class_border_2.h:16:11: error: forward declaration of 'class enum_to_i_class_border_2_t::enum_to_i_class_border_1_t'
      class enum_to_i_class_border_1_t;
            ^
 make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/enum_to_i_class_border_2.cpp.o] Error 1
 [ 95%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/valid_short.cpp.o
-[ 95%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/valid_not_parsed_if.cpp.o
 /tests/compiled/cpp_stl_98/expr_io_pos.cpp: In member function 'void expr_io_pos_t::all_plus_number_t::_read()':
 /tests/compiled/cpp_stl_98/expr_io_pos.cpp:62:112: error: no matching function for call to 'kaitai::kstream::bytes_to_str(std::string, std::string)'
      m_my_str = kaitai::kstream::bytes_to_str(m__io->read_bytes_term(0, false, true, true), std::string("UTF-8"));
                                                                                                                 ^
+[ 95%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/valid_not_parsed_if.cpp.o
 /tests/compiled/cpp_stl_98/expr_io_pos.cpp:62:112: note: candidate is:
 In file included from /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistruct.h:4:0,
                  from /tests/compiled/cpp_stl_98/expr_io_pos.h:6,
@@ -2120,8 +2120,8 @@ In file included from /tests/compiled/cpp_stl_98/switch_repeat_expr.cpp:3:0:
 /tests/compiled/cpp_stl_98/switch_repeat_expr.h:53:11: note:   candidate expects 1 argument, 3 provided
 make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/switch_manual_int.cpp.o] Error 1
 [ 96%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/switch_integers2.cpp.o
-make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/switch_repeat_expr.cpp.o] Error 1
 [ 96%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/repeat_eos_bit.cpp.o
+make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/switch_repeat_expr.cpp.o] Error 1
 [ 96%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/valid_fail_range_str.cpp.o
 /tests/compiled/cpp_stl_98/valid_short.cpp: In member function 'void valid_short_t::_read()':
 /tests/compiled/cpp_stl_98/valid_short.cpp:31:93: error: no matching function for call to 'kaitai::kstream::bytes_to_str(std::string, std::string)'
@@ -2150,8 +2150,6 @@ make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/valid_short.cpp.
 [ 96%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/bits_shift_by_b32_le.cpp.o
 [ 97%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/enum_import.cpp.o
 [ 97%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/term_strz.cpp.o
-[ 97%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/expr_0.cpp.o
-[ 97%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/valid_fail_inst.cpp.o
 /tests/compiled/cpp_stl_98/valid_fail_range_str.cpp: In member function 'void valid_fail_range_str_t::_read()':
 /tests/compiled/cpp_stl_98/valid_fail_range_str.cpp:19:85: error: no matching function for call to 'kaitai::kstream::bytes_to_str(std::string, std::string)'
      m_foo = kaitai::kstream::bytes_to_str(m__io->read_bytes(2), std::string("ASCII"));
@@ -2164,10 +2162,16 @@ In file included from /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kai
      static std::string bytes_to_str(const std::string src, const char *src_enc);
                         ^
 /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistream.h:168:24: note:   no known conversion for argument 2 from 'std::string {aka std::basic_string<char>}' to 'const char*'
+[ 97%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/expr_0.cpp.o
 make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/valid_fail_range_str.cpp.o] Error 1
+[ 97%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/valid_fail_inst.cpp.o
 [ 97%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/term_u1_val.cpp.o
 [ 98%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/docstrings_docref_multi.cpp.o
 [ 98%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/cast_to_imported.cpp.o
+In file included from /tests/compiled/cpp_stl_98/enum_import.cpp:3:0:
+/tests/compiled/cpp_stl_98/enum_import.h:27:5: error: 'enum_0_t' does not name a type
+     enum_0_t::animal_t m_pet_1;
+     ^
 /tests/compiled/cpp_stl_98/term_strz.cpp: In member function 'void term_strz_t::_read()':
 /tests/compiled/cpp_stl_98/term_strz.cpp:18:110: error: no matching function for call to 'kaitai::kstream::bytes_to_str(std::string, std::string)'
      m_s1 = kaitai::kstream::bytes_to_str(m__io->read_bytes_term(124, false, true, true), std::string("UTF-8"));
@@ -2202,12 +2206,6 @@ In file included from /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kai
      static std::string bytes_to_str(const std::string src, const char *src_enc);
                         ^
 /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistream.h:168:24: note:   no known conversion for argument 2 from 'std::string {aka std::basic_string<char>}' to 'const char*'
-make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/term_strz.cpp.o] Error 1
-In file included from /tests/compiled/cpp_stl_98/enum_import.cpp:3:0:
-/tests/compiled/cpp_stl_98/enum_import.h:27:5: error: 'enum_0_t' does not name a type
-     enum_0_t::animal_t m_pet_1;
-     ^
-[ 98%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/process_rotate.cpp.o
 /tests/compiled/cpp_stl_98/enum_import.h:28:5: error: 'enum_deep_t' does not name a type
      enum_deep_t::container1_t::container2_t::animal_t m_pet_2;
      ^
@@ -2242,10 +2240,11 @@ In file included from /tests/compiled/cpp_stl_98/enum_import.cpp:3:0:
 /tests/compiled/cpp_stl_98/enum_import.cpp:19:97: error: expected ')' before ';' token
      m_pet_2 = static_cast<enum_deep_t::container1_t::container2_t::animal_t>(m__io->read_u4le());
                                                                                                  ^
+[ 98%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/process_rotate.cpp.o
+make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/term_strz.cpp.o] Error 1
 make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/enum_import.cpp.o] Error 1
 [ 98%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/process_repeat_usertype.cpp.o
 [ 98%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/expr_enum.cpp.o
-[ 99%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/repeat_eos_struct.cpp.o
 /tests/compiled/cpp_stl_98/term_u1_val.cpp: In member function 'void term_u1_val_t::_read()':
 /tests/compiled/cpp_stl_98/term_u1_val.cpp:19:110: error: no matching function for call to 'kaitai::kstream::bytes_to_str(std::string, std::string)'
      m_bar = kaitai::kstream::bytes_to_str(m__io->read_bytes_term(171, true, true, true), std::string("UTF-8"));
@@ -2258,8 +2257,9 @@ In file included from /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kai
      static std::string bytes_to_str(const std::string src, const char *src_enc);
                         ^
 /tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistream.h:168:24: note:   no known conversion for argument 2 from 'std::string {aka std::basic_string<char>}' to 'const char*'
-[ 99%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/imports_circular_a.cpp.o
 make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/term_u1_val.cpp.o] Error 1
+[ 99%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/repeat_eos_struct.cpp.o
+[ 99%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/imports_circular_a.cpp.o
 [ 99%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/enum_invalid.cpp.o
 [ 99%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/nested_types2.cpp.o
 make[2]: Target `CMakeFiles/ks_tests.dir/build' not remade because of errors.
