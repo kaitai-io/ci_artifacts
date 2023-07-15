@@ -1,13 +1,13 @@
 {
   "$meta": {
     "lang": "lua",
-    "timestamp": "2023-06-28T19:48:16Z",
+    "timestamp": "2023-07-15T06:44:15Z",
     "ci": {
-      "ci": "travis",
-      "build_id": "264160237",
-      "job_id": "605113361",
-      "job_number": "468.28",
-      "url": "https://app.travis-ci.com/kaitai-io/ci_targets/jobs/605113361"
+      "ci": "github",
+      "run_id": "5560928336",
+      "run_number": "257",
+      "job_id": "15063853085",
+      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/5560928336/jobs/10158253855"
     }
   },
   "BcdUserTypeBe": {
@@ -352,7 +352,7 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "spec/lua/run_test_suite.lua:18: spec/lua/test_expr_bytes_non_literal.lua:5: module 'expr_bytes_non_literal' not found:\n\tno field package.preload['expr_bytes_non_literal']\n\tno file '../runtime/lua/expr_bytes_non_literal.lua'\n\tno file 'spec/lua/expr_bytes_non_literal.lua'\n\tno file 'spec/lua/extra/expr_bytes_non_literal.lua'\n\tno file 'compiled/lua/expr_bytes_non_literal.lua'\n\tno file '/home/travis/build/kaitai-io/ci_targets/lua_install/share/lua/5.3/expr_bytes_non_literal.lua'\n\tno file '/home/travis/build/kaitai-io/ci_targets/lua_install/share/lua/5.3/expr_bytes_non_literal/init.lua'\n\tno file './expr_bytes_non_literal.lua'\n\tno file './expr_bytes_non_literal/init.lua'\n\tno file '/home/travis/build/kaitai-io/ci_targets/lua_install/lib/lua/5.3/expr_bytes_non_literal.so'\n\tno file '/home/travis/build/kaitai-io/ci_targets/lua_install/lib/lua/5.3/loadall.so'\n\tno file './expr_bytes_non_literal.so'",
+      "message": "spec/lua/run_test_suite.lua:18: spec/lua/test_expr_bytes_non_literal.lua:5: module 'expr_bytes_non_literal' not found:\n\tno field package.preload['expr_bytes_non_literal']\n\tno file '../runtime/lua/expr_bytes_non_literal.lua'\n\tno file 'spec/lua/expr_bytes_non_literal.lua'\n\tno file 'spec/lua/extra/expr_bytes_non_literal.lua'\n\tno file 'compiled/lua/expr_bytes_non_literal.lua'\n\tno file '/lua_install/share/lua/5.3/expr_bytes_non_literal.lua'\n\tno file '/lua_install/share/lua/5.3/expr_bytes_non_literal/init.lua'\n\tno file './expr_bytes_non_literal.lua'\n\tno file './expr_bytes_non_literal/init.lua'\n\tno file '/lua_install/lib/lua/5.3/expr_bytes_non_literal.so'\n\tno file '/lua_install/lib/lua/5.3/loadall.so'\n\tno file './expr_bytes_non_literal.so'",
       "trace": "stack traceback:\n\tspec/lua/run_test_suite.lua:18: in upvalue 'TestExprBytesNonLiteral.test_expr_bytes_non_literal'"
     },
     "is_kst": true
@@ -1046,6 +1046,16 @@
     "elapsed": 0.0,
     "is_kst": true
   },
+  "ToStringCustom": {
+    "status": "failed",
+    "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": "spec/lua/test_to_string_custom.lua:10: expected: \"s1 = foo, s2 = bar\"\nactual: \"table: 0x55dfa92171c0\"",
+      "trace": "stack traceback:\n\tspec/lua/test_to_string_custom.lua:10: in upvalue 'TestToStringCustom.test_term_strz'"
+    }
+  },
   "TsPacketHeader": {
     "status": "passed",
     "elapsed": 0.0,
@@ -1182,13 +1192,25 @@
     "is_kst": true
   },
   "ZlibSurrounded": {
-    "status": "passed",
+    "status": "failed",
     "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": "../runtime/lua/kaitaistruct.lua:440: can't decompress zlib - failed to load submodule 'zzlib': ../runtime/lua/kaitaistruct.lua:420: module 'zzlib' not found:\n\tno field package.preload['zzlib']\n\tno file '../runtime/lua/zzlib/zzlib.lua'\n\tno file '../runtime/lua/zzlib.lua'\n\tno file 'spec/lua/zzlib.lua'\n\tno file 'spec/lua/extra/zzlib.lua'\n\tno file 'compiled/lua/zzlib.lua'\n\tno file '/lua_install/share/lua/5.3/zzlib.lua'\n\tno file '/lua_install/share/lua/5.3/zzlib/init.lua'\n\tno file './zzlib.lua'\n\tno file './zzlib/init.lua'\n\tno file '/lua_install/lib/lua/5.3/zzlib.so'\n\tno file '/lua_install/lib/lua/5.3/loadall.so'\n\tno file './zzlib.so'",
+      "trace": "stack traceback:\n\t../runtime/lua/kaitaistruct.lua:440: in field 'process_zlib'\n\tcompiled/lua/zlib_surrounded.lua:21: in method '_read'\n\tcompiled/lua/zlib_surrounded.lua:15: in local 'init'\n\t../runtime/lua/class.lua:70: in function <../runtime/lua/class.lua:66>\n\t(...tail calls...)\n\tspec/lua/test_zlib_surrounded.lua:10: in upvalue 'TestZlibSurrounded.test_zlib_surrounded'"
+    },
     "is_kst": true
   },
   "ZlibWithHeader78": {
-    "status": "passed",
+    "status": "failed",
     "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": "../runtime/lua/kaitaistruct.lua:440: can't decompress zlib - failed to load submodule 'zzlib': ../runtime/lua/kaitaistruct.lua:420: module 'zzlib' not found:\n\tno field package.preload['zzlib']\n\tno file '../runtime/lua/zzlib/zzlib.lua'\n\tno file '../runtime/lua/zzlib.lua'\n\tno file 'spec/lua/zzlib.lua'\n\tno file 'spec/lua/extra/zzlib.lua'\n\tno file 'compiled/lua/zzlib.lua'\n\tno file '/lua_install/share/lua/5.3/zzlib.lua'\n\tno file '/lua_install/share/lua/5.3/zzlib/init.lua'\n\tno file './zzlib.lua'\n\tno file './zzlib/init.lua'\n\tno file '/lua_install/lib/lua/5.3/zzlib.so'\n\tno file '/lua_install/lib/lua/5.3/loadall.so'\n\tno file './zzlib.so'",
+      "trace": "stack traceback:\n\t../runtime/lua/kaitaistruct.lua:440: in field 'process_zlib'\n\tcompiled/lua/zlib_with_header_78.lua:19: in method '_read'\n\tcompiled/lua/zlib_with_header_78.lua:14: in local 'init'\n\t../runtime/lua/class.lua:70: in function <../runtime/lua/class.lua:66>\n\t(...tail calls...)\n\tspec/lua/test_zlib_with_header_78.lua:10: in upvalue 'TestZlibWithHeader78.test_zlib_with_header_78'"
+    },
     "is_kst": true
   }
 }

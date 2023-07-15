@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites>
-    <testsuite name="LuaUnit" id="00001" package="" hostname="localhost" tests="230" timestamp="2023-06-28T19:48:16" time="0.049" errors="6" failures="2" skipped="0">
+    <testsuite name="LuaUnit" id="00001" package="" hostname="localhost" tests="231" timestamp="2023-07-15T06:44:15" time="0.043" errors="8" failures="3" skipped="0">
         <properties>
             <property name="Lua Version" value="Lua 5.3"/>
             <property name="LuaUnit Version" value="3.4"/>
@@ -115,7 +115,7 @@
         </testcase>
         <testcase classname="TestEnumToI" name="TestEnumToI.test_enum_to_i" time="0.000">
         </testcase>
-        <testcase classname="TestEnumToIClassBorder1" name="TestEnumToIClassBorder1.test_enum_to_i_class_border_1" time="0.002">
+        <testcase classname="TestEnumToIClassBorder1" name="TestEnumToIClassBorder1.test_enum_to_i_class_border_1" time="0.001">
             <error type="compiled/lua/enum_to_i_class_border_2.lua:27: attempt to index a nil value (field &apos;parent&apos;)">
                 <![CDATA[stack traceback:
 	compiled/lua/enum_to_i_class_border_2.lua:27: in function <compiled/lua/enum_to_i_class_border_2.lua:22>
@@ -144,19 +144,19 @@
         </testcase>
         <testcase classname="TestExprBytesCmp" name="TestExprBytesCmp.test_expr_bytes_cmp" time="0.000">
         </testcase>
-        <testcase classname="TestExprBytesNonLiteral" name="TestExprBytesNonLiteral.test_expr_bytes_non_literal" time="0.016">
+        <testcase classname="TestExprBytesNonLiteral" name="TestExprBytesNonLiteral.test_expr_bytes_non_literal" time="0.007">
             <failure type="spec/lua/run_test_suite.lua:18: spec/lua/test_expr_bytes_non_literal.lua:5: module &apos;expr_bytes_non_literal&apos; not found:
 	no field package.preload[&apos;expr_bytes_non_literal&apos;]
 	no file &apos;../runtime/lua/expr_bytes_non_literal.lua&apos;
 	no file &apos;spec/lua/expr_bytes_non_literal.lua&apos;
 	no file &apos;spec/lua/extra/expr_bytes_non_literal.lua&apos;
 	no file &apos;compiled/lua/expr_bytes_non_literal.lua&apos;
-	no file &apos;/home/travis/build/kaitai-io/ci_targets/lua_install/share/lua/5.3/expr_bytes_non_literal.lua&apos;
-	no file &apos;/home/travis/build/kaitai-io/ci_targets/lua_install/share/lua/5.3/expr_bytes_non_literal/init.lua&apos;
+	no file &apos;/lua_install/share/lua/5.3/expr_bytes_non_literal.lua&apos;
+	no file &apos;/lua_install/share/lua/5.3/expr_bytes_non_literal/init.lua&apos;
 	no file &apos;./expr_bytes_non_literal.lua&apos;
 	no file &apos;./expr_bytes_non_literal/init.lua&apos;
-	no file &apos;/home/travis/build/kaitai-io/ci_targets/lua_install/lib/lua/5.3/expr_bytes_non_literal.so&apos;
-	no file &apos;/home/travis/build/kaitai-io/ci_targets/lua_install/lib/lua/5.3/loadall.so&apos;
+	no file &apos;/lua_install/lib/lua/5.3/expr_bytes_non_literal.so&apos;
+	no file &apos;/lua_install/lib/lua/5.3/loadall.so&apos;
 	no file &apos;./expr_bytes_non_literal.so&apos;">
                 <![CDATA[stack traceback:
 	spec/lua/run_test_suite.lua:18: in upvalue 'TestExprBytesNonLiteral.test_expr_bytes_non_literal']]></failure>
@@ -187,7 +187,7 @@
         </testcase>
         <testcase classname="TestExprSizeofValueSized" name="TestExprSizeofValueSized.test_expr_sizeof_value_sized" time="0.000">
         </testcase>
-        <testcase classname="TestExprStrEncodings" name="TestExprStrEncodings.test_expr_str_encodings" time="0.002">
+        <testcase classname="TestExprStrEncodings" name="TestExprStrEncodings.test_expr_str_encodings" time="0.001">
             <error type="../runtime/lua/string_decode.lua:42: Encoding SJIS not supported">
                 <![CDATA[stack traceback:
 	../runtime/lua/string_decode.lua:42: in function 'string_decode.decode'
@@ -223,7 +223,7 @@
         </testcase>
         <testcase classname="TestImportsAbsRel" name="TestImportsAbsRel.test_imports_abs_rel" time="0.000">
         </testcase>
-        <testcase classname="TestImportsCircularA" name="TestImportsCircularA.test_imports_circular_a" time="0.003">
+        <testcase classname="TestImportsCircularA" name="TestImportsCircularA.test_imports_circular_a" time="0.002">
             <failure type="spec/lua/run_test_suite.lua:18: error loading module &apos;imports_circular_b&apos; from file &apos;compiled/lua/imports_circular_b.lua&apos;:
 	compiled/lua/imports_circular_b.lua:21: too many C levels (limit is 200) in function at line 18 near &apos;self&apos;">
                 <![CDATA[stack traceback:
@@ -383,7 +383,7 @@
         </testcase>
         <testcase classname="TestRepeatUntilSized" name="TestRepeatUntilSized.test_repeat_until_sized" time="0.000">
         </testcase>
-        <testcase classname="TestStrEncodings" name="TestStrEncodings.test_str_encodings" time="0.002">
+        <testcase classname="TestStrEncodings" name="TestStrEncodings.test_str_encodings" time="0.001">
             <error type="../runtime/lua/string_decode.lua:42: Encoding SJIS not supported">
                 <![CDATA[stack traceback:
 	../runtime/lua/string_decode.lua:42: in function 'string_decode.decode'
@@ -406,7 +406,7 @@
 	(...tail calls...)
 	spec/lua/test_str_encodings_default.lua:10: in upvalue 'TestStrEncodingsDefault.test_str_encodings_default']]></error>
         </testcase>
-        <testcase classname="TestStrEncodingsUtf16" name="TestStrEncodingsUtf16.test_str_encodings_utf16" time="0.002">
+        <testcase classname="TestStrEncodingsUtf16" name="TestStrEncodingsUtf16.test_str_encodings_utf16" time="0.001">
             <error type="../runtime/lua/string_decode.lua:42: Encoding UTF-16BE not supported">
                 <![CDATA[stack traceback:
 	../runtime/lua/string_decode.lua:42: in function 'string_decode.decode'
@@ -471,6 +471,12 @@
         </testcase>
         <testcase classname="TestTermU1Val" name="TestTermU1Val.test_term_u1_val" time="0.000">
         </testcase>
+        <testcase classname="TestToStringCustom" name="TestToStringCustom.test_term_strz" time="0.001">
+            <failure type="spec/lua/test_to_string_custom.lua:10: expected: &quot;s1 = foo, s2 = bar&quot;
+actual: &quot;table: 0x55dfa92171c0&quot;">
+                <![CDATA[stack traceback:
+	spec/lua/test_to_string_custom.lua:10: in upvalue 'TestToStringCustom.test_term_strz']]></failure>
+        </testcase>
         <testcase classname="TestTsPacketHeader" name="TestTsPacketHeader.test_ts_packet_header" time="0.000">
         </testcase>
         <testcase classname="TestTypeIntUnaryOp" name="TestTypeIntUnaryOp.test_type_int_unary_op" time="0.000">
@@ -483,7 +489,7 @@
         </testcase>
         <testcase classname="TestUserType" name="TestUserType.test_user_type" time="0.000">
         </testcase>
-        <testcase classname="TestValidEqStrEncodings" name="TestValidEqStrEncodings.test_valid_eq_str_encodings" time="0.002">
+        <testcase classname="TestValidEqStrEncodings" name="TestValidEqStrEncodings.test_valid_eq_str_encodings" time="0.001">
             <error type="../runtime/lua/string_decode.lua:42: Encoding SJIS not supported">
                 <![CDATA[stack traceback:
 	../runtime/lua/string_decode.lua:42: in function 'string_decode.decode'
@@ -531,9 +537,51 @@
         </testcase>
         <testcase classname="TestYamlInts" name="TestYamlInts.test_yaml_ints" time="0.000">
         </testcase>
-        <testcase classname="TestZlibSurrounded" name="TestZlibSurrounded.test_zlib_surrounded" time="0.001">
+        <testcase classname="TestZlibSurrounded" name="TestZlibSurrounded.test_zlib_surrounded" time="0.007">
+            <error type="../runtime/lua/kaitaistruct.lua:440: can&apos;t decompress zlib - failed to load submodule &apos;zzlib&apos;: ../runtime/lua/kaitaistruct.lua:420: module &apos;zzlib&apos; not found:
+	no field package.preload[&apos;zzlib&apos;]
+	no file &apos;../runtime/lua/zzlib/zzlib.lua&apos;
+	no file &apos;../runtime/lua/zzlib.lua&apos;
+	no file &apos;spec/lua/zzlib.lua&apos;
+	no file &apos;spec/lua/extra/zzlib.lua&apos;
+	no file &apos;compiled/lua/zzlib.lua&apos;
+	no file &apos;/lua_install/share/lua/5.3/zzlib.lua&apos;
+	no file &apos;/lua_install/share/lua/5.3/zzlib/init.lua&apos;
+	no file &apos;./zzlib.lua&apos;
+	no file &apos;./zzlib/init.lua&apos;
+	no file &apos;/lua_install/lib/lua/5.3/zzlib.so&apos;
+	no file &apos;/lua_install/lib/lua/5.3/loadall.so&apos;
+	no file &apos;./zzlib.so&apos;">
+                <![CDATA[stack traceback:
+	../runtime/lua/kaitaistruct.lua:440: in field 'process_zlib'
+	compiled/lua/zlib_surrounded.lua:21: in method '_read'
+	compiled/lua/zlib_surrounded.lua:15: in local 'init'
+	../runtime/lua/class.lua:70: in function <../runtime/lua/class.lua:66>
+	(...tail calls...)
+	spec/lua/test_zlib_surrounded.lua:10: in upvalue 'TestZlibSurrounded.test_zlib_surrounded']]></error>
         </testcase>
-        <testcase classname="TestZlibWithHeader78" name="TestZlibWithHeader78.test_zlib_with_header_78" time="0.001">
+        <testcase classname="TestZlibWithHeader78" name="TestZlibWithHeader78.test_zlib_with_header_78" time="0.007">
+            <error type="../runtime/lua/kaitaistruct.lua:440: can&apos;t decompress zlib - failed to load submodule &apos;zzlib&apos;: ../runtime/lua/kaitaistruct.lua:420: module &apos;zzlib&apos; not found:
+	no field package.preload[&apos;zzlib&apos;]
+	no file &apos;../runtime/lua/zzlib/zzlib.lua&apos;
+	no file &apos;../runtime/lua/zzlib.lua&apos;
+	no file &apos;spec/lua/zzlib.lua&apos;
+	no file &apos;spec/lua/extra/zzlib.lua&apos;
+	no file &apos;compiled/lua/zzlib.lua&apos;
+	no file &apos;/lua_install/share/lua/5.3/zzlib.lua&apos;
+	no file &apos;/lua_install/share/lua/5.3/zzlib/init.lua&apos;
+	no file &apos;./zzlib.lua&apos;
+	no file &apos;./zzlib/init.lua&apos;
+	no file &apos;/lua_install/lib/lua/5.3/zzlib.so&apos;
+	no file &apos;/lua_install/lib/lua/5.3/loadall.so&apos;
+	no file &apos;./zzlib.so&apos;">
+                <![CDATA[stack traceback:
+	../runtime/lua/kaitaistruct.lua:440: in field 'process_zlib'
+	compiled/lua/zlib_with_header_78.lua:19: in method '_read'
+	compiled/lua/zlib_with_header_78.lua:14: in local 'init'
+	../runtime/lua/class.lua:70: in function <../runtime/lua/class.lua:66>
+	(...tail calls...)
+	spec/lua/test_zlib_with_header_78.lua:10: in upvalue 'TestZlibWithHeader78.test_zlib_with_header_78']]></error>
         </testcase>
     <system-out/>
     <system-err/>
