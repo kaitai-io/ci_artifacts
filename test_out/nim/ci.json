@@ -1,13 +1,13 @@
 {
   "$meta": {
     "lang": "nim",
-    "timestamp": "2023-06-28T19:45:36Z",
+    "timestamp": "2023-07-19T15:29:00Z",
     "ci": {
-      "ci": "travis",
-      "build_id": "264160093",
-      "job_id": "605112932",
-      "job_number": "467.31",
-      "url": "https://app.travis-ci.com/kaitai-io/ci_targets/jobs/605112932"
+      "ci": "github",
+      "run_id": "5601037942",
+      "run_number": "263",
+      "job_id": "15172600393",
+      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/5601037942/jobs/10244325264"
     }
   },
   "BcdUserTypeBe": {
@@ -241,31 +241,19 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "/home/travis/build/kaitai-io/ci_targets/tests/spec/nim/tenum_invalid.nim(10, 15) Error: type mismatch: got &lt;EnumInvalid_Animal, int literal(111)&gt;\nbut expected one of:\nproc `==`[Enum: enum](x, y: Enum): bool\n  first type mismatch at position: 2\n  required type for y: Enum: enum\n  but expression &apos;111&apos; is of type: int literal(111)\nproc `==`[T: tuple | object](x, y: T): bool\n  first type mismatch at position: 2\n  required type for y: T: tuple or object\n  but expression &apos;111&apos; is of type: int literal(111)\nproc `==`[T](a, b: Option[T]): bool\n  first type mismatch at position: 2\n  required type for b: Option[==.T]\n  but expression &apos;111&apos; is of type: int literal(111)\n30 other mismatching symbols have been suppressed; compile with --showAllMismatches:on to see them\n\nexpression: r.pet2 == 111\n",
+      "message": "/tests/spec/nim/tenum_invalid.nim(10, 15) Error: type mismatch: got &lt;EnumInvalid_Animal, int literal(111)&gt;\nbut expected one of:\nproc `==`[Enum: enum](x, y: Enum): bool\n  first type mismatch at position: 2\n  required type for y: Enum: enum\n  but expression &apos;111&apos; is of type: int literal(111)\nproc `==`[T: tuple | object](x, y: T): bool\n  first type mismatch at position: 2\n  required type for y: T: tuple or object\n  but expression &apos;111&apos; is of type: int literal(111)\nproc `==`[T](a, b: Option[T]): bool\n  first type mismatch at position: 2\n  required type for b: Option[==.T]\n  but expression &apos;111&apos; is of type: int literal(111)\n30 other mismatching symbols have been suppressed; compile with --showAllMismatches:on to see them\n\nexpression: r.pet2 == 111\n",
       "trace": ""
     },
     "is_kst": true
   },
   "EnumLongRangeS": {
-    "status": "failed",
+    "status": "passed",
     "elapsed": 0.0,
-    "failure": {
-      "file_name": null,
-      "line_num": null,
-      "message": "fatal.nim(53)            sysFatal\nError: unhandled exception: over- or underflow [OverflowDefect]\n",
-      "trace": ""
-    },
     "is_kst": true
   },
   "EnumLongRangeU": {
-    "status": "failed",
+    "status": "passed",
     "elapsed": 0.0,
-    "failure": {
-      "file_name": null,
-      "line_num": null,
-      "message": "fatal.nim(53)            sysFatal\nError: unhandled exception: over- or underflow [OverflowDefect]\n",
-      "trace": ""
-    },
     "is_kst": true
   },
   "EnumNegative": {
@@ -289,7 +277,7 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "/home/travis/build/kaitai-io/ci_targets/compiled/nim/enum_to_i_class_border_1.nim(13, 20) Error: undeclared identifier: &apos;EnumToIClassBorder2&apos;\ncandidates (edit distance, scope distance); see &apos;--spellSuggest&apos;: \n (1, 0): &apos;EnumToIClassBorder1&apos; [type declared in /home/travis/build/kaitai-io/ci_targets/compiled/nim/enum_to_i_class_border_1.nim(7, 3)]\n (1, 0): &apos;enum_to_i_class_border_2&apos; [module declared in /home/travis/build/kaitai-io/ci_targets/compiled/nim/enum_to_i_class_border_1.nim(5, 8)]\nThis might be caused by a recursive module dependency:\n/home/travis/build/kaitai-io/ci_targets/compiled/nim/enum_to_i_class_border_2.nim imports /home/travis/build/kaitai-io/ci_targets/compiled/nim/enum_to_i_class_border_1.nim\n/home/travis/build/kaitai-io/ci_targets/compiled/nim/enum_to_i_class_border_1.nim imports /home/travis/build/kaitai-io/ci_targets/compiled/nim/enum_to_i_class_border_2.nim\n",
+      "message": "/tests/compiled/nim/enum_to_i_class_border_1.nim(13, 20) Error: undeclared identifier: &apos;EnumToIClassBorder2&apos;\ncandidates (edit distance, scope distance); see &apos;--spellSuggest&apos;: \n (1, 0): &apos;EnumToIClassBorder1&apos; [type declared in /tests/compiled/nim/enum_to_i_class_border_1.nim(7, 3)]\n (1, 0): &apos;enum_to_i_class_border_2&apos; [module declared in /tests/compiled/nim/enum_to_i_class_border_1.nim(5, 8)]\nThis might be caused by a recursive module dependency:\n/tests/compiled/nim/enum_to_i_class_border_2.nim imports /tests/compiled/nim/enum_to_i_class_border_1.nim\n/tests/compiled/nim/enum_to_i_class_border_1.nim imports /tests/compiled/nim/enum_to_i_class_border_2.nim\n",
       "trace": ""
     },
     "is_kst": true
@@ -360,7 +348,7 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "/home/travis/build/kaitai-io/ci_targets/tests/spec/nim/texpr_int_div.nim(12) texpr_int_div\n/opt/nim-1.6.0/lib/system/assertions.nim(38) failedAssertImpl\n/opt/nim-1.6.0/lib/system/assertions.nim(28) raiseAssert\n/opt/nim-1.6.0/lib/system/fatal.nim(53) sysFatal\nError: unhandled exception: /home/travis/build/kaitai-io/ci_targets/tests/spec/nim/texpr_int_div.nim(12, 8) `r.divNegConst == -757`  [AssertionDefect]\n",
+      "message": "/tests/spec/nim/texpr_int_div.nim(12) texpr_int_div\n/nim/lib/system/assertions.nim(38) failedAssertImpl\n/nim/lib/system/assertions.nim(28) raiseAssert\n/nim/lib/system/fatal.nim(53) sysFatal\nError: unhandled exception: /tests/spec/nim/texpr_int_div.nim(12, 8) `r.divNegConst == -757`  [AssertionDefect]\n",
       "trace": ""
     },
     "is_kst": true
@@ -406,8 +394,14 @@
     "is_kst": true
   },
   "ExprStrEncodings": {
-    "status": "passed",
-    "elapsed": 0.0,
+    "status": "failed",
+    "elapsed": 0.2,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": "Traceback (most recent call last)\n/tests/spec/nim/texpr_str_encodings.nim(7) texpr_str_encodings\n/tests/compiled/nim/expr_str_encodings.nim(122) fromFile\n/tests/compiled/nim/expr_str_encodings.nim(62) read\n/root/.nimble/pkgs/kaitai_struct_nim_runtime-#head/kaitai_struct_nim_runtime.nim(333) encode\n/nim/lib/pure/encodings.nim(507) convert\n/nim/lib/pure/encodings.nim(467) convert\nSIGSEGV: Illegal storage access. (Attempt to read from nil?)\n",
+      "trace": ""
+    },
     "is_kst": true
   },
   "ExprStrOps": {
@@ -436,7 +430,7 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "/home/travis/build/kaitai-io/ci_targets/tests/spec/nim/tfloating_points.nim(13) tfloating_points\n/opt/nim-1.6.0/lib/system/assertions.nim(38) failedAssertImpl\n/opt/nim-1.6.0/lib/system/assertions.nim(28) raiseAssert\n/opt/nim-1.6.0/lib/system/fatal.nim(53) sysFatal\nError: unhandled exception: /home/travis/build/kaitai-io/ci_targets/tests/spec/nim/tfloating_points.nim(13, 8) `r.approximateValue == 1.2345`  [AssertionDefect]\n",
+      "message": "/tests/spec/nim/tfloating_points.nim(13) tfloating_points\n/nim/lib/system/assertions.nim(38) failedAssertImpl\n/nim/lib/system/assertions.nim(28) raiseAssert\n/nim/lib/system/fatal.nim(53) sysFatal\nError: unhandled exception: /tests/spec/nim/tfloating_points.nim(13, 8) `r.approximateValue == 1.2345`  [AssertionDefect]\n",
       "trace": ""
     },
     "is_kst": true
@@ -472,7 +466,7 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "/home/travis/build/kaitai-io/ci_targets/compiled/nim/imports_abs.nim(3, 15) Error: cannot open file: /common/vlq_base128_le\n",
+      "message": "/tests/compiled/nim/imports_abs.nim(3, 15) Error: cannot open file: /common/vlq_base128_le\n",
       "trace": ""
     },
     "is_kst": true
@@ -483,7 +477,7 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "/home/travis/build/kaitai-io/ci_targets/compiled/nim/imports_circular_a.nim(9, 13) Error: undeclared identifier: &apos;ImportsCircularB&apos;\ncandidates (edit distance, scope distance); see &apos;--spellSuggest&apos;: \n (1, 0): &apos;ImportsCircularA&apos; [type declared in /home/travis/build/kaitai-io/ci_targets/compiled/nim/imports_circular_a.nim(7, 3)]\n (1, 0): &apos;imports_circular_b&apos; [module declared in /home/travis/build/kaitai-io/ci_targets/compiled/nim/imports_circular_a.nim(5, 8)]\nThis might be caused by a recursive module dependency:\n/home/travis/build/kaitai-io/ci_targets/compiled/nim/imports_circular_b.nim imports /home/travis/build/kaitai-io/ci_targets/compiled/nim/imports_circular_a.nim\n/home/travis/build/kaitai-io/ci_targets/compiled/nim/imports_circular_a.nim imports /home/travis/build/kaitai-io/ci_targets/compiled/nim/imports_circular_b.nim\n",
+      "message": "/tests/compiled/nim/imports_circular_a.nim(9, 13) Error: undeclared identifier: &apos;ImportsCircularB&apos;\ncandidates (edit distance, scope distance); see &apos;--spellSuggest&apos;: \n (1, 0): &apos;ImportsCircularA&apos; [type declared in /tests/compiled/nim/imports_circular_a.nim(7, 3)]\n (1, 0): &apos;imports_circular_b&apos; [module declared in /tests/compiled/nim/imports_circular_a.nim(5, 8)]\nThis might be caused by a recursive module dependency:\n/tests/compiled/nim/imports_circular_b.nim imports /tests/compiled/nim/imports_circular_a.nim\n/tests/compiled/nim/imports_circular_a.nim imports /tests/compiled/nim/imports_circular_b.nim\n",
       "trace": ""
     },
     "is_kst": true
@@ -494,7 +488,7 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "/home/travis/build/kaitai-io/ci_targets/compiled/nim/imports_rel_1.nim(3, 23) Error: cannot open file: for_rel_imports/imported_1\n",
+      "message": "/tests/compiled/nim/imports_rel_1.nim(3, 23) Error: cannot open file: for_rel_imports/imported_1\n",
       "trace": ""
     },
     "is_kst": true
@@ -540,7 +534,7 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "/home/travis/build/kaitai-io/ci_targets/compiled/nim/instance_user_array.nim(46, 33) Error: type mismatch: got &apos;seq[byte]&apos; for &apos;rawUserEntriesInstExpr&apos; but expected &apos;seq[seq[byte]]&apos;\n",
+      "message": "/tests/compiled/nim/instance_user_array.nim(46, 33) Error: type mismatch: got &apos;seq[byte]&apos; for &apos;rawUserEntriesInstExpr&apos; but expected &apos;seq[seq[byte]]&apos;\n",
       "trace": ""
     },
     "is_kst": true
@@ -561,7 +555,7 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "/home/travis/build/kaitai-io/ci_targets/tests/spec/nim/tintegers_min_max.nim(26, 29) Error: number out of range: &apos;9223372036854775808&apos;u64&apos;\n",
+      "message": "/tests/spec/nim/tintegers_min_max.nim(26, 29) Error: number out of range: &apos;9223372036854775808&apos;u64&apos;\n",
       "trace": ""
     },
     "is_kst": true
@@ -572,7 +566,7 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "/home/travis/build/kaitai-io/ci_targets/compiled/nim/io_local_var.nim(59, 25) Error: type mismatch: got &apos;seq[byte]&apos; for &apos;messUpInstExpr&apos; but expected &apos;KaitaiStruct = ref KaitaiStruct:ObjectType&apos;\n",
+      "message": "/tests/compiled/nim/io_local_var.nim(59, 25) Error: type mismatch: got &apos;seq[byte]&apos; for &apos;messUpInstExpr&apos; but expected &apos;KaitaiStruct = ref KaitaiStruct:ObjectType&apos;\n",
       "trace": ""
     },
     "is_kst": true
@@ -638,7 +632,7 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "/home/travis/build/kaitai-io/ci_targets/compiled/nim/nav_parent_switch_cast.nim(120, 64) Error: undeclared field: &apos;parent&apos; for type kaitai_struct_nim_runtime.KaitaiStruct [type declared in /home/travis/.nimble/pkgs/kaitai_struct_nim_runtime-#head/kaitai_struct_nim_runtime.nim(5, 3)]\n",
+      "message": "/tests/compiled/nim/nav_parent_switch_cast.nim(120, 64) Error: undeclared field: &apos;parent&apos; for type kaitai_struct_nim_runtime.KaitaiStruct [type declared in /root/.nimble/pkgs/kaitai_struct_nim_runtime-#head/kaitai_struct_nim_runtime.nim(5, 3)]\n",
       "trace": ""
     },
     "is_kst": true
@@ -764,7 +758,7 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "/home/travis/build/kaitai-io/ci_targets/tests/spec/nim/tprocess_coerce_switch.nim(7, 28) template/generic instantiation of `fromFile` from here\n/home/travis/build/kaitai-io/ci_targets/compiled/nim/process_coerce_switch.nim(75, 22) template/generic instantiation of `read` from here\n/home/travis/build/kaitai-io/ci_targets/compiled/nim/process_coerce_switch.nim(48, 26) Error: type mismatch: got &apos;seq[byte]&apos; for &apos;bufUnprocExpr&apos; but expected &apos;KaitaiStruct = ref KaitaiStruct:ObjectType&apos;\n",
+      "message": "/tests/spec/nim/tprocess_coerce_switch.nim(7, 28) template/generic instantiation of `fromFile` from here\n/tests/compiled/nim/process_coerce_switch.nim(75, 22) template/generic instantiation of `read` from here\n/tests/compiled/nim/process_coerce_switch.nim(48, 26) Error: type mismatch: got &apos;seq[byte]&apos; for &apos;bufUnprocExpr&apos; but expected &apos;KaitaiStruct = ref KaitaiStruct:ObjectType&apos;\n",
       "trace": ""
     },
     "is_kst": true
@@ -785,7 +779,7 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "/home/travis/build/kaitai-io/ci_targets/compiled/nim/process_custom.nim(3, 8) Error: cannot open file: my_custom_fx\n",
+      "message": "/tests/compiled/nim/process_custom.nim(3, 8) Error: cannot open file: my_custom_fx\n",
       "trace": ""
     },
     "is_kst": true
@@ -796,7 +790,7 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "/home/travis/build/kaitai-io/ci_targets/compiled/nim/process_custom_no_args.nim(3, 8) Error: cannot open file: custom_fx_no_args\n",
+      "message": "/tests/compiled/nim/process_custom_no_args.nim(3, 8) Error: cannot open file: custom_fx_no_args\n",
       "trace": ""
     },
     "is_kst": true
@@ -812,7 +806,7 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "/home/travis/build/kaitai-io/ci_targets/tests/spec/nim/tprocess_repeat_usertype.nim(7, 30) template/generic instantiation of `fromFile` from here\n/home/travis/build/kaitai-io/ci_targets/compiled/nim/process_repeat_usertype.nim(37, 24) template/generic instantiation of `read` from here\n/home/travis/build/kaitai-io/ci_targets/compiled/nim/process_repeat_usertype.nim(30, 9) Error: redefinition of &apos;buf&apos;; previous declaration here: /home/travis/build/kaitai-io/ci_targets/compiled/nim/process_repeat_usertype.nim(28, 9)\n",
+      "message": "/tests/spec/nim/tprocess_repeat_usertype.nim(7, 30) template/generic instantiation of `fromFile` from here\n/tests/compiled/nim/process_repeat_usertype.nim(37, 24) template/generic instantiation of `read` from here\n/tests/compiled/nim/process_repeat_usertype.nim(30, 9) Error: redefinition of &apos;buf&apos;; previous declaration here: /tests/compiled/nim/process_repeat_usertype.nim(28, 9)\n",
       "trace": ""
     },
     "is_kst": true
@@ -888,7 +882,7 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "/home/travis/build/kaitai-io/ci_targets/tests/spec/nim/trepeat_until_calc_array_type.nim(7, 33) template/generic instantiation of `fromFile` from here\n/home/travis/build/kaitai-io/ci_targets/compiled/nim/repeat_until_calc_array_type.nim(61, 27) template/generic instantiation of `read` from here\n/home/travis/build/kaitai-io/ci_targets/compiled/nim/repeat_until_calc_array_type.nim(36, 25) Error: type mismatch: got &apos;seq[byte]&apos; for &apos;rawRecordsExpr&apos; but expected &apos;seq[seq[byte]]&apos;\n",
+      "message": "/tests/spec/nim/trepeat_until_calc_array_type.nim(7, 33) template/generic instantiation of `fromFile` from here\n/tests/compiled/nim/repeat_until_calc_array_type.nim(61, 27) template/generic instantiation of `read` from here\n/tests/compiled/nim/repeat_until_calc_array_type.nim(36, 25) Error: type mismatch: got &apos;seq[byte]&apos; for &apos;rawRecordsExpr&apos; but expected &apos;seq[seq[byte]]&apos;\n",
       "trace": ""
     },
     "is_kst": true
@@ -909,19 +903,31 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "/home/travis/build/kaitai-io/ci_targets/tests/spec/nim/trepeat_until_sized.nim(7, 25) template/generic instantiation of `fromFile` from here\n/home/travis/build/kaitai-io/ci_targets/compiled/nim/repeat_until_sized.nim(39, 19) template/generic instantiation of `read` from here\n/home/travis/build/kaitai-io/ci_targets/compiled/nim/repeat_until_sized.nim(30, 25) Error: type mismatch: got &apos;seq[byte]&apos; for &apos;rawRecordsExpr&apos; but expected &apos;seq[seq[byte]]&apos;\n",
+      "message": "/tests/spec/nim/trepeat_until_sized.nim(7, 25) template/generic instantiation of `fromFile` from here\n/tests/compiled/nim/repeat_until_sized.nim(39, 19) template/generic instantiation of `read` from here\n/tests/compiled/nim/repeat_until_sized.nim(30, 25) Error: type mismatch: got &apos;seq[byte]&apos; for &apos;rawRecordsExpr&apos; but expected &apos;seq[seq[byte]]&apos;\n",
       "trace": ""
     },
     "is_kst": true
   },
   "StrEncodings": {
-    "status": "passed",
-    "elapsed": 0.0,
+    "status": "failed",
+    "elapsed": 0.1,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": "Traceback (most recent call last)\n/tests/spec/nim/tstr_encodings.nim(7) tstr_encodings\n/tests/compiled/nim/str_encodings.nim(45) fromFile\n/tests/compiled/nim/str_encodings.nim(41) read\n/root/.nimble/pkgs/kaitai_struct_nim_runtime-#head/kaitai_struct_nim_runtime.nim(333) encode\n/nim/lib/pure/encodings.nim(507) convert\n/nim/lib/pure/encodings.nim(467) convert\nSIGSEGV: Illegal storage access. (Attempt to read from nil?)\n",
+      "trace": ""
+    },
     "is_kst": true
   },
   "StrEncodingsDefault": {
-    "status": "passed",
-    "elapsed": 0.0,
+    "status": "failed",
+    "elapsed": 0.1,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": "Traceback (most recent call last)\n/tests/spec/nim/tstr_encodings_default.nim(7) tstr_encodings_default\n/tests/compiled/nim/str_encodings_default.nim(39) fromFile\n/tests/compiled/nim/str_encodings_default.nim(35) read\n/tests/compiled/nim/str_encodings_default.nim(59) read\n/root/.nimble/pkgs/kaitai_struct_nim_runtime-#head/kaitai_struct_nim_runtime.nim(333) encode\n/nim/lib/pure/encodings.nim(507) convert\n/nim/lib/pure/encodings.nim(467) convert\nSIGSEGV: Illegal storage access. (Attempt to read from nil?)\n",
+      "trace": ""
+    },
     "is_kst": true
   },
   "StrEncodingsUtf16": {
@@ -980,7 +986,7 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "/home/travis/build/kaitai-io/ci_targets/tests/spec/nim/tswitch_manual_enum_invalid.nim(10, 26) Error: type mismatch: got &lt;SwitchManualEnumInvalid_Opcode_CodeEnum, int literal(255)&gt;\nbut expected one of:\nproc `==`[Enum: enum](x, y: Enum): bool\n  first type mismatch at position: 2\n  required type for y: Enum: enum\n  but expression &apos;255&apos; is of type: int literal(255)\nproc `==`[T: tuple | object](x, y: T): bool\n  first type mismatch at position: 2\n  required type for y: T: tuple or object\n  but expression &apos;255&apos; is of type: int literal(255)\nproc `==`[T](a, b: Option[T]): bool\n  first type mismatch at position: 2\n  required type for b: Option[==.T]\n  but expression &apos;255&apos; is of type: int literal(255)\n30 other mismatching symbols have been suppressed; compile with --showAllMismatches:on to see them\n\nexpression: r.opcodes[0].code == 255\n",
+      "message": "/tests/spec/nim/tswitch_manual_enum_invalid.nim(10, 26) Error: type mismatch: got &lt;SwitchManualEnumInvalid_Opcode_CodeEnum, int literal(255)&gt;\nbut expected one of:\nproc `==`[Enum: enum](x, y: Enum): bool\n  first type mismatch at position: 2\n  required type for y: Enum: enum\n  but expression &apos;255&apos; is of type: int literal(255)\nproc `==`[T: tuple | object](x, y: T): bool\n  first type mismatch at position: 2\n  required type for y: T: tuple or object\n  but expression &apos;255&apos; is of type: int literal(255)\nproc `==`[T](a, b: Option[T]): bool\n  first type mismatch at position: 2\n  required type for b: Option[==.T]\n  but expression &apos;255&apos; is of type: int literal(255)\n30 other mismatching symbols have been suppressed; compile with --showAllMismatches:on to see them\n\nexpression: r.opcodes[0].code == 255\n",
       "trace": ""
     },
     "is_kst": true
@@ -991,7 +997,7 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "/home/travis/build/kaitai-io/ci_targets/tests/spec/nim/tswitch_manual_enum_invalid_else.nim(10, 26) Error: type mismatch: got &lt;SwitchManualEnumInvalidElse_Opcode_CodeEnum, int literal(255)&gt;\nbut expected one of:\nproc `==`[Enum: enum](x, y: Enum): bool\n  first type mismatch at position: 2\n  required type for y: Enum: enum\n  but expression &apos;255&apos; is of type: int literal(255)\nproc `==`[T: tuple | object](x, y: T): bool\n  first type mismatch at position: 2\n  required type for y: T: tuple or object\n  but expression &apos;255&apos; is of type: int literal(255)\nproc `==`[T](a, b: Option[T]): bool\n  first type mismatch at position: 2\n  required type for b: Option[==.T]\n  but expression &apos;255&apos; is of type: int literal(255)\n30 other mismatching symbols have been suppressed; compile with --showAllMismatches:on to see them\n\nexpression: r.opcodes[0].code == 255\n",
+      "message": "/tests/spec/nim/tswitch_manual_enum_invalid_else.nim(10, 26) Error: type mismatch: got &lt;SwitchManualEnumInvalidElse_Opcode_CodeEnum, int literal(255)&gt;\nbut expected one of:\nproc `==`[Enum: enum](x, y: Enum): bool\n  first type mismatch at position: 2\n  required type for y: Enum: enum\n  but expression &apos;255&apos; is of type: int literal(255)\nproc `==`[T: tuple | object](x, y: T): bool\n  first type mismatch at position: 2\n  required type for y: T: tuple or object\n  but expression &apos;255&apos; is of type: int literal(255)\nproc `==`[T](a, b: Option[T]): bool\n  first type mismatch at position: 2\n  required type for b: Option[==.T]\n  but expression &apos;255&apos; is of type: int literal(255)\n30 other mismatching symbols have been suppressed; compile with --showAllMismatches:on to see them\n\nexpression: r.opcodes[0].code == 255\n",
       "trace": ""
     },
     "is_kst": true
@@ -1012,7 +1018,7 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "/home/travis/build/kaitai-io/ci_targets/tests/spec/nim/tswitch_manual_int_size.nim(7, 28) template/generic instantiation of `fromFile` from here\n/home/travis/build/kaitai-io/ci_targets/compiled/nim/switch_manual_int_size.nim(44, 22) template/generic instantiation of `read` from here\n/home/travis/build/kaitai-io/ci_targets/compiled/nim/switch_manual_int_size.nim(39, 41) template/generic instantiation of `read` from here\n/home/travis/build/kaitai-io/ci_targets/compiled/nim/switch_manual_int_size.nim(74, 19) Error: type mismatch: got &apos;seq[byte]&apos; for &apos;bodyExpr&apos; but expected &apos;KaitaiStruct = ref KaitaiStruct:ObjectType&apos;\n",
+      "message": "/tests/spec/nim/tswitch_manual_int_size.nim(7, 28) template/generic instantiation of `fromFile` from here\n/tests/compiled/nim/switch_manual_int_size.nim(44, 22) template/generic instantiation of `read` from here\n/tests/compiled/nim/switch_manual_int_size.nim(39, 41) template/generic instantiation of `read` from here\n/tests/compiled/nim/switch_manual_int_size.nim(74, 19) Error: type mismatch: got &apos;seq[byte]&apos; for &apos;bodyExpr&apos; but expected &apos;KaitaiStruct = ref KaitaiStruct:ObjectType&apos;\n",
       "trace": ""
     },
     "is_kst": true
@@ -1023,7 +1029,7 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "/home/travis/build/kaitai-io/ci_targets/tests/spec/nim/tswitch_manual_int_size_else.nim(18, 8) template/generic instantiation of `assert` from here\n/home/travis/build/kaitai-io/ci_targets/tests/spec/nim/auxiliary/test_utils.nim(12, 32) Error: type mismatch: got &apos;empty&apos; for &apos;expected[i]&apos; but expected &apos;byte = uint8&apos;\n",
+      "message": "/tests/spec/nim/tswitch_manual_int_size_else.nim(18, 8) template/generic instantiation of `assert` from here\n/tests/spec/nim/auxiliary/test_utils.nim(12, 32) Error: type mismatch: got &apos;empty&apos; for &apos;expected[i]&apos; but expected &apos;byte = uint8&apos;\n",
       "trace": ""
     },
     "is_kst": true
@@ -1034,7 +1040,7 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "/home/travis/build/kaitai-io/ci_targets/tests/spec/nim/tswitch_manual_int_size_eos.nim(7, 31) template/generic instantiation of `fromFile` from here\n/home/travis/build/kaitai-io/ci_targets/compiled/nim/switch_manual_int_size_eos.nim(49, 25) template/generic instantiation of `read` from here\n/home/travis/build/kaitai-io/ci_targets/compiled/nim/switch_manual_int_size_eos.nim(44, 44) template/generic instantiation of `read` from here\n/home/travis/build/kaitai-io/ci_targets/compiled/nim/switch_manual_int_size_eos.nim(66, 50) template/generic instantiation of `read` from here\n/home/travis/build/kaitai-io/ci_targets/compiled/nim/switch_manual_int_size_eos.nim(96, 19) Error: type mismatch: got &apos;seq[byte]&apos; for &apos;bodyExpr&apos; but expected &apos;KaitaiStruct = ref KaitaiStruct:ObjectType&apos;\n",
+      "message": "/tests/spec/nim/tswitch_manual_int_size_eos.nim(7, 31) template/generic instantiation of `fromFile` from here\n/tests/compiled/nim/switch_manual_int_size_eos.nim(49, 25) template/generic instantiation of `read` from here\n/tests/compiled/nim/switch_manual_int_size_eos.nim(44, 44) template/generic instantiation of `read` from here\n/tests/compiled/nim/switch_manual_int_size_eos.nim(66, 50) template/generic instantiation of `read` from here\n/tests/compiled/nim/switch_manual_int_size_eos.nim(96, 19) Error: type mismatch: got &apos;seq[byte]&apos; for &apos;bodyExpr&apos; but expected &apos;KaitaiStruct = ref KaitaiStruct:ObjectType&apos;\n",
       "trace": ""
     },
     "is_kst": true
@@ -1060,7 +1066,7 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "/home/travis/build/kaitai-io/ci_targets/tests/spec/nim/tswitch_repeat_expr.nim(7, 25) template/generic instantiation of `fromFile` from here\n/home/travis/build/kaitai-io/ci_targets/compiled/nim/switch_repeat_expr.nim(55, 19) template/generic instantiation of `read` from here\n/home/travis/build/kaitai-io/ci_targets/compiled/nim/switch_repeat_expr.nim(40, 24) Error: type mismatch: got &apos;seq[byte]&apos; for &apos;rawBodyExpr&apos; but expected &apos;seq[seq[byte]]&apos;\n",
+      "message": "/tests/spec/nim/tswitch_repeat_expr.nim(7, 25) template/generic instantiation of `fromFile` from here\n/tests/compiled/nim/switch_repeat_expr.nim(55, 19) template/generic instantiation of `read` from here\n/tests/compiled/nim/switch_repeat_expr.nim(40, 24) Error: type mismatch: got &apos;seq[byte]&apos; for &apos;rawBodyExpr&apos; but expected &apos;seq[seq[byte]]&apos;\n",
       "trace": ""
     },
     "is_kst": true
@@ -1071,7 +1077,7 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "/home/travis/build/kaitai-io/ci_targets/tests/spec/nim/tswitch_repeat_expr_invalid.nim(7, 32) template/generic instantiation of `fromFile` from here\n/home/travis/build/kaitai-io/ci_targets/compiled/nim/switch_repeat_expr_invalid.nim(55, 26) template/generic instantiation of `read` from here\n/home/travis/build/kaitai-io/ci_targets/compiled/nim/switch_repeat_expr_invalid.nim(40, 24) Error: type mismatch: got &apos;seq[byte]&apos; for &apos;rawBodyExpr&apos; but expected &apos;seq[seq[byte]]&apos;\n",
+      "message": "/tests/spec/nim/tswitch_repeat_expr_invalid.nim(7, 32) template/generic instantiation of `fromFile` from here\n/tests/compiled/nim/switch_repeat_expr_invalid.nim(55, 26) template/generic instantiation of `read` from here\n/tests/compiled/nim/switch_repeat_expr_invalid.nim(40, 24) Error: type mismatch: got &apos;seq[byte]&apos; for &apos;rawBodyExpr&apos; but expected &apos;seq[seq[byte]]&apos;\n",
       "trace": ""
     },
     "is_kst": true
@@ -1117,8 +1123,14 @@
     "is_kst": true
   },
   "ValidEqStrEncodings": {
-    "status": "passed",
-    "elapsed": 0.0,
+    "status": "failed",
+    "elapsed": 0.1,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": "Traceback (most recent call last)\n/tests/spec/nim/tvalid_eq_str_encodings.nim(7) tvalid_eq_str_encodings\n/tests/compiled/nim/valid_eq_str_encodings.nim(45) fromFile\n/tests/compiled/nim/valid_eq_str_encodings.nim(41) read\n/root/.nimble/pkgs/kaitai_struct_nim_runtime-#head/kaitai_struct_nim_runtime.nim(333) encode\n/nim/lib/pure/encodings.nim(507) convert\n/nim/lib/pure/encodings.nim(467) convert\nSIGSEGV: Illegal storage access. (Attempt to read from nil?)\n",
+      "trace": ""
+    },
     "is_kst": true
   },
   "ValidLong": {
@@ -1147,7 +1159,7 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "/home/travis/build/kaitai-io/ci_targets/compiled/nim/yaml_ints.nim(51, 30) Error: 18446744073709551615 can&apos;t be converted to int\n",
+      "message": "/tests/compiled/nim/yaml_ints.nim(51, 30) Error: 18446744073709551615 can&apos;t be converted to int\n",
       "trace": ""
     },
     "is_kst": true
@@ -1158,7 +1170,7 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "/home/travis/build/kaitai-io/ci_targets/tests/spec/nim/tzlib_surrounded.nim(7, 23) template/generic instantiation of `fromFile` from here\n/home/travis/build/kaitai-io/ci_targets/compiled/nim/zlib_surrounded.nim(41, 17) template/generic instantiation of `read` from here\n/home/travis/build/kaitai-io/ci_targets/compiled/nim/zlib_surrounded.nim(32, 36) Error: attempting to call undeclared routine: &apos;processZlib&apos;\n",
+      "message": "/tests/spec/nim/tzlib_surrounded.nim(7, 23) template/generic instantiation of `fromFile` from here\n/tests/compiled/nim/zlib_surrounded.nim(41, 17) template/generic instantiation of `read` from here\n/tests/compiled/nim/zlib_surrounded.nim(32, 36) Error: attempting to call undeclared routine: &apos;processZlib&apos;\n",
       "trace": ""
     },
     "is_kst": true
@@ -1169,7 +1181,7 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "/home/travis/build/kaitai-io/ci_targets/tests/spec/nim/tzlib_with_header_78.nim(7, 25) template/generic instantiation of `fromFile` from here\n/home/travis/build/kaitai-io/ci_targets/compiled/nim/zlib_with_header_78.nim(27, 19) template/generic instantiation of `read` from here\n/home/travis/build/kaitai-io/ci_targets/compiled/nim/zlib_with_header_78.nim(23, 30) Error: attempting to call undeclared routine: &apos;processZlib&apos;\n",
+      "message": "/tests/spec/nim/tzlib_with_header_78.nim(7, 25) template/generic instantiation of `fromFile` from here\n/tests/compiled/nim/zlib_with_header_78.nim(27, 19) template/generic instantiation of `read` from here\n/tests/compiled/nim/zlib_with_header_78.nim(23, 30) Error: attempting to call undeclared routine: &apos;processZlib&apos;\n",
       "trace": ""
     },
     "is_kst": true
