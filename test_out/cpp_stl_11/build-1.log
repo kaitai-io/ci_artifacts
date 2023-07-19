@@ -1,8 +1,8 @@
+[  0%] Building CXX object CMakeFiles/ks_tests.dir/prereq/my_custom_fx.cpp.o
 [  0%] Building CXX object CMakeFiles/ks_tests.dir/runtime/cpp_stl/kaitai/kaitaistream.cpp.o
+[  0%] Building CXX object CMakeFiles/ks_tests.dir/prereq/custom_fx.cpp.o
 [  0%] Building CXX object CMakeFiles/ks_tests.dir/prereq/custom_fx_no_args.cpp.o
 [  1%] Building CXX object CMakeFiles/ks_tests.dir/test_combine_enum.cpp.o
-[  1%] Building CXX object CMakeFiles/ks_tests.dir/prereq/my_custom_fx.cpp.o
-[  1%] Building CXX object CMakeFiles/ks_tests.dir/prereq/custom_fx.cpp.o
 [  1%] Building CXX object CMakeFiles/ks_tests.dir/test_integers_double_overflow.cpp.o
 [  1%] Building CXX object CMakeFiles/ks_tests.dir/test_recursive_one.cpp.o
 [  1%] Building CXX object CMakeFiles/ks_tests.dir/test_nested_types3.cpp.o
@@ -177,6 +177,7 @@ make[2]: *** [CMakeFiles/ks_tests.dir/test_expr_bytes_non_literal.cpp.o] Error 1
 [ 36%] Building CXX object CMakeFiles/ks_tests.dir/test_nested_types2.cpp.o
 [ 36%] Building CXX object CMakeFiles/ks_tests.dir/test_fixed_contents.cpp.o
 [ 36%] Building CXX object CMakeFiles/ks_tests.dir/test_docstrings_docref.cpp.o
+[ 36%] Building CXX object CMakeFiles/ks_tests.dir/test_bits_byte_aligned.cpp.o
 In file included from /tests/spec/cpp_stl_11/test_enum_import.cpp:4:
 /tests/compiled/cpp_stl_11/enum_import.h:27:5: error: use of undeclared identifier 'enum_0_t'
     enum_0_t::animal_t m_pet_1;
@@ -187,14 +188,13 @@ In file included from /tests/spec/cpp_stl_11/test_enum_import.cpp:4:
 /tests/compiled/cpp_stl_11/enum_import.h:33:5: error: use of undeclared identifier 'enum_0_t'
     enum_0_t::animal_t pet_1() const { return m_pet_1; }
     ^
-/tests/compiled/cpp_stl_11/enum_import.h:34:5: error: use of undeclared identifier 'enum_deep_t'
+/tests/compiled/cpp_stl_11/enum_import.h[ 36%] Building CXX object CMakeFiles/ks_tests.dir/test_integers_min_max.cpp.o
+:34:5: error: use of undeclared identifier 'enum_deep_t'
     enum_deep_t::container1_t::container2_t::animal_t pet_2() const { return m_pet_2; }
     ^
-[ 36%] Building CXX object CMakeFiles/ks_tests.dir/test_bits_byte_aligned.cpp.o
-[ 36%] Building CXX object CMakeFiles/ks_tests.dir/test_integers_min_max.cpp.o
+[ 37%] Building CXX object CMakeFiles/ks_tests.dir/test_switch_manual_int_size_eos.cpp.o
 4 errors generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/test_enum_import.cpp.o] Error 1
-[ 37%] Building CXX object CMakeFiles/ks_tests.dir/test_switch_manual_int_size_eos.cpp.o
 [ 37%] Building CXX object CMakeFiles/ks_tests.dir/test_str_pad_term_empty.cpp.o
 [ 37%] Building CXX object CMakeFiles/ks_tests.dir/test_enum_to_i_class_border_1.cpp.o
 [ 37%] Building CXX object CMakeFiles/ks_tests.dir/test_expr_io_eof.cpp.o
@@ -236,11 +236,11 @@ make[2]: *** [CMakeFiles/ks_tests.dir/test_enum_import.cpp.o] Error 1
 [ 45%] Building CXX object CMakeFiles/ks_tests.dir/test_process_coerce_usertype2.cpp.o
 [ 45%] Building CXX object CMakeFiles/ks_tests.dir/test_str_literals.cpp.o
 [ 45%] Building CXX object CMakeFiles/ks_tests.dir/test_to_string_custom.cpp.o
-[ 45%] Building CXX object CMakeFiles/ks_tests.dir/test_switch_manual_int_size.cpp.o
 /tests/spec/cpp_stl_11/test_process_coerce_switch.cpp:4:10: fatal error: 'process_coerce_switch.h' file not found
 #include "process_coerce_switch.h"
          ^
-1 error generated.
+1[ 45%] Building CXX object CMakeFiles/ks_tests.dir/test_switch_manual_int_size.cpp.o
+ error generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/test_process_coerce_switch.cpp.o] Error 1
 [ 46%] Building CXX object CMakeFiles/ks_tests.dir/test_params_def.cpp.o
 [ 46%] Building CXX object CMakeFiles/ks_tests.dir/test_nav_parent_switch_cast.cpp.o
@@ -322,8 +322,8 @@ make[2]: *** [CMakeFiles/ks_tests.dir/test_process_coerce_switch.cpp.o] Error 1
     m_flag = static_cast<nav_parent_switch_cast_t::foo_t*>(_parent()->_parent())->flag();
                                                            ~~~~~~~~~  ^
 1 error generated.
-[ 59%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/expr_str_ops.cpp.o
 make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/nav_parent_switch_cast.cpp.o] Error 1
+[ 59%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/expr_str_ops.cpp.o
 [ 59%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/valid_switch.cpp.o
 [ 60%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/repeat_eos_u4.cpp.o
 [ 60%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/imports_abs.cpp.o
@@ -388,9 +388,9 @@ make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/instance_user_ar
     class param_type_t : public kaitai::kstruct {
           ^
 [ 63%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/bits_signed_res_b32_be.cpp.o
-[ 63%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/params_pass_struct.cpp.o
 1 error generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/params_pass_array_usertype.cpp.o] Error 1
+[ 63%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/params_pass_struct.cpp.o
 [ 63%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/switch_manual_int_size.cpp.o
 [ 63%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/process_to_user.cpp.o
 [ 64%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/nav_parent_vs_value_inst.cpp.o
@@ -525,11 +525,11 @@ class kstream {
 /usr/bin/../lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/bits/basic_string.tcc:708:5: note: candidate template ignored: could not match 'basic_string<type-parameter-0-0, type-parameter-0-1, type-parameter-0-2>' against 'unsigned long'
     operator+(_CharT __lhs, const basic_string<_CharT, _Traits, _Alloc>& __rhs)
     ^
-1 error generated.
-make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/expr_ops_parens.cpp.o] Error 1
-[ 74%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/expr_bytes_ops.cpp.o
 3 errors generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/repeat_until_sized.cpp.o] Error 1
+[ 74%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/expr_bytes_ops.cpp.o
+1 error generated.
+make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/expr_ops_parens.cpp.o] Error 1
 [ 74%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/default_bit_endian_mod.cpp.o
 [ 74%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/valid_fail_eq_int.cpp.o
 [ 74%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/switch_repeat_expr_invalid.cpp.o
@@ -619,6 +619,7 @@ make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/switch_repeat_ex
 [ 76%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/eos_exception_u4.cpp.o
 [ 77%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/enum_deep.cpp.o
 [ 77%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/enum_for_unknown_id.cpp.o
+[ 77%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/index_to_param_eos.cpp.o
 /tests/compiled/cpp_stl_11/debug_switch_user.cpp:17:9: error: no matching conversion for static_cast from 'std::unique_ptr<kaitai::kstruct>' to 'std::unique_ptr<one_t>'
         static_cast<std::unique_ptr<one_t>>(m_data)->_read();
         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -681,7 +682,6 @@ make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/switch_repeat_ex
       ^
 2 errors generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/debug_switch_user.cpp.o] Error 1
-[ 77%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/index_to_param_eos.cpp.o
 [ 77%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/expr_1.cpp.o
 [ 77%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/imported_1.cpp.o
 [ 78%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/position_to_end.cpp.o
@@ -692,8 +692,8 @@ make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/debug_switch_use
 [ 79%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/index_to_param_until.cpp.o
 [ 79%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/process_custom.cpp.o
 [ 79%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/bits_simple_le.cpp.o
-[ 79%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/valid_long.cpp.o
-/tests/compiled/cpp_stl_11/enum_to_i_class_border_1.cpp:41:65: error: no matching constructor for initialization of 'enum_to_i_class_border_2_t'
+/tests/compiled/cpp_stl_11/enum_to_i_class_border_1.cpp[ 79%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/valid_long.cpp.o
+:41:65: error: no matching constructor for initialization of 'enum_to_i_class_border_2_t'
     m_checker = std::unique_ptr<enum_to_i_class_border_2_t>(new enum_to_i_class_border_2_t(_root(), m__io));
                                                                 ^                          ~~~~~~~~~~~~~~
 /tests/compiled/cpp_stl_11/enum_to_i_class_border_2.h:18:5: note: candidate constructor not viable: no known conversion from 'enum_to_i_class_border_1_t *' to 'enum_to_i_class_border_2_t::enum_to_i_class_border_1_t *' for 1st argument
@@ -750,8 +750,8 @@ make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/enum_to_i_class_
 [ 89%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/default_endian_mod.cpp.o
 [ 89%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/docstrings_docref.cpp.o
 [ 89%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/expr_mod.cpp.o
-[ 89%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/imports_abs_rel.cpp.o
-/tests/compiled/cpp_stl_11/vlq_base128_le.cpp:82:335: warning: shift count >= width of type [-Wshift-count-overflow]
+/tests/compiled/cpp_stl_11/vlq_base128_le.cpp[ 89%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/imports_abs_rel.cpp.o
+:82:335: warning: shift count >= width of type [-Wshift-count-overflow]
     m_value = (((((((groups()->at(0)->value() + ((len() >= 2) ? ((groups()->at(1)->value() << 7)) : (0))) + ((len() >= 3) ? ((groups()->at(2)->value() << 14)) : (0))) + ((len() >= 4) ? ((groups()->at(3)->value() << 21)) : (0))) + ((len() >= 5) ? ((groups()->at(4)->value() << 28)) : (0))) + ((len() >= 6) ? ((groups()->at(5)->value() << 35)) : (0))) + ((len() >= 7) ? ((groups()->at(6)->value() << 42)) : (0))) + ((len() >= 8) ? ((groups()->at(7)->value() << 49)) : (0)));
                                                                                                                                                                                                                                                                                                                                               ^  ~~
 /tests/compiled/cpp_stl_11/vlq_base128_le.cpp:82:396: warning: shift count >= width of type [-Wshift-count-overflow]
@@ -816,22 +816,22 @@ class kstream {
 /tests/compiled/cpp_stl_11/repeat_until_calc_array_type.h:28:11: note: candidate constructor (the implicit copy constructor) not viable: requires 1 argument, but 3 were provided
     class record_t : public kaitai::kstruct {
           ^
-3 errors generated.
-make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/repeat_until_calc_array_type.cpp.o] Error 1
 [ 93%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/type_ternary_opaque.cpp.o
-[ 94%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/enum_to_i_class_border_2.cpp.o
+3[ 94%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/enum_to_i_class_border_2.cpp.o
+ errors generated.
+make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/repeat_until_calc_array_type.cpp.o] Error 1
 [ 94%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/expr_io_pos.cpp.o
 [ 94%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/switch_repeat_expr.cpp.o
 [ 94%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/switch_manual_int.cpp.o
 [ 94%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/enum_int_range_u.cpp.o
 [ 95%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/nav_parent_false.cpp.o
-[ 95%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/valid_short.cpp.o
 /tests/compiled/cpp_stl_11/enum_to_i_class_border_2.cpp:27:24: error: member access into incomplete type 'enum_to_i_class_border_2_t::enum_to_i_class_border_1_t'
     m_is_dog = parent()->some_dog() == 4;
                        ^
 /tests/compiled/cpp_stl_11/enum_to_i_class_border_2.h:16:11: note: forward declaration of 'enum_to_i_class_border_2_t::enum_to_i_class_border_1_t'
     class enum_to_i_class_border_1_t;
           ^
+[ 95%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/valid_short.cpp.o
 1 error generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/enum_to_i_class_border_2.cpp.o] Error 1
 [ 95%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/valid_not_parsed_if.cpp.o
@@ -931,13 +931,13 @@ In file included from /tests/compiled/cpp_stl_11/enum_import.cpp:3:
 /tests/compiled/cpp_stl_11/enum_import.h:33:5: error: use of undeclared identifier 'enum_0_t'
     enum_0_t::animal_t pet_1() const { return m_pet_1; }
     ^
-/tests/compiled/cpp_stl_11/enum_import.h[ 98%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/cast_to_imported.cpp.o
-:34:5: error: use of undeclared identifier 'enum_deep_t'
+/tests/compiled/cpp_stl_11/enum_import.h:34:5: error: use of undeclared identifier 'enum_deep_t'
     enum_deep_t::container1_t::container2_t::animal_t pet_2() const { return m_pet_2; }
     ^
 /tests/compiled/cpp_stl_11/enum_import.cpp:12:27: error: use of undeclared identifier 'enum_0_t'
     m_pet_1 = static_cast<enum_0_t::animal_t>(m__io->read_u4le());
                           ^
+[ 98%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/cast_to_imported.cpp.o
 /tests/compiled/cpp_stl_11/enum_import.cpp:13:27: error: use of undeclared identifier 'enum_deep_t'
     m_pet_2 = static_cast<enum_deep_t::container1_t::container2_t::animal_t>(m__io->read_u4le());
                           ^
@@ -949,8 +949,8 @@ enum_import_t::~enum_import_t() {
     ^
 7 errors generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/enum_import.cpp.o] Error 1
-[ 98%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/process_rotate.cpp.o
 [ 98%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/process_repeat_usertype.cpp.o
+[ 98%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/process_rotate.cpp.o
 [ 98%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/expr_enum.cpp.o
 [ 99%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/repeat_eos_struct.cpp.o
 [ 99%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/imports_circular_a.cpp.o
