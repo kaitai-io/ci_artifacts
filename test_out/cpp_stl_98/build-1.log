@@ -1,8 +1,8 @@
 [  0%] Building CXX object CMakeFiles/ks_tests.dir/runtime/cpp_stl/kaitai/kaitaistream.cpp.o
-[  0%] Building CXX object CMakeFiles/ks_tests.dir/prereq/my_custom_fx.cpp.o
-[  0%] Building CXX object CMakeFiles/ks_tests.dir/prereq/custom_fx.cpp.o
 [  0%] Building CXX object CMakeFiles/ks_tests.dir/prereq/custom_fx_no_args.cpp.o
+[  0%] Building CXX object CMakeFiles/ks_tests.dir/prereq/my_custom_fx.cpp.o
 [  1%] Building CXX object CMakeFiles/ks_tests.dir/test_combine_enum.cpp.o
+[  1%] Building CXX object CMakeFiles/ks_tests.dir/prereq/custom_fx.cpp.o
 [  1%] Building CXX object CMakeFiles/ks_tests.dir/test_integers_double_overflow.cpp.o
 [  1%] Building CXX object CMakeFiles/ks_tests.dir/test_recursive_one.cpp.o
 [  1%] Building CXX object CMakeFiles/ks_tests.dir/test_nested_types3.cpp.o
@@ -185,10 +185,10 @@ make[2]: *** [CMakeFiles/ks_tests.dir/test_params_pass_array_struct.cpp.o] Error
 [ 35%] Building CXX object CMakeFiles/ks_tests.dir/test_enum_import.cpp.o
 [ 36%] Building CXX object CMakeFiles/ks_tests.dir/test_switch_multi_bool_ops.cpp.o
 [ 36%] Building CXX object CMakeFiles/ks_tests.dir/test_nested_types2.cpp.o
+[ 36%] Building CXX object CMakeFiles/ks_tests.dir/test_fixed_contents.cpp.o
 /tests/spec/cpp_stl_98/test_params_pass_array_str.cpp:4:10: fatal error: 'params_pass_array_str.h' file not found
 #include "params_pass_array_str.h"
          ^
-[ 36%] Building CXX object CMakeFiles/ks_tests.dir/test_fixed_contents.cpp.o
 1 error generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/test_params_pass_array_str.cpp.o] Error 1
 [ 36%] Building CXX object CMakeFiles/ks_tests.dir/test_docstrings_docref.cpp.o
@@ -199,7 +199,8 @@ In file included from /tests/spec/cpp_stl_98/test_enum_import.cpp:4:
 /tests/compiled/cpp_stl_98/enum_import.h:28:5: error: use of undeclared identifier 'enum_deep_t'
     enum_deep_t::container1_t::container2_t::animal_t m_pet_2;
     ^
-/tests/compiled/cpp_stl_98/enum_import.h:33:5: error: use of undeclared identifier 'enum_0_t'
+/tests/compiled/cpp_stl_98/enum_import.h[ 36%] Building CXX object CMakeFiles/ks_tests.dir/test_bits_byte_aligned.cpp.o
+:33:5: error: use of undeclared identifier 'enum_0_t'
     enum_0_t::animal_t pet_1() const { return m_pet_1; }
     ^
 /tests/compiled/cpp_stl_98/enum_import.h:34:5: error: use of undeclared identifier 'enum_deep_t'
@@ -207,7 +208,6 @@ In file included from /tests/spec/cpp_stl_98/test_enum_import.cpp:4:
     ^
 4 errors generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/test_enum_import.cpp.o] Error 1
-[ 36%] Building CXX object CMakeFiles/ks_tests.dir/test_bits_byte_aligned.cpp.o
 [ 37%] Building CXX object CMakeFiles/ks_tests.dir/test_integers_min_max.cpp.o
 [ 37%] Building CXX object CMakeFiles/ks_tests.dir/test_switch_manual_int_size_eos.cpp.o
 [ 37%] Building CXX object CMakeFiles/ks_tests.dir/test_str_pad_term_empty.cpp.o
@@ -279,9 +279,9 @@ make[2]: *** [CMakeFiles/ks_tests.dir/test_process_coerce_switch.cpp.o] Error 1
 /tests/spec/cpp_stl_98/test_expr_calc_array_ops.cpp:4:10: fatal error: 'expr_calc_array_ops.h' file not found
 #include "expr_calc_array_ops.h"
          ^
-[ 50%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/instance_std_array.cpp.o
 1 error generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/test_expr_calc_array_ops.cpp.o] Error 1
+[ 50%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/instance_std_array.cpp.o
 [ 50%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/process_custom_no_args.cpp.o
 [ 50%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/expr_sizeof_type_0.cpp.o
 [ 51%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/nav_parent_switch.cpp.o
@@ -302,15 +302,15 @@ make[2]: *** [CMakeFiles/ks_tests.dir/test_expr_calc_array_ops.cpp.o] Error 1
 1 warning generated.
 [ 53%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/switch_manual_enum.cpp.o
 [ 53%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/bits_unaligned_b64_le.cpp.o
-[ 54%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/cast_to_top.cpp.o
 /tests/compiled/cpp_stl_98/yaml_ints.cpp:50:21: warning: implicit conversion from 'unsigned long long' to 'int32_t' (aka 'int') changes value from 18446744073709551615 to -1 [-Wconstant-conversion]
     m_test_u8_dec = 18446744073709551615ULL;
                   ~ ^~~~~~~~~~~~~~~~~~~~~~~
 /tests/compiled/cpp_stl_98/yaml_ints.cpp:58:21: warning: implicit conversion from 'unsigned long long' to 'int32_t' (aka 'int') changes value from 18446744073709551615 to -1 [-Wconstant-conversion]
     m_test_u8_hex = 18446744073709551615ULL;
                   ~ ^~~~~~~~~~~~~~~~~~~~~~~
-2 warnings generated.
+[ 54%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/cast_to_top.cpp.o
 [ 54%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/repeat_until_complex.cpp.o
+2 warnings generated.
 [ 54%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/valid_fail_min_int.cpp.o
 [ 54%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/integers.cpp.o
 [ 54%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/valid_fail_eq_str.cpp.o
@@ -327,21 +327,21 @@ make[2]: *** [CMakeFiles/ks_tests.dir/test_expr_calc_array_ops.cpp.o] Error 1
 [ 57%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/params_pass_usertype.cpp.o
 [ 57%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/enum_long_range_s.cpp.o
 [ 57%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/str_encodings_default.cpp.o
-[ 57%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/floating_points.cpp.o
 [ 58%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/imported_and_abs.cpp.o
+[ 58%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/floating_points.cpp.o
 [ 58%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/nav_parent_switch_cast.cpp.o
 [ 58%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/expr_io_eof.cpp.o
 [ 58%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/imported_2.cpp.o
 [ 58%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/if_values.cpp.o
 [ 59%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/imported_and_rel.cpp.o
-[ 59%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/nested_types.cpp.o
-[ 59%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/default_endian_expr_exception.cpp.o
-[ 59%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/expr_str_ops.cpp.o
 /tests/compiled/cpp_stl_98/nav_parent_switch_cast.cpp:166:71: error: no member named '_parent' in 'kaitai::kstruct'
     m_flag = static_cast<nav_parent_switch_cast_t::foo_t*>(_parent()->_parent())->flag();
                                                            ~~~~~~~~~  ^
 1 error generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/nav_parent_switch_cast.cpp.o] Error 1
+[ 59%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/nested_types.cpp.o
+[ 59%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/default_endian_expr_exception.cpp.o
+[ 59%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/expr_str_ops.cpp.o
 [ 60%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/valid_switch.cpp.o
 [ 60%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/repeat_eos_u4.cpp.o
 [ 60%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/imports_abs.cpp.o
@@ -357,12 +357,12 @@ make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/nav_parent_switc
 /tests/compiled/cpp_stl_98/expr_str_ops.cpp:135:23: error: no member named 'stoi' in namespace 'std'
     m_to_i_r10 = std::stoi(std::string("-072"));
                  ~~~~~^
-/tests/compiled/cpp_stl_98/expr_str_ops.cpp[ 60%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/bits_simple.cpp.o
-:151:24: error: no member named 'stoi' in namespace 'std'
+/tests/compiled/cpp_stl_98/expr_str_ops.cpp:151:24: error: no member named 'stoi' in namespace 'std'
     m_to_i_attr = std::stoi(std::string("9173"));
                   ~~~~~^
 5 errors generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/expr_str_ops.cpp.o] Error 1
+[ 60%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/bits_simple.cpp.o
 [ 60%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/optional_id.cpp.o
 [ 61%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/instance_user_array.cpp.o
 [ 61%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/bits_signed_shift_b32_le.cpp.o
@@ -372,7 +372,6 @@ make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/expr_str_ops.cpp
 [ 62%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/non_standard.cpp.o
 [ 62%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/params_pass_array_usertype.cpp.o
 [ 62%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/js_signed_right_shift.cpp.o
-[ 62%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/switch_manual_str_else.cpp.o
 /tests/compiled/cpp_stl_98/instance_user_array.cpp:88:33: error: assigning to 'std::vector<std::string> *' from incompatible type 'std::string' (aka 'basic_string<char>')
             m__raw_user_entries = m__io->read_bytes(entry_size());
                                 ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -399,6 +398,7 @@ instance_user_array_t::entry_t::entry_t(kaitai::kstream* p__io, instance_user_ar
           ^
 3 errors generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/instance_user_array.cpp.o] Error 1
+[ 62%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/switch_manual_str_else.cpp.o
 [ 63%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/switch_manual_enum_invalid.cpp.o
 [ 63%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/type_int_unary_op.cpp.o
 [ 63%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/bits_signed_res_b32_be.cpp.o
@@ -451,34 +451,6 @@ make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/instance_user_ar
 [ 73%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/enum_negative.cpp.o
 [ 73%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/bits_signed_res_b32_le.cpp.o
 [ 73%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/process_coerce_bytes.cpp.o
-/tests/compiled/cpp_stl_98/repeat_until_sized.cpp[ 73%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/eos_exception_bytes.cpp.o
-:28:28: error: assigning to 'std::vector<std::string> *' from incompatible type 'std::string' (aka 'basic_string<char>')
-            m__raw_records = m__io->read_bytes(5);
-                           ^ ~~~~~~~~~~~~~~~~~~~~
-/tests/compiled/cpp_stl_98/repeat_until_sized.cpp:29:38: error: no matching constructor for initialization of 'kaitai::kstream'
-            m__io__raw_records = new kaitai::kstream(m__raw_records);
-                                     ^               ~~~~~~~~~~~~~~
-/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistream.h:32:7: note: candidate constructor (the implicit copy constructor) not viable: no known conversion from 'std::vector<std::string> *' to 'const kaitai::kstream' for 1st argument
-class kstream {
-      ^
-/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistream.h:38:5: note: candidate constructor not viable: no known conversion from 'std::vector<std::string> *' to 'std::istream *' (aka 'basic_istream<char> *') for 1st argument
-    kstream(std::istream* io);
-    ^
-/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistream.h:45:5: note: candidate constructor not viable: no known conversion from 'std::vector<std::string> *' to 'const std::string' (aka 'const basic_string<char>') for 1st argument
-    kstream(const std::string& data);
-    ^
-/tests/compiled/cpp_stl_98/repeat_until_sized.cpp:30:21: error: no matching constructor for initialization of 'repeat_until_sized_t::record_t'
-            _ = new record_t(m__io__raw_records, this, m__root);
-                    ^        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/tests/compiled/cpp_stl_98/repeat_until_sized.h:32:9: note: candidate constructor not viable: no known conversion from 'std::vector<kaitai::kstream *> *' to 'kaitai::kstream *' for 1st argument
-        record_t(kaitai::kstream* p__io, repeat_until_sized_t* p__parent = 0, repeat_until_sized_t* p__root = 0);
-        ^
-/tests/compiled/cpp_stl_98/repeat_until_sized.h:28:11: note: candidate constructor (the implicit copy constructor) not viable: requires 1 argument, but 3 were provided
-    class record_t : public kaitai::kstruct {
-          ^
-3 errors generated.
-make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/repeat_until_sized.cpp.o] Error 1
-[ 74%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/expr_bytes_ops.cpp.o
 /tests/compiled/cpp_stl_98/expr_ops_parens.cpp:109:37: error: invalid operands to binary expression ('std::string' (aka 'basic_string<char>') and 'size_type' (aka 'unsigned long'))
     m_str_concat_len = str_0_to_4() + str_5_to_9().length();
                        ~~~~~~~~~~~~ ^ ~~~~~~~~~~~~~~~~~~~~~
@@ -507,7 +479,35 @@ make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/repeat_until_siz
     m_str_concat_to_i = std::stoi(str_0_to_4() + str_5_to_9());
                         ~~~~~^
 2 errors generated.
-make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/expr_ops_parens.cpp.o] Error 1
+/tests/compiled/cpp_stl_98/repeat_until_sized.cpp:28:28: error: assigning to 'std::vector<std::string> *' from incompatible type 'std::string' (aka 'basic_string<char>')
+            m__raw_records = m__io->read_bytes(5);
+                           ^ ~~~~~~~~~~~~~~~~~~~~
+/tests/compiled/cpp_stl_98/repeat_until_sized.cpp:29:38: error: no matching constructor for initialization of 'kaitai::kstream'
+            m__io__raw_records = new kaitai::kstream(m__raw_records);
+                                     ^               ~~~~~~~~~~~~~~
+/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistream.h:32:7: note: candidate constructor (the implicit copy constructor) not viable: no known conversion from 'std::vector<std::string> *' to 'const kaitai::kstream' for 1st argument
+class kstream {
+      ^
+/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistream.h:38:5: note: candidate constructor not viable: no known conversion from 'std::vector<std::string> *' to 'std::istream *' (aka 'basic_istream<char> *') for 1st argument
+    kstream(std::istream* io);
+    ^
+/tests/spec/cpp_stl_98/../../../runtime/cpp_stl/kaitai/kaitaistream.h:45:5: note: candidate constructor not viable: no known conversion from 'std::vector<std::string> *' to 'const std::string' (aka 'const basic_string<char>') for 1st argument
+    kstream(const std::string& data);
+    ^
+/tests/compiled/cpp_stl_98/repeat_until_sized.cpp:30:21: error: no matching constructor for initialization of 'repeat_until_sized_t::record_t'
+            _ = new record_t(m__io__raw_records, this, m__root);
+                    ^        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/expr_ops_parens.cpp.o] Error 1
+
+/tests/compiled/cpp_stl_98/repeat_until_sized.h:32:9: note: candidate constructor not viable: no known conversion from 'std::vector<kaitai::kstream *> *' to 'kaitai::kstream *' for 1st argument
+        record_t(kaitai::kstream* p__io, repeat_until_sized_t* p__parent = 0, repeat_until_sized_t* p__root = 0);
+        ^
+/tests/compiled/cpp_stl_98/repeat_until_sized.h:28:11: note: candidate constructor (the implicit copy constructor) not viable: requires 1 argument, but 3 were provided
+    class record_t : public kaitai::kstruct {
+          ^
+[ 73%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/eos_exception_bytes.cpp.o
+[ 74%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/expr_bytes_ops.cpp.o
+3 errors generated.
+make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/repeat_until_sized.cpp.o] Error 1
 [ 74%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/default_bit_endian_mod.cpp.o
 [ 74%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/valid_fail_eq_int.cpp.o
 [ 74%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/switch_repeat_expr_invalid.cpp.o
@@ -565,9 +565,9 @@ class kstream {
 /tests/compiled/cpp_stl_98/switch_repeat_expr_invalid.h:53:11: note: candidate constructor (the implicit copy constructor) not viable: requires 1 argument, but 3 were provided
     class two_t : public kaitai::kstruct {
           ^
+[ 76%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/debug_switch_user.cpp.o
 6 errors generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/switch_repeat_expr_invalid.cpp.o] Error 1
-[ 76%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/debug_switch_user.cpp.o
 [ 76%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/repeat_n_struct.cpp.o
 [ 76%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/switch_multi_bool_ops.cpp.o
 [ 76%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/eos_exception_u4.cpp.o
@@ -585,7 +585,6 @@ make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/switch_repeat_ex
 [ 79%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/process_custom.cpp.o
 [ 79%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/bits_simple_le.cpp.o
 [ 79%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/valid_long.cpp.o
-[ 80%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/switch_manual_int_size_eos.cpp.o
 /tests/compiled/cpp_stl_98/enum_to_i_class_border_1.cpp:50:21: error: no matching constructor for initialization of 'enum_to_i_class_border_2_t'
     m_checker = new enum_to_i_class_border_2_t(_root(), m__io);
                     ^                          ~~~~~~~~~~~~~~
@@ -597,6 +596,7 @@ class enum_to_i_class_border_2_t : public kaitai::kstruct {
       ^
 1 error generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/enum_to_i_class_border_1.cpp.o] Error 1
+[ 80%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/switch_manual_int_size_eos.cpp.o
 [ 80%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/process_coerce_usertype1.cpp.o
 [ 80%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/str_encodings_utf16.cpp.o
 [ 80%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/repeat_until_s4.cpp.o
@@ -640,9 +640,6 @@ make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/enum_to_i_class_
 [ 88%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/nested_same_name2.cpp.o
 [ 89%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/default_endian_mod.cpp.o
 [ 89%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/docstrings_docref.cpp.o
-[ 89%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/expr_mod.cpp.o
-[ 89%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/imports_abs_rel.cpp.o
-[ 89%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/enum_0.cpp.o
 /tests/compiled/cpp_stl_98/vlq_base128_le.cpp:100:335: warning: shift count >= width of type [-Wshift-count-overflow]
     m_value = (((((((groups()->at(0)->value() + ((len() >= 2) ? ((groups()->at(1)->value() << 7)) : (0))) + ((len() >= 3) ? ((groups()->at(2)->value() << 14)) : (0))) + ((len() >= 4) ? ((groups()->at(3)->value() << 21)) : (0))) + ((len() >= 5) ? ((groups()->at(4)->value() << 28)) : (0))) + ((len() >= 6) ? ((groups()->at(5)->value() << 35)) : (0))) + ((len() >= 7) ? ((groups()->at(6)->value() << 42)) : (0))) + ((len() >= 8) ? ((groups()->at(7)->value() << 49)) : (0)));
                                                                                                                                                                                                                                                                                                                                               ^  ~~
@@ -652,7 +649,10 @@ make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/enum_to_i_class_
 /tests/compiled/cpp_stl_98/vlq_base128_le.cpp:100:457: warning: shift count >= width of type [-Wshift-count-overflow]
     m_value = (((((((groups()->at(0)->value() + ((len() >= 2) ? ((groups()->at(1)->value() << 7)) : (0))) + ((len() >= 3) ? ((groups()->at(2)->value() << 14)) : (0))) + ((len() >= 4) ? ((groups()->at(3)->value() << 21)) : (0))) + ((len() >= 5) ? ((groups()->at(4)->value() << 28)) : (0))) + ((len() >= 6) ? ((groups()->at(5)->value() << 35)) : (0))) + ((len() >= 7) ? ((groups()->at(6)->value() << 42)) : (0))) + ((len() >= 8) ? ((groups()->at(7)->value() << 49)) : (0)));
                                                                                                                                                                                                                                                                                                                                                                                                                                                                         ^  ~~
+[ 89%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/expr_mod.cpp.o
+[ 89%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/imports_abs_rel.cpp.o
 3 warnings generated.
+[ 89%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/enum_0.cpp.o
 [ 90%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/str_encodings.cpp.o
 [ 90%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/valid_fail_anyof_int.cpp.o
 [ 90%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/switch_manual_enum_invalid_else.cpp.o
@@ -695,8 +695,7 @@ class kstream {
 /tests/compiled/cpp_stl_98/repeat_until_calc_array_type.h:28:11: note: candidate constructor (the implicit copy constructor) not viable: requires 1 argument, but 3 were provided
     class record_t : public kaitai::kstruct {
           ^
-/tests/compiled/cpp_stl_98/repeat_until_calc_array_type.cpp[ 93%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/type_ternary_opaque.cpp.o
-:96:43: error: member reference type 'repeat_until_calc_array_type_t::record_t *' is a pointer; maybe you meant to use '->'?
+/tests/compiled/cpp_stl_98/repeat_until_calc_array_type.cpp:96:43: error: member reference type 'repeat_until_calc_array_type_t::record_t *' is a pointer; maybe you meant to use '->'?
     m_first_rec = recs_accessor()->front().get();
                   ~~~~~~~~~~~~~~~~~~~~~~~~^
                                           ->
@@ -705,13 +704,15 @@ class kstream {
                   ~~~~~~~~~~~~~~~~~~~~~~~~ ^
 5 errors generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/repeat_until_calc_array_type.cpp.o] Error 1
+[ 93%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/type_ternary_opaque.cpp.o
 [ 94%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/enum_to_i_class_border_2.cpp.o
 [ 94%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/expr_io_pos.cpp.o
 [ 94%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/switch_repeat_expr.cpp.o
 [ 94%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/switch_manual_int.cpp.o
 [ 94%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/enum_int_range_u.cpp.o
-[ 95%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/nav_parent_false.cpp.o
 [ 95%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/valid_short.cpp.o
+[ 95%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/nav_parent_false.cpp.o
+[ 95%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/valid_not_parsed_if.cpp.o
 /tests/compiled/cpp_stl_98/enum_to_i_class_border_2.cpp:33:24: error: member access into incomplete type 'enum_to_i_class_border_2_t::enum_to_i_class_border_1_t'
     m_is_dog = parent()->some_dog() == 4;
                        ^
@@ -720,7 +721,6 @@ make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/repeat_until_cal
           ^
 1 error generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/enum_to_i_class_border_2.cpp.o] Error 1
-[ 95%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/valid_not_parsed_if.cpp.o
 [ 95%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/hello_world.cpp.o
 [ 95%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/position_in_seq.cpp.o
 /tests/compiled/cpp_stl_98/switch_repeat_expr.cpp:30:25: error: assigning to 'std::vector<std::string> *' from incompatible type 'std::string' (aka 'basic_string<char>')
@@ -782,15 +782,17 @@ make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/switch_repeat_ex
 [ 97%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/expr_0.cpp.o
 [ 97%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/valid_fail_inst.cpp.o
 [ 97%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/term_u1_val.cpp.o
+[ 98%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/docstrings_docref_multi.cpp.o
+[ 98%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/cast_to_imported.cpp.o
 In file included from /tests/compiled/cpp_stl_98/enum_import.cpp:3:
 /tests/compiled/cpp_stl_98/enum_import.h:27:5: error: use of undeclared identifier 'enum_0_t'
     enum_0_t::animal_t m_pet_1;
     ^
-/tests/compiled/cpp_stl_98/enum_import.h[ 98%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/docstrings_docref_multi.cpp.o
-:28:5: error: use of undeclared identifier 'enum_deep_t'
+/tests/compiled/cpp_stl_98/enum_import.h:28:5: error: use of undeclared identifier 'enum_deep_t'
     enum_deep_t::container1_t::container2_t::animal_t m_pet_2;
     ^
-/tests/compiled/cpp_stl_98/enum_import.h:33:5: error: use of undeclared identifier 'enum_0_t'
+/tests/compiled/cpp_stl_98/enum_import.h[ 98%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/process_rotate.cpp.o
+:33:5: error: use of undeclared identifier 'enum_0_t'
     enum_0_t::animal_t pet_1() const { return m_pet_1; }
     ^
 /tests/compiled/cpp_stl_98/enum_import.h:34:5: error: use of undeclared identifier 'enum_deep_t'
@@ -804,8 +806,6 @@ In file included from /tests/compiled/cpp_stl_98/enum_import.cpp:3:
                           ^
 6 errors generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/enum_import.cpp.o] Error 1
-[ 98%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/process_rotate.cpp.o
-[ 98%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/cast_to_imported.cpp.o
 [ 98%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/process_repeat_usertype.cpp.o
 [ 98%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/expr_enum.cpp.o
 [ 99%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/repeat_eos_struct.cpp.o
