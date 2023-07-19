@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="test_params_pass_array_str.TestParamsPassArrayStr-20230719210200" tests="1" file="test_params_pass_array_str.py" time="0.001" timestamp="2023-07-19T21:02:00" failures="0" errors="1" skipped="0">
+	<testcase classname="test_params_pass_array_str.TestParamsPassArrayStr" name="test_params_pass_array_str" time="0.001" timestamp="2023-07-19T21:02:00" file="spec/construct/test_params_pass_array_str.py" line="8">
+		<error type="AttributeError" message="strs"><![CDATA[Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/construct/lib/containers.py", line 93, in __getattr__
+    return self[name]
+           ~~~~^^^^^^
+KeyError: 'strs'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/tests/spec/construct/test_params_pass_array_str.py", line 11, in test_params_pass_array_str
+    self.assertEqual(len(r.pass_str_array.strs), 3)
+                         ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/construct/lib/containers.py", line 95, in __getattr__
+    raise AttributeError(name)
+AttributeError: strs
+]]></error>
+	</testcase>
+</testsuite>
