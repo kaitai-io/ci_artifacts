@@ -1,11 +1,11 @@
+[  0%] Building CXX object CMakeFiles/ks_tests.dir/prereq/my_custom_fx.cpp.o
+[  0%] Building CXX object CMakeFiles/ks_tests.dir/test_bcd_user_type_le.cpp.o
 [  0%] Building CXX object CMakeFiles/ks_tests.dir/Users/runner/work/ci_targets/ci_targets/runtime/cpp_stl/kaitai/kaitaistream.cpp.o
 [  0%] Building CXX object CMakeFiles/ks_tests.dir/prereq/custom_fx.cpp.o
+[  0%] Building CXX object CMakeFiles/ks_tests.dir/prereq/custom_fx_no_args.cpp.o
+[  0%] Building CXX object CMakeFiles/ks_tests.dir/test_bits_byte_aligned.cpp.o
+[  0%] Building CXX object CMakeFiles/ks_tests.dir/test_bcd_user_type_be.cpp.o
 [  1%] Building CXX object CMakeFiles/ks_tests.dir/main.cpp.o
-[  1%] Building CXX object CMakeFiles/ks_tests.dir/prereq/my_custom_fx.cpp.o
-[  1%] Building CXX object CMakeFiles/ks_tests.dir/prereq/custom_fx_no_args.cpp.o
-[  1%] Building CXX object CMakeFiles/ks_tests.dir/test_bcd_user_type_be.cpp.o
-[  1%] Building CXX object CMakeFiles/ks_tests.dir/test_bcd_user_type_le.cpp.o
-[  1%] Building CXX object CMakeFiles/ks_tests.dir/test_bits_byte_aligned.cpp.o
 [  1%] Building CXX object CMakeFiles/ks_tests.dir/test_bits_enum.cpp.o
 [  2%] Building CXX object CMakeFiles/ks_tests.dir/test_bits_seq_endian_combo.cpp.o
 [  2%] Building CXX object CMakeFiles/ks_tests.dir/test_bits_shift_by_b32_le.cpp.o
@@ -178,10 +178,10 @@ make[2]: *** [CMakeFiles/ks_tests.dir/test_expr_bytes_non_literal.cpp.o] Error 1
 [ 33%] Building CXX object CMakeFiles/ks_tests.dir/test_process_coerce_usertype2.cpp.o
 [ 33%] Building CXX object CMakeFiles/ks_tests.dir/test_process_custom.cpp.o
 [ 33%] Building CXX object CMakeFiles/ks_tests.dir/test_process_custom_no_args.cpp.o
-[ 33%] Building CXX object CMakeFiles/ks_tests.dir/test_process_repeat_bytes.cpp.o
 /Users/runner/work/ci_targets/ci_targets/tests/spec/cpp_stl_11/test_process_coerce_switch.cpp:4:10: fatal error: 'process_coerce_switch.h' file not found
 #include "process_coerce_switch.h"
          ^~~~~~~~~~~~~~~~~~~~~~~~~
+[ 33%] Building CXX object CMakeFiles/ks_tests.dir/test_process_repeat_bytes.cpp.o
 1 error generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/test_process_coerce_switch.cpp.o] Error 1
 [ 33%] Building CXX object CMakeFiles/ks_tests.dir/test_process_repeat_usertype.cpp.o
@@ -322,8 +322,7 @@ class _LIBCPP_UNIQUE_PTR_TRIVIAL_ABI _LIBCPP_TEMPLATE_VIS unique_ptr {
 /Applications/Xcode_14.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__memory/unique_ptr.h:195:3: note: candidate constructor template not viable: requires 2 arguments, but 1 was provided
   unique_ptr(pointer __p, _LValRefType<_Dummy> __d) _NOEXCEPT
   ^
-/Applications/Xcode_14.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__memory/unique_ptr.h:201:3: note: candidate constructor template not viable: requires 2 arguments, but 1 was provided[ 57%] Building CXX object CMakeFiles/ks_tests.dir/Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/default_endian_expr_is_le.cpp.o
-
+/Applications/Xcode_14.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__memory/unique_ptr.h:201:3: note: candidate constructor template not viable: requires 2 arguments, but 1 was provided
   unique_ptr(pointer __p, _GoodRValRefType<_Dummy> __d) _NOEXCEPT
   ^
 /Applications/Xcode_14.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__memory/unique_ptr.h:210:3: note: candidate constructor template not viable: requires 2 arguments, but 1 was provided
@@ -364,6 +363,7 @@ class _LIBCPP_UNIQUE_PTR_TRIVIAL_ABI _LIBCPP_TEMPLATE_VIS unique_ptr {
   ^
 2 errors generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/debug_switch_user.cpp.o] Error 1
+[ 57%] Building CXX object CMakeFiles/ks_tests.dir/Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/default_endian_expr_is_le.cpp.o
 [ 57%] Building CXX object CMakeFiles/ks_tests.dir/Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/default_endian_mod.cpp.o
 [ 57%] Building CXX object CMakeFiles/ks_tests.dir/Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/docstrings.cpp.o
 [ 57%] Building CXX object CMakeFiles/ks_tests.dir/Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/docstrings_docref.cpp.o
@@ -401,9 +401,9 @@ In file included from /Users/runner/work/ci_targets/ci_targets/tests/compiled/cp
 /Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/enum_import.cpp:13:27: error: use of undeclared identifier 'enum_deep_t'
     m_pet_2 = static_cast<enum_deep_t::container1_t::container2_t::animal_t>(m__io->read_u4le());
                           ^
-[ 61%] Building CXX object CMakeFiles/ks_tests.dir/Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/enum_of_value_inst.cpp.o
 6 errors generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/enum_import.cpp.o] Error 1
+[ 61%] Building CXX object CMakeFiles/ks_tests.dir/Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/enum_of_value_inst.cpp.o
 [ 61%] Building CXX object CMakeFiles/ks_tests.dir/Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/enum_to_i.cpp.o
 [ 61%] Building CXX object CMakeFiles/ks_tests.dir/Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/enum_to_i_class_border_1.cpp.o
 [ 61%] Building CXX object CMakeFiles/ks_tests.dir/Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/enum_to_i_class_border_2.cpp.o
@@ -451,8 +451,6 @@ make[2]: *** [CMakeFiles/ks_tests.dir/Users/runner/work/ci_targets/ci_targets/te
 [ 66%] Building CXX object CMakeFiles/ks_tests.dir/Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/expr_sizeof_value_0.cpp.o
 [ 66%] Building CXX object CMakeFiles/ks_tests.dir/Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/expr_sizeof_value_sized.cpp.o
 [ 67%] Building CXX object CMakeFiles/ks_tests.dir/Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/expr_str_encodings.cpp.o
-[ 67%] Building CXX object CMakeFiles/ks_tests.dir/Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/expr_str_ops.cpp.o
-[ 67%] Building CXX object CMakeFiles/ks_tests.dir/Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/fixed_contents.cpp.o
 /Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/expr_ops_parens.cpp:103:37: error: invalid operands to binary expression ('std::string' (aka 'basic_string<char, char_traits<char>, allocator<char>>') and 'std::basic_string<char>::size_type' (aka 'unsigned long'))
     m_str_concat_len = str_0_to_4() + str_5_to_9().length();
                        ~~~~~~~~~~~~ ^ ~~~~~~~~~~~~~~~~~~~~~
@@ -501,6 +499,8 @@ operator+(_CharT __lhs, basic_string<_CharT,_Traits,_Allocator>&& __rhs)
 /Applications/Xcode_14.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/string:4378:1: note: candidate template ignored: could not match 'const _CharT *' against 'std::basic_string<char>::size_type' (aka 'unsigned long')
 operator+(basic_string<_CharT, _Traits, _Allocator>&& __lhs, const _CharT* __rhs)
 ^
+[ 67%] Building CXX object CMakeFiles/ks_tests.dir/Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/expr_str_ops.cpp.o
+[ 67%] Building CXX object CMakeFiles/ks_tests.dir/Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/fixed_contents.cpp.o
 1 error generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/expr_ops_parens.cpp.o] Error 1
 [ 67%] Building CXX object CMakeFiles/ks_tests.dir/Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/fixed_struct.cpp.o
@@ -534,15 +534,12 @@ make[2]: *** [CMakeFiles/ks_tests.dir/Users/runner/work/ci_targets/ci_targets/te
 [ 73%] Building CXX object CMakeFiles/ks_tests.dir/Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/integers_double_overflow.cpp.o
 [ 73%] Building CXX object CMakeFiles/ks_tests.dir/Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/integers_min_max.cpp.o
 [ 74%] Building CXX object CMakeFiles/ks_tests.dir/Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/io_local_var.cpp.o
-[ 74%] Building CXX object CMakeFiles/ks_tests.dir/Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/js_signed_right_shift.cpp.o
-[ 74%] Building CXX object CMakeFiles/ks_tests.dir/Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/meta_tags.cpp.o
 /Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/instance_user_array.cpp:61:33: error: no viable overloaded '='
             m__raw_user_entries = m__io->read_bytes(entry_size());
             ~~~~~~~~~~~~~~~~~~~ ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 /Applications/Xcode_14.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__memory/unique_ptr.h:236:15: note: candidate function not viable: no known conversion from 'std::string' (aka 'basic_string<char, char_traits<char>, allocator<char>>') to 'std::unique_ptr<std::vector<std::string>>' for 1st argument
   unique_ptr& operator=(unique_ptr&& __u) _NOEXCEPT {
-              ^[ 74%] Building CXX object CMakeFiles/ks_tests.dir/Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/meta_xref.cpp.o
-
+              ^
 /Applications/Xcode_14.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__memory/unique_ptr.h:247:15: note: candidate template ignored: could not match 'unique_ptr' against 'basic_string'
   unique_ptr& operator=(unique_ptr<_Up, _Ep>&& __u) _NOEXCEPT {
               ^
@@ -577,8 +574,11 @@ instance_user_array_t::entry_t::entry_t(kaitai::kstream* p__io, instance_user_ar
 /Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/instance_user_array.h:28:11: note: candidate constructor (the implicit copy constructor) not viable: requires 1 argument, but 3 were provided
     class entry_t : public kaitai::kstruct {
           ^
+[ 74%] Building CXX object CMakeFiles/ks_tests.dir/Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/js_signed_right_shift.cpp.o
+[ 74%] Building CXX object CMakeFiles/ks_tests.dir/Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/meta_tags.cpp.o
 3 errors generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/instance_user_array.cpp.o] Error 1
+[ 74%] Building CXX object CMakeFiles/ks_tests.dir/Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/meta_xref.cpp.o
 [ 74%] Building CXX object CMakeFiles/ks_tests.dir/Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/multiple_use.cpp.o
 [ 75%] Building CXX object CMakeFiles/ks_tests.dir/Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/nav_parent.cpp.o
 [ 75%] Building CXX object CMakeFiles/ks_tests.dir/Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/nav_parent2.cpp.o
@@ -593,11 +593,11 @@ make[2]: *** [CMakeFiles/ks_tests.dir/Users/runner/work/ci_targets/ci_targets/te
 [ 77%] Building CXX object CMakeFiles/ks_tests.dir/Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/nested_same_name.cpp.o
 [ 77%] Building CXX object CMakeFiles/ks_tests.dir/Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/nested_same_name2.cpp.o
 [ 77%] Building CXX object CMakeFiles/ks_tests.dir/Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/nested_type_param.cpp.o
+[ 77%] Building CXX object CMakeFiles/ks_tests.dir/Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/nested_types.cpp.o
+[ 77%] Building CXX object CMakeFiles/ks_tests.dir/Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/nested_types2.cpp.o
 /Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/nav_parent_switch_cast.cpp:121:71: error: no member named '_parent' in 'kaitai::kstruct'
     m_flag = static_cast<nav_parent_switch_cast_t::foo_t*>(_parent()->_parent())->flag();
                                                            ~~~~~~~~~  ^
-[ 77%] Building CXX object CMakeFiles/ks_tests.dir/Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/nested_types.cpp.o
-[ 77%] Building CXX object CMakeFiles/ks_tests.dir/Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/nested_types2.cpp.o
 1 error generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/nav_parent_switch_cast.cpp.o] Error 1
 [ 78%] Building CXX object CMakeFiles/ks_tests.dir/Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/nested_types3.cpp.o
@@ -704,7 +704,6 @@ class kstream {
 make[2]: *** [CMakeFiles/ks_tests.dir/Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/repeat_until_calc_array_type.cpp.o] Error 1
 [ 88%] Building CXX object CMakeFiles/ks_tests.dir/Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/str_literals.cpp.o
 [ 88%] Building CXX object CMakeFiles/ks_tests.dir/Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/str_literals2.cpp.o
-[ 88%] Building CXX object CMakeFiles/ks_tests.dir/Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/str_pad_term.cpp.o
 /Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/repeat_until_sized.cpp:22:28: error: no viable overloaded '='
             m__raw_records = m__io->read_bytes(5);
             ~~~~~~~~~~~~~~ ^ ~~~~~~~~~~~~~~~~~~~~
@@ -739,7 +738,8 @@ class kstream {
 /Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/repeat_until_sized.cpp:24:21: error: no matching constructor for initialization of 'repeat_until_sized_t::record_t'
             _ = new record_t(m__io__raw_records.get(), this, m__root);
                     ^        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/repeat_until_sized.h:32:9: note: candidate constructor not viable: no known conversion from 'std::unique_ptr<std::vector<std::unique_ptr<kaitai::kstream>>>::pointer' (aka 'std::vector<std::unique_ptr<kaitai::kstream>> *') to 'kaitai::kstream *' for 1st argument
+/Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/repeat_until_sized.h:32:9: note: [ 88%] Building CXX object CMakeFiles/ks_tests.dir/Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/str_pad_term.cpp.o
+candidate constructor not viable: no known conversion from 'std::unique_ptr<std::vector<std::unique_ptr<kaitai::kstream>>>::pointer' (aka 'std::vector<std::unique_ptr<kaitai::kstream>> *') to 'kaitai::kstream *' for 1st argument
         record_t(kaitai::kstream* p__io, repeat_until_sized_t* p__parent = nullptr, repeat_until_sized_t* p__root = nullptr);
         ^
 /Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/repeat_until_sized.h:28:11: note: candidate constructor (the implicit copy constructor) not viable: requires 1 argument, but 3 were provided
@@ -806,8 +806,7 @@ class kstream {
 /Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/switch_repeat_expr.h:33:9: note: candidate constructor not viable: no known conversion from 'std::unique_ptr<std::vector<std::unique_ptr<kaitai::kstream>>>::pointer' (aka 'std::vector<std::unique_ptr<kaitai::kstream>> *') to 'kaitai::kstream *' for 1st argument
         one_t(kaitai::kstream* p__io, switch_repeat_expr_t* p__parent = nullptr, switch_repeat_expr_t* p__root = nullptr);
         ^
-/Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/switch_repeat_expr.h:29:11:[ 93%] Building CXX object CMakeFiles/ks_tests.dir/Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/to_string_custom.cpp.o
- note: candidate constructor (the implicit copy constructor) not viable: requires 1 argument, but 3 were provided
+/Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/switch_repeat_expr.h:29:11: note: candidate constructor (the implicit copy constructor) not viable: requires 1 argument, but 3 were provided
     class one_t : public kaitai::kstruct {
           ^
 /Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/switch_repeat_expr.cpp:30:25: error: no viable overloaded '='
@@ -850,12 +849,7 @@ class kstream {
 /Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/switch_repeat_expr.h:53:11: note: candidate constructor (the implicit copy constructor) not viable: requires 1 argument, but 3 were provided
     class two_t : public kaitai::kstruct {
           ^
-[ 93%] Building CXX object CMakeFiles/ks_tests.dir/Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/ts_packet_header.cpp.o
-[ 94%] Building CXX object CMakeFiles/ks_tests.dir/Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/type_int_unary_op.cpp.o
-6 errors generated.
-make[2]: *** [CMakeFiles/ks_tests.dir/Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/switch_repeat_expr.cpp.o] Error 1
-[ 94%] Building CXX object CMakeFiles/ks_tests.dir/Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/type_ternary.cpp.o
-[ 94%] Building CXX object CMakeFiles/ks_tests.dir/Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/type_ternary_2nd_falsy.cpp.o
+[ 93%] Building CXX object CMakeFiles/ks_tests.dir/Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/to_string_custom.cpp.o
 /Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/switch_repeat_expr_invalid.cpp:24:25: error: no viable overloaded '='
             m__raw_body = m__io->read_bytes(size());
             ~~~~~~~~~~~ ^ ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -905,7 +899,9 @@ class kstream {
 /Applications/Xcode_14.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__memory/unique_ptr.h:247:15: note: candidate template ignored: could not match 'unique_ptr' against 'basic_string'
   unique_ptr& operator=(unique_ptr<_Up, _Ep>&& __u) _NOEXCEPT {
               ^
-/Applications/Xcode_14.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__memory/unique_ptr.h:259:7: note: candidate template ignored: could not match 'auto_ptr' against 'basic_string'
+/Applications/Xcode_14.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__memory/unique_ptr.h:259:76 errors generated.
+make[2]: *** [CMakeFiles/ks_tests.dir/Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/switch_repeat_expr.cpp.o] Error 1
+: note: candidate template ignored: could not match 'auto_ptr' against 'basic_string'
       operator=(auto_ptr<_Up> __p) {
       ^
 /Applications/Xcode_14.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__memory/unique_ptr.h:275:15: note: candidate function not viable: no known conversion from 'std::string' (aka 'basic_string<char, char_traits<char>, allocator<char>>') to 'std::nullptr_t' for 1st argument
@@ -923,6 +919,7 @@ class kstream {
 /Users/runner/work/ci_targets/ci_targets/tests/spec/cpp_stl_11/../../../runtime/cpp_stl/kaitai/kaitaistream.h:32:7: note: candidate constructor (the implicit move constructor) not viable: no known conversion from 'std::unique_ptr<std::vector<std::string>>' (aka 'unique_ptr<vector<basic_string<char, char_traits<char>, allocator<char>>>>') to 'kaitai::kstream' for 1st argument
 /Users/runner/work/ci_targets/ci_targets/tests/spec/cpp_stl_11/../../../runtime/cpp_stl/kaitai/kaitaistream.h:38:5: note: candidate constructor not viable: no known conversion from 'std::unique_ptr<std::vector<std::string>>' (aka 'unique_ptr<vector<basic_string<char, char_traits<char>, allocator<char>>>>') to 'std::istream *' (aka 'basic_istream<char> *') for 1st argument
     kstream(std::istream* io);
+[ 93%] Building CXX object CMakeFiles/ks_tests.dir/Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/ts_packet_header.cpp.o
     ^
 /Users/runner/work/ci_targets/ci_targets/tests/spec/cpp_stl_11/../../../runtime/cpp_stl/kaitai/kaitaistream.h:45:5: note: candidate constructor not viable: no known conversion from 'std::unique_ptr<std::vector<std::string>>' (aka 'unique_ptr<vector<basic_string<char, char_traits<char>, allocator<char>>>>') to 'const std::string' (aka 'const basic_string<char, char_traits<char>, allocator<char>>') for 1st argument
     kstream(const std::string& data);
@@ -936,24 +933,27 @@ class kstream {
 /Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/switch_repeat_expr_invalid.h:53:11: note: candidate constructor (the implicit copy constructor) not viable: requires 1 argument, but 3 were provided
     class two_t : public kaitai::kstruct {
           ^
-[ 94%] Building CXX object CMakeFiles/ks_tests.dir/Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/type_ternary_opaque.cpp.o
+[ 94%] Building CXX object CMakeFiles/ks_tests.dir/Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/type_int_unary_op.cpp.o
+[ 94%] Building CXX object CMakeFiles/ks_tests.dir/Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/type_ternary.cpp.o
+[ 94%] Building CXX object CMakeFiles/ks_tests.dir/Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/type_ternary_2nd_falsy.cpp.o
 6 errors generated.
 make[2]: *** [CMakeFiles/ks_tests.dir/Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/switch_repeat_expr_invalid.cpp.o] Error 1
-[ 94%] Building CXX object CMakeFiles/ks_tests.dir/Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/user_type.cpp.o
+[ 94%] Building CXX object CMakeFiles/ks_tests.dir/Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/type_ternary_opaque.cpp.o
 /Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/term_u1_val.cpp:12:36: warning: implicit conversion from 'int' to 'char' changes value from 227 to -29 [-Wconstant-conversion]
     m_foo = m__io->read_bytes_term(227, false, false, true);
                    ~~~~~~~~~~~~~~~ ^~~
 /Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/term_u1_val.cpp:13:66: warning: implicit conversion from 'int' to 'char' changes value from 171 to -85 [-Wconstant-conversion]
     m_bar = kaitai::kstream::bytes_to_str(m__io->read_bytes_term(171, true, true, true), "UTF-8");
                                                  ~~~~~~~~~~~~~~~ ^~~
+[ 94%] Building CXX object CMakeFiles/ks_tests.dir/Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/user_type.cpp.o
 2 warnings generated.
 [ 95%] Building CXX object CMakeFiles/ks_tests.dir/Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/valid_eq_str_encodings.cpp.o
 [ 95%] Building CXX object CMakeFiles/ks_tests.dir/Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/valid_fail_anyof_int.cpp.o
 [ 95%] Building CXX object CMakeFiles/ks_tests.dir/Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/valid_fail_contents.cpp.o
 [ 95%] Building CXX object CMakeFiles/ks_tests.dir/Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/valid_fail_eq_bytes.cpp.o
 [ 96%] Building CXX object CMakeFiles/ks_tests.dir/Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/valid_fail_eq_int.cpp.o
-[ 96%] Building CXX object CMakeFiles/ks_tests.dir/Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/valid_fail_eq_str.cpp.o
 [ 96%] Building CXX object CMakeFiles/ks_tests.dir/Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/valid_fail_expr.cpp.o
+[ 96%] Building CXX object CMakeFiles/ks_tests.dir/Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/valid_fail_eq_str.cpp.o
 [ 96%] Building CXX object CMakeFiles/ks_tests.dir/Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/valid_fail_inst.cpp.o
 [ 96%] Building CXX object CMakeFiles/ks_tests.dir/Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/valid_fail_max_int.cpp.o
 [ 97%] Building CXX object CMakeFiles/ks_tests.dir/Users/runner/work/ci_targets/ci_targets/tests/compiled/cpp_stl_11/valid_fail_min_int.cpp.o
