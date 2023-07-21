@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="1" failures="0" file="test_expr_bytes_non_literal.py" name="test_expr_bytes_non_literal.TestExprBytesNonLiteral-20230721074155" skipped="0" tests="1" time="0.001" timestamp="2023-07-21T07:41:55">
+	<testcase classname="test_expr_bytes_non_literal.TestExprBytesNonLiteral" file="spec/construct/test_expr_bytes_non_literal.py" line="8" name="test_expr_bytes_non_literal" time="0.001" timestamp="2023-07-21T07:41:55">
+		<error message="byte format requires -128 &lt;= number &lt;= 127" type="error">
+<![CDATA[Traceback (most recent call last):
+  File "/tests/spec/construct/test_expr_bytes_non_literal.py", line 9, in test_expr_bytes_non_literal
+    r = _schema.parse_file('src/enum_negative.bin')
+  File "/usr/local/lib/python3.4/site-packages/construct/core.py", line 309, in parse_file
+    return self.parse_stream(f, **contextkw)
+  File "/usr/local/lib/python3.4/site-packages/construct/core.py", line 300, in parse_stream
+    return self._parsereport(stream, context, "(parsing)")
+  File "/usr/local/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/usr/local/lib/python3.4/site-packages/construct/core.py", line 1982, in _parse
+    subobj = sc._parsereport(stream, context, path)
+  File "/usr/local/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/usr/local/lib/python3.4/site-packages/construct/core.py", line 2440, in _parse
+    return self.subcon._parsereport(stream, context, path)
+  File "/usr/local/lib/python3.4/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+  File "/usr/local/lib/python3.4/site-packages/construct/core.py", line 2576, in _parse
+    return self.func(context) if callable(self.func) else self.func
+  File "/tests/compiled/construct/expr_bytes_non_literal.py", line 8, in <lambda>
+    'calc_bytes' / Computed(lambda this: struct.pack('2b', this.one, this.two)),
+struct.error: byte format requires -128 <= number <= 127
+]]>		</error>
+		<system-out>
+<![CDATA[]]>		</system-out>
+		<system-err>
+<![CDATA[]]>		</system-err>
+	</testcase>
+</testsuite>
