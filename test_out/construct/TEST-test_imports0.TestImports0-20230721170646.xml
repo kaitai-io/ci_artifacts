@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="test_imports0.TestImports0-20230721170646" tests="1" file="test_imports0.py" time="0.002" timestamp="2023-07-21T17:06:46" failures="0" errors="1" skipped="0">
+	<testcase classname="test_imports0.TestImports0" name="test_imports0" time="0.002" timestamp="2023-07-21T17:06:46" file="spec/construct/test_imports0.py" line="7">
+		<error type="NameError" message="name 'hello_world' is not defined"><![CDATA[Traceback (most recent call last):
+  File "/tests/spec/construct/test_imports0.py", line 8, in test_imports0
+    r = _schema.parse_file('src/fixed_struct.bin')
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/construct/core.py", line 309, in parse_file
+    return self.parse_stream(f, **contextkw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/construct/core.py", line 300, in parse_stream
+    return self._parsereport(stream, context, "(parsing)")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/construct/core.py", line 2120, in _parse
+    subobj = sc._parsereport(stream, context, path)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/construct/core.py", line 2653, in _parse
+    return self.subcon._parsereport(stream, context, path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/construct/core.py", line 5911, in _parse
+    sc = self.subconfunc()
+         ^^^^^^^^^^^^^^^^^
+  File "/tests/compiled/construct/imports0.py", line 6, in <lambda>
+    'hw' / LazyBound(lambda: hello_world),
+                             ^^^^^^^^^^^
+NameError: name 'hello_world' is not defined
+]]></error>
+	</testcase>
+</testsuite>
