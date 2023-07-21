@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="test_enum_to_i.TestEnumToI-20230721155858" tests="1" file="test_enum_to_i.py" time="0.001" timestamp="2023-07-21T15:58:58" failures="0" errors="1" skipped="0">
+	<testcase classname="test_enum_to_i.TestEnumToI" name="test_enum_to_i" time="0.001" timestamp="2023-07-21T15:58:58" file="spec/construct/test_enum_to_i.py" line="7">
+		<error type="AttributeError" message="'EnumIntegerString' object has no attribute 'value'"><![CDATA[Traceback (most recent call last):
+  File "/tests/spec/construct/test_enum_to_i.py", line 8, in test_enum_to_i
+    r = _schema.parse_file('src/enum_0.bin')
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/construct/core.py", line 309, in parse_file
+    return self.parse_stream(f, **contextkw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/construct/core.py", line 300, in parse_stream
+    return self._parsereport(stream, context, "(parsing)")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/construct/core.py", line 2120, in _parse
+    subobj = sc._parsereport(stream, context, path)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/construct/core.py", line 2653, in _parse
+    return self.subcon._parsereport(stream, context, path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/construct/core.py", line 2798, in _parse
+    return self.func(context) if callable(self.func) else self.func
+           ^^^^^^^^^^^^^^^^^^
+  File "/tests/compiled/construct/enum_to_i.py", line 13, in <lambda>
+    'pet_1_i' / Computed(lambda this: this.pet_1.value),
+                                      ^^^^^^^^^^^^^^^^
+AttributeError: 'EnumIntegerString' object has no attribute 'value'
+]]></error>
+	</testcase>
+</testsuite>
