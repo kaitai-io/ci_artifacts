@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites>
-    <testsuite name="LuaUnit" id="00001" package="" hostname="localhost" tests="231" timestamp="2023-07-21T15:59:40" time="0.048" errors="8" failures="2" skipped="0">
+    <testsuite name="LuaUnit" id="00001" package="" hostname="localhost" tests="231" timestamp="2023-07-21T17:07:14" time="0.029" errors="6" failures="2" skipped="0">
         <properties>
             <property name="Lua Version" value="Lua 5.3"/>
             <property name="LuaUnit Version" value="3.4"/>
@@ -144,7 +144,7 @@
         </testcase>
         <testcase classname="TestExprBytesCmp" name="TestExprBytesCmp.test_expr_bytes_cmp" time="0.000">
         </testcase>
-        <testcase classname="TestExprBytesNonLiteral" name="TestExprBytesNonLiteral.test_expr_bytes_non_literal" time="0.008">
+        <testcase classname="TestExprBytesNonLiteral" name="TestExprBytesNonLiteral.test_expr_bytes_non_literal" time="0.007">
             <failure type="spec/lua/run_test_suite.lua:18: spec/lua/test_expr_bytes_non_literal.lua:5: module &apos;expr_bytes_non_literal&apos; not found:
 	no field package.preload[&apos;expr_bytes_non_literal&apos;]
 	no file &apos;../runtime/lua/expr_bytes_non_literal.lua&apos;
@@ -533,51 +533,9 @@
         </testcase>
         <testcase classname="TestYamlInts" name="TestYamlInts.test_yaml_ints" time="0.000">
         </testcase>
-        <testcase classname="TestZlibSurrounded" name="TestZlibSurrounded.test_zlib_surrounded" time="0.008">
-            <error type="../runtime/lua/kaitaistruct.lua:440: can&apos;t decompress zlib - failed to load submodule &apos;zzlib&apos;: ../runtime/lua/kaitaistruct.lua:420: module &apos;zzlib&apos; not found:
-	no field package.preload[&apos;zzlib&apos;]
-	no file &apos;../runtime/lua/zzlib/zzlib.lua&apos;
-	no file &apos;../runtime/lua/zzlib.lua&apos;
-	no file &apos;spec/lua/zzlib.lua&apos;
-	no file &apos;spec/lua/extra/zzlib.lua&apos;
-	no file &apos;compiled/lua/zzlib.lua&apos;
-	no file &apos;/lua_install/share/lua/5.3/zzlib.lua&apos;
-	no file &apos;/lua_install/share/lua/5.3/zzlib/init.lua&apos;
-	no file &apos;./zzlib.lua&apos;
-	no file &apos;./zzlib/init.lua&apos;
-	no file &apos;/lua_install/lib/lua/5.3/zzlib.so&apos;
-	no file &apos;/lua_install/lib/lua/5.3/loadall.so&apos;
-	no file &apos;./zzlib.so&apos;">
-                <![CDATA[stack traceback:
-	../runtime/lua/kaitaistruct.lua:440: in field 'process_zlib'
-	compiled/lua/zlib_surrounded.lua:21: in method '_read'
-	compiled/lua/zlib_surrounded.lua:15: in local 'init'
-	../runtime/lua/class.lua:70: in function <../runtime/lua/class.lua:66>
-	(...tail calls...)
-	spec/lua/test_zlib_surrounded.lua:10: in upvalue 'TestZlibSurrounded.test_zlib_surrounded']]></error>
+        <testcase classname="TestZlibSurrounded" name="TestZlibSurrounded.test_zlib_surrounded" time="0.000">
         </testcase>
-        <testcase classname="TestZlibWithHeader78" name="TestZlibWithHeader78.test_zlib_with_header_78" time="0.008">
-            <error type="../runtime/lua/kaitaistruct.lua:440: can&apos;t decompress zlib - failed to load submodule &apos;zzlib&apos;: ../runtime/lua/kaitaistruct.lua:420: module &apos;zzlib&apos; not found:
-	no field package.preload[&apos;zzlib&apos;]
-	no file &apos;../runtime/lua/zzlib/zzlib.lua&apos;
-	no file &apos;../runtime/lua/zzlib.lua&apos;
-	no file &apos;spec/lua/zzlib.lua&apos;
-	no file &apos;spec/lua/extra/zzlib.lua&apos;
-	no file &apos;compiled/lua/zzlib.lua&apos;
-	no file &apos;/lua_install/share/lua/5.3/zzlib.lua&apos;
-	no file &apos;/lua_install/share/lua/5.3/zzlib/init.lua&apos;
-	no file &apos;./zzlib.lua&apos;
-	no file &apos;./zzlib/init.lua&apos;
-	no file &apos;/lua_install/lib/lua/5.3/zzlib.so&apos;
-	no file &apos;/lua_install/lib/lua/5.3/loadall.so&apos;
-	no file &apos;./zzlib.so&apos;">
-                <![CDATA[stack traceback:
-	../runtime/lua/kaitaistruct.lua:440: in field 'process_zlib'
-	compiled/lua/zlib_with_header_78.lua:19: in method '_read'
-	compiled/lua/zlib_with_header_78.lua:14: in local 'init'
-	../runtime/lua/class.lua:70: in function <../runtime/lua/class.lua:66>
-	(...tail calls...)
-	spec/lua/test_zlib_with_header_78.lua:10: in upvalue 'TestZlibWithHeader78.test_zlib_with_header_78']]></error>
+        <testcase classname="TestZlibWithHeader78" name="TestZlibWithHeader78.test_zlib_with_header_78" time="0.000">
         </testcase>
     <system-out/>
     <system-err/>
