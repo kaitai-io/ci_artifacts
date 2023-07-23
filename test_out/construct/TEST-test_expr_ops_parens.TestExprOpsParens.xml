@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="test_expr_ops_parens.TestExprOpsParens" tests="1" file="test_expr_ops_parens.py" time="0.002" timestamp="2023-07-23T22:32:40" failures="0" errors="1" skipped="0">
+	<testcase classname="test_expr_ops_parens.TestExprOpsParens" name="test_expr_ops_parens" time="0.002" timestamp="2023-07-23T22:32:40" file="spec/construct/test_expr_ops_parens.py" line="8">
+		<error type="AttributeError" message="f_2pi"><![CDATA[Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/construct/lib/containers.py", line 93, in __getattr__
+    return self[name]
+           ~~~~^^^^^^
+KeyError: 'f_2pi'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/tests/spec/construct/test_expr_ops_parens.py", line 9, in test_expr_ops_parens
+    r = _schema.parse_file('src/enum_negative.bin')
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/construct/core.py", line 309, in parse_file
+    return self.parse_stream(f, **contextkw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/construct/core.py", line 300, in parse_stream
+    return self._parsereport(stream, context, "(parsing)")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/construct/core.py", line 2120, in _parse
+    subobj = sc._parsereport(stream, context, path)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/construct/core.py", line 2653, in _parse
+    return self.subcon._parsereport(stream, context, path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/construct/core.py", line 312, in _parsereport
+    obj = self._parse(stream, context, path)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/construct/core.py", line 2798, in _parse
+    return self.func(context) if callable(self.func) else self.func
+           ^^^^^^^^^^^^^^^^^^
+  File "/tests/compiled/construct/expr_ops_parens.py", line 9, in <lambda>
+    'f_sum_to_int' / Computed(lambda this: int((this.f_2pi + this.f_e))),
+                                                ^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/construct/lib/containers.py", line 95, in __getattr__
+    raise AttributeError(name)
+AttributeError: f_2pi
+]]></error>
+	</testcase>
+</testsuite>
