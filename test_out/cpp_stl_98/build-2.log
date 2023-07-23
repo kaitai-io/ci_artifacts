@@ -290,7 +290,7 @@ Dependencies file "CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/enum_long_r
 Dependencies file "CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/enum_negative.cpp.o.d" is newer than depends file "/tests/compiled/cpp_stl_98/bin/CMakeFiles/ks_tests.dir/compiler_depend.internal".
 Dependencies file "CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/enum_of_value_inst.cpp.o.d" is newer than depends file "/tests/compiled/cpp_stl_98/bin/CMakeFiles/ks_tests.dir/compiler_depend.internal".
 Dependencies file "CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/enum_to_i.cpp.o.d" is newer than depends file "/tests/compiled/cpp_stl_98/bin/CMakeFiles/ks_tests.dir/compiler_depend.internal".
-Dependencies file "CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/enum_to_i_class_border_1.cpp.o.d" is newer than depends file "/tests/compiled/cpp_stl_98/bin/CMakeFiles/ks_tests.dir/compiler_depend.internal".
+Dependencies file "CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/enum_to_i_class_border_2.cpp.o.d" is newer than depends file "/tests/compiled/cpp_stl_98/bin/CMakeFiles/ks_tests.dir/compiler_depend.internal".
 Dependencies file "CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/eof_exception_bytes.cpp.o.d" is newer than depends file "/tests/compiled/cpp_stl_98/bin/CMakeFiles/ks_tests.dir/compiler_depend.internal".
 Dependencies file "CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/eof_exception_u4.cpp.o.d" is newer than depends file "/tests/compiled/cpp_stl_98/bin/CMakeFiles/ks_tests.dir/compiler_depend.internal".
 Dependencies file "CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/eos_exception_bytes.cpp.o.d" is newer than depends file "/tests/compiled/cpp_stl_98/bin/CMakeFiles/ks_tests.dir/compiler_depend.internal".
@@ -464,19 +464,16 @@ Consolidate compiler generated dependencies of target ks_tests
 make[2]: Leaving directory `/tests/compiled/cpp_stl_98/bin'
 /usr/bin/make  -f CMakeFiles/ks_tests.dir/build.make CMakeFiles/ks_tests.dir/build
 make[2]: Entering directory `/tests/compiled/cpp_stl_98/bin'
-[  1%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/enum_to_i_class_border_1.cpp.o
-/usr/bin/c++ -DKS_STR_ENCODING_ICONV -DKS_ZLIB -I/tests/compiled/cpp_stl_98/bin -I/tests/compiled/cpp_stl_98 -I/tests/spec/cpp_stl_98/../../../runtime/cpp_stl -I/tests/spec/cpp_stl_98/prereq -g -std=c++98 -MD -MT CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/enum_to_i_class_border_1.cpp.o -MF CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/enum_to_i_class_border_1.cpp.o.d -o CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/enum_to_i_class_border_1.cpp.o -c /tests/compiled/cpp_stl_98/enum_to_i_class_border_1.cpp
-/tests/compiled/cpp_stl_98/enum_to_i_class_border_1.cpp:50:21: error: no matching constructor for initialization of 'enum_to_i_class_border_2_t'
-    m_checker = new enum_to_i_class_border_2_t(_root(), m__io);
-                    ^                          ~~~~~~~~~~~~~~
-/tests/compiled/cpp_stl_98/enum_to_i_class_border_2.h:18:5: note: candidate constructor not viable: no known conversion from 'enum_to_i_class_border_1_t *' to 'enum_to_i_class_border_2_t::enum_to_i_class_border_1_t *' for 1st argument
-    enum_to_i_class_border_2_t(enum_to_i_class_border_1_t* p_parent, kaitai::kstream* p__io, kaitai::kstruct* p__parent = 0, enum_to_i_class_border_2_t* p__root = 0);
-    ^
-/tests/compiled/cpp_stl_98/enum_to_i_class_border_2.h:13:7: note: candidate constructor (the implicit copy constructor) not viable: requires 1 argument, but 2 were provided
-class enum_to_i_class_border_2_t : public kaitai::kstruct {
-      ^
+[  0%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/enum_to_i_class_border_2.cpp.o
+/usr/bin/c++ -DKS_STR_ENCODING_ICONV -DKS_ZLIB -I/tests/compiled/cpp_stl_98/bin -I/tests/compiled/cpp_stl_98 -I/tests/spec/cpp_stl_98/../../../runtime/cpp_stl -I/tests/spec/cpp_stl_98/prereq -g -std=c++98 -MD -MT CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/enum_to_i_class_border_2.cpp.o -MF CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/enum_to_i_class_border_2.cpp.o.d -o CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/enum_to_i_class_border_2.cpp.o -c /tests/compiled/cpp_stl_98/enum_to_i_class_border_2.cpp
+/tests/compiled/cpp_stl_98/enum_to_i_class_border_2.cpp:33:24: error: member access into incomplete type 'enum_to_i_class_border_2_t::enum_to_i_class_border_1_t'
+    m_is_dog = parent()->some_dog() == 4;
+                       ^
+/tests/compiled/cpp_stl_98/enum_to_i_class_border_2.h:16:11: note: forward declaration of 'enum_to_i_class_border_2_t::enum_to_i_class_border_1_t'
+    class enum_to_i_class_border_1_t;
+          ^
 1 error generated.
-make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/enum_to_i_class_border_1.cpp.o] Error 1
+make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/enum_to_i_class_border_2.cpp.o] Error 1
 make[2]: Target `CMakeFiles/ks_tests.dir/build' not remade because of errors.
 make[2]: Leaving directory `/tests/compiled/cpp_stl_98/bin'
 make[1]: *** [CMakeFiles/ks_tests.dir/all] Error 2
