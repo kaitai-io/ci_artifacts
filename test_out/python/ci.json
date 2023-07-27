@@ -1,11 +1,11 @@
 {
   "$meta": {
     "lang": "python",
-    "timestamp": "2023-07-24T14:11:19Z",
+    "timestamp": "2023-07-27T22:37:20Z",
     "ci": {
       "ci": "github",
-      "run_id": "5645899753",
-      "run_number": "286",
+      "run_id": "5686106398",
+      "run_number": "287",
       "job_id": "null",
       "url": "null"
     }
@@ -248,7 +248,7 @@
       "file_name": null,
       "line_num": null,
       "message": "name 'Enum0' is not defined",
-      "trace": "Traceback (most recent call last):\n  File \"/tests/spec/python/test_enum_import.py\", line 9, in test_enum_import\n    with EnumImport.from_file('src/enum_0.bin') as r:\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/runtime/python/kaitaistruct.py\", line 44, in from_file\n    return cls(KaitaiStream(f))\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/tests/compiled/python/enum_import.py\", line 15, in __init__\n    self._read()\n  File \"/tests/compiled/python/enum_import.py\", line 18, in _read\n    self.pet_1 = KaitaiStream.resolve_enum(Enum0.Animal, self._io.read_u4le())\n                                           ^^^^^\nNameError: name 'Enum0' is not defined"
+      "trace": "Traceback (most recent call last):\n  File \"/tests/spec/python/test_enum_import.py\", line 9, in test_enum_import\n    with EnumImport.from_file('src/enum_0.bin') as r:\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/runtime/python/kaitaistruct.py\", line 44, in from_file\n    return cls(KaitaiStream(f))\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/tests/compiled/python/enum_import.py\", line 16, in __init__\n    self._read()\n  File \"/tests/compiled/python/enum_import.py\", line 19, in _read\n    self.pet_1 = KaitaiStream.resolve_enum(Enum0.Animal, self._io.read_u4le())\n                                           ^^^^^\nNameError: name 'Enum0' is not defined"
     },
     "is_kst": true
   },
@@ -355,7 +355,7 @@
       "file_name": null,
       "line_num": null,
       "message": "byte format requires -128 <= number <= 127",
-      "trace": "Traceback (most recent call last):\n  File \"/tests/spec/python/test_expr_bytes_non_literal.py\", line 11, in test_expr_bytes_non_literal\n    self.assertEqual(len(r.calc_bytes), 2)\n                         ^^^^^^^^^^^^\n  File \"/tests/compiled/python/expr_bytes_non_literal.py\", line 27, in calc_bytes\n    self._m_calc_bytes = struct.pack('2b', self.one, self.two)\n                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nstruct.error: byte format requires -128 <= number <= 127"
+      "trace": "Traceback (most recent call last):\n  File \"/tests/spec/python/test_expr_bytes_non_literal.py\", line 11, in test_expr_bytes_non_literal\n    self.assertEqual(len(r.calc_bytes), 2)\n                         ^^^^^^^^^^^^\n  File \"/tests/compiled/python/expr_bytes_non_literal.py\", line 28, in calc_bytes\n    self._m_calc_bytes = struct.pack('2b', self.one, self.two)\n                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nstruct.error: byte format requires -128 <= number <= 127"
     },
     "is_kst": true
   },
