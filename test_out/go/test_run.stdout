@@ -265,7 +265,7 @@
 === RUN   TestNonStandard
 --- PASS: TestNonStandard (0.00s)
 === RUN   TestOpaqueExternalType02Parent
-goroutine 137 [running]:
+goroutine 135 [running]:
 runtime/debug.Stack()
 	/usr/local/go/src/runtime/debug/stack.go:24 +0x65
 runtime/debug.PrintStack()
@@ -278,9 +278,9 @@ test_formats.(*OpaqueExternalType02Child).SomeMethod(...)
 	/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:46
 test_formats.(*OpaqueExternalType02Child_OpaqueExternalType02ChildChild).Read(0xc0001763c0?, 0xc0001685d0?, 0x3?, 0x676640?)
 	/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:69 +0x5a
-test_formats.(*OpaqueExternalType02Child).Read(0xc00008ab90, 0xc000033688?, {0x63cb00?, 0xc000086b80?}, 0x660cc0?)
+test_formats.(*OpaqueExternalType02Child).Read(0xc0000aeb40, 0xc000032688?, {0x63cb00?, 0xc0000dcb60?}, 0x660cc0?)
 	/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:38 +0x13e
-test_formats.(*OpaqueExternalType02Parent_ParentObj).Read(0xc000086b80, 0x40d4e7?, 0x28?, 0x660c00?)
+test_formats.(*OpaqueExternalType02Parent_ParentObj).Read(0xc0000dcb60, 0x40d4e7?, 0x28?, 0x660c00?)
 	/tests/compiled/go/src/test_formats/opaque_external_type_02_parent.go:48 +0x85
 test_formats.(*OpaqueExternalType02Parent).Read(0xc0001763f0, 0x17?, {0x63caa0?, 0xc0001763f0?}, 0xf?)
 	/tests/compiled/go/src/test_formats/opaque_external_type_02_parent.go:24 +0xa5
@@ -301,7 +301,7 @@ created by testing.(*T).Run
 === RUN   TestParamsCallShort
 --- PASS: TestParamsCallShort (0.00s)
 === RUN   TestParamsDef
---- PASS: TestParamsDef (0.02s)
+--- PASS: TestParamsDef (0.01s)
 === RUN   TestParamsEnum
 --- PASS: TestParamsEnum (0.00s)
 === RUN   TestParamsPassArrayStr
@@ -567,5 +567,5 @@ created by testing.(*T).Run
 === RUN   TestZlibWithHeader78
 --- PASS: TestZlibWithHeader78 (0.00s)
 FAIL
-FAIL	_/tests/spec/go	0.054s
+FAIL	_/tests/spec/go	0.045s
 FAIL
