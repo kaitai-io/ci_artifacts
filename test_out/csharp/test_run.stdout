@@ -1,0 +1,41 @@
+NUnit Console Runner 3.4.1 
+Copyright (C) 2016 Charlie Poole
+
+Runtime Environment
+   OS Version: Microsoft Windows NT 10.0.20348.0
+  CLR Version: 4.0.30319.42000
+
+Test Files
+    spec/csharp/kaitai_struct_csharp_tests_netframework/bin/Debug/kaitai_struct_csharp_tests.dll
+
+
+Errors and Failures
+
+1) Failed : Kaitai.SpecExprIntDiv.TestExprIntDiv
+  Expected: -756
+  But was:  -757
+at Kaitai.SpecExprIntDiv.TestExprIntDiv() in D:\a\ci_targets\ci_targets\tests\spec\csharp\kaitai_struct_csharp_tests\tests\SpecExprIntDiv.cs:line 18
+
+2) Error : Kaitai.SpecExprToITrailing.TestExprToITrailing
+System.ArgumentException : Invalid Base.
+   at System.Convert.ToInt64(String value, Int32 fromBase)
+   at Kaitai.ExprToITrailing.get_ToIR13() in D:\a\ci_targets\ci_targets\tests\compiled\csharp\ExprToITrailing.cs:line 47
+   at Kaitai.SpecExprToITrailing.TestExprToITrailing() in D:\a\ci_targets\ci_targets\tests\spec\csharp\kaitai_struct_csharp_tests\tests\SpecExprToITrailing.cs:line 21
+
+Run Settings
+    WorkDirectory: D:\a\ci_targets\ci_targets\tests
+    ImageRuntimeVersion: 4.0.30319
+    ImageTargetFrameworkName: .NETFramework,Version=v4.8
+    ImageRequiresX86: False
+    ImageRequiresDefaultAppDomainAssemblyResolver: False
+    NumberOfTestWorkers: 2
+
+Test Run Summary
+  Overall result: Failed
+  Test Count: 219, Passed: 217, Failed: 2, Inconclusive: 0, Skipped: 0
+    Failed Tests - Failures: 1, Errors: 1, Invalid: 0
+  Start time: 2023-07-28 21:32:14Z
+    End time: 2023-07-28 21:32:29Z
+    Duration: 14.767 seconds
+
+Results (nunit3) saved as test_out/csharp/TestResult.xml
