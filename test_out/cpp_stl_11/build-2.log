@@ -313,6 +313,7 @@ Dependencies file "CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/expr_int_di
 Dependencies file "CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/expr_io_eof.cpp.o.d" is newer than depends file "/tests/compiled/cpp_stl_11/bin/CMakeFiles/ks_tests.dir/compiler_depend.internal".
 Dependencies file "CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/expr_io_pos.cpp.o.d" is newer than depends file "/tests/compiled/cpp_stl_11/bin/CMakeFiles/ks_tests.dir/compiler_depend.internal".
 Dependencies file "CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/expr_mod.cpp.o.d" is newer than depends file "/tests/compiled/cpp_stl_11/bin/CMakeFiles/ks_tests.dir/compiler_depend.internal".
+Dependencies file "CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/expr_ops_parens.cpp.o.d" is newer than depends file "/tests/compiled/cpp_stl_11/bin/CMakeFiles/ks_tests.dir/compiler_depend.internal".
 Dependencies file "CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/expr_sizeof_type_0.cpp.o.d" is newer than depends file "/tests/compiled/cpp_stl_11/bin/CMakeFiles/ks_tests.dir/compiler_depend.internal".
 Dependencies file "CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/expr_sizeof_type_1.cpp.o.d" is newer than depends file "/tests/compiled/cpp_stl_11/bin/CMakeFiles/ks_tests.dir/compiler_depend.internal".
 Dependencies file "CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/expr_sizeof_value_0.cpp.o.d" is newer than depends file "/tests/compiled/cpp_stl_11/bin/CMakeFiles/ks_tests.dir/compiler_depend.internal".
@@ -383,7 +384,6 @@ Dependencies file "CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/params_enum
 Dependencies file "CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/params_pass_array_int.cpp.o.d" is newer than depends file "/tests/compiled/cpp_stl_11/bin/CMakeFiles/ks_tests.dir/compiler_depend.internal".
 Dependencies file "CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/params_pass_array_str.cpp.o.d" is newer than depends file "/tests/compiled/cpp_stl_11/bin/CMakeFiles/ks_tests.dir/compiler_depend.internal".
 Dependencies file "CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/params_pass_array_struct.cpp.o.d" is newer than depends file "/tests/compiled/cpp_stl_11/bin/CMakeFiles/ks_tests.dir/compiler_depend.internal".
-Dependencies file "CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/params_pass_array_usertype.cpp.o.d" is newer than depends file "/tests/compiled/cpp_stl_11/bin/CMakeFiles/ks_tests.dir/compiler_depend.internal".
 Dependencies file "CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/params_pass_bool.cpp.o.d" is newer than depends file "/tests/compiled/cpp_stl_11/bin/CMakeFiles/ks_tests.dir/compiler_depend.internal".
 Dependencies file "CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/params_pass_struct.cpp.o.d" is newer than depends file "/tests/compiled/cpp_stl_11/bin/CMakeFiles/ks_tests.dir/compiler_depend.internal".
 Dependencies file "CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/params_pass_usertype.cpp.o.d" is newer than depends file "/tests/compiled/cpp_stl_11/bin/CMakeFiles/ks_tests.dir/compiler_depend.internal".
@@ -473,19 +473,58 @@ Consolidate compiler generated dependencies of target ks_tests
 make[2]: Leaving directory `/tests/compiled/cpp_stl_11/bin'
 /usr/bin/make  -f CMakeFiles/ks_tests.dir/build.make CMakeFiles/ks_tests.dir/build
 make[2]: Entering directory `/tests/compiled/cpp_stl_11/bin'
-[  1%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/params_pass_array_usertype.cpp.o
-/usr/bin/c++ -DKS_STR_ENCODING_ICONV -DKS_ZLIB -I/tests/compiled/cpp_stl_11/bin -I/tests/compiled/cpp_stl_11 -I/tests/spec/cpp_stl_11/../../../runtime/cpp_stl -I/tests/spec/cpp_stl_11/prereq -g -std=c++11 -MD -MT CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/params_pass_array_usertype.cpp.o -MF CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/params_pass_array_usertype.cpp.o.d -o CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/params_pass_array_usertype.cpp.o -c /tests/compiled/cpp_stl_11/params_pass_array_usertype.cpp
-/tests/compiled/cpp_stl_11/params_pass_array_usertype.cpp:19:55: error: no matching constructor for initialization of 'params_pass_array_usertype_t::param_type_t'
-    m_pass_blocks = std::unique_ptr<param_type_t>(new param_type_t(blocks(), m__io, this, m__root));
-                                                      ^            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/tests/compiled/cpp_stl_11/params_pass_array_usertype.h:57:9: note: candidate constructor not viable: no known conversion from 'std::vector<std::unique_ptr<block_t> > *' to 'std::vector<block_t *> *' for 1st argument
-        param_type_t(std::vector<block_t*>* p_bar, kaitai::kstream* p__io, params_pass_array_usertype_t* p__parent = nullptr, params_pass_array_usertype_t* p__root = nullptr);
-        ^
-/tests/compiled/cpp_stl_11/params_pass_array_usertype.h:53:11: note: candidate constructor (the implicit copy constructor) not viable: requires 1 argument, but 4 were provided
-    class param_type_t : public kaitai::kstruct {
-          ^
+[  0%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/expr_ops_parens.cpp.o
+/usr/bin/c++ -DKS_STR_ENCODING_ICONV -DKS_ZLIB -I/tests/compiled/cpp_stl_11/bin -I/tests/compiled/cpp_stl_11 -I/tests/spec/cpp_stl_11/../../../runtime/cpp_stl -I/tests/spec/cpp_stl_11/prereq -g -std=c++11 -MD -MT CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/expr_ops_parens.cpp.o -MF CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/expr_ops_parens.cpp.o.d -o CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/expr_ops_parens.cpp.o -c /tests/compiled/cpp_stl_11/expr_ops_parens.cpp
+/tests/compiled/cpp_stl_11/expr_ops_parens.cpp:103:37: error: invalid operands to binary expression ('std::string' (aka 'basic_string<char>') and 'size_type' (aka 'unsigned long'))
+    m_str_concat_len = str_0_to_4() + str_5_to_9().length();
+                       ~~~~~~~~~~~~ ^ ~~~~~~~~~~~~~~~~~~~~~
+/usr/bin/../lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/bits/basic_string.h:2418:5: note: candidate template ignored: deduced conflicting types for parameter '_CharT' ('char' vs. 'unsigned long')
+    operator+(const basic_string<_CharT, _Traits, _Alloc>& __lhs, _CharT __rhs)
+    ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/bits/basic_string.h:2472:5: note: candidate template ignored: deduced conflicting types for parameter '_CharT' ('char' vs. 'unsigned long')
+    operator+(basic_string<_CharT, _Traits, _Alloc>&& __lhs,
+    ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/bits/stl_iterator.h:333:5: note: candidate template ignored: could not match 'reverse_iterator<type-parameter-0-0>' against 'unsigned long'
+    operator+(typename reverse_iterator<_Iterator>::difference_type __n,
+    ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/bits/stl_iterator.h:902:5: note: candidate template ignored: could not match '__normal_iterator<type-parameter-0-0, type-parameter-0-1>' against 'unsigned long'
+    operator+(typename __normal_iterator<_Iterator, _Container>::difference_type
+    ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/bits/stl_iterator.h:1118:5: note: candidate template ignored: could not match 'move_iterator<type-parameter-0-0>' against 'unsigned long'
+    operator+(typename move_iterator<_Iterator>::difference_type __n,
+    ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/bits/basic_string.h:2365:5: note: candidate template ignored: could not match 'basic_string<type-parameter-0-0, type-parameter-0-1, type-parameter-0-2>' against 'unsigned long'
+    operator+(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+    ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/bits/basic_string.h:2402:5: note: candidate template ignored: could not match 'const _CharT *' against 'size_type' (aka 'unsigned long')
+    operator+(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+    ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/bits/basic_string.h:2430:5: note: candidate template ignored: could not match 'basic_string<type-parameter-0-0, type-parameter-0-1, type-parameter-0-2>' against 'unsigned long'
+    operator+(basic_string<_CharT, _Traits, _Alloc>&& __lhs,
+    ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/bits/basic_string.h:2436:5: note: candidate template ignored: could not match 'basic_string<type-parameter-0-0, type-parameter-0-1, type-parameter-0-2>' against 'unsigned long'
+    operator+(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+    ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/bits/basic_string.h:2442:5: note: candidate template ignored: could not match 'basic_string<type-parameter-0-0, type-parameter-0-1, type-parameter-0-2>' against 'unsigned long'
+    operator+(basic_string<_CharT, _Traits, _Alloc>&& __lhs,
+    ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/bits/basic_string.h:2454:5: note: candidate template ignored: could not match 'const _CharT *' against 'std::string' (aka 'basic_string<char>')
+    operator+(const _CharT* __lhs,
+    ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/bits/basic_string.h:2460:5: note: candidate template ignored: could not match 'basic_string<type-parameter-0-0, type-parameter-0-1, type-parameter-0-2>' against 'unsigned long'
+    operator+(_CharT __lhs,
+    ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/bits/basic_string.h:2466:5: note: candidate template ignored: could not match 'const _CharT *' against 'size_type' (aka 'unsigned long')
+    operator+(basic_string<_CharT, _Traits, _Alloc>&& __lhs,
+    ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/bits/basic_string.tcc:692:5: note: candidate template ignored: could not match 'const _CharT *' against 'std::string' (aka 'basic_string<char>')
+    operator+(const _CharT* __lhs,
+    ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/bits/basic_string.tcc:708:5: note: candidate template ignored: could not match 'basic_string<type-parameter-0-0, type-parameter-0-1, type-parameter-0-2>' against 'unsigned long'
+    operator+(_CharT __lhs, const basic_string<_CharT, _Traits, _Alloc>& __rhs)
+    ^
 1 error generated.
-make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/params_pass_array_usertype.cpp.o] Error 1
+make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_11/expr_ops_parens.cpp.o] Error 1
 make[2]: Target `CMakeFiles/ks_tests.dir/build' not remade because of errors.
 make[2]: Leaving directory `/tests/compiled/cpp_stl_11/bin'
 make[1]: *** [CMakeFiles/ks_tests.dir/all] Error 2
