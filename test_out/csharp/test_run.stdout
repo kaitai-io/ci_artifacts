@@ -1,0 +1,82 @@
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  kaitai_struct_runtime_csharp -> /runtime/csharp/bin/Debug/netstandard1.3/Kaitai.Struct.Runtime.dll
+  kaitai_struct_csharp_tests_netstd -> /tests/spec/csharp/kaitai_struct_csharp_tests_netstd/bin/Debug/net6.0/kaitai_struct_csharp_tests_netstd.dll
+Test run for /tests/spec/csharp/kaitai_struct_csharp_tests_netstd/bin/Debug/net6.0/kaitai_struct_csharp_tests_netstd.dll (.NETCoreApp,Version=v6.0)
+Microsoft (R) Test Execution Command Line Tool Version 17.3.3 (x64)
+Copyright (c) Microsoft Corporation.  All rights reserved.
+
+Starting test execution, please wait...
+A total of 1 test files matched the specified pattern.
+  Failed TestExprIntDiv [24 ms]
+  Error Message:
+     Expected: -756
+  But was:  -757
+
+  Stack Trace:
+     at Kaitai.SpecExprIntDiv.TestExprIntDiv() in /tests/spec/csharp/kaitai_struct_csharp_tests/tests/SpecExprIntDiv.cs:line 18
+
+1)    at Kaitai.SpecExprIntDiv.TestExprIntDiv() in /tests/spec/csharp/kaitai_struct_csharp_tests/tests/SpecExprIntDiv.cs:line 18
+
+
+  Failed TestExprStrEncodings [2 ms]
+  Error Message:
+   System.ArgumentException : 'SJIS' is not a supported encoding name. For information on defining a custom encoding, see the documentation for the Encoding.RegisterProvider method. (Parameter 'name')
+  Stack Trace:
+     at System.Text.EncodingTable.InternalGetCodePageFromName(String name)
+   at System.Text.EncodingTable.GetCodePageFromName(String name)
+   at System.Text.Encoding.GetEncoding(String name)
+   at Kaitai.ExprStrEncodings._read() in /tests/compiled/csharp/ExprStrEncodings.cs:line 34
+   at Kaitai.ExprStrEncodings..ctor(KaitaiStream p__io, KaitaiStruct p__parent, ExprStrEncodings p__root) in /tests/compiled/csharp/ExprStrEncodings.cs:line 25
+   at Kaitai.ExprStrEncodings.FromFile(String fileName) in /tests/compiled/csharp/ExprStrEncodings.cs:line 11
+   at Kaitai.SpecExprStrEncodings.TestExprStrEncodings() in /tests/spec/csharp/kaitai_struct_csharp_tests/tests/SpecExprStrEncodings.cs:line 13
+
+  Failed TestExprToITrailing [< 1 ms]
+  Error Message:
+   System.ArgumentException : Invalid Base.
+  Stack Trace:
+     at System.Convert.ToInt64(String value, Int32 fromBase)
+   at Kaitai.ExprToITrailing.get_ToIR13() in /tests/compiled/csharp/ExprToITrailing.cs:line 47
+   at Kaitai.SpecExprToITrailing.TestExprToITrailing() in /tests/spec/csharp/kaitai_struct_csharp_tests/tests/SpecExprToITrailing.cs:line 21
+
+  Failed TestStrEncodings [< 1 ms]
+  Error Message:
+   System.ArgumentException : 'SJIS' is not a supported encoding name. For information on defining a custom encoding, see the documentation for the Encoding.RegisterProvider method. (Parameter 'name')
+  Stack Trace:
+     at System.Text.EncodingTable.InternalGetCodePageFromName(String name)
+   at System.Text.EncodingTable.GetCodePageFromName(String name)
+   at System.Text.Encoding.GetEncoding(String name)
+   at Kaitai.StrEncodings._read() in /tests/compiled/csharp/StrEncodings.cs:line 27
+   at Kaitai.StrEncodings..ctor(KaitaiStream p__io, KaitaiStruct p__parent, StrEncodings p__root) in /tests/compiled/csharp/StrEncodings.cs:line 18
+   at Kaitai.StrEncodings.FromFile(String fileName) in /tests/compiled/csharp/StrEncodings.cs:line 11
+   at Kaitai.SpecStrEncodings.TestStrEncodings() in /tests/spec/csharp/kaitai_struct_csharp_tests/tests/SpecStrEncodings.cs:line 13
+
+  Failed TestStrEncodingsDefault [1 ms]
+  Error Message:
+   System.ArgumentException : 'SJIS' is not a supported encoding name. For information on defining a custom encoding, see the documentation for the Encoding.RegisterProvider method. (Parameter 'name')
+  Stack Trace:
+     at System.Text.EncodingTable.InternalGetCodePageFromName(String name)
+   at System.Text.EncodingTable.GetCodePageFromName(String name)
+   at System.Text.Encoding.GetEncoding(String name)
+   at Kaitai.StrEncodingsDefault.Subtype._read() in /tests/compiled/csharp/StrEncodingsDefault.cs:line 44
+   at Kaitai.StrEncodingsDefault.Subtype..ctor(KaitaiStream p__io, StrEncodingsDefault p__parent, StrEncodingsDefault p__root) in /tests/compiled/csharp/StrEncodingsDefault.cs:line 37
+   at Kaitai.StrEncodingsDefault._read() in /tests/compiled/csharp/StrEncodingsDefault.cs:line 24
+   at Kaitai.StrEncodingsDefault..ctor(KaitaiStream p__io, KaitaiStruct p__parent, StrEncodingsDefault p__root) in /tests/compiled/csharp/StrEncodingsDefault.cs:line 18
+   at Kaitai.StrEncodingsDefault.FromFile(String fileName) in /tests/compiled/csharp/StrEncodingsDefault.cs:line 11
+   at Kaitai.SpecStrEncodingsDefault.TestStrEncodingsDefault() in /tests/spec/csharp/kaitai_struct_csharp_tests/tests/SpecStrEncodingsDefault.cs:line 13
+
+  Failed TestValidEqStrEncodings [3 ms]
+  Error Message:
+   System.ArgumentException : 'SJIS' is not a supported encoding name. For information on defining a custom encoding, see the documentation for the Encoding.RegisterProvider method. (Parameter 'name')
+  Stack Trace:
+     at System.Text.EncodingTable.InternalGetCodePageFromName(String name)
+   at System.Text.EncodingTable.GetCodePageFromName(String name)
+   at System.Text.Encoding.GetEncoding(String name)
+   at Kaitai.ValidEqStrEncodings._read() in /tests/compiled/csharp/ValidEqStrEncodings.cs:line 35
+   at Kaitai.ValidEqStrEncodings..ctor(KaitaiStream p__io, KaitaiStruct p__parent, ValidEqStrEncodings p__root) in /tests/compiled/csharp/ValidEqStrEncodings.cs:line 18
+   at Kaitai.ValidEqStrEncodings.FromFile(String fileName) in /tests/compiled/csharp/ValidEqStrEncodings.cs:line 11
+   at Kaitai.SpecValidEqStrEncodings.TestValidEqStrEncodings() in /tests/spec/csharp/kaitai_struct_csharp_tests/tests/SpecValidEqStrEncodings.cs:line 13
+
+Results File: /tests/test_out/csharp/TestResultTrx.xml
+
+Failed!  - Failed:     6, Passed:   213, Skipped:     0, Total:   219, Duration: 423 ms - /tests/spec/csharp/kaitai_struct_csharp_tests_netstd/bin/Debug/net6.0/kaitai_struct_csharp_tests_netstd.dll (net6.0)
