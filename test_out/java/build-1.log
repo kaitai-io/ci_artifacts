@@ -1,13 +1,52 @@
-spec/java/src/io/kaitai/struct/spec/TestExprToITrailing.java:15: error: illegal start of expression
-        assertThrows(NumberFormatException.class, () -> r.toIR10());
-                                                   ^
-spec/java/src/io/kaitai/struct/spec/TestExprToITrailing.java:15: error: illegal start of expression
-        assertThrows(NumberFormatException.class, () -> r.toIR10());
-                                                      ^
-spec/java/src/io/kaitai/struct/spec/TestExprToITrailing.java:17: error: illegal start of expression
-        assertThrows(NumberFormatException.class, () -> r.toIGarbage());
-                                                   ^
-spec/java/src/io/kaitai/struct/spec/TestExprToITrailing.java:17: error: illegal start of expression
-        assertThrows(NumberFormatException.class, () -> r.toIGarbage());
-                                                      ^
-4 errors
+spec/java/src/io/kaitai/struct/spec/TestExprToITrailing.java:18: error: local variable r is accessed from within inner class; needs to be declared final
+                r.toIR10();
+                ^
+spec/java/src/io/kaitai/struct/spec/TestExprToITrailing.java:25: error: local variable r is accessed from within inner class; needs to be declared final
+                r.toIGarbage();
+                ^
+compiled/java/src/io/kaitai/struct/testformats/ExprBits.java:56: error: possible loss of precision
+        switch (a()) {
+                 ^
+  required: int
+  found:    long
+compiled/java/src/io/kaitai/struct/testformats/ExprBits.java:85: error: possible loss of precision
+            switch (_parent().a()) {
+                               ^
+  required: int
+  found:    long
+compiled/java/src/io/kaitai/struct/testformats/ExprBytesNonLiteral.java:37: error: possible loss of precision
+        this.calcBytes = new byte[] { one(), two() };
+                                         ^
+  required: byte
+  found:    int
+compiled/java/src/io/kaitai/struct/testformats/ExprBytesNonLiteral.java:37: error: possible loss of precision
+        this.calcBytes = new byte[] { one(), two() };
+                                                ^
+  required: byte
+  found:    int
+compiled/java/src/io/kaitai/struct/testformats/ExprOpsParens.java:97: error: inconvertible types
+        int _tmp = (int) (str0To4() + str5To9().length());
+                         ^
+  required: int
+  found:    String
+compiled/java/src/io/kaitai/struct/testformats/InstanceUserArray.java:74: error: cannot find symbol
+            this._raw_userEntries = new ArrayList<byte[]>();
+                ^
+  symbol: variable _raw_userEntries
+compiled/java/src/io/kaitai/struct/testformats/RepeatUntilCalcArrayType.java:31: error: cannot find symbol
+        this._raw_records = new ArrayList<byte[]>();
+            ^
+  symbol: variable _raw_records
+compiled/java/src/io/kaitai/struct/testformats/RepeatUntilSized.java:31: error: cannot find symbol
+        this._raw_records = new ArrayList<byte[]>();
+            ^
+  symbol: variable _raw_records
+compiled/java/src/io/kaitai/struct/testformats/SwitchRepeatExpr.java:33: error: cannot find symbol
+        this._raw_body = new ArrayList<byte[]>();
+            ^
+  symbol: variable _raw_body
+compiled/java/src/io/kaitai/struct/testformats/SwitchRepeatExprInvalid.java:33: error: cannot find symbol
+        this._raw_body = new ArrayList<byte[]>();
+            ^
+  symbol: variable _raw_body
+12 errors
