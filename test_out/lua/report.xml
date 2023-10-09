@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites>
-    <testsuite name="LuaUnit" id="00001" package="" hostname="localhost" tests="231" timestamp="2023-10-09T18:36:21" time="0.040" errors="6" failures="4" skipped="0">
+    <testsuite name="LuaUnit" id="00001" package="" hostname="localhost" tests="231" timestamp="2023-10-09T19:30:38" time="0.035" errors="6" failures="3" skipped="0">
         <properties>
             <property name="Lua Version" value="Lua 5.3"/>
             <property name="LuaUnit Version" value="3.4"/>
@@ -111,11 +111,7 @@
         </testcase>
         <testcase classname="TestEnumOfValueInst" name="TestEnumOfValueInst.test_enum_of_value_inst" time="0.000">
         </testcase>
-        <testcase classname="TestEnumToI" name="TestEnumToI.test_enum_to_i" time="0.001">
-            <failure type="spec/lua/test_enum_to_i.lua:15: expected: &quot;7&quot;
-actual: nil">
-                <![CDATA[stack traceback:
-	spec/lua/test_enum_to_i.lua:15: in upvalue 'TestEnumToI.test_enum_to_i']]></failure>
+        <testcase classname="TestEnumToI" name="TestEnumToI.test_enum_to_i" time="0.000">
         </testcase>
         <testcase classname="TestEnumToIClassBorder1" name="TestEnumToIClassBorder1.test_enum_to_i_class_border_1" time="0.001">
             <error type="compiled/lua/enum_to_i_class_border_2.lua:27: attempt to index a nil value (field &apos;parent&apos;)">
@@ -124,22 +120,10 @@ actual: nil">
 	(...tail calls...)
 	spec/lua/test_enum_to_i_class_border_1.lua:14: in upvalue 'TestEnumToIClassBorder1.test_enum_to_i_class_border_1']]></error>
         </testcase>
-        <testcase classname="TestEnumToIInvalid" name="TestEnumToIInvalid.test_enum_to_i_invalid" time="0.007">
-            <failure type="spec/lua/run_test_suite.lua:18: spec/lua/test_enum_to_i_invalid.lua:5: module &apos;enum_to_i_invalid&apos; not found:
-	no field package.preload[&apos;enum_to_i_invalid&apos;]
-	no file &apos;../runtime/lua/enum_to_i_invalid.lua&apos;
-	no file &apos;spec/lua/enum_to_i_invalid.lua&apos;
-	no file &apos;spec/lua/extra/enum_to_i_invalid.lua&apos;
-	no file &apos;compiled/lua/enum_to_i_invalid.lua&apos;
-	no file &apos;/lua_install/share/lua/5.3/enum_to_i_invalid.lua&apos;
-	no file &apos;/lua_install/share/lua/5.3/enum_to_i_invalid/init.lua&apos;
-	no file &apos;./enum_to_i_invalid.lua&apos;
-	no file &apos;./enum_to_i_invalid/init.lua&apos;
-	no file &apos;/lua_install/lib/lua/5.3/enum_to_i_invalid.so&apos;
-	no file &apos;/lua_install/lib/lua/5.3/loadall.so&apos;
-	no file &apos;./enum_to_i_invalid.so&apos;">
+        <testcase classname="TestEnumToIInvalid" name="TestEnumToIInvalid.test_enum_to_i_invalid" time="0.001">
+            <failure type="spec/lua/test_enum_to_i_invalid.lua:13: expected: 111, actual: nil">
                 <![CDATA[stack traceback:
-	spec/lua/run_test_suite.lua:18: in upvalue 'TestEnumToIInvalid.test_enum_to_i_invalid']]></failure>
+	spec/lua/test_enum_to_i_invalid.lua:13: in upvalue 'TestEnumToIInvalid.test_enum_to_i_invalid']]></failure>
         </testcase>
         <testcase classname="TestEofExceptionBytes" name="TestEofExceptionBytes.test_eof_exception_bytes" time="0.000">
         </testcase>
@@ -163,7 +147,7 @@ actual: nil">
         </testcase>
         <testcase classname="TestExprBytesCmp" name="TestExprBytesCmp.test_expr_bytes_cmp" time="0.000">
         </testcase>
-        <testcase classname="TestExprBytesNonLiteral" name="TestExprBytesNonLiteral.test_expr_bytes_non_literal" time="0.008">
+        <testcase classname="TestExprBytesNonLiteral" name="TestExprBytesNonLiteral.test_expr_bytes_non_literal" time="0.009">
             <failure type="spec/lua/run_test_suite.lua:18: spec/lua/test_expr_bytes_non_literal.lua:5: module &apos;expr_bytes_non_literal&apos; not found:
 	no field package.preload[&apos;expr_bytes_non_literal&apos;]
 	no file &apos;../runtime/lua/expr_bytes_non_literal.lua&apos;
