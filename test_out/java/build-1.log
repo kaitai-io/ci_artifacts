@@ -1,3 +1,26 @@
+spec/java/src/io/kaitai/struct/spec/TestEnumToIInvalid.java:5: error: cannot find symbol
+import io.kaitai.struct.testformats.EnumToIInvalid;
+                                   ^
+  symbol:   class EnumToIInvalid
+  location: package io.kaitai.struct.testformats
+spec/java/src/io/kaitai/struct/spec/TestEnumToI.java:17: error: cannot find symbol
+        assertEquals(r.pet1IToS(), "7");
+                      ^
+  symbol:   method pet1IToS()
+  location: variable r of type EnumToI
+spec/java/src/io/kaitai/struct/spec/TestEnumToIInvalid.java:12: error: cannot find symbol
+        EnumToIInvalid r = EnumToIInvalid.fromFile(SRC_DIR + "term_strz.bin");
+        ^
+  symbol:   class EnumToIInvalid
+  location: class TestEnumToIInvalid
+spec/java/src/io/kaitai/struct/spec/TestEnumToIInvalid.java:12: error: cannot find symbol
+        EnumToIInvalid r = EnumToIInvalid.fromFile(SRC_DIR + "term_strz.bin");
+                           ^
+  symbol:   variable EnumToIInvalid
+  location: class TestEnumToIInvalid
+spec/java/src/io/kaitai/struct/spec/TestEnumToIInvalid.java:14: error: package EnumToIInvalid does not exist
+        assertEquals(r.pet1(), EnumToIInvalid.Animal.DOG);
+                                             ^
 compiled/java/src/io/kaitai/struct/testformats/ExprBits.java:56: error: possible loss of precision
         switch (a()) {
                  ^
@@ -43,4 +66,4 @@ compiled/java/src/io/kaitai/struct/testformats/SwitchRepeatExprInvalid.java:33: 
         this._raw_body = new ArrayList<byte[]>();
             ^
   symbol: variable _raw_body
-10 errors
+15 errors
