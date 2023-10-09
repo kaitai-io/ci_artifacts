@@ -1,13 +1,13 @@
 {
   "$meta": {
     "lang": "perl",
-    "timestamp": "2023-08-04T18:56:26Z",
+    "timestamp": "2023-10-09T18:36:45Z",
     "ci": {
       "ci": "github",
-      "run_id": "5765599306",
-      "run_number": "300",
-      "job_id": "15631878006",
-      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/5765599306/job/15631878006"
+      "run_id": "6460469190",
+      "run_number": "301",
+      "job_id": "17538225499",
+      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/6460469190/job/17538225499"
     }
   },
   "BcdUserTypeBe": {
@@ -240,11 +240,6 @@
     "elapsed": 0.0,
     "is_kst": true
   },
-  "EnumForUnknownId": {
-    "status": "passed",
-    "elapsed": 0.0,
-    "is_kst": true
-  },
   "EnumIf": {
     "status": "passed",
     "elapsed": 0.0,
@@ -297,8 +292,14 @@
     "is_kst": true
   },
   "EnumToI": {
-    "status": "passed",
+    "status": "failed",
     "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": "not ok 4 - test_enum_to_i died (Can't locate object method \"pet_1_i_to_s\" via package \"EnumToI\" at spec/perl/TestEnumToI.t line 17.)",
+      "trace": ""
+    },
     "is_kst": true
   },
   "EnumToIClassBorder1": {
@@ -309,6 +310,17 @@
       "line_num": null,
       "message": "not ok 3 - test_enum_to_i_class_border_1 died (Can't call method \"some_dog\" on an undefined value at compiled/perl/EnumToIClassBorder2.pm line 42.)",
       "trace": ""
+    },
+    "is_kst": true
+  },
+  "EnumToIInvalid": {
+    "status": "failed",
+    "elapsed": 0.1,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": "The test suite died before a plan was produced. You need to have a plan.",
+      "trace": "No plan"
     },
     "is_kst": true
   },
