@@ -1,13 +1,13 @@
 {
   "$meta": {
     "lang": "lua",
-    "timestamp": "2023-08-04T18:55:57Z",
+    "timestamp": "2023-10-09T18:36:21Z",
     "ci": {
       "ci": "github",
-      "run_id": "5765599306",
-      "run_number": "300",
-      "job_id": "15631877582",
-      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/5765599306/job/15631877582"
+      "run_id": "6460469190",
+      "run_number": "301",
+      "job_id": "17538224707",
+      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/6460469190/job/17538224707"
     }
   },
   "BcdUserTypeBe": {
@@ -227,10 +227,6 @@
     "elapsed": 0.0,
     "is_kst": true
   },
-  "EnumForUnknownId": {
-    "status": "passed",
-    "elapsed": 0.0
-  },
   "EnumIf": {
     "status": "passed",
     "elapsed": 0.0,
@@ -276,8 +272,14 @@
     "is_kst": true
   },
   "EnumToI": {
-    "status": "passed",
+    "status": "failed",
     "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": "spec/lua/test_enum_to_i.lua:15: expected: \"7\"\nactual: nil",
+      "trace": "stack traceback:\n\tspec/lua/test_enum_to_i.lua:15: in upvalue 'TestEnumToI.test_enum_to_i'"
+    },
     "is_kst": true
   },
   "EnumToIClassBorder1": {
@@ -288,6 +290,17 @@
       "line_num": null,
       "message": "compiled/lua/enum_to_i_class_border_2.lua:27: attempt to index a nil value (field 'parent')",
       "trace": "stack traceback:\n\tcompiled/lua/enum_to_i_class_border_2.lua:27: in function <compiled/lua/enum_to_i_class_border_2.lua:22>\n\t(...tail calls...)\n\tspec/lua/test_enum_to_i_class_border_1.lua:14: in upvalue 'TestEnumToIClassBorder1.test_enum_to_i_class_border_1'"
+    },
+    "is_kst": true
+  },
+  "EnumToIInvalid": {
+    "status": "failed",
+    "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": "spec/lua/run_test_suite.lua:18: spec/lua/test_enum_to_i_invalid.lua:5: module 'enum_to_i_invalid' not found:\n\tno field package.preload['enum_to_i_invalid']\n\tno file '../runtime/lua/enum_to_i_invalid.lua'\n\tno file 'spec/lua/enum_to_i_invalid.lua'\n\tno file 'spec/lua/extra/enum_to_i_invalid.lua'\n\tno file 'compiled/lua/enum_to_i_invalid.lua'\n\tno file '/lua_install/share/lua/5.3/enum_to_i_invalid.lua'\n\tno file '/lua_install/share/lua/5.3/enum_to_i_invalid/init.lua'\n\tno file './enum_to_i_invalid.lua'\n\tno file './enum_to_i_invalid/init.lua'\n\tno file '/lua_install/lib/lua/5.3/enum_to_i_invalid.so'\n\tno file '/lua_install/lib/lua/5.3/loadall.so'\n\tno file './enum_to_i_invalid.so'",
+      "trace": "stack traceback:\n\tspec/lua/run_test_suite.lua:18: in upvalue 'TestEnumToIInvalid.test_enum_to_i_invalid'"
     },
     "is_kst": true
   },
