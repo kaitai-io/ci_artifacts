@@ -1,13 +1,13 @@
 {
   "$meta": {
     "lang": "construct",
-    "timestamp": "2023-10-09T18:35:49Z",
+    "timestamp": "2023-10-09T19:29:55Z",
     "ci": {
       "ci": "github",
-      "run_id": "6460469190",
-      "run_number": "301",
-      "job_id": "17538221148",
-      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/6460469190/job/17538221148"
+      "run_id": "6460921318",
+      "run_number": "303",
+      "job_id": "17539558036",
+      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/6460921318/job/17539558036"
     }
   },
   "BcdUserTypeBe": {
@@ -434,14 +434,8 @@
     "is_kst": true
   },
   "EnumToI": {
-    "status": "failed",
+    "status": "passed",
     "elapsed": 0.0,
-    "failure": {
-      "file_name": null,
-      "line_num": null,
-      "message": "'EnumIntegerString' object has no attribute 'value'",
-      "trace": "Traceback (most recent call last):\n  File \"/tests/spec/construct/test_enum_to_i.py\", line 9, in test_enum_to_i\n    r = _schema.parse_file('src/enum_0.bin')\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/construct/core.py\", line 309, in parse_file\n    return self.parse_stream(f, **contextkw)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/construct/core.py\", line 300, in parse_stream\n    return self._parsereport(stream, context, \"(parsing)\")\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/construct/core.py\", line 312, in _parsereport\n    obj = self._parse(stream, context, path)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/construct/core.py\", line 2120, in _parse\n    subobj = sc._parsereport(stream, context, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/construct/core.py\", line 312, in _parsereport\n    obj = self._parse(stream, context, path)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/construct/core.py\", line 2653, in _parse\n    return self.subcon._parsereport(stream, context, path)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/construct/core.py\", line 312, in _parsereport\n    obj = self._parse(stream, context, path)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/construct/core.py\", line 2798, in _parse\n    return self.func(context) if callable(self.func) else self.func\n           ^^^^^^^^^^^^^^^^^^\n  File \"/tests/compiled/construct/enum_to_i.py\", line 13, in <lambda>\n    'pet_1_i' / Computed(lambda this: this.pet_1.value),\n                                      ^^^^^^^^^^^^^^^^\nAttributeError: 'EnumIntegerString' object has no attribute 'value'"
-    },
     "is_kst": true
   },
   "EnumToIClassBorder1": {
@@ -456,14 +450,8 @@
     "is_kst": true
   },
   "EnumToIInvalid": {
-    "status": "failed",
+    "status": "passed",
     "elapsed": 0.0,
-    "failure": {
-      "file_name": null,
-      "line_num": null,
-      "message": "Failed to import test module: test_enum_to_i_invalid\nTraceback (most recent call last):\n  File \"/usr/local/lib/python3.11/unittest/loader.py\", line 419, in _find_test_path\n    module = self._get_module_from_name(name)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/unittest/loader.py\", line 362, in _get_module_from_name\n    __import__(name)\n  File \"/tests/spec/construct/test_enum_to_i_invalid.py\", line 5, in <module>\n    from enum_to_i_invalid import _schema\nModuleNotFoundError: No module named 'enum_to_i_invalid'\n",
-      "trace": "ImportError: Failed to import test module: test_enum_to_i_invalid\nTraceback (most recent call last):\n  File \"/usr/local/lib/python3.11/unittest/loader.py\", line 419, in _find_test_path\n    module = self._get_module_from_name(name)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/unittest/loader.py\", line 362, in _get_module_from_name\n    __import__(name)\n  File \"/tests/spec/construct/test_enum_to_i_invalid.py\", line 5, in <module>\n    from enum_to_i_invalid import _schema\nModuleNotFoundError: No module named 'enum_to_i_invalid'"
-    },
     "is_kst": true
   },
   "Expr0": {
@@ -1327,8 +1315,8 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "<built-in method values of Container object at 0x7ff6fa826350> != [1, 2, 3, 4]",
-      "trace": "Traceback (most recent call last):\n  File \"/tests/spec/construct/test_repeat_until_complex.py\", line 12, in test_repeat_until_complex\n    self.assertEqual(r.first[0].values, [(0 + 1), 2, 3, 4])\nAssertionError: <built-in method values of Container object at 0x7ff6fa826350> != [1, 2, 3, 4]"
+      "message": "<built-in method values of Container object at 0x7f8b1612a670> != [1, 2, 3, 4]",
+      "trace": "Traceback (most recent call last):\n  File \"/tests/spec/construct/test_repeat_until_complex.py\", line 12, in test_repeat_until_complex\n    self.assertEqual(r.first[0].values, [(0 + 1), 2, 3, 4])\nAssertionError: <built-in method values of Container object at 0x7f8b1612a670> != [1, 2, 3, 4]"
     },
     "is_kst": true
   },
