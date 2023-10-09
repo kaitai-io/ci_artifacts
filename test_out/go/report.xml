@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites tests="195" failures="15">
-	<testsuite name="_/tests/spec/go" tests="195" failures="15" errors="0" id="0" hostname="a518138363d8" time="0.042" timestamp="2023-10-09T18:36:09Z">
+<testsuites tests="197" failures="15">
+	<testsuite name="_/tests/spec/go" tests="197" failures="15" errors="0" id="0" hostname="decdddd01327" time="0.039" timestamp="2023-10-09T19:30:22Z">
 		<testcase name="TestBcdUserTypeBe" classname="_/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestBcdUserTypeLe" classname="_/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestBitsByteAligned" classname="_/tests/spec/go" time="0.000"></testcase>
@@ -50,6 +50,8 @@
 		<testcase name="TestEnumNegative" classname="_/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestEnumOfValueInst" classname="_/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestEnumToIClassBorder1" classname="_/tests/spec/go" time="0.000"></testcase>
+		<testcase name="TestEnumToIInvalid" classname="_/tests/spec/go" time="0.000"></testcase>
+		<testcase name="TestEnumToI" classname="_/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestEofExceptionBytes" classname="_/tests/spec/go" time="0.000">
 			<failure message="Failed"><![CDATA[    eof_exception_bytes_test.go:31: expected kaitai.EndOfStreamError, got *errors.errorString]]></failure>
 		</testcase>
@@ -65,9 +67,9 @@
 		<testcase name="TestExpr0" classname="_/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestExpr1" classname="_/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestExpr2" classname="_/tests/spec/go" time="0.000"></testcase>
-		<testcase name="TestExpr3" classname="_/tests/spec/go" time="0.000"></testcase>
+		<testcase name="TestExpr3" classname="_/tests/spec/go" time="0.010"></testcase>
 		<testcase name="TestExprArray" classname="_/tests/spec/go" time="0.000"></testcase>
-		<testcase name="TestExprBits" classname="_/tests/spec/go" time="0.020"></testcase>
+		<testcase name="TestExprBits" classname="_/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestExprBytesCmp" classname="_/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestExprBytesNonLiteral" classname="_/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestExprBytesOps" classname="_/tests/spec/go" time="0.000"></testcase>
@@ -157,28 +159,28 @@
 		<testcase name="TestNestedTypes" classname="_/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestNonStandard" classname="_/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestOpaqueExternalType02Parent" classname="_/tests/spec/go" time="0.000">
-			<failure message="Failed"><![CDATA[goroutine 121 [running]:
+			<failure message="Failed"><![CDATA[goroutine 137 [running]:
 runtime/debug.Stack()
 	/usr/local/go/src/runtime/debug/stack.go:24 +0x65
 runtime/debug.PrintStack()
 	/usr/local/go/src/runtime/debug/stack.go:16 +0x19
 _/tests/spec/go.TestOpaqueExternalType02Parent.func1()
 	/tests/spec/go/opaque_external_type_02_parent_test.go:15 +0x3f
-panic({0x640aa0, 0x865cb0})
+panic({0x641da0, 0x867cb0})
 	/usr/local/go/src/runtime/panic.go:884 +0x212
 test_formats.(*OpaqueExternalType02Child).SomeMethod(...)
 	/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:46
-test_formats.(*OpaqueExternalType02Child_OpaqueExternalType02ChildChild).Read(0xc0001302d0?, 0xc00011e5f0?, 0x3?, 0x675240?)
+test_formats.(*OpaqueExternalType02Child_OpaqueExternalType02ChildChild).Read(0xc000176180?, 0xc00016e580?, 0x3?, 0x6766c0?)
 	/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:69 +0x5a
-test_formats.(*OpaqueExternalType02Child).Read(0xc000060b90, 0xc000038688?, {0x63b880?, 0xc000054b80?}, 0x65f8c0?)
+test_formats.(*OpaqueExternalType02Child).Read(0xc00008ab90, 0xc000033e88?, {0x63cb80?, 0xc000086b60?}, 0x660d40?)
 	/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:38 +0x13e
-test_formats.(*OpaqueExternalType02Parent_ParentObj).Read(0xc000054b80, 0x40d4e7?, 0x28?, 0x65f800?)
+test_formats.(*OpaqueExternalType02Parent_ParentObj).Read(0xc000086b60, 0x40d4e7?, 0x28?, 0x660c80?)
 	/tests/compiled/go/src/test_formats/opaque_external_type_02_parent.go:48 +0x85
-test_formats.(*OpaqueExternalType02Parent).Read(0xc000130300, 0x17?, {0x63b820?, 0xc000130300?}, 0xf?)
+test_formats.(*OpaqueExternalType02Parent).Read(0xc0001761b0, 0x17?, {0x63cb20?, 0xc0001761b0?}, 0xf?)
 	/tests/compiled/go/src/test_formats/opaque_external_type_02_parent.go:24 +0xa5
-_/tests/spec/go.TestOpaqueExternalType02Parent(0xc00012e4e0)
+_/tests/spec/go.TestOpaqueExternalType02Parent(0xc000173a00)
 	/tests/spec/go/opaque_external_type_02_parent_test.go:25 +0x12d
-testing.tRunner(0xc00012e4e0, 0x6b7758)
+testing.tRunner(0xc000173a00, 0x6b9008)
 	/usr/local/go/src/testing/testing.go:1446 +0x10b
 created by testing.(*T).Run
 	/usr/local/go/src/testing/testing.go:1493 +0x35f
@@ -188,9 +190,9 @@ created by testing.(*T).Run
 		<testcase name="TestOpaqueWithParam" classname="_/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestParamsCallExtraParens" classname="_/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestParamsCallShort" classname="_/tests/spec/go" time="0.000"></testcase>
-		<testcase name="TestParamsDef" classname="_/tests/spec/go" time="0.000"></testcase>
+		<testcase name="TestParamsDef" classname="_/tests/spec/go" time="0.010"></testcase>
 		<testcase name="TestParamsEnum" classname="_/tests/spec/go" time="0.000"></testcase>
-		<testcase name="TestParamsPassArrayStr" classname="_/tests/spec/go" time="0.010"></testcase>
+		<testcase name="TestParamsPassArrayStr" classname="_/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestParamsPassArrayUsertype" classname="_/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestParamsPassBool" classname="_/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestParamsPassUsertype" classname="_/tests/spec/go" time="0.000"></testcase>
