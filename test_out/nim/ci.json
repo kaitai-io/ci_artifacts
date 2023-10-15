@@ -1,13 +1,13 @@
 {
   "$meta": {
     "lang": "nim",
-    "timestamp": "2023-10-10T21:24:33Z",
+    "timestamp": "2023-10-15T23:58:10Z",
     "ci": {
       "ci": "github",
-      "run_id": "6460921318",
-      "run_number": "303",
-      "job_id": "17580922006",
-      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/6460921318/job/17580922006"
+      "run_id": "6527205422",
+      "run_number": "304",
+      "job_id": "17721748990",
+      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/6527205422/job/17721748990"
     }
   },
   "BcdUserTypeBe": {
@@ -406,7 +406,7 @@
   },
   "ExprStrEncodings": {
     "status": "failed",
-    "elapsed": 0.2,
+    "elapsed": 0.1,
     "failure": {
       "file_name": null,
       "line_num": null,
@@ -540,14 +540,8 @@
     "is_kst": true
   },
   "InstanceUserArray": {
-    "status": "failed",
+    "status": "passed",
     "elapsed": 0.0,
-    "failure": {
-      "file_name": null,
-      "line_num": null,
-      "message": "/tests/compiled/nim/instance_user_array.nim(46, 33) Error: type mismatch: got &apos;seq[byte]&apos; for &apos;rawUserEntriesInstExpr&apos; but expected &apos;seq[seq[byte]]&apos;\n",
-      "trace": ""
-    },
     "is_kst": true
   },
   "Integers": {
@@ -888,14 +882,8 @@
     "is_kst": true
   },
   "RepeatUntilCalcArrayType": {
-    "status": "failed",
+    "status": "passed",
     "elapsed": 0.0,
-    "failure": {
-      "file_name": null,
-      "line_num": null,
-      "message": "/tests/spec/nim/trepeat_until_calc_array_type.nim(7, 33) template/generic instantiation of `fromFile` from here\n/tests/compiled/nim/repeat_until_calc_array_type.nim(61, 27) template/generic instantiation of `read` from here\n/tests/compiled/nim/repeat_until_calc_array_type.nim(36, 25) Error: type mismatch: got &apos;seq[byte]&apos; for &apos;rawRecordsExpr&apos; but expected &apos;seq[seq[byte]]&apos;\n",
-      "trace": ""
-    },
     "is_kst": true
   },
   "RepeatUntilComplex": {
@@ -909,14 +897,8 @@
     "is_kst": true
   },
   "RepeatUntilSized": {
-    "status": "failed",
+    "status": "passed",
     "elapsed": 0.0,
-    "failure": {
-      "file_name": null,
-      "line_num": null,
-      "message": "/tests/spec/nim/trepeat_until_sized.nim(7, 25) template/generic instantiation of `fromFile` from here\n/tests/compiled/nim/repeat_until_sized.nim(39, 19) template/generic instantiation of `read` from here\n/tests/compiled/nim/repeat_until_sized.nim(30, 25) Error: type mismatch: got &apos;seq[byte]&apos; for &apos;rawRecordsExpr&apos; but expected &apos;seq[seq[byte]]&apos;\n",
-      "trace": ""
-    },
     "is_kst": true
   },
   "StrEncodings": {
@@ -1077,7 +1059,7 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "/tests/spec/nim/tswitch_repeat_expr.nim(7, 25) template/generic instantiation of `fromFile` from here\n/tests/compiled/nim/switch_repeat_expr.nim(55, 19) template/generic instantiation of `read` from here\n/tests/compiled/nim/switch_repeat_expr.nim(40, 24) Error: type mismatch: got &apos;seq[byte]&apos; for &apos;rawBodyExpr&apos; but expected &apos;seq[seq[byte]]&apos;\n",
+      "message": "/tests/spec/nim/tswitch_repeat_expr.nim(7, 25) template/generic instantiation of `fromFile` from here\n/tests/compiled/nim/switch_repeat_expr.nim(55, 19) template/generic instantiation of `read` from here\n/tests/compiled/nim/switch_repeat_expr.nim(52, 18) Error: type mismatch: got &lt;seq[KaitaiStruct], seq[byte]&gt;\nbut expected one of:\nproc add[T](x: var seq[T]; y: openArray[T])\n  first type mismatch at position: 2\n  required type for y: openArray[T]\n  but expression &apos;it&apos; is of type: seq[byte]\nproc add[T](x: var seq[T]; y: sink T)\n  first type mismatch at position: 2\n  required type for y: sink T\n  but expression &apos;it&apos; is of type: seq[byte]\n3 other mismatching symbols have been suppressed; compile with --showAllMismatches:on to see them\n\nexpression: add(result.body, it)\n",
       "trace": ""
     },
     "is_kst": true
@@ -1088,7 +1070,7 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "/tests/spec/nim/tswitch_repeat_expr_invalid.nim(7, 32) template/generic instantiation of `fromFile` from here\n/tests/compiled/nim/switch_repeat_expr_invalid.nim(55, 26) template/generic instantiation of `read` from here\n/tests/compiled/nim/switch_repeat_expr_invalid.nim(40, 24) Error: type mismatch: got &apos;seq[byte]&apos; for &apos;rawBodyExpr&apos; but expected &apos;seq[seq[byte]]&apos;\n",
+      "message": "/tests/spec/nim/tswitch_repeat_expr_invalid.nim(7, 32) template/generic instantiation of `fromFile` from here\n/tests/compiled/nim/switch_repeat_expr_invalid.nim(55, 26) template/generic instantiation of `read` from here\n/tests/compiled/nim/switch_repeat_expr_invalid.nim(52, 18) Error: type mismatch: got &lt;seq[KaitaiStruct], seq[byte]&gt;\nbut expected one of:\nproc add[T](x: var seq[T]; y: openArray[T])\n  first type mismatch at position: 2\n  required type for y: openArray[T]\n  but expression &apos;it&apos; is of type: seq[byte]\nproc add[T](x: var seq[T]; y: sink T)\n  first type mismatch at position: 2\n  required type for y: sink T\n  but expression &apos;it&apos; is of type: seq[byte]\n3 other mismatching symbols have been suppressed; compile with --showAllMismatches:on to see them\n\nexpression: add(result.body, it)\n",
       "trace": ""
     },
     "is_kst": true
