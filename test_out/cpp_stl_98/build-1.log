@@ -2,7 +2,7 @@ Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
 Copyright (C) Microsoft Corporation. All rights reserved.
 
 Building the projects in this solution one at a time. To enable parallel build, please add the "/m" switch.
-Build started 10/10/2023 9:19:11 PM.
+Build started 10/15/2023 11:53:44 PM.
 Project "C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\KS_TEST_CPP_STL.sln" on node 1 (default targets).
 ValidateSolutionConfiguration:
   Building solution configuration "Debug|x64".
@@ -532,24 +532,6 @@ C:\projects\ci-targets\tests\compiled\cpp_stl_98\expr_to_i_trailing.cpp(49): war
   instance_std.cpp
   instance_std_array.cpp
   instance_user_array.cpp
-C:\projects\ci-targets\tests\compiled\cpp_stl_98\instance_user_array.cpp(88): error C2440: '=': cannot convert from 'std::string' to 'std::vector<std::string,std::allocator<_Ty>> *' [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-          with
-          [
-              _Ty=std::string
-          ]
-  C:\projects\ci-targets\tests\compiled\cpp_stl_98\instance_user_array.cpp(88): note: No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-C:\projects\ci-targets\tests\compiled\cpp_stl_98\instance_user_array.cpp(89): error C2664: 'kaitai::kstream::kstream(kaitai::kstream &&)': cannot convert argument 1 from 'std::vector<std::string,std::allocator<_Ty>> *' to 'std::istream *' [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-          with
-          [
-              _Ty=std::string
-          ]
-  C:\projects\ci-targets\tests\compiled\cpp_stl_98\instance_user_array.cpp(89): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
-C:\projects\ci-targets\tests\compiled\cpp_stl_98\instance_user_array.cpp(90): error C2664: 'instance_user_array_t::entry_t::entry_t(const instance_user_array_t::entry_t &)': cannot convert argument 1 from 'std::vector<kaitai::kstream *,std::allocator<_Ty>> *' to 'kaitai::kstream *' [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-          with
-          [
-              _Ty=kaitai::kstream *
-          ]
-  C:\projects\ci-targets\tests\compiled\cpp_stl_98\instance_user_array.cpp(90): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
   integers.cpp
   integers_double_overflow.cpp
   integers_min_max.cpp
@@ -620,45 +602,16 @@ C:\projects\ci-targets\tests\compiled\cpp_stl_98\nav_parent_switch_cast.cpp(166)
   repeat_n_strz.cpp
   repeat_n_strz_double.cpp
   repeat_until_calc_array_type.cpp
-C:\projects\ci-targets\tests\compiled\cpp_stl_98\repeat_until_calc_array_type.cpp(30): error C2440: '=': cannot convert from 'std::string' to 'std::vector<std::string,std::allocator<_Ty>> *' [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
+C:\projects\ci-targets\tests\compiled\cpp_stl_98\repeat_until_calc_array_type.cpp(98): error C2228: left of '.get' must have class/struct/union [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
+  C:\projects\ci-targets\tests\compiled\cpp_stl_98\repeat_until_calc_array_type.cpp(98): note: type is '_Ty'
           with
           [
-              _Ty=std::string
+              _Ty=repeat_until_calc_array_type_t::record_t *
           ]
-  C:\projects\ci-targets\tests\compiled\cpp_stl_98\repeat_until_calc_array_type.cpp(30): note: No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-C:\projects\ci-targets\tests\compiled\cpp_stl_98\repeat_until_calc_array_type.cpp(31): error C2664: 'kaitai::kstream::kstream(kaitai::kstream &&)': cannot convert argument 1 from 'std::vector<std::string,std::allocator<_Ty>> *' to 'std::istream *' [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-          with
-          [
-              _Ty=std::string
-          ]
-  C:\projects\ci-targets\tests\compiled\cpp_stl_98\repeat_until_calc_array_type.cpp(31): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
-C:\projects\ci-targets\tests\compiled\cpp_stl_98\repeat_until_calc_array_type.cpp(32): error C2664: 'repeat_until_calc_array_type_t::record_t::record_t(const repeat_until_calc_array_type_t::record_t &)': cannot convert argument 1 from 'std::vector<kaitai::kstream *,std::allocator<_Ty>> *' to 'kaitai::kstream *' [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-          with
-          [
-              _Ty=kaitai::kstream *
-          ]
-  C:\projects\ci-targets\tests\compiled\cpp_stl_98\repeat_until_calc_array_type.cpp(32): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+  C:\projects\ci-targets\tests\compiled\cpp_stl_98\repeat_until_calc_array_type.cpp(98): note: did you intend to use '->' instead?
   repeat_until_complex.cpp
   repeat_until_s4.cpp
   repeat_until_sized.cpp
-C:\projects\ci-targets\tests\compiled\cpp_stl_98\repeat_until_sized.cpp(28): error C2440: '=': cannot convert from 'std::string' to 'std::vector<std::string,std::allocator<_Ty>> *' [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-          with
-          [
-              _Ty=std::string
-          ]
-  C:\projects\ci-targets\tests\compiled\cpp_stl_98\repeat_until_sized.cpp(28): note: No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-C:\projects\ci-targets\tests\compiled\cpp_stl_98\repeat_until_sized.cpp(29): error C2664: 'kaitai::kstream::kstream(kaitai::kstream &&)': cannot convert argument 1 from 'std::vector<std::string,std::allocator<_Ty>> *' to 'std::istream *' [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-          with
-          [
-              _Ty=std::string
-          ]
-  C:\projects\ci-targets\tests\compiled\cpp_stl_98\repeat_until_sized.cpp(29): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
-C:\projects\ci-targets\tests\compiled\cpp_stl_98\repeat_until_sized.cpp(30): error C2664: 'repeat_until_sized_t::record_t::record_t(const repeat_until_sized_t::record_t &)': cannot convert argument 1 from 'std::vector<kaitai::kstream *,std::allocator<_Ty>> *' to 'kaitai::kstream *' [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-          with
-          [
-              _Ty=kaitai::kstream *
-          ]
-  C:\projects\ci-targets\tests\compiled\cpp_stl_98\repeat_until_sized.cpp(30): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
   str_encodings.cpp
   str_encodings_default.cpp
   str_encodings_utf16.cpp
@@ -686,81 +639,9 @@ C:\projects\ci-targets\tests\compiled\cpp_stl_98\repeat_until_sized.cpp(30): err
   switch_manual_str_else.cpp
   switch_multi_bool_ops.cpp
   switch_repeat_expr.cpp
-C:\projects\ci-targets\tests\compiled\cpp_stl_98\switch_repeat_expr.cpp(30): error C2440: '=': cannot convert from 'std::string' to 'std::vector<std::string,std::allocator<_Ty>> *' [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-          with
-          [
-              _Ty=std::string
-          ]
-  C:\projects\ci-targets\tests\compiled\cpp_stl_98\switch_repeat_expr.cpp(30): note: No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-C:\projects\ci-targets\tests\compiled\cpp_stl_98\switch_repeat_expr.cpp(31): error C2664: 'kaitai::kstream::kstream(kaitai::kstream &&)': cannot convert argument 1 from 'std::vector<std::string,std::allocator<_Ty>> *' to 'std::istream *' [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-          with
-          [
-              _Ty=std::string
-          ]
-  C:\projects\ci-targets\tests\compiled\cpp_stl_98\switch_repeat_expr.cpp(31): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
-C:\projects\ci-targets\tests\compiled\cpp_stl_98\switch_repeat_expr.cpp(32): error C2664: 'switch_repeat_expr_t::one_t::one_t(const switch_repeat_expr_t::one_t &)': cannot convert argument 1 from 'std::vector<kaitai::kstream *,std::allocator<_Ty>> *' to 'kaitai::kstream *' [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-          with
-          [
-              _Ty=kaitai::kstream *
-          ]
-  C:\projects\ci-targets\tests\compiled\cpp_stl_98\switch_repeat_expr.cpp(32): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
-C:\projects\ci-targets\tests\compiled\cpp_stl_98\switch_repeat_expr.cpp(36): error C2440: '=': cannot convert from 'std::string' to 'std::vector<std::string,std::allocator<_Ty>> *' [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-          with
-          [
-              _Ty=std::string
-          ]
-  C:\projects\ci-targets\tests\compiled\cpp_stl_98\switch_repeat_expr.cpp(36): note: No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-C:\projects\ci-targets\tests\compiled\cpp_stl_98\switch_repeat_expr.cpp(37): error C2664: 'kaitai::kstream::kstream(kaitai::kstream &&)': cannot convert argument 1 from 'std::vector<std::string,std::allocator<_Ty>> *' to 'std::istream *' [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-          with
-          [
-              _Ty=std::string
-          ]
-  C:\projects\ci-targets\tests\compiled\cpp_stl_98\switch_repeat_expr.cpp(37): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
-C:\projects\ci-targets\tests\compiled\cpp_stl_98\switch_repeat_expr.cpp(38): error C2664: 'switch_repeat_expr_t::two_t::two_t(const switch_repeat_expr_t::two_t &)': cannot convert argument 1 from 'std::vector<kaitai::kstream *,std::allocator<_Ty>> *' to 'kaitai::kstream *' [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-          with
-          [
-              _Ty=kaitai::kstream *
-          ]
-  C:\projects\ci-targets\tests\compiled\cpp_stl_98\switch_repeat_expr.cpp(38): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
   Generating Code...
   Compiling...
   switch_repeat_expr_invalid.cpp
-C:\projects\ci-targets\tests\compiled\cpp_stl_98\switch_repeat_expr_invalid.cpp(30): error C2440: '=': cannot convert from 'std::string' to 'std::vector<std::string,std::allocator<_Ty>> *' [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-          with
-          [
-              _Ty=std::string
-          ]
-  C:\projects\ci-targets\tests\compiled\cpp_stl_98\switch_repeat_expr_invalid.cpp(30): note: No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-C:\projects\ci-targets\tests\compiled\cpp_stl_98\switch_repeat_expr_invalid.cpp(31): error C2664: 'kaitai::kstream::kstream(kaitai::kstream &&)': cannot convert argument 1 from 'std::vector<std::string,std::allocator<_Ty>> *' to 'std::istream *' [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-          with
-          [
-              _Ty=std::string
-          ]
-  C:\projects\ci-targets\tests\compiled\cpp_stl_98\switch_repeat_expr_invalid.cpp(31): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
-C:\projects\ci-targets\tests\compiled\cpp_stl_98\switch_repeat_expr_invalid.cpp(32): error C2664: 'switch_repeat_expr_invalid_t::one_t::one_t(const switch_repeat_expr_invalid_t::one_t &)': cannot convert argument 1 from 'std::vector<kaitai::kstream *,std::allocator<_Ty>> *' to 'kaitai::kstream *' [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-          with
-          [
-              _Ty=kaitai::kstream *
-          ]
-  C:\projects\ci-targets\tests\compiled\cpp_stl_98\switch_repeat_expr_invalid.cpp(32): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
-C:\projects\ci-targets\tests\compiled\cpp_stl_98\switch_repeat_expr_invalid.cpp(36): error C2440: '=': cannot convert from 'std::string' to 'std::vector<std::string,std::allocator<_Ty>> *' [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-          with
-          [
-              _Ty=std::string
-          ]
-  C:\projects\ci-targets\tests\compiled\cpp_stl_98\switch_repeat_expr_invalid.cpp(36): note: No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-C:\projects\ci-targets\tests\compiled\cpp_stl_98\switch_repeat_expr_invalid.cpp(37): error C2664: 'kaitai::kstream::kstream(kaitai::kstream &&)': cannot convert argument 1 from 'std::vector<std::string,std::allocator<_Ty>> *' to 'std::istream *' [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-          with
-          [
-              _Ty=std::string
-          ]
-  C:\projects\ci-targets\tests\compiled\cpp_stl_98\switch_repeat_expr_invalid.cpp(37): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
-C:\projects\ci-targets\tests\compiled\cpp_stl_98\switch_repeat_expr_invalid.cpp(38): error C2664: 'switch_repeat_expr_invalid_t::two_t::two_t(const switch_repeat_expr_invalid_t::two_t &)': cannot convert argument 1 from 'std::vector<kaitai::kstream *,std::allocator<_Ty>> *' to 'kaitai::kstream *' [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-          with
-          [
-              _Ty=kaitai::kstream *
-          ]
-  C:\projects\ci-targets\tests\compiled\cpp_stl_98\switch_repeat_expr_invalid.cpp(38): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
   term_bytes.cpp
   term_strz.cpp
   term_u1_val.cpp
@@ -932,30 +813,10 @@ Build FAILED.
   C:\projects\ci-targets\tests\compiled\cpp_stl_98\enum_to_i_invalid.cpp(78): error C2672: 'kaitai::kstream::to_string': no matching overloaded function found [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
   C:\projects\ci-targets\tests\compiled\cpp_stl_98\enum_to_i_invalid.cpp(78): error C2893: Failed to specialize function template 'std::enable_if<,std::string>::type kaitai::kstream::to_string(I)' [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
   C:\projects\ci-targets\tests\compiled\cpp_stl_98\expr_ops_parens.cpp(109): error C2676: binary '+': 'std::string' does not define this operator or a conversion to a type acceptable to the predefined operator [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-  C:\projects\ci-targets\tests\compiled\cpp_stl_98\instance_user_array.cpp(88): error C2440: '=': cannot convert from 'std::string' to 'std::vector<std::string,std::allocator<_Ty>> *' [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-  C:\projects\ci-targets\tests\compiled\cpp_stl_98\instance_user_array.cpp(89): error C2664: 'kaitai::kstream::kstream(kaitai::kstream &&)': cannot convert argument 1 from 'std::vector<std::string,std::allocator<_Ty>> *' to 'std::istream *' [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-  C:\projects\ci-targets\tests\compiled\cpp_stl_98\instance_user_array.cpp(90): error C2664: 'instance_user_array_t::entry_t::entry_t(const instance_user_array_t::entry_t &)': cannot convert argument 1 from 'std::vector<kaitai::kstream *,std::allocator<_Ty>> *' to 'kaitai::kstream *' [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
   C:\projects\ci-targets\tests\compiled\cpp_stl_98\nav_parent_switch_cast.cpp(166): error C2039: '_parent': is not a member of 'kaitai::kstruct' [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-  C:\projects\ci-targets\tests\compiled\cpp_stl_98\repeat_until_calc_array_type.cpp(30): error C2440: '=': cannot convert from 'std::string' to 'std::vector<std::string,std::allocator<_Ty>> *' [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-  C:\projects\ci-targets\tests\compiled\cpp_stl_98\repeat_until_calc_array_type.cpp(31): error C2664: 'kaitai::kstream::kstream(kaitai::kstream &&)': cannot convert argument 1 from 'std::vector<std::string,std::allocator<_Ty>> *' to 'std::istream *' [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-  C:\projects\ci-targets\tests\compiled\cpp_stl_98\repeat_until_calc_array_type.cpp(32): error C2664: 'repeat_until_calc_array_type_t::record_t::record_t(const repeat_until_calc_array_type_t::record_t &)': cannot convert argument 1 from 'std::vector<kaitai::kstream *,std::allocator<_Ty>> *' to 'kaitai::kstream *' [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-  C:\projects\ci-targets\tests\compiled\cpp_stl_98\repeat_until_sized.cpp(28): error C2440: '=': cannot convert from 'std::string' to 'std::vector<std::string,std::allocator<_Ty>> *' [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-  C:\projects\ci-targets\tests\compiled\cpp_stl_98\repeat_until_sized.cpp(29): error C2664: 'kaitai::kstream::kstream(kaitai::kstream &&)': cannot convert argument 1 from 'std::vector<std::string,std::allocator<_Ty>> *' to 'std::istream *' [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-  C:\projects\ci-targets\tests\compiled\cpp_stl_98\repeat_until_sized.cpp(30): error C2664: 'repeat_until_sized_t::record_t::record_t(const repeat_until_sized_t::record_t &)': cannot convert argument 1 from 'std::vector<kaitai::kstream *,std::allocator<_Ty>> *' to 'kaitai::kstream *' [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-  C:\projects\ci-targets\tests\compiled\cpp_stl_98\switch_repeat_expr.cpp(30): error C2440: '=': cannot convert from 'std::string' to 'std::vector<std::string,std::allocator<_Ty>> *' [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-  C:\projects\ci-targets\tests\compiled\cpp_stl_98\switch_repeat_expr.cpp(31): error C2664: 'kaitai::kstream::kstream(kaitai::kstream &&)': cannot convert argument 1 from 'std::vector<std::string,std::allocator<_Ty>> *' to 'std::istream *' [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-  C:\projects\ci-targets\tests\compiled\cpp_stl_98\switch_repeat_expr.cpp(32): error C2664: 'switch_repeat_expr_t::one_t::one_t(const switch_repeat_expr_t::one_t &)': cannot convert argument 1 from 'std::vector<kaitai::kstream *,std::allocator<_Ty>> *' to 'kaitai::kstream *' [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-  C:\projects\ci-targets\tests\compiled\cpp_stl_98\switch_repeat_expr.cpp(36): error C2440: '=': cannot convert from 'std::string' to 'std::vector<std::string,std::allocator<_Ty>> *' [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-  C:\projects\ci-targets\tests\compiled\cpp_stl_98\switch_repeat_expr.cpp(37): error C2664: 'kaitai::kstream::kstream(kaitai::kstream &&)': cannot convert argument 1 from 'std::vector<std::string,std::allocator<_Ty>> *' to 'std::istream *' [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-  C:\projects\ci-targets\tests\compiled\cpp_stl_98\switch_repeat_expr.cpp(38): error C2664: 'switch_repeat_expr_t::two_t::two_t(const switch_repeat_expr_t::two_t &)': cannot convert argument 1 from 'std::vector<kaitai::kstream *,std::allocator<_Ty>> *' to 'kaitai::kstream *' [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-  C:\projects\ci-targets\tests\compiled\cpp_stl_98\switch_repeat_expr_invalid.cpp(30): error C2440: '=': cannot convert from 'std::string' to 'std::vector<std::string,std::allocator<_Ty>> *' [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-  C:\projects\ci-targets\tests\compiled\cpp_stl_98\switch_repeat_expr_invalid.cpp(31): error C2664: 'kaitai::kstream::kstream(kaitai::kstream &&)': cannot convert argument 1 from 'std::vector<std::string,std::allocator<_Ty>> *' to 'std::istream *' [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-  C:\projects\ci-targets\tests\compiled\cpp_stl_98\switch_repeat_expr_invalid.cpp(32): error C2664: 'switch_repeat_expr_invalid_t::one_t::one_t(const switch_repeat_expr_invalid_t::one_t &)': cannot convert argument 1 from 'std::vector<kaitai::kstream *,std::allocator<_Ty>> *' to 'kaitai::kstream *' [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-  C:\projects\ci-targets\tests\compiled\cpp_stl_98\switch_repeat_expr_invalid.cpp(36): error C2440: '=': cannot convert from 'std::string' to 'std::vector<std::string,std::allocator<_Ty>> *' [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-  C:\projects\ci-targets\tests\compiled\cpp_stl_98\switch_repeat_expr_invalid.cpp(37): error C2664: 'kaitai::kstream::kstream(kaitai::kstream &&)': cannot convert argument 1 from 'std::vector<std::string,std::allocator<_Ty>> *' to 'std::istream *' [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-  C:\projects\ci-targets\tests\compiled\cpp_stl_98\switch_repeat_expr_invalid.cpp(38): error C2664: 'switch_repeat_expr_invalid_t::two_t::two_t(const switch_repeat_expr_invalid_t::two_t &)': cannot convert argument 1 from 'std::vector<kaitai::kstream *,std::allocator<_Ty>> *' to 'kaitai::kstream *' [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
+  C:\projects\ci-targets\tests\compiled\cpp_stl_98\repeat_until_calc_array_type.cpp(98): error C2228: left of '.get' must have class/struct/union [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
 
     42 Warning(s)
-    83 Error(s)
+    63 Error(s)
 
-Time Elapsed 00:07:33.19
+Time Elapsed 00:07:04.60
