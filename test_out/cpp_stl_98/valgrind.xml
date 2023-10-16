@@ -30,100 +30,14 @@
 
 <status>
   <state>RUNNING</state>
-  <time>00:00:00:00.404 </time>
+  <time>00:00:00:00.343 </time>
 </status>
 
 
 <status>
   <state>FINISHED</state>
-  <time>00:00:00:07.148 </time>
+  <time>00:00:00:07.107 </time>
 </status>
-
-<error>
-  <unique>0x0</unique>
-  <tid>1</tid>
-  <kind>Leak_DefinitelyLost</kind>
-  <xwhat>
-    <text>24 bytes in 1 blocks are definitely lost in loss record 1 of 1</text>
-    <leakedbytes>24</leakedbytes>
-    <leakedblocks>1</leakedblocks>
-  </xwhat>
-  <stack>
-    <frame>
-      <ip>0x4849013</ip>
-      <obj>/usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
-      <fn>operator new(unsigned long)</fn>
-    </frame>
-    <frame>
-      <ip>0x6AC230</ip>
-      <obj>/tests/compiled/cpp_stl_98/bin/ks_tests</obj>
-      <fn>process_repeat_bytes_t::_read()</fn>
-      <dir>/tests/compiled/cpp_stl_98</dir>
-      <file>process_repeat_bytes.cpp</file>
-      <line>22</line>
-    </frame>
-    <frame>
-      <ip>0x6AC152</ip>
-      <obj>/tests/compiled/cpp_stl_98/bin/ks_tests</obj>
-      <fn>process_repeat_bytes_t::process_repeat_bytes_t(kaitai::kstream*, kaitai::kstruct*, process_repeat_bytes_t*)</fn>
-      <dir>/tests/compiled/cpp_stl_98</dir>
-      <file>process_repeat_bytes.cpp</file>
-      <line>13</line>
-    </frame>
-    <frame>
-      <ip>0x5F036F</ip>
-      <obj>/tests/compiled/cpp_stl_98/bin/ks_tests</obj>
-      <fn>test_process_repeat_bytes::test_method()</fn>
-      <dir>/tests</dir>
-      <file>spec/cpp_stl_98/test_process_repeat_bytes.cpp</file>
-      <line>12</line>
-    </frame>
-    <frame>
-      <ip>0x5EFFA3</ip>
-      <obj>/tests/compiled/cpp_stl_98/bin/ks_tests</obj>
-      <fn>test_process_repeat_bytes_invoker()</fn>
-      <dir>/tests</dir>
-      <file>spec/cpp_stl_98/test_process_repeat_bytes.cpp</file>
-      <line>9</line>
-    </frame>
-    <frame>
-      <ip>0x534869</ip>
-      <obj>/tests/compiled/cpp_stl_98/bin/ks_tests</obj>
-      <fn>boost::detail::function::void_function_invoker0&lt;void (*)(), void&gt;::invoke(boost::detail::function::function_buffer&amp;)</fn>
-      <dir>/usr/include/boost/function</dir>
-      <file>function_template.hpp</file>
-      <line>117</line>
-    </frame>
-    <frame>
-      <ip>0x4885531</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.74.0</obj>
-    </frame>
-    <frame>
-      <ip>0x488B5B0</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.74.0</obj>
-      <fn>boost::execution_monitor::catch_signals(boost::function&lt;int ()&gt; const&amp;)</fn>
-    </frame>
-    <frame>
-      <ip>0x488BAA0</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.74.0</obj>
-      <fn>boost::execution_monitor::execute(boost::function&lt;int ()&gt; const&amp;)</fn>
-    </frame>
-    <frame>
-      <ip>0x488BB5B</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.74.0</obj>
-      <fn>boost::execution_monitor::vexecute(boost::function&lt;void ()&gt; const&amp;)</fn>
-    </frame>
-    <frame>
-      <ip>0x48AFB36</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.74.0</obj>
-      <fn>boost::unit_test::unit_test_monitor_t::execute_and_translate(boost::function&lt;void ()&gt; const&amp;, unsigned long)</fn>
-    </frame>
-    <frame>
-      <ip>0x48CE966</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.74.0</obj>
-    </frame>
-  </stack>
-</error>
 
 <errorcounts>
 </errorcounts>
