@@ -1,13 +1,13 @@
 {
   "$meta": {
     "lang": "construct",
-    "timestamp": "2023-10-16T18:18:49Z",
+    "timestamp": "2023-11-04T09:50:02Z",
     "ci": {
       "ci": "github",
-      "run_id": "6537659168",
-      "run_number": "306",
-      "job_id": "17751956960",
-      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/6537659168/job/17751956960"
+      "run_id": "6754117718",
+      "run_number": "309",
+      "job_id": "18361282029",
+      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/6754117718/job/18361282029"
     }
   },
   "BcdUserTypeBe": {
@@ -273,14 +273,9 @@
     "is_kst": true
   },
   "DebugSwitchUser": {
-    "status": "failed",
+    "status": "passed",
     "elapsed": 0.0,
-    "failure": {
-      "file_name": null,
-      "line_num": null,
-      "message": "_read",
-      "trace": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.4/site-packages/construct/lib/containers.py\", line 100, in __getattr__\n    return self[name]\nKeyError: '_read'\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/tests/spec/construct/test_debug_switch_user.py\", line 10, in test_debug_switch_user\n    r._read()\n  File \"/usr/local/lib/python3.4/site-packages/construct/lib/containers.py\", line 102, in __getattr__\n    raise AttributeError(name)\nAttributeError: _read"
-    }
+    "is_kst": true
   },
   "DefaultBigEndian": {
     "status": "passed",
@@ -1350,6 +1345,10 @@
     "elapsed": 0.0,
     "is_kst": true
   },
+  "StrLiterals": {
+    "status": "passed",
+    "elapsed": 0.0
+  },
   "StrLiterals2": {
     "status": "passed",
     "elapsed": 0.0,
@@ -1471,6 +1470,17 @@
     "elapsed": 0.0,
     "is_kst": true
   },
+  "TsPacketHeader": {
+    "status": "failed",
+    "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": "Failed to import test module: test_ts_packet_header\nTraceback (most recent call last):\n  File \"/usr/local/lib/python3.4/unittest/loader.py\", line 323, in _find_tests\n    module = self._get_module_from_name(name)\n  File \"/usr/local/lib/python3.4/unittest/loader.py\", line 301, in _get_module_from_name\n    __import__(name)\n  File \"/tests/spec/construct/test_ts_packet_header.py\", line 5, in <module>\n    from ts_packet_header import _schema\n  File \"/tests/compiled/construct/ts_packet_header.py\", line 13\n    'transport_error_indicator' / ???,\n                                  ^\nSyntaxError: invalid syntax\n",
+      "trace": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.4/unittest/case.py\", line 58, in testPartExecutor\n    yield\n  File \"/usr/local/lib/python3.4/unittest/case.py\", line 580, in run\n    testMethod()\n  File \"/usr/local/lib/python3.4/unittest/loader.py\", line 33, in testFailure\n    raise self._exception\nImportError: Failed to import test module: test_ts_packet_header\nTraceback (most recent call last):\n  File \"/usr/local/lib/python3.4/unittest/loader.py\", line 323, in _find_tests\n    module = self._get_module_from_name(name)\n  File \"/usr/local/lib/python3.4/unittest/loader.py\", line 301, in _get_module_from_name\n    __import__(name)\n  File \"/tests/spec/construct/test_ts_packet_header.py\", line 5, in <module>\n    from ts_packet_header import _schema\n  File \"/tests/compiled/construct/ts_packet_header.py\", line 13\n    'transport_error_indicator' / ???,\n                                  ^\nSyntaxError: invalid syntax"
+    },
+    "is_kst": true
+  },
   "TypeIntUnaryOp": {
     "status": "passed",
     "elapsed": 0.0,
@@ -1514,6 +1524,11 @@
     "is_kst": true
   },
   "ValidNotParsedIf": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "ValidOptionalId": {
     "status": "passed",
     "elapsed": 0.0,
     "is_kst": true
