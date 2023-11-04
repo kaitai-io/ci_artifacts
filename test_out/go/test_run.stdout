@@ -224,6 +224,8 @@
 --- PASS: TestInstanceUserArray (0.00s)
 === RUN   TestIntegersDoubleOverflow
 --- PASS: TestIntegersDoubleOverflow (0.00s)
+=== RUN   TestIntegersMinMax
+--- PASS: TestIntegersMinMax (0.00s)
 === RUN   TestIntegers
 --- PASS: TestIntegers (0.00s)
 === RUN   TestJsSignedRightShift
@@ -265,28 +267,28 @@
 === RUN   TestNonStandard
 --- PASS: TestNonStandard (0.00s)
 === RUN   TestOpaqueExternalType02Parent
-goroutine 138 [running]:
+goroutine 136 [running]:
 runtime/debug.Stack()
 	/usr/local/go/src/runtime/debug/stack.go:24 +0x5e
 runtime/debug.PrintStack()
 	/usr/local/go/src/runtime/debug/stack.go:16 +0x13
 _/tests/spec/go.TestOpaqueExternalType02Parent.func1()
 	/tests/spec/go/opaque_external_type_02_parent_test.go:15 +0x39
-panic({0x61dfa0?, 0x84e030?})
+panic({0x61f320?, 0x850030?})
 	/usr/local/go/src/runtime/panic.go:914 +0x21f
 test_formats.(*OpaqueExternalType02Child).SomeMethod(...)
 	/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:46
-test_formats.(*OpaqueExternalType02Child_OpaqueExternalType02ChildChild).Read(0xc0001d4060?, 0xc0000132c0?, 0x3?, 0x653e00?)
+test_formats.(*OpaqueExternalType02Child_OpaqueExternalType02ChildChild).Read(0xc0001794d0?, 0xc00017a4c0?, 0x3?, 0x6553e0?)
 	/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:69 +0x54
-test_formats.(*OpaqueExternalType02Child).Read(0xc000072730, 0xc000036688?, {0x6189c0?, 0xc0000546c0?}, 0x63e040?)
+test_formats.(*OpaqueExternalType02Child).Read(0xc0000cca50, 0xc000032688?, {0x619ce0?, 0xc0000c6b00?}, 0x63f440?)
 	/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:38 +0x145
-test_formats.(*OpaqueExternalType02Parent_ParentObj).Read(0xc0000546c0, 0x40d445?, 0x28?, 0x63e100?)
+test_formats.(*OpaqueExternalType02Parent_ParentObj).Read(0xc0000c6b00, 0x40d445?, 0x28?, 0x63f500?)
 	/tests/compiled/go/src/test_formats/opaque_external_type_02_parent.go:48 +0x85
-test_formats.(*OpaqueExternalType02Parent).Read(0xc0001d4090, 0x17?, {0x618960?, 0xc0001d4090?}, 0x70fb49?)
+test_formats.(*OpaqueExternalType02Parent).Read(0xc000179500, 0x17?, {0x619c80?, 0xc000179500?}, 0x711969?)
 	/tests/compiled/go/src/test_formats/opaque_external_type_02_parent.go:24 +0x95
-_/tests/spec/go.TestOpaqueExternalType02Parent(0xc0001ce820)
+_/tests/spec/go.TestOpaqueExternalType02Parent(0xc0001836c0)
 	/tests/spec/go/opaque_external_type_02_parent_test.go:25 +0x114
-testing.tRunner(0xc0001ce820, 0x696f48)
+testing.tRunner(0xc0001836c0, 0x698950)
 	/usr/local/go/src/testing/testing.go:1595 +0xff
 created by testing.(*T).Run in goroutine 1
 	/usr/local/go/src/testing/testing.go:1648 +0x3ad
@@ -299,11 +301,13 @@ created by testing.(*T).Run in goroutine 1
 === RUN   TestParamsCallExtraParens
 --- PASS: TestParamsCallExtraParens (0.00s)
 === RUN   TestParamsCallShort
---- PASS: TestParamsCallShort (0.00s)
+--- PASS: TestParamsCallShort (0.01s)
 === RUN   TestParamsDef
---- PASS: TestParamsDef (0.02s)
+--- PASS: TestParamsDef (0.00s)
 === RUN   TestParamsEnum
 --- PASS: TestParamsEnum (0.00s)
+=== RUN   TestParamsPassArrayInt
+--- PASS: TestParamsPassArrayInt (0.00s)
 === RUN   TestParamsPassArrayStr
 --- PASS: TestParamsPassArrayStr (0.00s)
 === RUN   TestParamsPassArrayUsertype
@@ -567,5 +571,5 @@ created by testing.(*T).Run in goroutine 1
 === RUN   TestZlibWithHeader78
 --- PASS: TestZlibWithHeader78 (0.00s)
 FAIL
-FAIL	_/tests/spec/go	0.056s
+FAIL	_/tests/spec/go	0.048s
 FAIL
