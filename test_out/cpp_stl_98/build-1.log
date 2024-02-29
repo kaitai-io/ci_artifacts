@@ -2,7 +2,7 @@ Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
 Copyright (C) Microsoft Corporation. All rights reserved.
 
 Building the projects in this solution one at a time. To enable parallel build, please add the "/m" switch.
-Build started 2/21/2024 3:15:31 PM.
+Build started 2/29/2024 7:49:56 PM.
 Project "C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\KS_TEST_CPP_STL.sln" on node 1 (default targets).
 ValidateSolutionConfiguration:
   Building solution configuration "Debug|x64".
@@ -436,10 +436,10 @@ c:\projects\ci-targets\tests\compiled\cpp_stl_98\enum_long_range_u.h(22): warnin
   enum_negative.cpp
   enum_of_value_inst.cpp
   enum_to_i.cpp
-C:\projects\ci-targets\tests\compiled\cpp_stl_98\enum_to_i.cpp(38): error C2672: 'kaitai::kstream::to_string': no matching overloaded function found [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-C:\projects\ci-targets\tests\compiled\cpp_stl_98\enum_to_i.cpp(38): error C2893: Failed to specialize function template 'std::enable_if<,std::string>::type kaitai::kstream::to_string(I)' [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-  C:\projects\ci-targets\tests\compiled\cpp_stl_98\enum_to_i.cpp(38): note: With the following template arguments:
-  C:\projects\ci-targets\tests\compiled\cpp_stl_98\enum_to_i.cpp(38): note: 'I=enum_to_i_t::animal_t'
+C:\projects\ci-targets\tests\compiled\cpp_stl_98\enum_to_i.cpp(62): error C2672: 'kaitai::kstream::to_string': no matching overloaded function found [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
+C:\projects\ci-targets\tests\compiled\cpp_stl_98\enum_to_i.cpp(62): error C2893: Failed to specialize function template 'std::enable_if<,std::string>::type kaitai::kstream::to_string(I)' [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
+  C:\projects\ci-targets\tests\compiled\cpp_stl_98\enum_to_i.cpp(62): note: With the following template arguments:
+  C:\projects\ci-targets\tests\compiled\cpp_stl_98\enum_to_i.cpp(62): note: 'I=enum_to_i_t::animal_t'
   enum_to_i_class_border_1.cpp
 C:\projects\ci-targets\tests\compiled\cpp_stl_98\enum_to_i_class_border_1.cpp(50): error C2664: 'enum_to_i_class_border_2_t::enum_to_i_class_border_2_t(const enum_to_i_class_border_2_t &)': cannot convert argument 1 from 'enum_to_i_class_border_1_t *' to 'enum_to_i_class_border_2_t::enum_to_i_class_border_1_t *' [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
   C:\projects\ci-targets\tests\compiled\cpp_stl_98\enum_to_i_class_border_1.cpp(50): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
@@ -447,10 +447,10 @@ C:\projects\ci-targets\tests\compiled\cpp_stl_98\enum_to_i_class_border_1.cpp(50
 C:\projects\ci-targets\tests\compiled\cpp_stl_98\enum_to_i_class_border_2.cpp(33): error C2027: use of undefined type 'enum_to_i_class_border_2_t::enum_to_i_class_border_1_t' [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
   c:\projects\ci-targets\tests\compiled\cpp_stl_98\enum_to_i_class_border_2.h(16): note: see declaration of 'enum_to_i_class_border_2_t::enum_to_i_class_border_1_t'
   enum_to_i_invalid.cpp
-C:\projects\ci-targets\tests\compiled\cpp_stl_98\enum_to_i_invalid.cpp(78): error C2672: 'kaitai::kstream::to_string': no matching overloaded function found [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-C:\projects\ci-targets\tests\compiled\cpp_stl_98\enum_to_i_invalid.cpp(78): error C2893: Failed to specialize function template 'std::enable_if<,std::string>::type kaitai::kstream::to_string(I)' [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-  C:\projects\ci-targets\tests\compiled\cpp_stl_98\enum_to_i_invalid.cpp(78): note: With the following template arguments:
-  C:\projects\ci-targets\tests\compiled\cpp_stl_98\enum_to_i_invalid.cpp(78): note: 'I=enum_to_i_invalid_t::animal_t'
+C:\projects\ci-targets\tests\compiled\cpp_stl_98\enum_to_i_invalid.cpp(54): error C2672: 'kaitai::kstream::to_string': no matching overloaded function found [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
+C:\projects\ci-targets\tests\compiled\cpp_stl_98\enum_to_i_invalid.cpp(54): error C2893: Failed to specialize function template 'std::enable_if<,std::string>::type kaitai::kstream::to_string(I)' [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
+  C:\projects\ci-targets\tests\compiled\cpp_stl_98\enum_to_i_invalid.cpp(54): note: With the following template arguments:
+  C:\projects\ci-targets\tests\compiled\cpp_stl_98\enum_to_i_invalid.cpp(54): note: 'I=enum_to_i_invalid_t::animal_t'
   eof_exception_bytes.cpp
   eof_exception_u4.cpp
   eos_exception_bytes.cpp
@@ -461,19 +461,19 @@ C:\projects\ci-targets\tests\compiled\cpp_stl_98\enum_to_i_invalid.cpp(78): erro
   expr_1.cpp
 C:\projects\ci-targets\tests\compiled\cpp_stl_98\expr_1.cpp(42): warning C4267: '=': conversion from 'size_t' to 'int32_t', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
   expr_2.cpp
-C:\projects\ci-targets\tests\compiled\cpp_stl_98\expr_2.cpp(165): warning C4267: '=': conversion from 'size_t' to 'int32_t', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
+C:\projects\ci-targets\tests\compiled\cpp_stl_98\expr_2.cpp(173): warning C4267: '=': conversion from 'size_t' to 'int32_t', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
   expr_3.cpp
   expr_array.cpp
-C:\projects\ci-targets\tests\compiled\cpp_stl_98\expr_array.cpp(81): warning C4267: '=': conversion from 'size_t' to 'int32_t', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-C:\projects\ci-targets\tests\compiled\cpp_stl_98\expr_array.cpp(89): warning C4267: '=': conversion from 'size_t' to 'int32_t', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
+C:\projects\ci-targets\tests\compiled\cpp_stl_98\expr_array.cpp(105): warning C4267: '=': conversion from 'size_t' to 'int32_t', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
 C:\projects\ci-targets\tests\compiled\cpp_stl_98\expr_array.cpp(113): warning C4267: '=': conversion from 'size_t' to 'int32_t', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
+C:\projects\ci-targets\tests\compiled\cpp_stl_98\expr_array.cpp(137): warning C4267: '=': conversion from 'size_t' to 'int32_t', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
   expr_bits.cpp
 C:\projects\ci-targets\tests\compiled\cpp_stl_98\expr_bits.cpp(28): warning C4244: 'initializing': conversion from 'uint64_t' to 'int', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
 C:\projects\ci-targets\tests\compiled\cpp_stl_98\expr_bits.cpp(28): warning C4244: 'initializing': conversion from 'uint64_t' to 'const int', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
   expr_bytes_cmp.cpp
   expr_bytes_ops.cpp
-C:\projects\ci-targets\tests\compiled\cpp_stl_98\expr_bytes_ops.cpp(108): warning C4267: '=': conversion from 'size_t' to 'int32_t', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-C:\projects\ci-targets\tests\compiled\cpp_stl_98\expr_bytes_ops.cpp(124): warning C4267: '=': conversion from 'size_t' to 'int32_t', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
+C:\projects\ci-targets\tests\compiled\cpp_stl_98\expr_bytes_ops.cpp(44): warning C4267: '=': conversion from 'size_t' to 'int32_t', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
+C:\projects\ci-targets\tests\compiled\cpp_stl_98\expr_bytes_ops.cpp(60): warning C4267: '=': conversion from 'size_t' to 'int32_t', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
   expr_enum.cpp
   expr_if_int_ops.cpp
   expr_int_div.cpp
@@ -481,8 +481,8 @@ C:\projects\ci-targets\tests\compiled\cpp_stl_98\expr_bytes_ops.cpp(124): warnin
   expr_io_pos.cpp
   expr_mod.cpp
   expr_ops_parens.cpp
-C:\projects\ci-targets\tests\compiled\cpp_stl_98\expr_ops_parens.cpp(109): error C2676: binary '+': 'std::string' does not define this operator or a conversion to a type acceptable to the predefined operator [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-C:\projects\ci-targets\tests\compiled\cpp_stl_98\expr_ops_parens.cpp(117): warning C4244: '=': conversion from 'int64_t' to 'int32_t', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
+C:\projects\ci-targets\tests\compiled\cpp_stl_98\expr_ops_parens.cpp(53): error C2676: binary '+': 'std::string' does not define this operator or a conversion to a type acceptable to the predefined operator [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
+C:\projects\ci-targets\tests\compiled\cpp_stl_98\expr_ops_parens.cpp(157): warning C4244: '=': conversion from 'int64_t' to 'int32_t', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
   expr_sizeof_type_0.cpp
   expr_sizeof_type_1.cpp
   expr_sizeof_value_0.cpp
@@ -491,12 +491,12 @@ C:\projects\ci-targets\tests\compiled\cpp_stl_98\expr_ops_parens.cpp(117): warni
   Generating Code...
   Compiling...
   expr_str_ops.cpp
-C:\projects\ci-targets\tests\compiled\cpp_stl_98\expr_str_ops.cpp(55): warning C4244: '=': conversion from 'int64_t' to 'int32_t', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
 C:\projects\ci-targets\tests\compiled\cpp_stl_98\expr_str_ops.cpp(63): warning C4244: '=': conversion from 'int64_t' to 'int32_t', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-C:\projects\ci-targets\tests\compiled\cpp_stl_98\expr_str_ops.cpp(79): warning C4267: '=': conversion from 'size_t' to 'int32_t', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-C:\projects\ci-targets\tests\compiled\cpp_stl_98\expr_str_ops.cpp(87): warning C4267: '=': conversion from 'size_t' to 'int32_t', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-C:\projects\ci-targets\tests\compiled\cpp_stl_98\expr_str_ops.cpp(103): warning C4244: '=': conversion from 'int64_t' to 'int32_t', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-C:\projects\ci-targets\tests\compiled\cpp_stl_98\expr_str_ops.cpp(135): warning C4244: '=': conversion from 'int64_t' to 'int32_t', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
+C:\projects\ci-targets\tests\compiled\cpp_stl_98\expr_str_ops.cpp(95): warning C4267: '=': conversion from 'size_t' to 'int32_t', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
+C:\projects\ci-targets\tests\compiled\cpp_stl_98\expr_str_ops.cpp(103): warning C4267: '=': conversion from 'size_t' to 'int32_t', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
+C:\projects\ci-targets\tests\compiled\cpp_stl_98\expr_str_ops.cpp(111): warning C4244: '=': conversion from 'int64_t' to 'int32_t', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
+C:\projects\ci-targets\tests\compiled\cpp_stl_98\expr_str_ops.cpp(119): warning C4244: '=': conversion from 'int64_t' to 'int32_t', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
+C:\projects\ci-targets\tests\compiled\cpp_stl_98\expr_str_ops.cpp(127): warning C4244: '=': conversion from 'int64_t' to 'int32_t', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
 C:\projects\ci-targets\tests\compiled\cpp_stl_98\expr_str_ops.cpp(151): warning C4244: '=': conversion from 'int64_t' to 'int32_t', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
   expr_to_i_trailing.cpp
 C:\projects\ci-targets\tests\compiled\cpp_stl_98\expr_to_i_trailing.cpp(33): warning C4244: '=': conversion from 'int64_t' to 'int32_t', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
@@ -679,8 +679,7 @@ C:\projects\ci-targets\tests\compiled\cpp_stl_98\valid_fail_range_float.cpp(24):
   valid_short.cpp
   valid_switch.cpp
   vlq_base128_le.cpp
-C:\projects\ci-targets\tests\compiled\cpp_stl_98\vlq_base128_le.cpp(92): warning C4267: '=': conversion from 'size_t' to 'int32_t', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-C:\projects\ci-targets\tests\compiled\cpp_stl_98\vlq_base128_le.cpp(100): warning C4293: '<<': shift count negative or too big, undefined behavior [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
+C:\projects\ci-targets\tests\compiled\cpp_stl_98\vlq_base128_le.cpp(75): warning C4267: '=': conversion from 'size_t' to 'int32_t', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
   yaml_ints.cpp
 C:\projects\ci-targets\tests\compiled\cpp_stl_98\yaml_ints.cpp(50): warning C4309: '=': truncation of constant value [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
 C:\projects\ci-targets\tests\compiled\cpp_stl_98\yaml_ints.cpp(58): warning C4309: '=': truncation of constant value [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
@@ -712,21 +711,21 @@ Build FAILED.
   c:\projects\ci-targets\tests\compiled\cpp_stl_98\enum_long_range_u.h(20): warning C4309: 'initializing': truncation of constant value [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
   c:\projects\ci-targets\tests\compiled\cpp_stl_98\enum_long_range_u.h(22): warning C4309: 'initializing': truncation of constant value [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
   C:\projects\ci-targets\tests\compiled\cpp_stl_98\expr_1.cpp(42): warning C4267: '=': conversion from 'size_t' to 'int32_t', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-  C:\projects\ci-targets\tests\compiled\cpp_stl_98\expr_2.cpp(165): warning C4267: '=': conversion from 'size_t' to 'int32_t', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-  C:\projects\ci-targets\tests\compiled\cpp_stl_98\expr_array.cpp(81): warning C4267: '=': conversion from 'size_t' to 'int32_t', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-  C:\projects\ci-targets\tests\compiled\cpp_stl_98\expr_array.cpp(89): warning C4267: '=': conversion from 'size_t' to 'int32_t', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
+  C:\projects\ci-targets\tests\compiled\cpp_stl_98\expr_2.cpp(173): warning C4267: '=': conversion from 'size_t' to 'int32_t', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
+  C:\projects\ci-targets\tests\compiled\cpp_stl_98\expr_array.cpp(105): warning C4267: '=': conversion from 'size_t' to 'int32_t', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
   C:\projects\ci-targets\tests\compiled\cpp_stl_98\expr_array.cpp(113): warning C4267: '=': conversion from 'size_t' to 'int32_t', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
+  C:\projects\ci-targets\tests\compiled\cpp_stl_98\expr_array.cpp(137): warning C4267: '=': conversion from 'size_t' to 'int32_t', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
   C:\projects\ci-targets\tests\compiled\cpp_stl_98\expr_bits.cpp(28): warning C4244: 'initializing': conversion from 'uint64_t' to 'int', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
   C:\projects\ci-targets\tests\compiled\cpp_stl_98\expr_bits.cpp(28): warning C4244: 'initializing': conversion from 'uint64_t' to 'const int', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-  C:\projects\ci-targets\tests\compiled\cpp_stl_98\expr_bytes_ops.cpp(108): warning C4267: '=': conversion from 'size_t' to 'int32_t', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-  C:\projects\ci-targets\tests\compiled\cpp_stl_98\expr_bytes_ops.cpp(124): warning C4267: '=': conversion from 'size_t' to 'int32_t', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-  C:\projects\ci-targets\tests\compiled\cpp_stl_98\expr_ops_parens.cpp(117): warning C4244: '=': conversion from 'int64_t' to 'int32_t', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-  C:\projects\ci-targets\tests\compiled\cpp_stl_98\expr_str_ops.cpp(55): warning C4244: '=': conversion from 'int64_t' to 'int32_t', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
+  C:\projects\ci-targets\tests\compiled\cpp_stl_98\expr_bytes_ops.cpp(44): warning C4267: '=': conversion from 'size_t' to 'int32_t', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
+  C:\projects\ci-targets\tests\compiled\cpp_stl_98\expr_bytes_ops.cpp(60): warning C4267: '=': conversion from 'size_t' to 'int32_t', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
+  C:\projects\ci-targets\tests\compiled\cpp_stl_98\expr_ops_parens.cpp(157): warning C4244: '=': conversion from 'int64_t' to 'int32_t', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
   C:\projects\ci-targets\tests\compiled\cpp_stl_98\expr_str_ops.cpp(63): warning C4244: '=': conversion from 'int64_t' to 'int32_t', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-  C:\projects\ci-targets\tests\compiled\cpp_stl_98\expr_str_ops.cpp(79): warning C4267: '=': conversion from 'size_t' to 'int32_t', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-  C:\projects\ci-targets\tests\compiled\cpp_stl_98\expr_str_ops.cpp(87): warning C4267: '=': conversion from 'size_t' to 'int32_t', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-  C:\projects\ci-targets\tests\compiled\cpp_stl_98\expr_str_ops.cpp(103): warning C4244: '=': conversion from 'int64_t' to 'int32_t', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-  C:\projects\ci-targets\tests\compiled\cpp_stl_98\expr_str_ops.cpp(135): warning C4244: '=': conversion from 'int64_t' to 'int32_t', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
+  C:\projects\ci-targets\tests\compiled\cpp_stl_98\expr_str_ops.cpp(95): warning C4267: '=': conversion from 'size_t' to 'int32_t', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
+  C:\projects\ci-targets\tests\compiled\cpp_stl_98\expr_str_ops.cpp(103): warning C4267: '=': conversion from 'size_t' to 'int32_t', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
+  C:\projects\ci-targets\tests\compiled\cpp_stl_98\expr_str_ops.cpp(111): warning C4244: '=': conversion from 'int64_t' to 'int32_t', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
+  C:\projects\ci-targets\tests\compiled\cpp_stl_98\expr_str_ops.cpp(119): warning C4244: '=': conversion from 'int64_t' to 'int32_t', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
+  C:\projects\ci-targets\tests\compiled\cpp_stl_98\expr_str_ops.cpp(127): warning C4244: '=': conversion from 'int64_t' to 'int32_t', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
   C:\projects\ci-targets\tests\compiled\cpp_stl_98\expr_str_ops.cpp(151): warning C4244: '=': conversion from 'int64_t' to 'int32_t', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
   C:\projects\ci-targets\tests\compiled\cpp_stl_98\expr_to_i_trailing.cpp(33): warning C4244: '=': conversion from 'int64_t' to 'int32_t', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
   C:\projects\ci-targets\tests\compiled\cpp_stl_98\expr_to_i_trailing.cpp(41): warning C4244: '=': conversion from 'int64_t' to 'int32_t', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
@@ -735,8 +734,7 @@ Build FAILED.
   C:\projects\ci-targets\tests\compiled\cpp_stl_98\term_u1_val.cpp(19): warning C4309: 'argument': truncation of constant value [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
   C:\projects\ci-targets\tests\compiled\cpp_stl_98\valid_fail_range_float.cpp(21): warning C4305: 'argument': truncation from 'double' to 'const T' [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
   C:\projects\ci-targets\tests\compiled\cpp_stl_98\valid_fail_range_float.cpp(24): warning C4305: 'argument': truncation from 'double' to 'const T' [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-  C:\projects\ci-targets\tests\compiled\cpp_stl_98\vlq_base128_le.cpp(92): warning C4267: '=': conversion from 'size_t' to 'int32_t', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-  C:\projects\ci-targets\tests\compiled\cpp_stl_98\vlq_base128_le.cpp(100): warning C4293: '<<': shift count negative or too big, undefined behavior [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
+  C:\projects\ci-targets\tests\compiled\cpp_stl_98\vlq_base128_le.cpp(75): warning C4267: '=': conversion from 'size_t' to 'int32_t', possible loss of data [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
   C:\projects\ci-targets\tests\compiled\cpp_stl_98\yaml_ints.cpp(50): warning C4309: '=': truncation of constant value [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
   C:\projects\ci-targets\tests\compiled\cpp_stl_98\yaml_ints.cpp(58): warning C4309: '=': truncation of constant value [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
 
@@ -799,16 +797,16 @@ Build FAILED.
   C:\projects\ci-targets\tests\compiled\cpp_stl_98\enum_import.cpp(19): error C2065: 'm_pet_2': undeclared identifier [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
   C:\projects\ci-targets\tests\compiled\cpp_stl_98\enum_import.cpp(19): error C2653: 'enum_deep_t': is not a class or namespace name [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
   C:\projects\ci-targets\tests\compiled\cpp_stl_98\enum_import.cpp(19): error C2061: syntax error: identifier 'animal_t' [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-  C:\projects\ci-targets\tests\compiled\cpp_stl_98\enum_to_i.cpp(38): error C2672: 'kaitai::kstream::to_string': no matching overloaded function found [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-  C:\projects\ci-targets\tests\compiled\cpp_stl_98\enum_to_i.cpp(38): error C2893: Failed to specialize function template 'std::enable_if<,std::string>::type kaitai::kstream::to_string(I)' [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
+  C:\projects\ci-targets\tests\compiled\cpp_stl_98\enum_to_i.cpp(62): error C2672: 'kaitai::kstream::to_string': no matching overloaded function found [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
+  C:\projects\ci-targets\tests\compiled\cpp_stl_98\enum_to_i.cpp(62): error C2893: Failed to specialize function template 'std::enable_if<,std::string>::type kaitai::kstream::to_string(I)' [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
   C:\projects\ci-targets\tests\compiled\cpp_stl_98\enum_to_i_class_border_1.cpp(50): error C2664: 'enum_to_i_class_border_2_t::enum_to_i_class_border_2_t(const enum_to_i_class_border_2_t &)': cannot convert argument 1 from 'enum_to_i_class_border_1_t *' to 'enum_to_i_class_border_2_t::enum_to_i_class_border_1_t *' [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
   C:\projects\ci-targets\tests\compiled\cpp_stl_98\enum_to_i_class_border_2.cpp(33): error C2027: use of undefined type 'enum_to_i_class_border_2_t::enum_to_i_class_border_1_t' [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-  C:\projects\ci-targets\tests\compiled\cpp_stl_98\enum_to_i_invalid.cpp(78): error C2672: 'kaitai::kstream::to_string': no matching overloaded function found [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-  C:\projects\ci-targets\tests\compiled\cpp_stl_98\enum_to_i_invalid.cpp(78): error C2893: Failed to specialize function template 'std::enable_if<,std::string>::type kaitai::kstream::to_string(I)' [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
-  C:\projects\ci-targets\tests\compiled\cpp_stl_98\expr_ops_parens.cpp(109): error C2676: binary '+': 'std::string' does not define this operator or a conversion to a type acceptable to the predefined operator [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
+  C:\projects\ci-targets\tests\compiled\cpp_stl_98\enum_to_i_invalid.cpp(54): error C2672: 'kaitai::kstream::to_string': no matching overloaded function found [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
+  C:\projects\ci-targets\tests\compiled\cpp_stl_98\enum_to_i_invalid.cpp(54): error C2893: Failed to specialize function template 'std::enable_if<,std::string>::type kaitai::kstream::to_string(I)' [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
+  C:\projects\ci-targets\tests\compiled\cpp_stl_98\expr_ops_parens.cpp(53): error C2676: binary '+': 'std::string' does not define this operator or a conversion to a type acceptable to the predefined operator [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
   C:\projects\ci-targets\tests\compiled\cpp_stl_98\nav_parent_switch_cast.cpp(166): error C2039: '_parent': is not a member of 'kaitai::kstruct' [C:\projects\ci-targets\tests\compiled\cpp_stl_98\bin\ks_tests.vcxproj]
 
-    42 Warning(s)
+    41 Warning(s)
     62 Error(s)
 
-Time Elapsed 00:07:13.90
+Time Elapsed 00:07:55.71
