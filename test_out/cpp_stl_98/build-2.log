@@ -294,6 +294,7 @@ Dependencies file "CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/enum_long_r
 Dependencies file "CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/enum_negative.cpp.o.d" is newer than depends file "/tests/compiled/cpp_stl_98/bin/CMakeFiles/ks_tests.dir/compiler_depend.internal".
 Dependencies file "CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/enum_of_value_inst.cpp.o.d" is newer than depends file "/tests/compiled/cpp_stl_98/bin/CMakeFiles/ks_tests.dir/compiler_depend.internal".
 Dependencies file "CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/enum_to_i.cpp.o.d" is newer than depends file "/tests/compiled/cpp_stl_98/bin/CMakeFiles/ks_tests.dir/compiler_depend.internal".
+Dependencies file "CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/enum_to_i_class_border_2.cpp.o.d" is newer than depends file "/tests/compiled/cpp_stl_98/bin/CMakeFiles/ks_tests.dir/compiler_depend.internal".
 Dependencies file "CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/enum_to_i_invalid.cpp.o.d" is newer than depends file "/tests/compiled/cpp_stl_98/bin/CMakeFiles/ks_tests.dir/compiler_depend.internal".
 Dependencies file "CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/eof_exception_bytes.cpp.o.d" is newer than depends file "/tests/compiled/cpp_stl_98/bin/CMakeFiles/ks_tests.dir/compiler_depend.internal".
 Dependencies file "CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/eof_exception_u4.cpp.o.d" is newer than depends file "/tests/compiled/cpp_stl_98/bin/CMakeFiles/ks_tests.dir/compiler_depend.internal".
@@ -314,7 +315,6 @@ Dependencies file "CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/expr_int_di
 Dependencies file "CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/expr_io_eof.cpp.o.d" is newer than depends file "/tests/compiled/cpp_stl_98/bin/CMakeFiles/ks_tests.dir/compiler_depend.internal".
 Dependencies file "CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/expr_io_pos.cpp.o.d" is newer than depends file "/tests/compiled/cpp_stl_98/bin/CMakeFiles/ks_tests.dir/compiler_depend.internal".
 Dependencies file "CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/expr_mod.cpp.o.d" is newer than depends file "/tests/compiled/cpp_stl_98/bin/CMakeFiles/ks_tests.dir/compiler_depend.internal".
-Dependencies file "CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/expr_ops_parens.cpp.o.d" is newer than depends file "/tests/compiled/cpp_stl_98/bin/CMakeFiles/ks_tests.dir/compiler_depend.internal".
 Dependencies file "CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/expr_sizeof_type_0.cpp.o.d" is newer than depends file "/tests/compiled/cpp_stl_98/bin/CMakeFiles/ks_tests.dir/compiler_depend.internal".
 Dependencies file "CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/expr_sizeof_type_1.cpp.o.d" is newer than depends file "/tests/compiled/cpp_stl_98/bin/CMakeFiles/ks_tests.dir/compiler_depend.internal".
 Dependencies file "CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/expr_sizeof_value_0.cpp.o.d" is newer than depends file "/tests/compiled/cpp_stl_98/bin/CMakeFiles/ks_tests.dir/compiler_depend.internal".
@@ -477,34 +477,23 @@ Consolidate compiler generated dependencies of target ks_tests
 make[2]: Leaving directory `/tests/compiled/cpp_stl_98/bin'
 /usr/bin/make  -f CMakeFiles/ks_tests.dir/build.make CMakeFiles/ks_tests.dir/build
 make[2]: Entering directory `/tests/compiled/cpp_stl_98/bin'
-[  0%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/expr_ops_parens.cpp.o
-/usr/bin/c++ -DKS_STR_ENCODING_ICONV -DKS_ZLIB -I/tests/compiled/cpp_stl_98/bin -I/tests/compiled/cpp_stl_98 -I/tests/spec/cpp_stl_98/../../../runtime/cpp_stl -I/tests/spec/cpp_stl_98/prereq -g -std=c++98 -MD -MT CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/expr_ops_parens.cpp.o -MF CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/expr_ops_parens.cpp.o.d -o CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/expr_ops_parens.cpp.o -c /tests/compiled/cpp_stl_98/expr_ops_parens.cpp
-/tests/compiled/cpp_stl_98/expr_ops_parens.cpp:133:37: error: invalid operands to binary expression ('std::string' (aka 'basic_string<char>') and 'size_type' (aka 'unsigned long'))
-    m_str_concat_len = str_0_to_4() + str_5_to_9().length();
-                       ~~~~~~~~~~~~ ^ ~~~~~~~~~~~~~~~~~~~~~
-/usr/bin/../lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/bits/basic_string.h:2418:5: note: candidate template ignored: deduced conflicting types for parameter '_CharT' ('char' vs. 'unsigned long')
-    operator+(const basic_string<_CharT, _Traits, _Alloc>& __lhs, _CharT __rhs)
-    ^
-/usr/bin/../lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/bits/stl_iterator.h:333:5: note: candidate template ignored: could not match 'reverse_iterator<type-parameter-0-0>' against 'unsigned long'
-    operator+(typename reverse_iterator<_Iterator>::difference_type __n,
-    ^
-/usr/bin/../lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/bits/stl_iterator.h:902:5: note: candidate template ignored: could not match '__normal_iterator<type-parameter-0-0, type-parameter-0-1>' against 'unsigned long'
-    operator+(typename __normal_iterator<_Iterator, _Container>::difference_type
-    ^
-/usr/bin/../lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/bits/basic_string.h:2365:5: note: candidate template ignored: could not match 'basic_string<type-parameter-0-0, type-parameter-0-1, type-parameter-0-2>' against 'unsigned long'
-    operator+(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
-    ^
-/usr/bin/../lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/bits/basic_string.h:2402:5: note: candidate template ignored: could not match 'const _CharT *' against 'size_type' (aka 'unsigned long')
-    operator+(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
-    ^
-/usr/bin/../lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/bits/basic_string.tcc:692:5: note: candidate template ignored: could not match 'const _CharT *' against 'std::string' (aka 'basic_string<char>')
-    operator+(const _CharT* __lhs,
-    ^
-/usr/bin/../lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/bits/basic_string.tcc:708:5: note: candidate template ignored: could not match 'basic_string<type-parameter-0-0, type-parameter-0-1, type-parameter-0-2>' against 'unsigned long'
-    operator+(_CharT __lhs, const basic_string<_CharT, _Traits, _Alloc>& __rhs)
-    ^
+[  0%] Building CXX object CMakeFiles/ks_tests.dir/test_params_pass_array_int.cpp.o
+/usr/bin/c++ -DKS_STR_ENCODING_ICONV -DKS_ZLIB -I/tests/compiled/cpp_stl_98/bin -I/tests/compiled/cpp_stl_98 -I/tests/spec/cpp_stl_98/../../../runtime/cpp_stl -I/tests/spec/cpp_stl_98/prereq -g -std=c++98 -MD -MT CMakeFiles/ks_tests.dir/test_params_pass_array_int.cpp.o -MF CMakeFiles/ks_tests.dir/test_params_pass_array_int.cpp.o.d -o CMakeFiles/ks_tests.dir/test_params_pass_array_int.cpp.o -c /tests/spec/cpp_stl_98/test_params_pass_array_int.cpp
+[  0%] Building CXX object CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/enum_to_i_class_border_2.cpp.o
+/usr/bin/c++ -DKS_STR_ENCODING_ICONV -DKS_ZLIB -I/tests/compiled/cpp_stl_98/bin -I/tests/compiled/cpp_stl_98 -I/tests/spec/cpp_stl_98/../../../runtime/cpp_stl -I/tests/spec/cpp_stl_98/prereq -g -std=c++98 -MD -MT CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/enum_to_i_class_border_2.cpp.o -MF CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/enum_to_i_class_border_2.cpp.o.d -o CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/enum_to_i_class_border_2.cpp.o -c /tests/compiled/cpp_stl_98/enum_to_i_class_border_2.cpp
+/tests/compiled/cpp_stl_98/enum_to_i_class_border_2.cpp:33:24: error: member access into incomplete type 'enum_to_i_class_border_2_t::enum_to_i_class_border_1_t'
+    m_is_dog = parent()->some_dog() == 4;
+                       ^
+/tests/compiled/cpp_stl_98/enum_to_i_class_border_2.h:16:11: note: forward declaration of 'enum_to_i_class_border_2_t::enum_to_i_class_border_1_t'
+    class enum_to_i_class_border_1_t;
+          ^
 1 error generated.
-make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/expr_ops_parens.cpp.o] Error 1
+make[2]: *** [CMakeFiles/ks_tests.dir/tests/compiled/cpp_stl_98/enum_to_i_class_border_2.cpp.o] Error 1
+/tests/spec/cpp_stl_98/test_params_pass_array_int.cpp:4:10: fatal error: 'params_pass_array_int.h' file not found
+#include "params_pass_array_int.h"
+         ^
+1 error generated.
+make[2]: *** [CMakeFiles/ks_tests.dir/test_params_pass_array_int.cpp.o] Error 1
 make[2]: Target `CMakeFiles/ks_tests.dir/build' not remade because of errors.
 make[2]: Leaving directory `/tests/compiled/cpp_stl_98/bin'
 make[1]: *** [CMakeFiles/ks_tests.dir/all] Error 2
