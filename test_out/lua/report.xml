@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites>
-    <testsuite name="LuaUnit" id="00001" package="" hostname="localhost" tests="231" timestamp="2024-02-29T20:40:29" time="0.034" errors="6" failures="3" skipped="0">
+    <testsuite name="LuaUnit" id="00001" package="" hostname="localhost" tests="232" timestamp="2024-03-02T12:48:23" time="0.035" errors="7" failures="3" skipped="0">
         <properties>
             <property name="Lua Version" value="Lua 5.3"/>
             <property name="LuaUnit Version" value="3.4"/>
@@ -147,7 +147,7 @@
         </testcase>
         <testcase classname="TestExprBytesCmp" name="TestExprBytesCmp.test_expr_bytes_cmp" time="0.000">
         </testcase>
-        <testcase classname="TestExprBytesNonLiteral" name="TestExprBytesNonLiteral.test_expr_bytes_non_literal" time="0.007">
+        <testcase classname="TestExprBytesNonLiteral" name="TestExprBytesNonLiteral.test_expr_bytes_non_literal" time="0.006">
             <failure type="spec/lua/run_test_suite.lua:18: spec/lua/test_expr_bytes_non_literal.lua:5: module &apos;expr_bytes_non_literal&apos; not found:
 	no field package.preload[&apos;expr_bytes_non_literal&apos;]
 	no file &apos;../runtime/lua/expr_bytes_non_literal.lua&apos;
@@ -169,6 +169,13 @@
         <testcase classname="TestExprCalcArrayOps" name="TestExprCalcArrayOps.test_expr_calc_array_ops" time="0.000">
         </testcase>
         <testcase classname="TestExprEnum" name="TestExprEnum.test_expr_enum" time="0.000">
+        </testcase>
+        <testcase classname="TestExprFstring0" name="TestExprFstring0.test_expr_fstring_0" time="0.001">
+            <error type="compiled/lua/expr_fstring_0.lua:49: attempt to perform arithmetic on a string value">
+                <![CDATA[stack traceback:
+	compiled/lua/expr_fstring_0.lua:49: in function <compiled/lua/expr_fstring_0.lua:44>
+	(...tail calls...)
+	spec/lua/test_expr_fstring_0.lua:17: in upvalue 'TestExprFstring0.test_expr_fstring_0']]></error>
         </testcase>
         <testcase classname="TestExprIfIntOps" name="TestExprIfIntOps.test_expr_if_int_ops" time="0.000">
         </testcase>
@@ -226,7 +233,7 @@
         </testcase>
         <testcase classname="TestImportsAbsRel" name="TestImportsAbsRel.test_imports_abs_rel" time="0.000">
         </testcase>
-        <testcase classname="TestImportsCircularA" name="TestImportsCircularA.test_imports_circular_a" time="0.002">
+        <testcase classname="TestImportsCircularA" name="TestImportsCircularA.test_imports_circular_a" time="0.001">
             <failure type="spec/lua/run_test_suite.lua:18: error loading module &apos;imports_circular_b&apos; from file &apos;compiled/lua/imports_circular_b.lua&apos;:
 	compiled/lua/imports_circular_b.lua:21: too many C levels (limit is 200) in function at line 18 near &apos;self&apos;">
                 <![CDATA[stack traceback:
@@ -396,7 +403,7 @@
 	(...tail calls...)
 	spec/lua/test_str_encodings.lua:10: in upvalue 'TestStrEncodings.test_str_encodings']]></error>
         </testcase>
-        <testcase classname="TestStrEncodingsDefault" name="TestStrEncodingsDefault.test_str_encodings_default" time="0.001">
+        <testcase classname="TestStrEncodingsDefault" name="TestStrEncodingsDefault.test_str_encodings_default" time="0.002">
             <error type="../runtime/lua/string_decode.lua:42: Encoding SJIS not supported">
                 <![CDATA[stack traceback:
 	../runtime/lua/string_decode.lua:42: in function 'string_decode.decode'
@@ -409,7 +416,7 @@
 	(...tail calls...)
 	spec/lua/test_str_encodings_default.lua:10: in upvalue 'TestStrEncodingsDefault.test_str_encodings_default']]></error>
         </testcase>
-        <testcase classname="TestStrEncodingsUtf16" name="TestStrEncodingsUtf16.test_str_encodings_utf16" time="0.001">
+        <testcase classname="TestStrEncodingsUtf16" name="TestStrEncodingsUtf16.test_str_encodings_utf16" time="0.002">
             <error type="../runtime/lua/string_decode.lua:42: Encoding UTF-16BE not supported">
                 <![CDATA[stack traceback:
 	../runtime/lua/string_decode.lua:42: in function 'string_decode.decode'
@@ -538,7 +545,7 @@
         </testcase>
         <testcase classname="TestZlibSurrounded" name="TestZlibSurrounded.test_zlib_surrounded" time="0.000">
         </testcase>
-        <testcase classname="TestZlibWithHeader78" name="TestZlibWithHeader78.test_zlib_with_header_78" time="0.001">
+        <testcase classname="TestZlibWithHeader78" name="TestZlibWithHeader78.test_zlib_with_header_78" time="0.000">
         </testcase>
     <system-out/>
     <system-err/>
