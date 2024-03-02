@@ -1,13 +1,13 @@
 {
   "$meta": {
     "lang": "construct",
-    "timestamp": "2024-02-29T20:39:52Z",
+    "timestamp": "2024-03-02T12:47:26Z",
     "ci": {
       "ci": "github",
-      "run_id": "8102324878",
-      "run_number": "315",
-      "job_id": "22144544978",
-      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/8102324878/job/22144544978"
+      "run_id": "8122859450",
+      "run_number": "316",
+      "job_id": "22202718194",
+      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/8122859450/job/22202718194"
     }
   },
   "BcdUserTypeBe": {
@@ -538,6 +538,11 @@
       "message": "name 'KaitaiStream' is not defined",
       "trace": "Traceback (most recent call last):\n  File \"/tests/spec/construct/test_expr_enum.py\", line 8, in test_expr_enum\n    r = _schema.parse_file('src/term_strz.bin')\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 425, in parse_file\n    return self.parse_stream(f, **contextkw)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 416, in parse_stream\n    return self._parsereport(stream, context, \"(parsing)\")\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 428, in _parsereport\n    obj = self._parse(stream, context, path)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 2236, in _parse\n    subobj = sc._parsereport(stream, context, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 428, in _parsereport\n    obj = self._parse(stream, context, path)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 2770, in _parse\n    return self.subcon._parsereport(stream, context, path)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 428, in _parsereport\n    obj = self._parse(stream, context, path)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 2915, in _parse\n    return self.func(context) if callable(self.func) else self.func\n           ^^^^^^^^^^^^^^^^^^\n  File \"/tests/compiled/construct/expr_enum.py\", line 13, in <lambda>\n    'const_dog' / Computed(lambda this: KaitaiStream.resolve_enum(ExprEnum.Animal, 4)),\n                                        ^^^^^^^^^^^^\nNameError: name 'KaitaiStream' is not defined"
     },
+    "is_kst": true
+  },
+  "ExprFstring0": {
+    "status": "passed",
+    "elapsed": 0.0,
     "is_kst": true
   },
   "ExprIfIntOps": {
@@ -1286,8 +1291,8 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "<built-in method values of Container object at 0x7f805bcc5c70> != [1, 2, 3, 4]",
-      "trace": "Traceback (most recent call last):\n  File \"/tests/spec/construct/test_repeat_until_complex.py\", line 12, in test_repeat_until_complex\n    self.assertEqual(r.first[0].values, [(0 + 1), 2, 3, 4])\nAssertionError: <built-in method values of Container object at 0x7f805bcc5c70> != [1, 2, 3, 4]"
+      "message": "<built-in method values of Container object at 0x7ff8e976e990> != [1, 2, 3, 4]",
+      "trace": "Traceback (most recent call last):\n  File \"/tests/spec/construct/test_repeat_until_complex.py\", line 12, in test_repeat_until_complex\n    self.assertEqual(r.first[0].values, [(0 + 1), 2, 3, 4])\nAssertionError: <built-in method values of Container object at 0x7ff8e976e990> != [1, 2, 3, 4]"
     },
     "is_kst": true
   },
