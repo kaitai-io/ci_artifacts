@@ -1,13 +1,13 @@
 {
   "$meta": {
     "lang": "construct",
-    "timestamp": "2024-03-04T00:00:34Z",
+    "timestamp": "2024-03-18T17:44:37Z",
     "ci": {
       "ci": "github",
-      "run_id": "8133930496",
-      "run_number": "318",
-      "job_id": "22226121408",
-      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/8133930496/job/22226121408"
+      "run_id": "8331221256",
+      "run_number": "319",
+      "job_id": "22797616124",
+      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/8331221256/job/22797616124"
     }
   },
   "BcdUserTypeBe": {
@@ -873,6 +873,11 @@
     },
     "is_kst": true
   },
+  "NavParentRecursive": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
   "NavParentSwitch": {
     "status": "passed",
     "elapsed": 0.0,
@@ -889,6 +894,11 @@
     "is_kst": true
   },
   "NavRoot": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "NavRootRecursive": {
     "status": "passed",
     "elapsed": 0.0,
     "is_kst": true
@@ -929,6 +939,17 @@
     "elapsed": 0.0,
     "is_kst": true
   },
+  "NestedTypesImport": {
+    "status": "failed",
+    "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": "name 'nested_types3__subtype_a__subtype_cc' is not defined",
+      "trace": "Traceback (most recent call last):\n  File \"/tests/spec/construct/test_nested_types_import.py\", line 9, in test_nested_types_import\n    r = _schema.parse_file('src/fixed_struct.bin')\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 309, in parse_file\n    return self.parse_stream(f, **contextkw)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 300, in parse_stream\n    return self._parsereport(stream, context, \"(parsing)\")\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 312, in _parsereport\n    obj = self._parse(stream, context, path)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 1982, in _parse\n    subobj = sc._parsereport(stream, context, path)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 312, in _parsereport\n    obj = self._parse(stream, context, path)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 2440, in _parse\n    return self.subcon._parsereport(stream, context, path)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 312, in _parsereport\n    obj = self._parse(stream, context, path)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 5534, in _parse\n    sc = self.subconfunc()\n  File \"/tests/compiled/construct/nested_types_import.py\", line 5, in <lambda>\n    'a_cc' / LazyBound(lambda: nested_types3__subtype_a__subtype_cc),\nNameError: name 'nested_types3__subtype_a__subtype_cc' is not defined"
+    },
+    "is_kst": true
+  },
   "NonStandard": {
     "status": "passed",
     "elapsed": 0.0,
@@ -948,6 +969,17 @@
     "status": "passed",
     "elapsed": 0.0
   },
+  "ParamsCall": {
+    "status": "failed",
+    "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": "'len'",
+      "trace": "Traceback (most recent call last):\n  File \"/tests/spec/construct/test_params_call.py\", line 9, in test_params_call\n    r = _schema.parse_file('src/term_strz.bin')\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 309, in parse_file\n    return self.parse_stream(f, **contextkw)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 300, in parse_stream\n    return self._parsereport(stream, context, \"(parsing)\")\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 312, in _parsereport\n    obj = self._parse(stream, context, path)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 1982, in _parse\n    subobj = sc._parsereport(stream, context, path)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 312, in _parsereport\n    obj = self._parse(stream, context, path)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 2440, in _parse\n    return self.subcon._parsereport(stream, context, path)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 312, in _parsereport\n    obj = self._parse(stream, context, path)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 5535, in _parse\n    return sc._parsereport(stream, context, path)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 312, in _parsereport\n    obj = self._parse(stream, context, path)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 1982, in _parse\n    subobj = sc._parsereport(stream, context, path)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 312, in _parsereport\n    obj = self._parse(stream, context, path)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 2440, in _parse\n    return self.subcon._parsereport(stream, context, path)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 312, in _parsereport\n    obj = self._parse(stream, context, path)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 4489, in _parse\n    length = evaluate(self.length, context)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 197, in evaluate\n    return param(context) if callable(param) else param\n  File \"/usr/local/lib/python3.4/site-packages/construct/expr.py\", line 188, in __call__\n    return self.__parent(obj)[self.__field]\nKeyError: 'len'"
+    },
+    "is_kst": true
+  },
   "ParamsCallExtraParens": {
     "status": "failed",
     "elapsed": 0.0,
@@ -956,17 +988,6 @@
       "line_num": null,
       "message": "'len'",
       "trace": "Traceback (most recent call last):\n  File \"/tests/spec/construct/test_params_call_extra_parens.py\", line 9, in test_params_call_extra_parens\n    r = _schema.parse_file('src/term_strz.bin')\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 309, in parse_file\n    return self.parse_stream(f, **contextkw)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 300, in parse_stream\n    return self._parsereport(stream, context, \"(parsing)\")\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 312, in _parsereport\n    obj = self._parse(stream, context, path)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 1982, in _parse\n    subobj = sc._parsereport(stream, context, path)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 312, in _parsereport\n    obj = self._parse(stream, context, path)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 2440, in _parse\n    return self.subcon._parsereport(stream, context, path)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 312, in _parsereport\n    obj = self._parse(stream, context, path)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 5535, in _parse\n    return sc._parsereport(stream, context, path)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 312, in _parsereport\n    obj = self._parse(stream, context, path)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 1982, in _parse\n    subobj = sc._parsereport(stream, context, path)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 312, in _parsereport\n    obj = self._parse(stream, context, path)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 2440, in _parse\n    return self.subcon._parsereport(stream, context, path)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 312, in _parsereport\n    obj = self._parse(stream, context, path)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 4489, in _parse\n    length = evaluate(self.length, context)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 197, in evaluate\n    return param(context) if callable(param) else param\n  File \"/usr/local/lib/python3.4/site-packages/construct/expr.py\", line 188, in __call__\n    return self.__parent(obj)[self.__field]\nKeyError: 'len'"
-    },
-    "is_kst": true
-  },
-  "ParamsCallShort": {
-    "status": "failed",
-    "elapsed": 0.0,
-    "failure": {
-      "file_name": null,
-      "line_num": null,
-      "message": "'len'",
-      "trace": "Traceback (most recent call last):\n  File \"/tests/spec/construct/test_params_call_short.py\", line 9, in test_params_call_short\n    r = _schema.parse_file('src/term_strz.bin')\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 309, in parse_file\n    return self.parse_stream(f, **contextkw)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 300, in parse_stream\n    return self._parsereport(stream, context, \"(parsing)\")\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 312, in _parsereport\n    obj = self._parse(stream, context, path)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 1982, in _parse\n    subobj = sc._parsereport(stream, context, path)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 312, in _parsereport\n    obj = self._parse(stream, context, path)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 2440, in _parse\n    return self.subcon._parsereport(stream, context, path)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 312, in _parsereport\n    obj = self._parse(stream, context, path)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 5535, in _parse\n    return sc._parsereport(stream, context, path)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 312, in _parsereport\n    obj = self._parse(stream, context, path)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 1982, in _parse\n    subobj = sc._parsereport(stream, context, path)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 312, in _parsereport\n    obj = self._parse(stream, context, path)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 2440, in _parse\n    return self.subcon._parsereport(stream, context, path)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 312, in _parsereport\n    obj = self._parse(stream, context, path)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 4489, in _parse\n    length = evaluate(self.length, context)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 197, in evaluate\n    return param(context) if callable(param) else param\n  File \"/usr/local/lib/python3.4/site-packages/construct/expr.py\", line 188, in __call__\n    return self.__parent(obj)[self.__field]\nKeyError: 'len'"
     },
     "is_kst": true
   },
