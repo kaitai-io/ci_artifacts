@@ -12,8 +12,8 @@
   <line>Command: /tests/compiled/cpp_stl_11/bin/ks_tests</line>
 </preamble>
 
-<pid>2076</pid>
-<ppid>2075</ppid>
+<pid>2081</pid>
+<ppid>2080</ppid>
 <tool>memcheck</tool>
 
 <args>
@@ -30,49 +30,49 @@
 
 <status>
   <state>RUNNING</state>
-  <time>00:00:00:00.224 </time>
+  <time>00:00:00:00.223 </time>
 </status>
 
 <error>
   <unique>0x0</unique>
   <tid>1</tid>
   <kind>InvalidRead</kind>
-  <what>Invalid read of size 8</what>
+  <what>Invalid read of size 1</what>
   <stack>
     <frame>
-      <ip>0x7BE280</ip>
+      <ip>0x69F16C</ip>
       <obj>/tests/compiled/cpp_stl_11/bin/ks_tests</obj>
-      <fn>debug_array_user_t::cat_t::_read()</fn>
+      <fn>nav_parent_recursive_t::value() const</fn>
       <dir>/tests/compiled/cpp_stl_11</dir>
-      <file>debug_array_user.cpp</file>
+      <file>nav_parent_recursive.h</file>
+      <line>52</line>
+    </frame>
+    <frame>
+      <ip>0x7760A3</ip>
+      <obj>/tests/compiled/cpp_stl_11/bin/ks_tests</obj>
+      <fn>nav_parent_recursive_t::parent_value()</fn>
+      <dir>/tests/compiled/cpp_stl_11</dir>
+      <file>nav_parent_recursive.cpp</file>
       <line>37</line>
     </frame>
     <frame>
-      <ip>0x7BE1D3</ip>
+      <ip>0x69ED0A</ip>
       <obj>/tests/compiled/cpp_stl_11/bin/ks_tests</obj>
-      <fn>debug_array_user_t::_read()</fn>
-      <dir>/tests/compiled/cpp_stl_11</dir>
-      <file>debug_array_user.cpp</file>
-      <line>20</line>
-    </frame>
-    <frame>
-      <ip>0x6F24EB</ip>
-      <obj>/tests/compiled/cpp_stl_11/bin/ks_tests</obj>
-      <fn>test_debug_array_user::test_method()</fn>
+      <fn>test_nav_parent_recursive::test_method()</fn>
       <dir>/tests/spec/cpp_stl_11</dir>
-      <file>test_debug_array_user.cpp</file>
-      <line>13</line>
+      <file>test_nav_parent_recursive.cpp</file>
+      <line>16</line>
     </frame>
     <frame>
-      <ip>0x6F2430</ip>
+      <ip>0x69E840</ip>
       <obj>/tests/compiled/cpp_stl_11/bin/ks_tests</obj>
-      <fn>test_debug_array_user_invoker()</fn>
+      <fn>test_nav_parent_recursive_invoker()</fn>
       <dir>/tests/spec/cpp_stl_11</dir>
-      <file>test_debug_array_user.cpp</file>
-      <line>7</line>
+      <file>test_nav_parent_recursive.cpp</file>
+      <line>9</line>
     </frame>
     <frame>
-      <ip>0x66CB45</ip>
+      <ip>0x66F655</ip>
       <obj>/tests/compiled/cpp_stl_11/bin/ks_tests</obj>
       <fn>boost::unit_test::ut_detail::unused boost::unit_test::ut_detail::invoker&lt;boost::unit_test::ut_detail::unused&gt;::invoke&lt;void (*)()&gt;(void (*&amp;)())</fn>
       <dir>/usr/include/boost/test/utils</dir>
@@ -80,7 +80,7 @@
       <line>56</line>
     </frame>
     <frame>
-      <ip>0x66CB1A</ip>
+      <ip>0x66F62A</ip>
       <obj>/tests/compiled/cpp_stl_11/bin/ks_tests</obj>
       <fn>boost::unit_test::ut_detail::callback0_impl_t&lt;boost::unit_test::ut_detail::unused, void (*)()&gt;::invoke()</fn>
       <dir>/usr/include/boost/test/utils</dir>
@@ -117,22 +117,22 @@
       <fn>boost::unit_test::traverse_test_tree(boost::unit_test::test_suite const&amp;, boost::unit_test::test_tree_visitor&amp;)</fn>
     </frame>
   </stack>
-  <auxwhat>Address 0x8 is not stack'd, malloc'd or (recently) free'd</auxwhat>
+  <auxwhat>Address 0x13 is not stack'd, malloc'd or (recently) free'd</auxwhat>
 </error>
 
 
 <status>
   <state>FINISHED</state>
-  <time>00:00:00:04.378 </time>
+  <time>00:00:00:02.368 </time>
 </status>
 
 <error>
-  <unique>0x5</unique>
+  <unique>0x2</unique>
   <tid>1</tid>
   <kind>Leak_DefinitelyLost</kind>
   <xwhat>
-    <text>160 (48 direct, 112 indirect) bytes in 1 blocks are definitely lost in loss record 5 of 7</text>
-    <leakedbytes>160</leakedbytes>
+    <text>112 (56 direct, 56 indirect) bytes in 1 blocks are definitely lost in loss record 2 of 4</text>
+    <leakedbytes>112</leakedbytes>
     <leakedblocks>1</leakedblocks>
   </xwhat>
   <stack>
@@ -142,23 +142,23 @@
       <fn>operator new(unsigned long)</fn>
     </frame>
     <frame>
-      <ip>0x6F2491</ip>
+      <ip>0x69E8A1</ip>
       <obj>/tests/compiled/cpp_stl_11/bin/ks_tests</obj>
-      <fn>test_debug_array_user::test_method()</fn>
+      <fn>test_nav_parent_recursive::test_method()</fn>
       <dir>/tests/spec/cpp_stl_11</dir>
-      <file>test_debug_array_user.cpp</file>
-      <line>10</line>
+      <file>test_nav_parent_recursive.cpp</file>
+      <line>12</line>
     </frame>
     <frame>
-      <ip>0x6F2430</ip>
+      <ip>0x69E840</ip>
       <obj>/tests/compiled/cpp_stl_11/bin/ks_tests</obj>
-      <fn>test_debug_array_user_invoker()</fn>
+      <fn>test_nav_parent_recursive_invoker()</fn>
       <dir>/tests/spec/cpp_stl_11</dir>
-      <file>test_debug_array_user.cpp</file>
-      <line>7</line>
+      <file>test_nav_parent_recursive.cpp</file>
+      <line>9</line>
     </frame>
     <frame>
-      <ip>0x66CB45</ip>
+      <ip>0x66F655</ip>
       <obj>/tests/compiled/cpp_stl_11/bin/ks_tests</obj>
       <fn>boost::unit_test::ut_detail::unused boost::unit_test::ut_detail::invoker&lt;boost::unit_test::ut_detail::unused&gt;::invoke&lt;void (*)()&gt;(void (*&amp;)())</fn>
       <dir>/usr/include/boost/test/utils</dir>
@@ -166,7 +166,7 @@
       <line>56</line>
     </frame>
     <frame>
-      <ip>0x66CB1A</ip>
+      <ip>0x66F62A</ip>
       <obj>/tests/compiled/cpp_stl_11/bin/ks_tests</obj>
       <fn>boost::unit_test::ut_detail::callback0_impl_t&lt;boost::unit_test::ut_detail::unused, void (*)()&gt;::invoke()</fn>
       <dir>/usr/include/boost/test/utils</dir>
@@ -211,11 +211,11 @@
 </error>
 
 <error>
-  <unique>0x7</unique>
+  <unique>0x4</unique>
   <tid>1</tid>
   <kind>Leak_DefinitelyLost</kind>
   <xwhat>
-    <text>8,192 bytes in 1 blocks are definitely lost in loss record 7 of 7</text>
+    <text>8,192 bytes in 1 blocks are definitely lost in loss record 4 of 4</text>
     <leakedbytes>8192</leakedbytes>
     <leakedblocks>1</leakedblocks>
   </xwhat>
@@ -241,23 +241,23 @@
       <fn>std::basic_ifstream&lt;char, std::char_traits&lt;char&gt; &gt;::basic_ifstream(char const*, std::_Ios_Openmode)</fn>
     </frame>
     <frame>
-      <ip>0x6F246D</ip>
+      <ip>0x69E87D</ip>
       <obj>/tests/compiled/cpp_stl_11/bin/ks_tests</obj>
-      <fn>test_debug_array_user::test_method()</fn>
+      <fn>test_nav_parent_recursive::test_method()</fn>
       <dir>/tests/spec/cpp_stl_11</dir>
-      <file>test_debug_array_user.cpp</file>
-      <line>8</line>
+      <file>test_nav_parent_recursive.cpp</file>
+      <line>10</line>
     </frame>
     <frame>
-      <ip>0x6F2430</ip>
+      <ip>0x69E840</ip>
       <obj>/tests/compiled/cpp_stl_11/bin/ks_tests</obj>
-      <fn>test_debug_array_user_invoker()</fn>
+      <fn>test_nav_parent_recursive_invoker()</fn>
       <dir>/tests/spec/cpp_stl_11</dir>
-      <file>test_debug_array_user.cpp</file>
-      <line>7</line>
+      <file>test_nav_parent_recursive.cpp</file>
+      <line>9</line>
     </frame>
     <frame>
-      <ip>0x66CB45</ip>
+      <ip>0x66F655</ip>
       <obj>/tests/compiled/cpp_stl_11/bin/ks_tests</obj>
       <fn>boost::unit_test::ut_detail::unused boost::unit_test::ut_detail::invoker&lt;boost::unit_test::ut_detail::unused&gt;::invoke&lt;void (*)()&gt;(void (*&amp;)())</fn>
       <dir>/usr/include/boost/test/utils</dir>
@@ -265,7 +265,7 @@
       <line>56</line>
     </frame>
     <frame>
-      <ip>0x66CB1A</ip>
+      <ip>0x66F62A</ip>
       <obj>/tests/compiled/cpp_stl_11/bin/ks_tests</obj>
       <fn>boost::unit_test::ut_detail::callback0_impl_t&lt;boost::unit_test::ut_detail::unused, void (*)()&gt;::invoke()</fn>
       <dir>/usr/include/boost/test/utils</dir>
