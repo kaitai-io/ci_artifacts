@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites tests="194" failures="15">
-	<testsuite name="_/tests/spec/go" tests="194" failures="15" errors="0" id="0" hostname="34a7bc3cd9fc" time="0.049" timestamp="2024-03-04T00:00:41Z">
+<testsuites tests="195" failures="16">
+	<testsuite name="_/tests/spec/go" tests="195" failures="16" errors="0" id="0" hostname="379274b82e59" time="0.065" timestamp="2024-03-18T17:44:48Z">
 		<testcase name="TestBitsByteAligned" classname="_/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestBitsEnum" classname="_/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestBitsSeqEndianCombo" classname="_/tests/spec/go" time="0.000"></testcase>
@@ -67,7 +67,7 @@
 		<testcase name="TestExprArray" classname="_/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestExprBits" classname="_/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestExprBytesCmp" classname="_/tests/spec/go" time="0.000"></testcase>
-		<testcase name="TestExprBytesNonLiteral" classname="_/tests/spec/go" time="0.010"></testcase>
+		<testcase name="TestExprBytesNonLiteral" classname="_/tests/spec/go" time="0.030"></testcase>
 		<testcase name="TestExprBytesOps" classname="_/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestExprCalcArrayOps" classname="_/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestExprEnum" classname="_/tests/spec/go" time="0.000"></testcase>
@@ -147,6 +147,26 @@
 		<testcase name="TestNavParentOverride" classname="_/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestNavParent" classname="_/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestNavParentVsValueInst" classname="_/tests/spec/go" time="0.000"></testcase>
+		<testcase name="TestNavRootRecursive" classname="_/tests/spec/go" time="0.000">
+			<failure message="Failed"><![CDATA[goroutine 112 [running]:
+runtime/debug.Stack()
+	/usr/local/go/src/runtime/debug/stack.go:24 +0x5e
+runtime/debug.PrintStack()
+	/usr/local/go/src/runtime/debug/stack.go:16 +0x13
+_/tests/spec/go.TestNavRootRecursive.func1()
+	/tests/spec/go/nav_root_recursive_test.go:17 +0x39
+panic({0x6198e0?, 0x844030?})
+	/usr/local/go/src/runtime/panic.go:914 +0x21f
+test_formats.(*NavRootRecursive).RootValue(...)
+	/tests/compiled/go/src/test_formats/nav_root_recursive.go:45
+_/tests/spec/go.TestNavRootRecursive(0xc0001b91e0)
+	/tests/spec/go/nav_root_recursive_test.go:34 +0x203
+testing.tRunner(0xc0001b91e0, 0x6907d8)
+	/usr/local/go/src/testing/testing.go:1595 +0xff
+created by testing.(*T).Run in goroutine 1
+	/usr/local/go/src/testing/testing.go:1648 +0x3ad
+    nav_root_recursive_test.go:18: unexpected panic: runtime error: invalid memory address or nil pointer dereference]]></failure>
+		</testcase>
 		<testcase name="TestNavRoot" classname="_/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestNestedSameName2" classname="_/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestNestedSameName" classname="_/tests/spec/go" time="0.000"></testcase>
@@ -156,28 +176,28 @@
 		<testcase name="TestNestedTypes" classname="_/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestNonStandard" classname="_/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestOpaqueExternalType02Parent" classname="_/tests/spec/go" time="0.000">
-			<failure message="Failed"><![CDATA[goroutine 132 [running]:
+			<failure message="Failed"><![CDATA[goroutine 121 [running]:
 runtime/debug.Stack()
 	/usr/local/go/src/runtime/debug/stack.go:24 +0x5e
 runtime/debug.PrintStack()
 	/usr/local/go/src/runtime/debug/stack.go:16 +0x13
 _/tests/spec/go.TestOpaqueExternalType02Parent.func1()
 	/tests/spec/go/opaque_external_type_02_parent_test.go:15 +0x39
-panic({0x6198a0?, 0x844030?})
+panic({0x6198e0?, 0x844030?})
 	/usr/local/go/src/runtime/panic.go:914 +0x21f
 test_formats.(*OpaqueExternalType02Child).SomeMethod(...)
 	/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:46
-test_formats.(*OpaqueExternalType02Child_OpaqueExternalType02ChildChild).Read(0xc00017b020?, 0xc00016e9a8?, 0x3?, 0x64e9e0?)
+test_formats.(*OpaqueExternalType02Child_OpaqueExternalType02ChildChild).Read(0xc0001bd0b0?, 0xc0001aca40?, 0x3?, 0x64ebc0?)
 	/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:69 +0x54
-test_formats.(*OpaqueExternalType02Child).Read(0xc0000cca50, 0xc000032688?, {0x614380?, 0xc0000c6b00?}, 0x639160?)
+test_formats.(*OpaqueExternalType02Child).Read(0xc000068aa0, 0xc000038688?, {0x6143c0?, 0xc000022b80?}, 0x639220?)
 	/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:38 +0x145
-test_formats.(*OpaqueExternalType02Parent_ParentObj).Read(0xc0000c6b00, 0x40d6c5?, 0x28?, 0x639220?)
+test_formats.(*OpaqueExternalType02Parent_ParentObj).Read(0xc000022b80, 0x40d6c5?, 0x28?, 0x6392e0?)
 	/tests/compiled/go/src/test_formats/opaque_external_type_02_parent.go:48 +0x85
-test_formats.(*OpaqueExternalType02Parent).Read(0xc00017b050, 0x17?, {0x614320?, 0xc00017b050?}, 0x707a89?)
+test_formats.(*OpaqueExternalType02Parent).Read(0xc0001bd0e0, 0x17?, {0x614360?, 0xc0001bd0e0?}, 0x707dc9?)
 	/tests/compiled/go/src/test_formats/opaque_external_type_02_parent.go:24 +0x95
-_/tests/spec/go.TestOpaqueExternalType02Parent(0xc00017f1e0)
+_/tests/spec/go.TestOpaqueExternalType02Parent(0xc0001c41a0)
 	/tests/spec/go/opaque_external_type_02_parent_test.go:25 +0x114
-testing.tRunner(0xc00017f1e0, 0x690618)
+testing.tRunner(0xc0001c41a0, 0x690820)
 	/usr/local/go/src/testing/testing.go:1595 +0xff
 created by testing.(*T).Run in goroutine 1
 	/usr/local/go/src/testing/testing.go:1648 +0x3ad
@@ -186,11 +206,11 @@ created by testing.(*T).Run in goroutine 1
 		<testcase name="TestOpaqueExternalType" classname="_/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestOpaqueWithParam" classname="_/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestParamsCallExtraParens" classname="_/tests/spec/go" time="0.000"></testcase>
-		<testcase name="TestParamsCallShort" classname="_/tests/spec/go" time="0.000"></testcase>
+		<testcase name="TestParamsCall" classname="_/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestParamsDef" classname="_/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestParamsEnum" classname="_/tests/spec/go" time="0.000"></testcase>
-		<testcase name="TestParamsPassArrayInt" classname="_/tests/spec/go" time="0.000"></testcase>
-		<testcase name="TestParamsPassArrayStr" classname="_/tests/spec/go" time="0.020"></testcase>
+		<testcase name="TestParamsPassArrayInt" classname="_/tests/spec/go" time="0.020"></testcase>
+		<testcase name="TestParamsPassArrayStr" classname="_/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestParamsPassArrayUsertype" classname="_/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestParamsPassBool" classname="_/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestParamsPassUsertype" classname="_/tests/spec/go" time="0.000"></testcase>
