@@ -8,7 +8,7 @@ Copyright (c) Microsoft Corporation.  All rights reserved.
 
 Starting test execution, please wait...
 A total of 1 test files matched the specified pattern.
-  Failed TestExprIntDiv [20 ms]
+  Failed TestExprIntDiv [23 ms]
   Error Message:
      Expected: -756
   But was:  -757
@@ -30,6 +30,24 @@ A total of 1 test files matched the specified pattern.
    at Kaitai.ExprStrEncodings..ctor(KaitaiStream p__io, KaitaiStruct p__parent, ExprStrEncodings p__root) in /tests/compiled/csharp/ExprStrEncodings.cs:line 25
    at Kaitai.ExprStrEncodings.FromFile(String fileName) in /tests/compiled/csharp/ExprStrEncodings.cs:line 11
    at Kaitai.SpecExprStrEncodings.TestExprStrEncodings() in /tests/spec/csharp/kaitai_struct_csharp_tests/tests/SpecExprStrEncodings.cs:line 13
+
+  Failed TestNavParentRecursive [< 1 ms]
+  Error Message:
+   System.NullReferenceException : Object reference not set to an instance of an object.
+  Stack Trace:
+     at Kaitai.NavParentRecursive.get_ParentValue() in /tests/compiled/csharp/NavParentRecursive.cs:line 37
+   at Kaitai.SpecNavParentRecursive.TestNavParentRecursive() in /tests/spec/csharp/kaitai_struct_csharp_tests/tests/SpecNavParentRecursive.cs:line 17
+
+  Failed TestNavRootRecursive [1 ms]
+  Error Message:
+     Expected: 1
+  But was:  255
+
+  Stack Trace:
+     at Kaitai.SpecNavRootRecursive.TestNavRootRecursive() in /tests/spec/csharp/kaitai_struct_csharp_tests/tests/SpecNavRootRecursive.cs:line 17
+
+1)    at Kaitai.SpecNavRootRecursive.TestNavRootRecursive() in /tests/spec/csharp/kaitai_struct_csharp_tests/tests/SpecNavRootRecursive.cs:line 17
+
 
   Failed TestStrEncodings [< 1 ms]
   Error Message:
@@ -71,4 +89,4 @@ A total of 1 test files matched the specified pattern.
 
 Results File: /tests/test_out/csharp/TestResultTrx.xml
 
-Failed!  - Failed:     5, Passed:   219, Skipped:     0, Total:   224, Duration: 312 ms - /tests/spec/csharp/kaitai_struct_csharp_tests_netstd/bin/Debug/net6.0/kaitai_struct_csharp_tests_netstd.dll (net6.0)
+Failed!  - Failed:     7, Passed:   219, Skipped:     0, Total:   226, Duration: 354 ms - /tests/spec/csharp/kaitai_struct_csharp_tests_netstd/bin/Debug/net6.0/kaitai_struct_csharp_tests_netstd.dll (net6.0)
