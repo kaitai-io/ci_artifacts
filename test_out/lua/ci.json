@@ -1,13 +1,13 @@
 {
   "$meta": {
     "lang": "lua",
-    "timestamp": "2024-03-04T00:01:46Z",
+    "timestamp": "2024-03-18T17:45:10Z",
     "ci": {
       "ci": "github",
-      "run_id": "8133930496",
-      "run_number": "318",
-      "job_id": "22226122883",
-      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/8133930496/job/22226122883"
+      "run_id": "8331221256",
+      "run_number": "319",
+      "job_id": "22797620458",
+      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/8331221256/job/22797620458"
     }
   },
   "BcdUserTypeBe": {
@@ -634,6 +634,17 @@
     "elapsed": 0.0,
     "is_kst": true
   },
+  "NavParentRecursive": {
+    "status": "failed",
+    "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": "compiled/lua/nav_parent_recursive.lua:31: attempt to index a nil value (field '_parent')",
+      "trace": "stack traceback:\n\tcompiled/lua/nav_parent_recursive.lua:31: in function <compiled/lua/nav_parent_recursive.lua:25>\n\t(...tail calls...)\n\tspec/lua/test_nav_parent_recursive.lua:14: in upvalue 'TestNavParentRecursive.test_nav_parent_recursive'"
+    },
+    "is_kst": true
+  },
   "NavParentSwitch": {
     "status": "passed",
     "elapsed": 0.0,
@@ -652,6 +663,17 @@
   "NavRoot": {
     "status": "passed",
     "elapsed": 0.0,
+    "is_kst": true
+  },
+  "NavRootRecursive": {
+    "status": "failed",
+    "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": "spec/lua/test_nav_root_recursive.lua:14: expected: 255, actual: 1",
+      "trace": "stack traceback:\n\tspec/lua/test_nav_root_recursive.lua:14: in upvalue 'TestNavRootRecursive.test_nav_root_recursive'"
+    },
     "is_kst": true
   },
   "NestedSameName": {
@@ -684,6 +706,17 @@
     "elapsed": 0.0,
     "is_kst": true
   },
+  "NestedTypesImport": {
+    "status": "failed",
+    "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": "spec/lua/test_nested_types_import.lua:17: expected: nil, actual: <table 01> {\n    _io=<table 02> {_io=file (0x5558513cdc60), bits=0, bits_left=0},\n    _root=<table 01>,\n    a_c_d=<table 04> {_io=<table 02>, _parent=<table 01>, _root=<table 01>, value_d=65},\n    a_cc=<table 05> {_io=<table 02>, _parent=<table 01>, _root=<table 01>, value_cc=80},\n    b=<table 03> {\n        _io=<table 02>,\n        _parent=<table 01>,\n        _root=<table 01>,\n        a_c_d=<table 06> {_io=<table 02>, _parent=<table 03>, _root=<table 01>, value_d=45},\n        a_cc=<table 07> {_io=<table 02>, _parent=<table 03>, _root=<table 01>, value_cc=75},\n        value_b=67\n    }\n}",
+      "trace": "stack traceback:\n\tspec/lua/test_nested_types_import.lua:17: in upvalue 'TestNestedTypesImport.test_nested_types_import'"
+    },
+    "is_kst": true
+  },
   "NonStandard": {
     "status": "passed",
     "elapsed": 0.0,
@@ -705,12 +738,12 @@
     "status": "passed",
     "elapsed": 0.0
   },
-  "ParamsCallExtraParens": {
+  "ParamsCall": {
     "status": "passed",
     "elapsed": 0.0,
     "is_kst": true
   },
-  "ParamsCallShort": {
+  "ParamsCallExtraParens": {
     "status": "passed",
     "elapsed": 0.0,
     "is_kst": true
