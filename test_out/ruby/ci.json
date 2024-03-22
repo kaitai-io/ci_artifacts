@@ -1,13 +1,13 @@
 {
   "$meta": {
     "lang": "ruby",
-    "timestamp": "2024-03-18T17:46:05Z",
+    "timestamp": "2024-03-22T00:51:35Z",
     "ci": {
       "ci": "github",
-      "run_id": "8331221256",
-      "run_number": "319",
-      "job_id": "22797624005",
-      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/8331221256/job/22797624005"
+      "run_id": "8383756401",
+      "run_number": "320",
+      "job_id": "22960027149",
+      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/8383756401/job/22960027149"
     }
   },
   "BcdUserTypeBe": {
@@ -403,14 +403,8 @@
     "is_kst": true
   },
   "ExprOpsParens": {
-    "status": "failed",
+    "status": "passed",
     "elapsed": 0.0,
-    "failure": {
-      "file_name": "./spec/ruby/expr_ops_parens_spec.rb",
-      "line_num": 4,
-      "message": "no implicit conversion of Integer into String",
-      "trace": "./compiled/ruby/expr_ops_parens.rb:75:in `+'\n./compiled/ruby/expr_ops_parens.rb:75:in `str_concat_len'\n./spec/ruby/expr_ops_parens_spec.rb:10:in `block (2 levels) in <top (required)>'"
-    },
     "is_kst": true
   },
   "ExprSizeofType0": {
@@ -638,8 +632,8 @@
     "failure": {
       "file_name": "./spec/ruby/nav_parent_recursive_spec.rb",
       "line_num": 4,
-      "message": "undefined method `value' for nil",
-      "trace": "./compiled/ruby/nav_parent_recursive.rb:25:in `parent_value'\n./spec/ruby/nav_parent_recursive_spec.rb:10:in `block (2 levels) in <top (required)>'"
+      "message": "cannot load such file -- nav_parent_recursive",
+      "trace": "./spec/ruby/nav_parent_recursive_spec.rb:5:in `block (2 levels) in <top (required)>'"
     },
     "is_kst": true
   },
@@ -669,8 +663,8 @@
     "failure": {
       "file_name": "./spec/ruby/nav_root_recursive_spec.rb",
       "line_num": 4,
-      "message": "\nexpected: 255\n     got: 1\n\n(compared using ==)\n",
-      "trace": "./spec/ruby/nav_root_recursive_spec.rb:10:in `block (2 levels) in <top (required)>'"
+      "message": "cannot load such file -- nav_root_recursive",
+      "trace": "./spec/ruby/nav_root_recursive_spec.rb:5:in `block (2 levels) in <top (required)>'"
     },
     "is_kst": true
   },
@@ -710,8 +704,8 @@
     "failure": {
       "file_name": "./spec/ruby/nested_types_import_spec.rb",
       "line_num": 4,
-      "message": "expected: nil\n     got: NestedTypesImport(a_cc=NestedTypes3::SubtypeA::SubtypeCc(value_cc=80) a_c_d=NestedTypes3::SubtypeA::S...es3::SubtypeA::SubtypeCc(value_cc=75) a_c_d=NestedTypes3::SubtypeA::SubtypeC::SubtypeD(value_d=45)))",
-      "trace": "./spec/ruby/nested_types_import_spec.rb:13:in `block (2 levels) in <top (required)>'"
+      "message": "cannot load such file -- nested_types_import",
+      "trace": "./spec/ruby/nested_types_import_spec.rb:5:in `block (2 levels) in <top (required)>'"
     },
     "is_kst": true
   },
@@ -737,8 +731,14 @@
     "elapsed": 0.0
   },
   "ParamsCall": {
-    "status": "passed",
+    "status": "failed",
     "elapsed": 0.0,
+    "failure": {
+      "file_name": "./spec/ruby/params_call_spec.rb",
+      "line_num": 4,
+      "message": "cannot load such file -- params_call",
+      "trace": "./spec/ruby/params_call_spec.rb:5:in `block (2 levels) in <top (required)>'"
+    },
     "is_kst": true
   },
   "ParamsCallExtraParens": {
