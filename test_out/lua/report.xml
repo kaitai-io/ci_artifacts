@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites>
-    <testsuite name="LuaUnit" id="00001" package="" hostname="localhost" tests="235" timestamp="2024-03-18T17:45:09" time="0.047" errors="7" failures="5" skipped="0">
+    <testsuite name="LuaUnit" id="00001" package="" hostname="localhost" tests="235" timestamp="2024-03-22T00:50:35" time="0.059" errors="6" failures="7" skipped="0">
         <properties>
             <property name="Lua Version" value="Lua 5.3"/>
             <property name="LuaUnit Version" value="3.4"/>
@@ -147,7 +147,7 @@
         </testcase>
         <testcase classname="TestExprBytesCmp" name="TestExprBytesCmp.test_expr_bytes_cmp" time="0.000">
         </testcase>
-        <testcase classname="TestExprBytesNonLiteral" name="TestExprBytesNonLiteral.test_expr_bytes_non_literal" time="0.006">
+        <testcase classname="TestExprBytesNonLiteral" name="TestExprBytesNonLiteral.test_expr_bytes_non_literal" time="0.009">
             <failure type="spec/lua/run_test_suite.lua:18: spec/lua/test_expr_bytes_non_literal.lua:5: module &apos;expr_bytes_non_literal&apos; not found:
 	no field package.preload[&apos;expr_bytes_non_literal&apos;]
 	no file &apos;../runtime/lua/expr_bytes_non_literal.lua&apos;
@@ -192,7 +192,7 @@
         </testcase>
         <testcase classname="TestExprSizeofValueSized" name="TestExprSizeofValueSized.test_expr_sizeof_value_sized" time="0.000">
         </testcase>
-        <testcase classname="TestExprStrEncodings" name="TestExprStrEncodings.test_expr_str_encodings" time="0.002">
+        <testcase classname="TestExprStrEncodings" name="TestExprStrEncodings.test_expr_str_encodings" time="0.001">
             <error type="../runtime/lua/string_decode.lua:42: Encoding SJIS not supported">
                 <![CDATA[stack traceback:
 	../runtime/lua/string_decode.lua:42: in function 'string_decode.decode'
@@ -280,12 +280,22 @@
         </testcase>
         <testcase classname="TestNavParentOverride" name="TestNavParentOverride.test_nav_parent_override" time="0.000">
         </testcase>
-        <testcase classname="TestNavParentRecursive" name="TestNavParentRecursive.test_nav_parent_recursive" time="0.001">
-            <error type="compiled/lua/nav_parent_recursive.lua:31: attempt to index a nil value (field &apos;_parent&apos;)">
+        <testcase classname="TestNavParentRecursive" name="TestNavParentRecursive.test_nav_parent_recursive" time="0.008">
+            <failure type="spec/lua/run_test_suite.lua:18: spec/lua/test_nav_parent_recursive.lua:5: module &apos;nav_parent_recursive&apos; not found:
+	no field package.preload[&apos;nav_parent_recursive&apos;]
+	no file &apos;../runtime/lua/nav_parent_recursive.lua&apos;
+	no file &apos;spec/lua/nav_parent_recursive.lua&apos;
+	no file &apos;spec/lua/extra/nav_parent_recursive.lua&apos;
+	no file &apos;compiled/lua/nav_parent_recursive.lua&apos;
+	no file &apos;/lua_install/share/lua/5.3/nav_parent_recursive.lua&apos;
+	no file &apos;/lua_install/share/lua/5.3/nav_parent_recursive/init.lua&apos;
+	no file &apos;./nav_parent_recursive.lua&apos;
+	no file &apos;./nav_parent_recursive/init.lua&apos;
+	no file &apos;/lua_install/lib/lua/5.3/nav_parent_recursive.so&apos;
+	no file &apos;/lua_install/lib/lua/5.3/loadall.so&apos;
+	no file &apos;./nav_parent_recursive.so&apos;">
                 <![CDATA[stack traceback:
-	compiled/lua/nav_parent_recursive.lua:31: in function <compiled/lua/nav_parent_recursive.lua:25>
-	(...tail calls...)
-	spec/lua/test_nav_parent_recursive.lua:14: in upvalue 'TestNavParentRecursive.test_nav_parent_recursive']]></error>
+	spec/lua/run_test_suite.lua:18: in upvalue 'TestNavParentRecursive.test_nav_parent_recursive']]></failure>
         </testcase>
         <testcase classname="TestNavParentSwitch" name="TestNavParentSwitch.test_nav_parent_switch" time="0.000">
         </testcase>
@@ -295,10 +305,22 @@
         </testcase>
         <testcase classname="TestNavRoot" name="TestNavRoot.test_nav_root" time="0.000">
         </testcase>
-        <testcase classname="TestNavRootRecursive" name="TestNavRootRecursive.test_nav_root_recursive" time="0.001">
-            <failure type="spec/lua/test_nav_root_recursive.lua:14: expected: 255, actual: 1">
+        <testcase classname="TestNavRootRecursive" name="TestNavRootRecursive.test_nav_root_recursive" time="0.005">
+            <failure type="spec/lua/run_test_suite.lua:18: spec/lua/test_nav_root_recursive.lua:5: module &apos;nav_root_recursive&apos; not found:
+	no field package.preload[&apos;nav_root_recursive&apos;]
+	no file &apos;../runtime/lua/nav_root_recursive.lua&apos;
+	no file &apos;spec/lua/nav_root_recursive.lua&apos;
+	no file &apos;spec/lua/extra/nav_root_recursive.lua&apos;
+	no file &apos;compiled/lua/nav_root_recursive.lua&apos;
+	no file &apos;/lua_install/share/lua/5.3/nav_root_recursive.lua&apos;
+	no file &apos;/lua_install/share/lua/5.3/nav_root_recursive/init.lua&apos;
+	no file &apos;./nav_root_recursive.lua&apos;
+	no file &apos;./nav_root_recursive/init.lua&apos;
+	no file &apos;/lua_install/lib/lua/5.3/nav_root_recursive.so&apos;
+	no file &apos;/lua_install/lib/lua/5.3/loadall.so&apos;
+	no file &apos;./nav_root_recursive.so&apos;">
                 <![CDATA[stack traceback:
-	spec/lua/test_nav_root_recursive.lua:14: in upvalue 'TestNavRootRecursive.test_nav_root_recursive']]></failure>
+	spec/lua/run_test_suite.lua:18: in upvalue 'TestNavRootRecursive.test_nav_root_recursive']]></failure>
         </testcase>
         <testcase classname="TestNestedSameName" name="TestNestedSameName.test_nested_same_name" time="0.000">
         </testcase>
@@ -312,23 +334,22 @@
         </testcase>
         <testcase classname="TestNestedTypes3" name="TestNestedTypes3.test_nested_types3" time="0.000">
         </testcase>
-        <testcase classname="TestNestedTypesImport" name="TestNestedTypesImport.test_nested_types_import" time="0.008">
-            <failure type="spec/lua/test_nested_types_import.lua:17: expected: nil, actual: &lt;table 01&gt; {
-    _io=&lt;table 02&gt; {_io=file (0x5558513cdc60), bits=0, bits_left=0},
-    _root=&lt;table 01&gt;,
-    a_c_d=&lt;table 04&gt; {_io=&lt;table 02&gt;, _parent=&lt;table 01&gt;, _root=&lt;table 01&gt;, value_d=65},
-    a_cc=&lt;table 05&gt; {_io=&lt;table 02&gt;, _parent=&lt;table 01&gt;, _root=&lt;table 01&gt;, value_cc=80},
-    b=&lt;table 03&gt; {
-        _io=&lt;table 02&gt;,
-        _parent=&lt;table 01&gt;,
-        _root=&lt;table 01&gt;,
-        a_c_d=&lt;table 06&gt; {_io=&lt;table 02&gt;, _parent=&lt;table 03&gt;, _root=&lt;table 01&gt;, value_d=45},
-        a_cc=&lt;table 07&gt; {_io=&lt;table 02&gt;, _parent=&lt;table 03&gt;, _root=&lt;table 01&gt;, value_cc=75},
-        value_b=67
-    }
-}">
+        <testcase classname="TestNestedTypesImport" name="TestNestedTypesImport.test_nested_types_import" time="0.005">
+            <failure type="spec/lua/run_test_suite.lua:18: spec/lua/test_nested_types_import.lua:5: module &apos;nested_types_import&apos; not found:
+	no field package.preload[&apos;nested_types_import&apos;]
+	no file &apos;../runtime/lua/nested_types_import.lua&apos;
+	no file &apos;spec/lua/nested_types_import.lua&apos;
+	no file &apos;spec/lua/extra/nested_types_import.lua&apos;
+	no file &apos;compiled/lua/nested_types_import.lua&apos;
+	no file &apos;/lua_install/share/lua/5.3/nested_types_import.lua&apos;
+	no file &apos;/lua_install/share/lua/5.3/nested_types_import/init.lua&apos;
+	no file &apos;./nested_types_import.lua&apos;
+	no file &apos;./nested_types_import/init.lua&apos;
+	no file &apos;/lua_install/lib/lua/5.3/nested_types_import.so&apos;
+	no file &apos;/lua_install/lib/lua/5.3/loadall.so&apos;
+	no file &apos;./nested_types_import.so&apos;">
                 <![CDATA[stack traceback:
-	spec/lua/test_nested_types_import.lua:17: in upvalue 'TestNestedTypesImport.test_nested_types_import']]></failure>
+	spec/lua/run_test_suite.lua:18: in upvalue 'TestNestedTypesImport.test_nested_types_import']]></failure>
         </testcase>
         <testcase classname="TestNonStandard" name="TestNonStandard.test_non_standard" time="0.000">
         </testcase>
@@ -340,7 +361,22 @@
         </testcase>
         <testcase classname="TestOptionalId" name="TestOptionalId.test_optional_id" time="0.000">
         </testcase>
-        <testcase classname="TestParamsCall" name="TestParamsCall.test_params_call" time="0.000">
+        <testcase classname="TestParamsCall" name="TestParamsCall.test_params_call" time="0.004">
+            <failure type="spec/lua/run_test_suite.lua:18: spec/lua/test_params_call.lua:5: module &apos;params_call&apos; not found:
+	no field package.preload[&apos;params_call&apos;]
+	no file &apos;../runtime/lua/params_call.lua&apos;
+	no file &apos;spec/lua/params_call.lua&apos;
+	no file &apos;spec/lua/extra/params_call.lua&apos;
+	no file &apos;compiled/lua/params_call.lua&apos;
+	no file &apos;/lua_install/share/lua/5.3/params_call.lua&apos;
+	no file &apos;/lua_install/share/lua/5.3/params_call/init.lua&apos;
+	no file &apos;./params_call.lua&apos;
+	no file &apos;./params_call/init.lua&apos;
+	no file &apos;/lua_install/lib/lua/5.3/params_call.so&apos;
+	no file &apos;/lua_install/lib/lua/5.3/loadall.so&apos;
+	no file &apos;./params_call.so&apos;">
+                <![CDATA[stack traceback:
+	spec/lua/run_test_suite.lua:18: in upvalue 'TestParamsCall.test_params_call']]></failure>
         </testcase>
         <testcase classname="TestParamsCallExtraParens" name="TestParamsCallExtraParens.test_params_call_extra_parens" time="0.000">
         </testcase>
@@ -418,7 +454,7 @@
         </testcase>
         <testcase classname="TestRepeatUntilSized" name="TestRepeatUntilSized.test_repeat_until_sized" time="0.000">
         </testcase>
-        <testcase classname="TestStrEncodings" name="TestStrEncodings.test_str_encodings" time="0.002">
+        <testcase classname="TestStrEncodings" name="TestStrEncodings.test_str_encodings" time="0.001">
             <error type="../runtime/lua/string_decode.lua:42: Encoding SJIS not supported">
                 <![CDATA[stack traceback:
 	../runtime/lua/string_decode.lua:42: in function 'string_decode.decode'
@@ -428,7 +464,7 @@
 	(...tail calls...)
 	spec/lua/test_str_encodings.lua:10: in upvalue 'TestStrEncodings.test_str_encodings']]></error>
         </testcase>
-        <testcase classname="TestStrEncodingsDefault" name="TestStrEncodingsDefault.test_str_encodings_default" time="0.002">
+        <testcase classname="TestStrEncodingsDefault" name="TestStrEncodingsDefault.test_str_encodings_default" time="0.001">
             <error type="../runtime/lua/string_decode.lua:42: Encoding SJIS not supported">
                 <![CDATA[stack traceback:
 	../runtime/lua/string_decode.lua:42: in function 'string_decode.decode'
@@ -441,7 +477,7 @@
 	(...tail calls...)
 	spec/lua/test_str_encodings_default.lua:10: in upvalue 'TestStrEncodingsDefault.test_str_encodings_default']]></error>
         </testcase>
-        <testcase classname="TestStrEncodingsUtf16" name="TestStrEncodingsUtf16.test_str_encodings_utf16" time="0.002">
+        <testcase classname="TestStrEncodingsUtf16" name="TestStrEncodingsUtf16.test_str_encodings_utf16" time="0.001">
             <error type="../runtime/lua/string_decode.lua:42: Encoding UTF-16BE not supported">
                 <![CDATA[stack traceback:
 	../runtime/lua/string_decode.lua:42: in function 'string_decode.decode'
@@ -520,7 +556,7 @@
         </testcase>
         <testcase classname="TestUserType" name="TestUserType.test_user_type" time="0.000">
         </testcase>
-        <testcase classname="TestValidEqStrEncodings" name="TestValidEqStrEncodings.test_valid_eq_str_encodings" time="0.002">
+        <testcase classname="TestValidEqStrEncodings" name="TestValidEqStrEncodings.test_valid_eq_str_encodings" time="0.001">
             <error type="../runtime/lua/string_decode.lua:42: Encoding SJIS not supported">
                 <![CDATA[stack traceback:
 	../runtime/lua/string_decode.lua:42: in function 'string_decode.decode'
