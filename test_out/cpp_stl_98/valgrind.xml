@@ -12,8 +12,8 @@
   <line>Command: /tests/compiled/cpp_stl_98/bin/ks_tests</line>
 </preamble>
 
-<pid>1549</pid>
-<ppid>1548</ppid>
+<pid>1540</pid>
+<ppid>1539</ppid>
 <tool>memcheck</tool>
 
 <args>
@@ -30,183 +30,16 @@
 
 <status>
   <state>RUNNING</state>
-  <time>00:00:00:00.198 </time>
+  <time>00:00:00:00.200 </time>
 </status>
-
-<error>
-  <unique>0x0</unique>
-  <tid>1</tid>
-  <kind>InvalidRead</kind>
-  <what>Invalid read of size 1</what>
-  <stack>
-    <frame>
-      <ip>0x5D6B5C</ip>
-      <obj>/tests/compiled/cpp_stl_98/bin/ks_tests</obj>
-      <fn>nav_parent_recursive_t::value() const</fn>
-      <dir>/tests/compiled/cpp_stl_98</dir>
-      <file>nav_parent_recursive.h</file>
-      <line>52</line>
-    </frame>
-    <frame>
-      <ip>0x6A2623</ip>
-      <obj>/tests/compiled/cpp_stl_98/bin/ks_tests</obj>
-      <fn>nav_parent_recursive_t::parent_value()</fn>
-      <dir>/tests/compiled/cpp_stl_98</dir>
-      <file>nav_parent_recursive.cpp</file>
-      <line>46</line>
-    </frame>
-    <frame>
-      <ip>0x5D672D</ip>
-      <obj>/tests/compiled/cpp_stl_98/bin/ks_tests</obj>
-      <fn>test_nav_parent_recursive::test_method()</fn>
-      <dir>/tests</dir>
-      <file>spec/cpp_stl_98/test_nav_parent_recursive.cpp</file>
-      <line>16</line>
-    </frame>
-    <frame>
-      <ip>0x5D5F73</ip>
-      <obj>/tests/compiled/cpp_stl_98/bin/ks_tests</obj>
-      <fn>test_nav_parent_recursive_invoker()</fn>
-      <dir>/tests</dir>
-      <file>spec/cpp_stl_98/test_nav_parent_recursive.cpp</file>
-      <line>9</line>
-    </frame>
-    <frame>
-      <ip>0x538DA9</ip>
-      <obj>/tests/compiled/cpp_stl_98/bin/ks_tests</obj>
-      <fn>boost::detail::function::void_function_invoker0&lt;void (*)(), void&gt;::invoke(boost::detail::function::function_buffer&amp;)</fn>
-      <dir>/usr/include/boost/function</dir>
-      <file>function_template.hpp</file>
-      <line>117</line>
-    </frame>
-    <frame>
-      <ip>0x4885531</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.74.0</obj>
-    </frame>
-    <frame>
-      <ip>0x488B5B0</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.74.0</obj>
-      <fn>boost::execution_monitor::catch_signals(boost::function&lt;int ()&gt; const&amp;)</fn>
-    </frame>
-    <frame>
-      <ip>0x488BAA0</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.74.0</obj>
-      <fn>boost::execution_monitor::execute(boost::function&lt;int ()&gt; const&amp;)</fn>
-    </frame>
-    <frame>
-      <ip>0x488BB5B</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.74.0</obj>
-      <fn>boost::execution_monitor::vexecute(boost::function&lt;void ()&gt; const&amp;)</fn>
-    </frame>
-    <frame>
-      <ip>0x48AFB36</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.74.0</obj>
-      <fn>boost::unit_test::unit_test_monitor_t::execute_and_translate(boost::function&lt;void ()&gt; const&amp;, unsigned long)</fn>
-    </frame>
-    <frame>
-      <ip>0x48CE966</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.74.0</obj>
-    </frame>
-    <frame>
-      <ip>0x48CECEE</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.74.0</obj>
-    </frame>
-  </stack>
-  <auxwhat>Address 0x13 is not stack'd, malloc'd or (recently) free'd</auxwhat>
-</error>
 
 
 <status>
   <state>FINISHED</state>
-  <time>00:00:00:02.959 </time>
+  <time>00:00:00:04.365 </time>
 </status>
 
-<error>
-  <unique>0x4</unique>
-  <tid>1</tid>
-  <kind>Leak_DefinitelyLost</kind>
-  <xwhat>
-    <text>8,192 bytes in 1 blocks are definitely lost in loss record 4 of 4</text>
-    <leakedbytes>8192</leakedbytes>
-    <leakedblocks>1</leakedblocks>
-  </xwhat>
-  <stack>
-    <frame>
-      <ip>0x484A2F3</ip>
-      <obj>/usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
-      <fn>operator new[](unsigned long)</fn>
-    </frame>
-    <frame>
-      <ip>0x4C50023</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30</obj>
-      <fn>std::basic_filebuf&lt;char, std::char_traits&lt;char&gt; &gt;::_M_allocate_internal_buffer()</fn>
-    </frame>
-    <frame>
-      <ip>0x4C54015</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30</obj>
-      <fn>std::basic_filebuf&lt;char, std::char_traits&lt;char&gt; &gt;::open(char const*, std::_Ios_Openmode)</fn>
-    </frame>
-    <frame>
-      <ip>0x4C54E05</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30</obj>
-      <fn>std::basic_ifstream&lt;char, std::char_traits&lt;char&gt; &gt;::basic_ifstream(char const*, std::_Ios_Openmode)</fn>
-    </frame>
-    <frame>
-      <ip>0x5D62DE</ip>
-      <obj>/tests/compiled/cpp_stl_98/bin/ks_tests</obj>
-      <fn>test_nav_parent_recursive::test_method()</fn>
-      <dir>/tests</dir>
-      <file>spec/cpp_stl_98/test_nav_parent_recursive.cpp</file>
-      <line>10</line>
-    </frame>
-    <frame>
-      <ip>0x5D5F73</ip>
-      <obj>/tests/compiled/cpp_stl_98/bin/ks_tests</obj>
-      <fn>test_nav_parent_recursive_invoker()</fn>
-      <dir>/tests</dir>
-      <file>spec/cpp_stl_98/test_nav_parent_recursive.cpp</file>
-      <line>9</line>
-    </frame>
-    <frame>
-      <ip>0x538DA9</ip>
-      <obj>/tests/compiled/cpp_stl_98/bin/ks_tests</obj>
-      <fn>boost::detail::function::void_function_invoker0&lt;void (*)(), void&gt;::invoke(boost::detail::function::function_buffer&amp;)</fn>
-      <dir>/usr/include/boost/function</dir>
-      <file>function_template.hpp</file>
-      <line>117</line>
-    </frame>
-    <frame>
-      <ip>0x4885531</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.74.0</obj>
-    </frame>
-    <frame>
-      <ip>0x488B5B0</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.74.0</obj>
-      <fn>boost::execution_monitor::catch_signals(boost::function&lt;int ()&gt; const&amp;)</fn>
-    </frame>
-    <frame>
-      <ip>0x488BAA0</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.74.0</obj>
-      <fn>boost::execution_monitor::execute(boost::function&lt;int ()&gt; const&amp;)</fn>
-    </frame>
-    <frame>
-      <ip>0x488BB5B</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.74.0</obj>
-      <fn>boost::execution_monitor::vexecute(boost::function&lt;void ()&gt; const&amp;)</fn>
-    </frame>
-    <frame>
-      <ip>0x48AFB36</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.74.0</obj>
-      <fn>boost::unit_test::unit_test_monitor_t::execute_and_translate(boost::function&lt;void ()&gt; const&amp;, unsigned long)</fn>
-    </frame>
-  </stack>
-</error>
-
 <errorcounts>
-  <pair>
-    <count>1</count>
-    <unique>0x0</unique>
-  </pair>
 </errorcounts>
 
 <suppcounts>
