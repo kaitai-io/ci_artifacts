@@ -1,13 +1,13 @@
 {
   "$meta": {
     "lang": "construct",
-    "timestamp": "2024-03-22T00:49:45Z",
+    "timestamp": "2024-03-22T15:21:23Z",
     "ci": {
       "ci": "github",
-      "run_id": "8383756401",
-      "run_number": "320",
-      "job_id": "22960024383",
-      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/8383756401/job/22960024383"
+      "run_id": "8392579569",
+      "run_number": "321",
+      "job_id": "22985545184",
+      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/8392579569/job/22985545184"
     }
   },
   "BcdUserTypeBe": {
@@ -874,14 +874,8 @@
     "is_kst": true
   },
   "NavParentRecursive": {
-    "status": "failed",
+    "status": "passed",
     "elapsed": 0.0,
-    "failure": {
-      "file_name": null,
-      "line_num": null,
-      "message": "Failed to import test module: test_nav_parent_recursive\nTraceback (most recent call last):\n  File \"/usr/local/lib/python3.12/unittest/loader.py\", line 394, in _find_test_path\n    module = self._get_module_from_name(name)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/unittest/loader.py\", line 337, in _get_module_from_name\n    __import__(name)\n  File \"/tests/spec/construct/test_nav_parent_recursive.py\", line 5, in <module>\n    from nav_parent_recursive import _schema\nModuleNotFoundError: No module named 'nav_parent_recursive'\n",
-      "trace": "ImportError: Failed to import test module: test_nav_parent_recursive\nTraceback (most recent call last):\n  File \"/usr/local/lib/python3.12/unittest/loader.py\", line 394, in _find_test_path\n    module = self._get_module_from_name(name)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/unittest/loader.py\", line 337, in _get_module_from_name\n    __import__(name)\n  File \"/tests/spec/construct/test_nav_parent_recursive.py\", line 5, in <module>\n    from nav_parent_recursive import _schema\nModuleNotFoundError: No module named 'nav_parent_recursive'"
-    },
     "is_kst": true
   },
   "NavParentSwitch": {
@@ -905,14 +899,8 @@
     "is_kst": true
   },
   "NavRootRecursive": {
-    "status": "failed",
+    "status": "passed",
     "elapsed": 0.0,
-    "failure": {
-      "file_name": null,
-      "line_num": null,
-      "message": "Failed to import test module: test_nav_root_recursive\nTraceback (most recent call last):\n  File \"/usr/local/lib/python3.12/unittest/loader.py\", line 394, in _find_test_path\n    module = self._get_module_from_name(name)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/unittest/loader.py\", line 337, in _get_module_from_name\n    __import__(name)\n  File \"/tests/spec/construct/test_nav_root_recursive.py\", line 5, in <module>\n    from nav_root_recursive import _schema\nModuleNotFoundError: No module named 'nav_root_recursive'\n",
-      "trace": "ImportError: Failed to import test module: test_nav_root_recursive\nTraceback (most recent call last):\n  File \"/usr/local/lib/python3.12/unittest/loader.py\", line 394, in _find_test_path\n    module = self._get_module_from_name(name)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/unittest/loader.py\", line 337, in _get_module_from_name\n    __import__(name)\n  File \"/tests/spec/construct/test_nav_root_recursive.py\", line 5, in <module>\n    from nav_root_recursive import _schema\nModuleNotFoundError: No module named 'nav_root_recursive'"
-    },
     "is_kst": true
   },
   "NestedSameName": {
@@ -957,8 +945,8 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "Failed to import test module: test_nested_types_import\nTraceback (most recent call last):\n  File \"/usr/local/lib/python3.12/unittest/loader.py\", line 394, in _find_test_path\n    module = self._get_module_from_name(name)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/unittest/loader.py\", line 337, in _get_module_from_name\n    __import__(name)\n  File \"/tests/spec/construct/test_nested_types_import.py\", line 5, in <module>\n    from nested_types_import import _schema\nModuleNotFoundError: No module named 'nested_types_import'\n",
-      "trace": "ImportError: Failed to import test module: test_nested_types_import\nTraceback (most recent call last):\n  File \"/usr/local/lib/python3.12/unittest/loader.py\", line 394, in _find_test_path\n    module = self._get_module_from_name(name)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/unittest/loader.py\", line 337, in _get_module_from_name\n    __import__(name)\n  File \"/tests/spec/construct/test_nested_types_import.py\", line 5, in <module>\n    from nested_types_import import _schema\nModuleNotFoundError: No module named 'nested_types_import'"
+      "message": "name 'nested_types3__subtype_a__subtype_cc' is not defined",
+      "trace": "Traceback (most recent call last):\n  File \"/tests/spec/construct/test_nested_types_import.py\", line 9, in test_nested_types_import\n    r = _schema.parse_file('src/fixed_struct.bin')\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 425, in parse_file\n    return self.parse_stream(f, **contextkw)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 416, in parse_stream\n    return self._parsereport(stream, context, \"(parsing)\")\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 428, in _parsereport\n    obj = self._parse(stream, context, path)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 2236, in _parse\n    subobj = sc._parsereport(stream, context, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 428, in _parsereport\n    obj = self._parse(stream, context, path)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 2770, in _parse\n    return self.subcon._parsereport(stream, context, path)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 428, in _parsereport\n    obj = self._parse(stream, context, path)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 6220, in _parse\n    sc = self.subconfunc()\n         ^^^^^^^^^^^^^^^^^\n  File \"/tests/compiled/construct/nested_types_import.py\", line 5, in <lambda>\n    'a_cc' / LazyBound(lambda: nested_types3__subtype_a__subtype_cc),\n                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nNameError: name 'nested_types3__subtype_a__subtype_cc' is not defined"
     },
     "is_kst": true
   },
@@ -987,8 +975,8 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "Failed to import test module: test_params_call\nTraceback (most recent call last):\n  File \"/usr/local/lib/python3.12/unittest/loader.py\", line 394, in _find_test_path\n    module = self._get_module_from_name(name)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/unittest/loader.py\", line 337, in _get_module_from_name\n    __import__(name)\n  File \"/tests/spec/construct/test_params_call.py\", line 5, in <module>\n    from params_call import _schema\nModuleNotFoundError: No module named 'params_call'\n",
-      "trace": "ImportError: Failed to import test module: test_params_call\nTraceback (most recent call last):\n  File \"/usr/local/lib/python3.12/unittest/loader.py\", line 394, in _find_test_path\n    module = self._get_module_from_name(name)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/unittest/loader.py\", line 337, in _get_module_from_name\n    __import__(name)\n  File \"/tests/spec/construct/test_params_call.py\", line 5, in <module>\n    from params_call import _schema\nModuleNotFoundError: No module named 'params_call'"
+      "message": "'len'",
+      "trace": "Traceback (most recent call last):\n  File \"/tests/spec/construct/test_params_call.py\", line 9, in test_params_call\n    r = _schema.parse_file('src/term_strz.bin')\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 425, in parse_file\n    return self.parse_stream(f, **contextkw)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 416, in parse_stream\n    return self._parsereport(stream, context, \"(parsing)\")\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 428, in _parsereport\n    obj = self._parse(stream, context, path)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 2236, in _parse\n    subobj = sc._parsereport(stream, context, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 428, in _parsereport\n    obj = self._parse(stream, context, path)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 2770, in _parse\n    return self.subcon._parsereport(stream, context, path)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 428, in _parsereport\n    obj = self._parse(stream, context, path)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 6221, in _parse\n    return sc._parsereport(stream, context, path)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 428, in _parsereport\n    obj = self._parse(stream, context, path)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 2236, in _parse\n    subobj = sc._parsereport(stream, context, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 428, in _parsereport\n    obj = self._parse(stream, context, path)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 2770, in _parse\n    return self.subcon._parsereport(stream, context, path)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 428, in _parsereport\n    obj = self._parse(stream, context, path)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 4988, in _parse\n    length = evaluate(self.length, context)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 314, in evaluate\n    return param(context) if callable(param) else param\n           ^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/expr.py\", line 188, in __call__\n    return self.__parent(obj)[self.__field]\n           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^\nKeyError: 'len'"
     },
     "is_kst": true
   },
@@ -1324,8 +1312,8 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "<built-in method values of Container object at 0x7f359d2722d0> != [1, 2, 3, 4]",
-      "trace": "Traceback (most recent call last):\n  File \"/tests/spec/construct/test_repeat_until_complex.py\", line 12, in test_repeat_until_complex\n    self.assertEqual(r.first[0].values, [(0 + 1), 2, 3, 4])\nAssertionError: <built-in method values of Container object at 0x7f359d2722d0> != [1, 2, 3, 4]"
+      "message": "<built-in method values of Container object at 0x7f2978053c50> != [1, 2, 3, 4]",
+      "trace": "Traceback (most recent call last):\n  File \"/tests/spec/construct/test_repeat_until_complex.py\", line 12, in test_repeat_until_complex\n    self.assertEqual(r.first[0].values, [(0 + 1), 2, 3, 4])\nAssertionError: <built-in method values of Container object at 0x7f2978053c50> != [1, 2, 3, 4]"
     },
     "is_kst": true
   },
