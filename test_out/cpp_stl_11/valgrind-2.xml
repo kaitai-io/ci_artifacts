@@ -1,0 +1,363 @@
+<?xml version="1.0"?>
+
+<valgrindoutput>
+
+<protocolversion>4</protocolversion>
+<protocoltool>memcheck</protocoltool>
+
+<preamble>
+  <line>Memcheck, a memory error detector</line>
+  <line>Copyright (C) 2002-2013, and GNU GPL'd, by Julian Seward et al.</line>
+  <line>Using Valgrind-3.10.1 and LibVEX; rerun with -h for copyright info</line>
+  <line>Command: /tests/compiled/cpp_stl_11/bin/ks_tests --run_test=!test_nav_parent_recursive</line>
+</preamble>
+
+<pid>2604</pid>
+<ppid>2601</ppid>
+<tool>memcheck</tool>
+
+<args>
+  <vargv>
+    <exe>/usr/bin/valgrind.bin</exe>
+    <arg>--leak-check=full</arg>
+    <arg>--xml=yes</arg>
+    <arg>--xml-file=test_out/cpp_stl_11/valgrind-2.xml</arg>
+  </vargv>
+  <argv>
+    <exe>/tests/compiled/cpp_stl_11/bin/ks_tests</exe>
+    <arg>--run_test=!test_nav_parent_recursive</arg>
+  </argv>
+</args>
+
+<status>
+  <state>RUNNING</state>
+  <time>00:00:00:00.284 </time>
+</status>
+
+<error>
+  <unique>0x0</unique>
+  <tid>1</tid>
+  <kind>InvalidRead</kind>
+  <what>Invalid read of size 8</what>
+  <stack>
+    <frame>
+      <ip>0x840D50</ip>
+      <obj>/tests/compiled/cpp_stl_11/bin/ks_tests</obj>
+      <fn>debug_array_user_t::cat_t::_read()</fn>
+      <dir>/tests/compiled/cpp_stl_11</dir>
+      <file>debug_array_user.cpp</file>
+      <line>37</line>
+    </frame>
+    <frame>
+      <ip>0x840C03</ip>
+      <obj>/tests/compiled/cpp_stl_11/bin/ks_tests</obj>
+      <fn>debug_array_user_t::_read()</fn>
+      <dir>/tests/compiled/cpp_stl_11</dir>
+      <file>debug_array_user.cpp</file>
+      <line>20</line>
+    </frame>
+    <frame>
+      <ip>0x7D8022</ip>
+      <obj>/tests/compiled/cpp_stl_11/bin/ks_tests</obj>
+      <fn>test_debug_array_user::test_method()</fn>
+      <dir>/tests/spec/cpp_stl_11</dir>
+      <file>test_debug_array_user.cpp</file>
+      <line>13</line>
+    </frame>
+    <frame>
+      <ip>0x7D7D2E</ip>
+      <obj>/tests/compiled/cpp_stl_11/bin/ks_tests</obj>
+      <fn>test_debug_array_user_invoker()</fn>
+      <dir>/tests/spec/cpp_stl_11</dir>
+      <file>test_debug_array_user.cpp</file>
+      <line>7</line>
+    </frame>
+    <frame>
+      <ip>0x7473E6</ip>
+      <obj>/tests/compiled/cpp_stl_11/bin/ks_tests</obj>
+      <fn>boost::detail::function::void_function_invoker0&lt;void (*)(), void&gt;::invoke(boost::detail::function::function_buffer&amp;)</fn>
+      <dir>/usr/local/include/boost/function</dir>
+      <file>function_template.hpp</file>
+      <line>117</line>
+    </frame>
+    <frame>
+      <ip>0x4EB730F</ip>
+      <obj>/usr/local/lib/libboost_unit_test_framework.so.1.84.0</obj>
+      <fn>boost::function0&lt;void&gt;::operator()() const</fn>
+      <dir>/boost_1_84_0/./boost/function</dir>
+      <file>function_template.hpp</file>
+      <line>772</line>
+    </frame>
+    <frame>
+      <ip>0x4EB648C</ip>
+      <obj>/usr/local/lib/libboost_unit_test_framework.so.1.84.0</obj>
+      <fn>boost::detail::forward::operator()()</fn>
+      <dir>/boost_1_84_0/./boost/test/impl</dir>
+      <file>execution_monitor.ipp</file>
+      <line>1405</line>
+    </frame>
+    <frame>
+      <ip>0x4EB8902</ip>
+      <obj>/usr/local/lib/libboost_unit_test_framework.so.1.84.0</obj>
+      <fn>boost::detail::function::function_obj_invoker0&lt;boost::detail::forward, int&gt;::invoke(boost::detail::function::function_buffer&amp;)</fn>
+      <dir>/boost_1_84_0/./boost/function</dir>
+      <file>function_template.hpp</file>
+      <line>137</line>
+    </frame>
+    <frame>
+      <ip>0x4EB78F3</ip>
+      <obj>/usr/local/lib/libboost_unit_test_framework.so.1.84.0</obj>
+      <fn>boost::function0&lt;int&gt;::operator()() const</fn>
+      <dir>/boost_1_84_0/./boost/function</dir>
+      <file>function_template.hpp</file>
+      <line>772</line>
+    </frame>
+    <frame>
+      <ip>0x4EB6DE3</ip>
+      <obj>/usr/local/lib/libboost_unit_test_framework.so.1.84.0</obj>
+      <fn>int boost::detail::do_invoke&lt;boost::shared_ptr&lt;boost::detail::translator_holder_base&gt;, boost::function&lt;int ()&gt; &gt;(boost::shared_ptr&lt;boost::detail::translator_holder_base&gt; const&amp;, boost::function&lt;int ()&gt; const&amp;)</fn>
+      <dir>/boost_1_84_0/./boost/test/impl</dir>
+      <file>execution_monitor.ipp</file>
+      <line>318</line>
+    </frame>
+    <frame>
+      <ip>0x4EB40C5</ip>
+      <obj>/usr/local/lib/libboost_unit_test_framework.so.1.84.0</obj>
+      <fn>boost::execution_monitor::catch_signals(boost::function&lt;int ()&gt; const&amp;)</fn>
+      <dir>/boost_1_84_0/./boost/test/impl</dir>
+      <file>execution_monitor.ipp</file>
+      <line>920</line>
+    </frame>
+    <frame>
+      <ip>0x4EB421B</ip>
+      <obj>/usr/local/lib/libboost_unit_test_framework.so.1.84.0</obj>
+      <fn>boost::execution_monitor::execute(boost::function&lt;int ()&gt; const&amp;)</fn>
+      <dir>/boost_1_84_0/./boost/test/impl</dir>
+      <file>execution_monitor.ipp</file>
+      <line>1318</line>
+    </frame>
+  </stack>
+  <auxwhat>Address 0x8 is not stack'd, malloc'd or (recently) free'd</auxwhat>
+</error>
+
+
+<status>
+  <state>FINISHED</state>
+  <time>00:00:00:05.991 </time>
+</status>
+
+<error>
+  <unique>0x5</unique>
+  <tid>1</tid>
+  <kind>Leak_DefinitelyLost</kind>
+  <xwhat>
+    <text>160 (48 direct, 112 indirect) bytes in 1 blocks are definitely lost in loss record 5 of 7</text>
+    <leakedbytes>160</leakedbytes>
+    <leakedblocks>1</leakedblocks>
+  </xwhat>
+  <stack>
+    <frame>
+      <ip>0x4C2B0E0</ip>
+      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
+      <fn>operator new(unsigned long)</fn>
+    </frame>
+    <frame>
+      <ip>0x7D7FED</ip>
+      <obj>/tests/compiled/cpp_stl_11/bin/ks_tests</obj>
+      <fn>test_debug_array_user::test_method()</fn>
+      <dir>/tests/spec/cpp_stl_11</dir>
+      <file>test_debug_array_user.cpp</file>
+      <line>10</line>
+    </frame>
+    <frame>
+      <ip>0x7D7D2E</ip>
+      <obj>/tests/compiled/cpp_stl_11/bin/ks_tests</obj>
+      <fn>test_debug_array_user_invoker()</fn>
+      <dir>/tests/spec/cpp_stl_11</dir>
+      <file>test_debug_array_user.cpp</file>
+      <line>7</line>
+    </frame>
+    <frame>
+      <ip>0x7473E6</ip>
+      <obj>/tests/compiled/cpp_stl_11/bin/ks_tests</obj>
+      <fn>boost::detail::function::void_function_invoker0&lt;void (*)(), void&gt;::invoke(boost::detail::function::function_buffer&amp;)</fn>
+      <dir>/usr/local/include/boost/function</dir>
+      <file>function_template.hpp</file>
+      <line>117</line>
+    </frame>
+    <frame>
+      <ip>0x4EB730F</ip>
+      <obj>/usr/local/lib/libboost_unit_test_framework.so.1.84.0</obj>
+      <fn>boost::function0&lt;void&gt;::operator()() const</fn>
+      <dir>/boost_1_84_0/./boost/function</dir>
+      <file>function_template.hpp</file>
+      <line>772</line>
+    </frame>
+    <frame>
+      <ip>0x4EB648C</ip>
+      <obj>/usr/local/lib/libboost_unit_test_framework.so.1.84.0</obj>
+      <fn>boost::detail::forward::operator()()</fn>
+      <dir>/boost_1_84_0/./boost/test/impl</dir>
+      <file>execution_monitor.ipp</file>
+      <line>1405</line>
+    </frame>
+    <frame>
+      <ip>0x4EB8902</ip>
+      <obj>/usr/local/lib/libboost_unit_test_framework.so.1.84.0</obj>
+      <fn>boost::detail::function::function_obj_invoker0&lt;boost::detail::forward, int&gt;::invoke(boost::detail::function::function_buffer&amp;)</fn>
+      <dir>/boost_1_84_0/./boost/function</dir>
+      <file>function_template.hpp</file>
+      <line>137</line>
+    </frame>
+    <frame>
+      <ip>0x4EB78F3</ip>
+      <obj>/usr/local/lib/libboost_unit_test_framework.so.1.84.0</obj>
+      <fn>boost::function0&lt;int&gt;::operator()() const</fn>
+      <dir>/boost_1_84_0/./boost/function</dir>
+      <file>function_template.hpp</file>
+      <line>772</line>
+    </frame>
+    <frame>
+      <ip>0x4EB6DE3</ip>
+      <obj>/usr/local/lib/libboost_unit_test_framework.so.1.84.0</obj>
+      <fn>int boost::detail::do_invoke&lt;boost::shared_ptr&lt;boost::detail::translator_holder_base&gt;, boost::function&lt;int ()&gt; &gt;(boost::shared_ptr&lt;boost::detail::translator_holder_base&gt; const&amp;, boost::function&lt;int ()&gt; const&amp;)</fn>
+      <dir>/boost_1_84_0/./boost/test/impl</dir>
+      <file>execution_monitor.ipp</file>
+      <line>318</line>
+    </frame>
+    <frame>
+      <ip>0x4EB40C5</ip>
+      <obj>/usr/local/lib/libboost_unit_test_framework.so.1.84.0</obj>
+      <fn>boost::execution_monitor::catch_signals(boost::function&lt;int ()&gt; const&amp;)</fn>
+      <dir>/boost_1_84_0/./boost/test/impl</dir>
+      <file>execution_monitor.ipp</file>
+      <line>920</line>
+    </frame>
+    <frame>
+      <ip>0x4EB421B</ip>
+      <obj>/usr/local/lib/libboost_unit_test_framework.so.1.84.0</obj>
+      <fn>boost::execution_monitor::execute(boost::function&lt;int ()&gt; const&amp;)</fn>
+      <dir>/boost_1_84_0/./boost/test/impl</dir>
+      <file>execution_monitor.ipp</file>
+      <line>1318</line>
+    </frame>
+    <frame>
+      <ip>0x4EB4F25</ip>
+      <obj>/usr/local/lib/libboost_unit_test_framework.so.1.84.0</obj>
+      <fn>boost::execution_monitor::vexecute(boost::function&lt;void ()&gt; const&amp;)</fn>
+      <dir>/boost_1_84_0/./boost/test/impl</dir>
+      <file>execution_monitor.ipp</file>
+      <line>1414</line>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0x7</unique>
+  <tid>1</tid>
+  <kind>Leak_DefinitelyLost</kind>
+  <xwhat>
+    <text>8,192 bytes in 1 blocks are definitely lost in loss record 7 of 7</text>
+    <leakedbytes>8192</leakedbytes>
+    <leakedblocks>1</leakedblocks>
+  </xwhat>
+  <stack>
+    <frame>
+      <ip>0x4C2B800</ip>
+      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
+      <fn>operator new[](unsigned long)</fn>
+    </frame>
+    <frame>
+      <ip>0x54658AB</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19</obj>
+      <fn>std::basic_filebuf&lt;char, std::char_traits&lt;char&gt; &gt;::_M_allocate_internal_buffer()</fn>
+    </frame>
+    <frame>
+      <ip>0x5465EC1</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19</obj>
+      <fn>std::basic_filebuf&lt;char, std::char_traits&lt;char&gt; &gt;::open(char const*, std::_Ios_Openmode)</fn>
+    </frame>
+    <frame>
+      <ip>0x5466FAF</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19</obj>
+      <fn>std::basic_ifstream&lt;char, std::char_traits&lt;char&gt; &gt;::basic_ifstream(char const*, std::_Ios_Openmode)</fn>
+    </frame>
+    <frame>
+      <ip>0x7D7FCA</ip>
+      <obj>/tests/compiled/cpp_stl_11/bin/ks_tests</obj>
+      <fn>test_debug_array_user::test_method()</fn>
+      <dir>/tests/spec/cpp_stl_11</dir>
+      <file>test_debug_array_user.cpp</file>
+      <line>8</line>
+    </frame>
+    <frame>
+      <ip>0x7D7D2E</ip>
+      <obj>/tests/compiled/cpp_stl_11/bin/ks_tests</obj>
+      <fn>test_debug_array_user_invoker()</fn>
+      <dir>/tests/spec/cpp_stl_11</dir>
+      <file>test_debug_array_user.cpp</file>
+      <line>7</line>
+    </frame>
+    <frame>
+      <ip>0x7473E6</ip>
+      <obj>/tests/compiled/cpp_stl_11/bin/ks_tests</obj>
+      <fn>boost::detail::function::void_function_invoker0&lt;void (*)(), void&gt;::invoke(boost::detail::function::function_buffer&amp;)</fn>
+      <dir>/usr/local/include/boost/function</dir>
+      <file>function_template.hpp</file>
+      <line>117</line>
+    </frame>
+    <frame>
+      <ip>0x4EB730F</ip>
+      <obj>/usr/local/lib/libboost_unit_test_framework.so.1.84.0</obj>
+      <fn>boost::function0&lt;void&gt;::operator()() const</fn>
+      <dir>/boost_1_84_0/./boost/function</dir>
+      <file>function_template.hpp</file>
+      <line>772</line>
+    </frame>
+    <frame>
+      <ip>0x4EB648C</ip>
+      <obj>/usr/local/lib/libboost_unit_test_framework.so.1.84.0</obj>
+      <fn>boost::detail::forward::operator()()</fn>
+      <dir>/boost_1_84_0/./boost/test/impl</dir>
+      <file>execution_monitor.ipp</file>
+      <line>1405</line>
+    </frame>
+    <frame>
+      <ip>0x4EB8902</ip>
+      <obj>/usr/local/lib/libboost_unit_test_framework.so.1.84.0</obj>
+      <fn>boost::detail::function::function_obj_invoker0&lt;boost::detail::forward, int&gt;::invoke(boost::detail::function::function_buffer&amp;)</fn>
+      <dir>/boost_1_84_0/./boost/function</dir>
+      <file>function_template.hpp</file>
+      <line>137</line>
+    </frame>
+    <frame>
+      <ip>0x4EB78F3</ip>
+      <obj>/usr/local/lib/libboost_unit_test_framework.so.1.84.0</obj>
+      <fn>boost::function0&lt;int&gt;::operator()() const</fn>
+      <dir>/boost_1_84_0/./boost/function</dir>
+      <file>function_template.hpp</file>
+      <line>772</line>
+    </frame>
+    <frame>
+      <ip>0x4EB6DE3</ip>
+      <obj>/usr/local/lib/libboost_unit_test_framework.so.1.84.0</obj>
+      <fn>int boost::detail::do_invoke&lt;boost::shared_ptr&lt;boost::detail::translator_holder_base&gt;, boost::function&lt;int ()&gt; &gt;(boost::shared_ptr&lt;boost::detail::translator_holder_base&gt; const&amp;, boost::function&lt;int ()&gt; const&amp;)</fn>
+      <dir>/boost_1_84_0/./boost/test/impl</dir>
+      <file>execution_monitor.ipp</file>
+      <line>318</line>
+    </frame>
+  </stack>
+</error>
+
+<errorcounts>
+  <pair>
+    <count>1</count>
+    <unique>0x0</unique>
+  </pair>
+</errorcounts>
+
+<suppcounts>
+</suppcounts>
+
+</valgrindoutput>
+
