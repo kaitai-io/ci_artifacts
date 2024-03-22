@@ -14,7 +14,19 @@ Errors and Failures
 1) Failed : Kaitai.SpecExprIntDiv.TestExprIntDiv
   Expected: -756
   But was:  -757
-at Kaitai.SpecExprIntDiv.TestExprIntDiv () [0x00069] in <d4edce839b2f41d6a78ee031f68764ab>:0
+at Kaitai.SpecExprIntDiv.TestExprIntDiv () [0x00069] in <f6863ca71a254c25b83687ea3febb81c>:0
+
+2) Error : Kaitai.SpecNavParentRecursive.TestNavParentRecursive
+System.NullReferenceException : Object reference not set to an instance of an object
+  at Kaitai.NavParentRecursive.get_ParentValue () [0x00030] in <f6863ca71a254c25b83687ea3febb81c>:0 
+  at Kaitai.SpecNavParentRecursive.TestNavParentRecursive () [0x0004f] in <f6863ca71a254c25b83687ea3febb81c>:0 
+  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <d636f104d58046fd9b195699bcb1a744>:0 
+
+3) Failed : Kaitai.SpecNavRootRecursive.TestNavRootRecursive
+  Expected: 1
+  But was:  255
+at Kaitai.SpecNavRootRecursive.TestNavRootRecursive () [0x00054] in <f6863ca71a254c25b83687ea3febb81c>:0
 
 Run Settings
     WorkDirectory: /home/runner/work/ci_targets/ci_targets/tests
@@ -26,10 +38,10 @@ Run Settings
 
 Test Run Summary
   Overall result: Failed
-  Test Count: 224, Passed: 223, Failed: 1, Inconclusive: 0, Skipped: 0
-    Failed Tests - Failures: 1, Errors: 0, Invalid: 0
-  Start time: 2024-03-22 00:51:57Z
-    End time: 2024-03-22 00:51:58Z
-    Duration: 1.395 seconds
+  Test Count: 227, Passed: 224, Failed: 3, Inconclusive: 0, Skipped: 0
+    Failed Tests - Failures: 2, Errors: 1, Invalid: 0
+  Start time: 2024-03-22 15:23:52Z
+    End time: 2024-03-22 15:23:53Z
+    Duration: 1.511 seconds
 
 Results (nunit3) saved as test_out/csharp/TestResult.xml
