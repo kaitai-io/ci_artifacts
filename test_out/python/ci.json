@@ -1,13 +1,13 @@
 {
   "$meta": {
     "lang": "python",
-    "timestamp": "2024-03-18T17:45:43Z",
+    "timestamp": "2024-03-22T00:51:09Z",
     "ci": {
       "ci": "github",
-      "run_id": "8331221256",
-      "run_number": "319",
-      "job_id": "22797622692",
-      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/8331221256/job/22797622692"
+      "run_id": "8383756401",
+      "run_number": "320",
+      "job_id": "22960026735",
+      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/8383756401/job/22960026735"
     }
   },
   "BcdUserTypeBe": {
@@ -353,8 +353,8 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "byte format requires -128 <= number <= 127",
-      "trace": "Traceback (most recent call last):\n  File \"/tests/spec/python/test_expr_bytes_non_literal.py\", line 11, in test_expr_bytes_non_literal\n    self.assertEqual(len(r.calc_bytes), 2)\n  File \"/tests/compiled/python/expr_bytes_non_literal.py\", line 28, in calc_bytes\n    self._m_calc_bytes = struct.pack('2b', self.one, self.two)\nstruct.error: byte format requires -128 <= number <= 127"
+      "message": "name 'KaitaiStream' is not defined",
+      "trace": "Traceback (most recent call last):\n  File \"/tests/spec/python/test_expr_bytes_non_literal.py\", line 12, in test_expr_bytes_non_literal\n    self.assertEqual(KaitaiStream.byte_array_index(r.calc_bytes, 0), 255)\nNameError: name 'KaitaiStream' is not defined"
     },
     "is_kst": true
   },
@@ -632,8 +632,8 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "'NoneType' object has no attribute 'value'",
-      "trace": "Traceback (most recent call last):\n  File \"/tests/spec/python/test_nav_parent_recursive.py\", line 11, in test_nav_parent_recursive\n    self.assertEqual(r.next.parent_value, 255)\n  File \"/tests/compiled/python/nav_parent_recursive.py\", line 30, in parent_value\n    self._m_parent_value = self._parent.value\nAttributeError: 'NoneType' object has no attribute 'value'"
+      "message": "Failed to import test module: test_nav_parent_recursive\nTraceback (most recent call last):\n  File \"/usr/local/lib/python3.4/unittest/loader.py\", line 323, in _find_tests\n    module = self._get_module_from_name(name)\n  File \"/usr/local/lib/python3.4/unittest/loader.py\", line 301, in _get_module_from_name\n    __import__(name)\n  File \"/tests/spec/python/test_nav_parent_recursive.py\", line 3, in <module>\n    from nav_parent_recursive import NavParentRecursive\nImportError: No module named 'nav_parent_recursive'\n",
+      "trace": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.4/unittest/case.py\", line 58, in testPartExecutor\n    yield\n  File \"/usr/local/lib/python3.4/unittest/case.py\", line 580, in run\n    testMethod()\n  File \"/usr/local/lib/python3.4/unittest/loader.py\", line 33, in testFailure\n    raise self._exception\nImportError: Failed to import test module: test_nav_parent_recursive\nTraceback (most recent call last):\n  File \"/usr/local/lib/python3.4/unittest/loader.py\", line 323, in _find_tests\n    module = self._get_module_from_name(name)\n  File \"/usr/local/lib/python3.4/unittest/loader.py\", line 301, in _get_module_from_name\n    __import__(name)\n  File \"/tests/spec/python/test_nav_parent_recursive.py\", line 3, in <module>\n    from nav_parent_recursive import NavParentRecursive\nImportError: No module named 'nav_parent_recursive'"
     }
   },
   "NavParentSwitch": {
@@ -662,8 +662,8 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "1 != 255",
-      "trace": "Traceback (most recent call last):\n  File \"/tests/spec/python/test_nav_root_recursive.py\", line 11, in test_nav_root_recursive\n    self.assertEqual(r.next.root_value, 255)\nAssertionError: 1 != 255"
+      "message": "Failed to import test module: test_nav_root_recursive\nTraceback (most recent call last):\n  File \"/usr/local/lib/python3.4/unittest/loader.py\", line 323, in _find_tests\n    module = self._get_module_from_name(name)\n  File \"/usr/local/lib/python3.4/unittest/loader.py\", line 301, in _get_module_from_name\n    __import__(name)\n  File \"/tests/spec/python/test_nav_root_recursive.py\", line 3, in <module>\n    from nav_root_recursive import NavRootRecursive\nImportError: No module named 'nav_root_recursive'\n",
+      "trace": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.4/unittest/case.py\", line 58, in testPartExecutor\n    yield\n  File \"/usr/local/lib/python3.4/unittest/case.py\", line 580, in run\n    testMethod()\n  File \"/usr/local/lib/python3.4/unittest/loader.py\", line 33, in testFailure\n    raise self._exception\nImportError: Failed to import test module: test_nav_root_recursive\nTraceback (most recent call last):\n  File \"/usr/local/lib/python3.4/unittest/loader.py\", line 323, in _find_tests\n    module = self._get_module_from_name(name)\n  File \"/usr/local/lib/python3.4/unittest/loader.py\", line 301, in _get_module_from_name\n    __import__(name)\n  File \"/tests/spec/python/test_nav_root_recursive.py\", line 3, in <module>\n    from nav_root_recursive import NavRootRecursive\nImportError: No module named 'nav_root_recursive'"
     }
   },
   "NestedSameName": {
@@ -702,8 +702,8 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "name 'NestedTypes3' is not defined",
-      "trace": "Traceback (most recent call last):\n  File \"/tests/spec/python/test_nested_types_import.py\", line 9, in test_nested_types_import\n    with NestedTypesImport.from_file('src/fixed_struct.bin') as r:\n  File \"/runtime/python/kaitaistruct.py\", line 44, in from_file\n    return cls(KaitaiStream(f))\n  File \"/tests/compiled/python/nested_types_import.py\", line 16, in __init__\n    self._read()\n  File \"/tests/compiled/python/nested_types_import.py\", line 19, in _read\n    self.a_cc = NestedTypes3.SubtypeA.SubtypeCc(self._io, self, self._root)\nNameError: name 'NestedTypes3' is not defined"
+      "message": "Failed to import test module: test_nested_types_import\nTraceback (most recent call last):\n  File \"/usr/local/lib/python3.4/unittest/loader.py\", line 323, in _find_tests\n    module = self._get_module_from_name(name)\n  File \"/usr/local/lib/python3.4/unittest/loader.py\", line 301, in _get_module_from_name\n    __import__(name)\n  File \"/tests/spec/python/test_nested_types_import.py\", line 5, in <module>\n    from nested_types_import import NestedTypesImport\nImportError: No module named 'nested_types_import'\n",
+      "trace": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.4/unittest/case.py\", line 58, in testPartExecutor\n    yield\n  File \"/usr/local/lib/python3.4/unittest/case.py\", line 580, in run\n    testMethod()\n  File \"/usr/local/lib/python3.4/unittest/loader.py\", line 33, in testFailure\n    raise self._exception\nImportError: Failed to import test module: test_nested_types_import\nTraceback (most recent call last):\n  File \"/usr/local/lib/python3.4/unittest/loader.py\", line 323, in _find_tests\n    module = self._get_module_from_name(name)\n  File \"/usr/local/lib/python3.4/unittest/loader.py\", line 301, in _get_module_from_name\n    __import__(name)\n  File \"/tests/spec/python/test_nested_types_import.py\", line 5, in <module>\n    from nested_types_import import NestedTypesImport\nImportError: No module named 'nested_types_import'"
     },
     "is_kst": true
   },
@@ -729,8 +729,14 @@
     "elapsed": 0.0
   },
   "ParamsCall": {
-    "status": "passed",
+    "status": "failed",
     "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": "Failed to import test module: test_params_call\nTraceback (most recent call last):\n  File \"/usr/local/lib/python3.4/unittest/loader.py\", line 323, in _find_tests\n    module = self._get_module_from_name(name)\n  File \"/usr/local/lib/python3.4/unittest/loader.py\", line 301, in _get_module_from_name\n    __import__(name)\n  File \"/tests/spec/python/test_params_call.py\", line 5, in <module>\n    from params_call import ParamsCall\nImportError: No module named 'params_call'\n",
+      "trace": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.4/unittest/case.py\", line 58, in testPartExecutor\n    yield\n  File \"/usr/local/lib/python3.4/unittest/case.py\", line 580, in run\n    testMethod()\n  File \"/usr/local/lib/python3.4/unittest/loader.py\", line 33, in testFailure\n    raise self._exception\nImportError: Failed to import test module: test_params_call\nTraceback (most recent call last):\n  File \"/usr/local/lib/python3.4/unittest/loader.py\", line 323, in _find_tests\n    module = self._get_module_from_name(name)\n  File \"/usr/local/lib/python3.4/unittest/loader.py\", line 301, in _get_module_from_name\n    __import__(name)\n  File \"/tests/spec/python/test_params_call.py\", line 5, in <module>\n    from params_call import ParamsCall\nImportError: No module named 'params_call'"
+    },
     "is_kst": true
   },
   "ParamsCallExtraParens": {
