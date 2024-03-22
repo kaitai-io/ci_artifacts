@@ -1,13 +1,13 @@
 {
   "$meta": {
     "lang": "lua",
-    "timestamp": "2024-03-22T00:50:36Z",
+    "timestamp": "2024-03-22T15:22:12Z",
     "ci": {
       "ci": "github",
-      "run_id": "8383756401",
-      "run_number": "320",
-      "job_id": "22960025853",
-      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/8383756401/job/22960025853"
+      "run_id": "8392579569",
+      "run_number": "321",
+      "job_id": "22985549729",
+      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/8392579569/job/22985549729"
     }
   },
   "BcdUserTypeBe": {
@@ -640,8 +640,8 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "spec/lua/run_test_suite.lua:18: spec/lua/test_nav_parent_recursive.lua:5: module 'nav_parent_recursive' not found:\n\tno field package.preload['nav_parent_recursive']\n\tno file '../runtime/lua/nav_parent_recursive.lua'\n\tno file 'spec/lua/nav_parent_recursive.lua'\n\tno file 'spec/lua/extra/nav_parent_recursive.lua'\n\tno file 'compiled/lua/nav_parent_recursive.lua'\n\tno file '/lua_install/share/lua/5.3/nav_parent_recursive.lua'\n\tno file '/lua_install/share/lua/5.3/nav_parent_recursive/init.lua'\n\tno file './nav_parent_recursive.lua'\n\tno file './nav_parent_recursive/init.lua'\n\tno file '/lua_install/lib/lua/5.3/nav_parent_recursive.so'\n\tno file '/lua_install/lib/lua/5.3/loadall.so'\n\tno file './nav_parent_recursive.so'",
-      "trace": "stack traceback:\n\tspec/lua/run_test_suite.lua:18: in upvalue 'TestNavParentRecursive.test_nav_parent_recursive'"
+      "message": "compiled/lua/nav_parent_recursive.lua:31: attempt to index a nil value (field '_parent')",
+      "trace": "stack traceback:\n\tcompiled/lua/nav_parent_recursive.lua:31: in function <compiled/lua/nav_parent_recursive.lua:25>\n\t(...tail calls...)\n\tspec/lua/test_nav_parent_recursive.lua:14: in upvalue 'TestNavParentRecursive.test_nav_parent_recursive'"
     },
     "is_kst": true
   },
@@ -671,8 +671,8 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "spec/lua/run_test_suite.lua:18: spec/lua/test_nav_root_recursive.lua:5: module 'nav_root_recursive' not found:\n\tno field package.preload['nav_root_recursive']\n\tno file '../runtime/lua/nav_root_recursive.lua'\n\tno file 'spec/lua/nav_root_recursive.lua'\n\tno file 'spec/lua/extra/nav_root_recursive.lua'\n\tno file 'compiled/lua/nav_root_recursive.lua'\n\tno file '/lua_install/share/lua/5.3/nav_root_recursive.lua'\n\tno file '/lua_install/share/lua/5.3/nav_root_recursive/init.lua'\n\tno file './nav_root_recursive.lua'\n\tno file './nav_root_recursive/init.lua'\n\tno file '/lua_install/lib/lua/5.3/nav_root_recursive.so'\n\tno file '/lua_install/lib/lua/5.3/loadall.so'\n\tno file './nav_root_recursive.so'",
-      "trace": "stack traceback:\n\tspec/lua/run_test_suite.lua:18: in upvalue 'TestNavRootRecursive.test_nav_root_recursive'"
+      "message": "spec/lua/test_nav_root_recursive.lua:14: expected: 255, actual: 1",
+      "trace": "stack traceback:\n\tspec/lua/test_nav_root_recursive.lua:14: in upvalue 'TestNavRootRecursive.test_nav_root_recursive'"
     },
     "is_kst": true
   },
@@ -712,8 +712,8 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "spec/lua/run_test_suite.lua:18: spec/lua/test_nested_types_import.lua:5: module 'nested_types_import' not found:\n\tno field package.preload['nested_types_import']\n\tno file '../runtime/lua/nested_types_import.lua'\n\tno file 'spec/lua/nested_types_import.lua'\n\tno file 'spec/lua/extra/nested_types_import.lua'\n\tno file 'compiled/lua/nested_types_import.lua'\n\tno file '/lua_install/share/lua/5.3/nested_types_import.lua'\n\tno file '/lua_install/share/lua/5.3/nested_types_import/init.lua'\n\tno file './nested_types_import.lua'\n\tno file './nested_types_import/init.lua'\n\tno file '/lua_install/lib/lua/5.3/nested_types_import.so'\n\tno file '/lua_install/lib/lua/5.3/loadall.so'\n\tno file './nested_types_import.so'",
-      "trace": "stack traceback:\n\tspec/lua/run_test_suite.lua:18: in upvalue 'TestNestedTypesImport.test_nested_types_import'"
+      "message": "spec/lua/test_nested_types_import.lua:17: expected: nil, actual: <table 01> {\n    _io=<table 02> {_io=file (0x558d941e1a00), bits=0, bits_left=0},\n    _root=<table 01>,\n    a_c_d=<table 04> {_io=<table 02>, _parent=<table 01>, _root=<table 01>, value_d=65},\n    a_cc=<table 05> {_io=<table 02>, _parent=<table 01>, _root=<table 01>, value_cc=80},\n    b=<table 03> {\n        _io=<table 02>,\n        _parent=<table 01>,\n        _root=<table 01>,\n        a_c_d=<table 06> {_io=<table 02>, _parent=<table 03>, _root=<table 01>, value_d=45},\n        a_cc=<table 07> {_io=<table 02>, _parent=<table 03>, _root=<table 01>, value_cc=75},\n        value_b=67\n    }\n}",
+      "trace": "stack traceback:\n\tspec/lua/test_nested_types_import.lua:17: in upvalue 'TestNestedTypesImport.test_nested_types_import'"
     },
     "is_kst": true
   },
@@ -739,14 +739,8 @@
     "elapsed": 0.0
   },
   "ParamsCall": {
-    "status": "failed",
+    "status": "passed",
     "elapsed": 0.0,
-    "failure": {
-      "file_name": null,
-      "line_num": null,
-      "message": "spec/lua/run_test_suite.lua:18: spec/lua/test_params_call.lua:5: module 'params_call' not found:\n\tno field package.preload['params_call']\n\tno file '../runtime/lua/params_call.lua'\n\tno file 'spec/lua/params_call.lua'\n\tno file 'spec/lua/extra/params_call.lua'\n\tno file 'compiled/lua/params_call.lua'\n\tno file '/lua_install/share/lua/5.3/params_call.lua'\n\tno file '/lua_install/share/lua/5.3/params_call/init.lua'\n\tno file './params_call.lua'\n\tno file './params_call/init.lua'\n\tno file '/lua_install/lib/lua/5.3/params_call.so'\n\tno file '/lua_install/lib/lua/5.3/loadall.so'\n\tno file './params_call.so'",
-      "trace": "stack traceback:\n\tspec/lua/run_test_suite.lua:18: in upvalue 'TestParamsCall.test_params_call'"
-    },
     "is_kst": true
   },
   "ParamsCallExtraParens": {
