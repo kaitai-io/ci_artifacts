@@ -1,63 +1,3 @@
-spec/java/src/io/kaitai/struct/spec/TestNavParentRecursive.java:5: error: cannot find symbol
-import io.kaitai.struct.testformats.NavParentRecursive;
-                                   ^
-  symbol:   class NavParentRecursive
-  location: package io.kaitai.struct.testformats
-spec/java/src/io/kaitai/struct/spec/TestNavRootRecursive.java:5: error: cannot find symbol
-import io.kaitai.struct.testformats.NavRootRecursive;
-                                   ^
-  symbol:   class NavRootRecursive
-  location: package io.kaitai.struct.testformats
-spec/java/src/io/kaitai/struct/spec/TestNestedTypesImport.java:5: error: cannot find symbol
-import io.kaitai.struct.testformats.NestedTypesImport;
-                                   ^
-  symbol:   class NestedTypesImport
-  location: package io.kaitai.struct.testformats
-spec/java/src/io/kaitai/struct/spec/TestParamsCall.java:5: error: cannot find symbol
-import io.kaitai.struct.testformats.ParamsCall;
-                                   ^
-  symbol:   class ParamsCall
-  location: package io.kaitai.struct.testformats
-spec/java/src/io/kaitai/struct/spec/TestNavParentRecursive.java:12: error: cannot find symbol
-        NavParentRecursive r = NavParentRecursive.fromFile(SRC_DIR + "enum_negative.bin");
-        ^
-  symbol:   class NavParentRecursive
-  location: class TestNavParentRecursive
-spec/java/src/io/kaitai/struct/spec/TestNavParentRecursive.java:12: error: cannot find symbol
-        NavParentRecursive r = NavParentRecursive.fromFile(SRC_DIR + "enum_negative.bin");
-                               ^
-  symbol:   variable NavParentRecursive
-  location: class TestNavParentRecursive
-spec/java/src/io/kaitai/struct/spec/TestNavRootRecursive.java:12: error: cannot find symbol
-        NavRootRecursive r = NavRootRecursive.fromFile(SRC_DIR + "enum_negative.bin");
-        ^
-  symbol:   class NavRootRecursive
-  location: class TestNavRootRecursive
-spec/java/src/io/kaitai/struct/spec/TestNavRootRecursive.java:12: error: cannot find symbol
-        NavRootRecursive r = NavRootRecursive.fromFile(SRC_DIR + "enum_negative.bin");
-                             ^
-  symbol:   variable NavRootRecursive
-  location: class TestNavRootRecursive
-spec/java/src/io/kaitai/struct/spec/TestNestedTypesImport.java:12: error: cannot find symbol
-        NestedTypesImport r = NestedTypesImport.fromFile(SRC_DIR + "fixed_struct.bin");
-        ^
-  symbol:   class NestedTypesImport
-  location: class TestNestedTypesImport
-spec/java/src/io/kaitai/struct/spec/TestNestedTypesImport.java:12: error: cannot find symbol
-        NestedTypesImport r = NestedTypesImport.fromFile(SRC_DIR + "fixed_struct.bin");
-                              ^
-  symbol:   variable NestedTypesImport
-  location: class TestNestedTypesImport
-spec/java/src/io/kaitai/struct/spec/TestParamsCall.java:11: error: cannot find symbol
-        ParamsCall r = ParamsCall.fromFile(SRC_DIR + "term_strz.bin");
-        ^
-  symbol:   class ParamsCall
-  location: class TestParamsCall
-spec/java/src/io/kaitai/struct/spec/TestParamsCall.java:11: error: cannot find symbol
-        ParamsCall r = ParamsCall.fromFile(SRC_DIR + "term_strz.bin");
-                       ^
-  symbol:   variable ParamsCall
-  location: class TestParamsCall
 compiled/java/src/io/kaitai/struct/testformats/ExprBits.java:56: error: possible loss of precision
         switch (a()) {
                  ^
@@ -78,4 +18,31 @@ compiled/java/src/io/kaitai/struct/testformats/ExprBytesNonLiteral.java:37: erro
                                                 ^
   required: byte
   found:    int
-16 errors
+compiled/java/src/io/kaitai/struct/testformats/NestedTypesImport.java:30: error: no suitable constructor found for SubtypeCc(KaitaiStream,NestedTypesImport,NestedTypesImport)
+        this.aCc = new NestedTypes3.SubtypeA.SubtypeCc(this._io, this, _root);
+                   ^
+    constructor SubtypeCc.SubtypeCc(KaitaiStream,KaitaiStruct,NestedTypes3) is not applicable
+      (actual argument NestedTypesImport cannot be converted to NestedTypes3 by method invocation conversion)
+    constructor SubtypeCc.SubtypeCc(KaitaiStream,KaitaiStruct) is not applicable
+      (actual and formal argument lists differ in length)
+    constructor SubtypeCc.SubtypeCc(KaitaiStream) is not applicable
+      (actual and formal argument lists differ in length)
+compiled/java/src/io/kaitai/struct/testformats/NestedTypesImport.java:31: error: no suitable constructor found for SubtypeD(KaitaiStream,NestedTypesImport,NestedTypesImport)
+        this.aCD = new NestedTypes3.SubtypeA.SubtypeC.SubtypeD(this._io, this, _root);
+                   ^
+    constructor SubtypeD.SubtypeD(KaitaiStream,KaitaiStruct,NestedTypes3) is not applicable
+      (actual argument NestedTypesImport cannot be converted to NestedTypes3 by method invocation conversion)
+    constructor SubtypeD.SubtypeD(KaitaiStream,KaitaiStruct) is not applicable
+      (actual and formal argument lists differ in length)
+    constructor SubtypeD.SubtypeD(KaitaiStream) is not applicable
+      (actual and formal argument lists differ in length)
+compiled/java/src/io/kaitai/struct/testformats/NestedTypesImport.java:32: error: no suitable constructor found for SubtypeB(KaitaiStream,NestedTypesImport,NestedTypesImport)
+        this.b = new NestedTypes3.SubtypeB(this._io, this, _root);
+                 ^
+    constructor SubtypeB.SubtypeB(KaitaiStream,KaitaiStruct,NestedTypes3) is not applicable
+      (actual argument NestedTypesImport cannot be converted to NestedTypes3 by method invocation conversion)
+    constructor SubtypeB.SubtypeB(KaitaiStream,KaitaiStruct) is not applicable
+      (actual and formal argument lists differ in length)
+    constructor SubtypeB.SubtypeB(KaitaiStream) is not applicable
+      (actual and formal argument lists differ in length)
+7 errors
