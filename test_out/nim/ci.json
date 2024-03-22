@@ -1,13 +1,13 @@
 {
   "$meta": {
     "lang": "nim",
-    "timestamp": "2024-03-18T17:49:44Z",
+    "timestamp": "2024-03-22T00:54:47Z",
     "ci": {
       "ci": "github",
-      "run_id": "8331221256",
-      "run_number": "319",
-      "job_id": "22797620925",
-      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/8331221256/job/22797620925"
+      "run_id": "8383756401",
+      "run_number": "320",
+      "job_id": "22960025958",
+      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/8383756401/job/22960025958"
     }
   },
   "BcdUserTypeBe": {
@@ -482,7 +482,7 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "/tests/compiled/nim/imports_abs.nim(3, 15) Error: cannot open file: /common/vlq_base128_le\n",
+      "message": "/tests/compiled/nim/vlq_base128_le.nim(80, 58) Error: type mismatch: got &lt;uint64, int&gt;\nbut expected one of:\nproc `*`(x, y: uint64): uint64\n  first type mismatch at position: 2\n  required type for y: uint64\n  but expression &apos;len(this)&apos; is of type: int\n12 other mismatching symbols have been suppressed; compile with --showAllMismatches:on to see them\n\nexpression: 128&apos;u64 * len(this)\n",
       "trace": ""
     },
     "is_kst": true
@@ -625,8 +625,14 @@
     "is_kst": true
   },
   "NavParentRecursive": {
-    "status": "passed",
+    "status": "failed",
     "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": "/tests/spec/nim/tnav_parent_recursive.nim(4, 26) Error: cannot open file: ../../compiled/nim/nav_parent_recursive\n",
+      "trace": ""
+    },
     "is_kst": true
   },
   "NavParentSwitch": {
@@ -656,8 +662,14 @@
     "is_kst": true
   },
   "NavRootRecursive": {
-    "status": "passed",
+    "status": "failed",
     "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": "/tests/spec/nim/tnav_root_recursive.nim(4, 26) Error: cannot open file: ../../compiled/nim/nav_root_recursive\n",
+      "trace": ""
+    },
     "is_kst": true
   },
   "NestedSameName": {
@@ -696,7 +708,7 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "/tests/spec/nim/tnested_types_import.nim(14) tnested_types_import\n/nim/lib/system/assertions.nim(38) failedAssertImpl\n/nim/lib/system/assertions.nim(28) raiseAssert\n/nim/lib/system/fatal.nim(53) sysFatal\nError: unhandled exception: /tests/spec/nim/tnested_types_import.nim(14, 8) `r.aCc.parent == nil`  [AssertionDefect]\n",
+      "message": "/tests/spec/nim/tnested_types_import.nim(4, 26) Error: cannot open file: ../../compiled/nim/nested_types_import\n",
       "trace": ""
     },
     "is_kst": true
@@ -707,8 +719,14 @@
     "is_kst": true
   },
   "ParamsCall": {
-    "status": "passed",
+    "status": "failed",
     "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": "/tests/spec/nim/tparams_call.nim(4, 26) Error: cannot open file: ../../compiled/nim/params_call\n",
+      "trace": ""
+    },
     "is_kst": true
   },
   "ParamsCallExtraParens": {
