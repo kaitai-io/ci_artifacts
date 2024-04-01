@@ -1,13 +1,13 @@
 {
   "$meta": {
     "lang": "lua",
-    "timestamp": "2024-03-22T15:22:12Z",
+    "timestamp": "2024-04-01T11:40:47Z",
     "ci": {
       "ci": "github",
-      "run_id": "8392579569",
-      "run_number": "321",
-      "job_id": "22985549729",
-      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/8392579569/job/22985549729"
+      "run_id": "8507591430",
+      "run_number": "322",
+      "job_id": "23299696039",
+      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/8507591430/job/23299696039"
     }
   },
   "BcdUserTypeBe": {
@@ -404,6 +404,17 @@
     "elapsed": 0.0,
     "is_kst": true
   },
+  "ExprIoTernary": {
+    "status": "failed",
+    "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": "../runtime/lua/kaitaistruct.lua:267: requested 8 bytes, but only 7 bytes available",
+      "trace": "stack traceback:\n\t../runtime/lua/kaitaistruct.lua:267: in method 'read_bytes'\n\tcompiled/lua/expr_io_ternary.lua:24: in method '_read'\n\tcompiled/lua/expr_io_ternary.lua:16: in local 'init'\n\t../runtime/lua/class.lua:70: in function <../runtime/lua/class.lua:66>\n\t(...tail calls...)\n\tspec/lua/test_expr_io_ternary.lua:10: in upvalue 'TestExprIoTernary.test_expr_io_ternary'"
+    },
+    "is_kst": true
+  },
   "ExprMod": {
     "status": "passed",
     "elapsed": 0.0,
@@ -635,14 +646,8 @@
     "is_kst": true
   },
   "NavParentRecursive": {
-    "status": "failed",
+    "status": "passed",
     "elapsed": 0.0,
-    "failure": {
-      "file_name": null,
-      "line_num": null,
-      "message": "compiled/lua/nav_parent_recursive.lua:31: attempt to index a nil value (field '_parent')",
-      "trace": "stack traceback:\n\tcompiled/lua/nav_parent_recursive.lua:31: in function <compiled/lua/nav_parent_recursive.lua:25>\n\t(...tail calls...)\n\tspec/lua/test_nav_parent_recursive.lua:14: in upvalue 'TestNavParentRecursive.test_nav_parent_recursive'"
-    },
     "is_kst": true
   },
   "NavParentSwitch": {
@@ -666,14 +671,8 @@
     "is_kst": true
   },
   "NavRootRecursive": {
-    "status": "failed",
+    "status": "passed",
     "elapsed": 0.0,
-    "failure": {
-      "file_name": null,
-      "line_num": null,
-      "message": "spec/lua/test_nav_root_recursive.lua:14: expected: 255, actual: 1",
-      "trace": "stack traceback:\n\tspec/lua/test_nav_root_recursive.lua:14: in upvalue 'TestNavRootRecursive.test_nav_root_recursive'"
-    },
     "is_kst": true
   },
   "NestedSameName": {
@@ -712,8 +711,8 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "spec/lua/test_nested_types_import.lua:17: expected: nil, actual: <table 01> {\n    _io=<table 02> {_io=file (0x558d941e1a00), bits=0, bits_left=0},\n    _root=<table 01>,\n    a_c_d=<table 04> {_io=<table 02>, _parent=<table 01>, _root=<table 01>, value_d=65},\n    a_cc=<table 05> {_io=<table 02>, _parent=<table 01>, _root=<table 01>, value_cc=80},\n    b=<table 03> {\n        _io=<table 02>,\n        _parent=<table 01>,\n        _root=<table 01>,\n        a_c_d=<table 06> {_io=<table 02>, _parent=<table 03>, _root=<table 01>, value_d=45},\n        a_cc=<table 07> {_io=<table 02>, _parent=<table 03>, _root=<table 01>, value_cc=75},\n        value_b=67\n    }\n}",
-      "trace": "stack traceback:\n\tspec/lua/test_nested_types_import.lua:17: in upvalue 'TestNestedTypesImport.test_nested_types_import'"
+      "message": "spec/lua/test_nested_types_import.lua:18: expected: nil, actual: <table 01> {\n    _io=<table 02> {_io=file (0x55b36710a660), bits=0, bits_left=0},\n    _root=<table 01>,\n    value_cc=80\n}",
+      "trace": "stack traceback:\n\tspec/lua/test_nested_types_import.lua:18: in upvalue 'TestNestedTypesImport.test_nested_types_import'"
     },
     "is_kst": true
   },
