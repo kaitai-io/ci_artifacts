@@ -1,13 +1,13 @@
 {
   "$meta": {
     "lang": "construct",
-    "timestamp": "2024-03-22T15:21:23Z",
+    "timestamp": "2024-04-01T11:40:03Z",
     "ci": {
       "ci": "github",
-      "run_id": "8392579569",
-      "run_number": "321",
-      "job_id": "22985545184",
-      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/8392579569/job/22985545184"
+      "run_id": "8507591430",
+      "run_number": "322",
+      "job_id": "23299694171",
+      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/8507591430/job/23299694171"
     }
   },
   "BcdUserTypeBe": {
@@ -574,6 +574,17 @@
       "line_num": null,
       "message": "Failed to import test module: test_expr_io_pos\nTraceback (most recent call last):\n  File \"/usr/local/lib/python3.12/unittest/loader.py\", line 394, in _find_test_path\n    module = self._get_module_from_name(name)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/unittest/loader.py\", line 337, in _get_module_from_name\n    __import__(name)\n  File \"/tests/spec/construct/test_expr_io_pos.py\", line 5, in <module>\n    from expr_io_pos import _schema\n  File \"/tests/compiled/construct/expr_io_pos.py\", line 6, in <module>\n    'body' / FixedSized((stream_size(_io) - stream_tell(_io)) - 2, GreedyBytes),\n                                     ^^^\nNameError: name '_io' is not defined. Did you forget to import '_io'\n",
       "trace": "ImportError: Failed to import test module: test_expr_io_pos\nTraceback (most recent call last):\n  File \"/usr/local/lib/python3.12/unittest/loader.py\", line 394, in _find_test_path\n    module = self._get_module_from_name(name)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/unittest/loader.py\", line 337, in _get_module_from_name\n    __import__(name)\n  File \"/tests/spec/construct/test_expr_io_pos.py\", line 5, in <module>\n    from expr_io_pos import _schema\n  File \"/tests/compiled/construct/expr_io_pos.py\", line 6, in <module>\n    'body' / FixedSized((stream_size(_io) - stream_tell(_io)) - 2, GreedyBytes),\n                                     ^^^\nNameError: name '_io' is not defined. Did you forget to import '_io'"
+    },
+    "is_kst": true
+  },
+  "ExprIoTernary": {
+    "status": "failed",
+    "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": "Error in path (parsing) -> obj2\nstream read less than specified amount, expected 8, found 7",
+      "trace": "Traceback (most recent call last):\n  File \"/tests/spec/construct/test_expr_io_ternary.py\", line 9, in test_expr_io_ternary\n    r = _schema.parse_file('src/term_strz.bin')\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 425, in parse_file\n    return self.parse_stream(f, **contextkw)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 416, in parse_stream\n    return self._parsereport(stream, context, \"(parsing)\")\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 428, in _parsereport\n    obj = self._parse(stream, context, path)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 2236, in _parse\n    subobj = sc._parsereport(stream, context, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 428, in _parsereport\n    obj = self._parse(stream, context, path)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 2770, in _parse\n    return self.subcon._parsereport(stream, context, path)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 428, in _parsereport\n    obj = self._parse(stream, context, path)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 4991, in _parse\n    substream = BytesIOWithOffsets.from_reading(stream, length, path)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 242, in from_reading\n    contents = stream_read(stream, length, path)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 178, in stream_read\n    raise StreamError(\"stream read less than specified amount, expected %d, found %d\" % (length, len(data)), path=path)\nconstruct.core.StreamError: Error in path (parsing) -> obj2\nstream read less than specified amount, expected 8, found 7"
     },
     "is_kst": true
   },
@@ -1312,8 +1323,8 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "<built-in method values of Container object at 0x7f2978053c50> != [1, 2, 3, 4]",
-      "trace": "Traceback (most recent call last):\n  File \"/tests/spec/construct/test_repeat_until_complex.py\", line 12, in test_repeat_until_complex\n    self.assertEqual(r.first[0].values, [(0 + 1), 2, 3, 4])\nAssertionError: <built-in method values of Container object at 0x7f2978053c50> != [1, 2, 3, 4]"
+      "message": "<built-in method values of Container object at 0x7fa6d10d8950> != [1, 2, 3, 4]",
+      "trace": "Traceback (most recent call last):\n  File \"/tests/spec/construct/test_repeat_until_complex.py\", line 12, in test_repeat_until_complex\n    self.assertEqual(r.first[0].values, [(0 + 1), 2, 3, 4])\nAssertionError: <built-in method values of Container object at 0x7fa6d10d8950> != [1, 2, 3, 4]"
     },
     "is_kst": true
   },
