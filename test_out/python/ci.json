@@ -1,13 +1,13 @@
 {
   "$meta": {
     "lang": "python",
-    "timestamp": "2024-03-22T15:22:39Z",
+    "timestamp": "2024-04-01T11:41:00Z",
     "ci": {
       "ci": "github",
-      "run_id": "8392579569",
-      "run_number": "321",
-      "job_id": "22985552202",
-      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/8392579569/job/22985552202"
+      "run_id": "8507591430",
+      "run_number": "322",
+      "job_id": "23299697283",
+      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/8507591430/job/23299697283"
     }
   },
   "BcdUserTypeBe": {
@@ -243,8 +243,9 @@
       "file_name": null,
       "line_num": null,
       "message": "name 'Enum0' is not defined",
-      "trace": "Traceback (most recent call last):\n  File \"/tests/spec/python/test_enum_import.py\", line 9, in test_enum_import\n    with EnumImport.from_file('src/enum_0.bin') as r:\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/runtime/python/kaitaistruct.py\", line 44, in from_file\n    return cls(KaitaiStream(f))\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/tests/compiled/python/enum_import.py\", line 16, in __init__\n    self._read()\n  File \"/tests/compiled/python/enum_import.py\", line 19, in _read\n    self.pet_1 = KaitaiStream.resolve_enum(Enum0.Animal, self._io.read_u4le())\n                                           ^^^^^\nNameError: name 'Enum0' is not defined"
-    }
+      "trace": "Traceback (most recent call last):\n  File \"/tests/spec/python/test_enum_import.py\", line 10, in test_enum_import\n    with EnumImport.from_file('src/enum_0.bin') as r:\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/runtime/python/kaitaistruct.py\", line 44, in from_file\n    return cls(KaitaiStream(f))\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/tests/compiled/python/enum_import.py\", line 16, in __init__\n    self._read()\n  File \"/tests/compiled/python/enum_import.py\", line 19, in _read\n    self.pet_1 = KaitaiStream.resolve_enum(Enum0.Animal, self._io.read_u4le())\n                                           ^^^^^\nNameError: name 'Enum0' is not defined"
+    },
+    "is_kst": true
   },
   "EnumIntRangeS": {
     "status": "passed",
@@ -419,6 +420,17 @@
   "ExprIoPos": {
     "status": "passed",
     "elapsed": 0.0,
+    "is_kst": true
+  },
+  "ExprIoTernary": {
+    "status": "failed",
+    "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": "requested 8 bytes, but only 7 bytes available",
+      "trace": "Traceback (most recent call last):\n  File \"/tests/spec/python/test_expr_io_ternary.py\", line 9, in test_expr_io_ternary\n    with ExprIoTernary.from_file('src/term_strz.bin') as r:\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/runtime/python/kaitaistruct.py\", line 44, in from_file\n    return cls(KaitaiStream(f))\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/tests/compiled/python/expr_io_ternary.py\", line 16, in __init__\n    self._read()\n  File \"/tests/compiled/python/expr_io_ternary.py\", line 23, in _read\n    self._raw_obj2 = self._io.read_bytes(8)\n                     ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/runtime/python/kaitaistruct.py\", line 366, in read_bytes\n    return self._read_bytes_not_aligned(n)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/runtime/python/kaitaistruct.py\", line 398, in _read_bytes_not_aligned\n    raise EOFError(\nEOFError: requested 8 bytes, but only 7 bytes available"
+    },
     "is_kst": true
   },
   "ExprMod": {
@@ -644,14 +656,8 @@
     "is_kst": true
   },
   "NavParentRecursive": {
-    "status": "failed",
-    "elapsed": 0.0,
-    "failure": {
-      "file_name": null,
-      "line_num": null,
-      "message": "'NoneType' object has no attribute 'value'",
-      "trace": "Traceback (most recent call last):\n  File \"/tests/spec/python/test_nav_parent_recursive.py\", line 11, in test_nav_parent_recursive\n    self.assertEqual(r.next.parent_value, 255)\n                     ^^^^^^^^^^^^^^^^^^^\n  File \"/tests/compiled/python/nav_parent_recursive.py\", line 30, in parent_value\n    self._m_parent_value = self._parent.value\n                           ^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'value'"
-    }
+    "status": "passed",
+    "elapsed": 0.0
   },
   "NavParentSwitch": {
     "status": "passed",
@@ -674,14 +680,8 @@
     "is_kst": true
   },
   "NavRootRecursive": {
-    "status": "failed",
-    "elapsed": 0.0,
-    "failure": {
-      "file_name": null,
-      "line_num": null,
-      "message": "1 != 255",
-      "trace": "Traceback (most recent call last):\n  File \"/tests/spec/python/test_nav_root_recursive.py\", line 11, in test_nav_root_recursive\n    self.assertEqual(r.next.root_value, 255)\nAssertionError: 1 != 255"
-    }
+    "status": "passed",
+    "elapsed": 0.0
   },
   "NestedSameName": {
     "status": "passed",
@@ -719,8 +719,8 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "name 'NestedTypes3' is not defined",
-      "trace": "Traceback (most recent call last):\n  File \"/tests/spec/python/test_nested_types_import.py\", line 9, in test_nested_types_import\n    with NestedTypesImport.from_file('src/fixed_struct.bin') as r:\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/runtime/python/kaitaistruct.py\", line 44, in from_file\n    return cls(KaitaiStream(f))\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/tests/compiled/python/nested_types_import.py\", line 16, in __init__\n    self._read()\n  File \"/tests/compiled/python/nested_types_import.py\", line 19, in _read\n    self.a_cc = NestedTypes3.SubtypeA.SubtypeCc(self._io, self, self._root)\n                ^^^^^^^^^^^^\nNameError: name 'NestedTypes3' is not defined"
+      "message": "name 'nested_types3' is not defined",
+      "trace": "Traceback (most recent call last):\n  File \"/tests/spec/python/test_nested_types_import.py\", line 9, in test_nested_types_import\n    with NestedTypesImport.from_file('src/fixed_struct.bin') as r:\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/runtime/python/kaitaistruct.py\", line 44, in from_file\n    return cls(KaitaiStream(f))\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/tests/compiled/python/nested_types_import.py\", line 16, in __init__\n    self._read()\n  File \"/tests/compiled/python/nested_types_import.py\", line 19, in _read\n    self.a_cc = nested_types3.NestedTypes3.SubtypeA.SubtypeCc(self._io)\n                ^^^^^^^^^^^^^\nNameError: name 'nested_types3' is not defined"
     },
     "is_kst": true
   },
