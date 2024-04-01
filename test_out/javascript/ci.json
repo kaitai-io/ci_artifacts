@@ -1,13 +1,13 @@
 {
   "$meta": {
     "lang": "javascript",
-    "timestamp": "2024-03-22T15:22:07Z",
+    "timestamp": "2024-04-01T11:40:32Z",
     "ci": {
       "ci": "github",
-      "run_id": "8392579569",
-      "run_number": "321",
-      "job_id": "22985549455",
-      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/8392579569/job/22985549455"
+      "run_id": "8507591430",
+      "run_number": "322",
+      "job_id": "23299695888",
+      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/8507591430/job/23299695888"
     }
   },
   "BcdUserTypeBe": {
@@ -273,14 +273,8 @@
     "is_kst": true
   },
   "EnumImport": {
-    "status": "failed",
+    "status": "passed",
     "elapsed": 0.0,
-    "failure": {
-      "file_name": null,
-      "line_num": null,
-      "message": null,
-      "trace": "Enum0 is not defined\nReferenceError: Enum0 is not defined\n    at /tests/spec/javascript/test_enum_import.js:8:30\n    at /tests/helpers/javascript/testHelper.js:16:11\n    at FSReqCallback.readFileAfterClose [as oncomplete] (node:internal/fs/read/context:68:3)"
-    },
     "is_kst": true
   },
   "EnumIntRangeS": {
@@ -437,6 +431,17 @@
   "ExprIoPos": {
     "status": "passed",
     "elapsed": 0.0,
+    "is_kst": true
+  },
+  "ExprIoTernary": {
+    "status": "failed",
+    "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": null,
+      "trace": "requested 8 bytes, but only 7 bytes available\nError\n    at new KaitaiStream.EOFError (/runtime/javascript/KaitaiStream.js:765:17)\n    at KaitaiStream.ensureBytesLeft (/runtime/javascript/KaitaiStream.js:852:11)\n    at KaitaiStream.mapUint8Array (/runtime/javascript/KaitaiStream.js:867:8)\n    at KaitaiStream.readBytes (/runtime/javascript/KaitaiStream.js:540:15)\n    at ExprIoTernary._read (compiled/javascript/ExprIoTernary.js:25:31)\n    at new ExprIoTernary (compiled/javascript/ExprIoTernary.js:18:10)\n    at /tests/helpers/javascript/testHelper.js:14:17\n    at FSReqCallback.readFileAfterClose [as oncomplete] (node:internal/fs/read/context:68:3)"
+    },
     "is_kst": true
   },
   "ExprMod": {
@@ -712,14 +717,8 @@
     "is_kst": true
   },
   "NavRootRecursive": {
-    "status": "failed",
+    "status": "passed",
     "elapsed": 0.0,
-    "failure": {
-      "file_name": null,
-      "line_num": null,
-      "message": null,
-      "trace": "Expected values to be strictly equal:\n\n1 !== 255\n\n\n      + expected - actual\n\n      -1\n      +255\n      \nAssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n1 !== 255\n\n    at /tests/spec/javascript/test_nav_root_recursive.js:10:10\n    at /tests/helpers/javascript/testHelper.js:16:11\n    at FSReqCallback.readFileAfterClose [as oncomplete] (node:internal/fs/read/context:68:3)"
-    },
     "is_kst": true
   },
   "NestedSameName": {
@@ -760,8 +759,7 @@
       "line_num": null,
       "message": null,
       "trace": "NestedTypes3_ is not defined\nReferenceError: NestedTypes3_ is not defined\n    at NestedTypesImport._read (compiled/javascript/NestedTypesImport.js:21:20)\n    at new NestedTypesImport (compiled/javascript/NestedTypesImport.js:18:10)\n    at /tests/helpers/javascript/testHelper.js:14:17\n    at FSReqCallback.readFileAfterClose [as oncomplete] (node:internal/fs/read/context:68:3)"
-    },
-    "is_kst": true
+    }
   },
   "NonStandard": {
     "status": "passed",
