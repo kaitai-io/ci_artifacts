@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites tests="195" failures="16">
-	<testsuite name="_/tests/spec/go" tests="195" failures="16" errors="0" id="0" hostname="10f93306e194" time="0.050" timestamp="2024-03-22T15:21:34Z">
+<testsuites tests="195" failures="15">
+	<testsuite name="_/tests/spec/go" tests="195" failures="15" errors="0" id="0" hostname="ff02152df3a9" time="0.047" timestamp="2024-04-01T11:40:14Z">
 		<testcase name="TestBitsByteAligned" classname="_/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestBitsEnum" classname="_/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestBitsSeqEndianCombo" classname="_/tests/spec/go" time="0.000"></testcase>
@@ -49,13 +49,13 @@
 		<testcase name="TestEnumOfValueInst" classname="_/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestEnumToIClassBorder1" classname="_/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestEofExceptionBytes" classname="_/tests/spec/go" time="0.000">
-			<failure message="Failed"><![CDATA[    eof_exception_bytes_test.go:31: expected kaitai.EndOfStreamError, got *errors.errorString]]></failure>
+			<failure message="Failed"><![CDATA[    eof_exception_bytes_test.go:31: expected kaitai.EndOfStreamError, got *fmt.wrapError]]></failure>
 		</testcase>
 		<testcase name="TestEofExceptionU4" classname="_/tests/spec/go" time="0.000">
 			<failure message="Failed"><![CDATA[    eof_exception_u4_test.go:31: expected kaitai.EndOfStreamError, got <nil>]]></failure>
 		</testcase>
 		<testcase name="TestEosExceptionBytes" classname="_/tests/spec/go" time="0.000">
-			<failure message="Failed"><![CDATA[    eos_exception_bytes_test.go:31: expected kaitai.EndOfStreamError, got *errors.errorString]]></failure>
+			<failure message="Failed"><![CDATA[    eos_exception_bytes_test.go:31: expected kaitai.EndOfStreamError, got *fmt.wrapError]]></failure>
 		</testcase>
 		<testcase name="TestEosExceptionU4" classname="_/tests/spec/go" time="0.000">
 			<failure message="Failed"><![CDATA[    eos_exception_u4_test.go:31: expected kaitai.EndOfStreamError, got <nil>]]></failure>
@@ -147,26 +147,7 @@
 		<testcase name="TestNavParentOverride" classname="_/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestNavParent" classname="_/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestNavParentVsValueInst" classname="_/tests/spec/go" time="0.000"></testcase>
-		<testcase name="TestNavRootRecursive" classname="_/tests/spec/go" time="0.000">
-			<failure message="Failed"><![CDATA[goroutine 112 [running]:
-runtime/debug.Stack()
-	/usr/local/go/src/runtime/debug/stack.go:24 +0x5e
-runtime/debug.PrintStack()
-	/usr/local/go/src/runtime/debug/stack.go:16 +0x13
-_/tests/spec/go.TestNavRootRecursive.func1()
-	/tests/spec/go/nav_root_recursive_test.go:17 +0x39
-panic({0x619900?, 0x844030?})
-	/usr/local/go/src/runtime/panic.go:914 +0x21f
-test_formats.(*NavRootRecursive).RootValue(...)
-	/tests/compiled/go/src/test_formats/nav_root_recursive.go:45
-_/tests/spec/go.TestNavRootRecursive(0xc0001b9520)
-	/tests/spec/go/nav_root_recursive_test.go:34 +0x203
-testing.tRunner(0xc0001b9520, 0x690778)
-	/usr/local/go/src/testing/testing.go:1595 +0xff
-created by testing.(*T).Run in goroutine 1
-	/usr/local/go/src/testing/testing.go:1648 +0x3ad
-    nav_root_recursive_test.go:18: unexpected panic: runtime error: invalid memory address or nil pointer dereference]]></failure>
-		</testcase>
+		<testcase name="TestNavRootRecursive" classname="_/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestNavRoot" classname="_/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestNestedSameName2" classname="_/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestNestedSameName" classname="_/tests/spec/go" time="0.000"></testcase>
@@ -183,21 +164,21 @@ runtime/debug.PrintStack()
 	/usr/local/go/src/runtime/debug/stack.go:16 +0x13
 _/tests/spec/go.TestOpaqueExternalType02Parent.func1()
 	/tests/spec/go/opaque_external_type_02_parent_test.go:15 +0x39
-panic({0x619900?, 0x844030?})
+panic({0x613da0?, 0x84b030?})
 	/usr/local/go/src/runtime/panic.go:914 +0x21f
 test_formats.(*OpaqueExternalType02Child).SomeMethod(...)
-	/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:46
-test_formats.(*OpaqueExternalType02Child_OpaqueExternalType02ChildChild).Read(0xc0001bd0b0?, 0xc0001aca40?, 0x3?, 0x64eb60?)
-	/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:69 +0x54
-test_formats.(*OpaqueExternalType02Child).Read(0xc000068aa0, 0xc000038688?, {0x614380?, 0xc000022b80?}, 0x6391c0?)
-	/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:38 +0x145
-test_formats.(*OpaqueExternalType02Parent_ParentObj).Read(0xc000022b80, 0x40d6c5?, 0x28?, 0x639280?)
-	/tests/compiled/go/src/test_formats/opaque_external_type_02_parent.go:48 +0x85
-test_formats.(*OpaqueExternalType02Parent).Read(0xc0001bd0e0, 0x17?, {0x614320?, 0xc0001bd0e0?}, 0x707d89?)
-	/tests/compiled/go/src/test_formats/opaque_external_type_02_parent.go:24 +0x95
+	/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:50
+test_formats.(*OpaqueExternalType02Child_OpaqueExternalType02ChildChild).Read(0xc0001bd0b0?, 0xc0001aca48?, 0x3?, 0x652a80?)
+	/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:77 +0x54
+test_formats.(*OpaqueExternalType02Child).Read(0xc000068aa0, 0xc000038688?, {0x0?, 0x0?}, 0x63dda0?)
+	/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:42 +0x145
+test_formats.(*OpaqueExternalType02Parent_ParentObj).Read(0xc000022c20, 0x40d6c5?, 0x28?, 0x63de80?)
+	/tests/compiled/go/src/test_formats/opaque_external_type_02_parent.go:56 +0x7f
+test_formats.(*OpaqueExternalType02Parent).Read(0xc0001bd0e0, 0x17?, {0x6cce60?, 0xc0001bd0e0?}, 0x70dea9?)
+	/tests/compiled/go/src/test_formats/opaque_external_type_02_parent.go:28 +0x95
 _/tests/spec/go.TestOpaqueExternalType02Parent(0xc0001c44e0)
 	/tests/spec/go/opaque_external_type_02_parent_test.go:25 +0x114
-testing.tRunner(0xc0001c44e0, 0x6907c0)
+testing.tRunner(0xc0001c44e0, 0x694a60)
 	/usr/local/go/src/testing/testing.go:1595 +0xff
 created by testing.(*T).Run in goroutine 1
 	/usr/local/go/src/testing/testing.go:1648 +0x3ad
@@ -209,7 +190,7 @@ created by testing.(*T).Run in goroutine 1
 		<testcase name="TestParamsCall" classname="_/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestParamsDef" classname="_/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestParamsEnum" classname="_/tests/spec/go" time="0.000"></testcase>
-		<testcase name="TestParamsPassArrayInt" classname="_/tests/spec/go" time="0.010"></testcase>
+		<testcase name="TestParamsPassArrayInt" classname="_/tests/spec/go" time="0.020"></testcase>
 		<testcase name="TestParamsPassArrayStr" classname="_/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestParamsPassArrayUsertype" classname="_/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestParamsPassBool" classname="_/tests/spec/go" time="0.000"></testcase>

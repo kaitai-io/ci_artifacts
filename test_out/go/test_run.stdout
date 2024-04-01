@@ -93,13 +93,13 @@
 === RUN   TestEnumToIClassBorder1
 --- PASS: TestEnumToIClassBorder1 (0.00s)
 === RUN   TestEofExceptionBytes
-    eof_exception_bytes_test.go:31: expected kaitai.EndOfStreamError, got *errors.errorString
+    eof_exception_bytes_test.go:31: expected kaitai.EndOfStreamError, got *fmt.wrapError
 --- FAIL: TestEofExceptionBytes (0.00s)
 === RUN   TestEofExceptionU4
     eof_exception_u4_test.go:31: expected kaitai.EndOfStreamError, got <nil>
 --- FAIL: TestEofExceptionU4 (0.00s)
 === RUN   TestEosExceptionBytes
-    eos_exception_bytes_test.go:31: expected kaitai.EndOfStreamError, got *errors.errorString
+    eos_exception_bytes_test.go:31: expected kaitai.EndOfStreamError, got *fmt.wrapError
 --- FAIL: TestEosExceptionBytes (0.00s)
 === RUN   TestEosExceptionU4
     eos_exception_u4_test.go:31: expected kaitai.EndOfStreamError, got <nil>
@@ -243,25 +243,7 @@
 === RUN   TestNavParentVsValueInst
 --- PASS: TestNavParentVsValueInst (0.00s)
 === RUN   TestNavRootRecursive
-goroutine 112 [running]:
-runtime/debug.Stack()
-	/usr/local/go/src/runtime/debug/stack.go:24 +0x5e
-runtime/debug.PrintStack()
-	/usr/local/go/src/runtime/debug/stack.go:16 +0x13
-_/tests/spec/go.TestNavRootRecursive.func1()
-	/tests/spec/go/nav_root_recursive_test.go:17 +0x39
-panic({0x619900?, 0x844030?})
-	/usr/local/go/src/runtime/panic.go:914 +0x21f
-test_formats.(*NavRootRecursive).RootValue(...)
-	/tests/compiled/go/src/test_formats/nav_root_recursive.go:45
-_/tests/spec/go.TestNavRootRecursive(0xc0001b9520)
-	/tests/spec/go/nav_root_recursive_test.go:34 +0x203
-testing.tRunner(0xc0001b9520, 0x690778)
-	/usr/local/go/src/testing/testing.go:1595 +0xff
-created by testing.(*T).Run in goroutine 1
-	/usr/local/go/src/testing/testing.go:1648 +0x3ad
-    nav_root_recursive_test.go:18: unexpected panic: runtime error: invalid memory address or nil pointer dereference
---- FAIL: TestNavRootRecursive (0.00s)
+--- PASS: TestNavRootRecursive (0.00s)
 === RUN   TestNavRoot
 --- PASS: TestNavRoot (0.00s)
 === RUN   TestNestedSameName2
@@ -286,21 +268,21 @@ runtime/debug.PrintStack()
 	/usr/local/go/src/runtime/debug/stack.go:16 +0x13
 _/tests/spec/go.TestOpaqueExternalType02Parent.func1()
 	/tests/spec/go/opaque_external_type_02_parent_test.go:15 +0x39
-panic({0x619900?, 0x844030?})
+panic({0x613da0?, 0x84b030?})
 	/usr/local/go/src/runtime/panic.go:914 +0x21f
 test_formats.(*OpaqueExternalType02Child).SomeMethod(...)
-	/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:46
-test_formats.(*OpaqueExternalType02Child_OpaqueExternalType02ChildChild).Read(0xc0001bd0b0?, 0xc0001aca40?, 0x3?, 0x64eb60?)
-	/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:69 +0x54
-test_formats.(*OpaqueExternalType02Child).Read(0xc000068aa0, 0xc000038688?, {0x614380?, 0xc000022b80?}, 0x6391c0?)
-	/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:38 +0x145
-test_formats.(*OpaqueExternalType02Parent_ParentObj).Read(0xc000022b80, 0x40d6c5?, 0x28?, 0x639280?)
-	/tests/compiled/go/src/test_formats/opaque_external_type_02_parent.go:48 +0x85
-test_formats.(*OpaqueExternalType02Parent).Read(0xc0001bd0e0, 0x17?, {0x614320?, 0xc0001bd0e0?}, 0x707d89?)
-	/tests/compiled/go/src/test_formats/opaque_external_type_02_parent.go:24 +0x95
+	/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:50
+test_formats.(*OpaqueExternalType02Child_OpaqueExternalType02ChildChild).Read(0xc0001bd0b0?, 0xc0001aca48?, 0x3?, 0x652a80?)
+	/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:77 +0x54
+test_formats.(*OpaqueExternalType02Child).Read(0xc000068aa0, 0xc000038688?, {0x0?, 0x0?}, 0x63dda0?)
+	/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:42 +0x145
+test_formats.(*OpaqueExternalType02Parent_ParentObj).Read(0xc000022c20, 0x40d6c5?, 0x28?, 0x63de80?)
+	/tests/compiled/go/src/test_formats/opaque_external_type_02_parent.go:56 +0x7f
+test_formats.(*OpaqueExternalType02Parent).Read(0xc0001bd0e0, 0x17?, {0x6cce60?, 0xc0001bd0e0?}, 0x70dea9?)
+	/tests/compiled/go/src/test_formats/opaque_external_type_02_parent.go:28 +0x95
 _/tests/spec/go.TestOpaqueExternalType02Parent(0xc0001c44e0)
 	/tests/spec/go/opaque_external_type_02_parent_test.go:25 +0x114
-testing.tRunner(0xc0001c44e0, 0x6907c0)
+testing.tRunner(0xc0001c44e0, 0x694a60)
 	/usr/local/go/src/testing/testing.go:1595 +0xff
 created by testing.(*T).Run in goroutine 1
 	/usr/local/go/src/testing/testing.go:1648 +0x3ad
@@ -319,7 +301,7 @@ created by testing.(*T).Run in goroutine 1
 === RUN   TestParamsEnum
 --- PASS: TestParamsEnum (0.00s)
 === RUN   TestParamsPassArrayInt
---- PASS: TestParamsPassArrayInt (0.01s)
+--- PASS: TestParamsPassArrayInt (0.02s)
 === RUN   TestParamsPassArrayStr
 --- PASS: TestParamsPassArrayStr (0.00s)
 === RUN   TestParamsPassArrayUsertype
@@ -581,5 +563,5 @@ created by testing.(*T).Run in goroutine 1
 === RUN   TestZlibWithHeader78
 --- PASS: TestZlibWithHeader78 (0.00s)
 FAIL
-FAIL	_/tests/spec/go	0.050s
+FAIL	_/tests/spec/go	0.047s
 FAIL

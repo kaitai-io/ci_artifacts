@@ -1,13 +1,13 @@
 {
   "$meta": {
     "lang": "go",
-    "timestamp": "2024-03-22T15:21:35Z",
+    "timestamp": "2024-04-01T11:40:14Z",
     "ci": {
       "ci": "github",
-      "run_id": "8392579569",
-      "run_number": "321",
-      "job_id": "22985546048",
-      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/8392579569/job/22985546048"
+      "run_id": "8507591430",
+      "run_number": "322",
+      "job_id": "23299694610",
+      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/8507591430/job/23299694610"
     }
   },
   "BitsByteAligned": {
@@ -251,7 +251,7 @@
       "file_name": null,
       "line_num": null,
       "message": "Failed",
-      "trace": "eof_exception_bytes_test.go:31: expected kaitai.EndOfStreamError, got *errors.errorString"
+      "trace": "eof_exception_bytes_test.go:31: expected kaitai.EndOfStreamError, got *fmt.wrapError"
     },
     "is_kst": true
   },
@@ -273,7 +273,7 @@
       "file_name": null,
       "line_num": null,
       "message": "Failed",
-      "trace": "eos_exception_bytes_test.go:31: expected kaitai.EndOfStreamError, got *errors.errorString"
+      "trace": "eos_exception_bytes_test.go:31: expected kaitai.EndOfStreamError, got *fmt.wrapError"
     },
     "is_kst": true
   },
@@ -590,14 +590,8 @@
     "is_kst": true
   },
   "NavRootRecursive": {
-    "status": "failed",
+    "status": "passed",
     "elapsed": 0.0,
-    "failure": {
-      "file_name": null,
-      "line_num": null,
-      "message": "Failed",
-      "trace": "goroutine 112 [running]:\nruntime/debug.Stack()\n\t/usr/local/go/src/runtime/debug/stack.go:24 +0x5e\nruntime/debug.PrintStack()\n\t/usr/local/go/src/runtime/debug/stack.go:16 +0x13\n_/tests/spec/go.TestNavRootRecursive.func1()\n\t/tests/spec/go/nav_root_recursive_test.go:17 +0x39\npanic({0x619900?, 0x844030?})\n\t/usr/local/go/src/runtime/panic.go:914 +0x21f\ntest_formats.(*NavRootRecursive).RootValue(...)\n\t/tests/compiled/go/src/test_formats/nav_root_recursive.go:45\n_/tests/spec/go.TestNavRootRecursive(0xc0001b9520)\n\t/tests/spec/go/nav_root_recursive_test.go:34 +0x203\ntesting.tRunner(0xc0001b9520, 0x690778)\n\t/usr/local/go/src/testing/testing.go:1595 +0xff\ncreated by testing.(*T).Run in goroutine 1\n\t/usr/local/go/src/testing/testing.go:1648 +0x3ad\n    nav_root_recursive_test.go:18: unexpected panic: runtime error: invalid memory address or nil pointer dereference"
-    },
     "is_kst": true
   },
   "NestedSameName": {
@@ -646,7 +640,7 @@
       "file_name": null,
       "line_num": null,
       "message": "Failed",
-      "trace": "goroutine 121 [running]:\nruntime/debug.Stack()\n\t/usr/local/go/src/runtime/debug/stack.go:24 +0x5e\nruntime/debug.PrintStack()\n\t/usr/local/go/src/runtime/debug/stack.go:16 +0x13\n_/tests/spec/go.TestOpaqueExternalType02Parent.func1()\n\t/tests/spec/go/opaque_external_type_02_parent_test.go:15 +0x39\npanic({0x619900?, 0x844030?})\n\t/usr/local/go/src/runtime/panic.go:914 +0x21f\ntest_formats.(*OpaqueExternalType02Child).SomeMethod(...)\n\t/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:46\ntest_formats.(*OpaqueExternalType02Child_OpaqueExternalType02ChildChild).Read(0xc0001bd0b0?, 0xc0001aca40?, 0x3?, 0x64eb60?)\n\t/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:69 +0x54\ntest_formats.(*OpaqueExternalType02Child).Read(0xc000068aa0, 0xc000038688?, {0x614380?, 0xc000022b80?}, 0x6391c0?)\n\t/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:38 +0x145\ntest_formats.(*OpaqueExternalType02Parent_ParentObj).Read(0xc000022b80, 0x40d6c5?, 0x28?, 0x639280?)\n\t/tests/compiled/go/src/test_formats/opaque_external_type_02_parent.go:48 +0x85\ntest_formats.(*OpaqueExternalType02Parent).Read(0xc0001bd0e0, 0x17?, {0x614320?, 0xc0001bd0e0?}, 0x707d89?)\n\t/tests/compiled/go/src/test_formats/opaque_external_type_02_parent.go:24 +0x95\n_/tests/spec/go.TestOpaqueExternalType02Parent(0xc0001c44e0)\n\t/tests/spec/go/opaque_external_type_02_parent_test.go:25 +0x114\ntesting.tRunner(0xc0001c44e0, 0x6907c0)\n\t/usr/local/go/src/testing/testing.go:1595 +0xff\ncreated by testing.(*T).Run in goroutine 1\n\t/usr/local/go/src/testing/testing.go:1648 +0x3ad\n    opaque_external_type_02_parent_test.go:16: unexpected panic: runtime error: invalid memory address or nil pointer dereference"
+      "trace": "goroutine 121 [running]:\nruntime/debug.Stack()\n\t/usr/local/go/src/runtime/debug/stack.go:24 +0x5e\nruntime/debug.PrintStack()\n\t/usr/local/go/src/runtime/debug/stack.go:16 +0x13\n_/tests/spec/go.TestOpaqueExternalType02Parent.func1()\n\t/tests/spec/go/opaque_external_type_02_parent_test.go:15 +0x39\npanic({0x613da0?, 0x84b030?})\n\t/usr/local/go/src/runtime/panic.go:914 +0x21f\ntest_formats.(*OpaqueExternalType02Child).SomeMethod(...)\n\t/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:50\ntest_formats.(*OpaqueExternalType02Child_OpaqueExternalType02ChildChild).Read(0xc0001bd0b0?, 0xc0001aca48?, 0x3?, 0x652a80?)\n\t/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:77 +0x54\ntest_formats.(*OpaqueExternalType02Child).Read(0xc000068aa0, 0xc000038688?, {0x0?, 0x0?}, 0x63dda0?)\n\t/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:42 +0x145\ntest_formats.(*OpaqueExternalType02Parent_ParentObj).Read(0xc000022c20, 0x40d6c5?, 0x28?, 0x63de80?)\n\t/tests/compiled/go/src/test_formats/opaque_external_type_02_parent.go:56 +0x7f\ntest_formats.(*OpaqueExternalType02Parent).Read(0xc0001bd0e0, 0x17?, {0x6cce60?, 0xc0001bd0e0?}, 0x70dea9?)\n\t/tests/compiled/go/src/test_formats/opaque_external_type_02_parent.go:28 +0x95\n_/tests/spec/go.TestOpaqueExternalType02Parent(0xc0001c44e0)\n\t/tests/spec/go/opaque_external_type_02_parent_test.go:25 +0x114\ntesting.tRunner(0xc0001c44e0, 0x694a60)\n\t/usr/local/go/src/testing/testing.go:1595 +0xff\ncreated by testing.(*T).Run in goroutine 1\n\t/usr/local/go/src/testing/testing.go:1648 +0x3ad\n    opaque_external_type_02_parent_test.go:16: unexpected panic: runtime error: invalid memory address or nil pointer dereference"
     }
   },
   "OpaqueWithParam": {
