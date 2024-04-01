@@ -12,8 +12,8 @@
   <line>Command: /tests/compiled/cpp_stl_11/bin/ks_tests</line>
 </preamble>
 
-<pid>2602</pid>
-<ppid>2601</ppid>
+<pid>2608</pid>
+<ppid>2607</ppid>
 <tool>memcheck</tool>
 
 <args>
@@ -37,42 +37,42 @@
   <unique>0x0</unique>
   <tid>1</tid>
   <kind>InvalidRead</kind>
-  <what>Invalid read of size 1</what>
+  <what>Invalid read of size 8</what>
   <stack>
     <frame>
-      <ip>0x780B3E</ip>
+      <ip>0x840D40</ip>
       <obj>/tests/compiled/cpp_stl_11/bin/ks_tests</obj>
-      <fn>nav_parent_recursive_t::value() const</fn>
+      <fn>debug_array_user_t::cat_t::_read()</fn>
       <dir>/tests/compiled/cpp_stl_11</dir>
-      <file>nav_parent_recursive.h</file>
-      <line>52</line>
-    </frame>
-    <frame>
-      <ip>0x867FF2</ip>
-      <obj>/tests/compiled/cpp_stl_11/bin/ks_tests</obj>
-      <fn>nav_parent_recursive_t::parent_value()</fn>
-      <dir>/tests/compiled/cpp_stl_11</dir>
-      <file>nav_parent_recursive.cpp</file>
+      <file>debug_array_user.cpp</file>
       <line>37</line>
     </frame>
     <frame>
-      <ip>0x7806F5</ip>
+      <ip>0x840BF3</ip>
       <obj>/tests/compiled/cpp_stl_11/bin/ks_tests</obj>
-      <fn>test_nav_parent_recursive::test_method()</fn>
-      <dir>/tests/spec/cpp_stl_11</dir>
-      <file>test_nav_parent_recursive.cpp</file>
-      <line>16</line>
+      <fn>debug_array_user_t::_read()</fn>
+      <dir>/tests/compiled/cpp_stl_11</dir>
+      <file>debug_array_user.cpp</file>
+      <line>20</line>
     </frame>
     <frame>
-      <ip>0x780178</ip>
+      <ip>0x7D8012</ip>
       <obj>/tests/compiled/cpp_stl_11/bin/ks_tests</obj>
-      <fn>test_nav_parent_recursive_invoker()</fn>
+      <fn>test_debug_array_user::test_method()</fn>
       <dir>/tests/spec/cpp_stl_11</dir>
-      <file>test_nav_parent_recursive.cpp</file>
-      <line>9</line>
+      <file>test_debug_array_user.cpp</file>
+      <line>13</line>
     </frame>
     <frame>
-      <ip>0x7473E6</ip>
+      <ip>0x7D7D1E</ip>
+      <obj>/tests/compiled/cpp_stl_11/bin/ks_tests</obj>
+      <fn>test_debug_array_user_invoker()</fn>
+      <dir>/tests/spec/cpp_stl_11</dir>
+      <file>test_debug_array_user.cpp</file>
+      <line>7</line>
+    </frame>
+    <frame>
+      <ip>0x7473D6</ip>
       <obj>/tests/compiled/cpp_stl_11/bin/ks_tests</obj>
       <fn>boost::detail::function::void_function_invoker0&lt;void (*)(), void&gt;::invoke(boost::detail::function::function_buffer&amp;)</fn>
       <dir>/usr/local/include/boost/function</dir>
@@ -136,22 +136,22 @@
       <line>1318</line>
     </frame>
   </stack>
-  <auxwhat>Address 0x13 is not stack'd, malloc'd or (recently) free'd</auxwhat>
+  <auxwhat>Address 0x8 is not stack'd, malloc'd or (recently) free'd</auxwhat>
 </error>
 
 
 <status>
   <state>FINISHED</state>
-  <time>00:00:00:03.638 </time>
+  <time>00:00:00:05.859 </time>
 </status>
 
 <error>
-  <unique>0x2</unique>
+  <unique>0x5</unique>
   <tid>1</tid>
   <kind>Leak_DefinitelyLost</kind>
   <xwhat>
-    <text>112 (56 direct, 56 indirect) bytes in 1 blocks are definitely lost in loss record 2 of 4</text>
-    <leakedbytes>112</leakedbytes>
+    <text>160 (48 direct, 112 indirect) bytes in 1 blocks are definitely lost in loss record 5 of 7</text>
+    <leakedbytes>160</leakedbytes>
     <leakedblocks>1</leakedblocks>
   </xwhat>
   <stack>
@@ -161,23 +161,23 @@
       <fn>operator new(unsigned long)</fn>
     </frame>
     <frame>
-      <ip>0x780435</ip>
+      <ip>0x7D7FDD</ip>
       <obj>/tests/compiled/cpp_stl_11/bin/ks_tests</obj>
-      <fn>test_nav_parent_recursive::test_method()</fn>
+      <fn>test_debug_array_user::test_method()</fn>
       <dir>/tests/spec/cpp_stl_11</dir>
-      <file>test_nav_parent_recursive.cpp</file>
-      <line>12</line>
+      <file>test_debug_array_user.cpp</file>
+      <line>10</line>
     </frame>
     <frame>
-      <ip>0x780178</ip>
+      <ip>0x7D7D1E</ip>
       <obj>/tests/compiled/cpp_stl_11/bin/ks_tests</obj>
-      <fn>test_nav_parent_recursive_invoker()</fn>
+      <fn>test_debug_array_user_invoker()</fn>
       <dir>/tests/spec/cpp_stl_11</dir>
-      <file>test_nav_parent_recursive.cpp</file>
-      <line>9</line>
+      <file>test_debug_array_user.cpp</file>
+      <line>7</line>
     </frame>
     <frame>
-      <ip>0x7473E6</ip>
+      <ip>0x7473D6</ip>
       <obj>/tests/compiled/cpp_stl_11/bin/ks_tests</obj>
       <fn>boost::detail::function::void_function_invoker0&lt;void (*)(), void&gt;::invoke(boost::detail::function::function_buffer&amp;)</fn>
       <dir>/usr/local/include/boost/function</dir>
@@ -252,11 +252,11 @@
 </error>
 
 <error>
-  <unique>0x4</unique>
+  <unique>0x7</unique>
   <tid>1</tid>
   <kind>Leak_DefinitelyLost</kind>
   <xwhat>
-    <text>8,192 bytes in 1 blocks are definitely lost in loss record 4 of 4</text>
+    <text>8,192 bytes in 1 blocks are definitely lost in loss record 7 of 7</text>
     <leakedbytes>8192</leakedbytes>
     <leakedblocks>1</leakedblocks>
   </xwhat>
@@ -282,23 +282,23 @@
       <fn>std::basic_ifstream&lt;char, std::char_traits&lt;char&gt; &gt;::basic_ifstream(char const*, std::_Ios_Openmode)</fn>
     </frame>
     <frame>
-      <ip>0x780412</ip>
+      <ip>0x7D7FBA</ip>
       <obj>/tests/compiled/cpp_stl_11/bin/ks_tests</obj>
-      <fn>test_nav_parent_recursive::test_method()</fn>
+      <fn>test_debug_array_user::test_method()</fn>
       <dir>/tests/spec/cpp_stl_11</dir>
-      <file>test_nav_parent_recursive.cpp</file>
-      <line>10</line>
+      <file>test_debug_array_user.cpp</file>
+      <line>8</line>
     </frame>
     <frame>
-      <ip>0x780178</ip>
+      <ip>0x7D7D1E</ip>
       <obj>/tests/compiled/cpp_stl_11/bin/ks_tests</obj>
-      <fn>test_nav_parent_recursive_invoker()</fn>
+      <fn>test_debug_array_user_invoker()</fn>
       <dir>/tests/spec/cpp_stl_11</dir>
-      <file>test_nav_parent_recursive.cpp</file>
-      <line>9</line>
+      <file>test_debug_array_user.cpp</file>
+      <line>7</line>
     </frame>
     <frame>
-      <ip>0x7473E6</ip>
+      <ip>0x7473D6</ip>
       <obj>/tests/compiled/cpp_stl_11/bin/ks_tests</obj>
       <fn>boost::detail::function::void_function_invoker0&lt;void (*)(), void&gt;::invoke(boost::detail::function::function_buffer&amp;)</fn>
       <dir>/usr/local/include/boost/function</dir>
