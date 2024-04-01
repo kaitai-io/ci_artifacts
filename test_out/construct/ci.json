@@ -1,13 +1,13 @@
 {
   "$meta": {
     "lang": "construct",
-    "timestamp": "2024-03-22T15:21:22Z",
+    "timestamp": "2024-04-01T11:40:04Z",
     "ci": {
       "ci": "github",
-      "run_id": "8392579569",
-      "run_number": "321",
-      "job_id": "22985544870",
-      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/8392579569/job/22985544870"
+      "run_id": "8507591430",
+      "run_number": "322",
+      "job_id": "23299694037",
+      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/8507591430/job/23299694037"
     }
   },
   "BcdUserTypeBe": {
@@ -574,6 +574,17 @@
       "line_num": null,
       "message": "Failed to import test module: test_expr_io_pos\nTraceback (most recent call last):\n  File \"/usr/local/lib/python3.4/unittest/loader.py\", line 323, in _find_tests\n    module = self._get_module_from_name(name)\n  File \"/usr/local/lib/python3.4/unittest/loader.py\", line 301, in _get_module_from_name\n    __import__(name)\n  File \"/tests/spec/construct/test_expr_io_pos.py\", line 5, in <module>\n    from expr_io_pos import _schema\n  File \"/tests/compiled/construct/expr_io_pos.py\", line 6, in <module>\n    'body' / FixedSized((stream_size(_io) - stream_tell(_io)) - 2, GreedyBytes),\nNameError: name '_io' is not defined\n",
       "trace": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.4/unittest/case.py\", line 58, in testPartExecutor\n    yield\n  File \"/usr/local/lib/python3.4/unittest/case.py\", line 580, in run\n    testMethod()\n  File \"/usr/local/lib/python3.4/unittest/loader.py\", line 33, in testFailure\n    raise self._exception\nImportError: Failed to import test module: test_expr_io_pos\nTraceback (most recent call last):\n  File \"/usr/local/lib/python3.4/unittest/loader.py\", line 323, in _find_tests\n    module = self._get_module_from_name(name)\n  File \"/usr/local/lib/python3.4/unittest/loader.py\", line 301, in _get_module_from_name\n    __import__(name)\n  File \"/tests/spec/construct/test_expr_io_pos.py\", line 5, in <module>\n    from expr_io_pos import _schema\n  File \"/tests/compiled/construct/expr_io_pos.py\", line 6, in <module>\n    'body' / FixedSized((stream_size(_io) - stream_tell(_io)) - 2, GreedyBytes),\nNameError: name '_io' is not defined"
+    },
+    "is_kst": true
+  },
+  "ExprIoTernary": {
+    "status": "failed",
+    "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": "Error in path (parsing) -> obj2\nstream read less than specified amount, expected 8, found 7",
+      "trace": "Traceback (most recent call last):\n  File \"/tests/spec/construct/test_expr_io_ternary.py\", line 9, in test_expr_io_ternary\n    r = _schema.parse_file('src/term_strz.bin')\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 309, in parse_file\n    return self.parse_stream(f, **contextkw)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 300, in parse_stream\n    return self._parsereport(stream, context, \"(parsing)\")\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 312, in _parsereport\n    obj = self._parse(stream, context, path)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 1982, in _parse\n    subobj = sc._parsereport(stream, context, path)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 312, in _parsereport\n    obj = self._parse(stream, context, path)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 2440, in _parse\n    return self.subcon._parsereport(stream, context, path)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 312, in _parsereport\n    obj = self._parse(stream, context, path)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 4492, in _parse\n    data = stream_read(stream, length, path)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 92, in stream_read\n    raise StreamError(\"stream read less than specified amount, expected %d, found %d\" % (length, len(data)), path=path)\nconstruct.core.StreamError: Error in path (parsing) -> obj2\nstream read less than specified amount, expected 8, found 7"
     },
     "is_kst": true
   },
