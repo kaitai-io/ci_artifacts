@@ -1,13 +1,13 @@
 {
   "$meta": {
     "lang": "lua",
-    "timestamp": "2024-04-01T11:40:47Z",
+    "timestamp": "2024-04-03T14:42:43Z",
     "ci": {
       "ci": "github",
-      "run_id": "8507591430",
-      "run_number": "322",
-      "job_id": "23299696039",
-      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/8507591430/job/23299696039"
+      "run_id": "8540694278",
+      "run_number": "323",
+      "job_id": "23398306125",
+      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/8540694278/job/23398306125"
     }
   },
   "BcdUserTypeBe": {
@@ -106,11 +106,6 @@
     "is_kst": true
   },
   "CastNested": {
-    "status": "passed",
-    "elapsed": 0.0,
-    "is_kst": true
-  },
-  "CastToImported": {
     "status": "passed",
     "elapsed": 0.0,
     "is_kst": true
@@ -232,7 +227,12 @@
     "elapsed": 0.0,
     "is_kst": true
   },
-  "EnumImport": {
+  "EnumImportLiterals": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "EnumImportSeq": {
     "status": "passed",
     "elapsed": 0.0,
     "is_kst": true
@@ -303,12 +303,22 @@
     "elapsed": 0.0,
     "is_kst": true
   },
+  "EofExceptionSized": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
   "EofExceptionU4": {
     "status": "passed",
     "elapsed": 0.0,
     "is_kst": true
   },
   "EosExceptionBytes": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "EosExceptionSized": {
     "status": "passed",
     "elapsed": 0.0,
     "is_kst": true
@@ -519,6 +529,16 @@
     "status": "passed",
     "elapsed": 0.0
   },
+  "ImportsCastToImported": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "ImportsCastToImported2": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
   "ImportsCircularA": {
     "status": "failed",
     "elapsed": 0.0,
@@ -528,6 +548,16 @@
       "message": "spec/lua/run_test_suite.lua:18: error loading module 'imports_circular_b' from file 'compiled/lua/imports_circular_b.lua':\n\tcompiled/lua/imports_circular_b.lua:21: too many C levels (limit is 200) in function at line 18 near 'self'",
       "trace": "stack traceback:\n\tspec/lua/run_test_suite.lua:18: in upvalue 'TestImportsCircularA.test_imports_circular_a'"
     },
+    "is_kst": true
+  },
+  "ImportsParamsDefEnumImported": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "ImportsParamsDefUsertypeImported": {
+    "status": "passed",
+    "elapsed": 0.0,
     "is_kst": true
   },
   "ImportsRel1": {
@@ -711,7 +741,7 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "spec/lua/test_nested_types_import.lua:18: expected: nil, actual: <table 01> {\n    _io=<table 02> {_io=file (0x55b36710a660), bits=0, bits_left=0},\n    _root=<table 01>,\n    value_cc=80\n}",
+      "message": "spec/lua/test_nested_types_import.lua:18: expected: nil, actual: <table 01> {\n    _io=<table 02> {_io=file (0x56472e16aca0), bits=0, bits_left=0},\n    _root=<table 01>,\n    value_cc=80\n}",
       "trace": "stack traceback:\n\tspec/lua/test_nested_types_import.lua:18: in upvalue 'TestNestedTypesImport.test_nested_types_import'"
     },
     "is_kst": true
@@ -952,6 +982,26 @@
       "trace": "stack traceback:\n\t../runtime/lua/string_decode.lua:42: in function 'string_decode.decode'\n\tcompiled/lua/str_encodings_default.lua:38: in method '_read'\n\tcompiled/lua/str_encodings_default.lua:31: in local 'init'\n\t../runtime/lua/class.lua:70: in field 'Subtype'\n\tcompiled/lua/str_encodings_default.lua:21: in method '_read'\n\tcompiled/lua/str_encodings_default.lua:15: in local 'init'\n\t../runtime/lua/class.lua:70: in function <../runtime/lua/class.lua:66>\n\t(...tail calls...)\n\tspec/lua/test_str_encodings_default.lua:10: in upvalue 'TestStrEncodingsDefault.test_str_encodings_default'"
     },
     "is_kst": true
+  },
+  "StrEncodingsEscapingEnc": {
+    "status": "failed",
+    "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": "spec/lua/test_str_encodings_escaping_enc.lua:8: Error message does not contain: \"Encoding ASCII\\\\x not supported\"\nError message received: \"../runtime/lua/string_decode.lua:42: Encoding ASCII\\x not supported\"\n",
+      "trace": "stack traceback:\n\tspec/lua/test_str_encodings_escaping_enc.lua:8: in upvalue 'assertUnknownEncoding'\n\tspec/lua/test_str_encodings_escaping_enc.lua:14: in upvalue 'TestStrEncodingsEscapingEnc.test_str_encodings_escaping_enc'"
+    }
+  },
+  "StrEncodingsEscapingToS": {
+    "status": "failed",
+    "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": "spec/lua/test_str_encodings_escaping_to_s.lua:8: Error message does not contain: \"Encoding ASCII\\\\x not supported\"\nError message received: \"../runtime/lua/string_decode.lua:42: Encoding ASCII\\x not supported\"\n",
+      "trace": "stack traceback:\n\tspec/lua/test_str_encodings_escaping_to_s.lua:8: in upvalue 'assertUnknownEncoding'\n\tspec/lua/test_str_encodings_escaping_to_s.lua:14: in upvalue 'TestStrEncodingsEscapingToS.test_str_encodings_escaping_to_s'"
+    }
   },
   "StrEncodingsUtf16": {
     "status": "failed",
