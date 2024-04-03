@@ -1,13 +1,13 @@
 {
   "$meta": {
     "lang": "ruby",
-    "timestamp": "2024-04-01T11:41:33Z",
+    "timestamp": "2024-04-03T14:43:30Z",
     "ci": {
       "ci": "github",
-      "run_id": "8507591430",
-      "run_number": "322",
-      "job_id": "23299697535",
-      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/8507591430/job/23299697535"
+      "run_id": "8540694278",
+      "run_number": "323",
+      "job_id": "23398309919",
+      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/8540694278/job/23398309919"
     }
   },
   "BcdUserTypeBe": {
@@ -106,11 +106,6 @@
     "is_kst": true
   },
   "CastNested": {
-    "status": "passed",
-    "elapsed": 0.0,
-    "is_kst": true
-  },
-  "CastToImported": {
     "status": "passed",
     "elapsed": 0.0,
     "is_kst": true
@@ -236,7 +231,12 @@
     "elapsed": 0.0,
     "is_kst": true
   },
-  "EnumImport": {
+  "EnumImportLiterals": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "EnumImportSeq": {
     "status": "passed",
     "elapsed": 0.0,
     "is_kst": true
@@ -302,6 +302,17 @@
     "elapsed": 0.0,
     "is_kst": true
   },
+  "EofExceptionSized": {
+    "status": "failed",
+    "elapsed": 0.0,
+    "failure": {
+      "file_name": "./spec/ruby/eof_exception_sized_spec.rb",
+      "line_num": 4,
+      "message": "expected EOFError but nothing was raised",
+      "trace": "./spec/ruby/eof_exception_sized_spec.rb:6:in `block (2 levels) in <top (required)>'"
+    },
+    "is_kst": true
+  },
   "EofExceptionU4": {
     "status": "passed",
     "elapsed": 0.0,
@@ -310,6 +321,17 @@
   "EosExceptionBytes": {
     "status": "passed",
     "elapsed": 0.0,
+    "is_kst": true
+  },
+  "EosExceptionSized": {
+    "status": "failed",
+    "elapsed": 0.0,
+    "failure": {
+      "file_name": "./spec/ruby/eos_exception_sized_spec.rb",
+      "line_num": 4,
+      "message": "expected EOFError but nothing was raised",
+      "trace": "./spec/ruby/eos_exception_sized_spec.rb:6:in `block (2 levels) in <top (required)>'"
+    },
     "is_kst": true
   },
   "EosExceptionU4": {
@@ -511,9 +533,53 @@
     "status": "passed",
     "elapsed": 0.0
   },
+  "ImportsCastToImported": {
+    "status": "failed",
+    "elapsed": 0.0,
+    "failure": {
+      "file_name": "./spec/ruby/imports_cast_to_imported_spec.rb",
+      "line_num": 4,
+      "message": "uninitialized constant ImportsCastToImported::CastToImported\nDid you mean?  CastNested",
+      "trace": "./compiled/ruby/imports_cast_to_imported.rb:17:in `_read'\n./compiled/ruby/imports_cast_to_imported.rb:12:in `initialize'\n/runtime/ruby/lib/kaitai/struct/struct.rb:26:in `new'\n/runtime/ruby/lib/kaitai/struct/struct.rb:26:in `from_file'\n./spec/ruby/imports_cast_to_imported_spec.rb:6:in `block (2 levels) in <top (required)>'"
+    },
+    "is_kst": true
+  },
+  "ImportsCastToImported2": {
+    "status": "failed",
+    "elapsed": 0.0,
+    "failure": {
+      "file_name": "./spec/ruby/imports_cast_to_imported2_spec.rb",
+      "line_num": 4,
+      "message": "uninitialized constant ImportsCastToImported2::CastToImported2\nDid you mean?  CastToTop",
+      "trace": "./compiled/ruby/imports_cast_to_imported2.rb:17:in `_read'\n./compiled/ruby/imports_cast_to_imported2.rb:12:in `initialize'\n/runtime/ruby/lib/kaitai/struct/struct.rb:26:in `new'\n/runtime/ruby/lib/kaitai/struct/struct.rb:26:in `from_file'\n./spec/ruby/imports_cast_to_imported2_spec.rb:6:in `block (2 levels) in <top (required)>'"
+    },
+    "is_kst": true
+  },
   "ImportsCircularA": {
     "status": "passed",
     "elapsed": 0.0,
+    "is_kst": true
+  },
+  "ImportsParamsDefEnumImported": {
+    "status": "failed",
+    "elapsed": 0.0,
+    "failure": {
+      "file_name": "./spec/ruby/imports_params_def_enum_imported_spec.rb",
+      "line_num": 4,
+      "message": "uninitialized constant ImportsParamsDefEnumImported::ParamsDefEnumImported",
+      "trace": "./compiled/ruby/imports_params_def_enum_imported.rb:17:in `_read'\n./compiled/ruby/imports_params_def_enum_imported.rb:12:in `initialize'\n/runtime/ruby/lib/kaitai/struct/struct.rb:26:in `new'\n/runtime/ruby/lib/kaitai/struct/struct.rb:26:in `from_file'\n./spec/ruby/imports_params_def_enum_imported_spec.rb:8:in `block (2 levels) in <top (required)>'"
+    },
+    "is_kst": true
+  },
+  "ImportsParamsDefUsertypeImported": {
+    "status": "failed",
+    "elapsed": 0.0,
+    "failure": {
+      "file_name": "./spec/ruby/imports_params_def_usertype_imported_spec.rb",
+      "line_num": 4,
+      "message": "uninitialized constant ImportsParamsDefUsertypeImported::ParamsDefUsertypeImported\nDid you mean?  ParamsPassUsertype",
+      "trace": "./compiled/ruby/imports_params_def_usertype_imported.rb:17:in `_read'\n./compiled/ruby/imports_params_def_usertype_imported.rb:12:in `initialize'\n/runtime/ruby/lib/kaitai/struct/struct.rb:26:in `new'\n/runtime/ruby/lib/kaitai/struct/struct.rb:26:in `from_file'\n./spec/ruby/imports_params_def_usertype_imported_spec.rb:6:in `block (2 levels) in <top (required)>'"
+    },
     "is_kst": true
   },
   "ImportsRel1": {
@@ -922,6 +988,26 @@
   "StrEncodingsDefault": {
     "status": "passed",
     "elapsed": 0.0
+  },
+  "StrEncodingsEscapingEnc": {
+    "status": "failed",
+    "elapsed": 0.0,
+    "failure": {
+      "file_name": "./spec/ruby/str_encodings_escaping_enc_spec.rb",
+      "line_num": 2,
+      "message": "expected ArgumentError with \"unknown encoding name - ASCII\\\\\\\\x\", got #<ArgumentError: unknown encoding name - ASCII\\x> with backtrace:\n  # ./compiled/ruby/str_encodings_escaping_enc.rb:43:in `force_encoding'\n  # ./compiled/ruby/str_encodings_escaping_enc.rb:43:in `v'\n  # ./spec/ruby/str_encodings_escaping_enc_spec.rb:7:in `block (3 levels) in <top (required)>'\n  # ./spec/ruby/str_encodings_escaping_enc_spec.rb:6:in `block (2 levels) in <top (required)>'",
+      "trace": "./spec/ruby/str_encodings_escaping_enc_spec.rb:6:in `block (2 levels) in <top (required)>'"
+    }
+  },
+  "StrEncodingsEscapingToS": {
+    "status": "failed",
+    "elapsed": 0.0,
+    "failure": {
+      "file_name": "./spec/ruby/str_encodings_escaping_to_s_spec.rb",
+      "line_num": 2,
+      "message": "expected ArgumentError with \"unknown encoding name - ASCII\\\\\\\\x\", got #<ArgumentError: unknown encoding name - ASCII\\x> with backtrace:\n  # ./compiled/ruby/str_encodings_escaping_to_s.rb:28:in `force_encoding'\n  # ./compiled/ruby/str_encodings_escaping_to_s.rb:28:in `str1'\n  # ./spec/ruby/str_encodings_escaping_to_s_spec.rb:7:in `block (3 levels) in <top (required)>'\n  # ./spec/ruby/str_encodings_escaping_to_s_spec.rb:6:in `block (2 levels) in <top (required)>'",
+      "trace": "./spec/ruby/str_encodings_escaping_to_s_spec.rb:6:in `block (2 levels) in <top (required)>'"
+    }
   },
   "StrEncodingsUtf16": {
     "status": "passed",
