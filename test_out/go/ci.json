@@ -1,13 +1,13 @@
 {
   "$meta": {
     "lang": "go",
-    "timestamp": "2024-04-01T11:40:14Z",
+    "timestamp": "2024-04-03T14:42:12Z",
     "ci": {
       "ci": "github",
-      "run_id": "8507591430",
-      "run_number": "322",
-      "job_id": "23299694610",
-      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/8507591430/job/23299694610"
+      "run_id": "8540694278",
+      "run_number": "323",
+      "job_id": "23398301877",
+      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/8540694278/job/23398301877"
     }
   },
   "BitsByteAligned": {
@@ -199,7 +199,12 @@
     "elapsed": 0.0,
     "is_kst": true
   },
-  "EnumImport": {
+  "EnumImportLiterals": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "EnumImportSeq": {
     "status": "passed",
     "elapsed": 0.0,
     "is_kst": true
@@ -245,14 +250,13 @@
     "is_kst": true
   },
   "EofExceptionBytes": {
-    "status": "failed",
+    "status": "passed",
     "elapsed": 0.0,
-    "failure": {
-      "file_name": null,
-      "line_num": null,
-      "message": "Failed",
-      "trace": "eof_exception_bytes_test.go:31: expected kaitai.EndOfStreamError, got *fmt.wrapError"
-    },
+    "is_kst": true
+  },
+  "EofExceptionSized": {
+    "status": "passed",
+    "elapsed": 0.0,
     "is_kst": true
   },
   "EofExceptionU4": {
@@ -262,19 +266,18 @@
       "file_name": null,
       "line_num": null,
       "message": "Failed",
-      "trace": "eof_exception_u4_test.go:31: expected kaitai.EndOfStreamError, got <nil>"
+      "trace": "eof_exception_u4_test.go:29: \n        \tError Trace:\t/tests/spec/go/eof_exception_u4_test.go:29\n        \tError:      \tAn error is expected but got nil.\n        \tTest:       \tTestEofExceptionU4\n    eof_exception_u4_test.go:30: \n        \tError Trace:\t/tests/spec/go/eof_exception_u4_test.go:30\n        \tError:      \tTarget error should be in err chain:\n        \t            \texpected: \"unexpected EOF\"\n        \t            \tin chain: \n        \tTest:       \tTestEofExceptionU4"
     },
     "is_kst": true
   },
   "EosExceptionBytes": {
-    "status": "failed",
+    "status": "passed",
     "elapsed": 0.0,
-    "failure": {
-      "file_name": null,
-      "line_num": null,
-      "message": "Failed",
-      "trace": "eos_exception_bytes_test.go:31: expected kaitai.EndOfStreamError, got *fmt.wrapError"
-    },
+    "is_kst": true
+  },
+  "EosExceptionSized": {
+    "status": "passed",
+    "elapsed": 0.0,
     "is_kst": true
   },
   "EosExceptionU4": {
@@ -284,7 +287,7 @@
       "file_name": null,
       "line_num": null,
       "message": "Failed",
-      "trace": "eos_exception_u4_test.go:31: expected kaitai.EndOfStreamError, got <nil>"
+      "trace": "eos_exception_u4_test.go:29: \n        \tError Trace:\t/tests/spec/go/eos_exception_u4_test.go:29\n        \tError:      \tAn error is expected but got nil.\n        \tTest:       \tTestEosExceptionU4\n    eos_exception_u4_test.go:30: \n        \tError Trace:\t/tests/spec/go/eos_exception_u4_test.go:30\n        \tError:      \tTarget error should be in err chain:\n        \t            \texpected: \"unexpected EOF\"\n        \t            \tin chain: \n        \tTest:       \tTestEosExceptionU4"
     },
     "is_kst": true
   },
@@ -484,6 +487,16 @@
     "elapsed": 0.0,
     "is_kst": true
   },
+  "ImportsParamsDefEnumImported": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "ImportsParamsDefUsertypeImported": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
   "ImportsRel1": {
     "status": "passed",
     "elapsed": 0.0,
@@ -640,7 +653,7 @@
       "file_name": null,
       "line_num": null,
       "message": "Failed",
-      "trace": "goroutine 121 [running]:\nruntime/debug.Stack()\n\t/usr/local/go/src/runtime/debug/stack.go:24 +0x5e\nruntime/debug.PrintStack()\n\t/usr/local/go/src/runtime/debug/stack.go:16 +0x13\n_/tests/spec/go.TestOpaqueExternalType02Parent.func1()\n\t/tests/spec/go/opaque_external_type_02_parent_test.go:15 +0x39\npanic({0x613da0?, 0x84b030?})\n\t/usr/local/go/src/runtime/panic.go:914 +0x21f\ntest_formats.(*OpaqueExternalType02Child).SomeMethod(...)\n\t/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:50\ntest_formats.(*OpaqueExternalType02Child_OpaqueExternalType02ChildChild).Read(0xc0001bd0b0?, 0xc0001aca48?, 0x3?, 0x652a80?)\n\t/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:77 +0x54\ntest_formats.(*OpaqueExternalType02Child).Read(0xc000068aa0, 0xc000038688?, {0x0?, 0x0?}, 0x63dda0?)\n\t/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:42 +0x145\ntest_formats.(*OpaqueExternalType02Parent_ParentObj).Read(0xc000022c20, 0x40d6c5?, 0x28?, 0x63de80?)\n\t/tests/compiled/go/src/test_formats/opaque_external_type_02_parent.go:56 +0x7f\ntest_formats.(*OpaqueExternalType02Parent).Read(0xc0001bd0e0, 0x17?, {0x6cce60?, 0xc0001bd0e0?}, 0x70dea9?)\n\t/tests/compiled/go/src/test_formats/opaque_external_type_02_parent.go:28 +0x95\n_/tests/spec/go.TestOpaqueExternalType02Parent(0xc0001c44e0)\n\t/tests/spec/go/opaque_external_type_02_parent_test.go:25 +0x114\ntesting.tRunner(0xc0001c44e0, 0x694a60)\n\t/usr/local/go/src/testing/testing.go:1595 +0xff\ncreated by testing.(*T).Run in goroutine 1\n\t/usr/local/go/src/testing/testing.go:1648 +0x3ad\n    opaque_external_type_02_parent_test.go:16: unexpected panic: runtime error: invalid memory address or nil pointer dereference"
+      "trace": "goroutine 126 [running]:\nruntime/debug.Stack()\n\t/usr/local/go/src/runtime/debug/stack.go:24 +0x5e\nruntime/debug.PrintStack()\n\t/usr/local/go/src/runtime/debug/stack.go:16 +0x13\n_/tests/spec/go.TestOpaqueExternalType02Parent.func1()\n\t/tests/spec/go/opaque_external_type_02_parent_test.go:15 +0x39\npanic({0x619040?, 0x855030?})\n\t/usr/local/go/src/runtime/panic.go:914 +0x21f\ntest_formats.(*OpaqueExternalType02Child).SomeMethod(...)\n\t/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:50\ntest_formats.(*OpaqueExternalType02Child_OpaqueExternalType02ChildChild).Read(0xc0001d3830?, 0xc0001b8c38?, 0x3?, 0x658a40?)\n\t/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:77 +0x54\ntest_formats.(*OpaqueExternalType02Child).Read(0xc000068be0, 0xc000038688?, {0x0?, 0x0?}, 0x643660?)\n\t/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:42 +0x145\ntest_formats.(*OpaqueExternalType02Parent_ParentObj).Read(0xc000022e60, 0x40d765?, 0x28?, 0x643740?)\n\t/tests/compiled/go/src/test_formats/opaque_external_type_02_parent.go:56 +0x7f\ntest_formats.(*OpaqueExternalType02Parent).Read(0xc0001d3860, 0x17?, {0x6d3b80?, 0xc0001d3860?}, 0x715969?)\n\t/tests/compiled/go/src/test_formats/opaque_external_type_02_parent.go:28 +0x95\n_/tests/spec/go.TestOpaqueExternalType02Parent(0xc0001dab60)\n\t/tests/spec/go/opaque_external_type_02_parent_test.go:25 +0x114\ntesting.tRunner(0xc0001dab60, 0x69ad18)\n\t/usr/local/go/src/testing/testing.go:1595 +0xff\ncreated by testing.(*T).Run in goroutine 1\n\t/usr/local/go/src/testing/testing.go:1648 +0x3ad\n    opaque_external_type_02_parent_test.go:16: unexpected panic: runtime error: invalid memory address or nil pointer dereference"
     }
   },
   "OpaqueWithParam": {

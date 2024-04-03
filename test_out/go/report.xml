@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites tests="195" failures="15">
-	<testsuite name="_/tests/spec/go" tests="195" failures="15" errors="0" id="0" hostname="ff02152df3a9" time="0.047" timestamp="2024-04-01T11:40:14Z">
+<testsuites tests="200" failures="13">
+	<testsuite name="_/tests/spec/go" tests="200" failures="13" errors="0" id="0" hostname="8ec6358249da" time="0.055" timestamp="2024-04-03T14:42:12Z">
 		<testcase name="TestBitsByteAligned" classname="_/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestBitsEnum" classname="_/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestBitsSeqEndianCombo" classname="_/tests/spec/go" time="0.000"></testcase>
@@ -39,7 +39,8 @@
 		<testcase name="TestEnumDeep" classname="_/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestEnumFancy" classname="_/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestEnumIf" classname="_/tests/spec/go" time="0.000"></testcase>
-		<testcase name="TestEnumImport" classname="_/tests/spec/go" time="0.000"></testcase>
+		<testcase name="TestEnumImportLiterals" classname="_/tests/spec/go" time="0.000"></testcase>
+		<testcase name="TestEnumImportSeq" classname="_/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestEnumIntRangeS" classname="_/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestEnumIntRangeU" classname="_/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestEnumInvalid" classname="_/tests/spec/go" time="0.000"></testcase>
@@ -48,26 +49,42 @@
 		<testcase name="TestEnumNegative" classname="_/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestEnumOfValueInst" classname="_/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestEnumToIClassBorder1" classname="_/tests/spec/go" time="0.000"></testcase>
-		<testcase name="TestEofExceptionBytes" classname="_/tests/spec/go" time="0.000">
-			<failure message="Failed"><![CDATA[    eof_exception_bytes_test.go:31: expected kaitai.EndOfStreamError, got *fmt.wrapError]]></failure>
-		</testcase>
+		<testcase name="TestEofExceptionBytes" classname="_/tests/spec/go" time="0.000"></testcase>
+		<testcase name="TestEofExceptionSized" classname="_/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestEofExceptionU4" classname="_/tests/spec/go" time="0.000">
-			<failure message="Failed"><![CDATA[    eof_exception_u4_test.go:31: expected kaitai.EndOfStreamError, got <nil>]]></failure>
+			<failure message="Failed"><![CDATA[    eof_exception_u4_test.go:29: 
+        	Error Trace:	/tests/spec/go/eof_exception_u4_test.go:29
+        	Error:      	An error is expected but got nil.
+        	Test:       	TestEofExceptionU4
+    eof_exception_u4_test.go:30: 
+        	Error Trace:	/tests/spec/go/eof_exception_u4_test.go:30
+        	Error:      	Target error should be in err chain:
+        	            	expected: "unexpected EOF"
+        	            	in chain: 
+        	Test:       	TestEofExceptionU4]]></failure>
 		</testcase>
-		<testcase name="TestEosExceptionBytes" classname="_/tests/spec/go" time="0.000">
-			<failure message="Failed"><![CDATA[    eos_exception_bytes_test.go:31: expected kaitai.EndOfStreamError, got *fmt.wrapError]]></failure>
-		</testcase>
+		<testcase name="TestEosExceptionBytes" classname="_/tests/spec/go" time="0.000"></testcase>
+		<testcase name="TestEosExceptionSized" classname="_/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestEosExceptionU4" classname="_/tests/spec/go" time="0.000">
-			<failure message="Failed"><![CDATA[    eos_exception_u4_test.go:31: expected kaitai.EndOfStreamError, got <nil>]]></failure>
+			<failure message="Failed"><![CDATA[    eos_exception_u4_test.go:29: 
+        	Error Trace:	/tests/spec/go/eos_exception_u4_test.go:29
+        	Error:      	An error is expected but got nil.
+        	Test:       	TestEosExceptionU4
+    eos_exception_u4_test.go:30: 
+        	Error Trace:	/tests/spec/go/eos_exception_u4_test.go:30
+        	Error:      	Target error should be in err chain:
+        	            	expected: "unexpected EOF"
+        	            	in chain: 
+        	Test:       	TestEosExceptionU4]]></failure>
 		</testcase>
 		<testcase name="TestExpr0" classname="_/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestExpr1" classname="_/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestExpr2" classname="_/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestExpr3" classname="_/tests/spec/go" time="0.000"></testcase>
-		<testcase name="TestExprArray" classname="_/tests/spec/go" time="0.000"></testcase>
+		<testcase name="TestExprArray" classname="_/tests/spec/go" time="0.020"></testcase>
 		<testcase name="TestExprBits" classname="_/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestExprBytesCmp" classname="_/tests/spec/go" time="0.000"></testcase>
-		<testcase name="TestExprBytesNonLiteral" classname="_/tests/spec/go" time="0.020"></testcase>
+		<testcase name="TestExprBytesNonLiteral" classname="_/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestExprBytesOps" classname="_/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestExprCalcArrayOps" classname="_/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestExprEnum" classname="_/tests/spec/go" time="0.000"></testcase>
@@ -127,6 +144,8 @@
 		<testcase name="TestImportsAbsAbs" classname="_/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestImportsAbsRel" classname="_/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestImportsCircularA" classname="_/tests/spec/go" time="0.000"></testcase>
+		<testcase name="TestImportsParamsDefEnumImported" classname="_/tests/spec/go" time="0.000"></testcase>
+		<testcase name="TestImportsParamsDefUsertypeImported" classname="_/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestImportsRel1" classname="_/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestIndexSizes" classname="_/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestInstanceIoUser" classname="_/tests/spec/go" time="0.000"></testcase>
@@ -157,40 +176,40 @@
 		<testcase name="TestNestedTypes" classname="_/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestNonStandard" classname="_/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestOpaqueExternalType02Parent" classname="_/tests/spec/go" time="0.000">
-			<failure message="Failed"><![CDATA[goroutine 121 [running]:
+			<failure message="Failed"><![CDATA[goroutine 126 [running]:
 runtime/debug.Stack()
 	/usr/local/go/src/runtime/debug/stack.go:24 +0x5e
 runtime/debug.PrintStack()
 	/usr/local/go/src/runtime/debug/stack.go:16 +0x13
 _/tests/spec/go.TestOpaqueExternalType02Parent.func1()
 	/tests/spec/go/opaque_external_type_02_parent_test.go:15 +0x39
-panic({0x613da0?, 0x84b030?})
+panic({0x619040?, 0x855030?})
 	/usr/local/go/src/runtime/panic.go:914 +0x21f
 test_formats.(*OpaqueExternalType02Child).SomeMethod(...)
 	/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:50
-test_formats.(*OpaqueExternalType02Child_OpaqueExternalType02ChildChild).Read(0xc0001bd0b0?, 0xc0001aca48?, 0x3?, 0x652a80?)
+test_formats.(*OpaqueExternalType02Child_OpaqueExternalType02ChildChild).Read(0xc0001d3830?, 0xc0001b8c38?, 0x3?, 0x658a40?)
 	/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:77 +0x54
-test_formats.(*OpaqueExternalType02Child).Read(0xc000068aa0, 0xc000038688?, {0x0?, 0x0?}, 0x63dda0?)
+test_formats.(*OpaqueExternalType02Child).Read(0xc000068be0, 0xc000038688?, {0x0?, 0x0?}, 0x643660?)
 	/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:42 +0x145
-test_formats.(*OpaqueExternalType02Parent_ParentObj).Read(0xc000022c20, 0x40d6c5?, 0x28?, 0x63de80?)
+test_formats.(*OpaqueExternalType02Parent_ParentObj).Read(0xc000022e60, 0x40d765?, 0x28?, 0x643740?)
 	/tests/compiled/go/src/test_formats/opaque_external_type_02_parent.go:56 +0x7f
-test_formats.(*OpaqueExternalType02Parent).Read(0xc0001bd0e0, 0x17?, {0x6cce60?, 0xc0001bd0e0?}, 0x70dea9?)
+test_formats.(*OpaqueExternalType02Parent).Read(0xc0001d3860, 0x17?, {0x6d3b80?, 0xc0001d3860?}, 0x715969?)
 	/tests/compiled/go/src/test_formats/opaque_external_type_02_parent.go:28 +0x95
-_/tests/spec/go.TestOpaqueExternalType02Parent(0xc0001c44e0)
+_/tests/spec/go.TestOpaqueExternalType02Parent(0xc0001dab60)
 	/tests/spec/go/opaque_external_type_02_parent_test.go:25 +0x114
-testing.tRunner(0xc0001c44e0, 0x694a60)
+testing.tRunner(0xc0001dab60, 0x69ad18)
 	/usr/local/go/src/testing/testing.go:1595 +0xff
 created by testing.(*T).Run in goroutine 1
 	/usr/local/go/src/testing/testing.go:1648 +0x3ad
     opaque_external_type_02_parent_test.go:16: unexpected panic: runtime error: invalid memory address or nil pointer dereference]]></failure>
 		</testcase>
 		<testcase name="TestOpaqueExternalType" classname="_/tests/spec/go" time="0.000"></testcase>
-		<testcase name="TestOpaqueWithParam" classname="_/tests/spec/go" time="0.000"></testcase>
+		<testcase name="TestOpaqueWithParam" classname="_/tests/spec/go" time="0.020"></testcase>
 		<testcase name="TestParamsCallExtraParens" classname="_/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestParamsCall" classname="_/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestParamsDef" classname="_/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestParamsEnum" classname="_/tests/spec/go" time="0.000"></testcase>
-		<testcase name="TestParamsPassArrayInt" classname="_/tests/spec/go" time="0.020"></testcase>
+		<testcase name="TestParamsPassArrayInt" classname="_/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestParamsPassArrayStr" classname="_/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestParamsPassArrayUsertype" classname="_/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestParamsPassBool" classname="_/tests/spec/go" time="0.000"></testcase>
