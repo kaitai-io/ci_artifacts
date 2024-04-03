@@ -1,13 +1,13 @@
 {
   "$meta": {
     "lang": "javascript",
-    "timestamp": "2024-04-01T11:40:10Z",
+    "timestamp": "2024-04-03T14:42:03Z",
     "ci": {
       "ci": "github",
-      "run_id": "8507591430",
-      "run_number": "322",
-      "job_id": "23299695590",
-      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/8507591430/job/23299695590"
+      "run_id": "8540694278",
+      "run_number": "323",
+      "job_id": "23398305028",
+      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/8540694278/job/23398305028"
     }
   },
   "BcdUserTypeBe": {
@@ -146,11 +146,6 @@
     "elapsed": 0.0,
     "is_kst": true
   },
-  "CastToImported": {
-    "status": "passed",
-    "elapsed": 0.0,
-    "is_kst": true
-  },
   "CastToTop": {
     "status": "passed",
     "elapsed": 0.0,
@@ -272,7 +267,18 @@
     "elapsed": 0.0,
     "is_kst": true
   },
-  "EnumImport": {
+  "EnumImportLiterals": {
+    "status": "failed",
+    "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": null,
+      "trace": "Enum0 is not defined\nReferenceError: Enum0 is not defined\n    at EnumImportLiterals.get (compiled/javascript/EnumImportLiterals.js:34:25)\n    at /tests/spec/javascript/test_enum_import_literals.js:9:24\n    at /tests/helpers/javascript/testHelper.js:16:11\n    at FSReqWrap.readFileAfterClose [as oncomplete] (internal/fs/read_file_context.js:53:3)"
+    },
+    "is_kst": true
+  },
+  "EnumImportSeq": {
     "status": "passed",
     "elapsed": 0.0,
     "is_kst": true
@@ -338,12 +344,22 @@
     "elapsed": 0.0,
     "is_kst": true
   },
+  "EofExceptionSized": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
   "EofExceptionU4": {
     "status": "passed",
     "elapsed": 0.0,
     "is_kst": true
   },
   "EosExceptionBytes": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "EosExceptionSized": {
     "status": "passed",
     "elapsed": 0.0,
     "is_kst": true
@@ -553,7 +569,33 @@
     "status": "passed",
     "elapsed": 0.0
   },
+  "ImportsCastToImported": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "ImportsCastToImported2": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
   "ImportsCircularA": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "ImportsParamsDefEnumImported": {
+    "status": "failed",
+    "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": null,
+      "trace": "Enum0 is not defined\nReferenceError: Enum0 is not defined\n    at /tests/spec/javascript/test_imports_params_def_enum_imported.js:8:34\n    at /tests/helpers/javascript/testHelper.js:16:11\n    at FSReqWrap.readFileAfterClose [as oncomplete] (internal/fs/read_file_context.js:53:3)"
+    },
+    "is_kst": true
+  },
+  "ImportsParamsDefUsertypeImported": {
     "status": "passed",
     "elapsed": 0.0,
     "is_kst": true
@@ -979,6 +1021,26 @@
     "status": "passed",
     "elapsed": 0.0,
     "is_kst": true
+  },
+  "StrEncodingsEscapingEnc": {
+    "status": "failed",
+    "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": null,
+      "trace": "expected RangeError, but got Error: Encoding not recognized: 'ASCII\\x' (searched as: 'asciix')\n\n      + expected - actual\n\n      -false\n      +true\n      \nAssertionError [ERR_ASSERTION]: expected RangeError, but got Error: Encoding not recognized: 'ASCII\\x' (searched as: 'asciix')\n    at validateErr (spec/javascript/test_str_encodings_escaping_enc.js:7:3)\n    at expectedException (assert.js:559:19)\n    at expectsError (assert.js:648:16)\n    at Function.throws (assert.js:679:3)\n    at assertUnknownEncoding (spec/javascript/test_str_encodings_escaping_enc.js:14:10)\n    at /tests/spec/javascript/test_str_encodings_escaping_enc.js:18:3\n    at /tests/helpers/javascript/testHelper.js:16:11\n    at FSReqWrap.readFileAfterClose [as oncomplete] (internal/fs/read_file_context.js:53:3)"
+    }
+  },
+  "StrEncodingsEscapingToS": {
+    "status": "failed",
+    "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": null,
+      "trace": "expected RangeError, but got Error: Encoding not recognized: 'ASCII\\x' (searched as: 'asciix')\n\n      + expected - actual\n\n      -false\n      +true\n      \nAssertionError [ERR_ASSERTION]: expected RangeError, but got Error: Encoding not recognized: 'ASCII\\x' (searched as: 'asciix')\n    at validateErr (spec/javascript/test_str_encodings_escaping_to_s.js:5:3)\n    at expectedException (assert.js:559:19)\n    at expectsError (assert.js:648:16)\n    at Function.throws (assert.js:679:3)\n    at assertUnknownEncoding (spec/javascript/test_str_encodings_escaping_to_s.js:20:10)\n    at /tests/spec/javascript/test_str_encodings_escaping_to_s.js:24:3\n    at /tests/helpers/javascript/testHelper.js:16:11\n    at FSReqWrap.readFileAfterClose [as oncomplete] (internal/fs/read_file_context.js:53:3)"
+    }
   },
   "StrEncodingsUtf16": {
     "status": "passed",
