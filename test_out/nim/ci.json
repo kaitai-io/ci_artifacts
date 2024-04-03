@@ -1,13 +1,13 @@
 {
   "$meta": {
     "lang": "nim",
-    "timestamp": "2024-04-01T11:45:10Z",
+    "timestamp": "2024-04-03T14:47:14Z",
     "ci": {
       "ci": "github",
-      "run_id": "8507591430",
-      "run_number": "322",
-      "job_id": "23299696150",
-      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/8507591430/job/23299696150"
+      "run_id": "8540694278",
+      "run_number": "323",
+      "job_id": "23398306508",
+      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/8540694278/job/23398306508"
     }
   },
   "BcdUserTypeBe": {
@@ -106,11 +106,6 @@
     "is_kst": true
   },
   "CastNested": {
-    "status": "passed",
-    "elapsed": 0.0,
-    "is_kst": true
-  },
-  "CastToImported": {
     "status": "passed",
     "elapsed": 0.0,
     "is_kst": true
@@ -220,7 +215,12 @@
     "elapsed": 0.0,
     "is_kst": true
   },
-  "EnumImport": {
+  "EnumImportLiterals": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "EnumImportSeq": {
     "status": "passed",
     "elapsed": 0.0,
     "is_kst": true
@@ -498,6 +498,28 @@
     },
     "is_kst": true
   },
+  "ImportsCastToImported": {
+    "status": "failed",
+    "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": "/tests/spec/nim/timports_cast_to_imported.nim(10, 13) Error: undeclared field: &apos;hwOne&apos; for type cast_to_imported.CastToImported [type declared in /tests/compiled/nim/cast_to_imported.nim(6, 3)]\n",
+      "trace": ""
+    },
+    "is_kst": true
+  },
+  "ImportsCastToImported2": {
+    "status": "failed",
+    "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": "/tests/spec/nim/timports_cast_to_imported2.nim(10, 13) Error: undeclared field: &apos;hw&apos; for type cast_to_imported2.CastToImported2 [type declared in /tests/compiled/nim/cast_to_imported2.nim(6, 3)]\n",
+      "trace": ""
+    },
+    "is_kst": true
+  },
   "ImportsCircularA": {
     "status": "failed",
     "elapsed": 0.0,
@@ -505,6 +527,22 @@
       "file_name": null,
       "line_num": null,
       "message": "/tests/compiled/nim/imports_circular_a.nim(9, 13) Error: undeclared identifier: &apos;ImportsCircularB&apos;\ncandidates (edit distance, scope distance); see &apos;--spellSuggest&apos;: \n (1, 0): &apos;ImportsCircularA&apos; [type declared in /tests/compiled/nim/imports_circular_a.nim(7, 3)]\n (1, 0): &apos;imports_circular_b&apos; [module declared in /tests/compiled/nim/imports_circular_a.nim(5, 8)]\nThis might be caused by a recursive module dependency:\n/tests/compiled/nim/imports_circular_b.nim imports /tests/compiled/nim/imports_circular_a.nim\n/tests/compiled/nim/imports_circular_a.nim imports /tests/compiled/nim/imports_circular_b.nim\n",
+      "trace": ""
+    },
+    "is_kst": true
+  },
+  "ImportsParamsDefEnumImported": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "ImportsParamsDefUsertypeImported": {
+    "status": "failed",
+    "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": "/tests/spec/nim/timports_params_def_usertype_imported.nim(10, 13) Error: undeclared field: &apos;hwOne&apos; for type params_def_usertype_imported.ParamsDefUsertypeImported [type declared in /tests/compiled/nim/params_def_usertype_imported.nim(6, 3)]\n",
       "trace": ""
     },
     "is_kst": true
