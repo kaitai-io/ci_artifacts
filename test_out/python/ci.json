@@ -1,13 +1,13 @@
 {
   "$meta": {
     "lang": "python",
-    "timestamp": "2024-04-01T11:41:03Z",
+    "timestamp": "2024-04-03T14:43:09Z",
     "ci": {
       "ci": "github",
-      "run_id": "8507591430",
-      "run_number": "322",
-      "job_id": "23299697162",
-      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/8507591430/job/23299697162"
+      "run_id": "8540694278",
+      "run_number": "323",
+      "job_id": "23398308802",
+      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/8540694278/job/23398308802"
     }
   },
   "BcdUserTypeBe": {
@@ -106,11 +106,6 @@
     "is_kst": true
   },
   "CastNested": {
-    "status": "passed",
-    "elapsed": 0.0,
-    "is_kst": true
-  },
-  "CastToImported": {
     "status": "passed",
     "elapsed": 0.0,
     "is_kst": true
@@ -236,14 +231,25 @@
     "elapsed": 0.0,
     "is_kst": true
   },
-  "EnumImport": {
+  "EnumImportLiterals": {
     "status": "failed",
     "elapsed": 0.0,
     "failure": {
       "file_name": null,
       "line_num": null,
       "message": "name 'Enum0' is not defined",
-      "trace": "Traceback (most recent call last):\n  File \"/tests/spec/python/test_enum_import.py\", line 10, in test_enum_import\n    with EnumImport.from_file('src/enum_0.bin') as r:\n  File \"/runtime/python/kaitaistruct.py\", line 44, in from_file\n    return cls(KaitaiStream(f))\n  File \"/tests/compiled/python/enum_import.py\", line 16, in __init__\n    self._read()\n  File \"/tests/compiled/python/enum_import.py\", line 19, in _read\n    self.pet_1 = KaitaiStream.resolve_enum(Enum0.Animal, self._io.read_u4le())\nNameError: name 'Enum0' is not defined"
+      "trace": "Traceback (most recent call last):\n  File \"/tests/spec/python/test_enum_import_literals.py\", line 11, in test_enum_import_literals\n    self.assertEqual(r.pet_1_to_i, 7)\n  File \"/tests/compiled/python/enum_import_literals.py\", line 34, in pet_1_to_i\n    self._m_pet_1_to_i = int(Enum0.Animal.cat)\nNameError: name 'Enum0' is not defined"
+    },
+    "is_kst": true
+  },
+  "EnumImportSeq": {
+    "status": "failed",
+    "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": "name 'Enum0' is not defined",
+      "trace": "Traceback (most recent call last):\n  File \"/tests/spec/python/test_enum_import_seq.py\", line 10, in test_enum_import_seq\n    with EnumImportSeq.from_file('src/enum_0.bin') as r:\n  File \"/runtime/python/kaitaistruct.py\", line 44, in from_file\n    return cls(KaitaiStream(f))\n  File \"/tests/compiled/python/enum_import_seq.py\", line 16, in __init__\n    self._read()\n  File \"/tests/compiled/python/enum_import_seq.py\", line 19, in _read\n    self.pet_1 = KaitaiStream.resolve_enum(Enum0.Animal, self._io.read_u4le())\nNameError: name 'Enum0' is not defined"
     },
     "is_kst": true
   },
@@ -301,6 +307,11 @@
     "status": "passed",
     "elapsed": 0.0
   },
+  "EofExceptionSized": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
   "EofExceptionU4": {
     "status": "passed",
     "elapsed": 0.0
@@ -308,6 +319,11 @@
   "EosExceptionBytes": {
     "status": "passed",
     "elapsed": 0.0
+  },
+  "EosExceptionSized": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
   },
   "EosExceptionU4": {
     "status": "passed",
@@ -512,9 +528,35 @@
     "status": "passed",
     "elapsed": 0.0
   },
+  "ImportsCastToImported": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "ImportsCastToImported2": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
   "ImportsCircularA": {
     "status": "passed",
     "elapsed": 0.0
+  },
+  "ImportsParamsDefEnumImported": {
+    "status": "failed",
+    "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": "name 'Enum0' is not defined",
+      "trace": "Traceback (most recent call last):\n  File \"/tests/spec/python/test_imports_params_def_enum_imported.py\", line 10, in test_imports_params_def_enum_imported\n    with ImportsParamsDefEnumImported.from_file('src/enum_0.bin') as r:\n  File \"/runtime/python/kaitaistruct.py\", line 44, in from_file\n    return cls(KaitaiStream(f))\n  File \"/tests/compiled/python/imports_params_def_enum_imported.py\", line 18, in __init__\n    self._read()\n  File \"/tests/compiled/python/imports_params_def_enum_imported.py\", line 21, in _read\n    self.one = enum_import_seq.EnumImportSeq(self._io)\n  File \"/tests/compiled/python/enum_import_seq.py\", line 16, in __init__\n    self._read()\n  File \"/tests/compiled/python/enum_import_seq.py\", line 19, in _read\n    self.pet_1 = KaitaiStream.resolve_enum(Enum0.Animal, self._io.read_u4le())\nNameError: name 'Enum0' is not defined"
+    },
+    "is_kst": true
+  },
+  "ImportsParamsDefUsertypeImported": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
   },
   "ImportsRel1": {
     "status": "passed",
@@ -924,6 +966,26 @@
     "status": "passed",
     "elapsed": 0.0,
     "is_kst": true
+  },
+  "StrEncodingsEscapingEnc": {
+    "status": "failed",
+    "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": "'unknown encoding: ASCII\\\\x' != 'unknown encoding: ASCII\\\\\\\\x'\n- unknown encoding: ASCII\\x\n+ unknown encoding: ASCII\\\\x\n?                         +\n",
+      "trace": "Traceback (most recent call last):\n  File \"/tests/spec/python/test_str_encodings_escaping_enc.py\", line 9, in test_str_encodings_escaping_enc\n    self.assertEqual(str(cm.exception), 'unknown encoding: {}'.format(\"ASCII\\\\\\\\x\"))\nAssertionError: 'unknown encoding: ASCII\\\\x' != 'unknown encoding: ASCII\\\\\\\\x'\n- unknown encoding: ASCII\\x\n+ unknown encoding: ASCII\\\\x\n?                         +"
+    }
+  },
+  "StrEncodingsEscapingToS": {
+    "status": "failed",
+    "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": "'unknown encoding: ASCII\\\\x' != 'unknown encoding: ASCII\\\\\\\\x'\n- unknown encoding: ASCII\\x\n+ unknown encoding: ASCII\\\\x\n?                         +\n",
+      "trace": "Traceback (most recent call last):\n  File \"/tests/spec/python/test_str_encodings_escaping_to_s.py\", line 9, in test_str_encodings_escaping_to_s\n    self.assertEqual(str(cm.exception), 'unknown encoding: {}'.format(\"ASCII\\\\\\\\x\"))\nAssertionError: 'unknown encoding: ASCII\\\\x' != 'unknown encoding: ASCII\\\\\\\\x'\n- unknown encoding: ASCII\\x\n+ unknown encoding: ASCII\\\\x\n?                         +"
+    }
   },
   "StrEncodingsUtf16": {
     "status": "passed",
