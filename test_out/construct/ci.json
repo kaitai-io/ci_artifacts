@@ -1,13 +1,13 @@
 {
   "$meta": {
     "lang": "construct",
-    "timestamp": "2024-04-01T11:40:03Z",
+    "timestamp": "2024-04-03T14:42:00Z",
     "ci": {
       "ci": "github",
-      "run_id": "8507591430",
-      "run_number": "322",
-      "job_id": "23299694171",
-      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/8507591430/job/23299694171"
+      "run_id": "8540694278",
+      "run_number": "323",
+      "job_id": "23398300815",
+      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/8540694278/job/23398300815"
     }
   },
   "BcdUserTypeBe": {
@@ -212,17 +212,6 @@
     "elapsed": 0.0,
     "is_kst": true
   },
-  "CastToImported": {
-    "status": "failed",
-    "elapsed": 0.0,
-    "failure": {
-      "file_name": null,
-      "line_num": null,
-      "message": "name 'hello_world' is not defined",
-      "trace": "Traceback (most recent call last):\n  File \"/tests/spec/construct/test_cast_to_imported.py\", line 9, in test_cast_to_imported\n    r = _schema.parse_file('src/fixed_struct.bin')\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 425, in parse_file\n    return self.parse_stream(f, **contextkw)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 416, in parse_stream\n    return self._parsereport(stream, context, \"(parsing)\")\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 428, in _parsereport\n    obj = self._parse(stream, context, path)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 2236, in _parse\n    subobj = sc._parsereport(stream, context, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 428, in _parsereport\n    obj = self._parse(stream, context, path)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 2770, in _parse\n    return self.subcon._parsereport(stream, context, path)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 428, in _parsereport\n    obj = self._parse(stream, context, path)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 6220, in _parse\n    sc = self.subconfunc()\n         ^^^^^^^^^^^^^^^^^\n  File \"/tests/compiled/construct/cast_to_imported.py\", line 5, in <lambda>\n    'one' / LazyBound(lambda: hello_world),\n                              ^^^^^^^^^^^\nNameError: name 'hello_world' is not defined"
-    },
-    "is_kst": true
-  },
   "CastToTop": {
     "status": "failed",
     "elapsed": 0.1,
@@ -370,14 +359,25 @@
     "elapsed": 0.0,
     "is_kst": true
   },
-  "EnumImport": {
+  "EnumImportLiterals": {
     "status": "failed",
     "elapsed": 0.0,
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "Failed to import test module: test_enum_import\nTraceback (most recent call last):\n  File \"/usr/local/lib/python3.12/unittest/loader.py\", line 394, in _find_test_path\n    module = self._get_module_from_name(name)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/unittest/loader.py\", line 337, in _get_module_from_name\n    __import__(name)\n  File \"/tests/spec/construct/test_enum_import.py\", line 4, in <module>\n    from enum_import import _schema\n  File \"/tests/compiled/construct/enum_import.py\", line 5, in <module>\n    'pet_1' / Enum(Int32ul, enum_0__animal),\n                            ^^^^^^^^^^^^^^\nNameError: name 'enum_0__animal' is not defined\n",
-      "trace": "ImportError: Failed to import test module: test_enum_import\nTraceback (most recent call last):\n  File \"/usr/local/lib/python3.12/unittest/loader.py\", line 394, in _find_test_path\n    module = self._get_module_from_name(name)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/unittest/loader.py\", line 337, in _get_module_from_name\n    __import__(name)\n  File \"/tests/spec/construct/test_enum_import.py\", line 4, in <module>\n    from enum_import import _schema\n  File \"/tests/compiled/construct/enum_import.py\", line 5, in <module>\n    'pet_1' / Enum(Int32ul, enum_0__animal),\n                            ^^^^^^^^^^^^^^\nNameError: name 'enum_0__animal' is not defined"
+      "message": "invalid literal for int() with base 10: 'cat'",
+      "trace": "Traceback (most recent call last):\n  File \"/tests/spec/construct/test_enum_import_literals.py\", line 9, in test_enum_import_literals\n    r = _schema.parse_file('src/enum_0.bin')\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 425, in parse_file\n    return self.parse_stream(f, **contextkw)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 416, in parse_stream\n    return self._parsereport(stream, context, \"(parsing)\")\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 428, in _parsereport\n    obj = self._parse(stream, context, path)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 2236, in _parse\n    subobj = sc._parsereport(stream, context, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 428, in _parsereport\n    obj = self._parse(stream, context, path)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 2770, in _parse\n    return self.subcon._parsereport(stream, context, path)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 428, in _parsereport\n    obj = self._parse(stream, context, path)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 2915, in _parse\n    return self.func(context) if callable(self.func) else self.func\n           ^^^^^^^^^^^^^^^^^^\n  File \"/tests/compiled/construct/enum_import_literals.py\", line 6, in <lambda>\n    'pet_1_to_i' / Computed(lambda this: int('cat')),\n                                         ^^^^^^^^^^\nValueError: invalid literal for int() with base 10: 'cat'"
+    },
+    "is_kst": true
+  },
+  "EnumImportSeq": {
+    "status": "failed",
+    "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": "Failed to import test module: test_enum_import_seq\nTraceback (most recent call last):\n  File \"/usr/local/lib/python3.12/unittest/loader.py\", line 394, in _find_test_path\n    module = self._get_module_from_name(name)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/unittest/loader.py\", line 337, in _get_module_from_name\n    __import__(name)\n  File \"/tests/spec/construct/test_enum_import_seq.py\", line 5, in <module>\n    from enum_import_seq import _schema\n  File \"/tests/compiled/construct/enum_import_seq.py\", line 5, in <module>\n    'pet_1' / Enum(Int32ul, enum_0__animal),\n                            ^^^^^^^^^^^^^^\nNameError: name 'enum_0__animal' is not defined\n",
+      "trace": "ImportError: Failed to import test module: test_enum_import_seq\nTraceback (most recent call last):\n  File \"/usr/local/lib/python3.12/unittest/loader.py\", line 394, in _find_test_path\n    module = self._get_module_from_name(name)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/unittest/loader.py\", line 337, in _get_module_from_name\n    __import__(name)\n  File \"/tests/spec/construct/test_enum_import_seq.py\", line 5, in <module>\n    from enum_import_seq import _schema\n  File \"/tests/compiled/construct/enum_import_seq.py\", line 5, in <module>\n    'pet_1' / Enum(Int32ul, enum_0__animal),\n                            ^^^^^^^^^^^^^^\nNameError: name 'enum_0__animal' is not defined"
     },
     "is_kst": true
   },
@@ -710,6 +710,28 @@
       "trace": "Traceback (most recent call last):\n  File \"/tests/spec/construct/test_imports_abs_rel.py\", line 7, in test_imports_abs_rel\n    r = _schema.parse_file('src/fixed_struct.bin')\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 425, in parse_file\n    return self.parse_stream(f, **contextkw)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 416, in parse_stream\n    return self._parsereport(stream, context, \"(parsing)\")\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 428, in _parsereport\n    obj = self._parse(stream, context, path)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 2236, in _parse\n    subobj = sc._parsereport(stream, context, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 428, in _parsereport\n    obj = self._parse(stream, context, path)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 2770, in _parse\n    return self.subcon._parsereport(stream, context, path)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 428, in _parsereport\n    obj = self._parse(stream, context, path)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 6220, in _parse\n    sc = self.subconfunc()\n         ^^^^^^^^^^^^^^^^^\n  File \"/tests/compiled/construct/imports_abs_rel.py\", line 6, in <lambda>\n    'two' / LazyBound(lambda: imported_and_rel),\n                              ^^^^^^^^^^^^^^^^\nNameError: name 'imported_and_rel' is not defined. Did you mean: 'imports_abs_rel'?"
     }
   },
+  "ImportsCastToImported": {
+    "status": "failed",
+    "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": "name 'hello_world' is not defined",
+      "trace": "Traceback (most recent call last):\n  File \"/tests/spec/construct/test_imports_cast_to_imported.py\", line 9, in test_imports_cast_to_imported\n    r = _schema.parse_file('src/process_xor_4.bin')\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 425, in parse_file\n    return self.parse_stream(f, **contextkw)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 416, in parse_stream\n    return self._parsereport(stream, context, \"(parsing)\")\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 428, in _parsereport\n    obj = self._parse(stream, context, path)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 2236, in _parse\n    subobj = sc._parsereport(stream, context, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 428, in _parsereport\n    obj = self._parse(stream, context, path)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 2770, in _parse\n    return self.subcon._parsereport(stream, context, path)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 428, in _parsereport\n    obj = self._parse(stream, context, path)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 6220, in _parse\n    sc = self.subconfunc()\n         ^^^^^^^^^^^^^^^^^\n  File \"/tests/compiled/construct/imports_cast_to_imported.py\", line 5, in <lambda>\n    'hw' / LazyBound(lambda: hello_world),\n                             ^^^^^^^^^^^\nNameError: name 'hello_world' is not defined"
+    },
+    "is_kst": true
+  },
+  "ImportsCastToImported2": {
+    "status": "failed",
+    "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": "name 'hello_world' is not defined",
+      "trace": "Traceback (most recent call last):\n  File \"/tests/spec/construct/test_imports_cast_to_imported2.py\", line 9, in test_imports_cast_to_imported2\n    r = _schema.parse_file('src/process_xor_4.bin')\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 425, in parse_file\n    return self.parse_stream(f, **contextkw)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 416, in parse_stream\n    return self._parsereport(stream, context, \"(parsing)\")\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 428, in _parsereport\n    obj = self._parse(stream, context, path)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 2236, in _parse\n    subobj = sc._parsereport(stream, context, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 428, in _parsereport\n    obj = self._parse(stream, context, path)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 2770, in _parse\n    return self.subcon._parsereport(stream, context, path)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 428, in _parsereport\n    obj = self._parse(stream, context, path)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 6220, in _parse\n    sc = self.subconfunc()\n         ^^^^^^^^^^^^^^^^^\n  File \"/tests/compiled/construct/imports_cast_to_imported2.py\", line 5, in <lambda>\n    'hw' / LazyBound(lambda: hello_world),\n                             ^^^^^^^^^^^\nNameError: name 'hello_world' is not defined"
+    },
+    "is_kst": true
+  },
   "ImportsCircularA": {
     "status": "failed",
     "elapsed": 0.0,
@@ -718,6 +740,28 @@
       "line_num": null,
       "message": "name 'imports_circular_b' is not defined",
       "trace": "Traceback (most recent call last):\n  File \"/tests/spec/construct/test_imports_circular_a.py\", line 9, in test_imports_circular_a\n    r = _schema.parse_file('src/fixed_struct.bin')\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 425, in parse_file\n    return self.parse_stream(f, **contextkw)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 416, in parse_stream\n    return self._parsereport(stream, context, \"(parsing)\")\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 428, in _parsereport\n    obj = self._parse(stream, context, path)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 2236, in _parse\n    subobj = sc._parsereport(stream, context, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 428, in _parsereport\n    obj = self._parse(stream, context, path)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 2770, in _parse\n    return self.subcon._parsereport(stream, context, path)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 428, in _parsereport\n    obj = self._parse(stream, context, path)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 6220, in _parse\n    sc = self.subconfunc()\n         ^^^^^^^^^^^^^^^^^\n  File \"/tests/compiled/construct/imports_circular_a.py\", line 6, in <lambda>\n    'two' / LazyBound(lambda: imports_circular_b),\n                              ^^^^^^^^^^^^^^^^^^\nNameError: name 'imports_circular_b' is not defined. Did you mean: 'imports_circular_a'?"
+    },
+    "is_kst": true
+  },
+  "ImportsParamsDefEnumImported": {
+    "status": "failed",
+    "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": "name 'enum_import_seq' is not defined",
+      "trace": "Traceback (most recent call last):\n  File \"/tests/spec/construct/test_imports_params_def_enum_imported.py\", line 9, in test_imports_params_def_enum_imported\n    r = _schema.parse_file('src/enum_0.bin')\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 425, in parse_file\n    return self.parse_stream(f, **contextkw)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 416, in parse_stream\n    return self._parsereport(stream, context, \"(parsing)\")\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 428, in _parsereport\n    obj = self._parse(stream, context, path)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 2236, in _parse\n    subobj = sc._parsereport(stream, context, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 428, in _parsereport\n    obj = self._parse(stream, context, path)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 2770, in _parse\n    return self.subcon._parsereport(stream, context, path)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 428, in _parsereport\n    obj = self._parse(stream, context, path)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 6220, in _parse\n    sc = self.subconfunc()\n         ^^^^^^^^^^^^^^^^^\n  File \"/tests/compiled/construct/imports_params_def_enum_imported.py\", line 5, in <lambda>\n    'one' / LazyBound(lambda: enum_import_seq),\n                              ^^^^^^^^^^^^^^^\nNameError: name 'enum_import_seq' is not defined"
+    },
+    "is_kst": true
+  },
+  "ImportsParamsDefUsertypeImported": {
+    "status": "failed",
+    "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": "name 'hello_world' is not defined",
+      "trace": "Traceback (most recent call last):\n  File \"/tests/spec/construct/test_imports_params_def_usertype_imported.py\", line 9, in test_imports_params_def_usertype_imported\n    r = _schema.parse_file('src/process_xor_4.bin')\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 425, in parse_file\n    return self.parse_stream(f, **contextkw)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 416, in parse_stream\n    return self._parsereport(stream, context, \"(parsing)\")\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 428, in _parsereport\n    obj = self._parse(stream, context, path)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 2236, in _parse\n    subobj = sc._parsereport(stream, context, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 428, in _parsereport\n    obj = self._parse(stream, context, path)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 2770, in _parse\n    return self.subcon._parsereport(stream, context, path)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 428, in _parsereport\n    obj = self._parse(stream, context, path)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 6220, in _parse\n    sc = self.subconfunc()\n         ^^^^^^^^^^^^^^^^^\n  File \"/tests/compiled/construct/imports_params_def_usertype_imported.py\", line 5, in <lambda>\n    'hw' / LazyBound(lambda: hello_world),\n                             ^^^^^^^^^^^\nNameError: name 'hello_world' is not defined"
     },
     "is_kst": true
   },
@@ -1323,8 +1367,8 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "<built-in method values of Container object at 0x7fa6d10d8950> != [1, 2, 3, 4]",
-      "trace": "Traceback (most recent call last):\n  File \"/tests/spec/construct/test_repeat_until_complex.py\", line 12, in test_repeat_until_complex\n    self.assertEqual(r.first[0].values, [(0 + 1), 2, 3, 4])\nAssertionError: <built-in method values of Container object at 0x7fa6d10d8950> != [1, 2, 3, 4]"
+      "message": "<built-in method values of Container object at 0x7fd10ad4a690> != [1, 2, 3, 4]",
+      "trace": "Traceback (most recent call last):\n  File \"/tests/spec/construct/test_repeat_until_complex.py\", line 12, in test_repeat_until_complex\n    self.assertEqual(r.first[0].values, [(0 + 1), 2, 3, 4])\nAssertionError: <built-in method values of Container object at 0x7fd10ad4a690> != [1, 2, 3, 4]"
     },
     "is_kst": true
   },
