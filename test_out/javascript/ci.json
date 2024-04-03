@@ -1,13 +1,13 @@
 {
   "$meta": {
     "lang": "javascript",
-    "timestamp": "2024-04-01T11:40:34Z",
+    "timestamp": "2024-04-03T14:42:37Z",
     "ci": {
       "ci": "github",
-      "run_id": "8507591430",
-      "run_number": "322",
-      "job_id": "23299695749",
-      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/8507591430/job/23299695749"
+      "run_id": "8540694278",
+      "run_number": "323",
+      "job_id": "23398305364",
+      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/8540694278/job/23398305364"
     }
   },
   "BcdUserTypeBe": {
@@ -146,11 +146,6 @@
     "elapsed": 0.0,
     "is_kst": true
   },
-  "CastToImported": {
-    "status": "passed",
-    "elapsed": 0.0,
-    "is_kst": true
-  },
   "CastToTop": {
     "status": "passed",
     "elapsed": 0.0,
@@ -272,7 +267,18 @@
     "elapsed": 0.0,
     "is_kst": true
   },
-  "EnumImport": {
+  "EnumImportLiterals": {
+    "status": "failed",
+    "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": null,
+      "trace": "Enum0 is not defined\nReferenceError: Enum0 is not defined\n    at EnumImportLiterals.get (compiled/javascript/EnumImportLiterals.js:34:25)\n    at /tests/spec/javascript/test_enum_import_literals.js:9:24\n    at /tests/helpers/javascript/testHelper.js:16:11\n    at FSReqCallback.readFileAfterClose [as oncomplete] (internal/fs/read_file_context.js:63:3)"
+    },
+    "is_kst": true
+  },
+  "EnumImportSeq": {
     "status": "passed",
     "elapsed": 0.0,
     "is_kst": true
@@ -338,12 +344,22 @@
     "elapsed": 0.0,
     "is_kst": true
   },
+  "EofExceptionSized": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
   "EofExceptionU4": {
     "status": "passed",
     "elapsed": 0.0,
     "is_kst": true
   },
   "EosExceptionBytes": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "EosExceptionSized": {
     "status": "passed",
     "elapsed": 0.0,
     "is_kst": true
@@ -559,7 +575,33 @@
     "status": "passed",
     "elapsed": 0.0
   },
+  "ImportsCastToImported": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "ImportsCastToImported2": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
   "ImportsCircularA": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "ImportsParamsDefEnumImported": {
+    "status": "failed",
+    "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": null,
+      "trace": "Enum0 is not defined\nReferenceError: Enum0 is not defined\n    at /tests/spec/javascript/test_imports_params_def_enum_imported.js:8:34\n    at /tests/helpers/javascript/testHelper.js:16:11\n    at FSReqCallback.readFileAfterClose [as oncomplete] (internal/fs/read_file_context.js:63:3)"
+    },
+    "is_kst": true
+  },
+  "ImportsParamsDefUsertypeImported": {
     "status": "passed",
     "elapsed": 0.0,
     "is_kst": true
@@ -997,6 +1039,26 @@
       "trace": "The \"SJIS\" encoding is not supported\nRangeError [ERR_ENCODING_NOT_SUPPORTED]: The \"SJIS\" encoding is not supported\n    at new TextDecoder (internal/encoding.js:398:15)\n    at Function.KaitaiStream.bytesToStr (/runtime/javascript/KaitaiStream.js:612:15)\n    at Subtype.StrEncodingsDefault.Subtype.Subtype._read (compiled/javascript/StrEncodingsDefault.js:38:32)\n    at new Subtype (compiled/javascript/StrEncodingsDefault.js:32:12)\n    at StrEncodingsDefault._read (compiled/javascript/StrEncodingsDefault.js:23:17)\n    at new StrEncodingsDefault (compiled/javascript/StrEncodingsDefault.js:18:10)\n    at /tests/helpers/javascript/testHelper.js:14:17\n    at FSReqCallback.readFileAfterClose [as oncomplete] (internal/fs/read_file_context.js:63:3)"
     },
     "is_kst": true
+  },
+  "StrEncodingsEscapingEnc": {
+    "status": "failed",
+    "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": null,
+      "trace": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'The \"ASCII\\\\x\" encoding is not supported'\n- 'The \"ASCII\\\\\\\\x\" encoding is not supported'\n\n      + expected - actual\n\n      -The \"ASCII\\x\" encoding is not supported\n      +The \"ASCII\\\\x\" encoding is not supported\n      \nAssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ 'The \"ASCII\\\\x\" encoding is not supported'\n- 'The \"ASCII\\\\\\\\x\" encoding is not supported'\n    at validateErr (spec/javascript/test_str_encodings_escaping_enc.js:9:10)\n    at expectedException (assert.js:634:26)\n    at expectsError (assert.js:749:3)\n    at Function.throws (assert.js:798:3)\n    at assertUnknownEncoding (spec/javascript/test_str_encodings_escaping_enc.js:14:10)\n    at /tests/spec/javascript/test_str_encodings_escaping_enc.js:18:3\n    at /tests/helpers/javascript/testHelper.js:16:11\n    at FSReqCallback.readFileAfterClose [as oncomplete] (internal/fs/read_file_context.js:63:3)"
+    }
+  },
+  "StrEncodingsEscapingToS": {
+    "status": "failed",
+    "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": null,
+      "trace": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'The \"ASCII\\\\x\" encoding is not supported'\n- 'The \"ASCII\\\\\\\\x\" encoding is not supported'\n\n      + expected - actual\n\n      -The \"ASCII\\x\" encoding is not supported\n      +The \"ASCII\\\\x\" encoding is not supported\n      \nAssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ 'The \"ASCII\\\\x\" encoding is not supported'\n- 'The \"ASCII\\\\\\\\x\" encoding is not supported'\n    at validateErr (spec/javascript/test_str_encodings_escaping_to_s.js:15:10)\n    at expectedException (assert.js:634:26)\n    at expectsError (assert.js:749:3)\n    at Function.throws (assert.js:798:3)\n    at assertUnknownEncoding (spec/javascript/test_str_encodings_escaping_to_s.js:20:10)\n    at /tests/spec/javascript/test_str_encodings_escaping_to_s.js:24:3\n    at /tests/helpers/javascript/testHelper.js:16:11\n    at FSReqCallback.readFileAfterClose [as oncomplete] (internal/fs/read_file_context.js:63:3)"
+    }
   },
   "StrEncodingsUtf16": {
     "status": "passed",
