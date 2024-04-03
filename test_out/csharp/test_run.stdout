@@ -57,7 +57,33 @@ A total of 1 test files matched the specified pattern.
    at Kaitai.StrEncodingsDefault.FromFile(String fileName) in /tests/compiled/csharp/StrEncodingsDefault.cs:line 11
    at Kaitai.SpecStrEncodingsDefault.TestStrEncodingsDefault() in /tests/spec/csharp/kaitai_struct_csharp_tests/tests/SpecStrEncodingsDefault.cs:line 13
 
-  Failed TestValidEqStrEncodings [1 ms]
+  Failed TestStrEncodingsEscapingEnc [2 ms]
+  Error Message:
+     Expected: String starting with "'ASCII\\x' is not a supported encoding name."
+  But was:  "'ASCII\x' is not a supported encoding name. For information on defining a custom encoding, see the documentation for the Encoding.RegisterProvider method. (Parameter 'name')"
+
+  Stack Trace:
+     at Kaitai.SpecStrEncodingsEscapingEnc.AssertUnknownEncoding(String expectedEncoding, TestDelegate code) in /tests/spec/csharp/kaitai_struct_csharp_tests/tests/SpecStrEncodingsEscapingEnc.cs:line 42
+   at Kaitai.SpecStrEncodingsEscapingEnc.TestStrEncodingsEscapingEnc() in /tests/spec/csharp/kaitai_struct_csharp_tests/tests/SpecStrEncodingsEscapingEnc.cs:line 13
+
+1)    at Kaitai.SpecStrEncodingsEscapingEnc.AssertUnknownEncoding(String expectedEncoding, TestDelegate code) in /tests/spec/csharp/kaitai_struct_csharp_tests/tests/SpecStrEncodingsEscapingEnc.cs:line 42
+   at Kaitai.SpecStrEncodingsEscapingEnc.TestStrEncodingsEscapingEnc() in /tests/spec/csharp/kaitai_struct_csharp_tests/tests/SpecStrEncodingsEscapingEnc.cs:line 13
+
+
+  Failed TestStrEncodingsEscapingToS [1 ms]
+  Error Message:
+     Expected: String starting with "'ASCII\\x' is not a supported encoding name."
+  But was:  "'ASCII\x' is not a supported encoding name. For information on defining a custom encoding, see the documentation for the Encoding.RegisterProvider method. (Parameter 'name')"
+
+  Stack Trace:
+     at Kaitai.SpecStrEncodingsEscapingToS.AssertUnknownEncoding(String expectedEncoding, TestDelegate code) in /tests/spec/csharp/kaitai_struct_csharp_tests/tests/SpecStrEncodingsEscapingToS.cs:line 42
+   at Kaitai.SpecStrEncodingsEscapingToS.TestStrEncodingsEscapingToS() in /tests/spec/csharp/kaitai_struct_csharp_tests/tests/SpecStrEncodingsEscapingToS.cs:line 13
+
+1)    at Kaitai.SpecStrEncodingsEscapingToS.AssertUnknownEncoding(String expectedEncoding, TestDelegate code) in /tests/spec/csharp/kaitai_struct_csharp_tests/tests/SpecStrEncodingsEscapingToS.cs:line 42
+   at Kaitai.SpecStrEncodingsEscapingToS.TestStrEncodingsEscapingToS() in /tests/spec/csharp/kaitai_struct_csharp_tests/tests/SpecStrEncodingsEscapingToS.cs:line 13
+
+
+  Failed TestValidEqStrEncodings [< 1 ms]
   Error Message:
    System.ArgumentException : 'SJIS' is not a supported encoding name. For information on defining a custom encoding, see the documentation for the Encoding.RegisterProvider method. (Parameter 'name')
   Stack Trace:
@@ -71,4 +97,4 @@ A total of 1 test files matched the specified pattern.
 
 Results File: /tests/test_out/csharp/TestResultTrx.xml
 
-Failed!  - Failed:     5, Passed:   223, Skipped:     0, Total:   228, Duration: 335 ms - /tests/spec/csharp/kaitai_struct_csharp_tests_netstd/bin/Debug/net6.0/kaitai_struct_csharp_tests_netstd.dll (net6.0)
+Failed!  - Failed:     7, Passed:   228, Skipped:     0, Total:   235, Duration: 325 ms - /tests/spec/csharp/kaitai_struct_csharp_tests_netstd/bin/Debug/net6.0/kaitai_struct_csharp_tests_netstd.dll (net6.0)

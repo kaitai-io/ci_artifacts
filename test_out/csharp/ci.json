@@ -1,13 +1,13 @@
 {
   "$meta": {
     "lang": "csharp",
-    "timestamp": "2024-04-01T11:40:32Z",
+    "timestamp": "2024-04-03T14:42:38Z",
     "ci": {
       "ci": "github",
-      "run_id": "8507591430",
-      "run_number": "322",
-      "job_id": "23299694328",
-      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/8507591430/job/23299694328"
+      "run_id": "8540694278",
+      "run_number": "323",
+      "job_id": "23398301189",
+      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/8540694278/job/23398301189"
     }
   },
   "BcdUserTypeBe": {
@@ -106,11 +106,6 @@
     "is_kst": true
   },
   "CastNested": {
-    "status": "passed",
-    "elapsed": 0.0,
-    "is_kst": true
-  },
-  "CastToImported": {
     "status": "passed",
     "elapsed": 0.0,
     "is_kst": true
@@ -236,7 +231,12 @@
     "elapsed": 0.0,
     "is_kst": true
   },
-  "EnumImport": {
+  "EnumImportLiterals": {
+    "status": "format_build_failed",
+    "elapsed": 0,
+    "is_kst": true
+  },
+  "EnumImportSeq": {
     "status": "passed",
     "elapsed": 0.0,
     "is_kst": true
@@ -298,12 +298,22 @@
     "elapsed": 0.0,
     "is_kst": true
   },
+  "EofExceptionSized": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
   "EofExceptionU4": {
     "status": "passed",
     "elapsed": 0.0,
     "is_kst": true
   },
   "EosExceptionBytes": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "EosExceptionSized": {
     "status": "passed",
     "elapsed": 0.0,
     "is_kst": true
@@ -513,7 +523,27 @@
     "status": "passed",
     "elapsed": 0.0
   },
+  "ImportsCastToImported": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "ImportsCastToImported2": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
   "ImportsCircularA": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "ImportsParamsDefEnumImported": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "ImportsParamsDefUsertypeImported": {
     "status": "passed",
     "elapsed": 0.0,
     "is_kst": true
@@ -932,6 +962,26 @@
       "trace": "   at System.Text.EncodingTable.InternalGetCodePageFromName(String name)\n   at System.Text.EncodingTable.GetCodePageFromName(String name)\n   at System.Text.Encoding.GetEncoding(String name)\n   at Kaitai.StrEncodingsDefault.Subtype._read() in /tests/compiled/csharp/StrEncodingsDefault.cs:line 44\n   at Kaitai.StrEncodingsDefault.Subtype..ctor(KaitaiStream p__io, StrEncodingsDefault p__parent, StrEncodingsDefault p__root) in /tests/compiled/csharp/StrEncodingsDefault.cs:line 37\n   at Kaitai.StrEncodingsDefault._read() in /tests/compiled/csharp/StrEncodingsDefault.cs:line 24\n   at Kaitai.StrEncodingsDefault..ctor(KaitaiStream p__io, KaitaiStruct p__parent, StrEncodingsDefault p__root) in /tests/compiled/csharp/StrEncodingsDefault.cs:line 18\n   at Kaitai.StrEncodingsDefault.FromFile(String fileName) in /tests/compiled/csharp/StrEncodingsDefault.cs:line 11\n   at Kaitai.SpecStrEncodingsDefault.TestStrEncodingsDefault() in /tests/spec/csharp/kaitai_struct_csharp_tests/tests/SpecStrEncodingsDefault.cs:line 13\n"
     },
     "is_kst": true
+  },
+  "StrEncodingsEscapingEnc": {
+    "status": "failed",
+    "elapsed": 0.0,
+    "failure": {
+      "file_name": "?:?",
+      "line_num": null,
+      "message": "  Expected: String starting with \"'ASCII\\\\x' is not a supported encoding name.\"\n  But was:  \"'ASCII\\x' is not a supported encoding name. For information on defining a custom encoding, see the documentation for the Encoding.RegisterProvider method. (Parameter 'name')\"\n",
+      "trace": "   at Kaitai.SpecStrEncodingsEscapingEnc.AssertUnknownEncoding(String expectedEncoding, TestDelegate code) in /tests/spec/csharp/kaitai_struct_csharp_tests/tests/SpecStrEncodingsEscapingEnc.cs:line 42\n   at Kaitai.SpecStrEncodingsEscapingEnc.TestStrEncodingsEscapingEnc() in /tests/spec/csharp/kaitai_struct_csharp_tests/tests/SpecStrEncodingsEscapingEnc.cs:line 13\n\n1)    at Kaitai.SpecStrEncodingsEscapingEnc.AssertUnknownEncoding(String expectedEncoding, TestDelegate code) in /tests/spec/csharp/kaitai_struct_csharp_tests/tests/SpecStrEncodingsEscapingEnc.cs:line 42\n   at Kaitai.SpecStrEncodingsEscapingEnc.TestStrEncodingsEscapingEnc() in /tests/spec/csharp/kaitai_struct_csharp_tests/tests/SpecStrEncodingsEscapingEnc.cs:line 13\n\n"
+    }
+  },
+  "StrEncodingsEscapingToS": {
+    "status": "failed",
+    "elapsed": 0.0,
+    "failure": {
+      "file_name": "?:?",
+      "line_num": null,
+      "message": "  Expected: String starting with \"'ASCII\\\\x' is not a supported encoding name.\"\n  But was:  \"'ASCII\\x' is not a supported encoding name. For information on defining a custom encoding, see the documentation for the Encoding.RegisterProvider method. (Parameter 'name')\"\n",
+      "trace": "   at Kaitai.SpecStrEncodingsEscapingToS.AssertUnknownEncoding(String expectedEncoding, TestDelegate code) in /tests/spec/csharp/kaitai_struct_csharp_tests/tests/SpecStrEncodingsEscapingToS.cs:line 42\n   at Kaitai.SpecStrEncodingsEscapingToS.TestStrEncodingsEscapingToS() in /tests/spec/csharp/kaitai_struct_csharp_tests/tests/SpecStrEncodingsEscapingToS.cs:line 13\n\n1)    at Kaitai.SpecStrEncodingsEscapingToS.AssertUnknownEncoding(String expectedEncoding, TestDelegate code) in /tests/spec/csharp/kaitai_struct_csharp_tests/tests/SpecStrEncodingsEscapingToS.cs:line 42\n   at Kaitai.SpecStrEncodingsEscapingToS.TestStrEncodingsEscapingToS() in /tests/spec/csharp/kaitai_struct_csharp_tests/tests/SpecStrEncodingsEscapingToS.cs:line 13\n\n"
+    }
   },
   "StrEncodingsUtf16": {
     "status": "passed",
