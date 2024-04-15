@@ -1,13 +1,13 @@
 {
   "$meta": {
     "lang": "nim",
-    "timestamp": "2024-04-03T14:47:14Z",
+    "timestamp": "2024-04-15T18:19:54Z",
     "ci": {
       "ci": "github",
-      "run_id": "8540694278",
-      "run_number": "323",
-      "job_id": "23398306508",
-      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/8540694278/job/23398306508"
+      "run_id": "8694033682",
+      "run_number": "324",
+      "job_id": "23842114197",
+      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/8694033682/job/23842114197"
     }
   },
   "BcdUserTypeBe": {
@@ -216,8 +216,14 @@
     "is_kst": true
   },
   "EnumImportLiterals": {
-    "status": "passed",
+    "status": "failed",
     "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": "/tests/compiled/nim/enum_import_literals.nim(11, 17) Error: undeclared identifier: &apos;EnumDeep_Container1_Container2_Animal&apos;\ncandidates (edit distance, scope distance); see &apos;--spellSuggest&apos;: \n (22, 0): &apos;EnumImportLiterals&apos; [type declared in /tests/compiled/nim/enum_import_literals.nim(5, 3)]\n",
+      "trace": ""
+    },
     "is_kst": true
   },
   "EnumImportSeq": {
@@ -277,7 +283,7 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "/tests/compiled/nim/enum_to_i_class_border_1.nim(11, 20) Error: undeclared identifier: &apos;EnumToIClassBorder2&apos;\ncandidates (edit distance, scope distance); see &apos;--spellSuggest&apos;: \n (1, 0): &apos;EnumToIClassBorder1&apos; [type declared in /tests/compiled/nim/enum_to_i_class_border_1.nim(7, 3)]\n (1, 0): &apos;enum_to_i_class_border_2&apos; [module declared in /tests/compiled/nim/enum_to_i_class_border_1.nim(5, 8)]\nThis might be caused by a recursive module dependency:\n/tests/compiled/nim/enum_to_i_class_border_2.nim imports /tests/compiled/nim/enum_to_i_class_border_1.nim\n/tests/compiled/nim/enum_to_i_class_border_1.nim imports /tests/compiled/nim/enum_to_i_class_border_2.nim\n",
+      "message": "/tests/compiled/nim/enum_to_i_class_border_2.nim(7, 16) Error: undeclared identifier: &apos;EnumToIClassBorder1&apos;\ncandidates (edit distance, scope distance); see &apos;--spellSuggest&apos;: \n (1, 0): &apos;EnumToIClassBorder2&apos; [type declared in /tests/compiled/nim/enum_to_i_class_border_2.nim(6, 3)]\n (1, 0): &apos;enum_to_i_class_border_1&apos; [module declared in /tests/compiled/nim/enum_to_i_class_border_2.nim(3, 8)]\nThis might be caused by a recursive module dependency:\n/tests/compiled/nim/enum_to_i_class_border_1.nim imports /tests/compiled/nim/enum_to_i_class_border_2.nim\n/tests/compiled/nim/enum_to_i_class_border_2.nim imports /tests/compiled/nim/enum_to_i_class_border_1.nim\n",
       "trace": ""
     },
     "is_kst": true
@@ -504,7 +510,7 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "/tests/spec/nim/timports_cast_to_imported.nim(10, 13) Error: undeclared field: &apos;hwOne&apos; for type cast_to_imported.CastToImported [type declared in /tests/compiled/nim/cast_to_imported.nim(6, 3)]\n",
+      "message": "/tests/compiled/nim/cast_to_imported.nim(29, 30) Error: undeclared identifier: &apos;HelloWorld&apos;\ncandidates (edit distance, scope distance); see &apos;--spellSuggest&apos;: \n (6, 4): &apos;declared&apos; [proc declared in /nim/lib/system.nim(169, 8)]\n",
       "trace": ""
     },
     "is_kst": true
@@ -515,7 +521,7 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "/tests/spec/nim/timports_cast_to_imported2.nim(10, 13) Error: undeclared field: &apos;hw&apos; for type cast_to_imported2.CastToImported2 [type declared in /tests/compiled/nim/cast_to_imported2.nim(6, 3)]\n",
+      "message": "/tests/compiled/nim/cast_to_imported2.nim(8, 15) Error: undeclared identifier: &apos;HelloWorld&apos;\ncandidates (edit distance, scope distance); see &apos;--spellSuggest&apos;: \n (6, 2): &apos;declared&apos; [proc declared in /nim/lib/system.nim(169, 8)]\n",
       "trace": ""
     },
     "is_kst": true
@@ -526,7 +532,18 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "/tests/compiled/nim/imports_circular_a.nim(9, 13) Error: undeclared identifier: &apos;ImportsCircularB&apos;\ncandidates (edit distance, scope distance); see &apos;--spellSuggest&apos;: \n (1, 0): &apos;ImportsCircularA&apos; [type declared in /tests/compiled/nim/imports_circular_a.nim(7, 3)]\n (1, 0): &apos;imports_circular_b&apos; [module declared in /tests/compiled/nim/imports_circular_a.nim(5, 8)]\nThis might be caused by a recursive module dependency:\n/tests/compiled/nim/imports_circular_b.nim imports /tests/compiled/nim/imports_circular_a.nim\n/tests/compiled/nim/imports_circular_a.nim imports /tests/compiled/nim/imports_circular_b.nim\n",
+      "message": "/tests/compiled/nim/imports_circular_b.nim(8, 17) Error: undeclared identifier: &apos;ImportsCircularA&apos;\ncandidates (edit distance, scope distance); see &apos;--spellSuggest&apos;: \n (1, 0): &apos;ImportsCircularB&apos; [type declared in /tests/compiled/nim/imports_circular_b.nim(6, 3)]\n (1, 0): &apos;imports_circular_a&apos; [module declared in /tests/compiled/nim/imports_circular_b.nim(3, 8)]\nThis might be caused by a recursive module dependency:\n/tests/compiled/nim/imports_circular_a.nim imports /tests/compiled/nim/imports_circular_b.nim\n/tests/compiled/nim/imports_circular_b.nim imports /tests/compiled/nim/imports_circular_a.nim\n",
+      "trace": ""
+    },
+    "is_kst": true
+  },
+  "ImportsParamsDefArrayUsertypeImported": {
+    "status": "failed",
+    "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": "/tests/spec/nim/timports_params_def_array_usertype_imported.nim(12, 13) Error: undeclared field: &apos;hw0One&apos; for type params_def_array_usertype_imported.ParamsDefArrayUsertypeImported [type declared in /tests/compiled/nim/params_def_array_usertype_imported.nim(6, 3)]\n",
       "trace": ""
     },
     "is_kst": true
@@ -548,14 +565,8 @@
     "is_kst": true
   },
   "ImportsRel1": {
-    "status": "failed",
+    "status": "passed",
     "elapsed": 0.0,
-    "failure": {
-      "file_name": null,
-      "line_num": null,
-      "message": "/tests/compiled/nim/imports_rel_1.nim(3, 23) Error: cannot open file: for_rel_imports/imported_1\n",
-      "trace": ""
-    },
     "is_kst": true
   },
   "IndexSizes": {
