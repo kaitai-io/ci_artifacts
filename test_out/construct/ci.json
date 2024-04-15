@@ -1,13 +1,13 @@
 {
   "$meta": {
     "lang": "construct",
-    "timestamp": "2024-04-03T14:41:59Z",
+    "timestamp": "2024-04-15T18:14:50Z",
     "ci": {
       "ci": "github",
-      "run_id": "8540694278",
-      "run_number": "323",
-      "job_id": "23398300354",
-      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/8540694278/job/23398300354"
+      "run_id": "8694033682",
+      "run_number": "324",
+      "job_id": "23842109065",
+      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/8694033682/job/23842109065"
     }
   },
   "BcdUserTypeBe": {
@@ -740,6 +740,17 @@
       "line_num": null,
       "message": "name 'imports_circular_b' is not defined",
       "trace": "Traceback (most recent call last):\n  File \"/tests/spec/construct/test_imports_circular_a.py\", line 9, in test_imports_circular_a\n    r = _schema.parse_file('src/fixed_struct.bin')\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 309, in parse_file\n    return self.parse_stream(f, **contextkw)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 300, in parse_stream\n    return self._parsereport(stream, context, \"(parsing)\")\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 312, in _parsereport\n    obj = self._parse(stream, context, path)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 1982, in _parse\n    subobj = sc._parsereport(stream, context, path)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 312, in _parsereport\n    obj = self._parse(stream, context, path)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 2440, in _parse\n    return self.subcon._parsereport(stream, context, path)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 312, in _parsereport\n    obj = self._parse(stream, context, path)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 5534, in _parse\n    sc = self.subconfunc()\n  File \"/tests/compiled/construct/imports_circular_a.py\", line 6, in <lambda>\n    'two' / LazyBound(lambda: imports_circular_b),\nNameError: name 'imports_circular_b' is not defined"
+    },
+    "is_kst": true
+  },
+  "ImportsParamsDefArrayUsertypeImported": {
+    "status": "failed",
+    "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": "name 'hello_world' is not defined",
+      "trace": "Traceback (most recent call last):\n  File \"/tests/spec/construct/test_imports_params_def_array_usertype_imported.py\", line 9, in test_imports_params_def_array_usertype_imported\n    r = _schema.parse_file('src/process_xor_4.bin')\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 309, in parse_file\n    return self.parse_stream(f, **contextkw)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 300, in parse_stream\n    return self._parsereport(stream, context, \"(parsing)\")\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 312, in _parsereport\n    obj = self._parse(stream, context, path)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 1982, in _parse\n    subobj = sc._parsereport(stream, context, path)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 312, in _parsereport\n    obj = self._parse(stream, context, path)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 2440, in _parse\n    return self.subcon._parsereport(stream, context, path)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 312, in _parsereport\n    obj = self._parse(stream, context, path)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 2222, in _parse\n    e = self.subcon._parsereport(stream, context, path)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 312, in _parsereport\n    obj = self._parse(stream, context, path)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 5534, in _parse\n    sc = self.subconfunc()\n  File \"/tests/compiled/construct/imports_params_def_array_usertype_imported.py\", line 5, in <lambda>\n    'hws' / Array(2, LazyBound(lambda: hello_world)),\nNameError: name 'hello_world' is not defined"
     },
     "is_kst": true
   },
