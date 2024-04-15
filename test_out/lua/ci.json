@@ -1,13 +1,13 @@
 {
   "$meta": {
     "lang": "lua",
-    "timestamp": "2024-04-03T14:42:43Z",
+    "timestamp": "2024-04-15T18:15:32Z",
     "ci": {
       "ci": "github",
-      "run_id": "8540694278",
-      "run_number": "323",
-      "job_id": "23398306125",
-      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/8540694278/job/23398306125"
+      "run_id": "8694033682",
+      "run_number": "324",
+      "job_id": "23842113817",
+      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/8694033682/job/23842113817"
     }
   },
   "BcdUserTypeBe": {
@@ -282,8 +282,8 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "compiled/lua/enum_to_i_class_border_2.lua:27: attempt to index a nil value (field 'parent')",
-      "trace": "stack traceback:\n\tcompiled/lua/enum_to_i_class_border_2.lua:27: in function <compiled/lua/enum_to_i_class_border_2.lua:22>\n\t(...tail calls...)\n\tspec/lua/test_enum_to_i_class_border_1.lua:14: in upvalue 'TestEnumToIClassBorder1.test_enum_to_i_class_border_1'"
+      "message": "spec/lua/run_test_suite.lua:18: error loading module 'enum_to_i_class_border_1' from file 'compiled/lua/enum_to_i_class_border_1.lua':\n\tcompiled/lua/enum_to_i_class_border_1.lua:21: too many C levels (limit is 200) in function at line 18 near 'self'",
+      "trace": "stack traceback:\n\tspec/lua/run_test_suite.lua:18: in upvalue 'TestEnumToIClassBorder1.test_enum_to_i_class_border_1'"
     },
     "is_kst": true
   },
@@ -550,6 +550,11 @@
     },
     "is_kst": true
   },
+  "ImportsParamsDefArrayUsertypeImported": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
   "ImportsParamsDefEnumImported": {
     "status": "passed",
     "elapsed": 0.0,
@@ -736,14 +741,8 @@
     "is_kst": true
   },
   "NestedTypesImport": {
-    "status": "failed",
+    "status": "passed",
     "elapsed": 0.0,
-    "failure": {
-      "file_name": null,
-      "line_num": null,
-      "message": "spec/lua/test_nested_types_import.lua:18: expected: nil, actual: <table 01> {\n    _io=<table 02> {_io=file (0x56472e16aca0), bits=0, bits_left=0},\n    _root=<table 01>,\n    value_cc=80\n}",
-      "trace": "stack traceback:\n\tspec/lua/test_nested_types_import.lua:18: in upvalue 'TestNestedTypesImport.test_nested_types_import'"
-    },
     "is_kst": true
   },
   "NonStandard": {
