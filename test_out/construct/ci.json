@@ -1,13 +1,13 @@
 {
   "$meta": {
     "lang": "construct",
-    "timestamp": "2024-04-03T14:42:00Z",
+    "timestamp": "2024-04-15T18:14:52Z",
     "ci": {
       "ci": "github",
-      "run_id": "8540694278",
-      "run_number": "323",
-      "job_id": "23398300815",
-      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/8540694278/job/23398300815"
+      "run_id": "8694033682",
+      "run_number": "324",
+      "job_id": "23842109337",
+      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/8694033682/job/23842109337"
     }
   },
   "BcdUserTypeBe": {
@@ -743,6 +743,17 @@
     },
     "is_kst": true
   },
+  "ImportsParamsDefArrayUsertypeImported": {
+    "status": "failed",
+    "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": "name 'hello_world' is not defined",
+      "trace": "Traceback (most recent call last):\n  File \"/tests/spec/construct/test_imports_params_def_array_usertype_imported.py\", line 9, in test_imports_params_def_array_usertype_imported\n    r = _schema.parse_file('src/process_xor_4.bin')\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 425, in parse_file\n    return self.parse_stream(f, **contextkw)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 416, in parse_stream\n    return self._parsereport(stream, context, \"(parsing)\")\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 428, in _parsereport\n    obj = self._parse(stream, context, path)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 2236, in _parse\n    subobj = sc._parsereport(stream, context, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 428, in _parsereport\n    obj = self._parse(stream, context, path)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 2770, in _parse\n    return self.subcon._parsereport(stream, context, path)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 428, in _parsereport\n    obj = self._parse(stream, context, path)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 2530, in _parse\n    e = self.subcon._parsereport(stream, context, path)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 428, in _parsereport\n    obj = self._parse(stream, context, path)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 6220, in _parse\n    sc = self.subconfunc()\n         ^^^^^^^^^^^^^^^^^\n  File \"/tests/compiled/construct/imports_params_def_array_usertype_imported.py\", line 5, in <lambda>\n    'hws' / Array(2, LazyBound(lambda: hello_world)),\n                                       ^^^^^^^^^^^\nNameError: name 'hello_world' is not defined"
+    },
+    "is_kst": true
+  },
   "ImportsParamsDefEnumImported": {
     "status": "failed",
     "elapsed": 0.0,
@@ -1367,8 +1378,8 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "<built-in method values of Container object at 0x7fd10ad4a690> != [1, 2, 3, 4]",
-      "trace": "Traceback (most recent call last):\n  File \"/tests/spec/construct/test_repeat_until_complex.py\", line 12, in test_repeat_until_complex\n    self.assertEqual(r.first[0].values, [(0 + 1), 2, 3, 4])\nAssertionError: <built-in method values of Container object at 0x7fd10ad4a690> != [1, 2, 3, 4]"
+      "message": "<built-in method values of Container object at 0x7f99c9037c50> != [1, 2, 3, 4]",
+      "trace": "Traceback (most recent call last):\n  File \"/tests/spec/construct/test_repeat_until_complex.py\", line 12, in test_repeat_until_complex\n    self.assertEqual(r.first[0].values, [(0 + 1), 2, 3, 4])\nAssertionError: <built-in method values of Container object at 0x7f99c9037c50> != [1, 2, 3, 4]"
     },
     "is_kst": true
   },
