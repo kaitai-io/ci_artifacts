@@ -1,13 +1,13 @@
 {
   "$meta": {
     "lang": "python",
-    "timestamp": "2024-04-03T14:43:07Z",
+    "timestamp": "2024-04-15T18:15:45Z",
     "ci": {
       "ci": "github",
-      "run_id": "8540694278",
-      "run_number": "323",
-      "job_id": "23398309207",
-      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/8540694278/job/23398309207"
+      "run_id": "8694033682",
+      "run_number": "324",
+      "job_id": "23842116129",
+      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/8694033682/job/23842116129"
     }
   },
   "BcdUserTypeBe": {
@@ -232,25 +232,13 @@
     "is_kst": true
   },
   "EnumImportLiterals": {
-    "status": "failed",
+    "status": "passed",
     "elapsed": 0.0,
-    "failure": {
-      "file_name": null,
-      "line_num": null,
-      "message": "name 'Enum0' is not defined",
-      "trace": "Traceback (most recent call last):\n  File \"/tests/spec/python/test_enum_import_literals.py\", line 11, in test_enum_import_literals\n    self.assertEqual(r.pet_1_to_i, 7)\n                     ^^^^^^^^^^^^\n  File \"/tests/compiled/python/enum_import_literals.py\", line 34, in pet_1_to_i\n    self._m_pet_1_to_i = int(Enum0.Animal.cat)\n                             ^^^^^\nNameError: name 'Enum0' is not defined"
-    },
     "is_kst": true
   },
   "EnumImportSeq": {
-    "status": "failed",
+    "status": "passed",
     "elapsed": 0.0,
-    "failure": {
-      "file_name": null,
-      "line_num": null,
-      "message": "name 'Enum0' is not defined",
-      "trace": "Traceback (most recent call last):\n  File \"/tests/spec/python/test_enum_import_seq.py\", line 10, in test_enum_import_seq\n    with EnumImportSeq.from_file('src/enum_0.bin') as r:\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/runtime/python/kaitaistruct.py\", line 44, in from_file\n    return cls(KaitaiStream(f))\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/tests/compiled/python/enum_import_seq.py\", line 16, in __init__\n    self._read()\n  File \"/tests/compiled/python/enum_import_seq.py\", line 19, in _read\n    self.pet_1 = KaitaiStream.resolve_enum(Enum0.Animal, self._io.read_u4le())\n                                           ^^^^^\nNameError: name 'Enum0' is not defined"
-    },
     "is_kst": true
   },
   "EnumIntRangeS": {
@@ -566,15 +554,14 @@
     "status": "passed",
     "elapsed": 0.0
   },
-  "ImportsParamsDefEnumImported": {
-    "status": "failed",
+  "ImportsParamsDefArrayUsertypeImported": {
+    "status": "passed",
     "elapsed": 0.0,
-    "failure": {
-      "file_name": null,
-      "line_num": null,
-      "message": "name 'Enum0' is not defined",
-      "trace": "Traceback (most recent call last):\n  File \"/tests/spec/python/test_imports_params_def_enum_imported.py\", line 10, in test_imports_params_def_enum_imported\n    with ImportsParamsDefEnumImported.from_file('src/enum_0.bin') as r:\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/runtime/python/kaitaistruct.py\", line 44, in from_file\n    return cls(KaitaiStream(f))\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/tests/compiled/python/imports_params_def_enum_imported.py\", line 18, in __init__\n    self._read()\n  File \"/tests/compiled/python/imports_params_def_enum_imported.py\", line 21, in _read\n    self.one = enum_import_seq.EnumImportSeq(self._io)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tests/compiled/python/enum_import_seq.py\", line 16, in __init__\n    self._read()\n  File \"/tests/compiled/python/enum_import_seq.py\", line 19, in _read\n    self.pet_1 = KaitaiStream.resolve_enum(Enum0.Animal, self._io.read_u4le())\n                                           ^^^^^\nNameError: name 'Enum0' is not defined"
-    },
+    "is_kst": true
+  },
+  "ImportsParamsDefEnumImported": {
+    "status": "passed",
+    "elapsed": 0.0,
     "is_kst": true
   },
   "ImportsParamsDefUsertypeImported": {
@@ -756,14 +743,8 @@
     "is_kst": true
   },
   "NestedTypesImport": {
-    "status": "failed",
+    "status": "passed",
     "elapsed": 0.0,
-    "failure": {
-      "file_name": null,
-      "line_num": null,
-      "message": "name 'nested_types3' is not defined",
-      "trace": "Traceback (most recent call last):\n  File \"/tests/spec/python/test_nested_types_import.py\", line 9, in test_nested_types_import\n    with NestedTypesImport.from_file('src/fixed_struct.bin') as r:\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/runtime/python/kaitaistruct.py\", line 44, in from_file\n    return cls(KaitaiStream(f))\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/tests/compiled/python/nested_types_import.py\", line 16, in __init__\n    self._read()\n  File \"/tests/compiled/python/nested_types_import.py\", line 19, in _read\n    self.a_cc = nested_types3.NestedTypes3.SubtypeA.SubtypeCc(self._io)\n                ^^^^^^^^^^^^^\nNameError: name 'nested_types3' is not defined"
-    },
     "is_kst": true
   },
   "NonStandard": {
