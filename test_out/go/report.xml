@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites tests="201" failures="13">
-	<testsuite name="_/tests/spec/go" tests="201" failures="13" errors="0" id="0" hostname="44c75ee27166" time="0.048" timestamp="2024-04-15T18:15:04Z">
+	<testsuite name="_/tests/spec/go" tests="201" failures="13" errors="0" id="0" hostname="95d839901139" time="0.052" timestamp="2024-06-11T10:07:21Z">
 		<testcase name="TestBitsByteAligned" classname="_/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestBitsEnum" classname="_/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestBitsSeqEndianCombo" classname="_/tests/spec/go" time="0.000"></testcase>
@@ -81,7 +81,7 @@
 		<testcase name="TestExpr1" classname="_/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestExpr2" classname="_/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestExpr3" classname="_/tests/spec/go" time="0.000"></testcase>
-		<testcase name="TestExprArray" classname="_/tests/spec/go" time="0.010"></testcase>
+		<testcase name="TestExprArray" classname="_/tests/spec/go" time="0.020"></testcase>
 		<testcase name="TestExprBits" classname="_/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestExprBytesCmp" classname="_/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestExprBytesNonLiteral" classname="_/tests/spec/go" time="0.000"></testcase>
@@ -177,7 +177,7 @@
 		<testcase name="TestNestedTypes" classname="_/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestNonStandard" classname="_/tests/spec/go" time="0.000"></testcase>
 		<testcase name="TestOpaqueExternalType02Parent" classname="_/tests/spec/go" time="0.000">
-			<failure message="Failed"><![CDATA[goroutine 127 [running]:
+			<failure message="Failed"><![CDATA[goroutine 139 [running]:
 runtime/debug.Stack()
 	/usr/local/go/src/runtime/debug/stack.go:24 +0x5e
 runtime/debug.PrintStack()
@@ -188,17 +188,17 @@ panic({0x61a140?, 0x857030?})
 	/usr/local/go/src/runtime/panic.go:914 +0x21f
 test_formats.(*OpaqueExternalType02Child).SomeMethod(...)
 	/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:50
-test_formats.(*OpaqueExternalType02Child_OpaqueExternalType02ChildChild).Read(0xc0001c9920?, 0xc0001b8c68?, 0x3?, 0x659ea0?)
+test_formats.(*OpaqueExternalType02Child_OpaqueExternalType02ChildChild).Read(0xc000189920?, 0xc000178c08?, 0x3?, 0x659ea0?)
 	/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:77 +0x54
-test_formats.(*OpaqueExternalType02Child).Read(0xc000068be0, 0xc000038688?, {0x0?, 0x0?}, 0x644880?)
+test_formats.(*OpaqueExternalType02Child).Read(0xc0000ccb90, 0xc000032688?, {0x0?, 0x0?}, 0x644880?)
 	/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:42 +0x145
-test_formats.(*OpaqueExternalType02Parent_ParentObj).Read(0xc000022e60, 0x40d765?, 0x28?, 0x644960?)
+test_formats.(*OpaqueExternalType02Parent_ParentObj).Read(0xc0000c6e20, 0x40d765?, 0x28?, 0x644960?)
 	/tests/compiled/go/src/test_formats/opaque_external_type_02_parent.go:56 +0x7f
-test_formats.(*OpaqueExternalType02Parent).Read(0xc0001c9950, 0x17?, {0x6d50a0?, 0xc0001c9950?}, 0x717069?)
+test_formats.(*OpaqueExternalType02Parent).Read(0xc000189950, 0x17?, {0x6d50a0?, 0xc000189950?}, 0x717069?)
 	/tests/compiled/go/src/test_formats/opaque_external_type_02_parent.go:28 +0x95
-_/tests/spec/go.TestOpaqueExternalType02Parent(0xc0001dab60)
+_/tests/spec/go.TestOpaqueExternalType02Parent(0xc000195d40)
 	/tests/spec/go/opaque_external_type_02_parent_test.go:25 +0x114
-testing.tRunner(0xc0001dab60, 0x69c1c0)
+testing.tRunner(0xc000195d40, 0x69c1c0)
 	/usr/local/go/src/testing/testing.go:1595 +0xff
 created by testing.(*T).Run in goroutine 1
 	/usr/local/go/src/testing/testing.go:1648 +0x3ad
