@@ -1,13 +1,13 @@
 {
   "$meta": {
     "lang": "python",
-    "timestamp": "2024-06-11T10:08:30Z",
+    "timestamp": "2024-07-13T00:24:14Z",
     "ci": {
       "ci": "github",
-      "run_id": "9463625439",
-      "run_number": "325",
-      "job_id": "26069235241",
-      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/9463625439/job/26069235241"
+      "run_id": "9915719116",
+      "run_number": "327",
+      "job_id": "27397030935",
+      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/9915719116/job/27397030935"
     }
   },
   "BcdUserTypeBe": {
@@ -377,15 +377,8 @@
     "is_kst": true
   },
   "ExprBytesNonLiteral": {
-    "status": "failed",
-    "elapsed": 0.0,
-    "failure": {
-      "file_name": null,
-      "line_num": null,
-      "message": "name 'KaitaiStream' is not defined",
-      "trace": "Traceback (most recent call last):\n  File \"/tests/spec/python/test_expr_bytes_non_literal.py\", line 12, in test_expr_bytes_non_literal\n    self.assertEqual(KaitaiStream.byte_array_index(r.calc_bytes, 0), 255)\n                     ^^^^^^^^^^^^\nNameError: name 'KaitaiStream' is not defined"
-    },
-    "is_kst": true
+    "status": "passed",
+    "elapsed": 0.0
   },
   "ExprBytesOps": {
     "status": "passed",
@@ -427,14 +420,8 @@
     "is_kst": true
   },
   "ExprIoTernary": {
-    "status": "failed",
+    "status": "passed",
     "elapsed": 0.0,
-    "failure": {
-      "file_name": null,
-      "line_num": null,
-      "message": "requested 8 bytes, but only 7 bytes available",
-      "trace": "Traceback (most recent call last):\n  File \"/tests/spec/python/test_expr_io_ternary.py\", line 9, in test_expr_io_ternary\n    with ExprIoTernary.from_file('src/term_strz.bin') as r:\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/runtime/python/kaitaistruct.py\", line 44, in from_file\n    return cls(KaitaiStream(f))\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/tests/compiled/python/expr_io_ternary.py\", line 16, in __init__\n    self._read()\n  File \"/tests/compiled/python/expr_io_ternary.py\", line 23, in _read\n    self._raw_obj2 = self._io.read_bytes(8)\n                     ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/runtime/python/kaitaistruct.py\", line 366, in read_bytes\n    return self._read_bytes_not_aligned(n)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/runtime/python/kaitaistruct.py\", line 398, in _read_bytes_not_aligned\n    raise EOFError(\nEOFError: requested 8 bytes, but only 7 bytes available"
-    },
     "is_kst": true
   },
   "ExprMod": {
@@ -534,11 +521,13 @@
   },
   "ImportsAbsAbs": {
     "status": "passed",
-    "elapsed": 0.0
+    "elapsed": 0.0,
+    "is_kst": true
   },
   "ImportsAbsRel": {
     "status": "passed",
-    "elapsed": 0.0
+    "elapsed": 0.0,
+    "is_kst": true
   },
   "ImportsCastToImported": {
     "status": "passed",
@@ -973,24 +962,12 @@
     "is_kst": true
   },
   "StrEncodingsEscapingEnc": {
-    "status": "failed",
-    "elapsed": 0.0,
-    "failure": {
-      "file_name": null,
-      "line_num": null,
-      "message": "'unknown encoding: ASCII\\\\x' != 'unknown encoding: ASCII\\\\\\\\x'\n- unknown encoding: ASCII\\x\n+ unknown encoding: ASCII\\\\x\n?                         +\n",
-      "trace": "Traceback (most recent call last):\n  File \"/tests/spec/python/test_str_encodings_escaping_enc.py\", line 9, in test_str_encodings_escaping_enc\n    self.assertEqual(str(cm.exception), 'unknown encoding: {}'.format(\"ASCII\\\\\\\\x\"))\nAssertionError: 'unknown encoding: ASCII\\\\x' != 'unknown encoding: ASCII\\\\\\\\x'\n- unknown encoding: ASCII\\x\n+ unknown encoding: ASCII\\\\x\n?                         +"
-    }
+    "status": "passed",
+    "elapsed": 0.0
   },
   "StrEncodingsEscapingToS": {
-    "status": "failed",
-    "elapsed": 0.0,
-    "failure": {
-      "file_name": null,
-      "line_num": null,
-      "message": "'unknown encoding: ASCII\\\\x' != 'unknown encoding: ASCII\\\\\\\\x'\n- unknown encoding: ASCII\\x\n+ unknown encoding: ASCII\\\\x\n?                         +\n",
-      "trace": "Traceback (most recent call last):\n  File \"/tests/spec/python/test_str_encodings_escaping_to_s.py\", line 9, in test_str_encodings_escaping_to_s\n    self.assertEqual(str(cm.exception), 'unknown encoding: {}'.format(\"ASCII\\\\\\\\x\"))\nAssertionError: 'unknown encoding: ASCII\\\\x' != 'unknown encoding: ASCII\\\\\\\\x'\n- unknown encoding: ASCII\\x\n+ unknown encoding: ASCII\\\\x\n?                         +"
-    }
+    "status": "passed",
+    "elapsed": 0.0
   },
   "StrEncodingsUtf16": {
     "status": "passed",
