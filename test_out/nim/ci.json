@@ -1,13 +1,13 @@
 {
   "$meta": {
     "lang": "nim",
-    "timestamp": "2024-06-11T10:12:16Z",
+    "timestamp": "2024-07-13T00:28:21Z",
     "ci": {
       "ci": "github",
-      "run_id": "9463625439",
-      "run_number": "325",
-      "job_id": "26069233024",
-      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/9463625439/job/26069233024"
+      "run_id": "9915719116",
+      "run_number": "327",
+      "job_id": "27397030131",
+      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/9915719116/job/27397030131"
     }
   },
   "BcdUserTypeBe": {
@@ -386,14 +386,8 @@
     "is_kst": true
   },
   "ExprIoTernary": {
-    "status": "failed",
+    "status": "passed",
     "elapsed": 0.0,
-    "failure": {
-      "file_name": null,
-      "line_num": null,
-      "message": "/tests/spec/nim/texpr_io_ternary.nim(7) texpr_io_ternary\n/tests/compiled/nim/expr_io_ternary.nim(101) fromFile\n/tests/compiled/nim/expr_io_ternary.nim(54) read\n/root/.nimble/pkgs/kaitai_struct_nim_runtime-#head/kaitai_struct_nim_runtime.nim(284) readBytes\n/nim/lib/system/assertions.nim(38) failedAssertImpl\n/nim/lib/system/assertions.nim(28) raiseAssert\n/nim/lib/system/fatal.nim(53) sysFatal\nError: unhandled exception: /root/.nimble/pkgs/kaitai_struct_nim_runtime-#head/kaitai_struct_nim_runtime.nim(284, 12) `ks.io.readData(addr(result[0]), n) == n`  [AssertionDefect]\n",
-      "trace": ""
-    },
     "is_kst": true
   },
   "ExprMod": {
@@ -428,7 +422,7 @@
   },
   "ExprStrEncodings": {
     "status": "failed",
-    "elapsed": 0.2,
+    "elapsed": 0.1,
     "failure": {
       "file_name": null,
       "line_num": null,
@@ -502,6 +496,16 @@
       "message": "/tests/compiled/nim/vlq_base128_le.nim(80, 58) Error: type mismatch: got &lt;uint64, int&gt;\nbut expected one of:\nproc `*`(x, y: uint64): uint64\n  first type mismatch at position: 2\n  required type for y: uint64\n  but expression &apos;len(this)&apos; is of type: int\n12 other mismatching symbols have been suppressed; compile with --showAllMismatches:on to see them\n\nexpression: 128&apos;u64 * len(this)\n",
       "trace": ""
     },
+    "is_kst": true
+  },
+  "ImportsAbsAbs": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "ImportsAbsRel": {
+    "status": "passed",
+    "elapsed": 0.0,
     "is_kst": true
   },
   "ImportsCastToImported": {
