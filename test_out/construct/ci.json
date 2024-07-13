@@ -1,13 +1,13 @@
 {
   "$meta": {
     "lang": "construct",
-    "timestamp": "2024-06-11T10:07:11Z",
+    "timestamp": "2024-07-13T00:23:14Z",
     "ci": {
       "ci": "github",
-      "run_id": "9463625439",
-      "run_number": "325",
-      "job_id": "26069228514",
-      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/9463625439/job/26069228514"
+      "run_id": "9915719116",
+      "run_number": "327",
+      "job_id": "27397027935",
+      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/9915719116/job/27397027935"
     }
   },
   "BcdUserTypeBe": {
@@ -578,14 +578,8 @@
     "is_kst": true
   },
   "ExprIoTernary": {
-    "status": "failed",
+    "status": "passed",
     "elapsed": 0.0,
-    "failure": {
-      "file_name": null,
-      "line_num": null,
-      "message": "Error in path (parsing) -> obj2\nstream read less than specified amount, expected 8, found 7",
-      "trace": "Traceback (most recent call last):\n  File \"/tests/spec/construct/test_expr_io_ternary.py\", line 9, in test_expr_io_ternary\n    r = _schema.parse_file('src/term_strz.bin')\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 309, in parse_file\n    return self.parse_stream(f, **contextkw)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 300, in parse_stream\n    return self._parsereport(stream, context, \"(parsing)\")\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 312, in _parsereport\n    obj = self._parse(stream, context, path)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 1982, in _parse\n    subobj = sc._parsereport(stream, context, path)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 312, in _parsereport\n    obj = self._parse(stream, context, path)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 2440, in _parse\n    return self.subcon._parsereport(stream, context, path)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 312, in _parsereport\n    obj = self._parse(stream, context, path)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 4492, in _parse\n    data = stream_read(stream, length, path)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 92, in stream_read\n    raise StreamError(\"stream read less than specified amount, expected %d, found %d\" % (length, len(data)), path=path)\nconstruct.core.StreamError: Error in path (parsing) -> obj2\nstream read less than specified amount, expected 8, found 7"
-    },
     "is_kst": true
   },
   "ExprMod": {
@@ -697,8 +691,9 @@
       "file_name": null,
       "line_num": null,
       "message": "name 'imported_and_abs' is not defined",
-      "trace": "Traceback (most recent call last):\n  File \"/tests/spec/construct/test_imports_abs_abs.py\", line 7, in test_imports_abs_abs\n    r = _schema.parse_file('src/fixed_struct.bin')\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 309, in parse_file\n    return self.parse_stream(f, **contextkw)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 300, in parse_stream\n    return self._parsereport(stream, context, \"(parsing)\")\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 312, in _parsereport\n    obj = self._parse(stream, context, path)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 1982, in _parse\n    subobj = sc._parsereport(stream, context, path)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 312, in _parsereport\n    obj = self._parse(stream, context, path)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 2440, in _parse\n    return self.subcon._parsereport(stream, context, path)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 312, in _parsereport\n    obj = self._parse(stream, context, path)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 5534, in _parse\n    sc = self.subconfunc()\n  File \"/tests/compiled/construct/imports_abs_abs.py\", line 6, in <lambda>\n    'two' / LazyBound(lambda: imported_and_abs),\nNameError: name 'imported_and_abs' is not defined"
-    }
+      "trace": "Traceback (most recent call last):\n  File \"/tests/spec/construct/test_imports_abs_abs.py\", line 9, in test_imports_abs_abs\n    r = _schema.parse_file('src/fixed_struct.bin')\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 309, in parse_file\n    return self.parse_stream(f, **contextkw)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 300, in parse_stream\n    return self._parsereport(stream, context, \"(parsing)\")\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 312, in _parsereport\n    obj = self._parse(stream, context, path)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 1982, in _parse\n    subobj = sc._parsereport(stream, context, path)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 312, in _parsereport\n    obj = self._parse(stream, context, path)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 2440, in _parse\n    return self.subcon._parsereport(stream, context, path)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 312, in _parsereport\n    obj = self._parse(stream, context, path)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 5534, in _parse\n    sc = self.subconfunc()\n  File \"/tests/compiled/construct/imports_abs_abs.py\", line 6, in <lambda>\n    'two' / LazyBound(lambda: imported_and_abs),\nNameError: name 'imported_and_abs' is not defined"
+    },
+    "is_kst": true
   },
   "ImportsAbsRel": {
     "status": "failed",
@@ -707,8 +702,9 @@
       "file_name": null,
       "line_num": null,
       "message": "name 'imported_and_rel' is not defined",
-      "trace": "Traceback (most recent call last):\n  File \"/tests/spec/construct/test_imports_abs_rel.py\", line 7, in test_imports_abs_rel\n    r = _schema.parse_file('src/fixed_struct.bin')\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 309, in parse_file\n    return self.parse_stream(f, **contextkw)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 300, in parse_stream\n    return self._parsereport(stream, context, \"(parsing)\")\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 312, in _parsereport\n    obj = self._parse(stream, context, path)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 1982, in _parse\n    subobj = sc._parsereport(stream, context, path)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 312, in _parsereport\n    obj = self._parse(stream, context, path)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 2440, in _parse\n    return self.subcon._parsereport(stream, context, path)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 312, in _parsereport\n    obj = self._parse(stream, context, path)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 5534, in _parse\n    sc = self.subconfunc()\n  File \"/tests/compiled/construct/imports_abs_rel.py\", line 6, in <lambda>\n    'two' / LazyBound(lambda: imported_and_rel),\nNameError: name 'imported_and_rel' is not defined"
-    }
+      "trace": "Traceback (most recent call last):\n  File \"/tests/spec/construct/test_imports_abs_rel.py\", line 9, in test_imports_abs_rel\n    r = _schema.parse_file('src/fixed_struct.bin')\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 309, in parse_file\n    return self.parse_stream(f, **contextkw)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 300, in parse_stream\n    return self._parsereport(stream, context, \"(parsing)\")\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 312, in _parsereport\n    obj = self._parse(stream, context, path)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 1982, in _parse\n    subobj = sc._parsereport(stream, context, path)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 312, in _parsereport\n    obj = self._parse(stream, context, path)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 2440, in _parse\n    return self.subcon._parsereport(stream, context, path)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 312, in _parsereport\n    obj = self._parse(stream, context, path)\n  File \"/usr/local/lib/python3.4/site-packages/construct/core.py\", line 5534, in _parse\n    sc = self.subconfunc()\n  File \"/tests/compiled/construct/imports_abs_rel.py\", line 6, in <lambda>\n    'two' / LazyBound(lambda: imported_and_rel),\nNameError: name 'imported_and_rel' is not defined"
+    },
+    "is_kst": true
   },
   "ImportsCastToImported": {
     "status": "failed",
