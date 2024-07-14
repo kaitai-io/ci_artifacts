@@ -1,6 +1,6 @@
-NUnit Console 3.17.0+685c5b542b5e9ba632c905f0bd514a773d9758af (Release)
-Copyright (c) 2022 Charlie Poole, Rob Prouse
-Sunday, 14 July 2024 00:33:06
+NUnit Console Runner 3.12.0 (.NET 2.0)
+Copyright (c) 2021 Charlie Poole, Rob Prouse
+Sunday, 14 July 2024 23:36:59
 
 Runtime Environment
    OS Version: Linux 6.5.0.1023 
@@ -12,21 +12,27 @@ Test Files
 
 Errors, Failures and Warnings
 
-1) Error : 
-System.ArgumentException : The net-4.8 framework is not available.
-Available frameworks: mono-4.0
---ArgumentException
-The net-4.8 framework is not available.
-Available frameworks: mono-4.0
-  at NUnit.Engine.Services.TestAgency.GetAgent (NUnit.Engine.TestPackage package) [0x0008e] in <98a5d354480145bf8bc83cc74d63f414>:0 
-  at NUnit.Engine.Runners.ProcessRunner.CreateAgentAndRunnerIfNeeded () [0x0003d] in <98a5d354480145bf8bc83cc74d63f414>:0 
-  at NUnit.Engine.Runners.ProcessRunner.RunTests (NUnit.Engine.ITestEventListener listener, NUnit.Engine.TestFilter filter) [0x0001f] in <98a5d354480145bf8bc83cc74d63f414>:0 
+1) Failed : Kaitai.SpecExprIntDiv.TestExprIntDiv
+  Expected: -756
+  But was:  -757
+  at Kaitai.SpecExprIntDiv.TestExprIntDiv () [0x00063] in /home/runner/work/ci_targets/ci_targets/tests/spec/csharp/kaitai_struct_csharp_tests/tests/SpecExprIntDiv.cs:18 
+
+Run Settings
+    DisposeRunners: True
+    WorkDirectory: /home/runner/work/ci_targets/ci_targets/tests
+    ImageRuntimeVersion: 4.0.30319
+    ImageTargetFrameworkName: .NETFramework,Version=v4.8
+    ImageRequiresX86: False
+    ImageRequiresDefaultAppDomainAssemblyResolver: False
+    TargetRuntimeFramework: mono-4.0
+    NumberOfTestWorkers: 4
 
 Test Run Summary
   Overall result: Failed
-  Test Count: 0, Passed: 0, Failed: 0, Warnings: 0, Inconclusive: 0, Skipped: 0
-  Start time: 2024-07-14 00:33:07Z
-    End time: 2024-07-14 00:33:07Z
-    Duration: 0.032 seconds
+  Test Count: 237, Passed: 236, Failed: 1, Warnings: 0, Inconclusive: 0, Skipped: 0
+    Failed Tests - Failures: 1, Errors: 0, Invalid: 0
+  Start time: 2024-07-14 23:36:59Z
+    End time: 2024-07-14 23:37:00Z
+    Duration: 1.058 seconds
 
 Results (nunit3) saved as test_out/csharp/TestResult.xml
