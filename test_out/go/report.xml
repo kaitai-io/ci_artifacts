@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites tests="206" failures="13">
-	<testsuite name="kaitai/spec" tests="206" failures="13" errors="0" id="0" hostname="bbe6ebf07915" time="0.043" timestamp="2024-07-14T00:31:42Z">
+	<testsuite name="kaitai/spec" tests="206" failures="13" errors="0" id="0" hostname="15cfef0f1f25" time="0.065" timestamp="2024-07-14T23:35:27Z">
 		<testcase name="TestBcdUserTypeBe" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestBcdUserTypeLe" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestBitsByteAligned" classname="kaitai/spec" time="0.000"></testcase>
@@ -69,7 +69,7 @@
 		</testcase>
 		<testcase name="TestEosExceptionBytes" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestEosExceptionSized" classname="kaitai/spec" time="0.000"></testcase>
-		<testcase name="TestEosExceptionU4" classname="kaitai/spec" time="0.020">
+		<testcase name="TestEosExceptionU4" classname="kaitai/spec" time="0.030">
 			<failure message="Failed"><![CDATA[    eos_exception_u4_test.go:29: 
         	Error Trace:	/tests/spec/go/eos_exception_u4_test.go:29
         	Error:      	An error is expected but got nil.
@@ -176,12 +176,12 @@
 		<testcase name="TestNestedSameName2" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestNestedSameName" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestNestedTypeParam" classname="kaitai/spec" time="0.000"></testcase>
-		<testcase name="TestNestedTypes2" classname="kaitai/spec" time="0.010"></testcase>
+		<testcase name="TestNestedTypes2" classname="kaitai/spec" time="0.020"></testcase>
 		<testcase name="TestNestedTypes3" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestNestedTypes" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestNonStandard" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestOpaqueExternalType02Parent" classname="kaitai/spec" time="0.000">
-			<failure message="Failed"><![CDATA[goroutine 143 [running]:
+			<failure message="Failed"><![CDATA[goroutine 131 [running]:
 runtime/debug.Stack()
 	/usr/local/go/src/runtime/debug/stack.go:24 +0x5e
 runtime/debug.PrintStack()
@@ -192,17 +192,17 @@ panic({0x62d380?, 0x882050?})
 	/usr/local/go/src/runtime/panic.go:770 +0x132
 test_formats.(*OpaqueExternalType02Child).SomeMethod(...)
 	/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:50
-test_formats.(*OpaqueExternalType02Child_OpaqueExternalType02ChildChild).Read(0xc0001b80c0?, 0xc00018ed28?, 0x3?, 0x66ebc0?)
+test_formats.(*OpaqueExternalType02Child_OpaqueExternalType02ChildChild).Read(0xc0001ee0c0?, 0xc0001c4d98?, 0x3?, 0x66ebc0?)
 	/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:77 +0x54
-test_formats.(*OpaqueExternalType02Child).Read(0xc0000b4be0, 0xc000038688?, {0x0?, 0x0?}, 0x6594a0?)
+test_formats.(*OpaqueExternalType02Child).Read(0xc000014c80, 0xc00003e688?, {0x0?, 0x0?}, 0x6594a0?)
 	/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:42 +0x131
-test_formats.(*OpaqueExternalType02Parent_ParentObj).Read(0xc0000d2e20, 0x40eb65?, 0x28?, 0x659580?)
+test_formats.(*OpaqueExternalType02Parent_ParentObj).Read(0xc000028e60, 0x40eb65?, 0x28?, 0x659580?)
 	/tests/compiled/go/src/test_formats/opaque_external_type_02_parent.go:56 +0x7f
-test_formats.(*OpaqueExternalType02Parent).Read(0xc0001b80f0, 0x17?, {0x6f1800?, 0xc0001b80f0?}, 0x736c9e?)
+test_formats.(*OpaqueExternalType02Parent).Read(0xc0001ee0f0, 0x17?, {0x6f1800?, 0xc0001ee0f0?}, 0x736c9e?)
 	/tests/compiled/go/src/test_formats/opaque_external_type_02_parent.go:28 +0x88
-kaitai/spec.TestOpaqueExternalType02Parent(0xc0001afd40)
+kaitai/spec.TestOpaqueExternalType02Parent(0xc0001e5ba0)
 	/tests/spec/go/opaque_external_type_02_parent_test.go:25 +0x114
-testing.tRunner(0xc0001afd40, 0x6b4150)
+testing.tRunner(0xc0001e5ba0, 0x6b4150)
 	/usr/local/go/src/testing/testing.go:1689 +0xfb
 created by testing.(*T).Run in goroutine 1
 	/usr/local/go/src/testing/testing.go:1742 +0x390
