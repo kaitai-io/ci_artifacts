@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites tests="206" failures="13">
-	<testsuite name="kaitai/spec" tests="206" failures="13" errors="0" id="0" hostname="15cfef0f1f25" time="0.065" timestamp="2024-07-14T23:35:27Z">
+<testsuites tests="218" failures="11">
+	<testsuite name="kaitai/spec" tests="218" failures="11" errors="0" id="0" hostname="ea45ca100d78" time="0.055" timestamp="2024-08-07T14:02:25Z">
 		<testcase name="TestBcdUserTypeBe" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestBcdUserTypeLe" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestBitsByteAligned" classname="kaitai/spec" time="0.000"></testcase>
@@ -55,32 +55,10 @@
 		<testcase name="TestEnumToI" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestEofExceptionBytes" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestEofExceptionSized" classname="kaitai/spec" time="0.000"></testcase>
-		<testcase name="TestEofExceptionU4" classname="kaitai/spec" time="0.000">
-			<failure message="Failed"><![CDATA[    eof_exception_u4_test.go:29: 
-        	Error Trace:	/tests/spec/go/eof_exception_u4_test.go:29
-        	Error:      	An error is expected but got nil.
-        	Test:       	TestEofExceptionU4
-    eof_exception_u4_test.go:30: 
-        	Error Trace:	/tests/spec/go/eof_exception_u4_test.go:30
-        	Error:      	Target error should be in err chain:
-        	            	expected: "unexpected EOF"
-        	            	in chain: 
-        	Test:       	TestEofExceptionU4]]></failure>
-		</testcase>
+		<testcase name="TestEofExceptionU4" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestEosExceptionBytes" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestEosExceptionSized" classname="kaitai/spec" time="0.000"></testcase>
-		<testcase name="TestEosExceptionU4" classname="kaitai/spec" time="0.030">
-			<failure message="Failed"><![CDATA[    eos_exception_u4_test.go:29: 
-        	Error Trace:	/tests/spec/go/eos_exception_u4_test.go:29
-        	Error:      	An error is expected but got nil.
-        	Test:       	TestEosExceptionU4
-    eos_exception_u4_test.go:30: 
-        	Error Trace:	/tests/spec/go/eos_exception_u4_test.go:30
-        	Error:      	Target error should be in err chain:
-        	            	expected: "unexpected EOF"
-        	            	in chain: 
-        	Test:       	TestEosExceptionU4]]></failure>
-		</testcase>
+		<testcase name="TestEosExceptionU4" classname="kaitai/spec" time="0.020"></testcase>
 		<testcase name="TestExpr0" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestExpr1" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestExpr2" classname="kaitai/spec" time="0.000"></testcase>
@@ -181,28 +159,28 @@
 		<testcase name="TestNestedTypes" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestNonStandard" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestOpaqueExternalType02Parent" classname="kaitai/spec" time="0.000">
-			<failure message="Failed"><![CDATA[goroutine 131 [running]:
+			<failure message="Failed"><![CDATA[goroutine 142 [running]:
 runtime/debug.Stack()
 	/usr/local/go/src/runtime/debug/stack.go:24 +0x5e
 runtime/debug.PrintStack()
 	/usr/local/go/src/runtime/debug/stack.go:16 +0x13
 kaitai/spec.TestOpaqueExternalType02Parent.func1()
 	/tests/spec/go/opaque_external_type_02_parent_test.go:15 +0x39
-panic({0x62d380?, 0x882050?})
+panic({0x633620?, 0x88d050?})
 	/usr/local/go/src/runtime/panic.go:770 +0x132
 test_formats.(*OpaqueExternalType02Child).SomeMethod(...)
 	/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:50
-test_formats.(*OpaqueExternalType02Child_OpaqueExternalType02ChildChild).Read(0xc0001ee0c0?, 0xc0001c4d98?, 0x3?, 0x66ebc0?)
+test_formats.(*OpaqueExternalType02Child_OpaqueExternalType02ChildChild).Read(0xc0001bae10?, 0xc0001b63d8?, 0x3?, 0x676300?)
 	/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:77 +0x54
-test_formats.(*OpaqueExternalType02Child).Read(0xc000014c80, 0xc00003e688?, {0x0?, 0x0?}, 0x6594a0?)
+test_formats.(*OpaqueExternalType02Child).Read(0xc00009e780, 0xc000048688?, {0x0?, 0x0?}, 0x65fec0?)
 	/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:42 +0x131
-test_formats.(*OpaqueExternalType02Parent_ParentObj).Read(0xc000028e60, 0x40eb65?, 0x28?, 0x659580?)
+test_formats.(*OpaqueExternalType02Parent_ParentObj).Read(0xc0000c29a0, 0x40eb65?, 0x28?, 0x65ffa0?)
 	/tests/compiled/go/src/test_formats/opaque_external_type_02_parent.go:56 +0x7f
-test_formats.(*OpaqueExternalType02Parent).Read(0xc0001ee0f0, 0x17?, {0x6f1800?, 0xc0001ee0f0?}, 0x736c9e?)
+test_formats.(*OpaqueExternalType02Parent).Read(0xc0001bae40, 0x17?, {0x6f9aa0?, 0xc0001bae40?}, 0x73f91e?)
 	/tests/compiled/go/src/test_formats/opaque_external_type_02_parent.go:28 +0x88
-kaitai/spec.TestOpaqueExternalType02Parent(0xc0001e5ba0)
+kaitai/spec.TestOpaqueExternalType02Parent(0xc0001b9520)
 	/tests/spec/go/opaque_external_type_02_parent_test.go:25 +0x114
-testing.tRunner(0xc0001e5ba0, 0x6b4150)
+testing.tRunner(0xc0001b9520, 0x6bbc30)
 	/usr/local/go/src/testing/testing.go:1689 +0xfb
 created by testing.(*T).Run in goroutine 1
 	/usr/local/go/src/testing/testing.go:1742 +0x390
@@ -375,6 +353,7 @@ created by testing.(*T).Run in goroutine 1
 		<testcase name="TestStrLiterals" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestStrPadTermEmpty" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestStrPadTerm" classname="kaitai/spec" time="0.000"></testcase>
+		<testcase name="TestStrPadTermUtf16" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestSwitchElseOnly" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestSwitchIntegers2" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestSwitchIntegers" classname="kaitai/spec" time="0.000"></testcase>
@@ -382,6 +361,10 @@ created by testing.(*T).Run in goroutine 1
 		<testcase name="TestSwitchMultiBoolOps" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestTermBytes" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestTermStrz" classname="kaitai/spec" time="0.000"></testcase>
+		<testcase name="TestTermStrzUtf16V1" classname="kaitai/spec" time="0.000"></testcase>
+		<testcase name="TestTermStrzUtf16V2" classname="kaitai/spec" time="0.000"></testcase>
+		<testcase name="TestTermStrzUtf16V3" classname="kaitai/spec" time="0.000"></testcase>
+		<testcase name="TestTermStrzUtf16V4" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestTermU1Val" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestToStringCustom" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestTsPacketHeader" classname="kaitai/spec" time="0.000"></testcase>
@@ -404,6 +387,13 @@ created by testing.(*T).Run in goroutine 1
 		<testcase name="TestValidFailRangeFloat" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestValidFailRangeInt" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestValidFailRangeStr" classname="kaitai/spec" time="0.000"></testcase>
+		<testcase name="TestValidFailRepeatAnyofInt" classname="kaitai/spec" time="0.000"></testcase>
+		<testcase name="TestValidFailRepeatContents" classname="kaitai/spec" time="0.000"></testcase>
+		<testcase name="TestValidFailRepeatEqInt" classname="kaitai/spec" time="0.000"></testcase>
+		<testcase name="TestValidFailRepeatExpr" classname="kaitai/spec" time="0.000"></testcase>
+		<testcase name="TestValidFailRepeatInst" classname="kaitai/spec" time="0.000"></testcase>
+		<testcase name="TestValidFailRepeatMaxInt" classname="kaitai/spec" time="0.000"></testcase>
+		<testcase name="TestValidFailRepeatMinInt" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestValidLong" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestValidNotParsedIf" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestValidOptionalId" classname="kaitai/spec" time="0.000"></testcase>

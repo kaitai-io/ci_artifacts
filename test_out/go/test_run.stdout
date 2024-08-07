@@ -107,33 +107,13 @@
 === RUN   TestEofExceptionSized
 --- PASS: TestEofExceptionSized (0.00s)
 === RUN   TestEofExceptionU4
-    eof_exception_u4_test.go:29: 
-        	Error Trace:	/tests/spec/go/eof_exception_u4_test.go:29
-        	Error:      	An error is expected but got nil.
-        	Test:       	TestEofExceptionU4
-    eof_exception_u4_test.go:30: 
-        	Error Trace:	/tests/spec/go/eof_exception_u4_test.go:30
-        	Error:      	Target error should be in err chain:
-        	            	expected: "unexpected EOF"
-        	            	in chain: 
-        	Test:       	TestEofExceptionU4
---- FAIL: TestEofExceptionU4 (0.00s)
+--- PASS: TestEofExceptionU4 (0.00s)
 === RUN   TestEosExceptionBytes
 --- PASS: TestEosExceptionBytes (0.00s)
 === RUN   TestEosExceptionSized
 --- PASS: TestEosExceptionSized (0.00s)
 === RUN   TestEosExceptionU4
-    eos_exception_u4_test.go:29: 
-        	Error Trace:	/tests/spec/go/eos_exception_u4_test.go:29
-        	Error:      	An error is expected but got nil.
-        	Test:       	TestEosExceptionU4
-    eos_exception_u4_test.go:30: 
-        	Error Trace:	/tests/spec/go/eos_exception_u4_test.go:30
-        	Error:      	Target error should be in err chain:
-        	            	expected: "unexpected EOF"
-        	            	in chain: 
-        	Test:       	TestEosExceptionU4
---- FAIL: TestEosExceptionU4 (0.03s)
+--- PASS: TestEosExceptionU4 (0.02s)
 === RUN   TestExpr0
 --- PASS: TestExpr0 (0.00s)
 === RUN   TestExpr1
@@ -297,28 +277,28 @@
 === RUN   TestNonStandard
 --- PASS: TestNonStandard (0.00s)
 === RUN   TestOpaqueExternalType02Parent
-goroutine 131 [running]:
+goroutine 142 [running]:
 runtime/debug.Stack()
 	/usr/local/go/src/runtime/debug/stack.go:24 +0x5e
 runtime/debug.PrintStack()
 	/usr/local/go/src/runtime/debug/stack.go:16 +0x13
 kaitai/spec.TestOpaqueExternalType02Parent.func1()
 	/tests/spec/go/opaque_external_type_02_parent_test.go:15 +0x39
-panic({0x62d380?, 0x882050?})
+panic({0x633620?, 0x88d050?})
 	/usr/local/go/src/runtime/panic.go:770 +0x132
 test_formats.(*OpaqueExternalType02Child).SomeMethod(...)
 	/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:50
-test_formats.(*OpaqueExternalType02Child_OpaqueExternalType02ChildChild).Read(0xc0001ee0c0?, 0xc0001c4d98?, 0x3?, 0x66ebc0?)
+test_formats.(*OpaqueExternalType02Child_OpaqueExternalType02ChildChild).Read(0xc0001bae10?, 0xc0001b63d8?, 0x3?, 0x676300?)
 	/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:77 +0x54
-test_formats.(*OpaqueExternalType02Child).Read(0xc000014c80, 0xc00003e688?, {0x0?, 0x0?}, 0x6594a0?)
+test_formats.(*OpaqueExternalType02Child).Read(0xc00009e780, 0xc000048688?, {0x0?, 0x0?}, 0x65fec0?)
 	/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:42 +0x131
-test_formats.(*OpaqueExternalType02Parent_ParentObj).Read(0xc000028e60, 0x40eb65?, 0x28?, 0x659580?)
+test_formats.(*OpaqueExternalType02Parent_ParentObj).Read(0xc0000c29a0, 0x40eb65?, 0x28?, 0x65ffa0?)
 	/tests/compiled/go/src/test_formats/opaque_external_type_02_parent.go:56 +0x7f
-test_formats.(*OpaqueExternalType02Parent).Read(0xc0001ee0f0, 0x17?, {0x6f1800?, 0xc0001ee0f0?}, 0x736c9e?)
+test_formats.(*OpaqueExternalType02Parent).Read(0xc0001bae40, 0x17?, {0x6f9aa0?, 0xc0001bae40?}, 0x73f91e?)
 	/tests/compiled/go/src/test_formats/opaque_external_type_02_parent.go:28 +0x88
-kaitai/spec.TestOpaqueExternalType02Parent(0xc0001e5ba0)
+kaitai/spec.TestOpaqueExternalType02Parent(0xc0001b9520)
 	/tests/spec/go/opaque_external_type_02_parent_test.go:25 +0x114
-testing.tRunner(0xc0001e5ba0, 0x6b4150)
+testing.tRunner(0xc0001b9520, 0x6bbc30)
 	/usr/local/go/src/testing/testing.go:1689 +0xfb
 created by testing.(*T).Run in goroutine 1
 	/usr/local/go/src/testing/testing.go:1742 +0x390
@@ -530,6 +510,8 @@ created by testing.(*T).Run in goroutine 1
 --- PASS: TestStrPadTermEmpty (0.00s)
 === RUN   TestStrPadTerm
 --- PASS: TestStrPadTerm (0.00s)
+=== RUN   TestStrPadTermUtf16
+--- PASS: TestStrPadTermUtf16 (0.00s)
 === RUN   TestSwitchElseOnly
 --- PASS: TestSwitchElseOnly (0.00s)
 === RUN   TestSwitchIntegers2
@@ -544,6 +526,14 @@ created by testing.(*T).Run in goroutine 1
 --- PASS: TestTermBytes (0.00s)
 === RUN   TestTermStrz
 --- PASS: TestTermStrz (0.00s)
+=== RUN   TestTermStrzUtf16V1
+--- PASS: TestTermStrzUtf16V1 (0.00s)
+=== RUN   TestTermStrzUtf16V2
+--- PASS: TestTermStrzUtf16V2 (0.00s)
+=== RUN   TestTermStrzUtf16V3
+--- PASS: TestTermStrzUtf16V3 (0.00s)
+=== RUN   TestTermStrzUtf16V4
+--- PASS: TestTermStrzUtf16V4 (0.00s)
 === RUN   TestTermU1Val
 --- PASS: TestTermU1Val (0.00s)
 === RUN   TestToStringCustom
@@ -588,6 +578,20 @@ created by testing.(*T).Run in goroutine 1
 --- PASS: TestValidFailRangeInt (0.00s)
 === RUN   TestValidFailRangeStr
 --- PASS: TestValidFailRangeStr (0.00s)
+=== RUN   TestValidFailRepeatAnyofInt
+--- PASS: TestValidFailRepeatAnyofInt (0.00s)
+=== RUN   TestValidFailRepeatContents
+--- PASS: TestValidFailRepeatContents (0.00s)
+=== RUN   TestValidFailRepeatEqInt
+--- PASS: TestValidFailRepeatEqInt (0.00s)
+=== RUN   TestValidFailRepeatExpr
+--- PASS: TestValidFailRepeatExpr (0.00s)
+=== RUN   TestValidFailRepeatInst
+--- PASS: TestValidFailRepeatInst (0.00s)
+=== RUN   TestValidFailRepeatMaxInt
+--- PASS: TestValidFailRepeatMaxInt (0.00s)
+=== RUN   TestValidFailRepeatMinInt
+--- PASS: TestValidFailRepeatMinInt (0.00s)
 === RUN   TestValidLong
 --- PASS: TestValidLong (0.00s)
 === RUN   TestValidNotParsedIf
@@ -601,5 +605,5 @@ created by testing.(*T).Run in goroutine 1
 === RUN   TestZlibWithHeader78
 --- PASS: TestZlibWithHeader78 (0.00s)
 FAIL
-FAIL	kaitai/spec	0.065s
+FAIL	kaitai/spec	0.055s
 FAIL
