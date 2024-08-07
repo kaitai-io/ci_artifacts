@@ -1,13 +1,13 @@
 {
   "$meta": {
     "lang": "construct",
-    "timestamp": "2024-07-14T23:35:11Z",
+    "timestamp": "2024-08-07T14:02:08Z",
     "ci": {
       "ci": "github",
-      "run_id": "9931541901",
-      "run_number": "329",
-      "job_id": "27431552257",
-      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/9931541901/job/27431552257"
+      "run_id": "10285809040",
+      "run_number": "330",
+      "job_id": "28465002661",
+      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/10285809040/job/28465002661"
     }
   },
   "BcdUserTypeBe": {
@@ -1380,8 +1380,8 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "<built-in method values of Container object at 0x7f273bee18b0> != [1, 2, 3, 4]",
-      "trace": "Traceback (most recent call last):\n  File \"/tests/spec/construct/test_repeat_until_complex.py\", line 12, in test_repeat_until_complex\n    self.assertEqual(r.first[0].values, [(0 + 1), 2, 3, 4])\nAssertionError: <built-in method values of Container object at 0x7f273bee18b0> != [1, 2, 3, 4]"
+      "message": "<built-in method values of Container object at 0x7f47e4a5bf50> != [1, 2, 3, 4]",
+      "trace": "Traceback (most recent call last):\n  File \"/tests/spec/construct/test_repeat_until_complex.py\", line 12, in test_repeat_until_complex\n    self.assertEqual(r.first[0].values, [(0 + 1), 2, 3, 4])\nAssertionError: <built-in method values of Container object at 0x7f47e4a5bf50> != [1, 2, 3, 4]"
     },
     "is_kst": true
   },
@@ -1432,6 +1432,17 @@
   "StrPadTermEmpty": {
     "status": "passed",
     "elapsed": 0.0,
+    "is_kst": true
+  },
+  "StrPadTermUtf16": {
+    "status": "failed",
+    "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": "Error in path (parsing) -> str_term_and_pad\nstream read less than specified amount, expected 2, found 0",
+      "trace": "Traceback (most recent call last):\n  File \"/tests/spec/construct/test_str_pad_term_utf16.py\", line 9, in test_str_pad_term_utf16\n    r = _schema.parse_file('src/str_pad_term_utf16.bin')\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 425, in parse_file\n    return self.parse_stream(f, **contextkw)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 416, in parse_stream\n    return self._parsereport(stream, context, \"(parsing)\")\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 428, in _parsereport\n    obj = self._parse(stream, context, path)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 2236, in _parse\n    subobj = sc._parsereport(stream, context, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 428, in _parsereport\n    obj = self._parse(stream, context, path)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 2770, in _parse\n    return self.subcon._parsereport(stream, context, path)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 428, in _parsereport\n    obj = self._parse(stream, context, path)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 4992, in _parse\n    return self.subcon._parsereport(substream, context, path)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 428, in _parsereport\n    obj = self._parse(stream, context, path)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 5138, in _parse\n    return self.subcon._parsereport(substream, context, path)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 428, in _parsereport\n    obj = self._parse(stream, context, path)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 5064, in _parse\n    b = stream_read(stream, unit, path)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 178, in stream_read\n    raise StreamError(\"stream read less than specified amount, expected %d, found %d\" % (length, len(data)), path=path)\nconstruct.core.StreamError: Error in path (parsing) -> str_term_and_pad\nstream read less than specified amount, expected 2, found 0"
+    },
     "is_kst": true
   },
   "SwitchBytearray": {
@@ -1533,6 +1544,32 @@
   "TermStrz": {
     "status": "passed",
     "elapsed": 0.0,
+    "is_kst": true
+  },
+  "TermStrzUtf16V1": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "TermStrzUtf16V2": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "TermStrzUtf16V3": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "TermStrzUtf16V4": {
+    "status": "failed",
+    "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": "Error in path (parsing) -> s1 -> value\nstream read less than specified amount, expected 2, found 0",
+      "trace": "Traceback (most recent call last):\n  File \"/tests/spec/construct/test_term_strz_utf16_v4.py\", line 9, in test_term_strz_utf16_v4\n    r = _schema.parse_file('src/term_strz_utf16.bin')\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 425, in parse_file\n    return self.parse_stream(f, **contextkw)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 416, in parse_stream\n    return self._parsereport(stream, context, \"(parsing)\")\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 428, in _parsereport\n    obj = self._parse(stream, context, path)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 2236, in _parse\n    subobj = sc._parsereport(stream, context, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 428, in _parsereport\n    obj = self._parse(stream, context, path)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 2770, in _parse\n    return self.subcon._parsereport(stream, context, path)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 428, in _parsereport\n    obj = self._parse(stream, context, path)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 4992, in _parse\n    return self.subcon._parsereport(substream, context, path)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 428, in _parsereport\n    obj = self._parse(stream, context, path)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 6221, in _parse\n    return sc._parsereport(stream, context, path)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 428, in _parsereport\n    obj = self._parse(stream, context, path)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 2236, in _parse\n    subobj = sc._parsereport(stream, context, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 428, in _parsereport\n    obj = self._parse(stream, context, path)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 2770, in _parse\n    return self.subcon._parsereport(stream, context, path)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 428, in _parsereport\n    obj = self._parse(stream, context, path)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 5064, in _parse\n    b = stream_read(stream, unit, path)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 178, in stream_read\n    raise StreamError(\"stream read less than specified amount, expected %d, found %d\" % (length, len(data)), path=path)\nconstruct.core.StreamError: Error in path (parsing) -> s1 -> value\nstream read less than specified amount, expected 2, found 0"
+    },
     "is_kst": true
   },
   "TermU1Val": {
