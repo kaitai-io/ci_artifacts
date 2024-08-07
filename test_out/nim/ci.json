@@ -1,13 +1,13 @@
 {
   "$meta": {
     "lang": "nim",
-    "timestamp": "2024-07-14T23:40:21Z",
+    "timestamp": "2024-08-07T14:07:32Z",
     "ci": {
       "ci": "github",
-      "run_id": "9931541901",
-      "run_number": "329",
-      "job_id": "27431553483",
-      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/9931541901/job/27431553483"
+      "run_id": "10285809040",
+      "run_number": "330",
+      "job_id": "28465010005",
+      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/10285809040/job/28465010005"
     }
   },
   "BcdUserTypeBe": {
@@ -247,7 +247,7 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "/tests/spec/nim/tenum_invalid.nim(10, 15) Error: type mismatch: got &lt;EnumInvalid_Animal, int literal(111)&gt;\nbut expected one of:\nproc `==`[Enum: enum](x, y: Enum): bool\n  first type mismatch at position: 2\n  required type for y: Enum: enum\n  but expression &apos;111&apos; is of type: int literal(111)\nproc `==`[T: tuple | object](x, y: T): bool\n  first type mismatch at position: 2\n  required type for y: T: tuple or object\n  but expression &apos;111&apos; is of type: int literal(111)\nproc `==`[T](a, b: Option[T]): bool\n  first type mismatch at position: 2\n  required type for b: Option[==.T]\n  but expression &apos;111&apos; is of type: int literal(111)\n30 other mismatching symbols have been suppressed; compile with --showAllMismatches:on to see them\n\nexpression: r.pet2 == 111\n",
+      "message": "/tests/spec/nim/tenum_invalid.nim(10, 15) Error: type mismatch: got &lt;EnumInvalid_Animal, int literal(111)&gt;\nbut expected one of:\nproc `==`[Enum: enum](x, y: Enum): bool\n  first type mismatch at position: 2\n  required type for y: Enum: enum\n  but expression &apos;111&apos; is of type: int literal(111)\nproc `==`[T: tuple | object](x, y: T): bool\n  first type mismatch at position: 2\n  required type for y: T: tuple or object\n  but expression &apos;111&apos; is of type: int literal(111)\nproc `==`[T](a, b: Option[T]): bool\n  first type mismatch at position: 2\n  required type for b: Option[==.T]\n  but expression &apos;111&apos; is of type: int literal(111)\n29 other mismatching symbols have been suppressed; compile with --showAllMismatches:on to see them\n\nexpression: r.pet2 == 111\n",
       "trace": ""
     },
     "is_kst": true
@@ -294,7 +294,7 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "/tests/spec/nim/tenum_to_i_invalid.nim(10, 15) Error: type mismatch: got &lt;EnumToIInvalid_Animal, int literal(111)&gt;\nbut expected one of:\nproc `==`[Enum: enum](x, y: Enum): bool\n  first type mismatch at position: 2\n  required type for y: Enum: enum\n  but expression &apos;111&apos; is of type: int literal(111)\nproc `==`[T: tuple | object](x, y: T): bool\n  first type mismatch at position: 2\n  required type for y: T: tuple or object\n  but expression &apos;111&apos; is of type: int literal(111)\nproc `==`[T](a, b: Option[T]): bool\n  first type mismatch at position: 2\n  required type for b: Option[==.T]\n  but expression &apos;111&apos; is of type: int literal(111)\n30 other mismatching symbols have been suppressed; compile with --showAllMismatches:on to see them\n\nexpression: r.pet2 == 111\n",
+      "message": "/tests/spec/nim/tenum_to_i_invalid.nim(10, 15) Error: type mismatch: got &lt;EnumToIInvalid_Animal, int literal(111)&gt;\nbut expected one of:\nproc `==`[Enum: enum](x, y: Enum): bool\n  first type mismatch at position: 2\n  required type for y: Enum: enum\n  but expression &apos;111&apos; is of type: int literal(111)\nproc `==`[T: tuple | object](x, y: T): bool\n  first type mismatch at position: 2\n  required type for y: T: tuple or object\n  but expression &apos;111&apos; is of type: int literal(111)\nproc `==`[T](a, b: Option[T]): bool\n  first type mismatch at position: 2\n  required type for b: Option[==.T]\n  but expression &apos;111&apos; is of type: int literal(111)\n29 other mismatching symbols have been suppressed; compile with --showAllMismatches:on to see them\n\nexpression: r.pet2 == 111\n",
       "trace": ""
     },
     "is_kst": true
@@ -422,7 +422,7 @@
   },
   "ExprStrEncodings": {
     "status": "failed",
-    "elapsed": 0.1,
+    "elapsed": 0.2,
     "failure": {
       "file_name": null,
       "line_num": null,
@@ -1041,6 +1041,17 @@
     "elapsed": 0.0,
     "is_kst": true
   },
+  "StrPadTermUtf16": {
+    "status": "failed",
+    "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": "/tests/spec/nim/tstr_pad_term_utf16.nim(7, 24) template/generic instantiation of `fromFile` from here\n/tests/compiled/nim/str_pad_term_utf16.nim(30, 18) template/generic instantiation of `read` from here\n/tests/compiled/nim/str_pad_term_utf16.nim(22, 54) Error: attempting to call undeclared routine: &apos;bytesTerminateMulti&apos;\n",
+      "trace": ""
+    },
+    "is_kst": true
+  },
   "SwitchBytearray": {
     "status": "passed",
     "elapsed": 0.0,
@@ -1072,7 +1083,7 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "/tests/spec/nim/tswitch_manual_enum_invalid.nim(10, 26) Error: type mismatch: got &lt;SwitchManualEnumInvalid_Opcode_CodeEnum, int literal(255)&gt;\nbut expected one of:\nproc `==`[Enum: enum](x, y: Enum): bool\n  first type mismatch at position: 2\n  required type for y: Enum: enum\n  but expression &apos;255&apos; is of type: int literal(255)\nproc `==`[T: tuple | object](x, y: T): bool\n  first type mismatch at position: 2\n  required type for y: T: tuple or object\n  but expression &apos;255&apos; is of type: int literal(255)\nproc `==`[T](a, b: Option[T]): bool\n  first type mismatch at position: 2\n  required type for b: Option[==.T]\n  but expression &apos;255&apos; is of type: int literal(255)\n30 other mismatching symbols have been suppressed; compile with --showAllMismatches:on to see them\n\nexpression: r.opcodes[0].code == 255\n",
+      "message": "/tests/spec/nim/tswitch_manual_enum_invalid.nim(10, 26) Error: type mismatch: got &lt;SwitchManualEnumInvalid_Opcode_CodeEnum, int literal(255)&gt;\nbut expected one of:\nproc `==`[Enum: enum](x, y: Enum): bool\n  first type mismatch at position: 2\n  required type for y: Enum: enum\n  but expression &apos;255&apos; is of type: int literal(255)\nproc `==`[T: tuple | object](x, y: T): bool\n  first type mismatch at position: 2\n  required type for y: T: tuple or object\n  but expression &apos;255&apos; is of type: int literal(255)\nproc `==`[T](a, b: Option[T]): bool\n  first type mismatch at position: 2\n  required type for b: Option[==.T]\n  but expression &apos;255&apos; is of type: int literal(255)\n29 other mismatching symbols have been suppressed; compile with --showAllMismatches:on to see them\n\nexpression: r.opcodes[0].code == 255\n",
       "trace": ""
     },
     "is_kst": true
@@ -1083,7 +1094,7 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "/tests/spec/nim/tswitch_manual_enum_invalid_else.nim(10, 26) Error: type mismatch: got &lt;SwitchManualEnumInvalidElse_Opcode_CodeEnum, int literal(255)&gt;\nbut expected one of:\nproc `==`[Enum: enum](x, y: Enum): bool\n  first type mismatch at position: 2\n  required type for y: Enum: enum\n  but expression &apos;255&apos; is of type: int literal(255)\nproc `==`[T: tuple | object](x, y: T): bool\n  first type mismatch at position: 2\n  required type for y: T: tuple or object\n  but expression &apos;255&apos; is of type: int literal(255)\nproc `==`[T](a, b: Option[T]): bool\n  first type mismatch at position: 2\n  required type for b: Option[==.T]\n  but expression &apos;255&apos; is of type: int literal(255)\n30 other mismatching symbols have been suppressed; compile with --showAllMismatches:on to see them\n\nexpression: r.opcodes[0].code == 255\n",
+      "message": "/tests/spec/nim/tswitch_manual_enum_invalid_else.nim(10, 26) Error: type mismatch: got &lt;SwitchManualEnumInvalidElse_Opcode_CodeEnum, int literal(255)&gt;\nbut expected one of:\nproc `==`[Enum: enum](x, y: Enum): bool\n  first type mismatch at position: 2\n  required type for y: Enum: enum\n  but expression &apos;255&apos; is of type: int literal(255)\nproc `==`[T: tuple | object](x, y: T): bool\n  first type mismatch at position: 2\n  required type for y: T: tuple or object\n  but expression &apos;255&apos; is of type: int literal(255)\nproc `==`[T](a, b: Option[T]): bool\n  first type mismatch at position: 2\n  required type for b: Option[==.T]\n  but expression &apos;255&apos; is of type: int literal(255)\n29 other mismatching symbols have been suppressed; compile with --showAllMismatches:on to see them\n\nexpression: r.opcodes[0].code == 255\n",
       "trace": ""
     },
     "is_kst": true
@@ -1110,14 +1121,8 @@
     "is_kst": true
   },
   "SwitchManualIntSizeElse": {
-    "status": "failed",
+    "status": "passed",
     "elapsed": 0.0,
-    "failure": {
-      "file_name": null,
-      "line_num": null,
-      "message": "/tests/spec/nim/tswitch_manual_int_size_else.nim(18, 8) template/generic instantiation of `assert` from here\n/tests/spec/nim/auxiliary/test_utils.nim(12, 32) Error: type mismatch: got &apos;empty&apos; for &apos;expected[i]&apos; but expected &apos;byte = uint8&apos;\n",
-      "trace": ""
-    },
     "is_kst": true
   },
   "SwitchManualIntSizeEos": {
@@ -1176,6 +1181,50 @@
   "TermStrz": {
     "status": "passed",
     "elapsed": 0.0,
+    "is_kst": true
+  },
+  "TermStrzUtf16V1": {
+    "status": "failed",
+    "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": "/tests/spec/nim/tterm_strz_utf16_v1.nim(7, 24) template/generic instantiation of `fromFile` from here\n/tests/compiled/nim/term_strz_utf16_v1.nim(33, 18) template/generic instantiation of `read` from here\n/tests/compiled/nim/term_strz_utf16_v1.nim(23, 30) Error: attempting to call undeclared routine: &apos;readBytesTermMulti&apos;\n",
+      "trace": ""
+    },
+    "is_kst": true
+  },
+  "TermStrzUtf16V2": {
+    "status": "failed",
+    "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": "/tests/spec/nim/tterm_strz_utf16_v2.nim(7, 24) template/generic instantiation of `fromFile` from here\n/tests/compiled/nim/term_strz_utf16_v2.nim(30, 18) template/generic instantiation of `read` from here\n/tests/compiled/nim/term_strz_utf16_v2.nim(22, 30) Error: attempting to call undeclared routine: &apos;readBytesTermMulti&apos;\n",
+      "trace": ""
+    },
+    "is_kst": true
+  },
+  "TermStrzUtf16V3": {
+    "status": "failed",
+    "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": "/tests/spec/nim/tterm_strz_utf16_v3.nim(7, 24) template/generic instantiation of `fromFile` from here\n/tests/compiled/nim/term_strz_utf16_v3.nim(33, 18) template/generic instantiation of `read` from here\n/tests/compiled/nim/term_strz_utf16_v3.nim(23, 30) Error: attempting to call undeclared routine: &apos;readBytesTermMulti&apos;\n",
+      "trace": ""
+    },
+    "is_kst": true
+  },
+  "TermStrzUtf16V4": {
+    "status": "failed",
+    "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": "/tests/spec/nim/tterm_strz_utf16_v4.nim(7, 24) template/generic instantiation of `fromFile` from here\n/tests/compiled/nim/term_strz_utf16_v4.nim(60, 18) template/generic instantiation of `read` from here\n/tests/compiled/nim/term_strz_utf16_v4.nim(42, 38) template/generic instantiation of `read` from here\n/tests/compiled/nim/term_strz_utf16_v4.nim(70, 33) Error: attempting to call undeclared routine: &apos;readBytesTermMulti&apos;\n",
+      "trace": ""
+    },
     "is_kst": true
   },
   "TermU1Val": {
