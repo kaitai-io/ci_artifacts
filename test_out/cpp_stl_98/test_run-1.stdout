@@ -1,9 +1,9 @@
 
 Test module "C++/STL test units for Kaitai Struct" has failed with:
-  234 test cases out of 235 passed
-  1 test case out of 235 failed
-  1062 assertions out of 1064 passed
-  2 assertions out of 1064 failed
+  246 test cases out of 247 passed
+  1 test case out of 247 failed
+  1086 assertions out of 1088 passed
+  2 assertions out of 1088 failed
 
   Test case "test_bcd_user_type_be" has passed with:
     6 assertions out of 6 passed
@@ -553,6 +553,9 @@ Test module "C++/STL test units for Kaitai Struct" has failed with:
   Test case "test_str_pad_term_empty" has passed with:
     4 assertions out of 4 passed
 
+  Test case "test_str_pad_term_utf16" has passed with:
+    3 assertions out of 3 passed
+
   Test case "test_switch_bytearray" has passed with:
     9 assertions out of 9 passed
 
@@ -611,6 +614,18 @@ Test module "C++/STL test units for Kaitai Struct" has failed with:
     3 assertions out of 3 passed
 
   Test case "test_term_strz" has passed with:
+    3 assertions out of 3 passed
+
+  Test case "test_term_strz_utf16_v1" has passed with:
+    4 assertions out of 4 passed
+
+  Test case "test_term_strz_utf16_v2" has passed with:
+    3 assertions out of 3 passed
+
+  Test case "test_term_strz_utf16_v3" has passed with:
+    4 assertions out of 4 passed
+
+  Test case "test_term_strz_utf16_v4" has passed with:
     3 assertions out of 3 passed
 
   Test case "test_term_u1_val" has passed with:
@@ -678,6 +693,27 @@ Test module "C++/STL test units for Kaitai Struct" has failed with:
   Test case "test_valid_fail_range_str" has passed with:
     1 assertion out of 1 passed
 
+  Test case "test_valid_fail_repeat_anyof_int" has passed with:
+    1 assertion out of 1 passed
+
+  Test case "test_valid_fail_repeat_contents" has passed with:
+    1 assertion out of 1 passed
+
+  Test case "test_valid_fail_repeat_eq_int" has passed with:
+    1 assertion out of 1 passed
+
+  Test case "test_valid_fail_repeat_expr" has passed with:
+    1 assertion out of 1 passed
+
+  Test case "test_valid_fail_repeat_inst" has passed with:
+    1 assertion out of 1 passed
+
+  Test case "test_valid_fail_repeat_max_int" has passed with:
+    1 assertion out of 1 passed
+
+  Test case "test_valid_fail_repeat_min_int" has passed with:
+    1 assertion out of 1 passed
+
   Test case "test_valid_long" has passed
 
   Test case "test_valid_not_parsed_if" has passed
@@ -697,3 +733,12 @@ Test module "C++/STL test units for Kaitai Struct" has failed with:
   Test case "test_zlib_with_header_78" has passed with:
     1 assertion out of 1 passed
 
+Detected memory leaks!
+Dumping objects ->
+{48726} normal block at 0x00000186F0AB3590, 12 bytes long.
+ Data: <xV4 xV4 V4  > 78 56 34 12 78 56 34 12 56 34 12 00 
+{48722} normal block at 0x00000186F0AB32C0, 16 bytes long.
+ Data: <P               > 50 E3 AC F0 86 01 00 00 00 00 00 00 00 00 00 00 
+{48721} normal block at 0x00000186F0ACE350, 32 bytes long.
+ Data: < 2       5      > C0 32 AB F0 86 01 00 00 90 35 AB F0 86 01 00 00 
+Object dump complete.
