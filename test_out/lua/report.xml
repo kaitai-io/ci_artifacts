@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites>
-    <testsuite name="LuaUnit" id="00001" package="" hostname="localhost" tests="245" timestamp="2024-07-14T23:35:45" time="0.039" errors="5" failures="4" skipped="0">
+    <testsuite name="LuaUnit" id="00001" package="" hostname="localhost" tests="257" timestamp="2024-08-07T14:02:51" time="0.040" errors="10" failures="4" skipped="0">
         <properties>
             <property name="Lua Version" value="Lua 5.3"/>
             <property name="LuaUnit Version" value="3.4"/>
@@ -150,7 +150,7 @@
         </testcase>
         <testcase classname="TestExprBytesCmp" name="TestExprBytesCmp.test_expr_bytes_cmp" time="0.000">
         </testcase>
-        <testcase classname="TestExprBytesNonLiteral" name="TestExprBytesNonLiteral.test_expr_bytes_non_literal" time="0.009">
+        <testcase classname="TestExprBytesNonLiteral" name="TestExprBytesNonLiteral.test_expr_bytes_non_literal" time="0.006">
             <failure type="spec/lua/run_test_suite.lua:18: spec/lua/test_expr_bytes_non_literal.lua:5: module &apos;expr_bytes_non_literal&apos; not found:
 	no field package.preload[&apos;expr_bytes_non_literal&apos;]
 	no file &apos;../runtime/lua/expr_bytes_non_literal.lua&apos;
@@ -459,6 +459,16 @@
         </testcase>
         <testcase classname="TestStrPadTermEmpty" name="TestStrPadTermEmpty.test_str_pad_term_empty" time="0.000">
         </testcase>
+        <testcase classname="TestStrPadTermUtf16" name="TestStrPadTermUtf16.test_str_pad_term_utf16" time="0.001">
+            <error type="../runtime/lua/string_decode.lua:42: Encoding UTF-16LE not supported">
+                <![CDATA[stack traceback:
+	../runtime/lua/string_decode.lua:42: in function 'string_decode.decode'
+	compiled/lua/str_pad_term_utf16.lua:19: in method '_read'
+	compiled/lua/str_pad_term_utf16.lua:15: in local 'init'
+	../runtime/lua/class.lua:70: in function <../runtime/lua/class.lua:66>
+	(...tail calls...)
+	spec/lua/test_str_pad_term_utf16.lua:10: in upvalue 'TestStrPadTermUtf16.test_str_pad_term_utf16']]></error>
+        </testcase>
         <testcase classname="TestSwitchBytearray" name="TestSwitchBytearray.test_switch_bytearray" time="0.000">
         </testcase>
         <testcase classname="TestSwitchCast" name="TestSwitchCast.test_switch_cast" time="0.000">
@@ -498,6 +508,49 @@
         <testcase classname="TestTermBytes" name="TestTermBytes.test_term_bytes" time="0.000">
         </testcase>
         <testcase classname="TestTermStrz" name="TestTermStrz.test_term_strz" time="0.000">
+        </testcase>
+        <testcase classname="TestTermStrzUtf16V1" name="TestTermStrzUtf16V1.test_term_strz_utf16_v1" time="0.001">
+            <error type="../runtime/lua/string_decode.lua:42: Encoding UTF-16LE not supported">
+                <![CDATA[stack traceback:
+	../runtime/lua/string_decode.lua:42: in function 'string_decode.decode'
+	compiled/lua/term_strz_utf16_v1.lua:19: in method '_read'
+	compiled/lua/term_strz_utf16_v1.lua:15: in local 'init'
+	../runtime/lua/class.lua:70: in function <../runtime/lua/class.lua:66>
+	(...tail calls...)
+	spec/lua/test_term_strz_utf16_v1.lua:10: in upvalue 'TestTermStrzUtf16V1.test_term_strz_utf16_v1']]></error>
+        </testcase>
+        <testcase classname="TestTermStrzUtf16V2" name="TestTermStrzUtf16V2.test_term_strz_utf16_v2" time="0.001">
+            <error type="../runtime/lua/string_decode.lua:42: Encoding UTF-16LE not supported">
+                <![CDATA[stack traceback:
+	../runtime/lua/string_decode.lua:42: in function 'string_decode.decode'
+	compiled/lua/term_strz_utf16_v2.lua:19: in method '_read'
+	compiled/lua/term_strz_utf16_v2.lua:15: in local 'init'
+	../runtime/lua/class.lua:70: in function <../runtime/lua/class.lua:66>
+	(...tail calls...)
+	spec/lua/test_term_strz_utf16_v2.lua:10: in upvalue 'TestTermStrzUtf16V2.test_term_strz_utf16_v2']]></error>
+        </testcase>
+        <testcase classname="TestTermStrzUtf16V3" name="TestTermStrzUtf16V3.test_term_strz_utf16_v3" time="0.001">
+            <error type="../runtime/lua/string_decode.lua:42: Encoding UTF-16LE not supported">
+                <![CDATA[stack traceback:
+	../runtime/lua/string_decode.lua:42: in function 'string_decode.decode'
+	compiled/lua/term_strz_utf16_v3.lua:19: in method '_read'
+	compiled/lua/term_strz_utf16_v3.lua:15: in local 'init'
+	../runtime/lua/class.lua:70: in function <../runtime/lua/class.lua:66>
+	(...tail calls...)
+	spec/lua/test_term_strz_utf16_v3.lua:10: in upvalue 'TestTermStrzUtf16V3.test_term_strz_utf16_v3']]></error>
+        </testcase>
+        <testcase classname="TestTermStrzUtf16V4" name="TestTermStrzUtf16V4.test_term_strz_utf16_v4" time="0.001">
+            <error type="../runtime/lua/string_decode.lua:42: Encoding UTF-16LE not supported">
+                <![CDATA[stack traceback:
+	../runtime/lua/string_decode.lua:42: in function 'string_decode.decode'
+	compiled/lua/term_strz_utf16_v4.lua:44: in method '_read'
+	compiled/lua/term_strz_utf16_v4.lua:40: in local 'init'
+	../runtime/lua/class.lua:70: in field 'S1Type'
+	compiled/lua/term_strz_utf16_v4.lua:22: in method '_read'
+	compiled/lua/term_strz_utf16_v4.lua:16: in local 'init'
+	../runtime/lua/class.lua:70: in function <../runtime/lua/class.lua:66>
+	(...tail calls...)
+	spec/lua/test_term_strz_utf16_v4.lua:10: in upvalue 'TestTermStrzUtf16V4.test_term_strz_utf16_v4']]></error>
         </testcase>
         <testcase classname="TestTermU1Val" name="TestTermU1Val.test_term_u1_val" time="0.000">
         </testcase>
@@ -550,6 +603,20 @@
         <testcase classname="TestValidFailRangeInt" name="TestValidFailRangeInt.test_valid_fail_range_int" time="0.000">
         </testcase>
         <testcase classname="TestValidFailRangeStr" name="TestValidFailRangeStr.test_valid_fail_range_str" time="0.000">
+        </testcase>
+        <testcase classname="TestValidFailRepeatAnyofInt" name="TestValidFailRepeatAnyofInt.test_valid_fail_repeat_anyof_int" time="0.000">
+        </testcase>
+        <testcase classname="TestValidFailRepeatContents" name="TestValidFailRepeatContents.test_valid_fail_repeat_contents" time="0.000">
+        </testcase>
+        <testcase classname="TestValidFailRepeatEqInt" name="TestValidFailRepeatEqInt.test_valid_fail_repeat_eq_int" time="0.000">
+        </testcase>
+        <testcase classname="TestValidFailRepeatExpr" name="TestValidFailRepeatExpr.test_valid_fail_repeat_expr" time="0.000">
+        </testcase>
+        <testcase classname="TestValidFailRepeatInst" name="TestValidFailRepeatInst.test_valid_fail_repeat_inst" time="0.000">
+        </testcase>
+        <testcase classname="TestValidFailRepeatMaxInt" name="TestValidFailRepeatMaxInt.test_valid_fail_repeat_max_int" time="0.000">
+        </testcase>
+        <testcase classname="TestValidFailRepeatMinInt" name="TestValidFailRepeatMinInt.test_valid_fail_repeat_min_int" time="0.000">
         </testcase>
         <testcase classname="TestValidLong" name="TestValidLong.test_valid_long" time="0.000">
         </testcase>

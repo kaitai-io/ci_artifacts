@@ -1,13 +1,13 @@
 {
   "$meta": {
     "lang": "lua",
-    "timestamp": "2024-07-14T23:35:45Z",
+    "timestamp": "2024-08-07T14:02:51Z",
     "ci": {
       "ci": "github",
-      "run_id": "9931541901",
-      "run_number": "329",
-      "job_id": "27431553384",
-      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/9931541901/job/27431553384"
+      "run_id": "10285809040",
+      "run_number": "330",
+      "job_id": "28465009610",
+      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/10285809040/job/28465009610"
     }
   },
   "BcdUserTypeBe": {
@@ -1021,6 +1021,17 @@
     "elapsed": 0.0,
     "is_kst": true
   },
+  "StrPadTermUtf16": {
+    "status": "failed",
+    "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": "../runtime/lua/string_decode.lua:42: Encoding UTF-16LE not supported",
+      "trace": "stack traceback:\n\t../runtime/lua/string_decode.lua:42: in function 'string_decode.decode'\n\tcompiled/lua/str_pad_term_utf16.lua:19: in method '_read'\n\tcompiled/lua/str_pad_term_utf16.lua:15: in local 'init'\n\t../runtime/lua/class.lua:70: in function <../runtime/lua/class.lua:66>\n\t(...tail calls...)\n\tspec/lua/test_str_pad_term_utf16.lua:10: in upvalue 'TestStrPadTermUtf16.test_str_pad_term_utf16'"
+    },
+    "is_kst": true
+  },
   "SwitchBytearray": {
     "status": "passed",
     "elapsed": 0.0,
@@ -1116,6 +1127,50 @@
   "TermStrz": {
     "status": "passed",
     "elapsed": 0.0,
+    "is_kst": true
+  },
+  "TermStrzUtf16V1": {
+    "status": "failed",
+    "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": "../runtime/lua/string_decode.lua:42: Encoding UTF-16LE not supported",
+      "trace": "stack traceback:\n\t../runtime/lua/string_decode.lua:42: in function 'string_decode.decode'\n\tcompiled/lua/term_strz_utf16_v1.lua:19: in method '_read'\n\tcompiled/lua/term_strz_utf16_v1.lua:15: in local 'init'\n\t../runtime/lua/class.lua:70: in function <../runtime/lua/class.lua:66>\n\t(...tail calls...)\n\tspec/lua/test_term_strz_utf16_v1.lua:10: in upvalue 'TestTermStrzUtf16V1.test_term_strz_utf16_v1'"
+    },
+    "is_kst": true
+  },
+  "TermStrzUtf16V2": {
+    "status": "failed",
+    "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": "../runtime/lua/string_decode.lua:42: Encoding UTF-16LE not supported",
+      "trace": "stack traceback:\n\t../runtime/lua/string_decode.lua:42: in function 'string_decode.decode'\n\tcompiled/lua/term_strz_utf16_v2.lua:19: in method '_read'\n\tcompiled/lua/term_strz_utf16_v2.lua:15: in local 'init'\n\t../runtime/lua/class.lua:70: in function <../runtime/lua/class.lua:66>\n\t(...tail calls...)\n\tspec/lua/test_term_strz_utf16_v2.lua:10: in upvalue 'TestTermStrzUtf16V2.test_term_strz_utf16_v2'"
+    },
+    "is_kst": true
+  },
+  "TermStrzUtf16V3": {
+    "status": "failed",
+    "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": "../runtime/lua/string_decode.lua:42: Encoding UTF-16LE not supported",
+      "trace": "stack traceback:\n\t../runtime/lua/string_decode.lua:42: in function 'string_decode.decode'\n\tcompiled/lua/term_strz_utf16_v3.lua:19: in method '_read'\n\tcompiled/lua/term_strz_utf16_v3.lua:15: in local 'init'\n\t../runtime/lua/class.lua:70: in function <../runtime/lua/class.lua:66>\n\t(...tail calls...)\n\tspec/lua/test_term_strz_utf16_v3.lua:10: in upvalue 'TestTermStrzUtf16V3.test_term_strz_utf16_v3'"
+    },
+    "is_kst": true
+  },
+  "TermStrzUtf16V4": {
+    "status": "failed",
+    "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": "../runtime/lua/string_decode.lua:42: Encoding UTF-16LE not supported",
+      "trace": "stack traceback:\n\t../runtime/lua/string_decode.lua:42: in function 'string_decode.decode'\n\tcompiled/lua/term_strz_utf16_v4.lua:44: in method '_read'\n\tcompiled/lua/term_strz_utf16_v4.lua:40: in local 'init'\n\t../runtime/lua/class.lua:70: in field 'S1Type'\n\tcompiled/lua/term_strz_utf16_v4.lua:22: in method '_read'\n\tcompiled/lua/term_strz_utf16_v4.lua:16: in local 'init'\n\t../runtime/lua/class.lua:70: in function <../runtime/lua/class.lua:66>\n\t(...tail calls...)\n\tspec/lua/test_term_strz_utf16_v4.lua:10: in upvalue 'TestTermStrzUtf16V4.test_term_strz_utf16_v4'"
+    },
     "is_kst": true
   },
   "TermU1Val": {
@@ -1228,6 +1283,41 @@
     "is_kst": true
   },
   "ValidFailRangeStr": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "ValidFailRepeatAnyofInt": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "ValidFailRepeatContents": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "ValidFailRepeatEqInt": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "ValidFailRepeatExpr": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "ValidFailRepeatInst": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "ValidFailRepeatMaxInt": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "ValidFailRepeatMinInt": {
     "status": "passed",
     "elapsed": 0.0,
     "is_kst": true
