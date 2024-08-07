@@ -1,13 +1,13 @@
 {
   "$meta": {
     "lang": "construct",
-    "timestamp": "2024-07-14T23:35:13Z",
+    "timestamp": "2024-08-07T14:02:06Z",
     "ci": {
       "ci": "github",
-      "run_id": "9931541901",
-      "run_number": "329",
-      "job_id": "27431552078",
-      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/9931541901/job/27431552078"
+      "run_id": "10285809040",
+      "run_number": "330",
+      "job_id": "28465001875",
+      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/10285809040/job/28465001875"
     }
   },
   "BcdUserTypeBe": {
@@ -1428,6 +1428,17 @@
     "elapsed": 0.0,
     "is_kst": true
   },
+  "StrPadTermUtf16": {
+    "status": "failed",
+    "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": "Error in path (parsing) -> str_term_and_pad\nstream read less than specified amount, expected 2, found 0",
+      "trace": "Traceback (most recent call last):\n  File \"/tests/spec/construct/test_str_pad_term_utf16.py\", line 9, in test_str_pad_term_utf16\n    r = _schema.parse_file('src/str_pad_term_utf16.bin')\n  File \"/usr/local/lib/python2.7/site-packages/construct/core.py\", line 309, in parse_file\n    return self.parse_stream(f, **contextkw)\n  File \"/usr/local/lib/python2.7/site-packages/construct/core.py\", line 300, in parse_stream\n    return self._parsereport(stream, context, \"(parsing)\")\n  File \"/usr/local/lib/python2.7/site-packages/construct/core.py\", line 312, in _parsereport\n    obj = self._parse(stream, context, path)\n  File \"/usr/local/lib/python2.7/site-packages/construct/core.py\", line 1982, in _parse\n    subobj = sc._parsereport(stream, context, path)\n  File \"/usr/local/lib/python2.7/site-packages/construct/core.py\", line 312, in _parsereport\n    obj = self._parse(stream, context, path)\n  File \"/usr/local/lib/python2.7/site-packages/construct/core.py\", line 2440, in _parse\n    return self.subcon._parsereport(stream, context, path)\n  File \"/usr/local/lib/python2.7/site-packages/construct/core.py\", line 312, in _parsereport\n    obj = self._parse(stream, context, path)\n  File \"/usr/local/lib/python2.7/site-packages/construct/core.py\", line 4497, in _parse\n    return self.subcon._parsereport(io.BytesIO(data), context, path)\n  File \"/usr/local/lib/python2.7/site-packages/construct/core.py\", line 312, in _parsereport\n    obj = self._parse(stream, context, path)\n  File \"/usr/local/lib/python2.7/site-packages/construct/core.py\", line 4647, in _parse\n    return self.subcon._parsereport(io.BytesIO(data), context, path)\n  File \"/usr/local/lib/python2.7/site-packages/construct/core.py\", line 312, in _parsereport\n    obj = self._parse(stream, context, path)\n  File \"/usr/local/lib/python2.7/site-packages/construct/core.py\", line 4568, in _parse\n    b = stream_read(stream, unit, path)\n  File \"/usr/local/lib/python2.7/site-packages/construct/core.py\", line 92, in stream_read\n    raise StreamError(\"stream read less than specified amount, expected %d, found %d\" % (length, len(data)), path=path)\nStreamError: Error in path (parsing) -> str_term_and_pad\nstream read less than specified amount, expected 2, found 0"
+    },
+    "is_kst": true
+  },
   "SwitchBytearray": {
     "status": "passed",
     "elapsed": 0.0,
@@ -1527,6 +1538,32 @@
   "TermStrz": {
     "status": "passed",
     "elapsed": 0.0,
+    "is_kst": true
+  },
+  "TermStrzUtf16V1": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "TermStrzUtf16V2": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "TermStrzUtf16V3": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "TermStrzUtf16V4": {
+    "status": "failed",
+    "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": "Error in path (parsing) -> s1 -> value\nstream read less than specified amount, expected 2, found 0",
+      "trace": "Traceback (most recent call last):\n  File \"/tests/spec/construct/test_term_strz_utf16_v4.py\", line 9, in test_term_strz_utf16_v4\n    r = _schema.parse_file('src/term_strz_utf16.bin')\n  File \"/usr/local/lib/python2.7/site-packages/construct/core.py\", line 309, in parse_file\n    return self.parse_stream(f, **contextkw)\n  File \"/usr/local/lib/python2.7/site-packages/construct/core.py\", line 300, in parse_stream\n    return self._parsereport(stream, context, \"(parsing)\")\n  File \"/usr/local/lib/python2.7/site-packages/construct/core.py\", line 312, in _parsereport\n    obj = self._parse(stream, context, path)\n  File \"/usr/local/lib/python2.7/site-packages/construct/core.py\", line 1982, in _parse\n    subobj = sc._parsereport(stream, context, path)\n  File \"/usr/local/lib/python2.7/site-packages/construct/core.py\", line 312, in _parsereport\n    obj = self._parse(stream, context, path)\n  File \"/usr/local/lib/python2.7/site-packages/construct/core.py\", line 2440, in _parse\n    return self.subcon._parsereport(stream, context, path)\n  File \"/usr/local/lib/python2.7/site-packages/construct/core.py\", line 312, in _parsereport\n    obj = self._parse(stream, context, path)\n  File \"/usr/local/lib/python2.7/site-packages/construct/core.py\", line 4497, in _parse\n    return self.subcon._parsereport(io.BytesIO(data), context, path)\n  File \"/usr/local/lib/python2.7/site-packages/construct/core.py\", line 312, in _parsereport\n    obj = self._parse(stream, context, path)\n  File \"/usr/local/lib/python2.7/site-packages/construct/core.py\", line 5535, in _parse\n    return sc._parsereport(stream, context, path)\n  File \"/usr/local/lib/python2.7/site-packages/construct/core.py\", line 312, in _parsereport\n    obj = self._parse(stream, context, path)\n  File \"/usr/local/lib/python2.7/site-packages/construct/core.py\", line 1982, in _parse\n    subobj = sc._parsereport(stream, context, path)\n  File \"/usr/local/lib/python2.7/site-packages/construct/core.py\", line 312, in _parsereport\n    obj = self._parse(stream, context, path)\n  File \"/usr/local/lib/python2.7/site-packages/construct/core.py\", line 2440, in _parse\n    return self.subcon._parsereport(stream, context, path)\n  File \"/usr/local/lib/python2.7/site-packages/construct/core.py\", line 312, in _parsereport\n    obj = self._parse(stream, context, path)\n  File \"/usr/local/lib/python2.7/site-packages/construct/core.py\", line 4568, in _parse\n    b = stream_read(stream, unit, path)\n  File \"/usr/local/lib/python2.7/site-packages/construct/core.py\", line 92, in stream_read\n    raise StreamError(\"stream read less than specified amount, expected %d, found %d\" % (length, len(data)), path=path)\nStreamError: Error in path (parsing) -> s1 -> value\nstream read less than specified amount, expected 2, found 0"
+    },
     "is_kst": true
   },
   "TermU1Val": {
