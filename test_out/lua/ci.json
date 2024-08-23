@@ -1,13 +1,13 @@
 {
   "$meta": {
     "lang": "lua",
-    "timestamp": "2024-08-07T14:02:51Z",
+    "timestamp": "2024-08-23T22:37:31Z",
     "ci": {
       "ci": "github",
-      "run_id": "10285809040",
-      "run_number": "330",
-      "job_id": "28465009610",
-      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/10285809040/job/28465009610"
+      "run_id": "10533248357",
+      "run_number": "332",
+      "job_id": "29188910578",
+      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/10533248357/job/29188910578"
     }
   },
   "BcdUserTypeBe": {
@@ -248,8 +248,15 @@
     "is_kst": true
   },
   "EnumInvalid": {
-    "status": "passed",
-    "elapsed": 0.0
+    "status": "failed",
+    "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": "spec/lua/test_enum_invalid.lua:13: expected: 111, actual: nil",
+      "trace": "stack traceback:\n\tspec/lua/test_enum_invalid.lua:13: in upvalue 'TestEnumInvalid.test_enum_invalid'"
+    },
+    "is_kst": true
   },
   "EnumLongRangeS": {
     "status": "passed",
@@ -1062,12 +1069,26 @@
     "is_kst": true
   },
   "SwitchManualEnumInvalid": {
-    "status": "passed",
-    "elapsed": 0.0
+    "status": "failed",
+    "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": "spec/lua/test_switch_manual_enum_invalid.lua:13: expected: 255, actual: nil",
+      "trace": "stack traceback:\n\tspec/lua/test_switch_manual_enum_invalid.lua:13: in upvalue 'TestSwitchManualEnumInvalid.test_switch_manual_enum_invalid'"
+    },
+    "is_kst": true
   },
   "SwitchManualEnumInvalidElse": {
-    "status": "passed",
-    "elapsed": 0.0
+    "status": "failed",
+    "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": "spec/lua/test_switch_manual_enum_invalid_else.lua:13: expected: 255, actual: nil",
+      "trace": "stack traceback:\n\tspec/lua/test_switch_manual_enum_invalid_else.lua:13: in upvalue 'TestSwitchManualEnumInvalidElse.test_switch_manual_enum_invalid_else'"
+    },
+    "is_kst": true
   },
   "SwitchManualInt": {
     "status": "passed",
@@ -1250,6 +1271,17 @@
   "ValidFailExpr": {
     "status": "passed",
     "elapsed": 0.0,
+    "is_kst": true
+  },
+  "ValidFailInEnum": {
+    "status": "failed",
+    "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": "spec/lua/run_test_suite.lua:18: spec/lua/test_valid_fail_in_enum.lua:5: module 'valid_fail_in_enum' not found:\n\tno field package.preload['valid_fail_in_enum']\n\tno file '../runtime/lua/valid_fail_in_enum.lua'\n\tno file 'spec/lua/valid_fail_in_enum.lua'\n\tno file 'spec/lua/extra/valid_fail_in_enum.lua'\n\tno file 'compiled/lua/valid_fail_in_enum.lua'\n\tno file '/lua_install/share/lua/5.3/valid_fail_in_enum.lua'\n\tno file '/lua_install/share/lua/5.3/valid_fail_in_enum/init.lua'\n\tno file './valid_fail_in_enum.lua'\n\tno file './valid_fail_in_enum/init.lua'\n\tno file '/lua_install/lib/lua/5.3/valid_fail_in_enum.so'\n\tno file '/lua_install/lib/lua/5.3/loadall.so'\n\tno file './valid_fail_in_enum.so'",
+      "trace": "stack traceback:\n\tspec/lua/run_test_suite.lua:18: in upvalue 'TestValidFailInEnum.test_valid_fail_in_enum'"
+    },
     "is_kst": true
   },
   "ValidFailInst": {

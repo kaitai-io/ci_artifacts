@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites>
-    <testsuite name="LuaUnit" id="00001" package="" hostname="localhost" tests="257" timestamp="2024-08-07T14:02:51" time="0.040" errors="10" failures="4" skipped="0">
+    <testsuite name="LuaUnit" id="00001" package="" hostname="localhost" tests="258" timestamp="2024-08-23T22:37:31" time="0.049" errors="10" failures="8" skipped="0">
         <properties>
             <property name="Lua Version" value="Lua 5.3"/>
             <property name="LuaUnit Version" value="3.4"/>
@@ -101,7 +101,10 @@
         </testcase>
         <testcase classname="TestEnumIntRangeU" name="TestEnumIntRangeU.test_enum_int_range_u" time="0.000">
         </testcase>
-        <testcase classname="TestEnumInvalid" name="TestEnumInvalid.test_enum_invalid" time="0.000">
+        <testcase classname="TestEnumInvalid" name="TestEnumInvalid.test_enum_invalid" time="0.001">
+            <failure type="spec/lua/test_enum_invalid.lua:13: expected: 111, actual: nil">
+                <![CDATA[stack traceback:
+	spec/lua/test_enum_invalid.lua:13: in upvalue 'TestEnumInvalid.test_enum_invalid']]></failure>
         </testcase>
         <testcase classname="TestEnumLongRangeS" name="TestEnumLongRangeS.test_enum_long_range_s" time="0.000">
         </testcase>
@@ -150,7 +153,7 @@
         </testcase>
         <testcase classname="TestExprBytesCmp" name="TestExprBytesCmp.test_expr_bytes_cmp" time="0.000">
         </testcase>
-        <testcase classname="TestExprBytesNonLiteral" name="TestExprBytesNonLiteral.test_expr_bytes_non_literal" time="0.006">
+        <testcase classname="TestExprBytesNonLiteral" name="TestExprBytesNonLiteral.test_expr_bytes_non_literal" time="0.007">
             <failure type="spec/lua/run_test_suite.lua:18: spec/lua/test_expr_bytes_non_literal.lua:5: module &apos;expr_bytes_non_literal&apos; not found:
 	no field package.preload[&apos;expr_bytes_non_literal&apos;]
 	no file &apos;../runtime/lua/expr_bytes_non_literal.lua&apos;
@@ -481,9 +484,15 @@
         </testcase>
         <testcase classname="TestSwitchManualEnum" name="TestSwitchManualEnum.test_switch_manual_enum" time="0.000">
         </testcase>
-        <testcase classname="TestSwitchManualEnumInvalid" name="TestSwitchManualEnumInvalid.test_switch_manual_enum_invalid" time="0.000">
+        <testcase classname="TestSwitchManualEnumInvalid" name="TestSwitchManualEnumInvalid.test_switch_manual_enum_invalid" time="0.001">
+            <failure type="spec/lua/test_switch_manual_enum_invalid.lua:13: expected: 255, actual: nil">
+                <![CDATA[stack traceback:
+	spec/lua/test_switch_manual_enum_invalid.lua:13: in upvalue 'TestSwitchManualEnumInvalid.test_switch_manual_enum_invalid']]></failure>
         </testcase>
-        <testcase classname="TestSwitchManualEnumInvalidElse" name="TestSwitchManualEnumInvalidElse.test_switch_manual_enum_invalid_else" time="0.000">
+        <testcase classname="TestSwitchManualEnumInvalidElse" name="TestSwitchManualEnumInvalidElse.test_switch_manual_enum_invalid_else" time="0.001">
+            <failure type="spec/lua/test_switch_manual_enum_invalid_else.lua:13: expected: 255, actual: nil">
+                <![CDATA[stack traceback:
+	spec/lua/test_switch_manual_enum_invalid_else.lua:13: in upvalue 'TestSwitchManualEnumInvalidElse.test_switch_manual_enum_invalid_else']]></failure>
         </testcase>
         <testcase classname="TestSwitchManualInt" name="TestSwitchManualInt.test_switch_manual_int" time="0.000">
         </testcase>
@@ -590,6 +599,23 @@
         </testcase>
         <testcase classname="TestValidFailExpr" name="TestValidFailExpr.test_valid_fail_expr" time="0.000">
         </testcase>
+        <testcase classname="TestValidFailInEnum" name="TestValidFailInEnum.test_valid_fail_in_enum" time="0.005">
+            <failure type="spec/lua/run_test_suite.lua:18: spec/lua/test_valid_fail_in_enum.lua:5: module &apos;valid_fail_in_enum&apos; not found:
+	no field package.preload[&apos;valid_fail_in_enum&apos;]
+	no file &apos;../runtime/lua/valid_fail_in_enum.lua&apos;
+	no file &apos;spec/lua/valid_fail_in_enum.lua&apos;
+	no file &apos;spec/lua/extra/valid_fail_in_enum.lua&apos;
+	no file &apos;compiled/lua/valid_fail_in_enum.lua&apos;
+	no file &apos;/lua_install/share/lua/5.3/valid_fail_in_enum.lua&apos;
+	no file &apos;/lua_install/share/lua/5.3/valid_fail_in_enum/init.lua&apos;
+	no file &apos;./valid_fail_in_enum.lua&apos;
+	no file &apos;./valid_fail_in_enum/init.lua&apos;
+	no file &apos;/lua_install/lib/lua/5.3/valid_fail_in_enum.so&apos;
+	no file &apos;/lua_install/lib/lua/5.3/loadall.so&apos;
+	no file &apos;./valid_fail_in_enum.so&apos;">
+                <![CDATA[stack traceback:
+	spec/lua/run_test_suite.lua:18: in upvalue 'TestValidFailInEnum.test_valid_fail_in_enum']]></failure>
+        </testcase>
         <testcase classname="TestValidFailInst" name="TestValidFailInst.test_valid_fail_inst" time="0.000">
         </testcase>
         <testcase classname="TestValidFailMaxInt" name="TestValidFailMaxInt.test_valid_fail_max_int" time="0.000">
@@ -630,7 +656,7 @@
         </testcase>
         <testcase classname="TestYamlInts" name="TestYamlInts.test_yaml_ints" time="0.000">
         </testcase>
-        <testcase classname="TestZlibSurrounded" name="TestZlibSurrounded.test_zlib_surrounded" time="0.000">
+        <testcase classname="TestZlibSurrounded" name="TestZlibSurrounded.test_zlib_surrounded" time="0.001">
         </testcase>
         <testcase classname="TestZlibWithHeader78" name="TestZlibWithHeader78.test_zlib_with_header_78" time="0.000">
         </testcase>
