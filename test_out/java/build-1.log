@@ -1,3 +1,18 @@
+spec/java/src/io/kaitai/struct/spec/TestValidFailInEnum.java:5: error: cannot find symbol
+import io.kaitai.struct.testformats.ValidFailInEnum;
+                                   ^
+  symbol:   class ValidFailInEnum
+  location: package io.kaitai.struct.testformats
+spec/java/src/io/kaitai/struct/spec/TestValidFailInEnum.java:13: error: cannot find symbol
+        ValidFailInEnum r = ValidFailInEnum.fromFile(SRC_DIR + "enum_0.bin");
+        ^
+  symbol:   class ValidFailInEnum
+  location: class TestValidFailInEnum
+spec/java/src/io/kaitai/struct/spec/TestValidFailInEnum.java:13: error: cannot find symbol
+        ValidFailInEnum r = ValidFailInEnum.fromFile(SRC_DIR + "enum_0.bin");
+                            ^
+  symbol:   variable ValidFailInEnum
+  location: class TestValidFailInEnum
 compiled/java/src/io/kaitai/struct/testformats/ExprBits.java:56: error: incompatible types: possible lossy conversion from long to int
         switch (a()) {
                ^
@@ -10,4 +25,4 @@ compiled/java/src/io/kaitai/struct/testformats/ExprBytesNonLiteral.java:37: erro
 compiled/java/src/io/kaitai/struct/testformats/ExprBytesNonLiteral.java:37: error: incompatible types: possible lossy conversion from int to byte
         this.calcBytes = new byte[] { one(), two() };
                                                 ^
-4 errors
+7 errors
