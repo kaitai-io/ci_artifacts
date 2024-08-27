@@ -12,8 +12,8 @@
   <line>Command: /tests/compiled/cpp_stl_98/bin/ks_tests</line>
 </preamble>
 
-<pid>1699</pid>
-<ppid>1698</ppid>
+<pid>1708</pid>
+<ppid>1707</ppid>
 <tool>memcheck</tool>
 
 <args>
@@ -30,104 +30,14 @@
 
 <status>
   <state>RUNNING</state>
-  <time>00:00:00:00.206 </time>
+  <time>00:00:00:00.218 </time>
 </status>
 
 
 <status>
   <state>FINISHED</state>
-  <time>00:00:00:04.658 </time>
+  <time>00:00:00:04.973 </time>
 </status>
-
-<error>
-  <unique>0x1</unique>
-  <tid>1</tid>
-  <kind>Leak_DefinitelyLost</kind>
-  <xwhat>
-    <text>40 (24 direct, 16 indirect) bytes in 1 blocks are definitely lost in loss record 2 of 2</text>
-    <leakedbytes>40</leakedbytes>
-    <leakedblocks>1</leakedblocks>
-  </xwhat>
-  <stack>
-    <frame>
-      <ip>0x4849013</ip>
-      <obj>/usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
-      <fn>operator new(unsigned long)</fn>
-    </frame>
-    <frame>
-      <ip>0x72BFE5</ip>
-      <obj>/tests/compiled/cpp_stl_98/bin/ks_tests</obj>
-      <fn>valid_fail_repeat_inst_t::inst()</fn>
-      <dir>/tests/compiled/cpp_stl_98</dir>
-      <file>valid_fail_repeat_inst.cpp</file>
-      <line>47</line>
-    </frame>
-    <frame>
-      <ip>0x72BE3F</ip>
-      <obj>/tests/compiled/cpp_stl_98/bin/ks_tests</obj>
-      <fn>valid_fail_repeat_inst_t::_read()</fn>
-      <dir>/tests/compiled/cpp_stl_98</dir>
-      <file>valid_fail_repeat_inst.cpp</file>
-      <line>22</line>
-    </frame>
-    <frame>
-      <ip>0x72BD8C</ip>
-      <obj>/tests/compiled/cpp_stl_98/bin/ks_tests</obj>
-      <fn>valid_fail_repeat_inst_t::valid_fail_repeat_inst_t(kaitai::kstream*, kaitai::kstruct*, valid_fail_repeat_inst_t*)</fn>
-      <dir>/tests/compiled/cpp_stl_98</dir>
-      <file>valid_fail_repeat_inst.cpp</file>
-      <line>13</line>
-    </frame>
-    <frame>
-      <ip>0x67954B</ip>
-      <obj>/tests/compiled/cpp_stl_98/bin/ks_tests</obj>
-      <fn>test_valid_fail_repeat_inst::test_method()</fn>
-      <dir>/tests</dir>
-      <file>spec/cpp_stl_98/test_valid_fail_repeat_inst.cpp</file>
-      <line>14</line>
-    </frame>
-    <frame>
-      <ip>0x679113</ip>
-      <obj>/tests/compiled/cpp_stl_98/bin/ks_tests</obj>
-      <fn>test_valid_fail_repeat_inst_invoker()</fn>
-      <dir>/tests</dir>
-      <file>spec/cpp_stl_98/test_valid_fail_repeat_inst.cpp</file>
-      <line>10</line>
-    </frame>
-    <frame>
-      <ip>0x54A319</ip>
-      <obj>/tests/compiled/cpp_stl_98/bin/ks_tests</obj>
-      <fn>boost::detail::function::void_function_invoker0&lt;void (*)(), void&gt;::invoke(boost::detail::function::function_buffer&amp;)</fn>
-      <dir>/usr/include/boost/function</dir>
-      <file>function_template.hpp</file>
-      <line>117</line>
-    </frame>
-    <frame>
-      <ip>0x4885531</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.74.0</obj>
-    </frame>
-    <frame>
-      <ip>0x488B5B0</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.74.0</obj>
-      <fn>boost::execution_monitor::catch_signals(boost::function&lt;int ()&gt; const&amp;)</fn>
-    </frame>
-    <frame>
-      <ip>0x488BAA0</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.74.0</obj>
-      <fn>boost::execution_monitor::execute(boost::function&lt;int ()&gt; const&amp;)</fn>
-    </frame>
-    <frame>
-      <ip>0x488BB5B</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.74.0</obj>
-      <fn>boost::execution_monitor::vexecute(boost::function&lt;void ()&gt; const&amp;)</fn>
-    </frame>
-    <frame>
-      <ip>0x48AFB36</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.74.0</obj>
-      <fn>boost::unit_test::unit_test_monitor_t::execute_and_translate(boost::function&lt;void ()&gt; const&amp;, unsigned long)</fn>
-    </frame>
-  </stack>
-</error>
 
 <errorcounts>
 </errorcounts>
