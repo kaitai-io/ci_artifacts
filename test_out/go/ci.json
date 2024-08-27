@@ -1,13 +1,13 @@
 {
   "$meta": {
     "lang": "go",
-    "timestamp": "2024-08-24T21:05:21Z",
+    "timestamp": "2024-08-27T19:32:17Z",
     "ci": {
       "ci": "github",
-      "run_id": "10541498171",
-      "run_number": "333",
-      "job_id": "29207312874",
-      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/10541498171/job/29207312874"
+      "run_id": "10584641819",
+      "run_number": "334",
+      "job_id": "29329368332",
+      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/10584641819/job/29329368332"
     }
   },
   "BcdUserTypeBe": {
@@ -668,7 +668,7 @@
       "file_name": null,
       "line_num": null,
       "message": "Failed",
-      "trace": "goroutine 7 [running]:\nruntime/debug.Stack()\n\t/usr/local/go/src/runtime/debug/stack.go:24 +0x5e\nruntime/debug.PrintStack()\n\t/usr/local/go/src/runtime/debug/stack.go:16 +0x13\nkaitai/spec.TestOpaqueExternalType02Parent.func1()\n\t/tests/spec/go/opaque_external_type_02_parent_test.go:15 +0x39\npanic({0x639ac0?, 0x896050?})\n\t/usr/local/go/src/runtime/panic.go:770 +0x132\ntest_formats.(*OpaqueExternalType02Child).SomeMethod(...)\n\t/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:50\ntest_formats.(*OpaqueExternalType02Child_OpaqueExternalType02ChildChild).Read(0xc0000744b0?, 0xc000012170?, 0x3?, 0x67e1c0?)\n\t/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:77 +0x54\ntest_formats.(*OpaqueExternalType02Child).Read(0xc000022050, 0xc000048e88?, {0x0?, 0x0?}, 0x667bc0?)\n\t/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:42 +0x131\ntest_formats.(*OpaqueExternalType02Parent_ParentObj).Read(0xc000038080, 0x40eb65?, 0x28?, 0x667ca0?)\n\t/tests/compiled/go/src/test_formats/opaque_external_type_02_parent.go:56 +0x7f\ntest_formats.(*OpaqueExternalType02Parent).Read(0xc0000744e0, 0x17?, {0x701aa0?, 0xc0000744e0?}, 0x747cde?)\n\t/tests/compiled/go/src/test_formats/opaque_external_type_02_parent.go:28 +0x88\nkaitai/spec.TestOpaqueExternalType02Parent(0xc0002064e0)\n\t/tests/spec/go/opaque_external_type_02_parent_test.go:25 +0x114\ntesting.tRunner(0xc0002064e0, 0x6c3b10)\n\t/usr/local/go/src/testing/testing.go:1689 +0xfb\ncreated by testing.(*T).Run in goroutine 1\n\t/usr/local/go/src/testing/testing.go:1742 +0x390\n    opaque_external_type_02_parent_test.go:16: unexpected panic: runtime error: invalid memory address or nil pointer dereference"
+      "trace": "goroutine 143 [running]:\nruntime/debug.Stack()\n\t/usr/local/go/src/runtime/debug/stack.go:24 +0x5e\nruntime/debug.PrintStack()\n\t/usr/local/go/src/runtime/debug/stack.go:16 +0x13\nkaitai/spec.TestOpaqueExternalType02Parent.func1()\n\t/tests/spec/go/opaque_external_type_02_parent_test.go:15 +0x39\npanic({0x639b00?, 0x896050?})\n\t/usr/local/go/src/runtime/panic.go:770 +0x132\ntest_formats.(*OpaqueExternalType02Child).SomeMethod(...)\n\t/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:50\ntest_formats.(*OpaqueExternalType02Child_OpaqueExternalType02ChildChild).Read(0xc000190390?, 0xc000170bb8?, 0x3?, 0x67e380?)\n\t/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:77 +0x54\ntest_formats.(*OpaqueExternalType02Child).Read(0xc0000b4a00, 0xc000048688?, {0x0?, 0x0?}, 0x667c80?)\n\t/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:42 +0x131\ntest_formats.(*OpaqueExternalType02Parent_ParentObj).Read(0xc0000d2be0, 0x40eb65?, 0x28?, 0x667d60?)\n\t/tests/compiled/go/src/test_formats/opaque_external_type_02_parent.go:56 +0x7f\ntest_formats.(*OpaqueExternalType02Parent).Read(0xc0001903c0, 0x17?, {0x701ce0?, 0xc0001903c0?}, 0x747ffe?)\n\t/tests/compiled/go/src/test_formats/opaque_external_type_02_parent.go:28 +0x88\nkaitai/spec.TestOpaqueExternalType02Parent(0xc000189d40)\n\t/tests/spec/go/opaque_external_type_02_parent_test.go:25 +0x114\ntesting.tRunner(0xc000189d40, 0x6c3d10)\n\t/usr/local/go/src/testing/testing.go:1689 +0xfb\ncreated by testing.(*T).Run in goroutine 1\n\t/usr/local/go/src/testing/testing.go:1742 +0x390\n    opaque_external_type_02_parent_test.go:16: unexpected panic: runtime error: invalid memory address or nil pointer dereference"
     }
   },
   "OpaqueWithParam": {
@@ -1034,6 +1034,17 @@
   "ValidFailContents": {
     "status": "passed",
     "elapsed": 0.0,
+    "is_kst": true
+  },
+  "ValidFailContentsInst": {
+    "status": "failed",
+    "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": "Failed",
+      "trace": "valid_fail_contents_inst_test.go:28: \n        \tError Trace:\t/tests/spec/go/valid_fail_contents_inst_test.go:28\n        \tError:      \tAn error is expected but got nil.\n        \tTest:       \tTestValidFailContentsInst\n    valid_fail_contents_inst_test.go:30: \n        \tError Trace:\t/tests/spec/go/valid_fail_contents_inst_test.go:30\n        \tError:      \tShould be in error chain:\n        \t            \texpected: %!q(PANIC=Error method: runtime error: invalid memory address or nil pointer dereference)\n        \t            \tin chain: \n        \tTest:       \tTestValidFailContentsInst"
+    },
     "is_kst": true
   },
   "ValidFailEqBytes": {
