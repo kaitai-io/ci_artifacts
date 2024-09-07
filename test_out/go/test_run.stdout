@@ -113,7 +113,7 @@
 === RUN   TestEosExceptionSized
 --- PASS: TestEosExceptionSized (0.00s)
 === RUN   TestEosExceptionU4
---- PASS: TestEosExceptionU4 (0.03s)
+--- PASS: TestEosExceptionU4 (0.02s)
 === RUN   TestExpr0
 --- PASS: TestExpr0 (0.00s)
 === RUN   TestExpr1
@@ -277,7 +277,7 @@
 === RUN   TestNonStandard
 --- PASS: TestNonStandard (0.00s)
 === RUN   TestOpaqueExternalType02Parent
-goroutine 143 [running]:
+goroutine 131 [running]:
 runtime/debug.Stack()
 	/usr/local/go/src/runtime/debug/stack.go:24 +0x5e
 runtime/debug.PrintStack()
@@ -288,17 +288,17 @@ panic({0x639b00?, 0x896050?})
 	/usr/local/go/src/runtime/panic.go:770 +0x132
 test_formats.(*OpaqueExternalType02Child).SomeMethod(...)
 	/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:50
-test_formats.(*OpaqueExternalType02Child_OpaqueExternalType02ChildChild).Read(0xc000190390?, 0xc000170bb8?, 0x3?, 0x67e380?)
+test_formats.(*OpaqueExternalType02Child_OpaqueExternalType02ChildChild).Read(0xc0001d6390?, 0xc0001b8c28?, 0x3?, 0x67e380?)
 	/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:77 +0x54
-test_formats.(*OpaqueExternalType02Child).Read(0xc0000b4a00, 0xc000048688?, {0x0?, 0x0?}, 0x667c80?)
+test_formats.(*OpaqueExternalType02Child).Read(0xc000022aa0, 0xc00004e688?, {0x0?, 0x0?}, 0x667c80?)
 	/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:42 +0x131
-test_formats.(*OpaqueExternalType02Parent_ParentObj).Read(0xc0000d2be0, 0x40eb65?, 0x28?, 0x667d60?)
+test_formats.(*OpaqueExternalType02Parent_ParentObj).Read(0xc000038c20, 0x40eb65?, 0x28?, 0x667d60?)
 	/tests/compiled/go/src/test_formats/opaque_external_type_02_parent.go:56 +0x7f
-test_formats.(*OpaqueExternalType02Parent).Read(0xc0001903c0, 0x17?, {0x701ce0?, 0xc0001903c0?}, 0x747ffe?)
+test_formats.(*OpaqueExternalType02Parent).Read(0xc0001d63c0, 0x17?, {0x701ce0?, 0xc0001d63c0?}, 0x747ffe?)
 	/tests/compiled/go/src/test_formats/opaque_external_type_02_parent.go:28 +0x88
-kaitai/spec.TestOpaqueExternalType02Parent(0xc000189d40)
+kaitai/spec.TestOpaqueExternalType02Parent(0xc0001d8000)
 	/tests/spec/go/opaque_external_type_02_parent_test.go:25 +0x114
-testing.tRunner(0xc000189d40, 0x6c3d10)
+testing.tRunner(0xc0001d8000, 0x6c3d10)
 	/usr/local/go/src/testing/testing.go:1689 +0xfb
 created by testing.(*T).Run in goroutine 1
 	/usr/local/go/src/testing/testing.go:1742 +0x390
@@ -619,5 +619,5 @@ created by testing.(*T).Run in goroutine 1
 === RUN   TestZlibWithHeader78
 --- PASS: TestZlibWithHeader78 (0.00s)
 FAIL
-FAIL	kaitai/spec	0.066s
+FAIL	kaitai/spec	0.054s
 FAIL

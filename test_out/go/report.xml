@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites tests="220" failures="12">
-	<testsuite name="kaitai/spec" tests="220" failures="12" errors="0" id="0" hostname="d2261096a074" time="0.066" timestamp="2024-08-27T19:32:16Z">
+	<testsuite name="kaitai/spec" tests="220" failures="12" errors="0" id="0" hostname="e17e0e0a4986" time="0.054" timestamp="2024-09-07T21:46:18Z">
 		<testcase name="TestBcdUserTypeBe" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestBcdUserTypeLe" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestBitsByteAligned" classname="kaitai/spec" time="0.000"></testcase>
@@ -58,7 +58,7 @@
 		<testcase name="TestEofExceptionU4" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestEosExceptionBytes" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestEosExceptionSized" classname="kaitai/spec" time="0.000"></testcase>
-		<testcase name="TestEosExceptionU4" classname="kaitai/spec" time="0.030"></testcase>
+		<testcase name="TestEosExceptionU4" classname="kaitai/spec" time="0.020"></testcase>
 		<testcase name="TestExpr0" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestExpr1" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestExpr2" classname="kaitai/spec" time="0.000"></testcase>
@@ -159,7 +159,7 @@
 		<testcase name="TestNestedTypes" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestNonStandard" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestOpaqueExternalType02Parent" classname="kaitai/spec" time="0.000">
-			<failure message="Failed"><![CDATA[goroutine 143 [running]:
+			<failure message="Failed"><![CDATA[goroutine 131 [running]:
 runtime/debug.Stack()
 	/usr/local/go/src/runtime/debug/stack.go:24 +0x5e
 runtime/debug.PrintStack()
@@ -170,17 +170,17 @@ panic({0x639b00?, 0x896050?})
 	/usr/local/go/src/runtime/panic.go:770 +0x132
 test_formats.(*OpaqueExternalType02Child).SomeMethod(...)
 	/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:50
-test_formats.(*OpaqueExternalType02Child_OpaqueExternalType02ChildChild).Read(0xc000190390?, 0xc000170bb8?, 0x3?, 0x67e380?)
+test_formats.(*OpaqueExternalType02Child_OpaqueExternalType02ChildChild).Read(0xc0001d6390?, 0xc0001b8c28?, 0x3?, 0x67e380?)
 	/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:77 +0x54
-test_formats.(*OpaqueExternalType02Child).Read(0xc0000b4a00, 0xc000048688?, {0x0?, 0x0?}, 0x667c80?)
+test_formats.(*OpaqueExternalType02Child).Read(0xc000022aa0, 0xc00004e688?, {0x0?, 0x0?}, 0x667c80?)
 	/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:42 +0x131
-test_formats.(*OpaqueExternalType02Parent_ParentObj).Read(0xc0000d2be0, 0x40eb65?, 0x28?, 0x667d60?)
+test_formats.(*OpaqueExternalType02Parent_ParentObj).Read(0xc000038c20, 0x40eb65?, 0x28?, 0x667d60?)
 	/tests/compiled/go/src/test_formats/opaque_external_type_02_parent.go:56 +0x7f
-test_formats.(*OpaqueExternalType02Parent).Read(0xc0001903c0, 0x17?, {0x701ce0?, 0xc0001903c0?}, 0x747ffe?)
+test_formats.(*OpaqueExternalType02Parent).Read(0xc0001d63c0, 0x17?, {0x701ce0?, 0xc0001d63c0?}, 0x747ffe?)
 	/tests/compiled/go/src/test_formats/opaque_external_type_02_parent.go:28 +0x88
-kaitai/spec.TestOpaqueExternalType02Parent(0xc000189d40)
+kaitai/spec.TestOpaqueExternalType02Parent(0xc0001d8000)
 	/tests/spec/go/opaque_external_type_02_parent_test.go:25 +0x114
-testing.tRunner(0xc000189d40, 0x6c3d10)
+testing.tRunner(0xc0001d8000, 0x6c3d10)
 	/usr/local/go/src/testing/testing.go:1689 +0xfb
 created by testing.(*T).Run in goroutine 1
 	/usr/local/go/src/testing/testing.go:1742 +0x390
