@@ -1,13 +1,13 @@
 {
   "$meta": {
     "lang": "javascript",
-    "timestamp": "2024-09-07T21:55:56Z",
+    "timestamp": "2024-09-25T18:55:47Z",
     "ci": {
       "ci": "github",
-      "run_id": "10754698710",
-      "run_number": "336",
-      "job_id": "29825587025",
-      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/10754698710/job/29825587025"
+      "run_id": "11039340052",
+      "run_number": "338",
+      "job_id": "30664641385",
+      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/11039340052/job/30664641385"
     }
   },
   "BcdUserTypeBe": {
@@ -404,8 +404,14 @@
     "is_kst": true
   },
   "ExprBytesOps": {
-    "status": "passed",
+    "status": "failed",
     "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": null,
+      "trace": "The \"IBM866\" encoding is not supported\nRangeError [ERR_ENCODING_NOT_SUPPORTED]: The \"IBM866\" encoding is not supported\n    at new TextDecoder (internal/encoding.js:398:15)\n    at Function.KaitaiStream.bytesToStr (/runtime/javascript/KaitaiStream.js:656:15)\n    at ExprBytesOps.get (compiled/javascript/ExprBytesOps.js:75:37)\n    at /tests/spec/javascript/test_expr_bytes_ops.js:16:24\n    at /tests/helpers/javascript/testHelper.js:16:11\n    at FSReqCallback.readFileAfterClose [as oncomplete] (internal/fs/read_file_context.js:63:3)"
+    },
     "is_kst": true
   },
   "ExprCalcArrayOps": {
