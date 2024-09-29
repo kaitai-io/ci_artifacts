@@ -1,13 +1,13 @@
 {
   "$meta": {
     "lang": "nim",
-    "timestamp": "2024-09-25T19:00:31Z",
+    "timestamp": "2024-09-29T18:03:56Z",
     "ci": {
       "ci": "github",
-      "run_id": "11039340052",
-      "run_number": "338",
-      "job_id": "30664642260",
-      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/11039340052/job/30664642260"
+      "run_id": "11094760994",
+      "run_number": "339",
+      "job_id": "30822589364",
+      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/11094760994/job/30822589364"
     }
   },
   "BcdUserTypeBe": {
@@ -340,14 +340,8 @@
     "is_kst": true
   },
   "ExprBytesOps": {
-    "status": "failed",
-    "elapsed": 0.1,
-    "failure": {
-      "file_name": null,
-      "line_num": null,
-      "message": "Traceback (most recent call last)\n/tests/spec/nim/texpr_bytes_ops.nim(18) texpr_bytes_ops\n/tests/compiled/nim/expr_bytes_ops.nim(119) oneToS\n/root/.nimble/pkgs/kaitai_struct_nim_runtime-#head/kaitai_struct_nim_runtime.nim(374) encode\n/nim/lib/pure/encodings.nim(507) convert\n/nim/lib/pure/encodings.nim(467) convert\nSIGSEGV: Illegal storage access. (Attempt to read from nil?)\n",
-      "trace": ""
-    },
+    "status": "passed",
+    "elapsed": 0.0,
     "is_kst": true
   },
   "ExprCalcArrayOps": {
@@ -1035,6 +1029,17 @@
   "StrLiterals2": {
     "status": "passed",
     "elapsed": 0.0,
+    "is_kst": true
+  },
+  "StrLiteralsLatin1": {
+    "status": "failed",
+    "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": "/tests/spec/nim/tstr_literals_latin1.nim(9) tstr_literals_latin1\n/nim/lib/system/assertions.nim(38) failedAssertImpl\n/nim/lib/system/assertions.nim(28) raiseAssert\n/nim/lib/system/fatal.nim(53) sysFatal\nError: unhandled exception: /tests/spec/nim/tstr_literals_latin1.nim(9, 8) `r.parsedEqLiteral == true`  [AssertionDefect]\n",
+      "trace": ""
+    },
     "is_kst": true
   },
   "StrPadTerm": {
