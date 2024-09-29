@@ -1,13 +1,13 @@
 {
   "$meta": {
     "lang": "ruby",
-    "timestamp": "2024-09-25T18:56:35Z",
+    "timestamp": "2024-09-29T18:00:14Z",
     "ci": {
       "ci": "github",
-      "run_id": "11039340052",
-      "run_number": "338",
-      "job_id": "30664645240",
-      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/11039340052/job/30664645240"
+      "run_id": "11094760994",
+      "run_number": "339",
+      "job_id": "30822589939",
+      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/11094760994/job/30822589939"
     }
   },
   "BcdUserTypeBe": {
@@ -380,14 +380,8 @@
     "is_kst": true
   },
   "ExprBytesOps": {
-    "status": "failed",
+    "status": "passed",
     "elapsed": 0.0,
-    "failure": {
-      "file_name": "./spec/ruby/expr_bytes_ops_spec.rb",
-      "line_num": 4,
-      "message": "\nexpected: \"\\u0001B\\xA0\"\n     got: \"\\u0001B\\u00A0\"\n\n(compared using ==)\n",
-      "trace": "./spec/ruby/expr_bytes_ops_spec.rb:16:in `block (2 levels) in <top (required)>'"
-    },
     "is_kst": true
   },
   "ExprCalcArrayOps": {
@@ -996,6 +990,17 @@
   "StrLiterals2": {
     "status": "passed",
     "elapsed": 0.0,
+    "is_kst": true
+  },
+  "StrLiteralsLatin1": {
+    "status": "failed",
+    "elapsed": 0.0,
+    "failure": {
+      "file_name": "./spec/ruby/str_literals_latin1_spec.rb",
+      "line_num": 4,
+      "message": "\nexpected: true\n     got: false\n\n(compared using ==)\n\nDiff:\n@@ -1 +1 @@\n-true\n+false\n",
+      "trace": "./spec/ruby/str_literals_latin1_spec.rb:8:in `block (2 levels) in <top (required)>'"
+    },
     "is_kst": true
   },
   "StrPadTerm": {
