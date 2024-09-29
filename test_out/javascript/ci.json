@@ -1,13 +1,13 @@
 {
   "$meta": {
     "lang": "javascript",
-    "timestamp": "2024-09-07T21:56:11Z",
+    "timestamp": "2024-09-29T17:59:12Z",
     "ci": {
       "ci": "github",
-      "run_id": "10754698710",
-      "run_number": "336",
-      "job_id": "29825586939",
-      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/10754698710/job/29825586939"
+      "run_id": "11094760994",
+      "run_number": "339",
+      "job_id": "30822589069",
+      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/11094760994/job/30822589069"
     }
   },
   "BcdUserTypeBe": {
@@ -299,7 +299,7 @@
       "file_name": null,
       "line_num": null,
       "message": null,
-      "trace": "-9223372032559809000 === -9223372036854776000\n\n      + expected - actual\n\n      --9223372032559809000\n      +-9223372036854776000\n      \nAssertionError [ERR_ASSERTION]: -9223372032559809000 === -9223372036854776000\n    at /tests/spec/javascript/test_enum_long_range_s.js:8:10\n    at /tests/helpers/javascript/testHelper.js:16:11\n    at FSReqWrap.readFileAfterClose [as oncomplete] (fs.js:511:3)"
+      "trace": "-9223372032559809000 === -9223372036854776000\n\n      + expected - actual\n\n      --9223372032559809000\n      +-9223372036854776000\n      \nAssertionError [ERR_ASSERTION]: -9223372032559809000 === -9223372036854776000\n    at /tests/spec/javascript/test_enum_long_range_s.js:7:10\n    at /tests/helpers/javascript/testHelper.js:16:11\n    at FSReqWrap.readFileAfterClose [as oncomplete] (fs.js:511:3)"
     },
     "is_kst": true
   },
@@ -495,7 +495,7 @@
       "file_name": null,
       "line_num": null,
       "message": null,
-      "trace": "Missing expected exception (KaitaiStream.ConversionError).\nAssertionError [ERR_ASSERTION]: Missing expected exception (KaitaiStream.ConversionError).\n    at /tests/spec/javascript/test_expr_to_i_trailing.js:8:10\n    at /tests/helpers/javascript/testHelper.js:16:11\n    at FSReqWrap.readFileAfterClose [as oncomplete] (fs.js:511:3)"
+      "trace": "Missing expected exception (KaitaiStream.ConversionError).\nAssertionError [ERR_ASSERTION]: Missing expected exception (KaitaiStream.ConversionError).\n    at /tests/spec/javascript/test_expr_to_i_trailing.js:7:10\n    at /tests/helpers/javascript/testHelper.js:16:11\n    at FSReqWrap.readFileAfterClose [as oncomplete] (fs.js:511:3)"
     },
     "is_kst": true
   },
@@ -646,7 +646,7 @@
       "file_name": null,
       "line_num": null,
       "message": null,
-      "trace": "-9007194959773695 === -9007199254740991\n\n      + expected - actual\n\n      --9007194959773695\n      +-9007199254740991\n      \nAssertionError [ERR_ASSERTION]: -9007194959773695 === -9007199254740991\n    at /tests/spec/javascript/test_integers_double_overflow.js:8:10\n    at /tests/helpers/javascript/testHelper.js:16:11\n    at FSReqWrap.readFileAfterClose [as oncomplete] (fs.js:511:3)"
+      "trace": "-9007194959773695 === -9007199254740991\n\n      + expected - actual\n\n      --9007194959773695\n      +-9007199254740991\n      \nAssertionError [ERR_ASSERTION]: -9007194959773695 === -9007199254740991\n    at /tests/spec/javascript/test_integers_double_overflow.js:7:10\n    at /tests/helpers/javascript/testHelper.js:16:11\n    at FSReqWrap.readFileAfterClose [as oncomplete] (fs.js:511:3)"
     },
     "is_kst": true
   },
@@ -657,7 +657,7 @@
       "file_name": null,
       "line_num": null,
       "message": null,
-      "trace": "-9223372032559809000 === -9223372036854776000\n\n      + expected - actual\n\n      --9223372032559809000\n      +-9223372036854776000\n      \nAssertionError [ERR_ASSERTION]: -9223372032559809000 === -9223372036854776000\n    at /tests/spec/javascript/test_integers_min_max.js:25:10\n    at /tests/helpers/javascript/testHelper.js:16:11\n    at FSReqWrap.readFileAfterClose [as oncomplete] (fs.js:511:3)"
+      "trace": "-9223372032559809000 === -9223372036854776000\n\n      + expected - actual\n\n      --9223372032559809000\n      +-9223372036854776000\n      \nAssertionError [ERR_ASSERTION]: -9223372032559809000 === -9223372036854776000\n    at /tests/spec/javascript/test_integers_min_max.js:24:10\n    at /tests/helpers/javascript/testHelper.js:16:11\n    at FSReqWrap.readFileAfterClose [as oncomplete] (fs.js:511:3)"
     },
     "is_kst": true
   },
@@ -1032,6 +1032,11 @@
     "elapsed": 0.0,
     "is_kst": true
   },
+  "StrLiteralsLatin1": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
   "StrPadTerm": {
     "status": "passed",
     "elapsed": 0.0,
@@ -1360,8 +1365,14 @@
     "is_kst": true
   },
   "ZlibWithHeader78": {
-    "status": "passed",
+    "status": "failed",
     "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": null,
+      "trace": "<Buffer 61 20 71 75 69 63 6b 20 62 72 6f 77 6e 20 66 6f 78 20 6a 75 6d 70 73 20 6f 76 65 72> deepStrictEqual Uint8Array [\n  97,\n  32,\n  113,\n  117,\n  105,\n  99,\n  107,\n  32,\n  98,\n  114,\n  111,\n  119,\n  110,\n  32,\n  102,\n  111,\n  120,\n  \n\n      + expected - actual\n\n      -[\n      -  97\n      -  32\n      -  113\n      -  117\n      -  105\n      -  99\n      -  107\n      -  32\n      -  98\n      -  114\n      -  111\n      -  119\n      -  110\n      -  32\n      -  102\n      -  111\n      -  120\n      -  32\n      -  106\n      -  117\n      -  109\n      -  112\n      -  115\n      -  32\n      -  111\n      -  118\n      -  101\n      -  114\n      -]\n      +{\"0\":97,\"1\":32,\"2\":113,\"3\":117,\"4\":105,\"5\":99,\"6\":107,\"7\":32,\"8\":98,\"9\":114,\"10\":111,\"11\":119,\"12\":110,\"13\":32,\"14\":102,\"15\":111,\"16\":120,\"17\":32,\"18\":106,\"19\":117,\"20\":109,\"21\":112,\"22\":115,\"23\":32,\"24\":111,\"25\":118,\"26\":101,\"27\":114}\n      \nAssertionError [ERR_ASSERTION]: <Buffer 61 20 71 75 69 63 6b 20 62 72 6f 77 6e 20 66 6f 78 20 6a 75 6d 70 73 20 6f 76 65 72> deepStrictEqual Uint8Array [\n  97,\n  32,\n  113,\n  117,\n  105,\n  99,\n  107,\n  32,\n  98,\n  114,\n  111,\n  119,\n  110,\n  32,\n  102,\n  111,\n  120,\n  \n    at /tests/spec/javascript/test_zlib_with_header_78.js:7:10\n    at /tests/helpers/javascript/testHelper.js:16:11\n    at FSReqWrap.readFileAfterClose [as oncomplete] (fs.js:511:3)"
+    },
     "is_kst": true
   }
 }
