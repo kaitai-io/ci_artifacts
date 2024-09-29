@@ -1,13 +1,13 @@
 {
   "$meta": {
     "lang": "go",
-    "timestamp": "2024-09-25T18:55:42Z",
+    "timestamp": "2024-09-29T17:58:23Z",
     "ci": {
       "ci": "github",
-      "run_id": "11039340052",
-      "run_number": "338",
-      "job_id": "30664638417",
-      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/11039340052/job/30664638417"
+      "run_id": "11094760994",
+      "run_number": "339",
+      "job_id": "30822588717",
+      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/11094760994/job/30822588717"
     }
   },
   "BcdUserTypeBe": {
@@ -340,14 +340,9 @@
     "is_kst": true
   },
   "ExprBytesOps": {
-    "status": "failed",
+    "status": "passed",
     "elapsed": 0.0,
-    "failure": {
-      "file_name": null,
-      "line_num": null,
-      "message": "Failed",
-      "trace": "expr_bytes_ops_test.go:75: \n        \tError Trace:\t/tests/spec/go/expr_bytes_ops_test.go:75\n        \tError:      \tNot equal: \n        \t            \texpected: \"\\x01B\\xa0\"\n        \t            \tactual  : \"\\x01B\\u00a0\"\n        \t            \t\n        \t            \tDiff:\n        \t            \t--- Expected\n        \t            \t+++ Actual\n        \t            \t@@ -1 +1 @@\n        \t            \t-�B�\n        \t            \t+�B \n        \tTest:       \tTestExprBytesOps\n    expr_bytes_ops_test.go:120: \n        \tError Trace:\t/tests/spec/go/expr_bytes_ops_test.go:120\n        \tError:      \tNot equal: \n        \t            \texpected: \"A\\xa0K\"\n        \t            \tactual  : \"A\\u00a0K\"\n        \t            \t\n        \t            \tDiff:\n        \t            \t--- Expected\n        \t            \t+++ Actual\n        \t            \t@@ -1 +1 @@\n        \t            \t-A�K\n        \t            \t+A K\n        \tTest:       \tTestExprBytesOps"
-    }
+    "is_kst": true
   },
   "ExprCalcArrayOps": {
     "status": "passed",
@@ -673,7 +668,7 @@
       "file_name": null,
       "line_num": null,
       "message": "Failed",
-      "trace": "goroutine 155 [running]:\nruntime/debug.Stack()\n\t/usr/local/go/src/runtime/debug/stack.go:26 +0x5e\nruntime/debug.PrintStack()\n\t/usr/local/go/src/runtime/debug/stack.go:18 +0x13\nkaitai/spec.TestOpaqueExternalType02Parent.func1()\n\t/tests/spec/go/opaque_external_type_02_parent_test.go:15 +0x39\npanic({0x65e660?, 0x8d9580?})\n\t/usr/local/go/src/runtime/panic.go:785 +0x132\ntest_formats.(*OpaqueExternalType02Child).SomeMethod(...)\n\t/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:50\ntest_formats.(*OpaqueExternalType02Child_OpaqueExternalType02ChildChild).Read(0xc0001ffb90?, 0xc00018d508?, 0x3?, 0x6a7420?)\n\t/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:77 +0x54\ntest_formats.(*OpaqueExternalType02Child).Read(0xc00019a640, 0xc0001c4688?, {0x0?, 0x0?}, 0x68fba0?)\n\t/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:42 +0x131\ntest_formats.(*OpaqueExternalType02Parent_ParentObj).Read(0xc00019c780, 0x40d965?, 0x28?, 0x68fc80?)\n\t/tests/compiled/go/src/test_formats/opaque_external_type_02_parent.go:56 +0x7f\ntest_formats.(*OpaqueExternalType02Parent).Read(0xc0001ffbc0, 0x17?, {0x72f980?, 0xc0001ffbc0?}, 0x77cd26?)\n\t/tests/compiled/go/src/test_formats/opaque_external_type_02_parent.go:28 +0x88\nkaitai/spec.TestOpaqueExternalType02Parent(0xc000214340)\n\t/tests/spec/go/opaque_external_type_02_parent_test.go:25 +0x10e\ntesting.tRunner(0xc000214340, 0x6edd60)\n\t/usr/local/go/src/testing/testing.go:1690 +0xf4\ncreated by testing.(*T).Run in goroutine 1\n\t/usr/local/go/src/testing/testing.go:1743 +0x390\n    opaque_external_type_02_parent_test.go:16: unexpected panic: runtime error: invalid memory address or nil pointer dereference"
+      "trace": "goroutine 132 [running]:\nruntime/debug.Stack()\n\t/usr/local/go/src/runtime/debug/stack.go:26 +0x5e\nruntime/debug.PrintStack()\n\t/usr/local/go/src/runtime/debug/stack.go:18 +0x13\nkaitai/spec.TestOpaqueExternalType02Parent.func1()\n\t/tests/spec/go/opaque_external_type_02_parent_test.go:15 +0x39\npanic({0x65e680?, 0x8d9570?})\n\t/usr/local/go/src/runtime/panic.go:785 +0x132\ntest_formats.(*OpaqueExternalType02Child).SomeMethod(...)\n\t/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:50\ntest_formats.(*OpaqueExternalType02Child_OpaqueExternalType02ChildChild).Read(0xc0001de6c0?, 0xc0001bcbd8?, 0x3?, 0x6a75e0?)\n\t/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:77 +0x54\ntest_formats.(*OpaqueExternalType02Child).Read(0xc000022a50, 0xc000050e88?, {0x0?, 0x0?}, 0x68fc40?)\n\t/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:42 +0x131\ntest_formats.(*OpaqueExternalType02Parent_ParentObj).Read(0xc00003ac40, 0x40d965?, 0x28?, 0x68fd20?)\n\t/tests/compiled/go/src/test_formats/opaque_external_type_02_parent.go:56 +0x7f\ntest_formats.(*OpaqueExternalType02Parent).Read(0xc0001de6f0, 0x17?, {0x72fae0?, 0xc0001de6f0?}, 0x77cf06?)\n\t/tests/compiled/go/src/test_formats/opaque_external_type_02_parent.go:28 +0x88\nkaitai/spec.TestOpaqueExternalType02Parent(0xc0001e2000)\n\t/tests/spec/go/opaque_external_type_02_parent_test.go:25 +0x10e\ntesting.tRunner(0xc0001e2000, 0x6edee0)\n\t/usr/local/go/src/testing/testing.go:1690 +0xf4\ncreated by testing.(*T).Run in goroutine 1\n\t/usr/local/go/src/testing/testing.go:1743 +0x390\n    opaque_external_type_02_parent_test.go:16: unexpected panic: runtime error: invalid memory address or nil pointer dereference"
     }
   },
   "OpaqueWithParam": {
@@ -917,6 +912,17 @@
   "StrLiterals2": {
     "status": "passed",
     "elapsed": 0.0,
+    "is_kst": true
+  },
+  "StrLiteralsLatin1": {
+    "status": "failed",
+    "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": "Failed",
+      "trace": "str_literals_latin1_test.go:36: \n        \tError Trace:\t/tests/spec/go/str_literals_latin1_test.go:36\n        \tError:      \tNot equal: \n        \t            \texpected: true\n        \t            \tactual  : false\n        \tTest:       \tTestStrLiteralsLatin1"
+    },
     "is_kst": true
   },
   "StrPadTerm": {

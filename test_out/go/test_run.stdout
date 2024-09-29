@@ -131,33 +131,7 @@
 === RUN   TestExprBytesNonLiteral
 --- PASS: TestExprBytesNonLiteral (0.00s)
 === RUN   TestExprBytesOps
-    expr_bytes_ops_test.go:75: 
-        	Error Trace:	/tests/spec/go/expr_bytes_ops_test.go:75
-        	Error:      	Not equal: 
-        	            	expected: "\x01B\xa0"
-        	            	actual  : "\x01B\u00a0"
-        	            	
-        	            	Diff:
-        	            	--- Expected
-        	            	+++ Actual
-        	            	@@ -1 +1 @@
-        	            	-B 
-        	            	+BÂ 
-        	Test:       	TestExprBytesOps
-    expr_bytes_ops_test.go:120: 
-        	Error Trace:	/tests/spec/go/expr_bytes_ops_test.go:120
-        	Error:      	Not equal: 
-        	            	expected: "A\xa0K"
-        	            	actual  : "A\u00a0K"
-        	            	
-        	            	Diff:
-        	            	--- Expected
-        	            	+++ Actual
-        	            	@@ -1 +1 @@
-        	            	-A K
-        	            	+AÂ K
-        	Test:       	TestExprBytesOps
---- FAIL: TestExprBytesOps (0.00s)
+--- PASS: TestExprBytesOps (0.00s)
 === RUN   TestExprCalcArrayOps
 --- PASS: TestExprCalcArrayOps (0.00s)
 === RUN   TestExprEnum
@@ -303,28 +277,28 @@
 === RUN   TestNonStandard
 --- PASS: TestNonStandard (0.00s)
 === RUN   TestOpaqueExternalType02Parent
-goroutine 155 [running]:
+goroutine 132 [running]:
 runtime/debug.Stack()
 	/usr/local/go/src/runtime/debug/stack.go:26 +0x5e
 runtime/debug.PrintStack()
 	/usr/local/go/src/runtime/debug/stack.go:18 +0x13
 kaitai/spec.TestOpaqueExternalType02Parent.func1()
 	/tests/spec/go/opaque_external_type_02_parent_test.go:15 +0x39
-panic({0x65e660?, 0x8d9580?})
+panic({0x65e680?, 0x8d9570?})
 	/usr/local/go/src/runtime/panic.go:785 +0x132
 test_formats.(*OpaqueExternalType02Child).SomeMethod(...)
 	/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:50
-test_formats.(*OpaqueExternalType02Child_OpaqueExternalType02ChildChild).Read(0xc0001ffb90?, 0xc00018d508?, 0x3?, 0x6a7420?)
+test_formats.(*OpaqueExternalType02Child_OpaqueExternalType02ChildChild).Read(0xc0001de6c0?, 0xc0001bcbd8?, 0x3?, 0x6a75e0?)
 	/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:77 +0x54
-test_formats.(*OpaqueExternalType02Child).Read(0xc00019a640, 0xc0001c4688?, {0x0?, 0x0?}, 0x68fba0?)
+test_formats.(*OpaqueExternalType02Child).Read(0xc000022a50, 0xc000050e88?, {0x0?, 0x0?}, 0x68fc40?)
 	/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:42 +0x131
-test_formats.(*OpaqueExternalType02Parent_ParentObj).Read(0xc00019c780, 0x40d965?, 0x28?, 0x68fc80?)
+test_formats.(*OpaqueExternalType02Parent_ParentObj).Read(0xc00003ac40, 0x40d965?, 0x28?, 0x68fd20?)
 	/tests/compiled/go/src/test_formats/opaque_external_type_02_parent.go:56 +0x7f
-test_formats.(*OpaqueExternalType02Parent).Read(0xc0001ffbc0, 0x17?, {0x72f980?, 0xc0001ffbc0?}, 0x77cd26?)
+test_formats.(*OpaqueExternalType02Parent).Read(0xc0001de6f0, 0x17?, {0x72fae0?, 0xc0001de6f0?}, 0x77cf06?)
 	/tests/compiled/go/src/test_formats/opaque_external_type_02_parent.go:28 +0x88
-kaitai/spec.TestOpaqueExternalType02Parent(0xc000214340)
+kaitai/spec.TestOpaqueExternalType02Parent(0xc0001e2000)
 	/tests/spec/go/opaque_external_type_02_parent_test.go:25 +0x10e
-testing.tRunner(0xc000214340, 0x6edd60)
+testing.tRunner(0xc0001e2000, 0x6edee0)
 	/usr/local/go/src/testing/testing.go:1690 +0xf4
 created by testing.(*T).Run in goroutine 1
 	/usr/local/go/src/testing/testing.go:1743 +0x390
@@ -530,6 +504,14 @@ created by testing.(*T).Run in goroutine 1
 --- PASS: TestStrEos (0.00s)
 === RUN   TestStrLiterals2
 --- PASS: TestStrLiterals2 (0.00s)
+=== RUN   TestStrLiteralsLatin1
+    str_literals_latin1_test.go:36: 
+        	Error Trace:	/tests/spec/go/str_literals_latin1_test.go:36
+        	Error:      	Not equal: 
+        	            	expected: true
+        	            	actual  : false
+        	Test:       	TestStrLiteralsLatin1
+--- FAIL: TestStrLiteralsLatin1 (0.00s)
 === RUN   TestStrLiterals
 --- PASS: TestStrLiterals (0.00s)
 === RUN   TestStrPadTermEmpty
@@ -645,5 +627,5 @@ created by testing.(*T).Run in goroutine 1
 === RUN   TestZlibWithHeader78
 --- PASS: TestZlibWithHeader78 (0.00s)
 FAIL
-FAIL	kaitai/spec	0.031s
+FAIL	kaitai/spec	0.032s
 FAIL

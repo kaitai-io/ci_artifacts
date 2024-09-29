@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites tests="220" failures="13">
-	<testsuite name="kaitai/spec" tests="220" failures="13" errors="0" id="0" hostname="a12530d453cc" time="0.031" timestamp="2024-09-25T18:55:41Z">
+<testsuites tests="221" failures="13">
+	<testsuite name="kaitai/spec" tests="221" failures="13" errors="0" id="0" hostname="5864158673bf" time="0.032" timestamp="2024-09-29T17:58:22Z">
 		<testcase name="TestBcdUserTypeBe" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestBcdUserTypeLe" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestBitsByteAligned" classname="kaitai/spec" time="0.000"></testcase>
@@ -67,34 +67,7 @@
 		<testcase name="TestExprBits" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestExprBytesCmp" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestExprBytesNonLiteral" classname="kaitai/spec" time="0.000"></testcase>
-		<testcase name="TestExprBytesOps" classname="kaitai/spec" time="0.000">
-			<failure message="Failed"><![CDATA[    expr_bytes_ops_test.go:75: 
-        	Error Trace:	/tests/spec/go/expr_bytes_ops_test.go:75
-        	Error:      	Not equal: 
-        	            	expected: "\x01B\xa0"
-        	            	actual  : "\x01B\u00a0"
-        	            	
-        	            	Diff:
-        	            	--- Expected
-        	            	+++ Actual
-        	            	@@ -1 +1 @@
-        	            	-�B�
-        	            	+�B 
-        	Test:       	TestExprBytesOps
-    expr_bytes_ops_test.go:120: 
-        	Error Trace:	/tests/spec/go/expr_bytes_ops_test.go:120
-        	Error:      	Not equal: 
-        	            	expected: "A\xa0K"
-        	            	actual  : "A\u00a0K"
-        	            	
-        	            	Diff:
-        	            	--- Expected
-        	            	+++ Actual
-        	            	@@ -1 +1 @@
-        	            	-A�K
-        	            	+A K
-        	Test:       	TestExprBytesOps]]></failure>
-		</testcase>
+		<testcase name="TestExprBytesOps" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestExprCalcArrayOps" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestExprEnum" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestExprFstring0" classname="kaitai/spec" time="0.000"></testcase>
@@ -186,28 +159,28 @@
 		<testcase name="TestNestedTypes" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestNonStandard" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestOpaqueExternalType02Parent" classname="kaitai/spec" time="0.000">
-			<failure message="Failed"><![CDATA[goroutine 155 [running]:
+			<failure message="Failed"><![CDATA[goroutine 132 [running]:
 runtime/debug.Stack()
 	/usr/local/go/src/runtime/debug/stack.go:26 +0x5e
 runtime/debug.PrintStack()
 	/usr/local/go/src/runtime/debug/stack.go:18 +0x13
 kaitai/spec.TestOpaqueExternalType02Parent.func1()
 	/tests/spec/go/opaque_external_type_02_parent_test.go:15 +0x39
-panic({0x65e660?, 0x8d9580?})
+panic({0x65e680?, 0x8d9570?})
 	/usr/local/go/src/runtime/panic.go:785 +0x132
 test_formats.(*OpaqueExternalType02Child).SomeMethod(...)
 	/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:50
-test_formats.(*OpaqueExternalType02Child_OpaqueExternalType02ChildChild).Read(0xc0001ffb90?, 0xc00018d508?, 0x3?, 0x6a7420?)
+test_formats.(*OpaqueExternalType02Child_OpaqueExternalType02ChildChild).Read(0xc0001de6c0?, 0xc0001bcbd8?, 0x3?, 0x6a75e0?)
 	/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:77 +0x54
-test_formats.(*OpaqueExternalType02Child).Read(0xc00019a640, 0xc0001c4688?, {0x0?, 0x0?}, 0x68fba0?)
+test_formats.(*OpaqueExternalType02Child).Read(0xc000022a50, 0xc000050e88?, {0x0?, 0x0?}, 0x68fc40?)
 	/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:42 +0x131
-test_formats.(*OpaqueExternalType02Parent_ParentObj).Read(0xc00019c780, 0x40d965?, 0x28?, 0x68fc80?)
+test_formats.(*OpaqueExternalType02Parent_ParentObj).Read(0xc00003ac40, 0x40d965?, 0x28?, 0x68fd20?)
 	/tests/compiled/go/src/test_formats/opaque_external_type_02_parent.go:56 +0x7f
-test_formats.(*OpaqueExternalType02Parent).Read(0xc0001ffbc0, 0x17?, {0x72f980?, 0xc0001ffbc0?}, 0x77cd26?)
+test_formats.(*OpaqueExternalType02Parent).Read(0xc0001de6f0, 0x17?, {0x72fae0?, 0xc0001de6f0?}, 0x77cf06?)
 	/tests/compiled/go/src/test_formats/opaque_external_type_02_parent.go:28 +0x88
-kaitai/spec.TestOpaqueExternalType02Parent(0xc000214340)
+kaitai/spec.TestOpaqueExternalType02Parent(0xc0001e2000)
 	/tests/spec/go/opaque_external_type_02_parent_test.go:25 +0x10e
-testing.tRunner(0xc000214340, 0x6edd60)
+testing.tRunner(0xc0001e2000, 0x6edee0)
 	/usr/local/go/src/testing/testing.go:1690 +0xf4
 created by testing.(*T).Run in goroutine 1
 	/usr/local/go/src/testing/testing.go:1743 +0x390
@@ -377,6 +350,14 @@ created by testing.(*T).Run in goroutine 1
 		<testcase name="TestStrEncodingsUtf16" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestStrEos" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestStrLiterals2" classname="kaitai/spec" time="0.000"></testcase>
+		<testcase name="TestStrLiteralsLatin1" classname="kaitai/spec" time="0.000">
+			<failure message="Failed"><![CDATA[    str_literals_latin1_test.go:36: 
+        	Error Trace:	/tests/spec/go/str_literals_latin1_test.go:36
+        	Error:      	Not equal: 
+        	            	expected: true
+        	            	actual  : false
+        	Test:       	TestStrLiteralsLatin1]]></failure>
+		</testcase>
 		<testcase name="TestStrLiterals" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestStrPadTermEmpty" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestStrPadTerm" classname="kaitai/spec" time="0.000"></testcase>
