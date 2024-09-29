@@ -1,13 +1,13 @@
 {
   "$meta": {
     "lang": "lua",
-    "timestamp": "2024-09-25T18:55:56Z",
+    "timestamp": "2024-09-29T17:59:21Z",
     "ci": {
       "ci": "github",
-      "run_id": "11039340052",
-      "run_number": "338",
-      "job_id": "30664641948",
-      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/11039340052/job/30664641948"
+      "run_id": "11094760994",
+      "run_number": "339",
+      "job_id": "30822589298",
+      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/11094760994/job/30822589298"
     }
   },
   "BcdUserTypeBe": {
@@ -382,14 +382,8 @@
     "is_kst": true
   },
   "ExprBytesOps": {
-    "status": "failed",
+    "status": "passed",
     "elapsed": 0.0,
-    "failure": {
-      "file_name": null,
-      "line_num": null,
-      "message": "../runtime/lua/string_decode.lua:42: Encoding IBM866 not supported",
-      "trace": "stack traceback:\n\t../runtime/lua/string_decode.lua:42: in function 'string_decode.decode'\n\tcompiled/lua/expr_bytes_ops.lua:89: in function <compiled/lua/expr_bytes_ops.lua:84>\n\t(...tail calls...)\n\tspec/lua/test_expr_bytes_ops.lua:20: in upvalue 'TestExprBytesOps.test_expr_bytes_ops'"
-    },
     "is_kst": true
   },
   "ExprCalcArrayOps": {
@@ -1022,6 +1016,17 @@
   "StrLiterals2": {
     "status": "passed",
     "elapsed": 0.0,
+    "is_kst": true
+  },
+  "StrLiteralsLatin1": {
+    "status": "failed",
+    "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": "spec/lua/test_str_literals_latin1.lua:12: expected: true, actual: false",
+      "trace": "stack traceback:\n\tspec/lua/test_str_literals_latin1.lua:12: in upvalue 'TestStrLiteralsLatin1.test_str_literals_latin1'"
+    },
     "is_kst": true
   },
   "StrPadTerm": {
