@@ -1,13 +1,13 @@
 {
   "$meta": {
     "lang": "construct",
-    "timestamp": "2024-10-02T23:45:24Z",
+    "timestamp": "2024-12-27T09:25:43Z",
     "ci": {
       "ci": "github",
-      "run_id": "11153292912",
-      "run_number": "340",
-      "job_id": "31000516733",
-      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/11153292912/job/31000516733"
+      "run_id": "12514345968",
+      "run_number": "341",
+      "job_id": "34910286938",
+      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/12514345968/job/34910286938"
     }
   },
   "BcdUserTypeBe": {
@@ -252,6 +252,37 @@
       "line_num": null,
       "message": "str_calc_bytes",
       "trace": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.12/site-packages/construct/lib/containers.py\", line 98, in __getattr__\n    return self[name]\n           ~~~~^^^^^^\nKeyError: 'str_calc_bytes'\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/tests/spec/construct/test_combine_str.py\", line 9, in test_combine_str\n    r = _schema.parse_file('src/term_strz.bin')\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 425, in parse_file\n    return self.parse_stream(f, **contextkw)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 416, in parse_stream\n    return self._parsereport(stream, context, \"(parsing)\")\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 428, in _parsereport\n    obj = self._parse(stream, context, path)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 2236, in _parse\n    subobj = sc._parsereport(stream, context, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 428, in _parsereport\n    obj = self._parse(stream, context, path)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 2770, in _parse\n    return self.subcon._parsereport(stream, context, path)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 428, in _parsereport\n    obj = self._parse(stream, context, path)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 2915, in _parse\n    return self.func(context) if callable(self.func) else self.func\n           ^^^^^^^^^^^^^^^^^^\n  File \"/tests/compiled/construct/combine_str.py\", line 9, in <lambda>\n    'calc_or_calc_bytes' / Computed(lambda this: (this.str_calc if False else this.str_calc_bytes)),\n                                                                              ^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/lib/containers.py\", line 100, in __getattr__\n    raise AttributeError(name)\nAttributeError: str_calc_bytes. Did you mean: 'calc_bytes'?"
+    },
+    "is_kst": true
+  },
+  "Debug0": {
+    "status": "passed",
+    "elapsed": 0.0
+  },
+  "DebugArrayUser": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "DebugArrayUserCurrentExcluded": {
+    "status": "failed",
+    "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": "Failed to import test module: test_debug_array_user_current_excluded\nTraceback (most recent call last):\n  File \"/usr/local/lib/python3.12/unittest/loader.py\", line 396, in _find_test_path\n    module = self._get_module_from_name(name)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/unittest/loader.py\", line 339, in _get_module_from_name\n    __import__(name)\n  File \"/tests/spec/construct/test_debug_array_user_current_excluded.py\", line 5, in <module>\n    from debug_array_user_current_excluded import _schema\n  File \"/tests/compiled/construct/debug_array_user_current_excluded.py\", line 5, in <module>\n    'meow' / FixedSized(3 - len(this._.array_of_cats), GreedyBytes),\n                            ^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: object of type 'Path' has no len()\n",
+      "trace": "ImportError: Failed to import test module: test_debug_array_user_current_excluded\nTraceback (most recent call last):\n  File \"/usr/local/lib/python3.12/unittest/loader.py\", line 396, in _find_test_path\n    module = self._get_module_from_name(name)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/unittest/loader.py\", line 339, in _get_module_from_name\n    __import__(name)\n  File \"/tests/spec/construct/test_debug_array_user_current_excluded.py\", line 5, in <module>\n    from debug_array_user_current_excluded import _schema\n  File \"/tests/compiled/construct/debug_array_user_current_excluded.py\", line 5, in <module>\n    'meow' / FixedSized(3 - len(this._.array_of_cats), GreedyBytes),\n                            ^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: object of type 'Path' has no len()"
+    },
+    "is_kst": true
+  },
+  "DebugEnumName": {
+    "status": "failed",
+    "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": "name 'KaitaiStream' is not defined",
+      "trace": "Traceback (most recent call last):\n  File \"/tests/spec/construct/test_debug_enum_name.py\", line 9, in test_debug_enum_name\n    r = _schema.parse_file('src/fixed_struct.bin')\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 425, in parse_file\n    return self.parse_stream(f, **contextkw)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 416, in parse_stream\n    return self._parsereport(stream, context, \"(parsing)\")\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 428, in _parsereport\n    obj = self._parse(stream, context, path)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 2236, in _parse\n    subobj = sc._parsereport(stream, context, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 428, in _parsereport\n    obj = self._parse(stream, context, path)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 2770, in _parse\n    return self.subcon._parsereport(stream, context, path)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 428, in _parsereport\n    obj = self._parse(stream, context, path)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 6221, in _parse\n    return sc._parsereport(stream, context, path)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 428, in _parsereport\n    obj = self._parse(stream, context, path)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 2236, in _parse\n    subobj = sc._parsereport(stream, context, path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 428, in _parsereport\n    obj = self._parse(stream, context, path)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 2770, in _parse\n    return self.subcon._parsereport(stream, context, path)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 428, in _parsereport\n    obj = self._parse(stream, context, path)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/construct/core.py\", line 2915, in _parse\n    return self.func(context) if callable(self.func) else self.func\n           ^^^^^^^^^^^^^^^^^^\n  File \"/tests/compiled/construct/debug_enum_name.py\", line 20, in <lambda>\n    'instance_field' / Computed(lambda this: KaitaiStream.resolve_enum(DebugEnumName.TestSubtype.InnerEnum2, this.field2 & 15)),\n                                             ^^^^^^^^^^^^\nNameError: name 'KaitaiStream' is not defined"
     },
     "is_kst": true
   },
@@ -1380,8 +1411,8 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "<built-in method values of Container object at 0x7fc82771bc50> != [1, 2, 3, 4]",
-      "trace": "Traceback (most recent call last):\n  File \"/tests/spec/construct/test_repeat_until_complex.py\", line 12, in test_repeat_until_complex\n    self.assertEqual(r.first[0].values, [(0 + 1), 2, 3, 4])\nAssertionError: <built-in method values of Container object at 0x7fc82771bc50> != [1, 2, 3, 4]"
+      "message": "<built-in method values of Container object at 0x7f8578f00890> != [1, 2, 3, 4]",
+      "trace": "Traceback (most recent call last):\n  File \"/tests/spec/construct/test_repeat_until_complex.py\", line 12, in test_repeat_until_complex\n    self.assertEqual(r.first[0].values, [(0 + 1), 2, 3, 4])\nAssertionError: <built-in method values of Container object at 0x7f8578f00890> != [1, 2, 3, 4]"
     },
     "is_kst": true
   },
