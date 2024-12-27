@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites tests="221" failures="13">
-	<testsuite name="kaitai/spec" tests="221" failures="13" errors="0" id="0" hostname="8ab328cceb4e" time="0.026" timestamp="2024-10-02T23:45:39Z">
+<testsuites tests="225" failures="13">
+	<testsuite name="kaitai/spec" tests="225" failures="13" errors="0" id="0" hostname="8ac952387ef2" time="0.028" timestamp="2024-12-27T09:25:58Z">
 		<testcase name="TestBcdUserTypeBe" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestBcdUserTypeLe" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestBitsByteAligned" classname="kaitai/spec" time="0.000"></testcase>
@@ -24,7 +24,11 @@
 		<testcase name="TestCombineBytes" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestCombineEnum" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestCombineStr" classname="kaitai/spec" time="0.000"></testcase>
+		<testcase name="TestDebug0" classname="kaitai/spec" time="0.000"></testcase>
+		<testcase name="TestDebugArrayUserCurrentExcluded" classname="kaitai/spec" time="0.000"></testcase>
+		<testcase name="TestDebugArrayUserEofException" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestDebugArrayUser" classname="kaitai/spec" time="0.000"></testcase>
+		<testcase name="TestDebugEnumName" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestDefaultBigEndian" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestDefaultBitEndianMod" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestDefaultEndianExprException" classname="kaitai/spec" time="0.000"></testcase>
@@ -55,11 +59,11 @@
 		<testcase name="TestEnumToI" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestEofExceptionBytes" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestEofExceptionSized" classname="kaitai/spec" time="0.000"></testcase>
-		<testcase name="TestEofExceptionU4" classname="kaitai/spec" time="0.000"></testcase>
+		<testcase name="TestEofExceptionU4" classname="kaitai/spec" time="0.010"></testcase>
 		<testcase name="TestEosExceptionBytes" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestEosExceptionSized" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestEosExceptionU4" classname="kaitai/spec" time="0.000"></testcase>
-		<testcase name="TestExpr0" classname="kaitai/spec" time="0.010"></testcase>
+		<testcase name="TestExpr0" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestExpr1" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestExpr2" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestExpr3" classname="kaitai/spec" time="0.000"></testcase>
@@ -151,36 +155,36 @@
 		<testcase name="TestNavParentVsValueInst" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestNavRootRecursive" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestNavRoot" classname="kaitai/spec" time="0.000"></testcase>
-		<testcase name="TestNestedSameName2" classname="kaitai/spec" time="0.000"></testcase>
+		<testcase name="TestNestedSameName2" classname="kaitai/spec" time="0.010"></testcase>
 		<testcase name="TestNestedSameName" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestNestedTypeParam" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestNestedTypes2" classname="kaitai/spec" time="0.000"></testcase>
-		<testcase name="TestNestedTypes3" classname="kaitai/spec" time="0.010"></testcase>
+		<testcase name="TestNestedTypes3" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestNestedTypes" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestNonStandard" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestOpaqueExternalType02Parent" classname="kaitai/spec" time="0.000">
-			<failure message="Failed"><![CDATA[goroutine 132 [running]:
+			<failure message="Failed"><![CDATA[goroutine 164 [running]:
 runtime/debug.Stack()
 	/usr/local/go/src/runtime/debug/stack.go:26 +0x5e
 runtime/debug.PrintStack()
 	/usr/local/go/src/runtime/debug/stack.go:18 +0x13
 kaitai/spec.TestOpaqueExternalType02Parent.func1()
 	/tests/spec/go/opaque_external_type_02_parent_test.go:15 +0x39
-panic({0x65e6e0?, 0x8d9570?})
+panic({0x65f940?, 0x8dc570?})
 	/usr/local/go/src/runtime/panic.go:785 +0x132
 test_formats.(*OpaqueExternalType02Child).SomeMethod(...)
 	/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:50
-test_formats.(*OpaqueExternalType02Child_OpaqueExternalType02ChildChild).Read(0xc0001de6c0?, 0xc0001bcbd8?, 0x3?, 0x6a7640?)
+test_formats.(*OpaqueExternalType02Child_OpaqueExternalType02ChildChild).Read(0xc000216990?, 0xc0001f6c38?, 0x3?, 0x6a9300?)
 	/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:77 +0x54
-test_formats.(*OpaqueExternalType02Child).Read(0xc000022a50, 0xc000050e88?, {0x0?, 0x0?}, 0x68fca0?)
+test_formats.(*OpaqueExternalType02Child).Read(0xc00013ca50, 0xc000184e88?, {0x0?, 0x0?}, 0x691440?)
 	/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:42 +0x131
-test_formats.(*OpaqueExternalType02Parent_ParentObj).Read(0xc00003ac40, 0x40d965?, 0x28?, 0x68fd80?)
+test_formats.(*OpaqueExternalType02Parent_ParentObj).Read(0xc00014ece0, 0x40d965?, 0x28?, 0x691520?)
 	/tests/compiled/go/src/test_formats/opaque_external_type_02_parent.go:56 +0x7f
-test_formats.(*OpaqueExternalType02Parent).Read(0xc0001de6f0, 0x17?, {0x72fbe0?, 0xc0001de6f0?}, 0x77d086?)
+test_formats.(*OpaqueExternalType02Parent).Read(0xc0002169c0, 0x17?, {0x7319e0?, 0xc0002169c0?}, 0x77f346?)
 	/tests/compiled/go/src/test_formats/opaque_external_type_02_parent.go:28 +0x88
-kaitai/spec.TestOpaqueExternalType02Parent(0xc0001e2000)
+kaitai/spec.TestOpaqueExternalType02Parent(0xc000218820)
 	/tests/spec/go/opaque_external_type_02_parent_test.go:25 +0x10e
-testing.tRunner(0xc0001e2000, 0x6edf80)
+testing.tRunner(0xc000218820, 0x6efca0)
 	/usr/local/go/src/testing/testing.go:1690 +0xf4
 created by testing.(*T).Run in goroutine 1
 	/usr/local/go/src/testing/testing.go:1743 +0x390
