@@ -1,13 +1,13 @@
 {
   "$meta": {
     "lang": "nim",
-    "timestamp": "2024-12-27T09:30:56Z",
+    "timestamp": "2024-12-31T00:12:12Z",
     "ci": {
       "ci": "github",
-      "run_id": "12514345968",
-      "run_number": "341",
-      "job_id": "34910289311",
-      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/12514345968/job/34910289311"
+      "run_id": "12553412005",
+      "run_number": "343",
+      "job_id": "35000732562",
+      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/12553412005/job/35000732562"
     }
   },
   "BcdUserTypeBe": {
@@ -252,7 +252,7 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "/tests/compiled/nim/enum_import_literals.nim(11, 17) Error: undeclared identifier: &apos;EnumDeep_Container1_Container2_Animal&apos;\ncandidates (edit distance, scope distance); see &apos;--spellSuggest&apos;: \n (22, 0): &apos;EnumImportLiterals&apos; [type declared in /tests/compiled/nim/enum_import_literals.nim(5, 3)]\n",
+      "message": "/tests/compiled/nim/enum_import_literals.nim(11, 17) Error: undeclared identifier: &apos;EnumDeep_Container1_Container2_Animal&apos;\ncandidates (edit distance, scope distance); see &apos;--spellSuggest&apos;: \n (22, 0): &apos;EnumImportLiterals&apos;\n",
       "trace": ""
     },
     "is_kst": true
@@ -278,7 +278,7 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "/tests/spec/nim/tenum_invalid.nim(10, 15) Error: type mismatch: got &lt;EnumInvalid_Animal, int literal(111)&gt;\nbut expected one of:\nproc `==`[Enum: enum](x, y: Enum): bool\n  first type mismatch at position: 2\n  required type for y: Enum: enum\n  but expression &apos;111&apos; is of type: int literal(111)\nproc `==`[T: tuple | object](x, y: T): bool\n  first type mismatch at position: 2\n  required type for y: T: tuple or object\n  but expression &apos;111&apos; is of type: int literal(111)\nproc `==`[T](a, b: Option[T]): bool\n  first type mismatch at position: 2\n  required type for b: Option[==.T]\n  but expression &apos;111&apos; is of type: int literal(111)\n29 other mismatching symbols have been suppressed; compile with --showAllMismatches:on to see them\n\nexpression: r.pet2 == 111\n",
+      "message": "/tests/spec/nim/tenum_invalid.nim(10, 15) Error: type mismatch\nExpression: r.pet2 == 111\n  [1] r.pet2: EnumInvalid_Animal\n  [2] 111: int literal(111)\n\nExpected one of (first mismatch at [position]):\n[1] proc `==`(err1, err2: OSErrorCode): bool\n[1] proc `==`(x, y: bool): bool\n[1] proc `==`(x, y: char): bool\n[1] proc `==`(x, y: cstring): bool\n[1] proc `==`(x, y: float): bool\n[1] proc `==`(x, y: float32): bool\n[1] proc `==`(x, y: int): bool\n[1] proc `==`(x, y: int16): bool\n[1] proc `==`(x, y: int32): bool\n[1] proc `==`(x, y: int64): bool\n[1] proc `==`(x, y: int8): bool\n[1] proc `==`(x, y: pointer): bool\n[1] proc `==`(x, y: string): bool\n[1] proc `==`(x, y: uint): bool\n[1] proc `==`(x, y: uint16): bool\n[1] proc `==`(x, y: uint32): bool\n[1] proc `==`(x, y: uint64): bool\n[1] proc `==`(x, y: uint8): bool\n[1] proc `==`[I, T](x, y: array[I, T]): bool\n[1] proc `==`[S: SomeSignedInt; U: SomeUnsignedInt](x: S; y: U): bool\n[1] proc `==`[S: SomeSignedInt; U: SomeUnsignedInt](x: U; y: S): bool\n[1] proc `==`[T: proc | iterator](x, y: T): bool\n[1] proc `==`[T](x, y: openArray[T]): bool\n[1] proc `==`[T](x, y: ptr T): bool\n[1] proc `==`[T](x, y: ref T): bool\n[1] proc `==`[T](x, y: seq[T]): bool\n[1] proc `==`[T](x, y: set[T]): bool\n[2] proc `==`[Enum: enum](x, y: Enum): bool\n[2] proc `==`[T: tuple | object](x, y: T): bool\n[2] proc `==`[T](a, b: Option[T]): bool\n\n",
       "trace": ""
     },
     "is_kst": true
@@ -314,7 +314,7 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "/tests/compiled/nim/enum_to_i_class_border_2.nim(7, 16) Error: undeclared identifier: &apos;EnumToIClassBorder1&apos;\ncandidates (edit distance, scope distance); see &apos;--spellSuggest&apos;: \n (1, 0): &apos;EnumToIClassBorder2&apos; [type declared in /tests/compiled/nim/enum_to_i_class_border_2.nim(6, 3)]\n (1, 0): &apos;enum_to_i_class_border_1&apos; [module declared in /tests/compiled/nim/enum_to_i_class_border_2.nim(3, 8)]\nThis might be caused by a recursive module dependency:\n/tests/compiled/nim/enum_to_i_class_border_1.nim imports /tests/compiled/nim/enum_to_i_class_border_2.nim\n/tests/compiled/nim/enum_to_i_class_border_2.nim imports /tests/compiled/nim/enum_to_i_class_border_1.nim\n",
+      "message": "/tests/compiled/nim/enum_to_i_class_border_2.nim(7, 16) Error: undeclared identifier: &apos;EnumToIClassBorder1&apos;\ncandidates (edit distance, scope distance); see &apos;--spellSuggest&apos;: \n (1, 0): &apos;EnumToIClassBorder2&apos;\n (1, 0): &apos;enum_to_i_class_border_1&apos;\nThis might be caused by a recursive module dependency:\n/tests/compiled/nim/enum_to_i_class_border_1.nim imports /tests/compiled/nim/enum_to_i_class_border_2.nim\n/tests/compiled/nim/enum_to_i_class_border_2.nim imports /tests/compiled/nim/enum_to_i_class_border_1.nim\n",
       "trace": ""
     },
     "is_kst": true
@@ -325,7 +325,7 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "/tests/spec/nim/tenum_to_i_invalid.nim(10, 15) Error: type mismatch: got &lt;EnumToIInvalid_Animal, int literal(111)&gt;\nbut expected one of:\nproc `==`[Enum: enum](x, y: Enum): bool\n  first type mismatch at position: 2\n  required type for y: Enum: enum\n  but expression &apos;111&apos; is of type: int literal(111)\nproc `==`[T: tuple | object](x, y: T): bool\n  first type mismatch at position: 2\n  required type for y: T: tuple or object\n  but expression &apos;111&apos; is of type: int literal(111)\nproc `==`[T](a, b: Option[T]): bool\n  first type mismatch at position: 2\n  required type for b: Option[==.T]\n  but expression &apos;111&apos; is of type: int literal(111)\n29 other mismatching symbols have been suppressed; compile with --showAllMismatches:on to see them\n\nexpression: r.pet2 == 111\n",
+      "message": "/tests/spec/nim/tenum_to_i_invalid.nim(10, 15) Error: type mismatch\nExpression: r.pet2 == 111\n  [1] r.pet2: EnumToIInvalid_Animal\n  [2] 111: int literal(111)\n\nExpected one of (first mismatch at [position]):\n[1] proc `==`(err1, err2: OSErrorCode): bool\n[1] proc `==`(x, y: bool): bool\n[1] proc `==`(x, y: char): bool\n[1] proc `==`(x, y: cstring): bool\n[1] proc `==`(x, y: float): bool\n[1] proc `==`(x, y: float32): bool\n[1] proc `==`(x, y: int): bool\n[1] proc `==`(x, y: int16): bool\n[1] proc `==`(x, y: int32): bool\n[1] proc `==`(x, y: int64): bool\n[1] proc `==`(x, y: int8): bool\n[1] proc `==`(x, y: pointer): bool\n[1] proc `==`(x, y: string): bool\n[1] proc `==`(x, y: uint): bool\n[1] proc `==`(x, y: uint16): bool\n[1] proc `==`(x, y: uint32): bool\n[1] proc `==`(x, y: uint64): bool\n[1] proc `==`(x, y: uint8): bool\n[1] proc `==`[I, T](x, y: array[I, T]): bool\n[1] proc `==`[S: SomeSignedInt; U: SomeUnsignedInt](x: S; y: U): bool\n[1] proc `==`[S: SomeSignedInt; U: SomeUnsignedInt](x: U; y: S): bool\n[1] proc `==`[T: proc | iterator](x, y: T): bool\n[1] proc `==`[T](x, y: openArray[T]): bool\n[1] proc `==`[T](x, y: ptr T): bool\n[1] proc `==`[T](x, y: ref T): bool\n[1] proc `==`[T](x, y: seq[T]): bool\n[1] proc `==`[T](x, y: set[T]): bool\n[2] proc `==`[Enum: enum](x, y: Enum): bool\n[2] proc `==`[T: tuple | object](x, y: T): bool\n[2] proc `==`[T](a, b: Option[T]): bool\n\n",
       "trace": ""
     },
     "is_kst": true
@@ -401,7 +401,7 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "/tests/spec/nim/texpr_int_div.nim(12) texpr_int_div\n/nim/lib/system/assertions.nim(38) failedAssertImpl\n/nim/lib/system/assertions.nim(28) raiseAssert\n/nim/lib/system/fatal.nim(53) sysFatal\nError: unhandled exception: /tests/spec/nim/texpr_int_div.nim(12, 8) `r.divNegConst == -757`  [AssertionDefect]\n",
+      "message": "/tests/spec/nim/texpr_int_div.nim(12) texpr_int_div\n/nim/lib/std/assertions.nim(41) failedAssertImpl\n/nim/lib/std/assertions.nim(36) raiseAssert\n/nim/lib/system/fatal.nim(53) sysFatal\nError: unhandled exception: /tests/spec/nim/texpr_int_div.nim(12, 1) `r.divNegConst == -757`  [AssertionDefect]\n",
       "trace": ""
     },
     "is_kst": true
@@ -453,11 +453,11 @@
   },
   "ExprStrEncodings": {
     "status": "failed",
-    "elapsed": 0.2,
+    "elapsed": 0.0,
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "Traceback (most recent call last)\n/tests/spec/nim/texpr_str_encodings.nim(7) texpr_str_encodings\n/tests/compiled/nim/expr_str_encodings.nim(122) fromFile\n/tests/compiled/nim/expr_str_encodings.nim(62) read\n/root/.nimble/pkgs/kaitai_struct_nim_runtime-#head/kaitai_struct_nim_runtime.nim(374) encode\n/nim/lib/pure/encodings.nim(507) convert\n/nim/lib/pure/encodings.nim(467) convert\nSIGSEGV: Illegal storage access. (Attempt to read from nil?)\n",
+      "message": "/tests/spec/nim/texpr_str_encodings.nim(7) texpr_str_encodings\n/tests/compiled/nim/expr_str_encodings.nim(122) fromFile\n/tests/compiled/nim/expr_str_encodings.nim(62) read\n/root/.nimble/pkgs2/kaitai_struct_nim_runtime-0.10.0-18995fcc2c9d1b166f5837480b5b68a5c49b3a4d/kaitai_struct_nim_runtime.nim(374) encode\n/nim/lib/pure/encodings.nim(507) convert\n/nim/lib/pure/encodings.nim(346) open\nError: unhandled exception: cannot create encoding converter from IBM437 to UTF-8 [EncodingError]\n",
       "trace": ""
     },
     "is_kst": true
@@ -488,7 +488,7 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "/tests/spec/nim/tfloating_points.nim(13) tfloating_points\n/nim/lib/system/assertions.nim(38) failedAssertImpl\n/nim/lib/system/assertions.nim(28) raiseAssert\n/nim/lib/system/fatal.nim(53) sysFatal\nError: unhandled exception: /tests/spec/nim/tfloating_points.nim(13, 8) `r.approximateValue == 1.2345`  [AssertionDefect]\n",
+      "message": "/tests/spec/nim/tfloating_points.nim(13) tfloating_points\n/nim/lib/std/assertions.nim(41) failedAssertImpl\n/nim/lib/std/assertions.nim(36) raiseAssert\n/nim/lib/system/fatal.nim(53) sysFatal\nError: unhandled exception: /tests/spec/nim/tfloating_points.nim(13, 1) `r.approximateValue == 1.2345`  [AssertionDefect]\n",
       "trace": ""
     },
     "is_kst": true
@@ -524,7 +524,7 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "/tests/compiled/nim/vlq_base128_le.nim(80, 58) Error: type mismatch: got &lt;uint64, int&gt;\nbut expected one of:\nproc `*`(x, y: uint64): uint64\n  first type mismatch at position: 2\n  required type for y: uint64\n  but expression &apos;len(this)&apos; is of type: int\n12 other mismatching symbols have been suppressed; compile with --showAllMismatches:on to see them\n\nexpression: 128&apos;u64 * len(this)\n",
+      "message": "/tests/compiled/nim/vlq_base128_le.nim(80, 58) Error: type mismatch\nExpression: 128&apos;u64 * len(this)\n  [1] 128&apos;u64: uint64\n  [2] len(this): int\n\nExpected one of (first mismatch at [position]):\n[1] func `*`[T](x, y: set[T]): set[T]\n[1] proc `*`(x, y: float): float\n[1] proc `*`(x, y: float32): float32\n[1] proc `*`(x, y: int): int\n[1] proc `*`(x, y: int16): int16\n[1] proc `*`(x, y: int32): int32\n[1] proc `*`(x, y: int64): int64\n[1] proc `*`(x, y: int8): int8\n[1] proc `*`(x, y: uint16): uint16\n[1] proc `*`(x, y: uint32): uint32\n[1] proc `*`(x, y: uint8): uint8\n[2] proc `*`(x, y: uint): uint\n[2] proc `*`(x, y: uint64): uint64\n\n",
       "trace": ""
     },
     "is_kst": true
@@ -545,7 +545,7 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "/tests/compiled/nim/cast_to_imported.nim(29, 30) Error: undeclared identifier: &apos;HelloWorld&apos;\ncandidates (edit distance, scope distance); see &apos;--spellSuggest&apos;: \n (6, 4): &apos;declared&apos; [proc declared in /nim/lib/system.nim(169, 8)]\n",
+      "message": "/tests/compiled/nim/cast_to_imported.nim(29, 30) Error: undeclared identifier: &apos;HelloWorld&apos;\ncandidates (edit distance, scope distance); see &apos;--spellSuggest&apos;: \n (6, 4): &apos;declared&apos;\n",
       "trace": ""
     },
     "is_kst": true
@@ -556,7 +556,7 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "/tests/compiled/nim/cast_to_imported2.nim(8, 15) Error: undeclared identifier: &apos;HelloWorld&apos;\ncandidates (edit distance, scope distance); see &apos;--spellSuggest&apos;: \n (6, 2): &apos;declared&apos; [proc declared in /nim/lib/system.nim(169, 8)]\n",
+      "message": "/tests/compiled/nim/cast_to_imported2.nim(8, 15) Error: undeclared identifier: &apos;HelloWorld&apos;\ncandidates (edit distance, scope distance); see &apos;--spellSuggest&apos;: \n (6, 2): &apos;declared&apos;\n",
       "trace": ""
     },
     "is_kst": true
@@ -567,7 +567,7 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "/tests/compiled/nim/imports_circular_b.nim(8, 17) Error: undeclared identifier: &apos;ImportsCircularA&apos;\ncandidates (edit distance, scope distance); see &apos;--spellSuggest&apos;: \n (1, 0): &apos;ImportsCircularB&apos; [type declared in /tests/compiled/nim/imports_circular_b.nim(6, 3)]\n (1, 0): &apos;imports_circular_a&apos; [module declared in /tests/compiled/nim/imports_circular_b.nim(3, 8)]\nThis might be caused by a recursive module dependency:\n/tests/compiled/nim/imports_circular_a.nim imports /tests/compiled/nim/imports_circular_b.nim\n/tests/compiled/nim/imports_circular_b.nim imports /tests/compiled/nim/imports_circular_a.nim\n",
+      "message": "/tests/compiled/nim/imports_circular_b.nim(8, 17) Error: undeclared identifier: &apos;ImportsCircularA&apos;\ncandidates (edit distance, scope distance); see &apos;--spellSuggest&apos;: \n (1, 0): &apos;ImportsCircularB&apos;\n (1, 0): &apos;imports_circular_a&apos;\nThis might be caused by a recursive module dependency:\n/tests/compiled/nim/imports_circular_a.nim imports /tests/compiled/nim/imports_circular_b.nim\n/tests/compiled/nim/imports_circular_b.nim imports /tests/compiled/nim/imports_circular_a.nim\n",
       "trace": ""
     },
     "is_kst": true
@@ -735,7 +735,7 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "/tests/compiled/nim/nav_parent_switch_cast.nim(92, 64) Error: undeclared field: &apos;parent&apos; for type kaitai_struct_nim_runtime.KaitaiStruct [type declared in /root/.nimble/pkgs/kaitai_struct_nim_runtime-#head/kaitai_struct_nim_runtime.nim(5, 3)]\n",
+      "message": "/tests/compiled/nim/nav_parent_switch_cast.nim(92, 64) Error: undeclared field: &apos;parent&apos; for type kaitai_struct_nim_runtime.KaitaiStruct [type declared in /root/.nimble/pkgs2/kaitai_struct_nim_runtime-0.10.0-18995fcc2c9d1b166f5837480b5b68a5c49b3a4d/kaitai_struct_nim_runtime.nim(5, 3)]\n",
       "trace": ""
     },
     "is_kst": true
@@ -791,7 +791,7 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "/tests/spec/nim/tnested_types_import.nim(15) tnested_types_import\n/nim/lib/system/assertions.nim(38) failedAssertImpl\n/nim/lib/system/assertions.nim(28) raiseAssert\n/nim/lib/system/fatal.nim(53) sysFatal\nError: unhandled exception: /tests/spec/nim/tnested_types_import.nim(15, 8) `r.aCc.root == nil`  [AssertionDefect]\n",
+      "message": "/tests/spec/nim/tnested_types_import.nim(15) tnested_types_import\n/nim/lib/std/assertions.nim(41) failedAssertImpl\n/nim/lib/std/assertions.nim(36) raiseAssert\n/nim/lib/system/fatal.nim(53) sysFatal\nError: unhandled exception: /tests/spec/nim/tnested_types_import.nim(15, 1) `r.aCc.root == nil`  [AssertionDefect]\n",
       "trace": ""
     },
     "is_kst": true
@@ -1017,22 +1017,22 @@
   },
   "StrEncodings": {
     "status": "failed",
-    "elapsed": 0.1,
+    "elapsed": 0.0,
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "Traceback (most recent call last)\n/tests/spec/nim/tstr_encodings.nim(7) tstr_encodings\n/tests/compiled/nim/str_encodings.nim(45) fromFile\n/tests/compiled/nim/str_encodings.nim(41) read\n/root/.nimble/pkgs/kaitai_struct_nim_runtime-#head/kaitai_struct_nim_runtime.nim(374) encode\n/nim/lib/pure/encodings.nim(507) convert\n/nim/lib/pure/encodings.nim(467) convert\nSIGSEGV: Illegal storage access. (Attempt to read from nil?)\n",
+      "message": "/tests/spec/nim/tstr_encodings.nim(7) tstr_encodings\n/tests/compiled/nim/str_encodings.nim(45) fromFile\n/tests/compiled/nim/str_encodings.nim(41) read\n/root/.nimble/pkgs2/kaitai_struct_nim_runtime-0.10.0-18995fcc2c9d1b166f5837480b5b68a5c49b3a4d/kaitai_struct_nim_runtime.nim(374) encode\n/nim/lib/pure/encodings.nim(507) convert\n/nim/lib/pure/encodings.nim(346) open\nError: unhandled exception: cannot create encoding converter from IBM437 to UTF-8 [EncodingError]\n",
       "trace": ""
     },
     "is_kst": true
   },
   "StrEncodingsDefault": {
     "status": "failed",
-    "elapsed": 0.1,
+    "elapsed": 0.0,
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "Traceback (most recent call last)\n/tests/spec/nim/tstr_encodings_default.nim(7) tstr_encodings_default\n/tests/compiled/nim/str_encodings_default.nim(39) fromFile\n/tests/compiled/nim/str_encodings_default.nim(35) read\n/tests/compiled/nim/str_encodings_default.nim(59) read\n/root/.nimble/pkgs/kaitai_struct_nim_runtime-#head/kaitai_struct_nim_runtime.nim(374) encode\n/nim/lib/pure/encodings.nim(507) convert\n/nim/lib/pure/encodings.nim(467) convert\nSIGSEGV: Illegal storage access. (Attempt to read from nil?)\n",
+      "message": "/tests/spec/nim/tstr_encodings_default.nim(7) tstr_encodings_default\n/tests/compiled/nim/str_encodings_default.nim(39) fromFile\n/tests/compiled/nim/str_encodings_default.nim(35) read\n/tests/compiled/nim/str_encodings_default.nim(59) read\n/root/.nimble/pkgs2/kaitai_struct_nim_runtime-0.10.0-18995fcc2c9d1b166f5837480b5b68a5c49b3a4d/kaitai_struct_nim_runtime.nim(374) encode\n/nim/lib/pure/encodings.nim(507) convert\n/nim/lib/pure/encodings.nim(346) open\nError: unhandled exception: cannot create encoding converter from IBM437 to UTF-8 [EncodingError]\n",
       "trace": ""
     },
     "is_kst": true
@@ -1053,7 +1053,7 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "/tests/spec/nim/tstr_literals.nim(9) tstr_literals\n/nim/lib/system/assertions.nim(38) failedAssertImpl\n/nim/lib/system/assertions.nim(28) raiseAssert\n/nim/lib/system/fatal.nim(53) sysFatal\nError: unhandled exception: /tests/spec/nim/tstr_literals.nim(9, 8) `strToArr(r.complexStr) ==\n    @[0&apos;i32, 1, 2, 7, 8, 10, 13, 9, 11, 12, 27, 61, 7, 10, 36, 9787]`  [AssertionDefect]\n",
+      "message": "/tests/spec/nim/tstr_literals.nim(9) tstr_literals\n/nim/lib/std/assertions.nim(41) failedAssertImpl\n/nim/lib/std/assertions.nim(36) raiseAssert\n/nim/lib/system/fatal.nim(53) sysFatal\nError: unhandled exception: /tests/spec/nim/tstr_literals.nim(9, 1) `strToArr(r.complexStr) ==\n    @[0&apos;i32, 1, 2, 7, 8, 10, 13, 9, 11, 12, 27, 61, 7, 10, 36, 9787]`  [AssertionDefect]\n",
       "trace": ""
     }
   },
@@ -1068,7 +1068,7 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "/tests/spec/nim/tstr_literals_latin1.nim(9) tstr_literals_latin1\n/nim/lib/system/assertions.nim(38) failedAssertImpl\n/nim/lib/system/assertions.nim(28) raiseAssert\n/nim/lib/system/fatal.nim(53) sysFatal\nError: unhandled exception: /tests/spec/nim/tstr_literals_latin1.nim(9, 8) `r.parsedEqLiteral == true`  [AssertionDefect]\n",
+      "message": "/tests/spec/nim/tstr_literals_latin1.nim(9) tstr_literals_latin1\n/nim/lib/std/assertions.nim(41) failedAssertImpl\n/nim/lib/std/assertions.nim(36) raiseAssert\n/nim/lib/system/fatal.nim(53) sysFatal\nError: unhandled exception: /tests/spec/nim/tstr_literals_latin1.nim(9, 1) `r.parsedEqLiteral == true`  [AssertionDefect]\n",
       "trace": ""
     },
     "is_kst": true
@@ -1119,7 +1119,7 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "/tests/spec/nim/tswitch_manual_enum_invalid.nim(10, 26) Error: type mismatch: got &lt;SwitchManualEnumInvalid_Opcode_CodeEnum, int literal(255)&gt;\nbut expected one of:\nproc `==`[Enum: enum](x, y: Enum): bool\n  first type mismatch at position: 2\n  required type for y: Enum: enum\n  but expression &apos;255&apos; is of type: int literal(255)\nproc `==`[T: tuple | object](x, y: T): bool\n  first type mismatch at position: 2\n  required type for y: T: tuple or object\n  but expression &apos;255&apos; is of type: int literal(255)\nproc `==`[T](a, b: Option[T]): bool\n  first type mismatch at position: 2\n  required type for b: Option[==.T]\n  but expression &apos;255&apos; is of type: int literal(255)\n29 other mismatching symbols have been suppressed; compile with --showAllMismatches:on to see them\n\nexpression: r.opcodes[0].code == 255\n",
+      "message": "/tests/spec/nim/tswitch_manual_enum_invalid.nim(10, 26) Error: type mismatch\nExpression: r.opcodes[0].code == 255\n  [1] r.opcodes[0].code: SwitchManualEnumInvalid_Opcode_CodeEnum\n  [2] 255: int literal(255)\n\nExpected one of (first mismatch at [position]):\n[1] proc `==`(err1, err2: OSErrorCode): bool\n[1] proc `==`(x, y: bool): bool\n[1] proc `==`(x, y: char): bool\n[1] proc `==`(x, y: cstring): bool\n[1] proc `==`(x, y: float): bool\n[1] proc `==`(x, y: float32): bool\n[1] proc `==`(x, y: int): bool\n[1] proc `==`(x, y: int16): bool\n[1] proc `==`(x, y: int32): bool\n[1] proc `==`(x, y: int64): bool\n[1] proc `==`(x, y: int8): bool\n[1] proc `==`(x, y: pointer): bool\n[1] proc `==`(x, y: string): bool\n[1] proc `==`(x, y: uint): bool\n[1] proc `==`(x, y: uint16): bool\n[1] proc `==`(x, y: uint32): bool\n[1] proc `==`(x, y: uint64): bool\n[1] proc `==`(x, y: uint8): bool\n[1] proc `==`[I, T](x, y: array[I, T]): bool\n[1] proc `==`[S: SomeSignedInt; U: SomeUnsignedInt](x: S; y: U): bool\n[1] proc `==`[S: SomeSignedInt; U: SomeUnsignedInt](x: U; y: S): bool\n[1] proc `==`[T: proc | iterator](x, y: T): bool\n[1] proc `==`[T](x, y: openArray[T]): bool\n[1] proc `==`[T](x, y: ptr T): bool\n[1] proc `==`[T](x, y: ref T): bool\n[1] proc `==`[T](x, y: seq[T]): bool\n[1] proc `==`[T](x, y: set[T]): bool\n[2] proc `==`[Enum: enum](x, y: Enum): bool\n[2] proc `==`[T: tuple | object](x, y: T): bool\n[2] proc `==`[T](a, b: Option[T]): bool\n\n",
       "trace": ""
     },
     "is_kst": true
@@ -1130,7 +1130,7 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "/tests/spec/nim/tswitch_manual_enum_invalid_else.nim(10, 26) Error: type mismatch: got &lt;SwitchManualEnumInvalidElse_Opcode_CodeEnum, int literal(255)&gt;\nbut expected one of:\nproc `==`[Enum: enum](x, y: Enum): bool\n  first type mismatch at position: 2\n  required type for y: Enum: enum\n  but expression &apos;255&apos; is of type: int literal(255)\nproc `==`[T: tuple | object](x, y: T): bool\n  first type mismatch at position: 2\n  required type for y: T: tuple or object\n  but expression &apos;255&apos; is of type: int literal(255)\nproc `==`[T](a, b: Option[T]): bool\n  first type mismatch at position: 2\n  required type for b: Option[==.T]\n  but expression &apos;255&apos; is of type: int literal(255)\n29 other mismatching symbols have been suppressed; compile with --showAllMismatches:on to see them\n\nexpression: r.opcodes[0].code == 255\n",
+      "message": "/tests/spec/nim/tswitch_manual_enum_invalid_else.nim(10, 26) Error: type mismatch\nExpression: r.opcodes[0].code == 255\n  [1] r.opcodes[0].code: SwitchManualEnumInvalidElse_Opcode_CodeEnum\n  [2] 255: int literal(255)\n\nExpected one of (first mismatch at [position]):\n[1] proc `==`(err1, err2: OSErrorCode): bool\n[1] proc `==`(x, y: bool): bool\n[1] proc `==`(x, y: char): bool\n[1] proc `==`(x, y: cstring): bool\n[1] proc `==`(x, y: float): bool\n[1] proc `==`(x, y: float32): bool\n[1] proc `==`(x, y: int): bool\n[1] proc `==`(x, y: int16): bool\n[1] proc `==`(x, y: int32): bool\n[1] proc `==`(x, y: int64): bool\n[1] proc `==`(x, y: int8): bool\n[1] proc `==`(x, y: pointer): bool\n[1] proc `==`(x, y: string): bool\n[1] proc `==`(x, y: uint): bool\n[1] proc `==`(x, y: uint16): bool\n[1] proc `==`(x, y: uint32): bool\n[1] proc `==`(x, y: uint64): bool\n[1] proc `==`(x, y: uint8): bool\n[1] proc `==`[I, T](x, y: array[I, T]): bool\n[1] proc `==`[S: SomeSignedInt; U: SomeUnsignedInt](x: S; y: U): bool\n[1] proc `==`[S: SomeSignedInt; U: SomeUnsignedInt](x: U; y: S): bool\n[1] proc `==`[T: proc | iterator](x, y: T): bool\n[1] proc `==`[T](x, y: openArray[T]): bool\n[1] proc `==`[T](x, y: ptr T): bool\n[1] proc `==`[T](x, y: ref T): bool\n[1] proc `==`[T](x, y: seq[T]): bool\n[1] proc `==`[T](x, y: set[T]): bool\n[2] proc `==`[Enum: enum](x, y: Enum): bool\n[2] proc `==`[T: tuple | object](x, y: T): bool\n[2] proc `==`[T](a, b: Option[T]): bool\n\n",
       "trace": ""
     },
     "is_kst": true
@@ -1193,7 +1193,7 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "/tests/spec/nim/tswitch_repeat_expr.nim(7, 25) template/generic instantiation of `fromFile` from here\n/tests/compiled/nim/switch_repeat_expr.nim(55, 19) template/generic instantiation of `read` from here\n/tests/compiled/nim/switch_repeat_expr.nim(52, 18) Error: type mismatch: got &lt;seq[KaitaiStruct], seq[byte]&gt;\nbut expected one of:\nproc add[T](x: var seq[T]; y: openArray[T])\n  first type mismatch at position: 2\n  required type for y: openArray[T]\n  but expression &apos;it&apos; is of type: seq[byte]\nproc add[T](x: var seq[T]; y: sink T)\n  first type mismatch at position: 2\n  required type for y: sink T\n  but expression &apos;it&apos; is of type: seq[byte]\n3 other mismatching symbols have been suppressed; compile with --showAllMismatches:on to see them\n\nexpression: add(result.body, it)\n",
+      "message": "/tests/spec/nim/tswitch_repeat_expr.nim(7, 25) template/generic instantiation of `fromFile` from here\n/tests/compiled/nim/switch_repeat_expr.nim(55, 19) template/generic instantiation of `read` from here\n/tests/compiled/nim/switch_repeat_expr.nim(52, 18) Error: type mismatch\nExpression: add(result.body, it)\n  [1] result.body: seq[KaitaiStruct]\n  [2] it: seq[byte]\n\nExpected one of (first mismatch at [position]):\n[1] proc add(x: var string; y: char)\n[1] proc add(x: var string; y: cstring)\n[1] proc add(x: var string; y: string)\n[2] proc add[T](x: var seq[T]; y: openArray[T])\n[2] proc add[T](x: var seq[T]; y: sink T)\n\n",
       "trace": ""
     },
     "is_kst": true
@@ -1204,7 +1204,7 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "/tests/spec/nim/tswitch_repeat_expr_invalid.nim(7, 32) template/generic instantiation of `fromFile` from here\n/tests/compiled/nim/switch_repeat_expr_invalid.nim(55, 26) template/generic instantiation of `read` from here\n/tests/compiled/nim/switch_repeat_expr_invalid.nim(52, 18) Error: type mismatch: got &lt;seq[KaitaiStruct], seq[byte]&gt;\nbut expected one of:\nproc add[T](x: var seq[T]; y: openArray[T])\n  first type mismatch at position: 2\n  required type for y: openArray[T]\n  but expression &apos;it&apos; is of type: seq[byte]\nproc add[T](x: var seq[T]; y: sink T)\n  first type mismatch at position: 2\n  required type for y: sink T\n  but expression &apos;it&apos; is of type: seq[byte]\n3 other mismatching symbols have been suppressed; compile with --showAllMismatches:on to see them\n\nexpression: add(result.body, it)\n",
+      "message": "/tests/spec/nim/tswitch_repeat_expr_invalid.nim(7, 32) template/generic instantiation of `fromFile` from here\n/tests/compiled/nim/switch_repeat_expr_invalid.nim(55, 26) template/generic instantiation of `read` from here\n/tests/compiled/nim/switch_repeat_expr_invalid.nim(52, 18) Error: type mismatch\nExpression: add(result.body, it)\n  [1] result.body: seq[KaitaiStruct]\n  [2] it: seq[byte]\n\nExpected one of (first mismatch at [position]):\n[1] proc add(x: var string; y: char)\n[1] proc add(x: var string; y: cstring)\n[1] proc add(x: var string; y: string)\n[2] proc add[T](x: var seq[T]; y: openArray[T])\n[2] proc add[T](x: var seq[T]; y: sink T)\n\n",
       "trace": ""
     },
     "is_kst": true
@@ -1271,11 +1271,11 @@
   },
   "ValidEqStrEncodings": {
     "status": "failed",
-    "elapsed": 0.1,
+    "elapsed": 0.0,
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "Traceback (most recent call last)\n/tests/spec/nim/tvalid_eq_str_encodings.nim(7) tvalid_eq_str_encodings\n/tests/compiled/nim/valid_eq_str_encodings.nim(45) fromFile\n/tests/compiled/nim/valid_eq_str_encodings.nim(41) read\n/root/.nimble/pkgs/kaitai_struct_nim_runtime-#head/kaitai_struct_nim_runtime.nim(374) encode\n/nim/lib/pure/encodings.nim(507) convert\n/nim/lib/pure/encodings.nim(467) convert\nSIGSEGV: Illegal storage access. (Attempt to read from nil?)\n",
+      "message": "/tests/spec/nim/tvalid_eq_str_encodings.nim(7) tvalid_eq_str_encodings\n/tests/compiled/nim/valid_eq_str_encodings.nim(45) fromFile\n/tests/compiled/nim/valid_eq_str_encodings.nim(41) read\n/root/.nimble/pkgs2/kaitai_struct_nim_runtime-0.10.0-18995fcc2c9d1b166f5837480b5b68a5c49b3a4d/kaitai_struct_nim_runtime.nim(374) encode\n/nim/lib/pure/encodings.nim(507) convert\n/nim/lib/pure/encodings.nim(346) open\nError: unhandled exception: cannot create encoding converter from IBM437 to UTF-8 [EncodingError]\n",
       "trace": ""
     },
     "is_kst": true
