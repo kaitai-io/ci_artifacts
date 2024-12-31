@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites>
-    <testsuite name="LuaUnit" id="00001" package="" hostname="localhost" tests="263" timestamp="2024-12-27T09:26:21" time="0.046" errors="10" failures="8" skipped="0">
+    <testsuite name="LuaUnit" id="00001" package="" hostname="localhost" tests="263" timestamp="2024-12-31T00:08:01" time="0.080" errors="42" failures="7" skipped="0">
         <properties>
-            <property name="Lua Version" value="Lua 5.3"/>
+            <property name="Lua Version" value="Lua 5.4"/>
             <property name="LuaUnit Version" value="3.4"/>
         </properties>
         <testcase classname="TestBcdUserTypeBe" name="TestBcdUserTypeBe.test_bcd_user_type_be" time="0.000">
@@ -97,7 +97,22 @@
         </testcase>
         <testcase classname="TestEnumFancy" name="TestEnumFancy.test_enum_fancy" time="0.000">
         </testcase>
-        <testcase classname="TestEnumIf" name="TestEnumIf.test_enum_if" time="0.000">
+        <testcase classname="TestEnumIf" name="TestEnumIf.test_enum_if" time="0.002">
+            <error type="../runtime/lua/string_decode.lua:19: attempt to index a nil value (global &apos;bit32&apos;)">
+                <![CDATA[stack traceback:
+	../runtime/lua/string_decode.lua:19: in upvalue 'utf8_to_32'
+	../runtime/lua/string_decode.lua:38: in function 'string_decode.decode'
+	compiled/lua/enum_if.lua:42: in method '_read'
+	compiled/lua/enum_if.lua:37: in local 'init'
+	../runtime/lua/class.lua:70: in field 'ArgStr'
+	compiled/lua/enum_if.lua:76: in method '_read'
+	compiled/lua/enum_if.lua:67: in local 'init'
+	../runtime/lua/class.lua:70: in field 'Operation'
+	compiled/lua/enum_if.lua:25: in method '_read'
+	compiled/lua/enum_if.lua:21: in local 'init'
+	../runtime/lua/class.lua:70: in function <../runtime/lua/class.lua:66>
+	(...tail calls...)
+	spec/lua/test_enum_if.lua:10: in upvalue 'TestEnumIf.test_enum_if']]></error>
         </testcase>
         <testcase classname="TestEnumImportLiterals" name="TestEnumImportLiterals.test_enum_import_literals" time="0.000">
         </testcase>
@@ -123,8 +138,8 @@
         <testcase classname="TestEnumToI" name="TestEnumToI.test_enum_to_i" time="0.000">
         </testcase>
         <testcase classname="TestEnumToIClassBorder1" name="TestEnumToIClassBorder1.test_enum_to_i_class_border_1" time="0.001">
-            <failure type="spec/lua/run_test_suite.lua:18: error loading module &apos;enum_to_i_class_border_1&apos; from file &apos;compiled/lua/enum_to_i_class_border_1.lua&apos;:
-	compiled/lua/enum_to_i_class_border_1.lua:21: too many C levels (limit is 200) in function at line 18 near &apos;self&apos;">
+            <failure type="spec/lua/run_test_suite.lua:18: error loading module &apos;enum_to_i_class_border_2&apos; from file &apos;compiled/lua/enum_to_i_class_border_2.lua&apos;:
+	(null)">
                 <![CDATA[stack traceback:
 	spec/lua/run_test_suite.lua:18: in upvalue 'TestEnumToIClassBorder1.test_enum_to_i_class_border_1']]></failure>
         </testcase>
@@ -149,11 +164,32 @@
         </testcase>
         <testcase classname="TestExpr1" name="TestExpr1.test_expr_1" time="0.000">
         </testcase>
-        <testcase classname="TestExpr2" name="TestExpr2.test_expr_2" time="0.000">
+        <testcase classname="TestExpr2" name="TestExpr2.test_expr_2" time="0.001">
+            <error type="../runtime/lua/string_decode.lua:19: attempt to index a nil value (global &apos;bit32&apos;)">
+                <![CDATA[stack traceback:
+	../runtime/lua/string_decode.lua:19: in upvalue 'utf8_to_32'
+	../runtime/lua/string_decode.lua:38: in function 'string_decode.decode'
+	compiled/lua/expr_2.lua:106: in method '_read'
+	compiled/lua/expr_2.lua:101: in local 'init'
+	../runtime/lua/class.lua:70: in field 'ModStr'
+	compiled/lua/expr_2.lua:20: in method '_read'
+	compiled/lua/expr_2.lua:16: in local 'init'
+	../runtime/lua/class.lua:70: in function <../runtime/lua/class.lua:66>
+	(...tail calls...)
+	spec/lua/test_expr_2.lua:10: in upvalue 'TestExpr2.test_expr_2']]></error>
         </testcase>
         <testcase classname="TestExpr3" name="TestExpr3.test_expr_3" time="0.000">
         </testcase>
-        <testcase classname="TestExprArray" name="TestExprArray.test_expr_array" time="0.000">
+        <testcase classname="TestExprArray" name="TestExprArray.test_expr_array" time="0.001">
+            <error type="../runtime/lua/string_decode.lua:19: attempt to index a nil value (global &apos;bit32&apos;)">
+                <![CDATA[stack traceback:
+	../runtime/lua/string_decode.lua:19: in upvalue 'utf8_to_32'
+	../runtime/lua/string_decode.lua:38: in function 'string_decode.decode'
+	compiled/lua/expr_array.lua:30: in method '_read'
+	compiled/lua/expr_array.lua:16: in local 'init'
+	../runtime/lua/class.lua:70: in function <../runtime/lua/class.lua:66>
+	(...tail calls...)
+	spec/lua/test_expr_array.lua:10: in upvalue 'TestExprArray.test_expr_array']]></error>
         </testcase>
         <testcase classname="TestExprBits" name="TestExprBits.test_expr_bits" time="0.000">
         </testcase>
@@ -175,7 +211,19 @@
         </testcase>
         <testcase classname="TestExprIoEof" name="TestExprIoEof.test_expr_io_eof" time="0.000">
         </testcase>
-        <testcase classname="TestExprIoPos" name="TestExprIoPos.test_expr_io_pos" time="0.000">
+        <testcase classname="TestExprIoPos" name="TestExprIoPos.test_expr_io_pos" time="0.001">
+            <error type="../runtime/lua/string_decode.lua:19: attempt to index a nil value (global &apos;bit32&apos;)">
+                <![CDATA[stack traceback:
+	../runtime/lua/string_decode.lua:19: in upvalue 'utf8_to_32'
+	../runtime/lua/string_decode.lua:38: in function 'string_decode.decode'
+	compiled/lua/expr_io_pos.lua:39: in method '_read'
+	compiled/lua/expr_io_pos.lua:35: in local 'init'
+	../runtime/lua/class.lua:70: in field 'AllPlusNumber'
+	compiled/lua/expr_io_pos.lua:22: in method '_read'
+	compiled/lua/expr_io_pos.lua:16: in local 'init'
+	../runtime/lua/class.lua:70: in function <../runtime/lua/class.lua:66>
+	(...tail calls...)
+	spec/lua/test_expr_io_pos.lua:10: in upvalue 'TestExprIoPos.test_expr_io_pos']]></error>
         </testcase>
         <testcase classname="TestExprIoTernary" name="TestExprIoTernary.test_expr_io_ternary" time="0.000">
         </testcase>
@@ -191,11 +239,12 @@
         </testcase>
         <testcase classname="TestExprSizeofValueSized" name="TestExprSizeofValueSized.test_expr_sizeof_value_sized" time="0.000">
         </testcase>
-        <testcase classname="TestExprStrEncodings" name="TestExprStrEncodings.test_expr_str_encodings" time="0.002">
-            <error type="../runtime/lua/string_decode.lua:42: Encoding Shift_JIS not supported">
+        <testcase classname="TestExprStrEncodings" name="TestExprStrEncodings.test_expr_str_encodings" time="0.001">
+            <error type="../runtime/lua/string_decode.lua:19: attempt to index a nil value (global &apos;bit32&apos;)">
                 <![CDATA[stack traceback:
-	../runtime/lua/string_decode.lua:42: in function 'string_decode.decode'
-	compiled/lua/expr_str_encodings.lua:24: in method '_read'
+	../runtime/lua/string_decode.lua:19: in upvalue 'utf8_to_32'
+	../runtime/lua/string_decode.lua:38: in function 'string_decode.decode'
+	compiled/lua/expr_str_encodings.lua:22: in method '_read'
 	compiled/lua/expr_str_encodings.lua:15: in local 'init'
 	../runtime/lua/class.lua:70: in function <../runtime/lua/class.lua:66>
 	(...tail calls...)
@@ -215,7 +264,22 @@
         </testcase>
         <testcase classname="TestIfInstances" name="TestIfInstances.test_if_instances" time="0.000">
         </testcase>
-        <testcase classname="TestIfStruct" name="TestIfStruct.test_if_struct" time="0.000">
+        <testcase classname="TestIfStruct" name="TestIfStruct.test_if_struct" time="0.002">
+            <error type="../runtime/lua/string_decode.lua:19: attempt to index a nil value (global &apos;bit32&apos;)">
+                <![CDATA[stack traceback:
+	../runtime/lua/string_decode.lua:19: in upvalue 'utf8_to_32'
+	../runtime/lua/string_decode.lua:38: in function 'string_decode.decode'
+	compiled/lua/if_struct.lua:36: in method '_read'
+	compiled/lua/if_struct.lua:31: in local 'init'
+	../runtime/lua/class.lua:70: in field 'ArgStr'
+	compiled/lua/if_struct.lua:70: in method '_read'
+	compiled/lua/if_struct.lua:61: in local 'init'
+	../runtime/lua/class.lua:70: in field 'Operation'
+	compiled/lua/if_struct.lua:19: in method '_read'
+	compiled/lua/if_struct.lua:15: in local 'init'
+	../runtime/lua/class.lua:70: in function <../runtime/lua/class.lua:66>
+	(...tail calls...)
+	spec/lua/test_if_struct.lua:10: in upvalue 'TestIfStruct.test_if_struct']]></error>
         </testcase>
         <testcase classname="TestIfValues" name="TestIfValues.test_if_values" time="0.000">
         </testcase>
@@ -231,9 +295,9 @@
         </testcase>
         <testcase classname="TestImportsCastToImported2" name="TestImportsCastToImported2.test_imports_cast_to_imported2" time="0.000">
         </testcase>
-        <testcase classname="TestImportsCircularA" name="TestImportsCircularA.test_imports_circular_a" time="0.003">
+        <testcase classname="TestImportsCircularA" name="TestImportsCircularA.test_imports_circular_a" time="0.002">
             <failure type="spec/lua/run_test_suite.lua:18: error loading module &apos;imports_circular_b&apos; from file &apos;compiled/lua/imports_circular_b.lua&apos;:
-	compiled/lua/imports_circular_b.lua:21: too many C levels (limit is 200) in function at line 18 near &apos;self&apos;">
+	(null)">
                 <![CDATA[stack traceback:
 	spec/lua/run_test_suite.lua:18: in upvalue 'TestImportsCircularA.test_imports_circular_a']]></failure>
         </testcase>
@@ -253,7 +317,19 @@
         </testcase>
         <testcase classname="TestIndexToParamUntil" name="TestIndexToParamUntil.test_index_to_param_until" time="0.000">
         </testcase>
-        <testcase classname="TestInstanceIoUser" name="TestInstanceIoUser.test_instance_io_user" time="0.000">
+        <testcase classname="TestInstanceIoUser" name="TestInstanceIoUser.test_instance_io_user" time="0.001">
+            <error type="../runtime/lua/string_decode.lua:19: attempt to index a nil value (global &apos;bit32&apos;)">
+                <![CDATA[stack traceback:
+	../runtime/lua/string_decode.lua:19: in upvalue 'utf8_to_32'
+	../runtime/lua/string_decode.lua:38: in function 'string_decode.decode'
+	compiled/lua/instance_io_user.lua:73: in method '_read'
+	compiled/lua/instance_io_user.lua:66: in local 'init'
+	../runtime/lua/class.lua:70: in field 'StringsObj'
+	compiled/lua/instance_io_user.lua:27: in method '_read'
+	compiled/lua/instance_io_user.lua:16: in local 'init'
+	../runtime/lua/class.lua:70: in function <../runtime/lua/class.lua:66>
+	(...tail calls...)
+	spec/lua/test_instance_io_user.lua:10: in upvalue 'TestInstanceIoUser.test_instance_io_user']]></error>
         </testcase>
         <testcase classname="TestInstanceStd" name="TestInstanceStd.test_instance_std" time="0.000">
         </testcase>
@@ -277,7 +353,22 @@
         </testcase>
         <testcase classname="TestMultipleUse" name="TestMultipleUse.test_multiple_use" time="0.000">
         </testcase>
-        <testcase classname="TestNavParent" name="TestNavParent.test_nav_parent" time="0.000">
+        <testcase classname="TestNavParent" name="TestNavParent.test_nav_parent" time="0.002">
+            <error type="../runtime/lua/string_decode.lua:19: attempt to index a nil value (global &apos;bit32&apos;)">
+                <![CDATA[stack traceback:
+	../runtime/lua/string_decode.lua:19: in upvalue 'utf8_to_32'
+	../runtime/lua/string_decode.lua:38: in function 'string_decode.decode'
+	compiled/lua/nav_parent.lua:34: in method '_read'
+	compiled/lua/nav_parent.lua:30: in local 'init'
+	../runtime/lua/class.lua:70: in field 'Entry'
+	compiled/lua/nav_parent.lua:66: in method '_read'
+	compiled/lua/nav_parent.lua:59: in local 'init'
+	../runtime/lua/class.lua:70: in field 'IndexObj'
+	compiled/lua/nav_parent.lua:20: in method '_read'
+	compiled/lua/nav_parent.lua:15: in local 'init'
+	../runtime/lua/class.lua:70: in function <../runtime/lua/class.lua:66>
+	(...tail calls...)
+	spec/lua/test_nav_parent.lua:10: in upvalue 'TestNavParent.test_nav_parent']]></error>
         </testcase>
         <testcase classname="TestNavParent2" name="TestNavParent2.test_nav_parent2" time="0.000">
         </testcase>
@@ -295,9 +386,33 @@
         </testcase>
         <testcase classname="TestNavParentSwitchCast" name="TestNavParentSwitchCast.test_nav_parent_switch_cast" time="0.000">
         </testcase>
-        <testcase classname="TestNavParentVsValueInst" name="TestNavParentVsValueInst.test_nav_parent_vs_value_inst" time="0.000">
+        <testcase classname="TestNavParentVsValueInst" name="TestNavParentVsValueInst.test_nav_parent_vs_value_inst" time="0.001">
+            <error type="../runtime/lua/string_decode.lua:19: attempt to index a nil value (global &apos;bit32&apos;)">
+                <![CDATA[stack traceback:
+	../runtime/lua/string_decode.lua:19: in upvalue 'utf8_to_32'
+	../runtime/lua/string_decode.lua:38: in function 'string_decode.decode'
+	compiled/lua/nav_parent_vs_value_inst.lua:20: in method '_read'
+	compiled/lua/nav_parent_vs_value_inst.lua:16: in local 'init'
+	../runtime/lua/class.lua:70: in function <../runtime/lua/class.lua:66>
+	(...tail calls...)
+	spec/lua/test_nav_parent_vs_value_inst.lua:10: in upvalue 'TestNavParentVsValueInst.test_nav_parent_vs_value_inst']]></error>
         </testcase>
-        <testcase classname="TestNavRoot" name="TestNavRoot.test_nav_root" time="0.000">
+        <testcase classname="TestNavRoot" name="TestNavRoot.test_nav_root" time="0.002">
+            <error type="../runtime/lua/string_decode.lua:19: attempt to index a nil value (global &apos;bit32&apos;)">
+                <![CDATA[stack traceback:
+	../runtime/lua/string_decode.lua:19: in upvalue 'utf8_to_32'
+	../runtime/lua/string_decode.lua:38: in function 'string_decode.decode'
+	compiled/lua/nav_root.lua:34: in method '_read'
+	compiled/lua/nav_root.lua:30: in local 'init'
+	../runtime/lua/class.lua:70: in field 'Entry'
+	compiled/lua/nav_root.lua:66: in method '_read'
+	compiled/lua/nav_root.lua:59: in local 'init'
+	../runtime/lua/class.lua:70: in field 'IndexObj'
+	compiled/lua/nav_root.lua:20: in method '_read'
+	compiled/lua/nav_root.lua:15: in local 'init'
+	../runtime/lua/class.lua:70: in function <../runtime/lua/class.lua:66>
+	(...tail calls...)
+	spec/lua/test_nav_root.lua:10: in upvalue 'TestNavRoot.test_nav_root']]></error>
         </testcase>
         <testcase classname="TestNavRootRecursive" name="TestNavRootRecursive.test_nav_root_recursive" time="0.000">
         </testcase>
@@ -317,19 +432,90 @@
         </testcase>
         <testcase classname="TestNonStandard" name="TestNonStandard.test_non_standard" time="0.000">
         </testcase>
-        <testcase classname="TestOpaqueExternalType" name="TestOpaqueExternalType.test_opaque_external_type" time="0.000">
+        <testcase classname="TestOpaqueExternalType" name="TestOpaqueExternalType.test_opaque_external_type" time="0.002">
+            <error type="../runtime/lua/string_decode.lua:19: attempt to index a nil value (global &apos;bit32&apos;)">
+                <![CDATA[stack traceback:
+	../runtime/lua/string_decode.lua:19: in upvalue 'utf8_to_32'
+	../runtime/lua/string_decode.lua:38: in function 'string_decode.decode'
+	compiled/lua/term_strz.lua:19: in method '_read'
+	compiled/lua/term_strz.lua:15: in local 'init'
+	../runtime/lua/class.lua:70: in global 'TermStrz'
+	compiled/lua/opaque_external_type.lua:19: in method '_read'
+	compiled/lua/opaque_external_type.lua:15: in local 'init'
+	../runtime/lua/class.lua:70: in function <../runtime/lua/class.lua:66>
+	(...tail calls...)
+	spec/lua/test_opaque_external_type.lua:8: in upvalue 'TestOpaqueExternalType.test_opaque_external_type']]></error>
         </testcase>
-        <testcase classname="TestOpaqueExternalType02Parent" name="TestOpaqueExternalType02Parent.test_opaque_external_type_02_parent" time="0.000">
+        <testcase classname="TestOpaqueExternalType02Parent" name="TestOpaqueExternalType02Parent.test_opaque_external_type_02_parent" time="0.002">
+            <error type="../runtime/lua/string_decode.lua:19: attempt to index a nil value (global &apos;bit32&apos;)">
+                <![CDATA[stack traceback:
+	../runtime/lua/string_decode.lua:19: in upvalue 'utf8_to_32'
+	../runtime/lua/string_decode.lua:38: in function 'string_decode.decode'
+	compiled/lua/opaque_external_type_02_child.lua:19: in method '_read'
+	compiled/lua/opaque_external_type_02_child.lua:15: in local 'init'
+	../runtime/lua/class.lua:70: in global 'OpaqueExternalType02Child'
+	compiled/lua/opaque_external_type_02_parent.lua:33: in method '_read'
+	compiled/lua/opaque_external_type_02_parent.lua:29: in local 'init'
+	../runtime/lua/class.lua:70: in field 'ParentObj'
+	compiled/lua/opaque_external_type_02_parent.lua:19: in method '_read'
+	compiled/lua/opaque_external_type_02_parent.lua:15: in local 'init'
+	../runtime/lua/class.lua:70: in function <../runtime/lua/class.lua:66>
+	(...tail calls...)
+	spec/lua/test_opaque_external_type_02_parent.lua:8: in upvalue 'TestOpaqueExternalType02Parent.test_opaque_external_type_02_parent']]></error>
         </testcase>
-        <testcase classname="TestOpaqueWithParam" name="TestOpaqueWithParam.test_opaque_with_param" time="0.000">
+        <testcase classname="TestOpaqueWithParam" name="TestOpaqueWithParam.test_opaque_with_param" time="0.001">
+            <error type="../runtime/lua/string_decode.lua:19: attempt to index a nil value (global &apos;bit32&apos;)">
+                <![CDATA[stack traceback:
+	../runtime/lua/string_decode.lua:19: in upvalue 'utf8_to_32'
+	../runtime/lua/string_decode.lua:38: in function 'string_decode.decode'
+	compiled/lua/params_def.lua:21: in method '_read'
+	compiled/lua/params_def.lua:17: in local 'init'
+	../runtime/lua/class.lua:70: in global 'ParamsDef'
+	compiled/lua/opaque_with_param.lua:19: in method '_read'
+	compiled/lua/opaque_with_param.lua:15: in local 'init'
+	../runtime/lua/class.lua:70: in function <../runtime/lua/class.lua:66>
+	(...tail calls...)
+	spec/lua/test_opaque_with_param.lua:8: in upvalue 'TestOpaqueWithParam.test_opaque_with_param']]></error>
         </testcase>
         <testcase classname="TestOptionalId" name="TestOptionalId.test_optional_id" time="0.000">
         </testcase>
-        <testcase classname="TestParamsCall" name="TestParamsCall.test_params_call" time="0.000">
+        <testcase classname="TestParamsCall" name="TestParamsCall.test_params_call" time="0.001">
+            <error type="../runtime/lua/string_decode.lua:19: attempt to index a nil value (global &apos;bit32&apos;)">
+                <![CDATA[stack traceback:
+	../runtime/lua/string_decode.lua:19: in upvalue 'utf8_to_32'
+	../runtime/lua/string_decode.lua:38: in function 'string_decode.decode'
+	compiled/lua/params_call.lua:35: in method '_read'
+	compiled/lua/params_call.lua:31: in local 'init'
+	../runtime/lua/class.lua:70: in field 'MyStr1'
+	compiled/lua/params_call.lua:19: in method '_read'
+	compiled/lua/params_call.lua:15: in local 'init'
+	../runtime/lua/class.lua:70: in function <../runtime/lua/class.lua:66>
+	(...tail calls...)
+	spec/lua/test_params_call.lua:10: in upvalue 'TestParamsCall.test_params_call']]></error>
         </testcase>
-        <testcase classname="TestParamsCallExtraParens" name="TestParamsCallExtraParens.test_params_call_extra_parens" time="0.000">
+        <testcase classname="TestParamsCallExtraParens" name="TestParamsCallExtraParens.test_params_call_extra_parens" time="0.001">
+            <error type="../runtime/lua/string_decode.lua:19: attempt to index a nil value (global &apos;bit32&apos;)">
+                <![CDATA[stack traceback:
+	../runtime/lua/string_decode.lua:19: in upvalue 'utf8_to_32'
+	../runtime/lua/string_decode.lua:38: in function 'string_decode.decode'
+	compiled/lua/params_call_extra_parens.lua:34: in method '_read'
+	compiled/lua/params_call_extra_parens.lua:30: in local 'init'
+	../runtime/lua/class.lua:70: in field 'MyStr1'
+	compiled/lua/params_call_extra_parens.lua:19: in method '_read'
+	compiled/lua/params_call_extra_parens.lua:15: in local 'init'
+	../runtime/lua/class.lua:70: in function <../runtime/lua/class.lua:66>
+	(...tail calls...)
+	spec/lua/test_params_call_extra_parens.lua:10: in upvalue 'TestParamsCallExtraParens.test_params_call_extra_parens']]></error>
         </testcase>
-        <testcase classname="TestParamsDef" name="TestParamsDef.test_params_def" time="0.000">
+        <testcase classname="TestParamsDef" name="TestParamsDef.test_params_def" time="0.001">
+            <error type="../runtime/lua/string_decode.lua:19: attempt to index a nil value (global &apos;bit32&apos;)">
+                <![CDATA[stack traceback:
+	../runtime/lua/string_decode.lua:19: in upvalue 'utf8_to_32'
+	../runtime/lua/string_decode.lua:38: in function 'string_decode.decode'
+	compiled/lua/params_def.lua:21: in method '_read'
+	compiled/lua/params_def.lua:17: in local 'init'
+	../runtime/lua/class.lua:70: in global 'ParamsDef'
+	spec/lua/test_params_def.lua:10: in upvalue 'TestParamsDef.test_params_def']]></error>
         </testcase>
         <testcase classname="TestParamsEnum" name="TestParamsEnum.test_params_enum" time="0.000">
         </testcase>
@@ -347,7 +533,17 @@
         </testcase>
         <testcase classname="TestParamsPassUsertype" name="TestParamsPassUsertype.test_params_pass_usertype" time="0.000">
         </testcase>
-        <testcase classname="TestPositionAbs" name="TestPositionAbs.test_position_abs" time="0.000">
+        <testcase classname="TestPositionAbs" name="TestPositionAbs.test_position_abs" time="0.001">
+            <error type="../runtime/lua/string_decode.lua:19: attempt to index a nil value (global &apos;bit32&apos;)">
+                <![CDATA[stack traceback:
+	../runtime/lua/string_decode.lua:19: in upvalue 'utf8_to_32'
+	../runtime/lua/string_decode.lua:38: in function 'string_decode.decode'
+	compiled/lua/position_abs.lua:46: in method '_read'
+	compiled/lua/position_abs.lua:42: in local 'init'
+	../runtime/lua/class.lua:70: in field 'IndexObj'
+	compiled/lua/position_abs.lua:30: in function <compiled/lua/position_abs.lua:23>
+	(...tail calls...)
+	spec/lua/test_position_abs.lua:13: in upvalue 'TestPositionAbs.test_position_abs']]></error>
         </testcase>
         <testcase classname="TestPositionInSeq" name="TestPositionInSeq.test_position_in_seq" time="0.000">
         </testcase>
@@ -371,7 +567,19 @@
         </testcase>
         <testcase classname="TestProcessRotate" name="TestProcessRotate.test_process_rotate" time="0.000">
         </testcase>
-        <testcase classname="TestProcessToUser" name="TestProcessToUser.test_process_to_user" time="0.000">
+        <testcase classname="TestProcessToUser" name="TestProcessToUser.test_process_to_user" time="0.002">
+            <error type="../runtime/lua/string_decode.lua:19: attempt to index a nil value (global &apos;bit32&apos;)">
+                <![CDATA[stack traceback:
+	../runtime/lua/string_decode.lua:19: in upvalue 'utf8_to_32'
+	../runtime/lua/string_decode.lua:38: in function 'string_decode.decode'
+	compiled/lua/process_to_user.lua:37: in method '_read'
+	compiled/lua/process_to_user.lua:33: in local 'init'
+	../runtime/lua/class.lua:70: in field 'JustStr'
+	compiled/lua/process_to_user.lua:23: in method '_read'
+	compiled/lua/process_to_user.lua:16: in local 'init'
+	../runtime/lua/class.lua:70: in function <../runtime/lua/class.lua:66>
+	(...tail calls...)
+	spec/lua/test_process_to_user.lua:10: in upvalue 'TestProcessToUser.test_process_to_user']]></error>
         </testcase>
         <testcase classname="TestProcessXor4Const" name="TestProcessXor4Const.test_process_xor4_const" time="0.000">
         </testcase>
@@ -391,9 +599,27 @@
         </testcase>
         <testcase classname="TestRepeatNStruct" name="TestRepeatNStruct.test_repeat_n_struct" time="0.000">
         </testcase>
-        <testcase classname="TestRepeatNStrz" name="TestRepeatNStrz.test_repeat_n_strz" time="0.000">
+        <testcase classname="TestRepeatNStrz" name="TestRepeatNStrz.test_repeat_n_strz" time="0.001">
+            <error type="../runtime/lua/string_decode.lua:19: attempt to index a nil value (global &apos;bit32&apos;)">
+                <![CDATA[stack traceback:
+	../runtime/lua/string_decode.lua:19: in upvalue 'utf8_to_32'
+	../runtime/lua/string_decode.lua:38: in function 'string_decode.decode'
+	compiled/lua/repeat_n_strz.lua:22: in method '_read'
+	compiled/lua/repeat_n_strz.lua:15: in local 'init'
+	../runtime/lua/class.lua:70: in function <../runtime/lua/class.lua:66>
+	(...tail calls...)
+	spec/lua/test_repeat_n_strz.lua:10: in upvalue 'TestRepeatNStrz.test_repeat_n_strz']]></error>
         </testcase>
-        <testcase classname="TestRepeatNStrzDouble" name="TestRepeatNStrzDouble.test_repeat_n_strz_double" time="0.000">
+        <testcase classname="TestRepeatNStrzDouble" name="TestRepeatNStrzDouble.test_repeat_n_strz_double" time="0.001">
+            <error type="../runtime/lua/string_decode.lua:19: attempt to index a nil value (global &apos;bit32&apos;)">
+                <![CDATA[stack traceback:
+	../runtime/lua/string_decode.lua:19: in upvalue 'utf8_to_32'
+	../runtime/lua/string_decode.lua:38: in function 'string_decode.decode'
+	compiled/lua/repeat_n_strz_double.lua:22: in method '_read'
+	compiled/lua/repeat_n_strz_double.lua:15: in local 'init'
+	../runtime/lua/class.lua:70: in function <../runtime/lua/class.lua:66>
+	(...tail calls...)
+	spec/lua/test_repeat_n_strz_double.lua:10: in upvalue 'TestRepeatNStrzDouble.test_repeat_n_strz_double']]></error>
         </testcase>
         <testcase classname="TestRepeatUntilCalcArrayType" name="TestRepeatUntilCalcArrayType.test_repeat_until_calc_array_type" time="0.000">
         </testcase>
@@ -403,24 +629,23 @@
         </testcase>
         <testcase classname="TestRepeatUntilSized" name="TestRepeatUntilSized.test_repeat_until_sized" time="0.000">
         </testcase>
-        <testcase classname="TestStrEncodings" name="TestStrEncodings.test_str_encodings" time="0.002">
-            <error type="../runtime/lua/string_decode.lua:42: Encoding Shift_JIS not supported">
+        <testcase classname="TestStrEncodings" name="TestStrEncodings.test_str_encodings" time="0.001">
+            <error type="../runtime/lua/string_decode.lua:19: attempt to index a nil value (global &apos;bit32&apos;)">
                 <![CDATA[stack traceback:
-	../runtime/lua/string_decode.lua:42: in function 'string_decode.decode'
-	compiled/lua/str_encodings.lua:24: in method '_read'
+	../runtime/lua/string_decode.lua:19: in upvalue 'utf8_to_32'
+	../runtime/lua/string_decode.lua:38: in function 'string_decode.decode'
+	compiled/lua/str_encodings.lua:22: in method '_read'
 	compiled/lua/str_encodings.lua:15: in local 'init'
 	../runtime/lua/class.lua:70: in function <../runtime/lua/class.lua:66>
 	(...tail calls...)
 	spec/lua/test_str_encodings.lua:10: in upvalue 'TestStrEncodings.test_str_encodings']]></error>
         </testcase>
-        <testcase classname="TestStrEncodingsDefault" name="TestStrEncodingsDefault.test_str_encodings_default" time="0.002">
-            <error type="../runtime/lua/string_decode.lua:42: Encoding Shift_JIS not supported">
+        <testcase classname="TestStrEncodingsDefault" name="TestStrEncodingsDefault.test_str_encodings_default" time="0.001">
+            <error type="../runtime/lua/string_decode.lua:19: attempt to index a nil value (global &apos;bit32&apos;)">
                 <![CDATA[stack traceback:
-	../runtime/lua/string_decode.lua:42: in function 'string_decode.decode'
-	compiled/lua/str_encodings_default.lua:38: in method '_read'
-	compiled/lua/str_encodings_default.lua:31: in local 'init'
-	../runtime/lua/class.lua:70: in field 'Subtype'
-	compiled/lua/str_encodings_default.lua:21: in method '_read'
+	../runtime/lua/string_decode.lua:19: in upvalue 'utf8_to_32'
+	../runtime/lua/string_decode.lua:38: in function 'string_decode.decode'
+	compiled/lua/str_encodings_default.lua:20: in method '_read'
 	compiled/lua/str_encodings_default.lua:15: in local 'init'
 	../runtime/lua/class.lua:70: in function <../runtime/lua/class.lua:66>
 	(...tail calls...)
@@ -430,7 +655,7 @@
         </testcase>
         <testcase classname="TestStrEncodingsEscapingToS" name="TestStrEncodingsEscapingToS.test_str_encodings_escaping_to_s" time="0.000">
         </testcase>
-        <testcase classname="TestStrEncodingsUtf16" name="TestStrEncodingsUtf16.test_str_encodings_utf16" time="0.002">
+        <testcase classname="TestStrEncodingsUtf16" name="TestStrEncodingsUtf16.test_str_encodings_utf16" time="0.001">
             <error type="../runtime/lua/string_decode.lua:42: Encoding UTF-16BE not supported">
                 <![CDATA[stack traceback:
 	../runtime/lua/string_decode.lua:42: in function 'string_decode.decode'
@@ -443,22 +668,55 @@
 	(...tail calls...)
 	spec/lua/test_str_encodings_utf16.lua:10: in upvalue 'TestStrEncodingsUtf16.test_str_encodings_utf16']]></error>
         </testcase>
-        <testcase classname="TestStrEos" name="TestStrEos.test_str_eos" time="0.000">
+        <testcase classname="TestStrEos" name="TestStrEos.test_str_eos" time="0.001">
+            <error type="../runtime/lua/string_decode.lua:19: attempt to index a nil value (global &apos;bit32&apos;)">
+                <![CDATA[stack traceback:
+	../runtime/lua/string_decode.lua:19: in upvalue 'utf8_to_32'
+	../runtime/lua/string_decode.lua:38: in function 'string_decode.decode'
+	compiled/lua/str_eos.lua:19: in method '_read'
+	compiled/lua/str_eos.lua:15: in local 'init'
+	../runtime/lua/class.lua:70: in function <../runtime/lua/class.lua:66>
+	(...tail calls...)
+	spec/lua/test_str_eos.lua:10: in upvalue 'TestStrEos.test_str_eos']]></error>
         </testcase>
         <testcase classname="TestStrLiterals" name="TestStrLiterals.test_str_literals" time="0.000">
         </testcase>
         <testcase classname="TestStrLiterals2" name="TestStrLiterals2.test_str_literals2" time="0.000">
         </testcase>
-        <testcase classname="TestStrLiteralsLatin1" name="TestStrLiteralsLatin1.test_str_literals_latin1" time="0.002">
-            <failure type="spec/lua/test_str_literals_latin1.lua:12: expected: true, actual: false">
+        <testcase classname="TestStrLiteralsLatin1" name="TestStrLiteralsLatin1.test_str_literals_latin1" time="0.001">
+            <error type="../runtime/lua/string_decode.lua:19: attempt to index a nil value (global &apos;bit32&apos;)">
                 <![CDATA[stack traceback:
-	spec/lua/test_str_literals_latin1.lua:12: in upvalue 'TestStrLiteralsLatin1.test_str_literals_latin1']]></failure>
+	../runtime/lua/string_decode.lua:19: in upvalue 'utf8_to_32'
+	../runtime/lua/string_decode.lua:38: in function 'string_decode.decode'
+	compiled/lua/str_literals_latin1.lua:20: in method '_read'
+	compiled/lua/str_literals_latin1.lua:15: in local 'init'
+	../runtime/lua/class.lua:70: in function <../runtime/lua/class.lua:66>
+	(...tail calls...)
+	spec/lua/test_str_literals_latin1.lua:10: in upvalue 'TestStrLiteralsLatin1.test_str_literals_latin1']]></error>
         </testcase>
-        <testcase classname="TestStrPadTerm" name="TestStrPadTerm.test_str_pad_term" time="0.000">
+        <testcase classname="TestStrPadTerm" name="TestStrPadTerm.test_str_pad_term" time="0.001">
+            <error type="../runtime/lua/string_decode.lua:19: attempt to index a nil value (global &apos;bit32&apos;)">
+                <![CDATA[stack traceback:
+	../runtime/lua/string_decode.lua:19: in upvalue 'utf8_to_32'
+	../runtime/lua/string_decode.lua:38: in function 'string_decode.decode'
+	compiled/lua/str_pad_term.lua:19: in method '_read'
+	compiled/lua/str_pad_term.lua:15: in local 'init'
+	../runtime/lua/class.lua:70: in function <../runtime/lua/class.lua:66>
+	(...tail calls...)
+	spec/lua/test_str_pad_term.lua:10: in upvalue 'TestStrPadTerm.test_str_pad_term']]></error>
         </testcase>
-        <testcase classname="TestStrPadTermEmpty" name="TestStrPadTermEmpty.test_str_pad_term_empty" time="0.000">
+        <testcase classname="TestStrPadTermEmpty" name="TestStrPadTermEmpty.test_str_pad_term_empty" time="0.001">
+            <error type="../runtime/lua/string_decode.lua:19: attempt to index a nil value (global &apos;bit32&apos;)">
+                <![CDATA[stack traceback:
+	../runtime/lua/string_decode.lua:19: in upvalue 'utf8_to_32'
+	../runtime/lua/string_decode.lua:38: in function 'string_decode.decode'
+	compiled/lua/str_pad_term_empty.lua:22: in method '_read'
+	compiled/lua/str_pad_term_empty.lua:15: in local 'init'
+	../runtime/lua/class.lua:70: in function <../runtime/lua/class.lua:66>
+	(...tail calls...)
+	spec/lua/test_str_pad_term_empty.lua:10: in upvalue 'TestStrPadTermEmpty.test_str_pad_term_empty']]></error>
         </testcase>
-        <testcase classname="TestStrPadTermUtf16" name="TestStrPadTermUtf16.test_str_pad_term_utf16" time="0.002">
+        <testcase classname="TestStrPadTermUtf16" name="TestStrPadTermUtf16.test_str_pad_term_utf16" time="0.001">
             <error type="../runtime/lua/string_decode.lua:42: Encoding UTF-16LE not supported">
                 <![CDATA[stack traceback:
 	../runtime/lua/string_decode.lua:42: in function 'string_decode.decode'
@@ -494,11 +752,56 @@
         </testcase>
         <testcase classname="TestSwitchManualIntElse" name="TestSwitchManualIntElse.test_switch_manual_int_else" time="0.000">
         </testcase>
-        <testcase classname="TestSwitchManualIntSize" name="TestSwitchManualIntSize.test_switch_manual_int_size" time="0.000">
+        <testcase classname="TestSwitchManualIntSize" name="TestSwitchManualIntSize.test_switch_manual_int_size" time="0.002">
+            <error type="../runtime/lua/string_decode.lua:19: attempt to index a nil value (global &apos;bit32&apos;)">
+                <![CDATA[stack traceback:
+	../runtime/lua/string_decode.lua:19: in upvalue 'utf8_to_32'
+	../runtime/lua/string_decode.lua:38: in function 'string_decode.decode'
+	compiled/lua/switch_manual_int_size.lua:85: in method '_read'
+	compiled/lua/switch_manual_int_size.lua:81: in local 'init'
+	../runtime/lua/class.lua:70: in field 'ChunkMeta'
+	compiled/lua/switch_manual_int_size.lua:45: in method '_read'
+	compiled/lua/switch_manual_int_size.lua:35: in local 'init'
+	../runtime/lua/class.lua:70: in field 'Chunk'
+	compiled/lua/switch_manual_int_size.lua:23: in method '_read'
+	compiled/lua/switch_manual_int_size.lua:16: in local 'init'
+	../runtime/lua/class.lua:70: in function <../runtime/lua/class.lua:66>
+	(...tail calls...)
+	spec/lua/test_switch_manual_int_size.lua:10: in upvalue 'TestSwitchManualIntSize.test_switch_manual_int_size']]></error>
         </testcase>
-        <testcase classname="TestSwitchManualIntSizeElse" name="TestSwitchManualIntSizeElse.test_switch_manual_int_size_else" time="0.000">
+        <testcase classname="TestSwitchManualIntSizeElse" name="TestSwitchManualIntSizeElse.test_switch_manual_int_size_else" time="0.002">
+            <error type="../runtime/lua/string_decode.lua:19: attempt to index a nil value (global &apos;bit32&apos;)">
+                <![CDATA[stack traceback:
+	../runtime/lua/string_decode.lua:19: in upvalue 'utf8_to_32'
+	../runtime/lua/string_decode.lua:38: in function 'string_decode.decode'
+	compiled/lua/switch_manual_int_size_else.lua:87: in method '_read'
+	compiled/lua/switch_manual_int_size_else.lua:83: in local 'init'
+	../runtime/lua/class.lua:70: in field 'ChunkMeta'
+	compiled/lua/switch_manual_int_size_else.lua:45: in method '_read'
+	compiled/lua/switch_manual_int_size_else.lua:35: in local 'init'
+	../runtime/lua/class.lua:70: in field 'Chunk'
+	compiled/lua/switch_manual_int_size_else.lua:23: in method '_read'
+	compiled/lua/switch_manual_int_size_else.lua:16: in local 'init'
+	../runtime/lua/class.lua:70: in function <../runtime/lua/class.lua:66>
+	(...tail calls...)
+	spec/lua/test_switch_manual_int_size_else.lua:10: in upvalue 'TestSwitchManualIntSizeElse.test_switch_manual_int_size_else']]></error>
         </testcase>
-        <testcase classname="TestSwitchManualIntSizeEos" name="TestSwitchManualIntSizeEos.test_switch_manual_int_size_eos" time="0.000">
+        <testcase classname="TestSwitchManualIntSizeEos" name="TestSwitchManualIntSizeEos.test_switch_manual_int_size_eos" time="0.002">
+            <error type="../runtime/lua/string_decode.lua:19: attempt to index a nil value (global &apos;bit32&apos;)">
+                <![CDATA[stack traceback:
+	../runtime/lua/string_decode.lua:19: in upvalue 'utf8_to_32'
+	../runtime/lua/string_decode.lua:38: in function 'string_decode.decode'
+	compiled/lua/switch_manual_int_size_eos.lua:101: in method '_read'
+	compiled/lua/switch_manual_int_size_eos.lua:97: in local 'init'
+	../runtime/lua/class.lua:70: in field 'ChunkMeta'
+	compiled/lua/switch_manual_int_size_eos.lua:61: in method '_read'
+	compiled/lua/switch_manual_int_size_eos.lua:53: in local 'init'
+	../runtime/lua/class.lua:70: in field 'ChunkBody'
+	compiled/lua/switch_manual_int_size_eos.lua:43: in method '_read'
+	...	(skipping 3 levels)
+	../runtime/lua/class.lua:70: in function <../runtime/lua/class.lua:66>
+	(...tail calls...)
+	spec/lua/test_switch_manual_int_size_eos.lua:10: in upvalue 'TestSwitchManualIntSizeEos.test_switch_manual_int_size_eos']]></error>
         </testcase>
         <testcase classname="TestSwitchManualStr" name="TestSwitchManualStr.test_switch_manual_str" time="0.000">
         </testcase>
@@ -512,7 +815,16 @@
         </testcase>
         <testcase classname="TestTermBytes" name="TestTermBytes.test_term_bytes" time="0.000">
         </testcase>
-        <testcase classname="TestTermStrz" name="TestTermStrz.test_term_strz" time="0.000">
+        <testcase classname="TestTermStrz" name="TestTermStrz.test_term_strz" time="0.001">
+            <error type="../runtime/lua/string_decode.lua:19: attempt to index a nil value (global &apos;bit32&apos;)">
+                <![CDATA[stack traceback:
+	../runtime/lua/string_decode.lua:19: in upvalue 'utf8_to_32'
+	../runtime/lua/string_decode.lua:38: in function 'string_decode.decode'
+	compiled/lua/term_strz.lua:19: in method '_read'
+	compiled/lua/term_strz.lua:15: in local 'init'
+	../runtime/lua/class.lua:70: in function <../runtime/lua/class.lua:66>
+	(...tail calls...)
+	spec/lua/test_term_strz.lua:10: in upvalue 'TestTermStrz.test_term_strz']]></error>
         </testcase>
         <testcase classname="TestTermStrzUtf16V1" name="TestTermStrzUtf16V1.test_term_strz_utf16_v1" time="0.001">
             <error type="../runtime/lua/string_decode.lua:42: Encoding UTF-16LE not supported">
@@ -557,9 +869,27 @@
 	(...tail calls...)
 	spec/lua/test_term_strz_utf16_v4.lua:10: in upvalue 'TestTermStrzUtf16V4.test_term_strz_utf16_v4']]></error>
         </testcase>
-        <testcase classname="TestTermU1Val" name="TestTermU1Val.test_term_u1_val" time="0.000">
+        <testcase classname="TestTermU1Val" name="TestTermU1Val.test_term_u1_val" time="0.001">
+            <error type="../runtime/lua/string_decode.lua:19: attempt to index a nil value (global &apos;bit32&apos;)">
+                <![CDATA[stack traceback:
+	../runtime/lua/string_decode.lua:19: in upvalue 'utf8_to_32'
+	../runtime/lua/string_decode.lua:38: in function 'string_decode.decode'
+	compiled/lua/term_u1_val.lua:20: in method '_read'
+	compiled/lua/term_u1_val.lua:15: in local 'init'
+	../runtime/lua/class.lua:70: in function <../runtime/lua/class.lua:66>
+	(...tail calls...)
+	spec/lua/test_term_u1_val.lua:10: in upvalue 'TestTermU1Val.test_term_u1_val']]></error>
         </testcase>
-        <testcase classname="TestToStringCustom" name="TestToStringCustom.test_term_strz" time="0.000">
+        <testcase classname="TestToStringCustom" name="TestToStringCustom.test_term_strz" time="0.001">
+            <error type="../runtime/lua/string_decode.lua:19: attempt to index a nil value (global &apos;bit32&apos;)">
+                <![CDATA[stack traceback:
+	../runtime/lua/string_decode.lua:19: in upvalue 'utf8_to_32'
+	../runtime/lua/string_decode.lua:38: in function 'string_decode.decode'
+	compiled/lua/to_string_custom.lua:19: in method '_read'
+	compiled/lua/to_string_custom.lua:15: in local 'init'
+	../runtime/lua/class.lua:70: in function <../runtime/lua/class.lua:66>
+	(...tail calls...)
+	spec/lua/test_to_string_custom.lua:8: in upvalue 'TestToStringCustom.test_term_strz']]></error>
         </testcase>
         <testcase classname="TestTsPacketHeader" name="TestTsPacketHeader.test_ts_packet_header" time="0.000">
         </testcase>
@@ -569,15 +899,28 @@
         </testcase>
         <testcase classname="TestTypeTernary2ndFalsy" name="TestTypeTernary2ndFalsy.test_type_ternary_2nd_falsy" time="0.000">
         </testcase>
-        <testcase classname="TestTypeTernaryOpaque" name="TestTypeTernaryOpaque.test_type_ternary_opaque" time="0.000">
+        <testcase classname="TestTypeTernaryOpaque" name="TestTypeTernaryOpaque.test_type_ternary_opaque" time="0.001">
+            <error type="../runtime/lua/string_decode.lua:19: attempt to index a nil value (global &apos;bit32&apos;)">
+                <![CDATA[stack traceback:
+	../runtime/lua/string_decode.lua:19: in upvalue 'utf8_to_32'
+	../runtime/lua/string_decode.lua:38: in function 'string_decode.decode'
+	compiled/lua/term_strz.lua:19: in method '_read'
+	compiled/lua/term_strz.lua:15: in local 'init'
+	../runtime/lua/class.lua:70: in global 'TermStrz'
+	compiled/lua/type_ternary_opaque.lua:24: in method '_read'
+	compiled/lua/type_ternary_opaque.lua:17: in local 'init'
+	../runtime/lua/class.lua:70: in function <../runtime/lua/class.lua:66>
+	(...tail calls...)
+	spec/lua/test_type_ternary_opaque.lua:8: in upvalue 'TestTypeTernaryOpaque.test_type_ternary_opaque']]></error>
         </testcase>
         <testcase classname="TestUserType" name="TestUserType.test_user_type" time="0.000">
         </testcase>
         <testcase classname="TestValidEqStrEncodings" name="TestValidEqStrEncodings.test_valid_eq_str_encodings" time="0.001">
-            <error type="../runtime/lua/string_decode.lua:42: Encoding Shift_JIS not supported">
+            <error type="../runtime/lua/string_decode.lua:19: attempt to index a nil value (global &apos;bit32&apos;)">
                 <![CDATA[stack traceback:
-	../runtime/lua/string_decode.lua:42: in function 'string_decode.decode'
-	compiled/lua/valid_eq_str_encodings.lua:30: in method '_read'
+	../runtime/lua/string_decode.lua:19: in upvalue 'utf8_to_32'
+	../runtime/lua/string_decode.lua:38: in function 'string_decode.decode'
+	compiled/lua/valid_eq_str_encodings.lua:25: in method '_read'
 	compiled/lua/valid_eq_str_encodings.lua:15: in local 'init'
 	../runtime/lua/class.lua:70: in function <../runtime/lua/class.lua:66>
 	(...tail calls...)
@@ -630,13 +973,31 @@
         </testcase>
         <testcase classname="TestValidFailRepeatMinInt" name="TestValidFailRepeatMinInt.test_valid_fail_repeat_min_int" time="0.000">
         </testcase>
-        <testcase classname="TestValidLong" name="TestValidLong.test_valid_long" time="0.000">
+        <testcase classname="TestValidLong" name="TestValidLong.test_valid_long" time="0.001">
+            <error type="../runtime/lua/string_decode.lua:19: attempt to index a nil value (global &apos;bit32&apos;)">
+                <![CDATA[stack traceback:
+	../runtime/lua/string_decode.lua:19: in upvalue 'utf8_to_32'
+	../runtime/lua/string_decode.lua:38: in function 'string_decode.decode'
+	compiled/lua/valid_long.lua:31: in method '_read'
+	compiled/lua/valid_long.lua:15: in local 'init'
+	../runtime/lua/class.lua:70: in function <../runtime/lua/class.lua:66>
+	(...tail calls...)
+	spec/lua/test_valid_long.lua:10: in upvalue 'TestValidLong.test_valid_long']]></error>
         </testcase>
         <testcase classname="TestValidNotParsedIf" name="TestValidNotParsedIf.test_valid_not_parsed_if" time="0.000">
         </testcase>
         <testcase classname="TestValidOptionalId" name="TestValidOptionalId.test_valid_optional_id" time="0.000">
         </testcase>
-        <testcase classname="TestValidShort" name="TestValidShort.test_valid_short" time="0.000">
+        <testcase classname="TestValidShort" name="TestValidShort.test_valid_short" time="0.001">
+            <error type="../runtime/lua/string_decode.lua:19: attempt to index a nil value (global &apos;bit32&apos;)">
+                <![CDATA[stack traceback:
+	../runtime/lua/string_decode.lua:19: in upvalue 'utf8_to_32'
+	../runtime/lua/string_decode.lua:38: in function 'string_decode.decode'
+	compiled/lua/valid_short.lua:31: in method '_read'
+	compiled/lua/valid_short.lua:15: in local 'init'
+	../runtime/lua/class.lua:70: in function <../runtime/lua/class.lua:66>
+	(...tail calls...)
+	spec/lua/test_valid_short.lua:10: in upvalue 'TestValidShort.test_valid_short']]></error>
         </testcase>
         <testcase classname="TestValidSwitch" name="TestValidSwitch.test_valid_switch" time="0.000">
         </testcase>
