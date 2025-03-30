@@ -1,13 +1,13 @@
 {
   "$meta": {
     "lang": "construct",
-    "timestamp": "2025-03-05T21:51:15Z",
+    "timestamp": "2025-03-30T13:50:38Z",
     "ci": {
       "ci": "github",
-      "run_id": "13686239012",
-      "run_number": "347",
-      "job_id": "38270180978",
-      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/13686239012/job/38270180978"
+      "run_id": "14156673262",
+      "run_number": "348",
+      "job_id": "39656832270",
+      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/14156673262/job/39656832270"
     }
   },
   "BcdUserTypeBe": {
@@ -592,8 +592,8 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "Failed to import test module: test_expr_io_eof\nTraceback (most recent call last):\n  File \"/usr/local/lib/python3.13/unittest/loader.py\", line 396, in _find_test_path\n    module = self._get_module_from_name(name)\n  File \"/usr/local/lib/python3.13/unittest/loader.py\", line 339, in _get_module_from_name\n    __import__(name)\n    ~~~~~~~~~~^^^^^^\n  File \"/tests/spec/construct/test_expr_io_eof.py\", line 4, in <module>\n    from expr_io_eof import _schema\n  File \"/tests/compiled/construct/expr_io_eof.py\", line 6, in <module>\n    'two' / If(not (stream_iseof(_io)), Int32ul),\n                                 ^^^\nNameError: name '_io' is not defined. Did you forget to import '_io'?\n",
-      "trace": "ImportError: Failed to import test module: test_expr_io_eof\nTraceback (most recent call last):\n  File \"/usr/local/lib/python3.13/unittest/loader.py\", line 396, in _find_test_path\n    module = self._get_module_from_name(name)\n  File \"/usr/local/lib/python3.13/unittest/loader.py\", line 339, in _get_module_from_name\n    __import__(name)\n    ~~~~~~~~~~^^^^^^\n  File \"/tests/spec/construct/test_expr_io_eof.py\", line 4, in <module>\n    from expr_io_eof import _schema\n  File \"/tests/compiled/construct/expr_io_eof.py\", line 6, in <module>\n    'two' / If(not (stream_iseof(_io)), Int32ul),\n                                 ^^^\nNameError: name '_io' is not defined. Did you forget to import '_io'?"
+      "message": "Failed to import test module: test_expr_io_eof\nTraceback (most recent call last):\n  File \"/usr/local/lib/python3.13/unittest/loader.py\", line 396, in _find_test_path\n    module = self._get_module_from_name(name)\n  File \"/usr/local/lib/python3.13/unittest/loader.py\", line 339, in _get_module_from_name\n    __import__(name)\n    ~~~~~~~~~~^^^^^^\n  File \"/tests/spec/construct/test_expr_io_eof.py\", line 4, in <module>\n    from expr_io_eof import _schema\n  File \"/tests/compiled/construct/expr_io_eof.py\", line 6, in <module>\n    'two' / If((not (stream_iseof(_io))), Int32ul),\n                                  ^^^\nNameError: name '_io' is not defined. Did you forget to import '_io'?\n",
+      "trace": "ImportError: Failed to import test module: test_expr_io_eof\nTraceback (most recent call last):\n  File \"/usr/local/lib/python3.13/unittest/loader.py\", line 396, in _find_test_path\n    module = self._get_module_from_name(name)\n  File \"/usr/local/lib/python3.13/unittest/loader.py\", line 339, in _get_module_from_name\n    __import__(name)\n    ~~~~~~~~~~^^^^^^\n  File \"/tests/spec/construct/test_expr_io_eof.py\", line 4, in <module>\n    from expr_io_eof import _schema\n  File \"/tests/compiled/construct/expr_io_eof.py\", line 6, in <module>\n    'two' / If((not (stream_iseof(_io))), Int32ul),\n                                  ^^^\nNameError: name '_io' is not defined. Did you forget to import '_io'?"
     },
     "is_kst": true
   },
@@ -1411,8 +1411,8 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "<built-in method values of Container object at 0x7f7d3675f8f0> != [1, 2, 3, 4]",
-      "trace": "Traceback (most recent call last):\n  File \"/tests/spec/construct/test_repeat_until_complex.py\", line 12, in test_repeat_until_complex\n    self.assertEqual(r.first[0].values, [(0 + 1), 2, 3, 4])\n    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: <built-in method values of Container object at 0x7f7d3675f8f0> != [1, 2, 3, 4]"
+      "message": "<built-in method values of Container object at 0x7f1032142690> != [1, 2, 3, 4]",
+      "trace": "Traceback (most recent call last):\n  File \"/tests/spec/construct/test_repeat_until_complex.py\", line 12, in test_repeat_until_complex\n    self.assertEqual(r.first[0].values, [(0 + 1), 2, 3, 4])\n    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: <built-in method values of Container object at 0x7f1032142690> != [1, 2, 3, 4]"
     },
     "is_kst": true
   },
@@ -1636,7 +1636,7 @@
       "file_name": null,
       "line_num": null,
       "message": "is_hack",
-      "trace": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.13/site-packages/construct/lib/containers.py\", line 98, in __getattr__\n    return self[name]\n           ~~~~^^^^^^\nKeyError: 'is_hack'\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/tests/spec/construct/test_type_ternary.py\", line 9, in test_type_ternary\n    r = _schema.parse_file('src/term_strz.bin')\n  File \"/usr/local/lib/python3.13/site-packages/construct/core.py\", line 425, in parse_file\n    return self.parse_stream(f, **contextkw)\n           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/site-packages/construct/core.py\", line 416, in parse_stream\n    return self._parsereport(stream, context, \"(parsing)\")\n           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/site-packages/construct/core.py\", line 428, in _parsereport\n    obj = self._parse(stream, context, path)\n  File \"/usr/local/lib/python3.13/site-packages/construct/core.py\", line 2236, in _parse\n    subobj = sc._parsereport(stream, context, path)\n  File \"/usr/local/lib/python3.13/site-packages/construct/core.py\", line 428, in _parsereport\n    obj = self._parse(stream, context, path)\n  File \"/usr/local/lib/python3.13/site-packages/construct/core.py\", line 2770, in _parse\n    return self.subcon._parsereport(stream, context, path)\n           ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/site-packages/construct/core.py\", line 428, in _parsereport\n    obj = self._parse(stream, context, path)\n  File \"/usr/local/lib/python3.13/site-packages/construct/core.py\", line 2915, in _parse\n    return self.func(context) if callable(self.func) else self.func\n           ~~~~~~~~~^^^^^^^^^\n  File \"/tests/compiled/construct/type_ternary.py\", line 11, in <lambda>\n    'dif' / Computed(lambda this: (this.dif_wo_hack if not (this.is_hack) else this.dif_with_hack)),\n                                                            ^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/site-packages/construct/lib/containers.py\", line 100, in __getattr__\n    raise AttributeError(name)\nAttributeError: is_hack"
+      "trace": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.13/site-packages/construct/lib/containers.py\", line 98, in __getattr__\n    return self[name]\n           ~~~~^^^^^^\nKeyError: 'is_hack'\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/tests/spec/construct/test_type_ternary.py\", line 9, in test_type_ternary\n    r = _schema.parse_file('src/term_strz.bin')\n  File \"/usr/local/lib/python3.13/site-packages/construct/core.py\", line 425, in parse_file\n    return self.parse_stream(f, **contextkw)\n           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/site-packages/construct/core.py\", line 416, in parse_stream\n    return self._parsereport(stream, context, \"(parsing)\")\n           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/site-packages/construct/core.py\", line 428, in _parsereport\n    obj = self._parse(stream, context, path)\n  File \"/usr/local/lib/python3.13/site-packages/construct/core.py\", line 2236, in _parse\n    subobj = sc._parsereport(stream, context, path)\n  File \"/usr/local/lib/python3.13/site-packages/construct/core.py\", line 428, in _parsereport\n    obj = self._parse(stream, context, path)\n  File \"/usr/local/lib/python3.13/site-packages/construct/core.py\", line 2770, in _parse\n    return self.subcon._parsereport(stream, context, path)\n           ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/site-packages/construct/core.py\", line 428, in _parsereport\n    obj = self._parse(stream, context, path)\n  File \"/usr/local/lib/python3.13/site-packages/construct/core.py\", line 2915, in _parse\n    return self.func(context) if callable(self.func) else self.func\n           ~~~~~~~~~^^^^^^^^^\n  File \"/tests/compiled/construct/type_ternary.py\", line 11, in <lambda>\n    'dif' / Computed(lambda this: (this.dif_wo_hack if (not (this.is_hack)) else this.dif_with_hack)),\n                                                             ^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/site-packages/construct/lib/containers.py\", line 100, in __getattr__\n    raise AttributeError(name)\nAttributeError: is_hack"
     },
     "is_kst": true
   },
