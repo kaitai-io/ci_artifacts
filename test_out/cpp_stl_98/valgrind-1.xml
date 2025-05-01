@@ -30,16 +30,670 @@
 
 <status>
   <state>RUNNING</state>
-  <time>00:00:00:00.201 </time>
+  <time>00:00:00:00.203 </time>
 </status>
+
+<error>
+  <unique>0x0</unique>
+  <tid>1</tid>
+  <kind>UninitCondition</kind>
+  <what>Conditional jump or move depends on uninitialised value(s)</what>
+  <stack>
+    <frame>
+      <ip>0x4EE253D</ip>
+      <obj>/usr/local/lib/libboost_unit_test_framework.so.1.81.0</obj>
+      <fn>boost::test_tools::tt_detail::report_assertion(boost::test_tools::assertion_result const&amp;, boost::unit_test::lazy_ostream const&amp;, boost::unit_test::basic_cstring&lt;char const&gt;, unsigned long, boost::test_tools::tt_detail::tool_level, boost::test_tools::tt_detail::check_type, unsigned long, ...)</fn>
+      <dir>/root/boost_1_81_0/./boost/test/impl</dir>
+      <file>test_tools.ipp</file>
+      <line>348</line>
+    </frame>
+    <frame>
+      <ip>0x5382AC</ip>
+      <obj>/tests/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>test_switch_manual_enum_invalid::test_method()</fn>
+      <dir>/tests/spec/cpp_stl_98</dir>
+      <file>test_switch_manual_enum_invalid.cpp</file>
+      <line>17</line>
+    </frame>
+    <frame>
+      <ip>0x5377A2</ip>
+      <obj>/tests/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>test_switch_manual_enum_invalid_invoker()</fn>
+      <dir>/tests/spec/cpp_stl_98</dir>
+      <file>test_switch_manual_enum_invalid.cpp</file>
+      <line>8</line>
+    </frame>
+    <frame>
+      <ip>0x4271C9</ip>
+      <obj>/tests/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>boost::detail::function::void_function_invoker0&lt;void (*)(), void&gt;::invoke(boost::detail::function::function_buffer&amp;)</fn>
+      <dir>/usr/local/include/boost/function</dir>
+      <file>function_template.hpp</file>
+      <line>117</line>
+    </frame>
+    <frame>
+      <ip>0x4EB74AF</ip>
+      <obj>/usr/local/lib/libboost_unit_test_framework.so.1.81.0</obj>
+      <fn>boost::function0&lt;void&gt;::operator()() const</fn>
+      <dir>/root/boost_1_81_0/./boost/function</dir>
+      <file>function_template.hpp</file>
+      <line>764</line>
+    </frame>
+    <frame>
+      <ip>0x4EB662C</ip>
+      <obj>/usr/local/lib/libboost_unit_test_framework.so.1.81.0</obj>
+      <fn>boost::detail::forward::operator()()</fn>
+      <dir>/root/boost_1_81_0/./boost/test/impl</dir>
+      <file>execution_monitor.ipp</file>
+      <line>1388</line>
+    </frame>
+    <frame>
+      <ip>0x4EB8AB0</ip>
+      <obj>/usr/local/lib/libboost_unit_test_framework.so.1.81.0</obj>
+      <fn>boost::detail::function::function_obj_invoker0&lt;boost::detail::forward, int&gt;::invoke(boost::detail::function::function_buffer&amp;)</fn>
+      <dir>/root/boost_1_81_0/./boost/function</dir>
+      <file>function_template.hpp</file>
+      <line>137</line>
+    </frame>
+    <frame>
+      <ip>0x4EB7A93</ip>
+      <obj>/usr/local/lib/libboost_unit_test_framework.so.1.81.0</obj>
+      <fn>boost::function0&lt;int&gt;::operator()() const</fn>
+      <dir>/root/boost_1_81_0/./boost/function</dir>
+      <file>function_template.hpp</file>
+      <line>764</line>
+    </frame>
+    <frame>
+      <ip>0x4EB6F83</ip>
+      <obj>/usr/local/lib/libboost_unit_test_framework.so.1.81.0</obj>
+      <fn>int boost::detail::do_invoke&lt;boost::shared_ptr&lt;boost::detail::translator_holder_base&gt;, boost::function&lt;int ()&gt; &gt;(boost::shared_ptr&lt;boost::detail::translator_holder_base&gt; const&amp;, boost::function&lt;int ()&gt; const&amp;)</fn>
+      <dir>/root/boost_1_81_0/./boost/test/impl</dir>
+      <file>execution_monitor.ipp</file>
+      <line>301</line>
+    </frame>
+    <frame>
+      <ip>0x4EB4239</ip>
+      <obj>/usr/local/lib/libboost_unit_test_framework.so.1.81.0</obj>
+      <fn>boost::execution_monitor::catch_signals(boost::function&lt;int ()&gt; const&amp;)</fn>
+      <dir>/root/boost_1_81_0/./boost/test/impl</dir>
+      <file>execution_monitor.ipp</file>
+      <line>903</line>
+    </frame>
+    <frame>
+      <ip>0x4EB438F</ip>
+      <obj>/usr/local/lib/libboost_unit_test_framework.so.1.81.0</obj>
+      <fn>boost::execution_monitor::execute(boost::function&lt;int ()&gt; const&amp;)</fn>
+      <dir>/root/boost_1_81_0/./boost/test/impl</dir>
+      <file>execution_monitor.ipp</file>
+      <line>1301</line>
+    </frame>
+    <frame>
+      <ip>0x4EB5099</ip>
+      <obj>/usr/local/lib/libboost_unit_test_framework.so.1.81.0</obj>
+      <fn>boost::execution_monitor::vexecute(boost::function&lt;void ()&gt; const&amp;)</fn>
+      <dir>/root/boost_1_81_0/./boost/test/impl</dir>
+      <file>execution_monitor.ipp</file>
+      <line>1397</line>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0x1</unique>
+  <tid>1</tid>
+  <kind>UninitCondition</kind>
+  <what>Conditional jump or move depends on uninitialised value(s)</what>
+  <stack>
+    <frame>
+      <ip>0x4EE253D</ip>
+      <obj>/usr/local/lib/libboost_unit_test_framework.so.1.81.0</obj>
+      <fn>boost::test_tools::tt_detail::report_assertion(boost::test_tools::assertion_result const&amp;, boost::unit_test::lazy_ostream const&amp;, boost::unit_test::basic_cstring&lt;char const&gt;, unsigned long, boost::test_tools::tt_detail::tool_level, boost::test_tools::tt_detail::check_type, unsigned long, ...)</fn>
+      <dir>/root/boost_1_81_0/./boost/test/impl</dir>
+      <file>test_tools.ipp</file>
+      <line>348</line>
+    </frame>
+    <frame>
+      <ip>0x538877</ip>
+      <obj>/tests/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>test_switch_manual_enum_invalid::test_method()</fn>
+      <dir>/tests/spec/cpp_stl_98</dir>
+      <file>test_switch_manual_enum_invalid.cpp</file>
+      <line>20</line>
+    </frame>
+    <frame>
+      <ip>0x5377A2</ip>
+      <obj>/tests/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>test_switch_manual_enum_invalid_invoker()</fn>
+      <dir>/tests/spec/cpp_stl_98</dir>
+      <file>test_switch_manual_enum_invalid.cpp</file>
+      <line>8</line>
+    </frame>
+    <frame>
+      <ip>0x4271C9</ip>
+      <obj>/tests/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>boost::detail::function::void_function_invoker0&lt;void (*)(), void&gt;::invoke(boost::detail::function::function_buffer&amp;)</fn>
+      <dir>/usr/local/include/boost/function</dir>
+      <file>function_template.hpp</file>
+      <line>117</line>
+    </frame>
+    <frame>
+      <ip>0x4EB74AF</ip>
+      <obj>/usr/local/lib/libboost_unit_test_framework.so.1.81.0</obj>
+      <fn>boost::function0&lt;void&gt;::operator()() const</fn>
+      <dir>/root/boost_1_81_0/./boost/function</dir>
+      <file>function_template.hpp</file>
+      <line>764</line>
+    </frame>
+    <frame>
+      <ip>0x4EB662C</ip>
+      <obj>/usr/local/lib/libboost_unit_test_framework.so.1.81.0</obj>
+      <fn>boost::detail::forward::operator()()</fn>
+      <dir>/root/boost_1_81_0/./boost/test/impl</dir>
+      <file>execution_monitor.ipp</file>
+      <line>1388</line>
+    </frame>
+    <frame>
+      <ip>0x4EB8AB0</ip>
+      <obj>/usr/local/lib/libboost_unit_test_framework.so.1.81.0</obj>
+      <fn>boost::detail::function::function_obj_invoker0&lt;boost::detail::forward, int&gt;::invoke(boost::detail::function::function_buffer&amp;)</fn>
+      <dir>/root/boost_1_81_0/./boost/function</dir>
+      <file>function_template.hpp</file>
+      <line>137</line>
+    </frame>
+    <frame>
+      <ip>0x4EB7A93</ip>
+      <obj>/usr/local/lib/libboost_unit_test_framework.so.1.81.0</obj>
+      <fn>boost::function0&lt;int&gt;::operator()() const</fn>
+      <dir>/root/boost_1_81_0/./boost/function</dir>
+      <file>function_template.hpp</file>
+      <line>764</line>
+    </frame>
+    <frame>
+      <ip>0x4EB6F83</ip>
+      <obj>/usr/local/lib/libboost_unit_test_framework.so.1.81.0</obj>
+      <fn>int boost::detail::do_invoke&lt;boost::shared_ptr&lt;boost::detail::translator_holder_base&gt;, boost::function&lt;int ()&gt; &gt;(boost::shared_ptr&lt;boost::detail::translator_holder_base&gt; const&amp;, boost::function&lt;int ()&gt; const&amp;)</fn>
+      <dir>/root/boost_1_81_0/./boost/test/impl</dir>
+      <file>execution_monitor.ipp</file>
+      <line>301</line>
+    </frame>
+    <frame>
+      <ip>0x4EB4239</ip>
+      <obj>/usr/local/lib/libboost_unit_test_framework.so.1.81.0</obj>
+      <fn>boost::execution_monitor::catch_signals(boost::function&lt;int ()&gt; const&amp;)</fn>
+      <dir>/root/boost_1_81_0/./boost/test/impl</dir>
+      <file>execution_monitor.ipp</file>
+      <line>903</line>
+    </frame>
+    <frame>
+      <ip>0x4EB438F</ip>
+      <obj>/usr/local/lib/libboost_unit_test_framework.so.1.81.0</obj>
+      <fn>boost::execution_monitor::execute(boost::function&lt;int ()&gt; const&amp;)</fn>
+      <dir>/root/boost_1_81_0/./boost/test/impl</dir>
+      <file>execution_monitor.ipp</file>
+      <line>1301</line>
+    </frame>
+    <frame>
+      <ip>0x4EB5099</ip>
+      <obj>/usr/local/lib/libboost_unit_test_framework.so.1.81.0</obj>
+      <fn>boost::execution_monitor::vexecute(boost::function&lt;void ()&gt; const&amp;)</fn>
+      <dir>/root/boost_1_81_0/./boost/test/impl</dir>
+      <file>execution_monitor.ipp</file>
+      <line>1397</line>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0x2</unique>
+  <tid>1</tid>
+  <kind>UninitCondition</kind>
+  <what>Conditional jump or move depends on uninitialised value(s)</what>
+  <stack>
+    <frame>
+      <ip>0x4EE253D</ip>
+      <obj>/usr/local/lib/libboost_unit_test_framework.so.1.81.0</obj>
+      <fn>boost::test_tools::tt_detail::report_assertion(boost::test_tools::assertion_result const&amp;, boost::unit_test::lazy_ostream const&amp;, boost::unit_test::basic_cstring&lt;char const&gt;, unsigned long, boost::test_tools::tt_detail::tool_level, boost::test_tools::tt_detail::check_type, unsigned long, ...)</fn>
+      <dir>/root/boost_1_81_0/./boost/test/impl</dir>
+      <file>test_tools.ipp</file>
+      <line>348</line>
+    </frame>
+    <frame>
+      <ip>0x540951</ip>
+      <obj>/tests/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>test_switch_manual_int_size::test_method()</fn>
+      <dir>/tests/spec/cpp_stl_98</dir>
+      <file>test_switch_manual_int_size.cpp</file>
+      <line>22</line>
+    </frame>
+    <frame>
+      <ip>0x53EF72</ip>
+      <obj>/tests/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>test_switch_manual_int_size_invoker()</fn>
+      <dir>/tests/spec/cpp_stl_98</dir>
+      <file>test_switch_manual_int_size.cpp</file>
+      <line>8</line>
+    </frame>
+    <frame>
+      <ip>0x4271C9</ip>
+      <obj>/tests/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>boost::detail::function::void_function_invoker0&lt;void (*)(), void&gt;::invoke(boost::detail::function::function_buffer&amp;)</fn>
+      <dir>/usr/local/include/boost/function</dir>
+      <file>function_template.hpp</file>
+      <line>117</line>
+    </frame>
+    <frame>
+      <ip>0x4EB74AF</ip>
+      <obj>/usr/local/lib/libboost_unit_test_framework.so.1.81.0</obj>
+      <fn>boost::function0&lt;void&gt;::operator()() const</fn>
+      <dir>/root/boost_1_81_0/./boost/function</dir>
+      <file>function_template.hpp</file>
+      <line>764</line>
+    </frame>
+    <frame>
+      <ip>0x4EB662C</ip>
+      <obj>/usr/local/lib/libboost_unit_test_framework.so.1.81.0</obj>
+      <fn>boost::detail::forward::operator()()</fn>
+      <dir>/root/boost_1_81_0/./boost/test/impl</dir>
+      <file>execution_monitor.ipp</file>
+      <line>1388</line>
+    </frame>
+    <frame>
+      <ip>0x4EB8AB0</ip>
+      <obj>/usr/local/lib/libboost_unit_test_framework.so.1.81.0</obj>
+      <fn>boost::detail::function::function_obj_invoker0&lt;boost::detail::forward, int&gt;::invoke(boost::detail::function::function_buffer&amp;)</fn>
+      <dir>/root/boost_1_81_0/./boost/function</dir>
+      <file>function_template.hpp</file>
+      <line>137</line>
+    </frame>
+    <frame>
+      <ip>0x4EB7A93</ip>
+      <obj>/usr/local/lib/libboost_unit_test_framework.so.1.81.0</obj>
+      <fn>boost::function0&lt;int&gt;::operator()() const</fn>
+      <dir>/root/boost_1_81_0/./boost/function</dir>
+      <file>function_template.hpp</file>
+      <line>764</line>
+    </frame>
+    <frame>
+      <ip>0x4EB6F83</ip>
+      <obj>/usr/local/lib/libboost_unit_test_framework.so.1.81.0</obj>
+      <fn>int boost::detail::do_invoke&lt;boost::shared_ptr&lt;boost::detail::translator_holder_base&gt;, boost::function&lt;int ()&gt; &gt;(boost::shared_ptr&lt;boost::detail::translator_holder_base&gt; const&amp;, boost::function&lt;int ()&gt; const&amp;)</fn>
+      <dir>/root/boost_1_81_0/./boost/test/impl</dir>
+      <file>execution_monitor.ipp</file>
+      <line>301</line>
+    </frame>
+    <frame>
+      <ip>0x4EB4239</ip>
+      <obj>/usr/local/lib/libboost_unit_test_framework.so.1.81.0</obj>
+      <fn>boost::execution_monitor::catch_signals(boost::function&lt;int ()&gt; const&amp;)</fn>
+      <dir>/root/boost_1_81_0/./boost/test/impl</dir>
+      <file>execution_monitor.ipp</file>
+      <line>903</line>
+    </frame>
+    <frame>
+      <ip>0x4EB438F</ip>
+      <obj>/usr/local/lib/libboost_unit_test_framework.so.1.81.0</obj>
+      <fn>boost::execution_monitor::execute(boost::function&lt;int ()&gt; const&amp;)</fn>
+      <dir>/root/boost_1_81_0/./boost/test/impl</dir>
+      <file>execution_monitor.ipp</file>
+      <line>1301</line>
+    </frame>
+    <frame>
+      <ip>0x4EB5099</ip>
+      <obj>/usr/local/lib/libboost_unit_test_framework.so.1.81.0</obj>
+      <fn>boost::execution_monitor::vexecute(boost::function&lt;void ()&gt; const&amp;)</fn>
+      <dir>/root/boost_1_81_0/./boost/test/impl</dir>
+      <file>execution_monitor.ipp</file>
+      <line>1397</line>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0x3</unique>
+  <tid>1</tid>
+  <kind>UninitCondition</kind>
+  <what>Conditional jump or move depends on uninitialised value(s)</what>
+  <stack>
+    <frame>
+      <ip>0x4EE253D</ip>
+      <obj>/usr/local/lib/libboost_unit_test_framework.so.1.81.0</obj>
+      <fn>boost::test_tools::tt_detail::report_assertion(boost::test_tools::assertion_result const&amp;, boost::unit_test::lazy_ostream const&amp;, boost::unit_test::basic_cstring&lt;char const&gt;, unsigned long, boost::test_tools::tt_detail::tool_level, boost::test_tools::tt_detail::check_type, unsigned long, ...)</fn>
+      <dir>/root/boost_1_81_0/./boost/test/impl</dir>
+      <file>test_tools.ipp</file>
+      <line>348</line>
+    </frame>
+    <frame>
+      <ip>0x54112C</ip>
+      <obj>/tests/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>test_switch_manual_int_size::test_method()</fn>
+      <dir>/tests/spec/cpp_stl_98</dir>
+      <file>test_switch_manual_int_size.cpp</file>
+      <line>26</line>
+    </frame>
+    <frame>
+      <ip>0x53EF72</ip>
+      <obj>/tests/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>test_switch_manual_int_size_invoker()</fn>
+      <dir>/tests/spec/cpp_stl_98</dir>
+      <file>test_switch_manual_int_size.cpp</file>
+      <line>8</line>
+    </frame>
+    <frame>
+      <ip>0x4271C9</ip>
+      <obj>/tests/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>boost::detail::function::void_function_invoker0&lt;void (*)(), void&gt;::invoke(boost::detail::function::function_buffer&amp;)</fn>
+      <dir>/usr/local/include/boost/function</dir>
+      <file>function_template.hpp</file>
+      <line>117</line>
+    </frame>
+    <frame>
+      <ip>0x4EB74AF</ip>
+      <obj>/usr/local/lib/libboost_unit_test_framework.so.1.81.0</obj>
+      <fn>boost::function0&lt;void&gt;::operator()() const</fn>
+      <dir>/root/boost_1_81_0/./boost/function</dir>
+      <file>function_template.hpp</file>
+      <line>764</line>
+    </frame>
+    <frame>
+      <ip>0x4EB662C</ip>
+      <obj>/usr/local/lib/libboost_unit_test_framework.so.1.81.0</obj>
+      <fn>boost::detail::forward::operator()()</fn>
+      <dir>/root/boost_1_81_0/./boost/test/impl</dir>
+      <file>execution_monitor.ipp</file>
+      <line>1388</line>
+    </frame>
+    <frame>
+      <ip>0x4EB8AB0</ip>
+      <obj>/usr/local/lib/libboost_unit_test_framework.so.1.81.0</obj>
+      <fn>boost::detail::function::function_obj_invoker0&lt;boost::detail::forward, int&gt;::invoke(boost::detail::function::function_buffer&amp;)</fn>
+      <dir>/root/boost_1_81_0/./boost/function</dir>
+      <file>function_template.hpp</file>
+      <line>137</line>
+    </frame>
+    <frame>
+      <ip>0x4EB7A93</ip>
+      <obj>/usr/local/lib/libboost_unit_test_framework.so.1.81.0</obj>
+      <fn>boost::function0&lt;int&gt;::operator()() const</fn>
+      <dir>/root/boost_1_81_0/./boost/function</dir>
+      <file>function_template.hpp</file>
+      <line>764</line>
+    </frame>
+    <frame>
+      <ip>0x4EB6F83</ip>
+      <obj>/usr/local/lib/libboost_unit_test_framework.so.1.81.0</obj>
+      <fn>int boost::detail::do_invoke&lt;boost::shared_ptr&lt;boost::detail::translator_holder_base&gt;, boost::function&lt;int ()&gt; &gt;(boost::shared_ptr&lt;boost::detail::translator_holder_base&gt; const&amp;, boost::function&lt;int ()&gt; const&amp;)</fn>
+      <dir>/root/boost_1_81_0/./boost/test/impl</dir>
+      <file>execution_monitor.ipp</file>
+      <line>301</line>
+    </frame>
+    <frame>
+      <ip>0x4EB4239</ip>
+      <obj>/usr/local/lib/libboost_unit_test_framework.so.1.81.0</obj>
+      <fn>boost::execution_monitor::catch_signals(boost::function&lt;int ()&gt; const&amp;)</fn>
+      <dir>/root/boost_1_81_0/./boost/test/impl</dir>
+      <file>execution_monitor.ipp</file>
+      <line>903</line>
+    </frame>
+    <frame>
+      <ip>0x4EB438F</ip>
+      <obj>/usr/local/lib/libboost_unit_test_framework.so.1.81.0</obj>
+      <fn>boost::execution_monitor::execute(boost::function&lt;int ()&gt; const&amp;)</fn>
+      <dir>/root/boost_1_81_0/./boost/test/impl</dir>
+      <file>execution_monitor.ipp</file>
+      <line>1301</line>
+    </frame>
+    <frame>
+      <ip>0x4EB5099</ip>
+      <obj>/usr/local/lib/libboost_unit_test_framework.so.1.81.0</obj>
+      <fn>boost::execution_monitor::vexecute(boost::function&lt;void ()&gt; const&amp;)</fn>
+      <dir>/root/boost_1_81_0/./boost/test/impl</dir>
+      <file>execution_monitor.ipp</file>
+      <line>1397</line>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0x4</unique>
+  <tid>1</tid>
+  <kind>UninitCondition</kind>
+  <what>Conditional jump or move depends on uninitialised value(s)</what>
+  <stack>
+    <frame>
+      <ip>0x4EE253D</ip>
+      <obj>/usr/local/lib/libboost_unit_test_framework.so.1.81.0</obj>
+      <fn>boost::test_tools::tt_detail::report_assertion(boost::test_tools::assertion_result const&amp;, boost::unit_test::lazy_ostream const&amp;, boost::unit_test::basic_cstring&lt;char const&gt;, unsigned long, boost::test_tools::tt_detail::tool_level, boost::test_tools::tt_detail::check_type, unsigned long, ...)</fn>
+      <dir>/root/boost_1_81_0/./boost/test/impl</dir>
+      <file>test_tools.ipp</file>
+      <line>348</line>
+    </frame>
+    <frame>
+      <ip>0x546039</ip>
+      <obj>/tests/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>test_switch_manual_int_size_eos::test_method()</fn>
+      <dir>/tests/spec/cpp_stl_98</dir>
+      <file>test_switch_manual_int_size_eos.cpp</file>
+      <line>22</line>
+    </frame>
+    <frame>
+      <ip>0x5445B2</ip>
+      <obj>/tests/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>test_switch_manual_int_size_eos_invoker()</fn>
+      <dir>/tests/spec/cpp_stl_98</dir>
+      <file>test_switch_manual_int_size_eos.cpp</file>
+      <line>8</line>
+    </frame>
+    <frame>
+      <ip>0x4271C9</ip>
+      <obj>/tests/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>boost::detail::function::void_function_invoker0&lt;void (*)(), void&gt;::invoke(boost::detail::function::function_buffer&amp;)</fn>
+      <dir>/usr/local/include/boost/function</dir>
+      <file>function_template.hpp</file>
+      <line>117</line>
+    </frame>
+    <frame>
+      <ip>0x4EB74AF</ip>
+      <obj>/usr/local/lib/libboost_unit_test_framework.so.1.81.0</obj>
+      <fn>boost::function0&lt;void&gt;::operator()() const</fn>
+      <dir>/root/boost_1_81_0/./boost/function</dir>
+      <file>function_template.hpp</file>
+      <line>764</line>
+    </frame>
+    <frame>
+      <ip>0x4EB662C</ip>
+      <obj>/usr/local/lib/libboost_unit_test_framework.so.1.81.0</obj>
+      <fn>boost::detail::forward::operator()()</fn>
+      <dir>/root/boost_1_81_0/./boost/test/impl</dir>
+      <file>execution_monitor.ipp</file>
+      <line>1388</line>
+    </frame>
+    <frame>
+      <ip>0x4EB8AB0</ip>
+      <obj>/usr/local/lib/libboost_unit_test_framework.so.1.81.0</obj>
+      <fn>boost::detail::function::function_obj_invoker0&lt;boost::detail::forward, int&gt;::invoke(boost::detail::function::function_buffer&amp;)</fn>
+      <dir>/root/boost_1_81_0/./boost/function</dir>
+      <file>function_template.hpp</file>
+      <line>137</line>
+    </frame>
+    <frame>
+      <ip>0x4EB7A93</ip>
+      <obj>/usr/local/lib/libboost_unit_test_framework.so.1.81.0</obj>
+      <fn>boost::function0&lt;int&gt;::operator()() const</fn>
+      <dir>/root/boost_1_81_0/./boost/function</dir>
+      <file>function_template.hpp</file>
+      <line>764</line>
+    </frame>
+    <frame>
+      <ip>0x4EB6F83</ip>
+      <obj>/usr/local/lib/libboost_unit_test_framework.so.1.81.0</obj>
+      <fn>int boost::detail::do_invoke&lt;boost::shared_ptr&lt;boost::detail::translator_holder_base&gt;, boost::function&lt;int ()&gt; &gt;(boost::shared_ptr&lt;boost::detail::translator_holder_base&gt; const&amp;, boost::function&lt;int ()&gt; const&amp;)</fn>
+      <dir>/root/boost_1_81_0/./boost/test/impl</dir>
+      <file>execution_monitor.ipp</file>
+      <line>301</line>
+    </frame>
+    <frame>
+      <ip>0x4EB4239</ip>
+      <obj>/usr/local/lib/libboost_unit_test_framework.so.1.81.0</obj>
+      <fn>boost::execution_monitor::catch_signals(boost::function&lt;int ()&gt; const&amp;)</fn>
+      <dir>/root/boost_1_81_0/./boost/test/impl</dir>
+      <file>execution_monitor.ipp</file>
+      <line>903</line>
+    </frame>
+    <frame>
+      <ip>0x4EB438F</ip>
+      <obj>/usr/local/lib/libboost_unit_test_framework.so.1.81.0</obj>
+      <fn>boost::execution_monitor::execute(boost::function&lt;int ()&gt; const&amp;)</fn>
+      <dir>/root/boost_1_81_0/./boost/test/impl</dir>
+      <file>execution_monitor.ipp</file>
+      <line>1301</line>
+    </frame>
+    <frame>
+      <ip>0x4EB5099</ip>
+      <obj>/usr/local/lib/libboost_unit_test_framework.so.1.81.0</obj>
+      <fn>boost::execution_monitor::vexecute(boost::function&lt;void ()&gt; const&amp;)</fn>
+      <dir>/root/boost_1_81_0/./boost/test/impl</dir>
+      <file>execution_monitor.ipp</file>
+      <line>1397</line>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0x5</unique>
+  <tid>1</tid>
+  <kind>UninitCondition</kind>
+  <what>Conditional jump or move depends on uninitialised value(s)</what>
+  <stack>
+    <frame>
+      <ip>0x4EE253D</ip>
+      <obj>/usr/local/lib/libboost_unit_test_framework.so.1.81.0</obj>
+      <fn>boost::test_tools::tt_detail::report_assertion(boost::test_tools::assertion_result const&amp;, boost::unit_test::lazy_ostream const&amp;, boost::unit_test::basic_cstring&lt;char const&gt;, unsigned long, boost::test_tools::tt_detail::tool_level, boost::test_tools::tt_detail::check_type, unsigned long, ...)</fn>
+      <dir>/root/boost_1_81_0/./boost/test/impl</dir>
+      <file>test_tools.ipp</file>
+      <line>348</line>
+    </frame>
+    <frame>
+      <ip>0x54685C</ip>
+      <obj>/tests/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>test_switch_manual_int_size_eos::test_method()</fn>
+      <dir>/tests/spec/cpp_stl_98</dir>
+      <file>test_switch_manual_int_size_eos.cpp</file>
+      <line>26</line>
+    </frame>
+    <frame>
+      <ip>0x5445B2</ip>
+      <obj>/tests/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>test_switch_manual_int_size_eos_invoker()</fn>
+      <dir>/tests/spec/cpp_stl_98</dir>
+      <file>test_switch_manual_int_size_eos.cpp</file>
+      <line>8</line>
+    </frame>
+    <frame>
+      <ip>0x4271C9</ip>
+      <obj>/tests/compiled/cpp_stl_98/bin/ks_tests</obj>
+      <fn>boost::detail::function::void_function_invoker0&lt;void (*)(), void&gt;::invoke(boost::detail::function::function_buffer&amp;)</fn>
+      <dir>/usr/local/include/boost/function</dir>
+      <file>function_template.hpp</file>
+      <line>117</line>
+    </frame>
+    <frame>
+      <ip>0x4EB74AF</ip>
+      <obj>/usr/local/lib/libboost_unit_test_framework.so.1.81.0</obj>
+      <fn>boost::function0&lt;void&gt;::operator()() const</fn>
+      <dir>/root/boost_1_81_0/./boost/function</dir>
+      <file>function_template.hpp</file>
+      <line>764</line>
+    </frame>
+    <frame>
+      <ip>0x4EB662C</ip>
+      <obj>/usr/local/lib/libboost_unit_test_framework.so.1.81.0</obj>
+      <fn>boost::detail::forward::operator()()</fn>
+      <dir>/root/boost_1_81_0/./boost/test/impl</dir>
+      <file>execution_monitor.ipp</file>
+      <line>1388</line>
+    </frame>
+    <frame>
+      <ip>0x4EB8AB0</ip>
+      <obj>/usr/local/lib/libboost_unit_test_framework.so.1.81.0</obj>
+      <fn>boost::detail::function::function_obj_invoker0&lt;boost::detail::forward, int&gt;::invoke(boost::detail::function::function_buffer&amp;)</fn>
+      <dir>/root/boost_1_81_0/./boost/function</dir>
+      <file>function_template.hpp</file>
+      <line>137</line>
+    </frame>
+    <frame>
+      <ip>0x4EB7A93</ip>
+      <obj>/usr/local/lib/libboost_unit_test_framework.so.1.81.0</obj>
+      <fn>boost::function0&lt;int&gt;::operator()() const</fn>
+      <dir>/root/boost_1_81_0/./boost/function</dir>
+      <file>function_template.hpp</file>
+      <line>764</line>
+    </frame>
+    <frame>
+      <ip>0x4EB6F83</ip>
+      <obj>/usr/local/lib/libboost_unit_test_framework.so.1.81.0</obj>
+      <fn>int boost::detail::do_invoke&lt;boost::shared_ptr&lt;boost::detail::translator_holder_base&gt;, boost::function&lt;int ()&gt; &gt;(boost::shared_ptr&lt;boost::detail::translator_holder_base&gt; const&amp;, boost::function&lt;int ()&gt; const&amp;)</fn>
+      <dir>/root/boost_1_81_0/./boost/test/impl</dir>
+      <file>execution_monitor.ipp</file>
+      <line>301</line>
+    </frame>
+    <frame>
+      <ip>0x4EB4239</ip>
+      <obj>/usr/local/lib/libboost_unit_test_framework.so.1.81.0</obj>
+      <fn>boost::execution_monitor::catch_signals(boost::function&lt;int ()&gt; const&amp;)</fn>
+      <dir>/root/boost_1_81_0/./boost/test/impl</dir>
+      <file>execution_monitor.ipp</file>
+      <line>903</line>
+    </frame>
+    <frame>
+      <ip>0x4EB438F</ip>
+      <obj>/usr/local/lib/libboost_unit_test_framework.so.1.81.0</obj>
+      <fn>boost::execution_monitor::execute(boost::function&lt;int ()&gt; const&amp;)</fn>
+      <dir>/root/boost_1_81_0/./boost/test/impl</dir>
+      <file>execution_monitor.ipp</file>
+      <line>1301</line>
+    </frame>
+    <frame>
+      <ip>0x4EB5099</ip>
+      <obj>/usr/local/lib/libboost_unit_test_framework.so.1.81.0</obj>
+      <fn>boost::execution_monitor::vexecute(boost::function&lt;void ()&gt; const&amp;)</fn>
+      <dir>/root/boost_1_81_0/./boost/test/impl</dir>
+      <file>execution_monitor.ipp</file>
+      <line>1397</line>
+    </frame>
+  </stack>
+</error>
 
 
 <status>
   <state>FINISHED</state>
-  <time>00:00:00:07.629 </time>
+  <time>00:00:00:07.700 </time>
 </status>
 
 <errorcounts>
+  <pair>
+    <count>1</count>
+    <unique>0x5</unique>
+  </pair>
+  <pair>
+    <count>1</count>
+    <unique>0x4</unique>
+  </pair>
+  <pair>
+    <count>1</count>
+    <unique>0x3</unique>
+  </pair>
+  <pair>
+    <count>1</count>
+    <unique>0x2</unique>
+  </pair>
+  <pair>
+    <count>1</count>
+    <unique>0x1</unique>
+  </pair>
+  <pair>
+    <count>1</count>
+    <unique>0x0</unique>
+  </pair>
 </errorcounts>
 
 <suppcounts>
