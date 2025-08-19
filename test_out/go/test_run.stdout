@@ -285,31 +285,31 @@
 === RUN   TestNonStandard
 --- PASS: TestNonStandard (0.00s)
 === RUN   TestOpaqueExternalType02Parent
-goroutine 137 [running]:
+goroutine 146 [running]:
 runtime/debug.Stack()
 	/usr/local/go/src/runtime/debug/stack.go:26 +0x5e
 runtime/debug.PrintStack()
 	/usr/local/go/src/runtime/debug/stack.go:18 +0x13
 kaitai/spec.TestOpaqueExternalType02Parent.func1()
 	/tests/spec/go/opaque_external_type_02_parent_test.go:15 +0x39
-panic({0x6935c0?, 0x955230?})
-	/usr/local/go/src/runtime/panic.go:792 +0x132
+panic({0x697be0?, 0x965300?})
+	/usr/local/go/src/runtime/panic.go:783 +0x132
 test_formats.(*OpaqueExternalType02Child).SomeMethod(...)
 	/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:50
-test_formats.(*OpaqueExternalType02Child_OpaqueExternalType02ChildChild).Read(0xc00023b5c0?, 0xc00023c5d8?, 0x3?, 0x6e58a0?)
-	/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:77 +0x54
-test_formats.(*OpaqueExternalType02Child).Read(0xc0002369b0, 0xc000048688?, {0x0?, 0x0?}, 0x6cc280?)
-	/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:42 +0x131
-test_formats.(*OpaqueExternalType02Parent_ParentObj).Read(0xc000038de0, 0x415625?, 0x28?, 0x6cc360?)
-	/tests/compiled/go/src/test_formats/opaque_external_type_02_parent.go:56 +0x7f
-test_formats.(*OpaqueExternalType02Parent).Read(0xc00023b5f0, 0x17?, {0x762a20?, 0xc00023b5f0?}, 0x7bd4f0?)
+test_formats.(*OpaqueExternalType02Child_OpaqueExternalType02ChildChild).Read(0xc0001bb0e0?, 0xc0001bc3e8?, 0x3?, 0x6eb300?)
+	/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:77 +0x51
+test_formats.(*OpaqueExternalType02Child).Read(0xc00019d040, 0xc000046688?, {0x0?, 0x0?}, 0x6d2440?)
+	/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:42 +0x134
+test_formats.(*OpaqueExternalType02Parent_ParentObj).Read(0xc0000b3a00, 0x418a45?, 0x28?, 0x6d2520?)
+	/tests/compiled/go/src/test_formats/opaque_external_type_02_parent.go:56 +0x7e
+test_formats.(*OpaqueExternalType02Parent).Read(0xc0001bb110, 0x17?, {0x76b060?, 0xc0001bb110?}, 0x7c8168?)
 	/tests/compiled/go/src/test_formats/opaque_external_type_02_parent.go:28 +0x88
-kaitai/spec.TestOpaqueExternalType02Parent(0xc000244a80)
+kaitai/spec.TestOpaqueExternalType02Parent(0xc0001c4c40)
 	/tests/spec/go/opaque_external_type_02_parent_test.go:25 +0x10e
-testing.tRunner(0xc000244a80, 0x719688)
-	/usr/local/go/src/testing/testing.go:1792 +0xf4
+testing.tRunner(0xc0001c4c40, 0x7206b8)
+	/usr/local/go/src/testing/testing.go:1934 +0xea
 created by testing.(*T).Run in goroutine 1
-	/usr/local/go/src/testing/testing.go:1851 +0x413
+	/usr/local/go/src/testing/testing.go:1997 +0x465
     opaque_external_type_02_parent_test.go:16: unexpected panic: runtime error: invalid memory address or nil pointer dereference
 --- FAIL: TestOpaqueExternalType02Parent (0.00s)
 === RUN   TestOpaqueExternalType
@@ -635,5 +635,5 @@ created by testing.(*T).Run in goroutine 1
 === RUN   TestZlibWithHeader78
 --- PASS: TestZlibWithHeader78 (0.00s)
 FAIL
-FAIL	kaitai/spec	0.037s
+FAIL	kaitai/spec	0.036s
 FAIL
