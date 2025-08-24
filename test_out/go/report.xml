@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites tests="225" failures="12">
-	<testsuite name="kaitai/spec" tests="225" failures="12" errors="0" id="0" hostname="3ca50e592c81" time="0.032" timestamp="2025-08-20T08:02:05Z">
+<testsuites tests="249" failures="15">
+	<testsuite name="kaitai/spec" tests="249" failures="15" errors="0" id="0" hostname="c23fa241b3d7" time="0.040" timestamp="2025-08-24T13:00:09Z">
 		<testcase name="TestBcdUserTypeBe" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestBcdUserTypeLe" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestBitsByteAligned" classname="kaitai/spec" time="0.000"></testcase>
@@ -20,6 +20,8 @@
 		<testcase name="TestBitsUnalignedB64Le" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestBufferedStruct" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestBytesPadTerm" classname="kaitai/spec" time="0.000"></testcase>
+		<testcase name="TestCastNested" classname="kaitai/spec" time="0.000"></testcase>
+		<testcase name="TestCastToTop" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestCombineBool" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestCombineBytes" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestCombineEnum" classname="kaitai/spec" time="0.000"></testcase>
@@ -29,6 +31,7 @@
 		<testcase name="TestDebugArrayUserEofException" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestDebugArrayUser" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestDebugEnumName" classname="kaitai/spec" time="0.000"></testcase>
+		<testcase name="TestDebugSwitchUser" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestDefaultBigEndian" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestDefaultBitEndianMod" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestDefaultEndianExprException" classname="kaitai/spec" time="0.000"></testcase>
@@ -56,10 +59,10 @@
 		<testcase name="TestEnumOfValueInst" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestEnumToIClassBorder1" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestEnumToIInvalid" classname="kaitai/spec" time="0.000"></testcase>
-		<testcase name="TestEnumToI" classname="kaitai/spec" time="0.000"></testcase>
+		<testcase name="TestEnumToI" classname="kaitai/spec" time="0.010"></testcase>
 		<testcase name="TestEofExceptionBytes" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestEofExceptionSized" classname="kaitai/spec" time="0.000"></testcase>
-		<testcase name="TestEofExceptionU4" classname="kaitai/spec" time="0.010"></testcase>
+		<testcase name="TestEofExceptionU4" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestEosExceptionBytes" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestEosExceptionSized" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestEosExceptionU4" classname="kaitai/spec" time="0.000"></testcase>
@@ -129,6 +132,8 @@
 		<testcase name="TestImports0" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestImportsAbsAbs" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestImportsAbsRel" classname="kaitai/spec" time="0.000"></testcase>
+		<testcase name="TestImportsCastToImported2" classname="kaitai/spec" time="0.000"></testcase>
+		<testcase name="TestImportsCastToImported" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestImportsCircularA" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestImportsParamsDefArrayUsertypeImported" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestImportsParamsDefEnumImported" classname="kaitai/spec" time="0.000"></testcase>
@@ -142,6 +147,7 @@
 		<testcase name="TestIntegersDoubleOverflow" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestIntegersMinMax" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestIntegers" classname="kaitai/spec" time="0.000"></testcase>
+		<testcase name="TestIoLocalVar" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestJsSignedRightShift" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestMetaTags" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestMetaXref" classname="kaitai/spec" time="0.000"></testcase>
@@ -149,13 +155,15 @@
 		<testcase name="TestNavParent2" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestNavParent3" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestNavParentFalse2" classname="kaitai/spec" time="0.000"></testcase>
-		<testcase name="TestNavParentFalse" classname="kaitai/spec" time="0.000"></testcase>
+		<testcase name="TestNavParentFalse" classname="kaitai/spec" time="0.020"></testcase>
 		<testcase name="TestNavParentOverride" classname="kaitai/spec" time="0.000"></testcase>
+		<testcase name="TestNavParentRecursive" classname="kaitai/spec" time="0.000"></testcase>
+		<testcase name="TestNavParentSwitch" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestNavParent" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestNavParentVsValueInst" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestNavRootRecursive" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestNavRoot" classname="kaitai/spec" time="0.000"></testcase>
-		<testcase name="TestNestedSameName2" classname="kaitai/spec" time="0.010"></testcase>
+		<testcase name="TestNestedSameName2" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestNestedSameName" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestNestedTypeParam" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestNestedTypes2" classname="kaitai/spec" time="0.000"></testcase>
@@ -163,28 +171,28 @@
 		<testcase name="TestNestedTypes" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestNonStandard" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestOpaqueExternalType02Parent" classname="kaitai/spec" time="0.000">
-			<failure message="Failed"><![CDATA[goroutine 146 [running]:
+			<failure message="Failed"><![CDATA[goroutine 154 [running]:
 runtime/debug.Stack()
 	/usr/local/go/src/runtime/debug/stack.go:26 +0x5e
 runtime/debug.PrintStack()
 	/usr/local/go/src/runtime/debug/stack.go:18 +0x13
 kaitai/spec.TestOpaqueExternalType02Parent.func1()
 	/tests/spec/go/opaque_external_type_02_parent_test.go:15 +0x39
-panic({0x697be0?, 0x966300?})
+panic({0x6aa220?, 0x98b300?})
 	/usr/local/go/src/runtime/panic.go:783 +0x132
 test_formats.(*OpaqueExternalType02Child).SomeMethod(...)
 	/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:50
-test_formats.(*OpaqueExternalType02Child_OpaqueExternalType02ChildChild).Read(0xc0001bb0e0?, 0xc0001bc3e8?, 0x3?, 0x6eb300?)
+test_formats.(*OpaqueExternalType02Child_OpaqueExternalType02ChildChild).Read(0xc000229800?, 0xc00022a550?, 0x3?, 0x704b80?)
 	/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:77 +0x51
-test_formats.(*OpaqueExternalType02Child).Read(0xc00019d040, 0xc000046688?, {0x0?, 0x0?}, 0x6d2440?)
+test_formats.(*OpaqueExternalType02Child).Read(0xc000205360, 0xc000046688?, {0x0?, 0x0?}, 0x6e9b80?)
 	/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:42 +0x134
-test_formats.(*OpaqueExternalType02Parent_ParentObj).Read(0xc0000b3a00, 0x418a45?, 0x28?, 0x6d2520?)
+test_formats.(*OpaqueExternalType02Parent_ParentObj).Read(0xc00019fbc0, 0x418a45?, 0x28?, 0x6e9c60?)
 	/tests/compiled/go/src/test_formats/opaque_external_type_02_parent.go:56 +0x7e
-test_formats.(*OpaqueExternalType02Parent).Read(0xc0001bb110, 0x17?, {0x76b080?, 0xc0001bb110?}, 0x7c8188?)
+test_formats.(*OpaqueExternalType02Parent).Read(0xc000229830, 0x17?, {0x786200?, 0xc000229830?}, 0x7e6628?)
 	/tests/compiled/go/src/test_formats/opaque_external_type_02_parent.go:28 +0x88
-kaitai/spec.TestOpaqueExternalType02Parent(0xc0001c4c40)
+kaitai/spec.TestOpaqueExternalType02Parent(0xc0002316c0)
 	/tests/spec/go/opaque_external_type_02_parent_test.go:25 +0x10e
-testing.tRunner(0xc0001c4c40, 0x7206c8)
+testing.tRunner(0xc0002316c0, 0x73a678)
 	/usr/local/go/src/testing/testing.go:1934 +0xea
 created by testing.(*T).Run in goroutine 1
 	/usr/local/go/src/testing/testing.go:1997 +0x465
@@ -198,8 +206,10 @@ created by testing.(*T).Run in goroutine 1
 		<testcase name="TestParamsEnum" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestParamsPassArrayInt" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestParamsPassArrayStr" classname="kaitai/spec" time="0.000"></testcase>
+		<testcase name="TestParamsPassArrayStruct" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestParamsPassArrayUsertype" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestParamsPassBool" classname="kaitai/spec" time="0.000"></testcase>
+		<testcase name="TestParamsPassStruct" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestParamsPassUsertype" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestPositionAbs" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestPositionInSeq" classname="kaitai/spec" time="0.000">
@@ -212,6 +222,7 @@ created by testing.(*T).Run in goroutine 1
 		</testcase>
 		<testcase name="TestPositionToEnd" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestProcessCoerceBytes" classname="kaitai/spec" time="0.000"></testcase>
+		<testcase name="TestProcessCoerceSwitch" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestProcessCoerceUsertype1" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestProcessCoerceUsertype2" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestProcessCustomNoArgs" classname="kaitai/spec" time="0.000">
@@ -288,6 +299,7 @@ created by testing.(*T).Run in goroutine 1
 		<testcase name="TestProcessXor4Value" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestProcessXorConst" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestProcessXorValue" classname="kaitai/spec" time="0.000"></testcase>
+		<testcase name="TestRecursiveOne" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestRepeatEosBit" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestRepeatEosStruct" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestRepeatEosU4" classname="kaitai/spec" time="0.000">
@@ -366,11 +378,74 @@ created by testing.(*T).Run in goroutine 1
 		<testcase name="TestStrPadTermEmpty" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestStrPadTerm" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestStrPadTermUtf16" classname="kaitai/spec" time="0.000"></testcase>
+		<testcase name="TestSwitchBytearray" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestSwitchElseOnly" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestSwitchIntegers2" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestSwitchIntegers" classname="kaitai/spec" time="0.000"></testcase>
+		<testcase name="TestSwitchManualEnumInvalidElse" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestSwitchManualEnumInvalid" classname="kaitai/spec" time="0.000"></testcase>
+		<testcase name="TestSwitchManualEnum" classname="kaitai/spec" time="0.000"></testcase>
+		<testcase name="TestSwitchManualIntElse" classname="kaitai/spec" time="0.000"></testcase>
+		<testcase name="TestSwitchManualIntSizeElse" classname="kaitai/spec" time="0.000"></testcase>
+		<testcase name="TestSwitchManualIntSizeEos" classname="kaitai/spec" time="0.000">
+			<failure message="Failed"><![CDATA[goroutine 215 [running]:
+runtime/debug.Stack()
+	/usr/local/go/src/runtime/debug/stack.go:26 +0x5e
+runtime/debug.PrintStack()
+	/usr/local/go/src/runtime/debug/stack.go:18 +0x13
+kaitai/spec.TestSwitchManualIntSizeEos.func1()
+	/tests/spec/go/switch_manual_int_size_eos_test.go:17 +0x39
+panic({0x6ac360?, 0xc0002d86c0?})
+	/usr/local/go/src/runtime/panic.go:783 +0x132
+kaitai/spec.TestSwitchManualIntSizeEos(0xc0002d4380)
+	/tests/spec/go/switch_manual_int_size_eos_test.go:38 +0x69e
+testing.tRunner(0xc0002d4380, 0x73a868)
+	/usr/local/go/src/testing/testing.go:1934 +0xea
+created by testing.(*T).Run in goroutine 1
+	/usr/local/go/src/testing/testing.go:1997 +0x465
+    switch_manual_int_size_eos_test.go:18: unexpected panic: interface conversion: interface {} is nil, not []uint8]]></failure>
+		</testcase>
+		<testcase name="TestSwitchManualIntSize" classname="kaitai/spec" time="0.000">
+			<failure message="Failed"><![CDATA[goroutine 216 [running]:
+runtime/debug.Stack()
+	/usr/local/go/src/runtime/debug/stack.go:26 +0x5e
+runtime/debug.PrintStack()
+	/usr/local/go/src/runtime/debug/stack.go:18 +0x13
+kaitai/spec.TestSwitchManualIntSize.func1()
+	/tests/spec/go/switch_manual_int_size_test.go:17 +0x39
+panic({0x6ac360?, 0xc0002d8900?})
+	/usr/local/go/src/runtime/panic.go:783 +0x132
+kaitai/spec.TestSwitchManualIntSize(0xc0002d4540)
+	/tests/spec/go/switch_manual_int_size_test.go:38 +0x691
+testing.tRunner(0xc0002d4540, 0x73a858)
+	/usr/local/go/src/testing/testing.go:1934 +0xea
+created by testing.(*T).Run in goroutine 1
+	/usr/local/go/src/testing/testing.go:1997 +0x465
+    switch_manual_int_size_test.go:18: unexpected panic: interface conversion: interface {} is nil, not []uint8]]></failure>
+		</testcase>
+		<testcase name="TestSwitchManualInt" classname="kaitai/spec" time="0.000"></testcase>
+		<testcase name="TestSwitchManualStrElse" classname="kaitai/spec" time="0.000"></testcase>
+		<testcase name="TestSwitchManualStr" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestSwitchMultiBoolOps" classname="kaitai/spec" time="0.000"></testcase>
+		<testcase name="TestSwitchRepeatExprInvalid" classname="kaitai/spec" time="0.000">
+			<failure message="Failed"><![CDATA[goroutine 221 [running]:
+runtime/debug.Stack()
+	/usr/local/go/src/runtime/debug/stack.go:26 +0x5e
+runtime/debug.PrintStack()
+	/usr/local/go/src/runtime/debug/stack.go:18 +0x13
+kaitai/spec.TestSwitchRepeatExprInvalid.func1()
+	/tests/spec/go/switch_repeat_expr_invalid_test.go:17 +0x39
+panic({0x6ef4c0?, 0xc0001b4a20?})
+	/usr/local/go/src/runtime/panic.go:783 +0x132
+kaitai/spec.TestSwitchRepeatExprInvalid(0xc0002d4e00)
+	/tests/spec/go/switch_repeat_expr_invalid_test.go:33 +0x2ef
+testing.tRunner(0xc0002d4e00, 0x73a890)
+	/usr/local/go/src/testing/testing.go:1934 +0xea
+created by testing.(*T).Run in goroutine 1
+	/usr/local/go/src/testing/testing.go:1997 +0x465
+    switch_repeat_expr_invalid_test.go:18: unexpected panic: runtime error: index out of range [0] with length 0]]></failure>
+		</testcase>
+		<testcase name="TestSwitchRepeatExpr" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestTermBytes" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestTermStrz" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestTermStrzUtf16V1" classname="kaitai/spec" time="0.000"></testcase>
