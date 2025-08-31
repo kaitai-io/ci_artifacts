@@ -97,6 +97,8 @@ Warning: node rtl_obj__inst__digit7, port digit7_type unrecognized
 Warning: node rtl_obj__inst__digit8, port digit8_type unrecognized
 Warning: node rtl_obj__inst__digit8, port digit8_type unrecognized
 compiled/graphviz/bits_byte_aligned.dot => bits_byte_aligned => bits_byte_aligned.svg
+compiled/graphviz/bits_byte_aligned_eof_be.dot => bits_byte_aligned_eof_be => bits_byte_aligned_eof_be.svg
+compiled/graphviz/bits_byte_aligned_eof_le.dot => bits_byte_aligned_eof_le => bits_byte_aligned_eof_le.svg
 compiled/graphviz/bits_enum.dot => bits_enum => bits_enum.svg
 compiled/graphviz/bits_seq_endian_combo.dot => bits_seq_endian_combo => bits_seq_endian_combo.svg
 compiled/graphviz/bits_shift_by_b32_le.dot => bits_shift_by_b32_le => bits_shift_by_b32_le.svg
@@ -112,7 +114,12 @@ compiled/graphviz/bits_unaligned_b32_le.dot => bits_unaligned_b32_le => bits_una
 compiled/graphviz/bits_unaligned_b64_be.dot => bits_unaligned_b64_be => bits_unaligned_b64_be.svg
 compiled/graphviz/bits_unaligned_b64_le.dot => bits_unaligned_b64_le => bits_unaligned_b64_le.svg
 compiled/graphviz/buffered_struct.dot => buffered_struct => buffered_struct.svg
+compiled/graphviz/bytes_eos_pad_term.dot => bytes_eos_pad_term => bytes_eos_pad_term.svg
 compiled/graphviz/bytes_pad_term.dot => bytes_pad_term => bytes_pad_term.svg
+compiled/graphviz/bytes_pad_term_empty.dot => bytes_pad_term_empty => bytes_pad_term_empty.svg
+compiled/graphviz/bytes_pad_term_equal.dot => bytes_pad_term_equal => bytes_pad_term_equal.svg
+compiled/graphviz/bytes_pad_term_roundtrip.dot => bytes_pad_term_roundtrip => bytes_pad_term_roundtrip.svg
+compiled/graphviz/bytes_pad_term_zero_size.dot => bytes_pad_term_zero_size => bytes_pad_term_zero_size.svg
 compiled/graphviz/cast_nested.dot => cast_nested => cast_nested.svg
 compiled/graphviz/cast_to_imported.dot => cast_to_imported => cast_to_imported.svg
 Warning: node hello_world__seq, port one_type unrecognized
@@ -171,6 +178,10 @@ compiled/graphviz/enum_to_i_class_border_1.dot => enum_to_i_class_border_1 => en
 compiled/graphviz/enum_to_i_class_border_2.dot => enum_to_i_class_border_2 => enum_to_i_class_border_2.svg
 Warning: node enum_to_i_class_border_1__inst__some_dog, port some_dog_type unrecognized
 compiled/graphviz/enum_to_i_invalid.dot => enum_to_i_invalid => enum_to_i_invalid.svg
+compiled/graphviz/eof_exception_bits_be.dot => eof_exception_bits_be => eof_exception_bits_be.svg
+compiled/graphviz/eof_exception_bits_be2.dot => eof_exception_bits_be2 => eof_exception_bits_be2.svg
+compiled/graphviz/eof_exception_bits_le.dot => eof_exception_bits_le => eof_exception_bits_le.svg
+compiled/graphviz/eof_exception_bits_le2.dot => eof_exception_bits_le2 => eof_exception_bits_le2.svg
 compiled/graphviz/eof_exception_bytes.dot => eof_exception_bytes => eof_exception_bytes.svg
 compiled/graphviz/eof_exception_sized.dot => eof_exception_sized => eof_exception_sized.svg
 compiled/graphviz/eof_exception_u4.dot => eof_exception_u4 => eof_exception_u4.svg
@@ -225,10 +236,13 @@ Warning: node expr_calc_array_ops__inst__str_array, port str_array_type unrecogn
 Warning: node expr_calc_array_ops__inst__str_array, port str_array_type unrecognized
 compiled/graphviz/expr_enum.dot => expr_enum => expr_enum.svg
 compiled/graphviz/expr_fstring_0.dot => expr_fstring_0 => expr_fstring_0.svg
+compiled/graphviz/expr_if_int_eq.dot => expr_if_int_eq => expr_if_int_eq.svg
 compiled/graphviz/expr_if_int_ops.dot => expr_if_int_ops => expr_if_int_ops.svg
 compiled/graphviz/expr_int_div.dot => expr_int_div => expr_int_div.svg
 compiled/graphviz/expr_io_eof.dot => expr_io_eof => expr_io_eof.svg
+compiled/graphviz/expr_io_eof_bits.dot => expr_io_eof_bits => expr_io_eof_bits.svg
 compiled/graphviz/expr_io_pos.dot => expr_io_pos => expr_io_pos.svg
+compiled/graphviz/expr_io_pos_bits.dot => expr_io_pos_bits => expr_io_pos_bits.svg
 compiled/graphviz/expr_io_ternary.dot => expr_io_ternary => expr_io_ternary.svg
 Warning: node expr_io_ternary__inst__one_or_two_io, port one_or_two_io_type unrecognized
 compiled/graphviz/expr_mod.dot => expr_mod => expr_mod.svg
@@ -291,7 +305,11 @@ compiled/graphviz/index_to_param_expr.dot => index_to_param_expr => index_to_par
 Warning: node block__params, port idx_type unrecognized
 compiled/graphviz/index_to_param_until.dot => index_to_param_until => index_to_param_until.svg
 Warning: node block__params, port idx_type unrecognized
+compiled/graphviz/instance_in_repeat_expr.dot => instance_in_repeat_expr => instance_in_repeat_expr.svg
+compiled/graphviz/instance_in_repeat_until.dot => instance_in_repeat_until => instance_in_repeat_until.svg
+compiled/graphviz/instance_in_sized.dot => instance_in_sized => instance_in_sized.svg
 compiled/graphviz/instance_io_user.dot => instance_io_user => instance_io_user.svg
+compiled/graphviz/instance_io_user_earlier.dot => instance_io_user_earlier => instance_io_user_earlier.svg
 compiled/graphviz/instance_std.dot => instance_std => instance_std.svg
 compiled/graphviz/instance_std_array.dot => instance_std_array => instance_std_array.svg
 compiled/graphviz/instance_user_array.dot => instance_user_array => instance_user_array.svg
@@ -349,17 +367,22 @@ Warning: node hello_world__seq, port one_type unrecognized
 compiled/graphviz/params_enum.dot => params_enum => params_enum.svg
 Warning: node with_param__params, port enumerated_one_type unrecognized
 compiled/graphviz/params_pass_array_int.dot => params_pass_array_int => params_pass_array_int.svg
+compiled/graphviz/params_pass_array_io.dot => params_pass_array_io => params_pass_array_io.svg
+Warning: node param_type__params, port arg_streams_type unrecognized
 compiled/graphviz/params_pass_array_str.dot => params_pass_array_str => params_pass_array_str.svg
 compiled/graphviz/params_pass_array_struct.dot => params_pass_array_struct => params_pass_array_struct.svg
 compiled/graphviz/params_pass_array_usertype.dot => params_pass_array_usertype => params_pass_array_usertype.svg
 compiled/graphviz/params_pass_bool.dot => params_pass_bool => params_pass_bool.svg
 Warning: node param_type_b1__params, port arg_type unrecognized
 Warning: node param_type_bool__params, port arg_type unrecognized
+compiled/graphviz/params_pass_io.dot => params_pass_io => params_pass_io.svg
+Warning: node param_type__params, port arg_stream_type unrecognized
 compiled/graphviz/params_pass_struct.dot => params_pass_struct => params_pass_struct.svg
 compiled/graphviz/params_pass_usertype.dot => params_pass_usertype => params_pass_usertype.svg
 compiled/graphviz/position_abs.dot => position_abs => position_abs.svg
 compiled/graphviz/position_in_seq.dot => position_in_seq => position_in_seq.svg
 compiled/graphviz/position_to_end.dot => position_to_end => position_to_end.svg
+compiled/graphviz/process_bytes_pad_term.dot => process_bytes_pad_term => process_bytes_pad_term.svg
 compiled/graphviz/process_coerce_bytes.dot => process_coerce_bytes => process_coerce_bytes.svg
 compiled/graphviz/process_coerce_switch.dot => process_coerce_switch => process_coerce_switch.svg
 compiled/graphviz/process_coerce_usertype1.dot => process_coerce_usertype1 => process_coerce_usertype1.svg
@@ -368,7 +391,12 @@ compiled/graphviz/process_custom.dot => process_custom => process_custom.svg
 compiled/graphviz/process_custom_no_args.dot => process_custom_no_args => process_custom_no_args.svg
 compiled/graphviz/process_repeat_bytes.dot => process_repeat_bytes => process_repeat_bytes.svg
 compiled/graphviz/process_repeat_usertype.dot => process_repeat_usertype => process_repeat_usertype.svg
+compiled/graphviz/process_repeat_usertype_dynarg_custom.dot => process_repeat_usertype_dynarg_custom => process_repeat_usertype_dynarg_custom.svg
+compiled/graphviz/process_repeat_usertype_dynarg_rotate.dot => process_repeat_usertype_dynarg_rotate => process_repeat_usertype_dynarg_rotate.svg
+compiled/graphviz/process_repeat_usertype_dynarg_xor.dot => process_repeat_usertype_dynarg_xor => process_repeat_usertype_dynarg_xor.svg
 compiled/graphviz/process_rotate.dot => process_rotate => process_rotate.svg
+compiled/graphviz/process_struct_pad_term.dot => process_struct_pad_term => process_struct_pad_term.svg
+compiled/graphviz/process_term_struct.dot => process_term_struct => process_term_struct.svg
 compiled/graphviz/process_to_user.dot => process_to_user => process_to_user.svg
 compiled/graphviz/process_xor4_const.dot => process_xor4_const => process_xor4_const.svg
 compiled/graphviz/process_xor4_value.dot => process_xor4_value => process_xor4_value.svg
@@ -376,28 +404,51 @@ compiled/graphviz/process_xor_const.dot => process_xor_const => process_xor_cons
 compiled/graphviz/process_xor_value.dot => process_xor_value => process_xor_value.svg
 compiled/graphviz/recursive_one.dot => recursive_one => recursive_one.svg
 compiled/graphviz/repeat_eos_bit.dot => repeat_eos_bit => repeat_eos_bit.svg
+compiled/graphviz/repeat_eos_bytes.dot => repeat_eos_bytes => repeat_eos_bytes.svg
+compiled/graphviz/repeat_eos_bytes_pad.dot => repeat_eos_bytes_pad => repeat_eos_bytes_pad.svg
+compiled/graphviz/repeat_eos_bytes_pad_term.dot => repeat_eos_bytes_pad_term => repeat_eos_bytes_pad_term.svg
 compiled/graphviz/repeat_eos_struct.dot => repeat_eos_struct => repeat_eos_struct.svg
+compiled/graphviz/repeat_eos_term_bytes.dot => repeat_eos_term_bytes => repeat_eos_term_bytes.svg
+compiled/graphviz/repeat_eos_term_struct.dot => repeat_eos_term_struct => repeat_eos_term_struct.svg
 compiled/graphviz/repeat_eos_u4.dot => repeat_eos_u4 => repeat_eos_u4.svg
+compiled/graphviz/repeat_n_bytes.dot => repeat_n_bytes => repeat_n_bytes.svg
+compiled/graphviz/repeat_n_bytes_pad.dot => repeat_n_bytes_pad => repeat_n_bytes_pad.svg
+compiled/graphviz/repeat_n_bytes_pad_term.dot => repeat_n_bytes_pad_term => repeat_n_bytes_pad_term.svg
 compiled/graphviz/repeat_n_struct.dot => repeat_n_struct => repeat_n_struct.svg
 compiled/graphviz/repeat_n_strz.dot => repeat_n_strz => repeat_n_strz.svg
 compiled/graphviz/repeat_n_strz_double.dot => repeat_n_strz_double => repeat_n_strz_double.svg
+compiled/graphviz/repeat_n_term_bytes.dot => repeat_n_term_bytes => repeat_n_term_bytes.svg
+compiled/graphviz/repeat_n_term_struct.dot => repeat_n_term_struct => repeat_n_term_struct.svg
+compiled/graphviz/repeat_until_bytes.dot => repeat_until_bytes => repeat_until_bytes.svg
+compiled/graphviz/repeat_until_bytes_pad.dot => repeat_until_bytes_pad => repeat_until_bytes_pad.svg
+compiled/graphviz/repeat_until_bytes_pad_term.dot => repeat_until_bytes_pad_term => repeat_until_bytes_pad_term.svg
 compiled/graphviz/repeat_until_calc_array_type.dot => repeat_until_calc_array_type => repeat_until_calc_array_type.svg
 Warning: node repeat_until_calc_array_type__inst__recs_accessor, port recs_accessor_type unrecognized
 compiled/graphviz/repeat_until_complex.dot => repeat_until_complex => repeat_until_complex.svg
 compiled/graphviz/repeat_until_s4.dot => repeat_until_s4 => repeat_until_s4.svg
 compiled/graphviz/repeat_until_sized.dot => repeat_until_sized => repeat_until_sized.svg
+compiled/graphviz/repeat_until_term_bytes.dot => repeat_until_term_bytes => repeat_until_term_bytes.svg
+compiled/graphviz/repeat_until_term_struct.dot => repeat_until_term_struct => repeat_until_term_struct.svg
 compiled/graphviz/str_encodings.dot => str_encodings => str_encodings.svg
 compiled/graphviz/str_encodings_default.dot => str_encodings_default => str_encodings_default.svg
 compiled/graphviz/str_encodings_escaping_enc.dot => str_encodings_escaping_enc => str_encodings_escaping_enc.svg
 compiled/graphviz/str_encodings_escaping_to_s.dot => str_encodings_escaping_to_s => str_encodings_escaping_to_s.svg
 compiled/graphviz/str_encodings_utf16.dot => str_encodings_utf16 => str_encodings_utf16.svg
 compiled/graphviz/str_eos.dot => str_eos => str_eos.svg
+compiled/graphviz/str_eos_pad_term.dot => str_eos_pad_term => str_eos_pad_term.svg
+compiled/graphviz/str_eos_pad_term_empty.dot => str_eos_pad_term_empty => str_eos_pad_term_empty.svg
+compiled/graphviz/str_eos_pad_term_equal.dot => str_eos_pad_term_equal => str_eos_pad_term_equal.svg
 compiled/graphviz/str_literals.dot => str_literals => str_literals.svg
 compiled/graphviz/str_literals2.dot => str_literals2 => str_literals2.svg
 compiled/graphviz/str_literals_latin1.dot => str_literals_latin1 => str_literals_latin1.svg
 compiled/graphviz/str_pad_term.dot => str_pad_term => str_pad_term.svg
 compiled/graphviz/str_pad_term_empty.dot => str_pad_term_empty => str_pad_term_empty.svg
+compiled/graphviz/str_pad_term_equal.dot => str_pad_term_equal => str_pad_term_equal.svg
+compiled/graphviz/str_pad_term_roundtrip.dot => str_pad_term_roundtrip => str_pad_term_roundtrip.svg
 compiled/graphviz/str_pad_term_utf16.dot => str_pad_term_utf16 => str_pad_term_utf16.svg
+compiled/graphviz/str_pad_term_zero_size.dot => str_pad_term_zero_size => str_pad_term_zero_size.svg
+compiled/graphviz/struct_pad_term.dot => struct_pad_term => struct_pad_term.svg
+compiled/graphviz/struct_pad_term_equal.dot => struct_pad_term_equal => struct_pad_term_equal.svg
 compiled/graphviz/switch_bytearray.dot => switch_bytearray => switch_bytearray.svg
 compiled/graphviz/switch_cast.dot => switch_cast => switch_cast.svg
 compiled/graphviz/switch_else_only.dot => switch_else_only => switch_else_only.svg
@@ -417,7 +468,17 @@ compiled/graphviz/switch_multi_bool_ops.dot => switch_multi_bool_ops => switch_m
 compiled/graphviz/switch_repeat_expr.dot => switch_repeat_expr => switch_repeat_expr.svg
 compiled/graphviz/switch_repeat_expr_invalid.dot => switch_repeat_expr_invalid => switch_repeat_expr_invalid.svg
 compiled/graphviz/term_bytes.dot => term_bytes => term_bytes.svg
+compiled/graphviz/term_bytes2.dot => term_bytes2 => term_bytes2.svg
+compiled/graphviz/term_bytes3.dot => term_bytes3 => term_bytes3.svg
+compiled/graphviz/term_bytes4.dot => term_bytes4 => term_bytes4.svg
+compiled/graphviz/term_struct.dot => term_struct => term_struct.svg
+compiled/graphviz/term_struct2.dot => term_struct2 => term_struct2.svg
+compiled/graphviz/term_struct3.dot => term_struct3 => term_struct3.svg
+compiled/graphviz/term_struct4.dot => term_struct4 => term_struct4.svg
 compiled/graphviz/term_strz.dot => term_strz => term_strz.svg
+compiled/graphviz/term_strz2.dot => term_strz2 => term_strz2.svg
+compiled/graphviz/term_strz3.dot => term_strz3 => term_strz3.svg
+compiled/graphviz/term_strz4.dot => term_strz4 => term_strz4.svg
 compiled/graphviz/term_strz_utf16_v1.dot => term_strz_utf16_v1 => term_strz_utf16_v1.svg
 compiled/graphviz/term_strz_utf16_v2.dot => term_strz_utf16_v2 => term_strz_utf16_v2.svg
 compiled/graphviz/term_strz_utf16_v3.dot => term_strz_utf16_v3 => term_strz_utf16_v3.svg
