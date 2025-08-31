@@ -1,13 +1,13 @@
 {
   "$meta": {
     "lang": "nim",
-    "timestamp": "2025-08-24T13:04:51Z",
+    "timestamp": "2025-08-31T19:43:21Z",
     "ci": {
       "ci": "github",
-      "run_id": "17189003633",
-      "run_number": "357",
-      "job_id": "48761992870",
-      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/17189003633/job/48761992870"
+      "run_id": "17361514425",
+      "run_number": "358",
+      "job_id": "49282227278",
+      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/17361514425/job/49282227278"
     }
   },
   "BcdUserTypeBe": {
@@ -391,8 +391,14 @@
     "is_kst": true
   },
   "ExprIfIntOps": {
-    "status": "passed",
+    "status": "failed",
     "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": "/tests/spec/nim/texpr_if_int_ops.nim(7, 21) template/generic instantiation of `fromFile` from here\n/tests/compiled/nim/expr_if_int_ops.nim(60, 15) template/generic instantiation of `read` from here\n/tests/compiled/nim/expr_if_int_ops.nim(37, 32) Error: type mismatch\nExpression: processXor(result.rawBytes, result.key)\n  [1] result.rawBytes: seq[byte]\n  [2] result.key: uint64\n\nExpected one of (first mismatch at [position]):\n[2] proc processXor(data, key: seq[byte]): seq[byte]\n[2] proc processXor(data: seq[byte]; key: byte): seq[byte]\n\n",
+      "trace": ""
+    },
     "is_kst": true
   },
   "ExprIntDiv": {
@@ -800,6 +806,10 @@
     "status": "passed",
     "elapsed": 0.0,
     "is_kst": true
+  },
+  "OpaqueExternalType": {
+    "status": "passed",
+    "elapsed": 0.0
   },
   "ParamsCall": {
     "status": "passed",
@@ -1263,6 +1273,10 @@
     "status": "passed",
     "elapsed": 0.0,
     "is_kst": true
+  },
+  "TypeTernaryOpaque": {
+    "status": "passed",
+    "elapsed": 0.0
   },
   "UserType": {
     "status": "passed",
