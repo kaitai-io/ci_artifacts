@@ -1,13 +1,13 @@
 {
   "$meta": {
     "lang": "construct",
-    "timestamp": "2025-08-24T12:59:23Z",
+    "timestamp": "2025-08-31T19:37:58Z",
     "ci": {
       "ci": "github",
-      "run_id": "17189003633",
-      "run_number": "357",
-      "job_id": "48761992816",
-      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/17189003633/job/48761992816"
+      "run_id": "17361514425",
+      "run_number": "358",
+      "job_id": "49282227219",
+      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/17361514425/job/49282227219"
     }
   },
   "BcdUserTypeBe": {
@@ -577,8 +577,14 @@
     "is_kst": true
   },
   "ExprIfIntOps": {
-    "status": "passed",
+    "status": "failed",
     "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": "name 'KaitaiStream' is not defined",
+      "trace": "Traceback (most recent call last):\n  File \"/tests/spec/construct/test_expr_if_int_ops.py\", line 9, in test_expr_if_int_ops\n    r = _schema.parse_file('src/instance_io.bin')\n  File \"/usr/local/lib/python3.6/site-packages/construct/core.py\", line 425, in parse_file\n    return self.parse_stream(f, **contextkw)\n  File \"/usr/local/lib/python3.6/site-packages/construct/core.py\", line 416, in parse_stream\n    return self._parsereport(stream, context, \"(parsing)\")\n  File \"/usr/local/lib/python3.6/site-packages/construct/core.py\", line 428, in _parsereport\n    obj = self._parse(stream, context, path)\n  File \"/usr/local/lib/python3.6/site-packages/construct/core.py\", line 2236, in _parse\n    subobj = sc._parsereport(stream, context, path)\n  File \"/usr/local/lib/python3.6/site-packages/construct/core.py\", line 428, in _parsereport\n    obj = self._parse(stream, context, path)\n  File \"/usr/local/lib/python3.6/site-packages/construct/core.py\", line 2770, in _parse\n    return self.subcon._parsereport(stream, context, path)\n  File \"/usr/local/lib/python3.6/site-packages/construct/core.py\", line 428, in _parsereport\n    obj = self._parse(stream, context, path)\n  File \"/usr/local/lib/python3.6/site-packages/construct/core.py\", line 2915, in _parse\n    return self.func(context) if callable(self.func) else self.func\n  File \"/tests/compiled/construct/expr_if_int_ops.py\", line 9, in <lambda>\n    'bytes_sub_key' / Computed(lambda this: KaitaiStream.byte_array_index(this.bytes, this.key)),\nNameError: name 'KaitaiStream' is not defined"
+    },
     "is_kst": true
   },
   "ExprIntDiv": {
@@ -1411,8 +1417,8 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "<built-in method values of Container object at 0x7f8535546a68> != [1, 2, 3, 4]",
-      "trace": "Traceback (most recent call last):\n  File \"/tests/spec/construct/test_repeat_until_complex.py\", line 12, in test_repeat_until_complex\n    self.assertEqual(r.first[0].values, [(0 + 1), 2, 3, 4])\nAssertionError: <built-in method values of Container object at 0x7f8535546a68> != [1, 2, 3, 4]"
+      "message": "<built-in method values of Container object at 0x7f6c870261f8> != [1, 2, 3, 4]",
+      "trace": "Traceback (most recent call last):\n  File \"/tests/spec/construct/test_repeat_until_complex.py\", line 12, in test_repeat_until_complex\n    self.assertEqual(r.first[0].values, [(0 + 1), 2, 3, 4])\nAssertionError: <built-in method values of Container object at 0x7f6c870261f8> != [1, 2, 3, 4]"
     },
     "is_kst": true
   },
