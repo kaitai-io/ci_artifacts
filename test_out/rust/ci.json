@@ -1,13 +1,13 @@
 {
   "$meta": {
     "lang": "rust",
-    "timestamp": "2025-08-24T13:02:01Z",
+    "timestamp": "2025-08-31T19:40:13Z",
     "ci": {
       "ci": "github",
-      "run_id": "17189003633",
-      "run_number": "357",
-      "job_id": "48761992888",
-      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/17189003633/job/48761992888"
+      "run_id": "17361514425",
+      "run_number": "358",
+      "job_id": "49282227288",
+      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/17361514425/job/49282227288"
     }
   },
   "BcdUserTypeBe": {
@@ -398,8 +398,8 @@
     "is_kst": true
   },
   "ExprIfIntOps": {
-    "status": "passed",
-    "elapsed": 0.0,
+    "status": "format_build_failed",
+    "elapsed": null,
     "is_kst": true
   },
   "ExprIntDiv": {
@@ -593,6 +593,10 @@
     "elapsed": 0.0,
     "is_kst": true
   },
+  "InstanceIoUserEarlier": {
+    "status": "format_build_failed",
+    "elapsed": null
+  },
   "InstanceStd": {
     "status": "passed",
     "elapsed": 0.0,
@@ -745,7 +749,7 @@
       "file_name": null,
       "line_num": null,
       "message": "thread 'test_nested_types_import::test_nested_types_import' panicked at /runtime/rust/src/lib.rs:241:25",
-      "trace": "thread 'test_nested_types_import::test_nested_types_import' panicked at /runtime/rust/src/lib.rs:241:25:\n`0x7ff8618e0e90` is not a 'alloc::rc::Rc<rust::formats::nested_types3::NestedTypes3>' type\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace"
+      "trace": "thread 'test_nested_types_import::test_nested_types_import' panicked at /runtime/rust/src/lib.rs:241:25:\n`0x7f6bbec85e90` is not a 'alloc::rc::Rc<rust::formats::nested_types3::NestedTypes3>' type\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace"
     }
   },
   "NonStandard": {
@@ -754,8 +758,8 @@
     "is_kst": true
   },
   "OpaqueExternalType": {
-    "status": "passed",
-    "elapsed": 0.0
+    "status": "spec_build_failed",
+    "elapsed": null
   },
   "OpaqueExternalType02Parent": {
     "status": "passed",
@@ -793,6 +797,10 @@
     "elapsed": 0.0,
     "is_kst": true
   },
+  "ParamsPassArrayIo": {
+    "status": "format_build_failed",
+    "elapsed": null
+  },
   "ParamsPassArrayStr": {
     "status": "passed",
     "elapsed": 0.0,
@@ -812,6 +820,10 @@
     "status": "passed",
     "elapsed": 0.0,
     "is_kst": true
+  },
+  "ParamsPassIo": {
+    "status": "format_build_failed",
+    "elapsed": null
   },
   "ParamsPassStruct": {
     "status": "format_build_failed",
@@ -872,6 +884,18 @@
     "status": "passed",
     "elapsed": 0.0,
     "is_kst": true
+  },
+  "ProcessRepeatUsertypeDynargCustom": {
+    "status": "format_build_failed",
+    "elapsed": null
+  },
+  "ProcessRepeatUsertypeDynargRotate": {
+    "status": "format_build_failed",
+    "elapsed": null
+  },
+  "ProcessRepeatUsertypeDynargXor": {
+    "status": "format_build_failed",
+    "elapsed": null
   },
   "ProcessRotate": {
     "status": "passed",
@@ -938,6 +962,10 @@
     "elapsed": 0.0,
     "is_kst": true
   },
+  "RepeatUntilBytesPadTerm": {
+    "status": "format_build_failed",
+    "elapsed": null
+  },
   "RepeatUntilCalcArrayType": {
     "status": "passed",
     "elapsed": 0.0,
@@ -957,6 +985,10 @@
     "status": "passed",
     "elapsed": 0.0,
     "is_kst": true
+  },
+  "RepeatUntilTermBytes": {
+    "status": "format_build_failed",
+    "elapsed": null
   },
   "StrEncodings": {
     "status": "passed",
@@ -1205,8 +1237,8 @@
     "is_kst": true
   },
   "TypeTernaryOpaque": {
-    "status": "passed",
-    "elapsed": 0.0
+    "status": "spec_build_failed",
+    "elapsed": null
   },
   "UserType": {
     "status": "passed",
@@ -1260,7 +1292,7 @@
       "file_name": null,
       "line_num": null,
       "message": "thread 'test_valid_fail_in_enum::test_valid_fail_in_enum' panicked at tests/test_valid_fail_in_enum.rs:13:19",
-      "trace": "thread 'test_valid_fail_in_enum::test_valid_fail_in_enum' panicked at tests/test_valid_fail_in_enum.rs:13:19:\nexpected Err representing ValidationNotInEnumError(IntMultiType(true,Width4,None)), but got Ok: OptRc(Some(ValidFailInEnum { _root: SharedType(Weak(0x7f2d0c000bb0)), _parent: SharedType(Weak(0x7f2d0c000bb0)), _self: SharedType(Weak(0x7f2d0c000bb0)), foo: RefCell { value: Unknown(7) }, _io: RefCell { value: BytesReader { state: RefCell { value: ReaderState { pos: 0, bits: 0, bits_left: 0 } }, buf: OptRc(Some(RefCell { value: ReadSeek })), file_size: 8 } } }))\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace"
+      "trace": "thread 'test_valid_fail_in_enum::test_valid_fail_in_enum' panicked at tests/test_valid_fail_in_enum.rs:13:19:\nexpected Err representing ValidationNotInEnumError(IntMultiType(true,Width4,None)), but got Ok: OptRc(Some(ValidFailInEnum { _root: SharedType(Weak(0x7f9eb0000bb0)), _parent: SharedType(Weak(0x7f9eb0000bb0)), _self: SharedType(Weak(0x7f9eb0000bb0)), foo: RefCell { value: Unknown(7) }, _io: RefCell { value: BytesReader { state: RefCell { value: ReaderState { pos: 0, bits: 0, bits_left: 0 } }, buf: OptRc(Some(RefCell { value: ReadSeek })), file_size: 8 } } }))\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace"
     },
     "is_kst": true
   },
