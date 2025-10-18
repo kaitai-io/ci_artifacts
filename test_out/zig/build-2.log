@@ -1,0 +1,63 @@
+test
++- compile test Debug native 13 errors
+formats/debug_array_user.zig:1:1: error: unable to load 'debug_array_user.zig': FileNotFound
+tests/debug_array_user_test.zig:5:34: note: file imported here
+const debug_array_user = @import("../formats/debug_array_user.zig");
+                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+formats/debug_array_user_current_excluded.zig:1:1: error: unable to load 'debug_array_user_current_excluded.zig': FileNotFound
+tests/debug_array_user_current_excluded_test.zig:5:51: note: file imported here
+const debug_array_user_current_excluded = @import("../formats/debug_array_user_current_excluded.zig");
+                                                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+formats/debug_array_user_eof_exception.zig:1:1: error: unable to load 'debug_array_user_eof_exception.zig': FileNotFound
+tests/debug_array_user_eof_exception_test.zig:5:48: note: file imported here
+const debug_array_user_eof_exception = @import("../formats/debug_array_user_eof_exception.zig");
+                                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+formats/expr_ops_parens.zig:1:1: error: unable to load 'expr_ops_parens.zig': FileNotFound
+tests/expr_ops_parens_test.zig:5:33: note: file imported here
+const expr_ops_parens = @import("../formats/expr_ops_parens.zig");
+                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+formats/expr_str_ops.zig:1:1: error: unable to load 'expr_str_ops.zig': FileNotFound
+tests/expr_str_ops_test.zig:5:30: note: file imported here
+const expr_str_ops = @import("../formats/expr_str_ops.zig");
+                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+formats/instance_std_array.zig:1:1: error: unable to load 'instance_std_array.zig': FileNotFound
+tests/instance_std_array_test.zig:5:36: note: file imported here
+const instance_std_array = @import("../formats/instance_std_array.zig");
+                                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+formats/instance_user_array.zig:1:1: error: unable to load 'instance_user_array.zig': FileNotFound
+tests/instance_user_array_test.zig:5:37: note: file imported here
+const instance_user_array = @import("../formats/instance_user_array.zig");
+                                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+formats/nav_parent3.zig:1:1: error: unable to load 'nav_parent3.zig': FileNotFound
+tests/nav_parent3_test.zig:5:29: note: file imported here
+const nav_parent3 = @import("../formats/nav_parent3.zig");
+                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+formats/process_custom.zig:1:1: error: unable to load 'process_custom.zig': FileNotFound
+tests/process_custom_test.zig:5:32: note: file imported here
+const process_custom = @import("../formats/process_custom.zig");
+                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+formats/process_custom_no_args.zig:1:1: error: unable to load 'process_custom_no_args.zig': FileNotFound
+tests/process_custom_no_args_test.zig:5:40: note: file imported here
+const process_custom_no_args = @import("../formats/process_custom_no_args.zig");
+                                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+formats/process_repeat_usertype_dynarg_custom.zig:1:1: error: unable to load 'process_repeat_usertype_dynarg_custom.zig': FileNotFound
+tests/process_repeat_usertype_dynarg_custom_test.zig:5:55: note: file imported here
+const process_repeat_usertype_dynarg_custom = @import("../formats/process_repeat_usertype_dynarg_custom.zig");
+                                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+formats/process_term_struct.zig:1:1: error: unable to load 'process_term_struct.zig': FileNotFound
+tests/process_term_struct_test.zig:5:37: note: file imported here
+const process_term_struct = @import("../formats/process_term_struct.zig");
+                                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+formats/valid_fail_repeat_inst.zig:1:1: error: unable to load 'valid_fail_repeat_inst.zig': FileNotFound
+tests/valid_fail_repeat_inst_test.zig:5:40: note: file imported here
+const valid_fail_repeat_inst = @import("../formats/valid_fail_repeat_inst.zig");
+                                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+error: the following command failed with 13 compilation errors:
+/usr/local/zig-x86_64-linux-0.15.2/zig test -freference-trace=256 -ODebug --dep kaitai_struct -Mroot=/tests/spec/zig/tests.zig -Mkaitai_struct=/runtime/zig/src/root.zig --test-runner /tests/spec/zig/test_runner.zig --cache-dir .zig-cache --global-cache-dir /root/.cache/zig --name test --zig-lib-dir /usr/local/zig-x86_64-linux-0.15.2/lib/ --listen=-
+
+Build Summary: 0/2 steps succeeded; 1 failed
+test transitive failure
++- compile test Debug native 13 errors
+
+error: the following build command failed with exit code 1:
+.zig-cache/o/bb2be1d730b79250120f1950cdfc8757/build /usr/local/zig-x86_64-linux-0.15.2/zig /usr/local/zig-x86_64-linux-0.15.2/lib /tests/spec/zig .zig-cache /root/.cache/zig --seed 0x3162a396 -Z00c0511843ef7b06 test --summary all -freference-trace -Dno-bin
