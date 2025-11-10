@@ -1,13 +1,13 @@
 {
   "$meta": {
     "lang": "construct",
-    "timestamp": "2025-10-18T02:06:49Z",
+    "timestamp": "2025-11-10T20:28:31Z",
     "ci": {
       "ci": "github",
-      "run_id": "18609165923",
-      "run_number": "363",
-      "job_id": "53064110643",
-      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/18609165923/job/53064110643"
+      "run_id": "19245171212",
+      "run_number": "364",
+      "job_id": "55017316990",
+      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/19245171212/job/55017316990"
     }
   },
   "BcdUserTypeBe": {
@@ -942,6 +942,17 @@
     "elapsed": 0.0,
     "is_kst": true
   },
+  "NameClashImportVsInst": {
+    "status": "failed",
+    "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": "name 'integers' is not defined",
+      "trace": "Traceback (most recent call last):\n  File \"/tests/spec/construct/test_name_clash_import_vs_inst.py\", line 9, in test_name_clash_import_vs_inst\n    r = _schema.parse_file('src/fixed_struct.bin')\n  File \"/usr/local/lib/python3.13/site-packages/construct/core.py\", line 425, in parse_file\n    return self.parse_stream(f, **contextkw)\n           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/site-packages/construct/core.py\", line 416, in parse_stream\n    return self._parsereport(stream, context, \"(parsing)\")\n           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/site-packages/construct/core.py\", line 428, in _parsereport\n    obj = self._parse(stream, context, path)\n  File \"/usr/local/lib/python3.13/site-packages/construct/core.py\", line 2236, in _parse\n    subobj = sc._parsereport(stream, context, path)\n  File \"/usr/local/lib/python3.13/site-packages/construct/core.py\", line 428, in _parsereport\n    obj = self._parse(stream, context, path)\n  File \"/usr/local/lib/python3.13/site-packages/construct/core.py\", line 2770, in _parse\n    return self.subcon._parsereport(stream, context, path)\n           ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/site-packages/construct/core.py\", line 428, in _parsereport\n    obj = self._parse(stream, context, path)\n  File \"/usr/local/lib/python3.13/site-packages/construct/core.py\", line 4412, in _parse\n    obj = self.subcon._parsereport(stream, context, path)\n  File \"/usr/local/lib/python3.13/site-packages/construct/core.py\", line 428, in _parsereport\n    obj = self._parse(stream, context, path)\n  File \"/usr/local/lib/python3.13/site-packages/construct/core.py\", line 6220, in _parse\n    sc = self.subconfunc()\n  File \"/tests/compiled/construct/name_clash_import_vs_inst.py\", line 5, in <lambda>\n    'integers' / Pointer(0, LazyBound(lambda: integers)),\n                                              ^^^^^^^^\nNameError: name 'integers' is not defined"
+    },
+    "is_kst": true
+  },
   "NavParent": {
     "status": "passed",
     "elapsed": 0.0,
@@ -1417,8 +1428,8 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "<built-in method values of Container object at 0x7f121e96b230> != [1, 2, 3, 4]",
-      "trace": "Traceback (most recent call last):\n  File \"/tests/spec/construct/test_repeat_until_complex.py\", line 12, in test_repeat_until_complex\n    self.assertEqual(r.first[0].values, [(0 + 1), 2, 3, 4])\n    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: <built-in method values of Container object at 0x7f121e96b230> != [1, 2, 3, 4]"
+      "message": "<built-in method values of Container object at 0x7f60b7bdce30> != [1, 2, 3, 4]",
+      "trace": "Traceback (most recent call last):\n  File \"/tests/spec/construct/test_repeat_until_complex.py\", line 12, in test_repeat_until_complex\n    self.assertEqual(r.first[0].values, [(0 + 1), 2, 3, 4])\n    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: <built-in method values of Container object at 0x7f60b7bdce30> != [1, 2, 3, 4]"
     },
     "is_kst": true
   },
