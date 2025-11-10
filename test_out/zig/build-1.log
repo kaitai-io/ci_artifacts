@@ -1,5 +1,5 @@
 test
-+- compile test Debug native 15 errors
++- compile test Debug native 11 errors
 formats/debug_array_user.zig:33:15: error: expected ';' after statement
             } finally {
               ^~~~~~~
@@ -10,51 +10,35 @@ formats/debug_array_user_eof_exception.zig:33:15: error: expected ';' after stat
             } finally {
               ^~~~~~~
 formats/expr_ops_parens.zig:124:18: error: expected ';' after statement
-        _v = new StringBuilder((try std.mem.concat(self._allocator(), u8, &[_][]const u8{ (try self.str0To4()), (try self.str5To9()) }))).reverse().toString();
+        _v = new StringBuilder((try _imp_std.mem.concat(self._allocator(), u8, &[_][]const u8{ (try self.str0To4()), (try self.str5To9()) }))).reverse().toString();
                  ^~~~~~~~~~~~~
 formats/expr_str_ops.zig:36:18: error: expected ';' after statement
         _v = new StringBuilder(self.one).reverse().toString();
                  ^~~~~~~~~~~~~
-formats/instance_std_array.zig:29:13: error: local variable is never mutated
-        var _v: *std.ArrayList([]u8) = undefined;
-            ^~
-formats/instance_std_array.zig:29:13: note: consider using 'const'
-formats/instance_user_array.zig:55:13: error: local variable is never mutated
-        var _v: ?*std.ArrayList(*Entry) = null;
-            ^~
-formats/instance_user_array.zig:55:13: note: consider using 'const'
-formats/nav_parent3.zig:98:13: error: local variable is never mutated
-        var _v: *std.ArrayList(*Tag) = undefined;
-            ^~
-formats/nav_parent3.zig:98:13: note: consider using 'const'
 formats/process_custom.zig:23:20: error: expected ';' after statement
         MyCustomFx _process__raw_buf1 = new MyCustomFx(7, true, &[_]u8{ 32, 48, 64 });
                    ^~~~~~~~~~~~~~~~~~
 formats/process_custom_no_args.zig:23:24: error: expected ';' after statement
         CustomFxNoArgs _process__raw_buf = new CustomFxNoArgs();
                        ^~~~~~~~~~~~~~~~~
-formats/process_repeat_usertype_dynarg_custom.zig:34:24: error: expected ';' after statement
-            MyCustomFx _process__raw__raw_blocks = new MyCustomFx(self._io.pos() + 13 * i, kaitai_struct.KaitaiStream.mod(self._io.pos(), 2) == 0, (if (i == 1) &[_]u8{ 32, 48 } else &[_]u8{ 64 }));
+formats/process_repeat_usertype_dynarg_custom.zig:30:24: error: expected ';' after statement
+            MyCustomFx _process__raw__raw_blocks = new MyCustomFx(self._io.pos() + 13 * i, @mod(self._io.pos(), 2) == 0, (if (i == 1) &[_]u8{ 32, 48 } else &[_]u8{ 64 }));
                        ^~~~~~~~~~~~~~~~~~~~~~~~~
 formats/process_term_struct.zig:23:20: error: expected ';' after statement
         MyCustomFx _process__raw__raw_s1 = new MyCustomFx(32, false, &[_]u8{ 0 });
                    ^~~~~~~~~~~~~~~~~~~~~
-formats/valid_fail_repeat_inst.zig:29:13: error: local variable is never mutated
-        var _v: *std.ArrayList(u32) = undefined;
-            ^~
-formats/valid_fail_repeat_inst.zig:29:13: note: consider using 'const'
 tests/expr_io_eof_bits_test.zig:20:57: error: expected pointer dereference, optional unwrap, or field access, found 'align'
     try std.testing.expectEqualSlices(u8, &[_]u8{  }, r.align);
                                                         ^~~~~
 tests/expr_to_i_trailing_test.zig:17:51: error: expected ',' after argument
     assertThrows(NumberFormatException.class, new ThrowingRunnable() {
                                                   ^~~~~~~~~~~~~~~~
-error: the following command failed with 15 compilation errors:
+error: the following command failed with 11 compilation errors:
 /usr/local/zig-x86_64-linux-0.15.2/zig test -freference-trace=256 -ODebug --dep kaitai_struct -Mroot=/tests/spec/zig/tests.zig -Mkaitai_struct=/runtime/zig/src/root.zig --test-runner /tests/spec/zig/test_runner.zig --cache-dir .zig-cache --global-cache-dir /root/.cache/zig --name test --zig-lib-dir /usr/local/zig-x86_64-linux-0.15.2/lib/ --listen=-
 
 Build Summary: 0/2 steps succeeded; 1 failed
 test transitive failure
-+- compile test Debug native 15 errors
++- compile test Debug native 11 errors
 
 error: the following build command failed with exit code 1:
-.zig-cache/o/bb2be1d730b79250120f1950cdfc8757/build /usr/local/zig-x86_64-linux-0.15.2/zig /usr/local/zig-x86_64-linux-0.15.2/lib /tests/spec/zig .zig-cache /root/.cache/zig --seed 0x2acdafc8 -Zfc577ce0a9503588 test --summary all -freference-trace -Dno-bin
+.zig-cache/o/bb0d238f5ef3f946fb71974f3563c77f/build /usr/local/zig-x86_64-linux-0.15.2/zig /usr/local/zig-x86_64-linux-0.15.2/lib /tests/spec/zig .zig-cache /root/.cache/zig --seed 0x8b988a52 -Z24912d4ddb6cb845 test --summary all -freference-trace -Dno-bin

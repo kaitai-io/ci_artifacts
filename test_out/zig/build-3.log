@@ -1,5 +1,5 @@
 test
-+- compile test Debug native 145 errors
++- compile test Debug native 66 errors
 /usr/local/zig-x86_64-linux-0.15.2/lib/std/testing.zig:74:15: error: incompatible types: 'comptime_int' and 'formats.enum_invalid.EnumInvalid.Animal'
     const T = @TypeOf(expected, actual);
               ^~~~~~~~~~~~~~~~~~~~~~~~~
@@ -28,133 +28,77 @@ tests/enum_to_i_invalid_test.zig:18:32: note: called inline here
         ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~
 referenced by:
     comptime: tests.zig:63:17
-formats/bytes_eos_pad_term.zig:55:52: error: struct 'root.KaitaiStream' has no member named 'bytesStripRight'
-            self.value = kaitai_struct.KaitaiStream.bytesStripRight(try self._io.readBytesFull(self._allocator()), 64);
-                         ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
+/usr/local/zig-x86_64-linux-0.15.2/lib/std/testing.zig:74:15: error: incompatible types: 'comptime_int' and 'formats.switch_manual_enum_invalid_else.SwitchManualEnumInvalidElse.Opcode.CodeEnum'
+    const T = @TypeOf(expected, actual);
+              ^~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/zig-x86_64-linux-0.15.2/lib/std/testing.zig:74:23: note: type 'comptime_int' here
+    const T = @TypeOf(expected, actual);
+                      ^~~~~~~~
+/usr/local/zig-x86_64-linux-0.15.2/lib/std/testing.zig:74:33: note: type 'formats.switch_manual_enum_invalid_else.SwitchManualEnumInvalidElse.Opcode.CodeEnum' here
+    const T = @TypeOf(expected, actual);
+                                ^~~~~~
+tests/switch_manual_enum_invalid_else_test.zig:18:32: note: called inline here
+    try std.testing.expectEqual(255, r.opcodes.items[0].code);
+        ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 referenced by:
-    create: formats/bytes_eos_pad_term.zig:48:27
-    _read: formats/bytes_eos_pad_term.zig:25:45
-    create: formats/bytes_eos_pad_term.zig:15:23
-    test.BytesEosPadTerm: tests/bytes_eos_pad_term_test.zig:16:60
-    comptime: tests.zig:22:17
-formats/bytes_pad_term.zig:22:50: error: struct 'root.KaitaiStream' has no member named 'bytesStripRight'
-        self.str_pad = kaitai_struct.KaitaiStream.bytesStripRight(try self._io.readBytes(self._allocator(), 20), 64);
-                       ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
+    comptime: tests.zig:241:17
+/usr/local/zig-x86_64-linux-0.15.2/lib/std/testing.zig:74:15: error: incompatible types: 'comptime_int' and 'formats.switch_manual_enum_invalid.SwitchManualEnumInvalid.Opcode.CodeEnum'
+    const T = @TypeOf(expected, actual);
+              ^~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/zig-x86_64-linux-0.15.2/lib/std/testing.zig:74:23: note: type 'comptime_int' here
+    const T = @TypeOf(expected, actual);
+                      ^~~~~~~~
+/usr/local/zig-x86_64-linux-0.15.2/lib/std/testing.zig:74:33: note: type 'formats.switch_manual_enum_invalid.SwitchManualEnumInvalid.Opcode.CodeEnum' here
+    const T = @TypeOf(expected, actual);
+                                ^~~~~~
+tests/switch_manual_enum_invalid_test.zig:18:32: note: called inline here
+    try std.testing.expectEqual(255, r.opcodes.items[0].code);
+        ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 referenced by:
-    create: formats/bytes_pad_term.zig:15:23
-    test.BytesPadTerm: tests/bytes_pad_term_test.zig:16:53
-    comptime: tests.zig:26:17
-formats/bytes_pad_term_empty.zig:22:50: error: struct 'root.KaitaiStream' has no member named 'bytesStripRight'
-        self.str_pad = kaitai_struct.KaitaiStream.bytesStripRight(try self._io.readBytes(self._allocator(), 20), 64);
-                       ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
+    comptime: tests.zig:242:17
+/runtime/zig/src/root.zig:478:9: error: unsupported encoding 'Shift_JIS'
+        @compileError("unsupported encoding '" ++ encoding ++ "'");
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 referenced by:
-    create: formats/bytes_pad_term_empty.zig:15:23
-    test.BytesPadTermEmpty: tests/bytes_pad_term_empty_test.zig:16:64
-    comptime: tests.zig:23:17
-formats/bytes_pad_term_equal.zig:22:45: error: struct 'root.KaitaiStream' has no member named 'bytesTerminate'
-        self.s1 = kaitai_struct.KaitaiStream.bytesTerminate(try self._io.readBytes(self._allocator(), 20), 64, false);
-                  ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
+    _read: formats/valid_eq_str_encodings.zig:33:68
+    create: formats/valid_eq_str_encodings.zig:15:23
+    test.ValidEqStrEncodings: tests/valid_eq_str_encodings_test.zig:16:68
+    comptime: tests.zig:276:17
+/runtime/zig/src/root.zig:478:9: error: unsupported encoding 'IBM437'
+        @compileError("unsupported encoding '" ++ encoding ++ "'");
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 referenced by:
-    create: formats/bytes_pad_term_equal.zig:15:23
-    test.BytesPadTermEqual: tests/bytes_pad_term_equal_test.zig:16:64
-    comptime: tests.zig:24:17
-formats/bytes_pad_term_roundtrip.zig:22:50: error: struct 'root.KaitaiStream' has no member named 'bytesStripRight'
-        self.str_pad = kaitai_struct.KaitaiStream.bytesStripRight(try self._io.readBytes(self._allocator(), 20), 64);
-                       ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
+    _read: formats/valid_eq_str_encodings.zig:38:68
+    create: formats/valid_eq_str_encodings.zig:15:23
+    test.ValidEqStrEncodings: tests/valid_eq_str_encodings_test.zig:16:68
+    comptime: tests.zig:276:17
+formats/cast_nested.zig:118:66: error: expected type '*formats.cast_nested.CastNested.Opcode.Strval', found '?*anyopaque'
+        _v = @as(*CastNested.Opcode.Strval, self.opcodes.items[0].body);
+                                            ~~~~~~~~~~~~~~~~~~~~~^~~~~
+formats/cast_nested.zig:118:66: note: '?*anyopaque' could have null values which are illegal in type '*formats.cast_nested.CastNested.Opcode.Strval'
 referenced by:
-    create: formats/bytes_pad_term_roundtrip.zig:15:23
-    test.BytesPadTermRoundtrip: tests/bytes_pad_term_roundtrip_test.zig:16:72
-    comptime: tests.zig:25:17
-formats/bytes_pad_term_zero_size.zig:22:50: error: struct 'root.KaitaiStream' has no member named 'bytesStripRight'
-        self.str_pad = kaitai_struct.KaitaiStream.bytesStripRight(try self._io.readBytes(self._allocator(), 0), 64);
-                       ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
-referenced by:
-    create: formats/bytes_pad_term_zero_size.zig:15:23
-    test.BytesPadTermZeroSize: tests/bytes_pad_term_zero_size_test.zig:16:71
-    comptime: tests.zig:27:17
-formats/cast_nested.zig:99:56: error: struct 'root.KaitaiStream' has no member named 'bytesToStr'
-                self.value = kaitai_struct.KaitaiStream.bytesToStr(try self._io.readBytesTerm(self._allocator(), 0, false, true, true), "ASCII");
-                             ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
-referenced by:
-    create: formats/cast_nested.zig:92:31
-    _read: formats/cast_nested.zig:53:50
-    create: formats/cast_nested.zig:40:27
-    _read: formats/cast_nested.zig:27:77
-    create: formats/cast_nested.zig:15:23
-    test.CastNested: tests/cast_nested_test.zig:16:48
+    test.CastNested: tests/cast_nested_test.zig:17:68
     comptime: tests.zig:28:17
-formats/cast_to_imported.zig:30:47: error: expected type '*formats.hello_world.HelloWorld', found '*anyopaque'
-        _v = @as(*hello_world.HelloWorld, self.hw_param).one;
-                                          ~~~~^~~~~~~~~
-formats/cast_to_imported.zig:30:47: note: pointer type child 'anyopaque' cannot cast into pointer type child 'formats.hello_world.HelloWorld'
+formats/cast_to_imported.zig:30:52: error: expected type '*formats.hello_world.HelloWorld', found '*anyopaque'
+        _v = @as(*_imp_hello_world.HelloWorld, self.hw_param).one;
+                                               ~~~~^~~~~~~~~
+formats/cast_to_imported.zig:30:52: note: pointer type child 'anyopaque' cannot cast into pointer type child 'formats.hello_world.HelloWorld'
 formats/hello_world.zig:6:24: note: struct declared here
 pub const HelloWorld = struct {
                        ^~~~~~
 referenced by:
     test.ImportsCastToImported: tests/imports_cast_to_imported_test.zig:18:54
     comptime: tests.zig:113:17
-formats/cast_to_imported2.zig:30:47: error: expected type '*formats.hello_world.HelloWorld', found '*anyopaque'
-        _v = @as(*hello_world.HelloWorld, self.hw_param);
-                                          ~~~~^~~~~~~~~
-formats/cast_to_imported2.zig:30:47: note: pointer type child 'anyopaque' cannot cast into pointer type child 'formats.hello_world.HelloWorld'
+formats/cast_to_imported2.zig:30:52: error: expected type '*formats.hello_world.HelloWorld', found '*anyopaque'
+        _v = @as(*_imp_hello_world.HelloWorld, self.hw_param);
+                                               ~~~~^~~~~~~~~
+formats/cast_to_imported2.zig:30:52: note: pointer type child 'anyopaque' cannot cast into pointer type child 'formats.hello_world.HelloWorld'
 formats/hello_world.zig:6:24: note: struct declared here
 pub const HelloWorld = struct {
                        ^~~~~~
 referenced by:
     test.ImportsCastToImported2: tests/imports_cast_to_imported2_test.zig:18:51
     comptime: tests.zig:112:17
-formats/combine_bytes.zig:30:14: error: expected type '[]u8', found '*const [3]u8'
-        _v = &[_]u8{ 82, 110, 68 };
-             ^~~~~~~~~~~~~~~~~~~~~
-formats/combine_bytes.zig:30:14: note: cast discards const qualifier
-referenced by:
-    test.CombineBytes: tests/combine_bytes_test.zig:20:82
-    comptime: tests.zig:31:17
-formats/combine_str.zig:22:51: error: struct 'root.KaitaiStream' has no member named 'bytesToStr'
-        self.str_term = kaitai_struct.KaitaiStream.bytesToStr(try self._io.readBytesTerm(self._allocator(), 124, false, true, true), "ASCII");
-                        ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
-referenced by:
-    create: formats/combine_str.zig:15:23
-    test.CombineStr: tests/combine_str_test.zig:16:48
-    comptime: tests.zig:33:17
-formats/enum_if.zig:48:50: error: struct 'root.KaitaiStream' has no member named 'bytesToStr'
-            self.str = kaitai_struct.KaitaiStream.bytesToStr(try self._io.readBytes(self._allocator(), self.len), "UTF-8");
-                       ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
-referenced by:
-    create: formats/enum_if.zig:40:27
-    _read: formats/enum_if.zig:104:49
-    create: formats/enum_if.zig:92:27
-    _read: formats/enum_if.zig:27:40
-    create: formats/enum_if.zig:20:23
-    test.EnumIf: tests/enum_if_test.zig:16:40
-    comptime: tests.zig:52:17
 formats/enum_int_range_u.zig:9:19: error: type 'i32' cannot represent integer value '4294967295'
         int_max = 4294967295,
                   ^~~~~~~~~~
@@ -191,63 +135,37 @@ formats/enum_of_value_inst.zig:35:71: note: runtime control flow here
 referenced by:
     test.EnumOfValueInst: tests/enum_of_value_inst_test.zig:19:91
     comptime: tests.zig:61:17
-formats/expr_1.zig:23:47: error: struct 'root.KaitaiStream' has no member named 'bytesToStr'
-        self.str1 = kaitai_struct.KaitaiStream.bytesToStr(try self._io.readBytes(self._allocator(), (try self.lenOf1Mod())), "ASCII");
-                    ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
+formats/expr_1.zig:23:130: error: expected type 'usize', found 'i32'
+        self.str1 = (try _imp_kaitai_struct.KaitaiStream.bytesToStr(self._allocator(), try self._io.readBytes(self._allocator(), (try self.lenOf1Mod())), "ASCII"));
+                                                                                                                                 ^~~~~~~~~~~~~~~~~~~~~~
+formats/expr_1.zig:23:130: note: unsigned 64-bit int cannot represent all possible signed 32-bit values
+/runtime/zig/src/root.zig:312:70: note: parameter type declared here
+    pub fn readBytes(self: *KaitaiStream, allocator: Allocator, len: usize) ![]u8 {
+                                                                     ^~~~~
 referenced by:
     create: formats/expr_1.zig:15:23
     test.Expr1: tests/expr_1_test.zig:16:38
     comptime: tests.zig:76:17
-formats/expr_2.zig:42:50: error: struct 'root.KaitaiStream' has no member named 'bytesToStr'
-            self.str = kaitai_struct.KaitaiStream.bytesToStr(try self._io.readBytes(self._allocator(), (try self.lenMod())), "UTF-8");
-                       ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
+formats/expr_2.zig:42:133: error: expected type 'usize', found 'i32'
+            self.str = (try _imp_kaitai_struct.KaitaiStream.bytesToStr(self._allocator(), try self._io.readBytes(self._allocator(), (try self.lenMod())), "UTF-8"));
+                                                                                                                                    ^~~~~~~~~~~~~~~~~~~
+formats/expr_2.zig:42:133: note: unsigned 64-bit int cannot represent all possible signed 32-bit values
+/runtime/zig/src/root.zig:312:70: note: parameter type declared here
+    pub fn readBytes(self: *KaitaiStream, allocator: Allocator, len: usize) ![]u8 {
+                                                                     ^~~~~
 referenced by:
     create: formats/expr_2.zig:34:27
     _read: formats/expr_2.zig:22:38
     create: formats/expr_2.zig:15:23
     test.Expr2: tests/expr_2_test.zig:16:38
     comptime: tests.zig:77:17
-formats/expr_3.zig:23:46: error: struct 'root.KaitaiStream' has no member named 'bytesToStr'
-        self.two = kaitai_struct.KaitaiStream.bytesToStr(try self._io.readBytes(self._allocator(), 3), "ASCII");
-                   ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
+formats/expr_array.zig:126:29: error: expected type 'i32', found 'usize'
+        _v = self.aint.items.len;
+             ~~~~~~~~~~~~~~~^~~~
+formats/expr_array.zig:126:29: note: signed 32-bit int cannot represent all possible unsigned 64-bit values
 referenced by:
-    create: formats/expr_3.zig:15:23
-    test.Expr3: tests/expr_3_test.zig:16:38
-    comptime: tests.zig:78:17
-formats/expr_array.zig:47:79: error: struct 'root.KaitaiStream' has no member named 'bytesToStr'
-            try self.astr.append(self._allocator(), kaitai_struct.KaitaiStream.bytesToStr(try self._io.readBytesTerm(self._allocator(), 0, false, true, true), "UTF-8"));
-                                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
-referenced by:
-    create: formats/expr_array.zig:15:23
-    test.ExprArray: tests/expr_array_test.zig:16:46
+    test.ExprArray: tests/expr_array_test.zig:17:51
     comptime: tests.zig:79:17
-formats/expr_bytes_cmp.zig:29:14: error: expected type '[]u8', found '*const [3]u8'
-        _v = &[_]u8{ 65, 67, 75 };
-             ^~~~~~~~~~~~~~~~~~~~
-formats/expr_bytes_cmp.zig:29:14: note: cast discards const qualifier
-referenced by:
-    isEq: formats/expr_bytes_cmp.zig:53:53
-    test.ExprBytesCmp: tests/expr_bytes_cmp_test.zig:19:50
-    comptime: tests.zig:81:17
-formats/expr_bytes_non_literal.zig:29:14: error: expected type '[]u8', found '*const [2]u8'
-        _v = &[_]u8{ self.one, self.two };
-             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
-formats/expr_bytes_non_literal.zig:29:14: note: cast discards const qualifier
-referenced by:
-    test.ExprBytesNonLiteral: tests/expr_bytes_non_literal_test.zig:17:52
-    comptime: tests.zig:82:17
 formats/expr_bytes_ops.zig:68:22: error: expected type 'i32', found 'usize'
         _v = self.one.len;
              ~~~~~~~~^~~~
@@ -255,9 +173,9 @@ formats/expr_bytes_ops.zig:68:22: note: signed 32-bit int cannot represent all p
 referenced by:
     test.ExprBytesOps: tests/expr_bytes_ops_test.zig:17:50
     comptime: tests.zig:83:17
-formats/expr_calc_array_ops.zig:84:32: error: expected type '*array_list.Aligned(i32,null)', found 'array_list.Aligned(i32,null)'
-        _v = std.ArrayList(i32){ .items = @constCast(@as([]const i32, &.{ 10, 25, 50, 100, 200, 500, 1000 })), .capacity = 7 };
-             ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+formats/expr_calc_array_ops.zig:84:37: error: expected type '*array_list.Aligned(i32,null)', found 'array_list.Aligned(i32,null)'
+        _v = _imp_std.ArrayList(i32){ .items = @constCast(@as([]const i32, &.{ 10, 25, 50, 100, 200, 500, 1000 })), .capacity = 7 };
+             ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 /usr/local/zig-x86_64-linux-0.15.2/lib/std/array_list.zig:606:12: note: struct declared here
     return struct {
            ^~~~~~
@@ -265,16 +183,6 @@ referenced by:
     intArraySize: formats/expr_calc_array_ops.zig:132:32
     test.ExprCalcArrayOps: tests/expr_calc_array_ops_test.zig:17:55
     comptime: tests.zig:84:17
-formats/expr_fstring_0.zig:22:50: error: struct 'root.KaitaiStream' has no member named 'bytesToStr'
-        self.seq_str = kaitai_struct.KaitaiStream.bytesToStr(try self._io.readBytes(self._allocator(), 5), "ASCII");
-                       ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
-referenced by:
-    create: formats/expr_fstring_0.zig:15:23
-    test.ExprFstring0: tests/expr_fstring_0_test.zig:16:53
-    comptime: tests.zig:86:17
 formats/expr_if_int_eq.zig:56:39: error: expected type '?i32', found '?i16'
         _v = (try self.calc()) == self.seq_if;
                                   ~~~~^~~~~~~
@@ -282,12 +190,9 @@ formats/expr_if_int_eq.zig:56:39: note: optional type child 'i16' cannot cast in
 referenced by:
     test.ExprIfIntEq: tests/expr_if_int_eq_test.zig:23:57
     comptime: tests.zig:87:17
-formats/expr_if_int_ops.zig:27:48: error: struct 'root.KaitaiStream' has no member named 'processXor'
-        self.bytes = kaitai_struct.KaitaiStream.processXor(self._raw_bytes, @as(i8, self.key));
-                     ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
+formats/expr_if_int_ops.zig:27:115: error: expected type 'u8', found '?u64'
+        self.bytes = try _imp_kaitai_struct.KaitaiStream.processXorOne(self._allocator(), _raw_bytes, @as(u8, self.key));
+                                                                                                              ~~~~^~~~
 referenced by:
     create: formats/expr_if_int_ops.zig:15:23
     test.ExprIfIntOps: tests/expr_if_int_ops_test.zig:16:54
@@ -299,18 +204,6 @@ formats/expr_int_div.zig:53:25: note: signed 32-bit int cannot represent all pos
 referenced by:
     test.ExprIntDiv: tests/expr_int_div_test.zig:21:59
     comptime: tests.zig:89:17
-formats/expr_io_pos.zig:47:53: error: struct 'root.KaitaiStream' has no member named 'bytesToStr'
-            self.my_str = kaitai_struct.KaitaiStream.bytesToStr(try self._io.readBytesTerm(self._allocator(), 0, false, true, true), "UTF-8");
-                          ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
-referenced by:
-    create: formats/expr_io_pos.zig:40:27
-    _read: formats/expr_io_pos.zig:25:51
-    create: formats/expr_io_pos.zig:15:23
-    test.ExprIoPos: tests/expr_io_pos_test.zig:16:47
-    comptime: tests.zig:92:17
 formats/expr_io_ternary.zig:92:20: error: incompatible types: '**formats.expr_io_ternary.ExprIoTernary.One' and '**formats.expr_io_ternary.ExprIoTernary.Two'
         _v = (try (if (self.flag == 64) self.obj1 else self.obj2)._io.size());
                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -323,80 +216,35 @@ formats/expr_io_ternary.zig:92:60: note: type '**formats.expr_io_ternary.ExprIoT
 referenced by:
     test.ExprIoTernary: tests/expr_io_ternary_test.zig:17:58
     comptime: tests.zig:93:17
-formats/expr_mod.zig:45:40: error: struct 'root.KaitaiStream' has no member named 'mod'
-        _v = kaitai_struct.KaitaiStream.mod(9837, 13);
-             ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
+formats/expr_mod.zig:53:14: error: expected type 'i32', found 'u32'
+        _v = @mod(self.int_u, 13);
+             ^~~~~~~~~~~~~~~~~~~~
+formats/expr_mod.zig:53:14: note: signed 32-bit int cannot represent all possible unsigned 32-bit values
 referenced by:
-    test.ExprMod: tests/expr_mod_test.zig:19:54
+    test.ExprMod: tests/expr_mod_test.zig:21:52
     comptime: tests.zig:94:17
-formats/expr_str_encodings.zig:23:47: error: struct 'root.KaitaiStream' has no member named 'bytesToStr'
-        self.str1 = kaitai_struct.KaitaiStream.bytesToStr(try self._io.readBytes(self._allocator(), self.len_of_1), "ASCII");
-                    ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
-referenced by:
-    create: formats/expr_str_encodings.zig:15:23
-    test.ExprStrEncodings: tests/expr_str_encodings_test.zig:16:61
-    comptime: tests.zig:99:17
 formats/float_to_i.zig:139:32: error: expected float type, found '?f32'
         _v = @intFromFloat(self.single_value_if);
                            ~~~~^~~~~~~~~~~~~~~~
 referenced by:
     test.FloatToI: tests/float_to_i_test.zig:23:52
     comptime: tests.zig:102:17
-formats/if_struct.zig:43:50: error: struct 'root.KaitaiStream' has no member named 'bytesToStr'
-            self.str = kaitai_struct.KaitaiStream.bytesToStr(try self._io.readBytes(self._allocator(), self.len), "UTF-8");
-                       ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
-referenced by:
-    create: formats/if_struct.zig:35:27
-    _read: formats/if_struct.zig:99:49
-    create: formats/if_struct.zig:87:27
-    _read: formats/if_struct.zig:22:40
-    create: formats/if_struct.zig:15:23
-    test.IfStruct: tests/if_struct_test.zig:16:44
-    comptime: tests.zig:106:17
-formats/if_values.zig:54:43: error: struct 'root.KaitaiStream' has no member named 'mod'
-            if (kaitai_struct.KaitaiStream.mod(self.opcode, 2) == 0) {
-                ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
-referenced by:
-    test.IfValues: tests/if_values_test.zig:18:69
-    comptime: tests.zig:107:17
-formats/imports_circular_b.zig:25:75: error: unable to resolve inferred error set
-            self.back_ref = try imports_circular_a.ImportsCircularA.create(self._arena, self._io, null, null);
-                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+formats/imports_circular_b.zig:25:80: error: unable to resolve inferred error set
+            self.back_ref = try _imp_imports_circular_a.ImportsCircularA.create(self._arena, self._io, null, null);
+                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 referenced by:
     create: formats/imports_circular_b.zig:16:23
-    _read: formats/imports_circular_a.zig:24:66
+    _read: formats/imports_circular_a.zig:24:71
     create: formats/imports_circular_a.zig:16:23
     test.ImportsCircularA: tests/imports_circular_a_test.zig:16:61
     comptime: tests.zig:114:17
-formats/index_sizes.zig:39:79: error: struct 'root.KaitaiStream' has no member named 'bytesToStr'
-            try self.bufs.append(self._allocator(), kaitai_struct.KaitaiStream.bytesToStr(try self._io.readBytes(self._allocator(), self.sizes.items[i]), "ASCII"));
-                                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
-referenced by:
-    create: formats/index_sizes.zig:15:23
-    test.IndexSizes: tests/index_sizes_test.zig:16:48
-    comptime: tests.zig:119:17
 formats/index_to_param_eos.zig:37:117: error: expected type 'i32', found 'usize'
                 try self.blocks.append(self._allocator(), try Block.create(self._arena, self._io, self, self._root, i));
                                                                                                                     ^
 formats/index_to_param_eos.zig:37:117: note: signed 32-bit int cannot represent all possible unsigned 64-bit values
-formats/index_to_param_eos.zig:42:150: note: parameter type declared here
-        pub fn create(_arena: *std.heap.ArenaAllocator, _io: *kaitai_struct.KaitaiStream, _parent: ?*IndexToParamEos, _root: ?*IndexToParamEos, idx: i32) !*Block {
-                                                                                                                                                     ^~~
+formats/index_to_param_eos.zig:42:160: note: parameter type declared here
+        pub fn create(_arena: *_imp_std.heap.ArenaAllocator, _io: *_imp_kaitai_struct.KaitaiStream, _parent: ?*IndexToParamEos, _root: ?*IndexToParamEos, idx: i32) !*Block {
+                                                                                                                                                               ^~~
 referenced by:
     create: formats/index_to_param_eos.zig:15:23
     test.IndexToParamEos: tests/index_to_param_eos_test.zig:16:60
@@ -405,9 +253,9 @@ formats/index_to_param_expr.zig:39:113: error: expected type 'i32', found 'usize
             try self.blocks.append(self._allocator(), try Block.create(self._arena, self._io, self, self._root, i));
                                                                                                                 ^
 formats/index_to_param_expr.zig:39:113: note: signed 32-bit int cannot represent all possible unsigned 64-bit values
-formats/index_to_param_expr.zig:43:152: note: parameter type declared here
-        pub fn create(_arena: *std.heap.ArenaAllocator, _io: *kaitai_struct.KaitaiStream, _parent: ?*IndexToParamExpr, _root: ?*IndexToParamExpr, idx: i32) !*Block {
-                                                                                                                                                       ^~~
+formats/index_to_param_expr.zig:43:162: note: parameter type declared here
+        pub fn create(_arena: *_imp_std.heap.ArenaAllocator, _io: *_imp_kaitai_struct.KaitaiStream, _parent: ?*IndexToParamExpr, _root: ?*IndexToParamExpr, idx: i32) !*Block {
+                                                                                                                                                                 ^~~
 referenced by:
     create: formats/index_to_param_expr.zig:15:23
     test.IndexToParamExpr: tests/index_to_param_expr_test.zig:16:62
@@ -416,34 +264,13 @@ formats/index_to_param_until.zig:37:87: error: expected type 'i32', found 'usize
                 const _it = try Block.create(self._arena, self._io, self, self._root, i);
                                                                                       ^
 formats/index_to_param_until.zig:37:87: note: signed 32-bit int cannot represent all possible unsigned 64-bit values
-formats/index_to_param_until.zig:46:154: note: parameter type declared here
-        pub fn create(_arena: *std.heap.ArenaAllocator, _io: *kaitai_struct.KaitaiStream, _parent: ?*IndexToParamUntil, _root: ?*IndexToParamUntil, idx: i32) !*Block {
-                                                                                                                                                         ^~~
+formats/index_to_param_until.zig:46:164: note: parameter type declared here
+        pub fn create(_arena: *_imp_std.heap.ArenaAllocator, _io: *_imp_kaitai_struct.KaitaiStream, _parent: ?*IndexToParamUntil, _root: ?*IndexToParamUntil, idx: i32) !*Block {
+                                                                                                                                                                   ^~~
 referenced by:
     create: formats/index_to_param_until.zig:15:23
     test.IndexToParamUntil: tests/index_to_param_until_test.zig:16:64
     comptime: tests.zig:122:17
-formats/instance_io_user.zig:97:86: error: struct 'root.KaitaiStream' has no member named 'bytesToStr'
-                    try self.str.append(self._allocator(), kaitai_struct.KaitaiStream.bytesToStr(try self._io.readBytesTerm(self._allocator(), 0, false, true, true), "UTF-8"));
-                                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
-referenced by:
-    create: formats/instance_io_user.zig:85:27
-    _read: formats/instance_io_user.zig:35:45
-    create: formats/instance_io_user.zig:15:23
-    test.InstanceIoUser: tests/instance_io_user_test.zig:16:57
-    comptime: tests.zig:127:17
-formats/instance_std.zig:30:40: error: struct 'root.KaitaiStream' has no member named 'bytesToStr'
-        _v = kaitai_struct.KaitaiStream.bytesToStr(try self._io.readBytes(self._allocator(), 5), "ASCII");
-             ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
-referenced by:
-    test.InstanceStd: tests/instance_std_test.zig:17:62
-    comptime: tests.zig:128:17
 formats/io_local_var.zig:23:37: error: expected type '*formats.io_local_var.IoLocalVar.Dummy', found '*anyopaque'
         if (@as(*IoLocalVar.Dummy, (try self.messUp()))._io.pos() < 0) {
                                     ^~~~~~~~~~~~~~~~~
@@ -454,40 +281,14 @@ formats/io_local_var.zig:28:23: note: struct declared here
 referenced by:
     create: formats/io_local_var.zig:15:23
     test.IoLocalVar: tests/io_local_var_test.zig:16:49
-    comptime: tests.zig:132:17
-formats/nav_parent.zig:41:55: error: struct 'root.KaitaiStream' has no member named 'bytesToStr'
-            self.filename = kaitai_struct.KaitaiStream.bytesToStr(try self._io.readBytes(self._allocator(), self._parent.?._parent.?.header.filename_len), "UTF-8");
-                            ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
-referenced by:
-    create: formats/nav_parent.zig:34:27
-    _read: formats/nav_parent.zig:99:76
-    create: formats/nav_parent.zig:84:27
-    _read: formats/nav_parent.zig:23:41
-    create: formats/nav_parent.zig:15:23
-    test.NavParent: tests/nav_parent_test.zig:16:46
-    comptime: tests.zig:144:17
-formats/nav_parent2.zig:50:51: error: struct 'root.KaitaiStream' has no member named 'bytesToStr'
-            self.name = kaitai_struct.KaitaiStream.bytesToStr(try self._io.readBytes(self._allocator(), 4), "ASCII");
-                        ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
-referenced by:
-    create: formats/nav_parent2.zig:43:27
-    _read: formats/nav_parent2.zig:31:67
-    create: formats/nav_parent2.zig:15:23
-    test.NavParent2: tests/nav_parent2_test.zig:16:48
-    comptime: tests.zig:137:17
+    comptime: tests.zig:134:17
 formats/nav_parent_recursive.zig:24:54: error: unable to resolve inferred error set
             self.next = try NavParentRecursive.create(self._arena, self._io, self, self._root);
                             ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 referenced by:
     create: formats/nav_parent_recursive.zig:15:23
     test.NavParentRecursive: tests/nav_parent_recursive_test.zig:16:65
-    comptime: tests.zig:141:17
+    comptime: tests.zig:145:17
 formats/nav_parent_switch_cast.zig:56:32: error: expected type '*anyopaque', found '[]u8'
                     self.buf = try self._io.readBytes(self._allocator(), 4);
                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -498,38 +299,14 @@ referenced by:
     _read: formats/nav_parent_switch_cast.zig:22:35
     create: formats/nav_parent_switch_cast.zig:15:23
     test.NavParentSwitchCast: tests/nav_parent_switch_cast_test.zig:16:68
-    comptime: tests.zig:142:17
-formats/nav_parent_vs_value_inst.zig:22:45: error: struct 'root.KaitaiStream' has no member named 'bytesToStr'
-        self.s1 = kaitai_struct.KaitaiStream.bytesToStr(try self._io.readBytesTerm(self._allocator(), 124, false, true, true), "UTF-8");
-                  ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
-referenced by:
-    create: formats/nav_parent_vs_value_inst.zig:15:23
-    test.NavParentVsValueInst: tests/nav_parent_vs_value_inst_test.zig:16:71
-    comptime: tests.zig:145:17
-formats/nav_root.zig:41:55: error: struct 'root.KaitaiStream' has no member named 'bytesToStr'
-            self.filename = kaitai_struct.KaitaiStream.bytesToStr(try self._io.readBytes(self._allocator(), self._root.?.header.filename_len), "UTF-8");
-                            ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
-referenced by:
-    create: formats/nav_root.zig:34:27
-    _read: formats/nav_root.zig:99:76
-    create: formats/nav_root.zig:84:27
-    _read: formats/nav_root.zig:23:41
-    create: formats/nav_root.zig:15:23
-    test.NavRoot: tests/nav_root_test.zig:16:42
-    comptime: tests.zig:147:17
+    comptime: tests.zig:146:17
 formats/nav_root_recursive.zig:24:52: error: unable to resolve inferred error set
             self.next = try NavRootRecursive.create(self._arena, self._io, self, self._root);
                             ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 referenced by:
     create: formats/nav_root_recursive.zig:15:23
     test.NavRootRecursive: tests/nav_root_recursive_test.zig:16:61
-    comptime: tests.zig:146:17
+    comptime: tests.zig:150:17
 formats/nested_same_name.zig:106:96: error: expected type 'usize', found 'i32'
                 self.data = try self._io.readBytes(self._allocator(), self._parent.?.main_size * 2);
                                                                       ~~~~~~~~~~~~~~~~~~~~~~~~~^~~
@@ -544,7 +321,7 @@ referenced by:
     _read: formats/nested_same_name.zig:22:41
     create: formats/nested_same_name.zig:15:23
     test.NestedSameName: tests/nested_same_name_test.zig:16:57
-    comptime: tests.zig:149:17
+    comptime: tests.zig:153:17
 formats/nested_same_name2.zig:111:97: error: expected type 'usize', found 'i32'
                 self.data1 = try self._io.readBytes(self._allocator(), self._parent.?.main_size * 2);
                                                                        ~~~~~~~~~~~~~~~~~~~~~~~~~^~~
@@ -559,46 +336,10 @@ referenced by:
     _read: formats/nested_same_name2.zig:23:41
     create: formats/nested_same_name2.zig:15:23
     test.NestedSameName2: tests/nested_same_name2_test.zig:16:59
-    comptime: tests.zig:148:17
-formats/nested_type_param.zig:59:55: error: struct 'root.KaitaiStream' has no member named 'bytesToStr'
-                self.body = kaitai_struct.KaitaiStream.bytesToStr(try self._io.readBytes(self._allocator(), self.my_len), "ASCII");
-                            ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
-referenced by:
-    create: formats/nested_type_param.zig:52:31
-    _read: formats/nested_type_param.zig:22:49
-    create: formats/nested_type_param.zig:15:23
-    test.NestedTypeParam: tests/nested_type_param_test.zig:16:59
-    comptime: tests.zig:150:17
-formats/params_call.zig:42:51: error: struct 'root.KaitaiStream' has no member named 'bytesToStr'
-            self.body = kaitai_struct.KaitaiStream.bytesToStr(try self._io.readBytes(self._allocator(), self.len), "UTF-8");
-                        ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
-referenced by:
-    create: formats/params_call.zig:35:27
-    _read: formats/params_call.zig:22:38
-    create: formats/params_call.zig:15:23
-    test.ParamsCall: tests/params_call_test.zig:16:48
-    comptime: tests.zig:158:17
-formats/params_call_extra_parens.zig:41:51: error: struct 'root.KaitaiStream' has no member named 'bytesToStr'
-            self.body = kaitai_struct.KaitaiStream.bytesToStr(try self._io.readBytes(self._allocator(), self.len), "UTF-8");
-                        ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
-referenced by:
-    create: formats/params_call_extra_parens.zig:34:27
-    _read: formats/params_call_extra_parens.zig:22:38
-    create: formats/params_call_extra_parens.zig:15:23
-    test.ParamsCallExtraParens: tests/params_call_extra_parens_test.zig:16:72
-    comptime: tests.zig:157:17
-formats/params_pass_array_int.zig:63:32: error: expected type '*array_list.Aligned(u16,null)', found 'array_list.Aligned(u16,null)'
-        _v = std.ArrayList(u16){ .items = @constCast(@as([]const u16, &.{ 27643, 7 })), .capacity = 2 };
-             ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    comptime: tests.zig:152:17
+formats/params_pass_array_int.zig:63:37: error: expected type '*array_list.Aligned(u16,null)', found 'array_list.Aligned(u16,null)'
+        _v = _imp_std.ArrayList(u16){ .items = @constCast(@as([]const u16, &.{ 27643, 7 })), .capacity = 2 };
+             ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 /usr/local/zig-x86_64-linux-0.15.2/lib/std/array_list.zig:606:12: note: struct declared here
     return struct {
            ^~~~~~
@@ -606,33 +347,34 @@ referenced by:
     _read: formats/params_pass_array_int.zig:32:111
     create: formats/params_pass_array_int.zig:15:23
     test.ParamsPassArrayInt: tests/params_pass_array_int_test.zig:16:66
-    comptime: tests.zig:160:17
-formats/params_pass_array_io.zig:26:124: error: expected type '*array_list.Aligned(*root.KaitaiStream,null)', found 'array_list.Aligned(*root.KaitaiStream,null)'
-        self.one = try ParamType.create(self._arena, self._io, self, self._root, std.ArrayList(*kaitai_struct.KaitaiStream){ .items = @constCast(@as([]const *kaitai_struct.KaitaiStream, &.{ self.first._io, self._root.?._io })), .capacity = 2 });
-                                                                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    comptime: tests.zig:164:17
+formats/params_pass_array_io.zig:26:134: error: expected type '*array_list.Aligned(*root.KaitaiStream,null)', found 'array_list.Aligned(*root.KaitaiStream,null)'
+        self.one = try ParamType.create(self._arena, self._io, self, self._root, _imp_std.ArrayList(*_imp_kaitai_struct.KaitaiStream){ .items = @constCast(@as([]const *_imp_kaitai_struct.KaitaiStream, &.{ self.first._io, self._root.?._io })), .capacity = 2 });
+                                                                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 /usr/local/zig-x86_64-linux-0.15.2/lib/std/array_list.zig:606:12: note: struct declared here
     return struct {
            ^~~~~~
-formats/params_pass_array_io.zig:53:162: note: parameter type declared here
-        pub fn create(_arena: *std.heap.ArenaAllocator, _io: *kaitai_struct.KaitaiStream, _parent: ?*ParamsPassArrayIo, _root: ?*ParamsPassArrayIo, arg_streams: *std.ArrayList(*kaitai_struct.KaitaiStream)) !*ParamType {
-                                                                                                                                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+formats/params_pass_array_io.zig:53:172: note: parameter type declared here
+        pub fn create(_arena: *_imp_std.heap.ArenaAllocator, _io: *_imp_kaitai_struct.KaitaiStream, _parent: ?*ParamsPassArrayIo, _root: ?*ParamsPassArrayIo, arg_streams: *_imp_std.ArrayList(*_imp_kaitai_struct.KaitaiStream)) !*ParamType {
+                                                                                                                                                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 referenced by:
     create: formats/params_pass_array_io.zig:15:23
     test.ParamsPassArrayIo: tests/params_pass_array_io_test.zig:16:64
-    comptime: tests.zig:161:17
-formats/params_pass_array_str.zig:29:84: error: struct 'root.KaitaiStream' has no member named 'bytesToStr'
-            try self.str_array.append(self._allocator(), kaitai_struct.KaitaiStream.bytesToStr(try self._io.readBytes(self._allocator(), 2), "ASCII"));
-                                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
+    comptime: tests.zig:165:17
+formats/params_pass_array_str.zig:63:44: error: expected type '*array_list.Aligned([]const u8,null)', found 'array_list.Aligned([]const u8,null)'
+        _v = _imp_std.ArrayList([]const u8){ .items = @constCast(@as([]const []const u8, &.{ "aB", "Cd" })), .capacity = 2 };
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/zig-x86_64-linux-0.15.2/lib/std/array_list.zig:606:12: note: struct declared here
+    return struct {
+           ^~~~~~
 referenced by:
+    _read: formats/params_pass_array_str.zig:32:120
     create: formats/params_pass_array_str.zig:15:23
     test.ParamsPassArrayStr: tests/params_pass_array_str_test.zig:16:66
-    comptime: tests.zig:162:17
-formats/params_pass_array_struct.zig:103:39: error: expected type '*array_list.Aligned(*anyopaque,null)', found 'array_list.Aligned(*anyopaque,null)'
-        _v = std.ArrayList(*anyopaque){ .items = @constCast(@as([]const *anyopaque, &.{ self.one, self.two })), .capacity = 2 };
-             ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    comptime: tests.zig:166:17
+formats/params_pass_array_struct.zig:103:44: error: expected type '*array_list.Aligned(*anyopaque,null)', found 'array_list.Aligned(*anyopaque,null)'
+        _v = _imp_std.ArrayList(*anyopaque){ .items = @constCast(@as([]const *anyopaque, &.{ self.one, self.two })), .capacity = 2 };
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 /usr/local/zig-x86_64-linux-0.15.2/lib/std/array_list.zig:606:12: note: struct declared here
     return struct {
            ^~~~~~
@@ -640,470 +382,66 @@ referenced by:
     _read: formats/params_pass_array_struct.zig:24:108
     create: formats/params_pass_array_struct.zig:15:23
     test.ParamsPassArrayStruct: tests/params_pass_array_struct_test.zig:16:72
-    comptime: tests.zig:163:17
-formats/position_abs.zig:40:52: error: struct 'root.KaitaiStream' has no member named 'bytesToStr'
-            self.entry = kaitai_struct.KaitaiStream.bytesToStr(try self._io.readBytesTerm(self._allocator(), 0, false, true, true), "UTF-8");
-                         ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
+    comptime: tests.zig:167:17
+formats/process_coerce_bytes.zig:61:43: error: expected type '[]const u8', found '?[]const u8'
+            _v = (if (self.flag == 0) self.buf_unproc else self.buf_proc);
+                                      ~~~~^~~~~~~~~~~
+formats/process_coerce_bytes.zig:61:43: note: cannot convert optional to payload type
+formats/process_coerce_bytes.zig:61:43: note: consider using '.?', 'orelse', or 'if'
 referenced by:
-    create: formats/position_abs.zig:33:27
-    index: formats/position_abs.zig:54:33
-    test.PositionAbs: tests/position_abs_test.zig:18:59
-    comptime: tests.zig:169:17
-formats/process_bytes_pad_term.zig:22:55: error: struct 'root.KaitaiStream' has no member named 'bytesStripRight'
-        self._raw_str_pad = kaitai_struct.KaitaiStream.bytesStripRight(try self._io.readBytes(self._allocator(), 20), 64);
-                            ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
-referenced by:
-    create: formats/process_bytes_pad_term.zig:15:23
-    test.ProcessBytesPadTerm: tests/process_bytes_pad_term_test.zig:16:68
-    comptime: tests.zig:172:17
-formats/process_coerce_bytes.zig:54:59: error: struct 'root.KaitaiStream' has no member named 'processXor'
-                self.buf_proc = kaitai_struct.KaitaiStream.processXor(self._raw_buf_proc, @as(i8, 170));
-                                ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
-referenced by:
-    create: formats/process_coerce_bytes.zig:41:27
-    _read: formats/process_coerce_bytes.zig:29:73
-    create: formats/process_coerce_bytes.zig:15:23
-    test.ProcessCoerceBytes: tests/process_coerce_bytes_test.zig:16:65
-    comptime: tests.zig:173:17
-formats/process_coerce_switch.zig:29:86: error: expected type '[]const u8', found '?[]u8'
-                    _io__raw_buf_unproc.* = kaitai_struct.KaitaiStream.fromBytes(self._raw_buf_unproc);
-                                                                                 ~~~~^~~~~~~~~~~~~~~~
-/runtime/zig/src/root.zig:24:29: note: parameter type declared here
-    pub fn fromBytes(bytes: []const u8) KaitaiStream {
-                            ^~~~~~~~~~
+    test.ProcessCoerceBytes: tests/process_coerce_bytes_test.zig:18:96
+    comptime: tests.zig:177:17
+formats/process_coerce_switch.zig:33:39: error: expected type '?*anyopaque', found '[]u8'
+                    self.buf_unproc = try self._io.readBytes(self._allocator(), 4);
+                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 referenced by:
     create: formats/process_coerce_switch.zig:15:23
     test.ProcessCoerceSwitch: tests/process_coerce_switch_test.zig:16:67
-    comptime: tests.zig:174:17
-formats/process_coerce_usertype1.zig:76:82: error: expected type '[]const u8', found '?[]u8'
-                _io__raw_buf_unproc.* = kaitai_struct.KaitaiStream.fromBytes(self._raw_buf_unproc);
-                                                                             ~~~~^~~~~~~~~~~~~~~~
-/runtime/zig/src/root.zig:24:29: note: parameter type declared here
-    pub fn fromBytes(bytes: []const u8) KaitaiStream {
-                            ^~~~~~~~~~
+    comptime: tests.zig:178:17
+formats/process_coerce_usertype1.zig:91:43: error: expected type '*formats.process_coerce_usertype1.ProcessCoerceUsertype1.Foo', found '?*formats.process_coerce_usertype1.ProcessCoerceUsertype1.Foo'
+            _v = (if (self.flag == 0) self.buf_unproc else self.buf_proc);
+                                      ~~~~^~~~~~~~~~~
+formats/process_coerce_usertype1.zig:91:43: note: cannot convert optional to payload type
+formats/process_coerce_usertype1.zig:91:43: note: consider using '.?', 'orelse', or 'if'
+formats/process_coerce_usertype1.zig:91:43: note: '?*formats.process_coerce_usertype1.ProcessCoerceUsertype1.Foo' could have null values which are illegal in type '*formats.process_coerce_usertype1.ProcessCoerceUsertype1.Foo'
 referenced by:
-    create: formats/process_coerce_usertype1.zig:65:27
-    _read: formats/process_coerce_usertype1.zig:29:73
-    create: formats/process_coerce_usertype1.zig:15:23
-    test.ProcessCoerceUsertype1: tests/process_coerce_usertype1_test.zig:16:73
-    comptime: tests.zig:175:17
-formats/process_coerce_usertype2.zig:78:64: error: struct 'root.KaitaiStream' has no member named 'processXor'
-                self._raw_buf_proc = kaitai_struct.KaitaiStream.processXor(self._raw__raw_buf_proc, @as(i8, 170));
-                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
+    test.ProcessCoerceUsertype1: tests/process_coerce_usertype1_test.zig:18:72
+    comptime: tests.zig:179:17
+formats/process_coerce_usertype2.zig:88:43: error: expected type '*formats.process_coerce_usertype2.ProcessCoerceUsertype2.Foo', found '?*formats.process_coerce_usertype2.ProcessCoerceUsertype2.Foo'
+            _v = (if (self.flag == 0) self.buf_unproc else self.buf_proc);
+                                      ~~~~^~~~~~~~~~~
+formats/process_coerce_usertype2.zig:88:43: note: cannot convert optional to payload type
+formats/process_coerce_usertype2.zig:88:43: note: consider using '.?', 'orelse', or 'if'
+formats/process_coerce_usertype2.zig:88:43: note: '?*formats.process_coerce_usertype2.ProcessCoerceUsertype2.Foo' could have null values which are illegal in type '*formats.process_coerce_usertype2.ProcessCoerceUsertype2.Foo'
 referenced by:
-    create: formats/process_coerce_usertype2.zig:65:27
-    _read: formats/process_coerce_usertype2.zig:29:73
-    create: formats/process_coerce_usertype2.zig:15:23
-    test.ProcessCoerceUsertype2: tests/process_coerce_usertype2_test.zig:16:73
-    comptime: tests.zig:176:17
-formats/process_repeat_bytes.zig:32:79: error: struct 'root.KaitaiStream' has no member named 'processXor'
-            try self.bufs.append(self._allocator(), kaitai_struct.KaitaiStream.processXor(self._raw_bufs.items[i], @as(i8, 158)));
-                                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
-referenced by:
-    create: formats/process_repeat_bytes.zig:15:23
-    test.ProcessRepeatBytes: tests/process_repeat_bytes_test.zig:16:65
-    comptime: tests.zig:177:17
-formats/process_repeat_usertype.zig:34:86: error: struct 'root.KaitaiStream' has no member named 'processXor'
-            try self._raw_blocks.append(self._allocator(), kaitai_struct.KaitaiStream.processXor(self._raw__raw_blocks.items[i], @as(i8, 158)));
-                                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
-referenced by:
-    create: formats/process_repeat_usertype.zig:15:23
-    test.ProcessRepeatUsertype: tests/process_repeat_usertype_test.zig:16:71
+    test.ProcessCoerceUsertype2: tests/process_coerce_usertype2_test.zig:18:72
     comptime: tests.zig:180:17
-formats/process_repeat_usertype_dynarg_rotate.zig:34:90: error: struct 'root.KaitaiStream' has no member named 'processRotateLeft'
-            try self._raw_blocks_rol.append(self._allocator(), kaitai_struct.KaitaiStream.processRotateLeft(self._raw__raw_blocks_rol.items[i], self._io.pos() - 4 * i, 1));
-                                                               ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
+formats/process_repeat_usertype_dynarg_rotate.zig:30:147: error: expected type 'i32', found 'u64'
+            const _raw_blocks_rol = try _imp_kaitai_struct.KaitaiStream.processRotateLeft(self._allocator(), _raw__raw_blocks_rol, self._io.pos() - 4 * i);
+                                                                                                                                   ~~~~~~~~~~~~~~~^~~~~~~
+formats/process_repeat_usertype_dynarg_rotate.zig:30:147: note: signed 32-bit int cannot represent all possible unsigned 64-bit values
+/runtime/zig/src/root.zig:509:78: note: parameter type declared here
+    pub fn processRotateLeft(allocator: Allocator, data: []const u8, amount: i32) Allocator.Error![]u8 {
+                                                                             ^~~
 referenced by:
     create: formats/process_repeat_usertype_dynarg_rotate.zig:15:23
     test.ProcessRepeatUsertypeDynargRotate: tests/process_repeat_usertype_dynarg_rotate_test.zig:16:97
-    comptime: tests.zig:178:17
-formats/process_repeat_usertype_dynarg_xor.zig:34:86: error: struct 'root.KaitaiStream' has no member named 'processXor'
-            try self._raw_blocks.append(self._allocator(), kaitai_struct.KaitaiStream.processXor(self._raw__raw_blocks.items[i], @as(i8, 155 ^ (i << 4 | self._io.pos()))));
-                                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
+    comptime: tests.zig:182:17
+formats/process_repeat_usertype_dynarg_xor.zig:30:132: error: expected type 'u8', found 'usize'
+            const _raw_blocks = try _imp_kaitai_struct.KaitaiStream.processXorOne(self._allocator(), _raw__raw_blocks, @as(u8, 155 ^ (i << 4 | self._io.pos())));
+                                                                                                                               ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+formats/process_repeat_usertype_dynarg_xor.zig:30:132: note: unsigned 8-bit int cannot represent all possible unsigned 64-bit values
 referenced by:
     create: formats/process_repeat_usertype_dynarg_xor.zig:15:23
     test.ProcessRepeatUsertypeDynargXor: tests/process_repeat_usertype_dynarg_xor_test.zig:16:91
-    comptime: tests.zig:179:17
-formats/process_rotate.zig:23:47: error: struct 'root.KaitaiStream' has no member named 'processRotateLeft'
-        self.buf1 = kaitai_struct.KaitaiStream.processRotateLeft(self._raw_buf1, 3, 1);
-                    ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
-referenced by:
-    create: formats/process_rotate.zig:15:23
-    test.ProcessRotate: tests/process_rotate_test.zig:16:54
-    comptime: tests.zig:181:17
-formats/process_struct_pad_term.zig:22:60: error: struct 'root.KaitaiStream' has no member named 'bytesStripRight'
-        self._raw__raw_str_pad = kaitai_struct.KaitaiStream.bytesStripRight(try self._io.readBytes(self._allocator(), 20), 64);
-                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
-referenced by:
-    create: formats/process_struct_pad_term.zig:15:23
-    test.ProcessStructPadTerm: tests/process_struct_pad_term_test.zig:16:70
-    comptime: tests.zig:182:17
-formats/process_to_user.zig:23:52: error: struct 'root.KaitaiStream' has no member named 'processRotateLeft'
-        self._raw_buf1 = kaitai_struct.KaitaiStream.processRotateLeft(self._raw__raw_buf1, 3, 1);
-                         ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
-referenced by:
-    create: formats/process_to_user.zig:15:23
-    test.ProcessToUser: tests/process_to_user_test.zig:16:55
     comptime: tests.zig:183:17
-formats/process_xor4_const.zig:24:46: error: struct 'root.KaitaiStream' has no member named 'processXor'
-        self.buf = kaitai_struct.KaitaiStream.processXor(self._raw_buf, &[_]u8{ 236, 187, 163, 20 });
-                   ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
-referenced by:
-    create: formats/process_xor4_const.zig:15:23
-    test.ProcessXor4Const: tests/process_xor4_const_test.zig:16:61
-    comptime: tests.zig:184:17
-formats/process_xor4_value.zig:24:46: error: struct 'root.KaitaiStream' has no member named 'processXor'
-        self.buf = kaitai_struct.KaitaiStream.processXor(self._raw_buf, self.key);
-                   ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
-referenced by:
-    create: formats/process_xor4_value.zig:15:23
-    test.ProcessXor4Value: tests/process_xor4_value_test.zig:16:61
-    comptime: tests.zig:185:17
-formats/process_xor_const.zig:24:46: error: struct 'root.KaitaiStream' has no member named 'processXor'
-        self.buf = kaitai_struct.KaitaiStream.processXor(self._raw_buf, @as(i8, 255));
-                   ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
-referenced by:
-    create: formats/process_xor_const.zig:15:23
-    test.ProcessXorConst: tests/process_xor_const_test.zig:16:59
-    comptime: tests.zig:186:17
-formats/process_xor_value.zig:24:46: error: struct 'root.KaitaiStream' has no member named 'processXor'
-        self.buf = kaitai_struct.KaitaiStream.processXor(self._raw_buf, @as(i8, self.key));
-                   ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
-referenced by:
-    create: formats/process_xor_value.zig:15:23
-    test.ProcessXorValue: tests/process_xor_value_test.zig:16:59
-    comptime: tests.zig:187:17
 formats/recursive_one.zig:25:52: error: unable to resolve inferred error set
                 self.next = try RecursiveOne.create(self._arena, self._io, self, self._root);
                                 ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 referenced by:
     create: formats/recursive_one.zig:15:23
     test.RecursiveOne: tests/recursive_one_test.zig:16:52
-    comptime: tests.zig:188:17
-formats/repeat_eos_bytes_pad.zig:27:86: error: struct 'root.KaitaiStream' has no member named 'bytesStripRight'
-                try self.records.append(self._allocator(), kaitai_struct.KaitaiStream.bytesStripRight(try self._io.readBytes(self._allocator(), 5), 170));
-                                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
-referenced by:
-    create: formats/repeat_eos_bytes_pad.zig:15:23
-    test.RepeatEosBytesPad: tests/repeat_eos_bytes_pad_test.zig:16:64
-    comptime: tests.zig:191:17
-formats/repeat_eos_bytes_pad_term.zig:27:86: error: struct 'root.KaitaiStream' has no member named 'bytesTerminate'
-                try self.records.append(self._allocator(), kaitai_struct.KaitaiStream.bytesTerminate(kaitai_struct.KaitaiStream.bytesStripRight(try self._io.readBytes(self._allocator(), 5), 170), 85, true));
-                                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
-referenced by:
-    create: formats/repeat_eos_bytes_pad_term.zig:15:23
-    test.RepeatEosBytesPadTerm: tests/repeat_eos_bytes_pad_term_test.zig:16:73
-    comptime: tests.zig:190:17
-formats/repeat_n_bytes_pad.zig:29:82: error: struct 'root.KaitaiStream' has no member named 'bytesStripRight'
-            try self.records.append(self._allocator(), kaitai_struct.KaitaiStream.bytesStripRight(try self._io.readBytes(self._allocator(), 5), 170));
-                                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
-referenced by:
-    create: formats/repeat_n_bytes_pad.zig:15:23
-    test.RepeatNBytesPad: tests/repeat_n_bytes_pad_test.zig:16:60
-    comptime: tests.zig:198:17
-formats/repeat_n_bytes_pad_term.zig:29:82: error: struct 'root.KaitaiStream' has no member named 'bytesTerminate'
-            try self.records.append(self._allocator(), kaitai_struct.KaitaiStream.bytesTerminate(kaitai_struct.KaitaiStream.bytesStripRight(try self._io.readBytes(self._allocator(), 5), 170), 85, true));
-                                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
-referenced by:
-    create: formats/repeat_n_bytes_pad_term.zig:15:23
-    test.RepeatNBytesPadTerm: tests/repeat_n_bytes_pad_term_test.zig:16:69
-    comptime: tests.zig:197:17
-formats/repeat_n_strz.zig:30:80: error: struct 'root.KaitaiStream' has no member named 'bytesToStr'
-            try self.lines.append(self._allocator(), kaitai_struct.KaitaiStream.bytesToStr(try self._io.readBytesTerm(self._allocator(), 0, false, true, true), "UTF-8"));
-                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
-referenced by:
-    create: formats/repeat_n_strz.zig:15:23
-    test.RepeatNStrz: tests/repeat_n_strz_test.zig:16:51
-    comptime: tests.zig:202:17
-formats/repeat_n_strz_double.zig:30:81: error: struct 'root.KaitaiStream' has no member named 'bytesToStr'
-            try self.lines1.append(self._allocator(), kaitai_struct.KaitaiStream.bytesToStr(try self._io.readBytesTerm(self._allocator(), 0, false, true, true), "UTF-8"));
-                                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
-referenced by:
-    create: formats/repeat_n_strz_double.zig:15:23
-    test.RepeatNStrzDouble: tests/repeat_n_strz_double_test.zig:16:64
-    comptime: tests.zig:201:17
-formats/repeat_until_bytes_pad.zig:27:55: error: struct 'root.KaitaiStream' has no member named 'bytesStripRight'
-                const _it = kaitai_struct.KaitaiStream.bytesStripRight(try self._io.readBytes(self._allocator(), 5), 170);
-                            ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
-referenced by:
-    create: formats/repeat_until_bytes_pad.zig:15:23
-    test.RepeatUntilBytesPad: tests/repeat_until_bytes_pad_test.zig:16:68
-    comptime: tests.zig:206:17
-formats/repeat_until_bytes_pad_term.zig:27:55: error: struct 'root.KaitaiStream' has no member named 'bytesTerminate'
-                const _it = kaitai_struct.KaitaiStream.bytesTerminate(kaitai_struct.KaitaiStream.bytesStripRight(try self._io.readBytes(self._allocator(), 5), 170), 85, true);
-                            ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
-referenced by:
-    create: formats/repeat_until_bytes_pad_term.zig:15:23
-    test.RepeatUntilBytesPadTerm: tests/repeat_until_bytes_pad_term_test.zig:16:77
-    comptime: tests.zig:205:17
-formats/repeat_until_s4.zig:34:51: error: struct 'root.KaitaiStream' has no member named 'bytesToStr'
-        self.afterall = kaitai_struct.KaitaiStream.bytesToStr(try self._io.readBytesTerm(self._allocator(), 0, false, true, true), "ASCII");
-                        ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
-referenced by:
-    create: formats/repeat_until_s4.zig:15:23
-    test.RepeatUntilS4: tests/repeat_until_s4_test.zig:16:55
-    comptime: tests.zig:210:17
-formats/str_encodings.zig:23:47: error: struct 'root.KaitaiStream' has no member named 'bytesToStr'
-        self.str1 = kaitai_struct.KaitaiStream.bytesToStr(try self._io.readBytes(self._allocator(), self.len_of_1), "ASCII");
-                    ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
-referenced by:
-    create: formats/str_encodings.zig:15:23
-    test.StrEncodings: tests/str_encodings_test.zig:16:52
-    comptime: tests.zig:217:17
-formats/str_encodings_default.zig:23:47: error: struct 'root.KaitaiStream' has no member named 'bytesToStr'
-        self.str1 = kaitai_struct.KaitaiStream.bytesToStr(try self._io.readBytes(self._allocator(), self.len_of_1), "UTF-8");
-                    ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
-referenced by:
-    create: formats/str_encodings_default.zig:15:23
-    test.StrEncodingsDefault: tests/str_encodings_default_test.zig:16:67
-    comptime: tests.zig:214:17
-formats/str_encodings_utf16.zig:50:50: error: struct 'root.KaitaiStream' has no member named 'bytesToStr'
-            self.str = kaitai_struct.KaitaiStream.bytesToStr(try self._io.readBytesFull(self._allocator()), "UTF-16BE");
-                       ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
-referenced by:
-    create: formats/str_encodings_utf16.zig:42:27
-    _read: formats/str_encodings_utf16.zig:26:57
-    create: formats/str_encodings_utf16.zig:15:23
-    test.StrEncodingsUtf16: tests/str_encodings_utf16_test.zig:16:63
-    comptime: tests.zig:218:17
-formats/str_eos.zig:22:46: error: struct 'root.KaitaiStream' has no member named 'bytesToStr'
-        self.str = kaitai_struct.KaitaiStream.bytesToStr(try self._io.readBytesFull(self._allocator()), "UTF-8");
-                   ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
-referenced by:
-    create: formats/str_eos.zig:15:23
-    test.StrEos: tests/str_eos_test.zig:16:40
-    comptime: tests.zig:222:17
-formats/str_eos_pad_term.zig:55:52: error: struct 'root.KaitaiStream' has no member named 'bytesToStr'
-            self.value = kaitai_struct.KaitaiStream.bytesToStr(kaitai_struct.KaitaiStream.bytesStripRight(try self._io.readBytesFull(self._allocator()), 64), "UTF-8");
-                         ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
-referenced by:
-    create: formats/str_eos_pad_term.zig:48:27
-    _read: formats/str_eos_pad_term.zig:25:45
-    create: formats/str_eos_pad_term.zig:15:23
-    test.StrEosPadTerm: tests/str_eos_pad_term_test.zig:16:56
-    comptime: tests.zig:221:17
-formats/str_eos_pad_term_empty.zig:55:52: error: struct 'root.KaitaiStream' has no member named 'bytesToStr'
-            self.value = kaitai_struct.KaitaiStream.bytesToStr(kaitai_struct.KaitaiStream.bytesStripRight(try self._io.readBytesFull(self._allocator()), 64), "UTF-8");
-                         ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
-referenced by:
-    create: formats/str_eos_pad_term_empty.zig:48:27
-    _read: formats/str_eos_pad_term_empty.zig:25:45
-    create: formats/str_eos_pad_term_empty.zig:15:23
-    test.StrEosPadTermEmpty: tests/str_eos_pad_term_empty_test.zig:16:67
-    comptime: tests.zig:219:17
-formats/str_eos_pad_term_equal.zig:55:52: error: struct 'root.KaitaiStream' has no member named 'bytesToStr'
-            self.value = kaitai_struct.KaitaiStream.bytesToStr(kaitai_struct.KaitaiStream.bytesTerminate(try self._io.readBytesFull(self._allocator()), 64, false), "UTF-8");
-                         ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
-referenced by:
-    create: formats/str_eos_pad_term_equal.zig:48:27
-    _read: formats/str_eos_pad_term_equal.zig:25:36
-    create: formats/str_eos_pad_term_equal.zig:15:23
-    test.StrEosPadTermEqual: tests/str_eos_pad_term_equal_test.zig:16:67
-    comptime: tests.zig:220:17
-formats/str_literals2.zig:36:14: error: expected type '[]u8', found '*const [4:0]u8'
-        _v = "$foo";
-             ^~~~~~
-formats/str_literals2.zig:36:14: note: cast discards const qualifier
-referenced by:
-    test.StrLiterals2: tests/str_literals2_test.zig:17:62
-    comptime: tests.zig:223:17
-formats/str_literals_latin1.zig:23:49: error: struct 'root.KaitaiStream' has no member named 'bytesToStr'
-        self.parsed = kaitai_struct.KaitaiStream.bytesToStr(try self._io.readBytes(self._allocator(), self.len_parsed), "UTF-8");
-                      ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
-referenced by:
-    create: formats/str_literals_latin1.zig:15:23
-    test.StrLiteralsLatin1: tests/str_literals_latin1_test.zig:16:63
-    comptime: tests.zig:224:17
-formats/str_pad_term.zig:22:50: error: struct 'root.KaitaiStream' has no member named 'bytesToStr'
-        self.str_pad = kaitai_struct.KaitaiStream.bytesToStr(kaitai_struct.KaitaiStream.bytesStripRight(try self._io.readBytes(self._allocator(), 20), 64), "UTF-8");
-                       ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
-referenced by:
-    create: formats/str_pad_term.zig:15:23
-    test.StrPadTerm: tests/str_pad_term_test.zig:16:49
-    comptime: tests.zig:228:17
-formats/str_pad_term_empty.zig:22:50: error: struct 'root.KaitaiStream' has no member named 'bytesToStr'
-        self.str_pad = kaitai_struct.KaitaiStream.bytesToStr(kaitai_struct.KaitaiStream.bytesStripRight(try self._io.readBytes(self._allocator(), 20), 64), "UTF-8");
-                       ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
-referenced by:
-    create: formats/str_pad_term_empty.zig:15:23
-    test.StrPadTermEmpty: tests/str_pad_term_empty_test.zig:16:60
-    comptime: tests.zig:225:17
-formats/str_pad_term_equal.zig:22:45: error: struct 'root.KaitaiStream' has no member named 'bytesToStr'
-        self.s1 = kaitai_struct.KaitaiStream.bytesToStr(kaitai_struct.KaitaiStream.bytesTerminate(try self._io.readBytes(self._allocator(), 20), 64, false), "UTF-8");
-                  ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
-referenced by:
-    create: formats/str_pad_term_equal.zig:15:23
-    test.StrPadTermEqual: tests/str_pad_term_equal_test.zig:16:60
-    comptime: tests.zig:226:17
-formats/str_pad_term_roundtrip.zig:22:50: error: struct 'root.KaitaiStream' has no member named 'bytesToStr'
-        self.str_pad = kaitai_struct.KaitaiStream.bytesToStr(kaitai_struct.KaitaiStream.bytesStripRight(try self._io.readBytes(self._allocator(), 20), 64), "UTF-8");
-                       ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
-referenced by:
-    create: formats/str_pad_term_roundtrip.zig:15:23
-    test.StrPadTermRoundtrip: tests/str_pad_term_roundtrip_test.zig:16:68
-    comptime: tests.zig:227:17
-formats/str_pad_term_utf16.zig:22:51: error: struct 'root.KaitaiStream' has no member named 'bytesToStr'
-        self.str_term = kaitai_struct.KaitaiStream.bytesToStr(kaitai_struct.KaitaiStream.bytesTerminateMulti(try self._io.readBytes(self._allocator(), 10), &[_]u8{ 0, 0 }, false), "UTF-16LE");
-                        ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
-referenced by:
-    create: formats/str_pad_term_utf16.zig:15:23
-    test.StrPadTermUtf16: tests/str_pad_term_utf16_test.zig:16:60
-    comptime: tests.zig:229:17
-formats/str_pad_term_zero_size.zig:22:50: error: struct 'root.KaitaiStream' has no member named 'bytesToStr'
-        self.str_pad = kaitai_struct.KaitaiStream.bytesToStr(kaitai_struct.KaitaiStream.bytesStripRight(try self._io.readBytes(self._allocator(), 0), 64), "UTF-8");
-                       ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
-referenced by:
-    create: formats/str_pad_term_zero_size.zig:15:23
-    test.StrPadTermZeroSize: tests/str_pad_term_zero_size_test.zig:16:67
-    comptime: tests.zig:230:17
-formats/struct_pad_term.zig:22:55: error: struct 'root.KaitaiStream' has no member named 'bytesStripRight'
-        self._raw_str_pad = kaitai_struct.KaitaiStream.bytesStripRight(try self._io.readBytes(self._allocator(), 20), 64);
-                            ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
-referenced by:
-    create: formats/struct_pad_term.zig:15:23
-    test.StructPadTerm: tests/struct_pad_term_test.zig:16:55
-    comptime: tests.zig:232:17
-formats/struct_pad_term_equal.zig:22:50: error: struct 'root.KaitaiStream' has no member named 'bytesTerminate'
-        self._raw_s1 = kaitai_struct.KaitaiStream.bytesTerminate(try self._io.readBytes(self._allocator(), 20), 64, false);
-                       ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
-referenced by:
-    create: formats/struct_pad_term_equal.zig:15:23
-    test.StructPadTermEqual: tests/struct_pad_term_equal_test.zig:16:66
-    comptime: tests.zig:231:17
-formats/switch_bytearray.zig:98:56: error: struct 'root.KaitaiStream' has no member named 'bytesToStr'
-                self.value = kaitai_struct.KaitaiStream.bytesToStr(try self._io.readBytesTerm(self._allocator(), 0, false, true, true), "ASCII");
-                             ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
-referenced by:
-    create: formats/switch_bytearray.zig:91:31
-    _read: formats/switch_bytearray.zig:54:50
-    create: formats/switch_bytearray.zig:40:27
-    _read: formats/switch_bytearray.zig:27:77
-    create: formats/switch_bytearray.zig:15:23
-    test.SwitchBytearray: tests/switch_bytearray_test.zig:16:58
-    comptime: tests.zig:233:17
+    comptime: tests.zig:192:17
 formats/switch_integers2.zig:39:66: error: expected type 'usize', found '?u64'
         self.ham = try self._io.readBytes(self._allocator(), self.len);
                                                              ~~~~^~~~
@@ -1115,311 +453,73 @@ formats/switch_integers2.zig:39:66: note: consider using '.?', 'orelse', or 'if'
 referenced by:
     create: formats/switch_integers2.zig:15:23
     test.SwitchIntegers2: tests/switch_integers2_test.zig:16:58
-    comptime: tests.zig:235:17
-formats/switch_manual_enum.zig:104:56: error: struct 'root.KaitaiStream' has no member named 'bytesToStr'
-                self.value = kaitai_struct.KaitaiStream.bytesToStr(try self._io.readBytesTerm(self._allocator(), 0, false, true, true), "ASCII");
-                             ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
-referenced by:
-    create: formats/switch_manual_enum.zig:97:31
-    _read: formats/switch_manual_enum.zig:58:50
-    create: formats/switch_manual_enum.zig:45:27
-    _read: formats/switch_manual_enum.zig:27:77
-    create: formats/switch_manual_enum.zig:15:23
-    test.SwitchManualEnum: tests/switch_manual_enum_test.zig:16:61
     comptime: tests.zig:239:17
-formats/switch_manual_enum_invalid.zig:104:56: error: struct 'root.KaitaiStream' has no member named 'bytesToStr'
-                self.value = kaitai_struct.KaitaiStream.bytesToStr(try self._io.readBytesTerm(self._allocator(), 0, false, true, true), "ASCII");
-                             ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
+formats/switch_manual_int_size.zig:63:33: error: expected type '*anyopaque', found '[]u8'
+                    self.body = try self._io.readBytes(self._allocator(), self.size);
+                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+formats/switch_manual_int_size.zig:63:33: note: cannot implicitly cast slice '[]u8' to anyopaque pointer '*anyopaque'
+formats/switch_manual_int_size.zig:63:33: note: consider using '.ptr'
 referenced by:
-    create: formats/switch_manual_enum_invalid.zig:97:31
-    _read: formats/switch_manual_enum_invalid.zig:58:50
-    create: formats/switch_manual_enum_invalid.zig:45:27
-    _read: formats/switch_manual_enum_invalid.zig:27:77
-    create: formats/switch_manual_enum_invalid.zig:15:23
-    test.SwitchManualEnumInvalid: tests/switch_manual_enum_invalid_test.zig:16:76
-    comptime: tests.zig:238:17
-formats/switch_manual_enum_invalid_else.zig:137:56: error: struct 'root.KaitaiStream' has no member named 'bytesToStr'
-                self.value = kaitai_struct.KaitaiStream.bytesToStr(try self._io.readBytesTerm(self._allocator(), 0, false, true, true), "ASCII");
-                             ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
-referenced by:
-    create: formats/switch_manual_enum_invalid_else.zig:130:31
-    _read: formats/switch_manual_enum_invalid_else.zig:58:50
-    create: formats/switch_manual_enum_invalid_else.zig:45:27
-    _read: formats/switch_manual_enum_invalid_else.zig:27:77
-    create: formats/switch_manual_enum_invalid_else.zig:15:23
-    test.SwitchManualEnumInvalidElse: tests/switch_manual_enum_invalid_else_test.zig:16:85
-    comptime: tests.zig:237:17
-formats/switch_manual_int.zig:99:56: error: struct 'root.KaitaiStream' has no member named 'bytesToStr'
-                self.value = kaitai_struct.KaitaiStream.bytesToStr(try self._io.readBytesTerm(self._allocator(), 0, false, true, true), "ASCII");
-                             ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
-referenced by:
-    create: formats/switch_manual_int.zig:92:31
-    _read: formats/switch_manual_int.zig:53:50
-    create: formats/switch_manual_int.zig:40:27
-    _read: formats/switch_manual_int.zig:27:77
-    create: formats/switch_manual_int.zig:15:23
-    test.SwitchManualInt: tests/switch_manual_int_test.zig:16:59
-    comptime: tests.zig:244:17
-formats/switch_manual_int_else.zig:124:56: error: struct 'root.KaitaiStream' has no member named 'bytesToStr'
-                self.value = kaitai_struct.KaitaiStream.bytesToStr(try self._io.readBytesTerm(self._allocator(), 0, false, true, true), "ASCII");
-                             ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
-referenced by:
-    create: formats/switch_manual_int_else.zig:117:31
-    _read: formats/switch_manual_int_else.zig:53:50
-    create: formats/switch_manual_int_else.zig:40:27
-    _read: formats/switch_manual_int_else.zig:27:77
-    create: formats/switch_manual_int_else.zig:15:23
-    test.SwitchManualIntElse: tests/switch_manual_int_else_test.zig:16:68
-    comptime: tests.zig:240:17
-formats/switch_manual_int_size.zig:114:56: error: struct 'root.KaitaiStream' has no member named 'bytesToStr'
-                self.title = kaitai_struct.KaitaiStream.bytesToStr(try self._io.readBytesTerm(self._allocator(), 0, false, true, true), "UTF-8");
-                             ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
-referenced by:
-    create: formats/switch_manual_int_size.zig:107:31
-    _read: formats/switch_manual_int_size.zig:54:53
     create: formats/switch_manual_int_size.zig:40:27
     _read: formats/switch_manual_int_size.zig:27:75
     create: formats/switch_manual_int_size.zig:15:23
     test.SwitchManualIntSize: tests/switch_manual_int_size_test.zig:16:68
-    comptime: tests.zig:243:17
-formats/switch_manual_int_size_else.zig:117:56: error: struct 'root.KaitaiStream' has no member named 'bytesToStr'
-                self.title = kaitai_struct.KaitaiStream.bytesToStr(try self._io.readBytesTerm(self._allocator(), 0, false, true, true), "UTF-8");
-                             ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
+    comptime: tests.zig:247:17
+formats/switch_manual_int_size_eos.zig:92:33: error: expected type '*anyopaque', found '[]u8'
+                    self.body = try self._io.readBytesFull(self._allocator());
+                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+formats/switch_manual_int_size_eos.zig:92:33: note: cannot implicitly cast slice '[]u8' to anyopaque pointer '*anyopaque'
+formats/switch_manual_int_size_eos.zig:92:33: note: consider using '.ptr'
 referenced by:
-    create: formats/switch_manual_int_size_else.zig:110:31
-    _read: formats/switch_manual_int_size_else.zig:54:53
-    create: formats/switch_manual_int_size_else.zig:40:27
-    _read: formats/switch_manual_int_size_else.zig:27:75
-    create: formats/switch_manual_int_size_else.zig:15:23
-    test.SwitchManualIntSizeElse: tests/switch_manual_int_size_else_test.zig:16:77
-    comptime: tests.zig:241:17
-formats/switch_manual_int_size_eos.zig:144:56: error: struct 'root.KaitaiStream' has no member named 'bytesToStr'
-                self.title = kaitai_struct.KaitaiStream.bytesToStr(try self._io.readBytesTerm(self._allocator(), 0, false, true, true), "UTF-8");
-                             ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
-referenced by:
-    create: formats/switch_manual_int_size_eos.zig:137:31
-    _read: formats/switch_manual_int_size_eos.zig:84:53
-    create: formats/switch_manual_int_size_eos.zig:72:27
+    create: formats/switch_manual_int_size_eos.zig:71:27
     _read: formats/switch_manual_int_size_eos.zig:52:45
     create: formats/switch_manual_int_size_eos.zig:40:27
     _read: formats/switch_manual_int_size_eos.zig:27:75
     create: formats/switch_manual_int_size_eos.zig:15:23
     test.SwitchManualIntSizeEos: tests/switch_manual_int_size_eos_test.zig:16:75
-    comptime: tests.zig:242:17
-formats/switch_manual_str.zig:47:51: error: struct 'root.KaitaiStream' has no member named 'bytesToStr'
-            self.code = kaitai_struct.KaitaiStream.bytesToStr(try self._io.readBytes(self._allocator(), 1), "ASCII");
-                        ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
-referenced by:
-    create: formats/switch_manual_str.zig:40:27
-    _read: formats/switch_manual_str.zig:27:77
-    create: formats/switch_manual_str.zig:15:23
-    test.SwitchManualStr: tests/switch_manual_str_test.zig:16:59
     comptime: tests.zig:246:17
-formats/switch_manual_str_else.zig:47:51: error: struct 'root.KaitaiStream' has no member named 'bytesToStr'
-            self.code = kaitai_struct.KaitaiStream.bytesToStr(try self._io.readBytes(self._allocator(), 1), "ASCII");
-                        ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
-referenced by:
-    create: formats/switch_manual_str_else.zig:40:27
-    _read: formats/switch_manual_str_else.zig:27:77
-    create: formats/switch_manual_str_else.zig:15:23
-    test.SwitchManualStrElse: tests/switch_manual_str_else_test.zig:16:68
-    comptime: tests.zig:245:17
-formats/switch_repeat_expr.zig:47:61: error: expected type '*anyopaque', found '[]u8'
+formats/switch_repeat_expr.zig:45:61: error: expected type '*anyopaque', found '[]u8'
                     try self.body.append(self._allocator(), try self._io.readBytes(self._allocator(), self.size));
                                                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-formats/switch_repeat_expr.zig:47:61: note: cannot implicitly cast slice '[]u8' to anyopaque pointer '*anyopaque'
-formats/switch_repeat_expr.zig:47:61: note: consider using '.ptr'
+formats/switch_repeat_expr.zig:45:61: note: cannot implicitly cast slice '[]u8' to anyopaque pointer '*anyopaque'
+formats/switch_repeat_expr.zig:45:61: note: consider using '.ptr'
 /usr/local/zig-x86_64-linux-0.15.2/lib/std/array_list.zig:893:58: note: parameter type declared here
         pub fn append(self: *Self, gpa: Allocator, item: T) Allocator.Error!void {
                                                          ^
 referenced by:
     create: formats/switch_repeat_expr.zig:15:23
     test.SwitchRepeatExpr: tests/switch_repeat_expr_test.zig:16:61
-    comptime: tests.zig:249:17
-formats/switch_repeat_expr_invalid.zig:47:61: error: expected type '*anyopaque', found '[]u8'
+    comptime: tests.zig:253:17
+formats/switch_repeat_expr_invalid.zig:45:61: error: expected type '*anyopaque', found '[]u8'
                     try self.body.append(self._allocator(), try self._io.readBytes(self._allocator(), self.size));
                                                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-formats/switch_repeat_expr_invalid.zig:47:61: note: cannot implicitly cast slice '[]u8' to anyopaque pointer '*anyopaque'
-formats/switch_repeat_expr_invalid.zig:47:61: note: consider using '.ptr'
+formats/switch_repeat_expr_invalid.zig:45:61: note: cannot implicitly cast slice '[]u8' to anyopaque pointer '*anyopaque'
+formats/switch_repeat_expr_invalid.zig:45:61: note: consider using '.ptr'
 /usr/local/zig-x86_64-linux-0.15.2/lib/std/array_list.zig:893:58: note: parameter type declared here
         pub fn append(self: *Self, gpa: Allocator, item: T) Allocator.Error!void {
                                                          ^
 referenced by:
     create: formats/switch_repeat_expr_invalid.zig:15:23
     test.SwitchRepeatExprInvalid: tests/switch_repeat_expr_invalid_test.zig:16:76
-    comptime: tests.zig:248:17
-formats/term_strz.zig:22:45: error: struct 'root.KaitaiStream' has no member named 'bytesToStr'
-        self.s1 = kaitai_struct.KaitaiStream.bytesToStr(try self._io.readBytesTerm(self._allocator(), 124, false, true, true), "UTF-8");
-                  ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
+    comptime: tests.zig:252:17
+formats/type_ternary.zig:62:47: error: expected type '*formats.type_ternary.TypeTernary.Dummy', found '?*formats.type_ternary.TypeTernary.Dummy'
+        _v = (if (!((try self.isHack()))) self.dif_wo_hack else self.dif_with_hack);
+                                          ~~~~^~~~~~~~~~~~
+formats/type_ternary.zig:62:47: note: cannot convert optional to payload type
+formats/type_ternary.zig:62:47: note: consider using '.?', 'orelse', or 'if'
+formats/type_ternary.zig:62:47: note: '?*formats.type_ternary.TypeTernary.Dummy' could have null values which are illegal in type '*formats.type_ternary.TypeTernary.Dummy'
 referenced by:
-    create: formats/term_strz.zig:15:23
-    test.TermStrz: tests/term_strz_test.zig:16:44
-    comptime: tests.zig:261:17
-formats/term_strz2.zig:22:45: error: struct 'root.KaitaiStream' has no member named 'bytesToStr'
-        self.s1 = kaitai_struct.KaitaiStream.bytesToStr(try self._io.readBytesTerm(self._allocator(), 124, false, true, true), "UTF-8");
-                  ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
-referenced by:
-    create: formats/term_strz2.zig:15:23
-    test.TermStrz2: tests/term_strz2_test.zig:16:46
-    comptime: tests.zig:258:17
-formats/term_strz3.zig:22:45: error: struct 'root.KaitaiStream' has no member named 'bytesToStr'
-        self.s1 = kaitai_struct.KaitaiStream.bytesToStr(try self._io.readBytesTerm(self._allocator(), 124, false, false, true), "UTF-8");
-                  ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
-referenced by:
-    create: formats/term_strz3.zig:15:23
-    test.TermStrz3: tests/term_strz3_test.zig:16:46
-    comptime: tests.zig:259:17
-formats/term_strz4.zig:53:52: error: struct 'root.KaitaiStream' has no member named 'bytesToStr'
-            self.value = kaitai_struct.KaitaiStream.bytesToStr(try self._io.readBytesTerm(self._allocator(), 124, false, true, false), "UTF-8");
-                         ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
-referenced by:
-    create: formats/term_strz4.zig:46:27
-    _read: formats/term_strz4.zig:25:36
-    create: formats/term_strz4.zig:15:23
-    test.TermStrz4: tests/term_strz4_test.zig:16:46
-    comptime: tests.zig:260:17
-formats/term_strz_utf16_v1.zig:22:45: error: struct 'root.KaitaiStream' has no member named 'bytesToStr'
-        self.s1 = kaitai_struct.KaitaiStream.bytesToStr(try self._io.readBytesTermMulti(self._allocator(), &[_]u8{ 0, 0 }, false, true, true), "UTF-16LE");
-                  ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
-referenced by:
-    create: formats/term_strz_utf16_v1.zig:15:23
-    test.TermStrzUtf16V1: tests/term_strz_utf16_v1_test.zig:16:60
-    comptime: tests.zig:262:17
-formats/term_strz_utf16_v2.zig:22:45: error: struct 'root.KaitaiStream' has no member named 'bytesToStr'
-        self.s1 = kaitai_struct.KaitaiStream.bytesToStr(try self._io.readBytesTermMulti(self._allocator(), &[_]u8{ 0, 0 }, false, true, true), "UTF-16LE");
-                  ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
-referenced by:
-    create: formats/term_strz_utf16_v2.zig:15:23
-    test.TermStrzUtf16V2: tests/term_strz_utf16_v2_test.zig:16:60
-    comptime: tests.zig:263:17
-formats/term_strz_utf16_v3.zig:22:45: error: struct 'root.KaitaiStream' has no member named 'bytesToStr'
-        self.s1 = kaitai_struct.KaitaiStream.bytesToStr(try self._io.readBytesTermMulti(self._allocator(), &[_]u8{ 0, 0 }, false, false, true), "UTF-16LE");
-                  ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
-referenced by:
-    create: formats/term_strz_utf16_v3.zig:15:23
-    test.TermStrzUtf16V3: tests/term_strz_utf16_v3_test.zig:16:60
-    comptime: tests.zig:264:17
-formats/term_strz_utf16_v4.zig:53:52: error: struct 'root.KaitaiStream' has no member named 'bytesToStr'
-            self.value = kaitai_struct.KaitaiStream.bytesToStr(try self._io.readBytesTermMulti(self._allocator(), &[_]u8{ 0, 0 }, false, true, false), "UTF-16LE");
-                         ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
-referenced by:
-    create: formats/term_strz_utf16_v4.zig:46:27
-    _read: formats/term_strz_utf16_v4.zig:25:36
-    create: formats/term_strz_utf16_v4.zig:15:23
-    test.TermStrzUtf16V4: tests/term_strz_utf16_v4_test.zig:16:60
-    comptime: tests.zig:265:17
-formats/term_u1_val.zig:23:46: error: struct 'root.KaitaiStream' has no member named 'bytesToStr'
-        self.bar = kaitai_struct.KaitaiStream.bytesToStr(try self._io.readBytesTerm(self._allocator(), 171, true, true, true), "UTF-8");
-                   ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
-referenced by:
-    create: formats/term_u1_val.zig:15:23
-    test.TermU1Val: tests/term_u1_val_test.zig:16:47
-    comptime: tests.zig:266:17
-formats/type_ternary.zig:25:79: error: expected type '[]const u8', found '?[]u8'
-            _io__raw_dif_wo_hack.* = kaitai_struct.KaitaiStream.fromBytes(self._raw_dif_wo_hack);
-                                                                          ~~~~^~~~~~~~~~~~~~~~~
-/runtime/zig/src/root.zig:24:29: note: parameter type declared here
-    pub fn fromBytes(bytes: []const u8) KaitaiStream {
-                            ^~~~~~~~~~
-referenced by:
-    create: formats/type_ternary.zig:15:23
-    test.TypeTernary: tests/type_ternary_test.zig:16:50
-    comptime: tests.zig:270:17
-formats/type_ternary_2nd_falsy.zig:153:35: error: expected type '[]u8', found '*const [1:0]u8'
-        _v = (if ((try self.t())) "0" else "30");
-                                  ^~~
-formats/type_ternary_2nd_falsy.zig:153:35: note: cast discards const qualifier
-referenced by:
-    test.TypeTernary2ndFalsy: tests/type_ternary_2nd_falsy_test.zig:22:61
-    comptime: tests.zig:269:17
-formats/valid_eq_str_encodings.zig:23:47: error: struct 'root.KaitaiStream' has no member named 'bytesToStr'
-        self.str1 = kaitai_struct.KaitaiStream.bytesToStr(try self._io.readBytes(self._allocator(), self.len_of_1), "ASCII");
-                    ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
-referenced by:
-    create: formats/valid_eq_str_encodings.zig:15:23
-    test.ValidEqStrEncodings: tests/valid_eq_str_encodings_test.zig:16:68
-    comptime: tests.zig:272:17
-formats/valid_fail_contents_inst.zig:33:35: error: expected type '[]const u8', found '?[]u8'
-        if (!(std.mem.eql(u8, self._m_foo, &[_]u8{ 81, 65 }))) {
-                              ~~~~^~~~~~~
-/usr/local/zig-x86_64-linux-0.15.2/lib/std/mem.zig:693:33: note: parameter type declared here
-pub fn eql(comptime T: type, a: []const T, b: []const T) bool {
-                                ^~~~~~~~~
-referenced by:
-    _read: formats/valid_fail_contents_inst.zig:22:26
-    create: formats/valid_fail_contents_inst.zig:15:23
-    test.ValidFailContentsInst: tests/valid_fail_contents_inst_test.zig:16:117
+    test.TypeTernary: tests/type_ternary_test.zig:17:48
     comptime: tests.zig:274:17
-formats/valid_fail_eq_str.zig:22:46: error: struct 'root.KaitaiStream' has no member named 'bytesToStr'
-        self.foo = kaitai_struct.KaitaiStream.bytesToStr(try self._io.readBytes(self._allocator(), 4), "ASCII");
-                   ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
+formats/type_ternary_2nd_falsy.zig:144:36: error: expected type '*formats.type_ternary_2nd_falsy.TypeTernary2ndFalsy.Foo', found '?*formats.type_ternary_2nd_falsy.TypeTernary2ndFalsy.Foo'
+        _v = (if ((try self.t())) (try self.nullUt()) else self.ut);
+                                   ^~~~~~~~~~~~~~~~~
+formats/type_ternary_2nd_falsy.zig:144:36: note: cannot convert optional to payload type
+formats/type_ternary_2nd_falsy.zig:144:36: note: consider using '.?', 'orelse', or 'if'
+formats/type_ternary_2nd_falsy.zig:144:36: note: '?*formats.type_ternary_2nd_falsy.TypeTernary2ndFalsy.Foo' could have null values which are illegal in type '*formats.type_ternary_2nd_falsy.TypeTernary2ndFalsy.Foo'
 referenced by:
-    create: formats/valid_fail_eq_str.zig:15:23
-    test.ValidFailEqStr: tests/valid_fail_eq_str_test.zig:16:103
-    comptime: tests.zig:278:17
+    test.TypeTernary2ndFalsy: tests/type_ternary_2nd_falsy_test.zig:25:53
+    comptime: tests.zig:273:17
 formats/valid_fail_in_enum.zig:28:22: error: comparison of 'formats.valid_fail_in_enum.ValidFailInEnum.Animal' with null
         if (self.foo == null) {
             ~~~~~~~~~^~~~~~~
@@ -1429,47 +529,17 @@ formats/valid_fail_in_enum.zig:7:24: note: enum declared here
 referenced by:
     create: formats/valid_fail_in_enum.zig:20:23
     test.ValidFailInEnum: tests/valid_fail_in_enum_test.zig:16:106
-    comptime: tests.zig:280:17
-formats/valid_fail_range_str.zig:22:46: error: struct 'root.KaitaiStream' has no member named 'bytesToStr'
-        self.foo = kaitai_struct.KaitaiStream.bytesToStr(try self._io.readBytes(self._allocator(), 2), "ASCII");
-                   ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
-referenced by:
-    create: formats/valid_fail_range_str.zig:15:23
-    test.ValidFailRangeStr: tests/valid_fail_range_str_test.zig:16:112
-    comptime: tests.zig:287:17
-formats/valid_long.zig:34:53: error: struct 'root.KaitaiStream' has no member named 'bytesToStr'
-        self.magic_uint = kaitai_struct.KaitaiStream.bytesToStr(try self._io.readBytes(self._allocator(), 10), "UTF-8");
-                          ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
-referenced by:
-    create: formats/valid_long.zig:15:23
-    test.ValidLong: tests/valid_long_test.zig:16:46
-    comptime: tests.zig:294:17
-formats/valid_short.zig:34:53: error: struct 'root.KaitaiStream' has no member named 'bytesToStr'
-        self.magic_uint = kaitai_struct.KaitaiStream.bytesToStr(try self._io.readBytes(self._allocator(), 10), "UTF-8");
-                          ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
-referenced by:
-    create: formats/valid_short.zig:15:23
-    test.ValidShort: tests/valid_short_test.zig:16:48
-    comptime: tests.zig:297:17
+    comptime: tests.zig:284:17
 formats/vlq_base128_le.zig:57:87: error: expected type 'i32', found 'usize'
                 const _it = try Group.create(self._arena, self._io, self, self._root, i, (if (i != 0) (try self.groups.items[i - 1].intermValue()) else 0), (if (i != 0) (if (i == 9) 9223372036854775808 else self.groups.items[i - 1].multiplier * 128) else 1));
                                                                                       ^
 formats/vlq_base128_le.zig:57:87: note: signed 32-bit int cannot represent all possible unsigned 64-bit values
-formats/vlq_base128_le.zig:68:144: note: parameter type declared here
-        pub fn create(_arena: *std.heap.ArenaAllocator, _io: *kaitai_struct.KaitaiStream, _parent: ?*VlqBase128Le, _root: ?*VlqBase128Le, idx: i32, prev_interm_value: u64, multiplier: u64) !*Group {
-                                                                                                                                               ^~~
+formats/vlq_base128_le.zig:68:154: note: parameter type declared here
+        pub fn create(_arena: *_imp_std.heap.ArenaAllocator, _io: *_imp_kaitai_struct.KaitaiStream, _parent: ?*VlqBase128Le, _root: ?*VlqBase128Le, idx: i32, prev_interm_value: u64, multiplier: u64) !*Group {
+                                                                                                                                                         ^~~
 referenced by:
     create: formats/vlq_base128_le.zig:45:23
-    _read: formats/imports_abs.zig:23:58
+    _read: formats/imports_abs.zig:23:63
     create: formats/imports_abs.zig:16:23
     test.ImportsAbs: tests/imports_abs_test.zig:16:48
     comptime: tests.zig:111:17
@@ -1478,41 +548,23 @@ formats/yaml_ints.zig:28:14: error: type 'i32' cannot represent integer value '4
              ^~~~~~~~~~
 referenced by:
     test.YamlInts: tests/yaml_ints_test.zig:17:61
-    comptime: tests.zig:299:17
-formats/zlib_surrounded.zig:24:52: error: struct 'root.KaitaiStream' has no member named 'processZlib'
-        self._raw_zlib = kaitai_struct.KaitaiStream.processZlib(self._raw__raw_zlib);
-                         ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
-referenced by:
-    create: formats/zlib_surrounded.zig:15:23
-    test.ZlibSurrounded: tests/zlib_surrounded_test.zig:16:56
-    comptime: tests.zig:300:17
-formats/zlib_with_header_78.zig:23:47: error: struct 'root.KaitaiStream' has no member named 'processZlib'
-        self.data = kaitai_struct.KaitaiStream.processZlib(self._raw_data);
-                    ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~
-/runtime/zig/src/root.zig:8:26: note: struct declared here
-pub const KaitaiStream = struct {
-                         ^~~~~~
-referenced by:
-    create: formats/zlib_with_header_78.zig:15:23
-    test.ZlibWithHeader78: tests/zlib_with_header_78_test.zig:16:62
-    comptime: tests.zig:301:17
+    comptime: tests.zig:304:17
 tests/debug_switch_user_test.zig:18:84: error: expected type '*formats.debug_switch_user.DebugSwitchUser.One', found '?*anyopaque'
     try std.testing.expectEqual(-190, @as(*debug_switch_user.DebugSwitchUser.One, r.data).val);
                                                                                   ~^~~~~
 tests/debug_switch_user_test.zig:18:84: note: '?*anyopaque' could have null values which are illegal in type '*formats.debug_switch_user.DebugSwitchUser.One'
 referenced by:
     comptime: tests.zig:36:17
-tests/nav_parent_false_test.zig:19:80: error: expected type '[]const u8', found '?[]u8'
+tests/nav_parent_false_test.zig:19:80: error: expected type '[]const u8', found '?[]const u8'
     try std.testing.expectEqualSlices(u8, &[_]u8{ 49, 50, 51 }, r.element_a.foo.more);
                                                                 ~~~~~~~~~~~~~~~^~~~~
+tests/nav_parent_false_test.zig:19:80: note: cannot convert optional to payload type
+tests/nav_parent_false_test.zig:19:80: note: consider using '.?', 'orelse', or 'if'
 /usr/local/zig-x86_64-linux-0.15.2/lib/std/testing.zig:363:73: note: parameter type declared here
 pub fn expectEqualSlices(comptime T: type, expected: []const T, actual: []const T) !void {
                                                                         ^~~~~~~~~
 referenced by:
-    comptime: tests.zig:139:17
+    comptime: tests.zig:143:17
 tests/nav_parent_switch_test.zig:18:87: error: expected type '*formats.nav_parent_switch.NavParentSwitch.Element1', found '?*formats.nav_parent_switch.NavParentSwitch.Element1'
     try std.testing.expectEqual(66, @as(*nav_parent_switch.NavParentSwitch.Element1, r.content).foo);
                                                                                      ~^~~~~~~~
@@ -1520,7 +572,7 @@ tests/nav_parent_switch_test.zig:18:87: note: cannot convert optional to payload
 tests/nav_parent_switch_test.zig:18:87: note: consider using '.?', 'orelse', or 'if'
 tests/nav_parent_switch_test.zig:18:87: note: '?*formats.nav_parent_switch.NavParentSwitch.Element1' could have null values which are illegal in type '*formats.nav_parent_switch.NavParentSwitch.Element1'
 referenced by:
-    comptime: tests.zig:143:17
+    comptime: tests.zig:147:17
 tests/params_pass_struct_test.zig:19:91: error: expected type '*formats.params_pass_struct.ParamsPassStruct.Block', found '*anyopaque'
     try std.testing.expectEqual(255, @as(*params_pass_struct.ParamsPassStruct.Block, r.one.foo).foo);
                                                                                      ~~~~~^~~~
@@ -1529,13 +581,64 @@ formats/params_pass_struct.zig:25:23: note: struct declared here
     pub const Block = struct {
                       ^~~~~~
 referenced by:
-    comptime: tests.zig:167:17
-error: the following command failed with 145 compilation errors:
+    comptime: tests.zig:171:17
+tests/switch_bytearray_test.zig:19:121: error: expected type '*formats.switch_bytearray.SwitchBytearray.Opcode.Strval', found '?*anyopaque'
+    try std.testing.expectEqualStrings("foobar", @as(*switch_bytearray.SwitchBytearray.Opcode.Strval, r.opcodes.items[0].body).value);
+                                                                                                      ~~~~~~~~~~~~~~~~~~^~~~~
+tests/switch_bytearray_test.zig:19:121: note: '?*anyopaque' could have null values which are illegal in type '*formats.switch_bytearray.SwitchBytearray.Opcode.Strval'
+referenced by:
+    comptime: tests.zig:237:17
+tests/switch_manual_enum_test.zig:19:124: error: expected type '*formats.switch_manual_enum.SwitchManualEnum.Opcode.Strval', found '?*anyopaque'
+    try std.testing.expectEqualStrings("foobar", @as(*switch_manual_enum.SwitchManualEnum.Opcode.Strval, r.opcodes.items[0].body).value);
+                                                                                                         ~~~~~~~~~~~~~~~~~~^~~~~
+tests/switch_manual_enum_test.zig:19:124: note: '?*anyopaque' could have null values which are illegal in type '*formats.switch_manual_enum.SwitchManualEnum.Opcode.Strval'
+referenced by:
+    comptime: tests.zig:243:17
+tests/switch_manual_int_else_test.zig:19:128: error: expected type '*formats.switch_manual_int_else.SwitchManualIntElse.Opcode.Strval', found '*anyopaque'
+    try std.testing.expectEqualStrings("foo", @as(*switch_manual_int_else.SwitchManualIntElse.Opcode.Strval, r.opcodes.items[0].body).value);
+                                                                                                             ~~~~~~~~~~~~~~~~~~^~~~~
+tests/switch_manual_int_else_test.zig:19:128: note: pointer type child 'anyopaque' cannot cast into pointer type child 'formats.switch_manual_int_else.SwitchManualIntElse.Opcode.Strval'
+formats/switch_manual_int_else.zig:108:28: note: struct declared here
+        pub const Strval = struct {
+                           ^~~~~~
+referenced by:
+    comptime: tests.zig:244:17
+tests/switch_manual_int_size_else_test.zig:19:140: error: expected type '*formats.switch_manual_int_size_else.SwitchManualIntSizeElse.Chunk.ChunkMeta', found '*anyopaque'
+    try std.testing.expectEqualStrings("Stuff", @as(*switch_manual_int_size_else.SwitchManualIntSizeElse.Chunk.ChunkMeta, r.chunks.items[0].body).title);
+                                                                                                                          ~~~~~~~~~~~~~~~~~^~~~~
+tests/switch_manual_int_size_else_test.zig:19:140: note: pointer type child 'anyopaque' cannot cast into pointer type child 'formats.switch_manual_int_size_else.SwitchManualIntSizeElse.Chunk.ChunkMeta'
+formats/switch_manual_int_size_else.zig:101:31: note: struct declared here
+        pub const ChunkMeta = struct {
+                              ^~~~~~
+referenced by:
+    comptime: tests.zig:245:17
+tests/switch_manual_int_test.zig:19:122: error: expected type '*formats.switch_manual_int.SwitchManualInt.Opcode.Strval', found '?*anyopaque'
+    try std.testing.expectEqualStrings("foobar", @as(*switch_manual_int.SwitchManualInt.Opcode.Strval, r.opcodes.items[0].body).value);
+                                                                                                       ~~~~~~~~~~~~~~~~~~^~~~~
+tests/switch_manual_int_test.zig:19:122: note: '?*anyopaque' could have null values which are illegal in type '*formats.switch_manual_int.SwitchManualInt.Opcode.Strval'
+referenced by:
+    comptime: tests.zig:248:17
+tests/switch_manual_str_else_test.zig:19:128: error: expected type '*formats.switch_manual_str_else.SwitchManualStrElse.Opcode.Strval', found '*anyopaque'
+    try std.testing.expectEqualStrings("foo", @as(*switch_manual_str_else.SwitchManualStrElse.Opcode.Strval, r.opcodes.items[0].body).value);
+                                                                                                             ~~~~~~~~~~~~~~~~~~^~~~~
+tests/switch_manual_str_else_test.zig:19:128: note: pointer type child 'anyopaque' cannot cast into pointer type child 'formats.switch_manual_str_else.SwitchManualStrElse.Opcode.Strval'
+formats/switch_manual_str_else.zig:109:28: note: struct declared here
+        pub const Strval = struct {
+                           ^~~~~~
+referenced by:
+    comptime: tests.zig:249:17
+tests/switch_manual_str_test.zig:19:122: error: expected type '*formats.switch_manual_str.SwitchManualStr.Opcode.Strval', found '?*anyopaque'
+    try std.testing.expectEqualStrings("foobar", @as(*switch_manual_str.SwitchManualStr.Opcode.Strval, r.opcodes.items[0].body).value);
+                                                                                                       ~~~~~~~~~~~~~~~~~~^~~~~
+tests/switch_manual_str_test.zig:19:122: note: '?*anyopaque' could have null values which are illegal in type '*formats.switch_manual_str.SwitchManualStr.Opcode.Strval'
+referenced by:
+    comptime: tests.zig:250:17
+error: the following command failed with 66 compilation errors:
 /usr/local/zig-x86_64-linux-0.15.2/zig test -freference-trace=256 -ODebug --dep kaitai_struct -Mroot=/tests/spec/zig/tests.zig -Mkaitai_struct=/runtime/zig/src/root.zig --test-runner /tests/spec/zig/test_runner.zig --cache-dir .zig-cache --global-cache-dir /root/.cache/zig --name test --zig-lib-dir /usr/local/zig-x86_64-linux-0.15.2/lib/ --listen=-
 
 Build Summary: 0/2 steps succeeded; 1 failed
 test transitive failure
-+- compile test Debug native 145 errors
++- compile test Debug native 66 errors
 
 error: the following build command failed with exit code 1:
-.zig-cache/o/bb2be1d730b79250120f1950cdfc8757/build /usr/local/zig-x86_64-linux-0.15.2/zig /usr/local/zig-x86_64-linux-0.15.2/lib /tests/spec/zig .zig-cache /root/.cache/zig --seed 0xd0a87986 -Z4799e216bc4322a9 test --summary all -freference-trace -Dno-bin
+.zig-cache/o/bb0d238f5ef3f946fb71974f3563c77f/build /usr/local/zig-x86_64-linux-0.15.2/zig /usr/local/zig-x86_64-linux-0.15.2/lib /tests/spec/zig .zig-cache /root/.cache/zig --seed 0x568b101f -Zba904edf41429f7e test --summary all -freference-trace -Dno-bin

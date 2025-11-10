@@ -1,13 +1,13 @@
 {
   "$meta": {
     "lang": "zig",
-    "timestamp": "2025-10-18T02:08:11Z",
+    "timestamp": "2025-11-10T20:30:30Z",
     "ci": {
       "ci": "github",
-      "run_id": "18609165923",
-      "run_number": "363",
-      "job_id": "53064110706",
-      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/18609165923/job/53064110706"
+      "run_id": "19245171212",
+      "run_number": "364",
+      "job_id": "55017317070",
+      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/19245171212/job/55017317070"
     }
   },
   "BcdUserTypeBe": {
@@ -111,32 +111,32 @@
     "is_kst": true
   },
   "BytesEosPadTerm": {
-    "status": "format_build_failed",
+    "status": "passed",
     "elapsed": null,
     "is_kst": true
   },
   "BytesPadTerm": {
-    "status": "format_build_failed",
+    "status": "passed",
     "elapsed": null,
     "is_kst": true
   },
   "BytesPadTermEmpty": {
-    "status": "format_build_failed",
+    "status": "passed",
     "elapsed": null,
     "is_kst": true
   },
   "BytesPadTermEqual": {
-    "status": "format_build_failed",
+    "status": "passed",
     "elapsed": null,
     "is_kst": true
   },
   "BytesPadTermRoundtrip": {
-    "status": "format_build_failed",
+    "status": "passed",
     "elapsed": null,
     "is_kst": true
   },
   "BytesPadTermZeroSize": {
-    "status": "format_build_failed",
+    "status": "passed",
     "elapsed": null,
     "is_kst": true
   },
@@ -164,7 +164,7 @@
     "is_kst": true
   },
   "CombineBytes": {
-    "status": "format_build_failed",
+    "status": "passed",
     "elapsed": null,
     "is_kst": true
   },
@@ -174,7 +174,7 @@
     "is_kst": true
   },
   "CombineStr": {
-    "status": "format_build_failed",
+    "status": "passed",
     "elapsed": null,
     "is_kst": true
   },
@@ -185,7 +185,7 @@
       "file_name": null,
       "line_num": null,
       "message": "TestExpectedEqual: expected 80, found 170",
-      "trace": "/usr/local/zig-x86_64-linux-0.15.2/lib/std/testing.zig:110:17: 0x11e0e64 in expectEqualInner__anon_29727 (std.zig)\n                return error.TestExpectedEqual;\n                ^\n/tests/spec/zig/tests/debug_0_test.zig:17:5: 0x12040ca in test.Debug0 (tests.zig)\n    try std.testing.expectEqual(80, r.one);\n    ^"
+      "trace": "/usr/local/zig-x86_64-linux-0.15.2/lib/std/testing.zig:110:17: 0x11ff9c4 in expectEqualInner__anon_29808 (std.zig)\n                return error.TestExpectedEqual;\n                ^\n/tests/spec/zig/tests/debug_0_test.zig:17:5: 0x123d4ea in test.Debug0 (tests.zig)\n    try std.testing.expectEqual(80, r.one);\n    ^"
     },
     "is_kst": true
   },
@@ -211,7 +211,7 @@
       "file_name": null,
       "line_num": null,
       "message": "TestExpectedEqual: expected .enum_value_80, found @enumFromInt(-1431655766)",
-      "trace": "/usr/local/zig-x86_64-linux-0.15.2/lib/std/testing.zig:110:17: 0x1205854 in expectEqualInner__anon_30988 (std.zig)\n                return error.TestExpectedEqual;\n                ^\n/tests/spec/zig/tests/debug_enum_name_test.zig:17:5: 0x1205fe3 in test.DebugEnumName (tests.zig)\n    try std.testing.expectEqual(debug_enum_name.DebugEnumName.TestEnum1.enum_value_80, r.one);\n    ^"
+      "trace": "/usr/local/zig-x86_64-linux-0.15.2/lib/std/testing.zig:110:17: 0x123ec74 in expectEqualInner__anon_31796 (std.zig)\n                return error.TestExpectedEqual;\n                ^\n/tests/spec/zig/tests/debug_enum_name_test.zig:17:5: 0x123f403 in test.DebugEnumName (tests.zig)\n    try std.testing.expectEqual(debug_enum_name.DebugEnumName.TestEnum1.enum_value_80, r.one);\n    ^"
     },
     "is_kst": true
   },
@@ -296,9 +296,8 @@
     "is_kst": true
   },
   "EnumIf": {
-    "status": "format_build_failed",
-    "elapsed": null,
-    "is_kst": true
+    "status": "passed",
+    "elapsed": null
   },
   "EnumImportLiterals": {
     "status": "passed",
@@ -366,8 +365,8 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "TestExpectedError: expected error.EndOfStream, found .{ .pre_bits = 12297829382473034410, .fail_bits = 12297829382473034410, ._root = .{ .pre_bits = 12297829382473034410, .fail_bits = 12297829382473034410, ._root = .{ .pre_bits = 12297829382473034410, .fail_bits = 12297829382473034410, ._root = .{ ... }, ._parent = null, ._arena = .{ ... }, ._io = .{ ... } }, ._parent = null, ._arena = .{ .child_allocator = .{ ... }, .state = .{ ... } }, ._io = .{ .reader_impl = .{ ... }, .bits_left = 0, .bits = 0 } }, ._parent = null, ._arena = .{ .child_allocator = .{ .ptr = anyopaque@1436240, .vtable = .{ ... } }, .state = .{ .buffer_list = .{ ... }, .end_index = 48 } }, ._io = .{ .reader_impl = .{ .file = .{ ... } }, .bits_left = 0, .bits = 0 } }",
-      "trace": "/usr/local/zig-x86_64-linux-0.15.2/lib/std/testing.zig:57:9: 0x1263161 in expectError__anon_36096 (std.zig)\n        return error.TestExpectedError;\n        ^\n/tests/spec/zig/tests/eof_exception_bits_be_test.zig:16:5: 0x1263615 in test.EofExceptionBitsBe (tests.zig)\n    try std.testing.expectError(error.EndOfStream, eof_exception_bits_be.EofExceptionBitsBe.create(&arena, &_io, null, null));\n    ^"
+      "message": "TestExpectedError: expected error.EndOfStream, found .{ .pre_bits = 12297829382473034410, .fail_bits = 12297829382473034410, ._root = .{ .pre_bits = 12297829382473034410, .fail_bits = 12297829382473034410, ._root = .{ .pre_bits = 12297829382473034410, .fail_bits = 12297829382473034410, ._root = .{ ... }, ._parent = null, ._arena = .{ ... }, ._io = .{ ... } }, ._parent = null, ._arena = .{ .child_allocator = .{ ... }, .state = .{ ... } }, ._io = .{ .reader_impl = .{ ... }, .bits_left = 0, .bits = 0 } }, ._parent = null, ._arena = .{ .child_allocator = .{ .ptr = anyopaque@154a240, .vtable = .{ ... } }, .state = .{ .buffer_list = .{ ... }, .end_index = 48 } }, ._io = .{ .reader_impl = .{ .file = .{ ... } }, .bits_left = 0, .bits = 0 } }",
+      "trace": "/usr/local/zig-x86_64-linux-0.15.2/lib/std/testing.zig:57:9: 0x12a1171 in expectError__anon_37125 (std.zig)\n        return error.TestExpectedError;\n        ^\n/tests/spec/zig/tests/eof_exception_bits_be_test.zig:16:5: 0x12a1625 in test.EofExceptionBitsBe (tests.zig)\n    try std.testing.expectError(error.EndOfStream, eof_exception_bits_be.EofExceptionBitsBe.create(&arena, &_io, null, null));\n    ^"
     },
     "is_kst": true
   },
@@ -377,8 +376,8 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "TestExpectedError: expected error.EndOfStream, found .{ .pre_bits = 12297829382473034410, .fail_bits = 12297829382473034410, ._root = .{ .pre_bits = 12297829382473034410, .fail_bits = 12297829382473034410, ._root = .{ .pre_bits = 12297829382473034410, .fail_bits = 12297829382473034410, ._root = .{ ... }, ._parent = null, ._arena = .{ ... }, ._io = .{ ... } }, ._parent = null, ._arena = .{ .child_allocator = .{ ... }, .state = .{ ... } }, ._io = .{ .reader_impl = .{ ... }, .bits_left = 0, .bits = 0 } }, ._parent = null, ._arena = .{ .child_allocator = .{ .ptr = anyopaque@1436240, .vtable = .{ ... } }, .state = .{ .buffer_list = .{ ... }, .end_index = 48 } }, ._io = .{ .reader_impl = .{ .file = .{ ... } }, .bits_left = 0, .bits = 0 } }",
-      "trace": "/usr/local/zig-x86_64-linux-0.15.2/lib/std/testing.zig:57:9: 0x125ef91 in expectError__anon_35993 (std.zig)\n        return error.TestExpectedError;\n        ^\n/tests/spec/zig/tests/eof_exception_bits_be2_test.zig:16:5: 0x125f445 in test.EofExceptionBitsBe2 (tests.zig)\n    try std.testing.expectError(error.EndOfStream, eof_exception_bits_be2.EofExceptionBitsBe2.create(&arena, &_io, null, null));\n    ^"
+      "message": "TestExpectedError: expected error.EndOfStream, found .{ .pre_bits = 12297829382473034410, .fail_bits = 12297829382473034410, ._root = .{ .pre_bits = 12297829382473034410, .fail_bits = 12297829382473034410, ._root = .{ .pre_bits = 12297829382473034410, .fail_bits = 12297829382473034410, ._root = .{ ... }, ._parent = null, ._arena = .{ ... }, ._io = .{ ... } }, ._parent = null, ._arena = .{ .child_allocator = .{ ... }, .state = .{ ... } }, ._io = .{ .reader_impl = .{ ... }, .bits_left = 0, .bits = 0 } }, ._parent = null, ._arena = .{ .child_allocator = .{ .ptr = anyopaque@154a240, .vtable = .{ ... } }, .state = .{ .buffer_list = .{ ... }, .end_index = 48 } }, ._io = .{ .reader_impl = .{ .file = .{ ... } }, .bits_left = 0, .bits = 0 } }",
+      "trace": "/usr/local/zig-x86_64-linux-0.15.2/lib/std/testing.zig:57:9: 0x129cfa1 in expectError__anon_37022 (std.zig)\n        return error.TestExpectedError;\n        ^\n/tests/spec/zig/tests/eof_exception_bits_be2_test.zig:16:5: 0x129d455 in test.EofExceptionBitsBe2 (tests.zig)\n    try std.testing.expectError(error.EndOfStream, eof_exception_bits_be2.EofExceptionBitsBe2.create(&arena, &_io, null, null));\n    ^"
     },
     "is_kst": true
   },
@@ -388,8 +387,8 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "TestExpectedError: expected error.EndOfStream, found .{ .pre_bits = 12297829382473034410, .fail_bits = 12297829382473034410, ._root = .{ .pre_bits = 12297829382473034410, .fail_bits = 12297829382473034410, ._root = .{ .pre_bits = 12297829382473034410, .fail_bits = 12297829382473034410, ._root = .{ ... }, ._parent = null, ._arena = .{ ... }, ._io = .{ ... } }, ._parent = null, ._arena = .{ .child_allocator = .{ ... }, .state = .{ ... } }, ._io = .{ .reader_impl = .{ ... }, .bits_left = 0, .bits = 0 } }, ._parent = null, ._arena = .{ .child_allocator = .{ .ptr = anyopaque@1436240, .vtable = .{ ... } }, .state = .{ .buffer_list = .{ ... }, .end_index = 48 } }, ._io = .{ .reader_impl = .{ .file = .{ ... } }, .bits_left = 0, .bits = 0 } }",
-      "trace": "/usr/local/zig-x86_64-linux-0.15.2/lib/std/testing.zig:57:9: 0x126b501 in expectError__anon_36248 (std.zig)\n        return error.TestExpectedError;\n        ^\n/tests/spec/zig/tests/eof_exception_bits_le_test.zig:16:5: 0x126b9b5 in test.EofExceptionBitsLe (tests.zig)\n    try std.testing.expectError(error.EndOfStream, eof_exception_bits_le.EofExceptionBitsLe.create(&arena, &_io, null, null));\n    ^"
+      "message": "TestExpectedError: expected error.EndOfStream, found .{ .pre_bits = 12297829382473034410, .fail_bits = 12297829382473034410, ._root = .{ .pre_bits = 12297829382473034410, .fail_bits = 12297829382473034410, ._root = .{ .pre_bits = 12297829382473034410, .fail_bits = 12297829382473034410, ._root = .{ ... }, ._parent = null, ._arena = .{ ... }, ._io = .{ ... } }, ._parent = null, ._arena = .{ .child_allocator = .{ ... }, .state = .{ ... } }, ._io = .{ .reader_impl = .{ ... }, .bits_left = 0, .bits = 0 } }, ._parent = null, ._arena = .{ .child_allocator = .{ .ptr = anyopaque@154a240, .vtable = .{ ... } }, .state = .{ .buffer_list = .{ ... }, .end_index = 48 } }, ._io = .{ .reader_impl = .{ .file = .{ ... } }, .bits_left = 0, .bits = 0 } }",
+      "trace": "/usr/local/zig-x86_64-linux-0.15.2/lib/std/testing.zig:57:9: 0x12a9511 in expectError__anon_37277 (std.zig)\n        return error.TestExpectedError;\n        ^\n/tests/spec/zig/tests/eof_exception_bits_le_test.zig:16:5: 0x12a99c5 in test.EofExceptionBitsLe (tests.zig)\n    try std.testing.expectError(error.EndOfStream, eof_exception_bits_le.EofExceptionBitsLe.create(&arena, &_io, null, null));\n    ^"
     },
     "is_kst": true
   },
@@ -399,8 +398,8 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "TestExpectedError: expected error.EndOfStream, found .{ .pre_bits = 12297829382473034410, .fail_bits = 12297829382473034410, ._root = .{ .pre_bits = 12297829382473034410, .fail_bits = 12297829382473034410, ._root = .{ .pre_bits = 12297829382473034410, .fail_bits = 12297829382473034410, ._root = .{ ... }, ._parent = null, ._arena = .{ ... }, ._io = .{ ... } }, ._parent = null, ._arena = .{ .child_allocator = .{ ... }, .state = .{ ... } }, ._io = .{ .reader_impl = .{ ... }, .bits_left = 0, .bits = 0 } }, ._parent = null, ._arena = .{ .child_allocator = .{ .ptr = anyopaque@1436240, .vtable = .{ ... } }, .state = .{ .buffer_list = .{ ... }, .end_index = 48 } }, ._io = .{ .reader_impl = .{ .file = .{ ... } }, .bits_left = 0, .bits = 0 } }",
-      "trace": "/usr/local/zig-x86_64-linux-0.15.2/lib/std/testing.zig:57:9: 0x1267331 in expectError__anon_36172 (std.zig)\n        return error.TestExpectedError;\n        ^\n/tests/spec/zig/tests/eof_exception_bits_le2_test.zig:16:5: 0x12677e5 in test.EofExceptionBitsLe2 (tests.zig)\n    try std.testing.expectError(error.EndOfStream, eof_exception_bits_le2.EofExceptionBitsLe2.create(&arena, &_io, null, null));\n    ^"
+      "message": "TestExpectedError: expected error.EndOfStream, found .{ .pre_bits = 12297829382473034410, .fail_bits = 12297829382473034410, ._root = .{ .pre_bits = 12297829382473034410, .fail_bits = 12297829382473034410, ._root = .{ .pre_bits = 12297829382473034410, .fail_bits = 12297829382473034410, ._root = .{ ... }, ._parent = null, ._arena = .{ ... }, ._io = .{ ... } }, ._parent = null, ._arena = .{ .child_allocator = .{ ... }, .state = .{ ... } }, ._io = .{ .reader_impl = .{ ... }, .bits_left = 0, .bits = 0 } }, ._parent = null, ._arena = .{ .child_allocator = .{ .ptr = anyopaque@154a240, .vtable = .{ ... } }, .state = .{ .buffer_list = .{ ... }, .end_index = 48 } }, ._io = .{ .reader_impl = .{ .file = .{ ... } }, .bits_left = 0, .bits = 0 } }",
+      "trace": "/usr/local/zig-x86_64-linux-0.15.2/lib/std/testing.zig:57:9: 0x12a5341 in expectError__anon_37201 (std.zig)\n        return error.TestExpectedError;\n        ^\n/tests/spec/zig/tests/eof_exception_bits_le2_test.zig:16:5: 0x12a57f5 in test.EofExceptionBitsLe2 (tests.zig)\n    try std.testing.expectError(error.EndOfStream, eof_exception_bits_le2.EofExceptionBitsLe2.create(&arena, &_io, null, null));\n    ^"
     },
     "is_kst": true
   },
@@ -450,7 +449,7 @@
     "is_kst": true
   },
   "Expr3": {
-    "status": "format_build_failed",
+    "status": "passed",
     "elapsed": null,
     "is_kst": true
   },
@@ -465,12 +464,12 @@
     "is_kst": true
   },
   "ExprBytesCmp": {
-    "status": "format_build_failed",
+    "status": "passed",
     "elapsed": null,
     "is_kst": true
   },
   "ExprBytesNonLiteral": {
-    "status": "format_build_failed",
+    "status": "passed",
     "elapsed": null,
     "is_kst": true
   },
@@ -490,7 +489,7 @@
     "is_kst": true
   },
   "ExprFstring0": {
-    "status": "format_build_failed",
+    "status": "passed",
     "elapsed": null,
     "is_kst": true
   },
@@ -520,7 +519,7 @@
     "is_kst": true
   },
   "ExprIoPos": {
-    "status": "format_build_failed",
+    "status": "passed",
     "elapsed": null,
     "is_kst": true
   },
@@ -610,12 +609,11 @@
     "is_kst": true
   },
   "IfStruct": {
-    "status": "format_build_failed",
-    "elapsed": null,
-    "is_kst": true
+    "status": "passed",
+    "elapsed": null
   },
   "IfValues": {
-    "status": "format_build_failed",
+    "status": "passed",
     "elapsed": null,
     "is_kst": true
   },
@@ -679,7 +677,7 @@
     "is_kst": true
   },
   "IndexSizes": {
-    "status": "format_build_failed",
+    "status": "passed",
     "elapsed": null,
     "is_kst": true
   },
@@ -714,7 +712,7 @@
     "is_kst": true
   },
   "InstanceIoUser": {
-    "status": "format_build_failed",
+    "status": "passed",
     "elapsed": null,
     "is_kst": true
   },
@@ -724,19 +722,18 @@
     "is_kst": true
   },
   "InstanceStd": {
-    "status": "format_build_failed",
+    "status": "passed",
     "elapsed": null,
     "is_kst": true
   },
   "InstanceStdArray": {
-    "status": "format_build_failed",
+    "status": "passed",
     "elapsed": null,
     "is_kst": true
   },
   "InstanceUserArray": {
-    "status": "format_build_failed",
-    "elapsed": null,
-    "is_kst": true
+    "status": "passed",
+    "elapsed": null
   },
   "Integers": {
     "status": "passed",
@@ -778,20 +775,23 @@
     "elapsed": null,
     "is_kst": true
   },
+  "NameClashImportVsInst": {
+    "status": "passed",
+    "elapsed": null,
+    "is_kst": true
+  },
   "NavParent": {
-    "status": "format_build_failed",
+    "status": "passed",
     "elapsed": null,
     "is_kst": true
   },
   "NavParent2": {
-    "status": "format_build_failed",
-    "elapsed": null,
-    "is_kst": true
+    "status": "passed",
+    "elapsed": null
   },
   "NavParent3": {
-    "status": "format_build_failed",
-    "elapsed": null,
-    "is_kst": true
+    "status": "passed",
+    "elapsed": null
   },
   "NavParentFalse": {
     "status": "spec_build_failed",
@@ -824,12 +824,12 @@
     "is_kst": true
   },
   "NavParentVsValueInst": {
-    "status": "format_build_failed",
+    "status": "passed",
     "elapsed": null,
     "is_kst": true
   },
   "NavRoot": {
-    "status": "format_build_failed",
+    "status": "passed",
     "elapsed": null,
     "is_kst": true
   },
@@ -849,7 +849,7 @@
     "is_kst": true
   },
   "NestedTypeParam": {
-    "status": "format_build_failed",
+    "status": "passed",
     "elapsed": null,
     "is_kst": true
   },
@@ -884,12 +884,12 @@
     "is_kst": true
   },
   "ParamsCall": {
-    "status": "format_build_failed",
+    "status": "passed",
     "elapsed": null,
     "is_kst": true
   },
   "ParamsCallExtraParens": {
-    "status": "format_build_failed",
+    "status": "passed",
     "elapsed": null,
     "is_kst": true
   },
@@ -944,7 +944,7 @@
     "is_kst": true
   },
   "PositionAbs": {
-    "status": "format_build_failed",
+    "status": "passed",
     "elapsed": null,
     "is_kst": true
   },
@@ -959,7 +959,7 @@
     "is_kst": true
   },
   "ProcessBytesPadTerm": {
-    "status": "format_build_failed",
+    "status": "passed",
     "elapsed": null,
     "is_kst": true
   },
@@ -994,12 +994,12 @@
     "is_kst": true
   },
   "ProcessRepeatBytes": {
-    "status": "format_build_failed",
+    "status": "passed",
     "elapsed": null,
     "is_kst": true
   },
   "ProcessRepeatUsertype": {
-    "status": "format_build_failed",
+    "status": "passed",
     "elapsed": null,
     "is_kst": true
   },
@@ -1019,12 +1019,12 @@
     "is_kst": true
   },
   "ProcessRotate": {
-    "status": "format_build_failed",
+    "status": "passed",
     "elapsed": null,
     "is_kst": true
   },
   "ProcessStructPadTerm": {
-    "status": "format_build_failed",
+    "status": "passed",
     "elapsed": null,
     "is_kst": true
   },
@@ -1034,27 +1034,27 @@
     "is_kst": true
   },
   "ProcessToUser": {
-    "status": "format_build_failed",
+    "status": "passed",
     "elapsed": null,
     "is_kst": true
   },
   "ProcessXor4Const": {
-    "status": "format_build_failed",
+    "status": "passed",
     "elapsed": null,
     "is_kst": true
   },
   "ProcessXor4Value": {
-    "status": "format_build_failed",
+    "status": "passed",
     "elapsed": null,
     "is_kst": true
   },
   "ProcessXorConst": {
-    "status": "format_build_failed",
+    "status": "passed",
     "elapsed": null,
     "is_kst": true
   },
   "ProcessXorValue": {
-    "status": "format_build_failed",
+    "status": "passed",
     "elapsed": null,
     "is_kst": true
   },
@@ -1074,12 +1074,12 @@
     "is_kst": true
   },
   "RepeatEosBytesPad": {
-    "status": "format_build_failed",
+    "status": "passed",
     "elapsed": null,
     "is_kst": true
   },
   "RepeatEosBytesPadTerm": {
-    "status": "format_build_failed",
+    "status": "passed",
     "elapsed": null,
     "is_kst": true
   },
@@ -1109,12 +1109,12 @@
     "is_kst": true
   },
   "RepeatNBytesPad": {
-    "status": "format_build_failed",
+    "status": "passed",
     "elapsed": null,
     "is_kst": true
   },
   "RepeatNBytesPadTerm": {
-    "status": "format_build_failed",
+    "status": "passed",
     "elapsed": null,
     "is_kst": true
   },
@@ -1124,14 +1124,12 @@
     "is_kst": true
   },
   "RepeatNStrz": {
-    "status": "format_build_failed",
-    "elapsed": null,
-    "is_kst": true
+    "status": "passed",
+    "elapsed": null
   },
   "RepeatNStrzDouble": {
-    "status": "format_build_failed",
-    "elapsed": null,
-    "is_kst": true
+    "status": "passed",
+    "elapsed": null
   },
   "RepeatNTermBytes": {
     "status": "passed",
@@ -1149,12 +1147,12 @@
     "is_kst": true
   },
   "RepeatUntilBytesPad": {
-    "status": "format_build_failed",
+    "status": "passed",
     "elapsed": null,
     "is_kst": true
   },
   "RepeatUntilBytesPadTerm": {
-    "status": "format_build_failed",
+    "status": "passed",
     "elapsed": null,
     "is_kst": true
   },
@@ -1169,7 +1167,7 @@
     "is_kst": true
   },
   "RepeatUntilS4": {
-    "status": "format_build_failed",
+    "status": "passed",
     "elapsed": null,
     "is_kst": true
   },
@@ -1209,82 +1207,82 @@
     "is_kst": true
   },
   "StrEncodingsUtf16": {
-    "status": "format_build_failed",
+    "status": "passed",
     "elapsed": null,
     "is_kst": true
   },
   "StrEos": {
-    "status": "format_build_failed",
+    "status": "passed",
     "elapsed": null,
     "is_kst": true
   },
   "StrEosPadTerm": {
-    "status": "format_build_failed",
+    "status": "passed",
     "elapsed": null,
     "is_kst": true
   },
   "StrEosPadTermEmpty": {
-    "status": "format_build_failed",
+    "status": "passed",
     "elapsed": null,
     "is_kst": true
   },
   "StrEosPadTermEqual": {
-    "status": "format_build_failed",
+    "status": "passed",
     "elapsed": null,
     "is_kst": true
   },
   "StrLiterals2": {
-    "status": "format_build_failed",
+    "status": "passed",
     "elapsed": null,
     "is_kst": true
   },
   "StrLiteralsLatin1": {
-    "status": "format_build_failed",
+    "status": "passed",
     "elapsed": null,
     "is_kst": true
   },
   "StrPadTerm": {
-    "status": "format_build_failed",
+    "status": "passed",
     "elapsed": null,
     "is_kst": true
   },
   "StrPadTermEmpty": {
-    "status": "format_build_failed",
+    "status": "passed",
     "elapsed": null,
     "is_kst": true
   },
   "StrPadTermEqual": {
-    "status": "format_build_failed",
+    "status": "passed",
     "elapsed": null,
     "is_kst": true
   },
   "StrPadTermRoundtrip": {
-    "status": "format_build_failed",
+    "status": "passed",
     "elapsed": null,
     "is_kst": true
   },
   "StrPadTermUtf16": {
-    "status": "format_build_failed",
+    "status": "passed",
     "elapsed": null,
     "is_kst": true
   },
   "StrPadTermZeroSize": {
-    "status": "format_build_failed",
+    "status": "passed",
     "elapsed": null,
     "is_kst": true
   },
   "StructPadTerm": {
-    "status": "format_build_failed",
+    "status": "passed",
     "elapsed": null,
     "is_kst": true
   },
   "StructPadTermEqual": {
-    "status": "format_build_failed",
+    "status": "passed",
     "elapsed": null,
     "is_kst": true
   },
   "SwitchBytearray": {
-    "status": "format_build_failed",
+    "status": "spec_build_failed",
     "elapsed": null,
     "is_kst": true
   },
@@ -1304,27 +1302,27 @@
     "is_kst": true
   },
   "SwitchManualEnum": {
-    "status": "format_build_failed",
+    "status": "spec_build_failed",
     "elapsed": null,
     "is_kst": true
   },
   "SwitchManualEnumInvalid": {
-    "status": "format_build_failed",
+    "status": "spec_build_failed",
     "elapsed": null,
     "is_kst": true
   },
   "SwitchManualEnumInvalidElse": {
-    "status": "format_build_failed",
+    "status": "spec_build_failed",
     "elapsed": null,
     "is_kst": true
   },
   "SwitchManualInt": {
-    "status": "format_build_failed",
+    "status": "spec_build_failed",
     "elapsed": null,
     "is_kst": true
   },
   "SwitchManualIntElse": {
-    "status": "format_build_failed",
+    "status": "spec_build_failed",
     "elapsed": null,
     "is_kst": true
   },
@@ -1334,7 +1332,7 @@
     "is_kst": true
   },
   "SwitchManualIntSizeElse": {
-    "status": "format_build_failed",
+    "status": "spec_build_failed",
     "elapsed": null,
     "is_kst": true
   },
@@ -1344,12 +1342,12 @@
     "is_kst": true
   },
   "SwitchManualStr": {
-    "status": "format_build_failed",
+    "status": "spec_build_failed",
     "elapsed": null,
     "is_kst": true
   },
   "SwitchManualStrElse": {
-    "status": "format_build_failed",
+    "status": "spec_build_failed",
     "elapsed": null,
     "is_kst": true
   },
@@ -1409,47 +1407,47 @@
     "is_kst": true
   },
   "TermStrz": {
-    "status": "format_build_failed",
+    "status": "passed",
     "elapsed": null,
     "is_kst": true
   },
   "TermStrz2": {
-    "status": "format_build_failed",
+    "status": "passed",
     "elapsed": null,
     "is_kst": true
   },
   "TermStrz3": {
-    "status": "format_build_failed",
+    "status": "passed",
     "elapsed": null,
     "is_kst": true
   },
   "TermStrz4": {
-    "status": "format_build_failed",
+    "status": "passed",
     "elapsed": null,
     "is_kst": true
   },
   "TermStrzUtf16V1": {
-    "status": "format_build_failed",
+    "status": "passed",
     "elapsed": null,
     "is_kst": true
   },
   "TermStrzUtf16V2": {
-    "status": "format_build_failed",
+    "status": "passed",
     "elapsed": null,
     "is_kst": true
   },
   "TermStrzUtf16V3": {
-    "status": "format_build_failed",
+    "status": "passed",
     "elapsed": null,
     "is_kst": true
   },
   "TermStrzUtf16V4": {
-    "status": "format_build_failed",
+    "status": "passed",
     "elapsed": null,
     "is_kst": true
   },
   "TermU1Val": {
-    "status": "format_build_failed",
+    "status": "passed",
     "elapsed": null,
     "is_kst": true
   },
@@ -1494,7 +1492,7 @@
     "is_kst": true
   },
   "ValidFailContentsInst": {
-    "status": "format_build_failed",
+    "status": "passed",
     "elapsed": null,
     "is_kst": true
   },
@@ -1509,7 +1507,7 @@
     "is_kst": true
   },
   "ValidFailEqStr": {
-    "status": "format_build_failed",
+    "status": "passed",
     "elapsed": null,
     "is_kst": true
   },
@@ -1554,7 +1552,7 @@
     "is_kst": true
   },
   "ValidFailRangeStr": {
-    "status": "format_build_failed",
+    "status": "passed",
     "elapsed": null,
     "is_kst": true
   },
@@ -1579,7 +1577,7 @@
     "is_kst": true
   },
   "ValidFailRepeatInst": {
-    "status": "format_build_failed",
+    "status": "passed",
     "elapsed": null,
     "is_kst": true
   },
@@ -1594,7 +1592,7 @@
     "is_kst": true
   },
   "ValidLong": {
-    "status": "format_build_failed",
+    "status": "passed",
     "elapsed": null,
     "is_kst": true
   },
@@ -1609,7 +1607,7 @@
     "is_kst": true
   },
   "ValidShort": {
-    "status": "format_build_failed",
+    "status": "passed",
     "elapsed": null,
     "is_kst": true
   },
@@ -1628,12 +1626,12 @@
     "is_kst": true
   },
   "ZlibSurrounded": {
-    "status": "format_build_failed",
+    "status": "passed",
     "elapsed": null,
     "is_kst": true
   },
   "ZlibWithHeader78": {
-    "status": "format_build_failed",
+    "status": "passed",
     "elapsed": null,
     "is_kst": true
   }

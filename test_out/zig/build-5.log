@@ -4,18 +4,22 @@ test
         @compileError("unsupported encoding '" ++ encoding ++ "'");
         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 referenced by:
-    _read: formats/str_encodings.zig:27:68
-    create: formats/str_encodings.zig:15:23
-    test.StrEncodings: tests/str_encodings_test.zig:16:52
-    comptime: tests.zig:175:17
+    _read: formats/str_encodings_default.zig:45:72
+    create: formats/str_encodings_default.zig:35:27
+    _read: formats/str_encodings_default.zig:24:39
+    create: formats/str_encodings_default.zig:15:23
+    test.StrEncodingsDefault: tests/str_encodings_default_test.zig:16:67
+    comptime: tests.zig:172:17
 /runtime/zig/src/root.zig:478:9: error: unsupported encoding 'IBM437'
         @compileError("unsupported encoding '" ++ encoding ++ "'");
         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 referenced by:
-    _read: formats/str_encodings.zig:29:68
-    create: formats/str_encodings.zig:15:23
-    test.StrEncodings: tests/str_encodings_test.zig:16:52
-    comptime: tests.zig:175:17
+    _read: formats/str_encodings_default.zig:47:72
+    create: formats/str_encodings_default.zig:35:27
+    _read: formats/str_encodings_default.zig:24:39
+    create: formats/str_encodings_default.zig:15:23
+    test.StrEncodingsDefault: tests/str_encodings_default_test.zig:16:67
+    comptime: tests.zig:172:17
 error: the following command failed with 2 compilation errors:
 /usr/local/zig-x86_64-linux-0.15.2/zig test -freference-trace=256 -ODebug --dep kaitai_struct -Mroot=/tests/spec/zig/tests.zig -Mkaitai_struct=/runtime/zig/src/root.zig --test-runner /tests/spec/zig/test_runner.zig --cache-dir .zig-cache --global-cache-dir /root/.cache/zig --name test --zig-lib-dir /usr/local/zig-x86_64-linux-0.15.2/lib/ --listen=-
 
@@ -24,4 +28,4 @@ test transitive failure
 +- compile test Debug native 2 errors
 
 error: the following build command failed with exit code 1:
-.zig-cache/o/bb0d238f5ef3f946fb71974f3563c77f/build /usr/local/zig-x86_64-linux-0.15.2/zig /usr/local/zig-x86_64-linux-0.15.2/lib /tests/spec/zig .zig-cache /root/.cache/zig --seed 0xf6d433a1 -Z9323efd8cf93bca6 test --summary all -freference-trace -Dno-bin
+.zig-cache/o/bb0d238f5ef3f946fb71974f3563c77f/build /usr/local/zig-x86_64-linux-0.15.2/zig /usr/local/zig-x86_64-linux-0.15.2/lib /tests/spec/zig .zig-cache /root/.cache/zig --seed 0x334d9983 -Zd47b114692662c90 test --summary all -freference-trace -Dno-bin
