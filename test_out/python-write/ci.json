@@ -1,13 +1,13 @@
 {
   "$meta": {
     "lang": "python-write",
-    "timestamp": "2025-11-10T20:28:35Z",
+    "timestamp": "2025-11-19T14:45:22Z",
     "ci": {
       "ci": "github",
-      "run_id": "19245171212",
-      "run_number": "364",
-      "job_id": "55017317026",
-      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/19245171212/job/55017317026"
+      "run_id": "19505296824",
+      "run_number": "365",
+      "job_id": "55829756051",
+      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/19505296824/job/55829756051"
     }
   },
   "BcdUserTypeBe.ReadWriteRoundtrip": {
@@ -1077,8 +1077,8 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "{'_pa[123 chars] '00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f 10 11 12 13'} != {'_pa[123 chars] '00 01 02 03 04 05 06 07 00 00 0a 0b 0c 0d 0e 0f 10 11 12 13'}\n  {'_parent': None,\n   '_root': {'$ref': '/'},\n   'followup': 20,\n   'mess_up': {'_parent': {'$ref': '/'}, '_root': {'$ref': '/'}},\n-  'skip': '00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f 10 11 12 13'}\n?                                    -- ^\n\n+  'skip': '00 01 02 03 04 05 06 07 00 00 0a 0b 0c 0d 0e 0f 10 11 12 13'}\n?                                     ^^^\n",
-      "trace": "Traceback (most recent call last):\n  File \"/tests/spec/python/specwrite/common_spec.py\", line 36, in test_read_write_roundtrip\n    self.assertEqual(orig_dump, new_dump)\nAssertionError: {'_pa[123 chars] '00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f 10 11 12 13'} != {'_pa[123 chars] '00 01 02 03 04 05 06 07 00 00 0a 0b 0c 0d 0e 0f 10 11 12 13'}\n  {'_parent': None,\n   '_root': {'$ref': '/'},\n   'followup': 20,\n   'mess_up': {'_parent': {'$ref': '/'}, '_root': {'$ref': '/'}},\n-  'skip': '00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f 10 11 12 13'}\n?                                    -- ^\n\n+  'skip': '00 01 02 03 04 05 06 07 00 00 0a 0b 0c 0d 0e 0f 10 11 12 13'}\n?                                     ^^^"
+      "message": "{'_pa[42 chars] 07 08 09 0a 0b 0c 0d 0e 0f 10 11 12 13', 'fol[93 chars]/'}}} != {'_pa[42 chars] 07 00 00 0a 0b 0c 0d 0e 0f 10 11 12 13', 'fol[93 chars]/'}}}\n  {'_parent': None,\n   '_root': {'$ref': '/'},\n   'followup': 20,\n   'mess_up': {'_parent': {'$ref': '/'}, '_root': {'$ref': '/'}},\n-  'skip': '00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f 10 11 12 13'}\n?                                    -- ^\n\n+  'skip': '00 01 02 03 04 05 06 07 00 00 0a 0b 0c 0d 0e 0f 10 11 12 13'}\n?                                     ^^^\n",
+      "trace": "Traceback (most recent call last):\n  File \"/tests/spec/python/specwrite/common_spec.py\", line 36, in test_read_write_roundtrip\n    self.assertEqual(orig_dump, new_dump)\nAssertionError: {'_pa[42 chars] 07 08 09 0a 0b 0c 0d 0e 0f 10 11 12 13', 'fol[93 chars]/'}}} != {'_pa[42 chars] 07 00 00 0a 0b 0c 0d 0e 0f 10 11 12 13', 'fol[93 chars]/'}}}\n  {'_parent': None,\n   '_root': {'$ref': '/'},\n   'followup': 20,\n   'mess_up': {'_parent': {'$ref': '/'}, '_root': {'$ref': '/'}},\n-  'skip': '00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f 10 11 12 13'}\n?                                    -- ^\n\n+  'skip': '00 01 02 03 04 05 06 07 00 00 0a 0b 0c 0d 0e 0f 10 11 12 13'}\n?                                     ^^^"
     },
     "is_kst": true
   },
