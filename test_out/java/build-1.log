@@ -1,12 +1,19 @@
-compiled/java/src/io/kaitai/struct/testformats/ExprBits.java:56: error: selector type long is not allowed
+compiled/java/src/io/kaitai/struct/testformats/ExprBits.java:56: error: primitive patterns are a preview feature and are disabled by default.
         switch (a()) {
                ^
-compiled/java/src/io/kaitai/struct/testformats/ExprBits.java:68: error: selector type long is not allowed
-        switch (a()) {
-               ^
-compiled/java/src/io/kaitai/struct/testformats/ExprBits.java:99: error: selector type long is not allowed
-            switch (_parent().a()) {
-                   ^
+  (use --enable-preview to enable primitive patterns)
+compiled/java/src/io/kaitai/struct/testformats/ExprBits.java:57: error: constant label of type int is not compatible with switch selector type long
+        case 2: {
+             ^
+compiled/java/src/io/kaitai/struct/testformats/ExprBits.java:69: error: constant label of type int is not compatible with switch selector type long
+        case 2: {
+             ^
+compiled/java/src/io/kaitai/struct/testformats/ExprBits.java:100: error: constant label of type int is not compatible with switch selector type long
+            case 1: {
+                 ^
+compiled/java/src/io/kaitai/struct/testformats/ExprBits.java:104: error: constant label of type int is not compatible with switch selector type long
+            case 2: {
+                 ^
 compiled/java/src/io/kaitai/struct/testformats/ExprBytesNonLiteral.java:39: error: incompatible types: possible lossy conversion from int to byte
         this.calcBytes = new byte[] { one(), two() };
                                          ^
@@ -19,4 +26,4 @@ compiled/java/src/io/kaitai/struct/testformats/ExprIfIntEq.java:62: error: incom
 compiled/java/src/io/kaitai/struct/testformats/ExprIfIntEq.java:82: error: incomparable types: Integer and Short
         this.calcIfEqSeqIf = calcIf() == seqIf();
                                       ^
-7 errors
+9 errors
