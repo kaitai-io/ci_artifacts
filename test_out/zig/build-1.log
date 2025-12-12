@@ -27,9 +27,9 @@ formats/process_repeat_usertype_dynarg_custom.zig:30:24: error: expected ';' aft
 formats/process_term_struct.zig:23:20: error: expected ';' after statement
         MyCustomFx _process__raw__raw_s1 = new MyCustomFx(32, false, &[_]u8{ 0 });
                    ^~~~~~~~~~~~~~~~~~~~~
-tests/expr_io_eof_bits_test.zig:20:57: error: expected pointer dereference, optional unwrap, or field access, found 'align'
-    try std.testing.expectEqualSlices(u8, &[_]u8{  }, r.align);
-                                                        ^~~~~
+tests/expr_io_eof_bits_test.zig:20:62: error: expected pointer dereference, optional unwrap, or field access, found 'align'
+    try _imp_std.testing.expectEqualSlices(u8, &[_]u8{  }, r.align);
+                                                             ^~~~~
 tests/expr_to_i_trailing_test.zig:17:51: error: expected ',' after argument
     assertThrows(NumberFormatException.class, new ThrowingRunnable() {
                                                   ^~~~~~~~~~~~~~~~
@@ -41,4 +41,4 @@ test transitive failure
 +- compile test Debug native 11 errors
 
 error: the following build command failed with exit code 1:
-.zig-cache/o/bb0d238f5ef3f946fb71974f3563c77f/build /usr/local/zig-x86_64-linux-0.15.2/zig /usr/local/zig-x86_64-linux-0.15.2/lib /tests/spec/zig .zig-cache /root/.cache/zig --seed 0xd7d48bd3 -Z68e377ee0d56df95 test --summary all -freference-trace -Dno-bin
+.zig-cache/o/bb0d238f5ef3f946fb71974f3563c77f/build /usr/local/zig-x86_64-linux-0.15.2/zig /usr/local/zig-x86_64-linux-0.15.2/lib /tests/spec/zig .zig-cache /root/.cache/zig --seed 0x7b70c593 -Z42afa717324b1635 test --summary all -freference-trace -Dno-bin

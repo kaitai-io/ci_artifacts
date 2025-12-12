@@ -1,41 +1,41 @@
 test
 +- compile test Debug native 9 errors
 formats/debug_array_user.zig:1:1: error: unable to load 'debug_array_user.zig': FileNotFound
-tests/debug_array_user_test.zig:5:34: note: file imported here
-const debug_array_user = @import("../formats/debug_array_user.zig");
-                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+tests/debug_array_user_test.zig:5:39: note: file imported here
+const _imp_debug_array_user = @import("../formats/debug_array_user.zig");
+                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 formats/debug_array_user_current_excluded.zig:1:1: error: unable to load 'debug_array_user_current_excluded.zig': FileNotFound
-tests/debug_array_user_current_excluded_test.zig:5:51: note: file imported here
-const debug_array_user_current_excluded = @import("../formats/debug_array_user_current_excluded.zig");
-                                                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+tests/debug_array_user_current_excluded_test.zig:5:56: note: file imported here
+const _imp_debug_array_user_current_excluded = @import("../formats/debug_array_user_current_excluded.zig");
+                                                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 formats/debug_array_user_eof_exception.zig:1:1: error: unable to load 'debug_array_user_eof_exception.zig': FileNotFound
-tests/debug_array_user_eof_exception_test.zig:5:48: note: file imported here
-const debug_array_user_eof_exception = @import("../formats/debug_array_user_eof_exception.zig");
-                                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+tests/debug_array_user_eof_exception_test.zig:5:53: note: file imported here
+const _imp_debug_array_user_eof_exception = @import("../formats/debug_array_user_eof_exception.zig");
+                                                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 formats/expr_ops_parens.zig:1:1: error: unable to load 'expr_ops_parens.zig': FileNotFound
-tests/expr_ops_parens_test.zig:5:33: note: file imported here
-const expr_ops_parens = @import("../formats/expr_ops_parens.zig");
-                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+tests/expr_ops_parens_test.zig:5:38: note: file imported here
+const _imp_expr_ops_parens = @import("../formats/expr_ops_parens.zig");
+                                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 formats/expr_str_ops.zig:1:1: error: unable to load 'expr_str_ops.zig': FileNotFound
-tests/expr_str_ops_test.zig:5:30: note: file imported here
-const expr_str_ops = @import("../formats/expr_str_ops.zig");
-                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+tests/expr_str_ops_test.zig:5:35: note: file imported here
+const _imp_expr_str_ops = @import("../formats/expr_str_ops.zig");
+                                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 formats/process_custom.zig:1:1: error: unable to load 'process_custom.zig': FileNotFound
-tests/process_custom_test.zig:5:32: note: file imported here
-const process_custom = @import("../formats/process_custom.zig");
-                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+tests/process_custom_test.zig:5:37: note: file imported here
+const _imp_process_custom = @import("../formats/process_custom.zig");
+                                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 formats/process_custom_no_args.zig:1:1: error: unable to load 'process_custom_no_args.zig': FileNotFound
-tests/process_custom_no_args_test.zig:5:40: note: file imported here
-const process_custom_no_args = @import("../formats/process_custom_no_args.zig");
-                                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+tests/process_custom_no_args_test.zig:5:45: note: file imported here
+const _imp_process_custom_no_args = @import("../formats/process_custom_no_args.zig");
+                                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 formats/process_repeat_usertype_dynarg_custom.zig:1:1: error: unable to load 'process_repeat_usertype_dynarg_custom.zig': FileNotFound
-tests/process_repeat_usertype_dynarg_custom_test.zig:5:55: note: file imported here
-const process_repeat_usertype_dynarg_custom = @import("../formats/process_repeat_usertype_dynarg_custom.zig");
-                                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+tests/process_repeat_usertype_dynarg_custom_test.zig:5:60: note: file imported here
+const _imp_process_repeat_usertype_dynarg_custom = @import("../formats/process_repeat_usertype_dynarg_custom.zig");
+                                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 formats/process_term_struct.zig:1:1: error: unable to load 'process_term_struct.zig': FileNotFound
-tests/process_term_struct_test.zig:5:37: note: file imported here
-const process_term_struct = @import("../formats/process_term_struct.zig");
-                                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+tests/process_term_struct_test.zig:5:42: note: file imported here
+const _imp_process_term_struct = @import("../formats/process_term_struct.zig");
+                                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 error: the following command failed with 9 compilation errors:
 /usr/local/zig-x86_64-linux-0.15.2/zig test -freference-trace=256 -ODebug --dep kaitai_struct -Mroot=/tests/spec/zig/tests.zig -Mkaitai_struct=/runtime/zig/src/root.zig --test-runner /tests/spec/zig/test_runner.zig --cache-dir .zig-cache --global-cache-dir /root/.cache/zig --name test --zig-lib-dir /usr/local/zig-x86_64-linux-0.15.2/lib/ --listen=-
 
@@ -44,4 +44,4 @@ test transitive failure
 +- compile test Debug native 9 errors
 
 error: the following build command failed with exit code 1:
-.zig-cache/o/bb0d238f5ef3f946fb71974f3563c77f/build /usr/local/zig-x86_64-linux-0.15.2/zig /usr/local/zig-x86_64-linux-0.15.2/lib /tests/spec/zig .zig-cache /root/.cache/zig --seed 0xa8007bd9 -Z71f473ad736afdda test --summary all -freference-trace -Dno-bin
+.zig-cache/o/bb0d238f5ef3f946fb71974f3563c77f/build /usr/local/zig-x86_64-linux-0.15.2/zig /usr/local/zig-x86_64-linux-0.15.2/lib /tests/spec/zig .zig-cache /root/.cache/zig --seed 0xc4e00503 -Zc022e033b544606f test --summary all -freference-trace -Dno-bin

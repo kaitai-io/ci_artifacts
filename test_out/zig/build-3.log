@@ -1,5 +1,5 @@
 test
-+- compile test Debug native 66 errors
++- compile test Debug native 54 errors
 /usr/local/zig-x86_64-linux-0.15.2/lib/std/testing.zig:74:15: error: incompatible types: 'comptime_int' and 'formats.enum_invalid.EnumInvalid.Animal'
     const T = @TypeOf(expected, actual);
               ^~~~~~~~~~~~~~~~~~~~~~~~~
@@ -9,9 +9,9 @@ test
 /usr/local/zig-x86_64-linux-0.15.2/lib/std/testing.zig:74:33: note: type 'formats.enum_invalid.EnumInvalid.Animal' here
     const T = @TypeOf(expected, actual);
                                 ^~~~~~
-tests/enum_invalid_test.zig:18:32: note: called inline here
-    try std.testing.expectEqual(111, r.pet_2);
-        ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+tests/enum_invalid_test.zig:18:37: note: called inline here
+    try _imp_std.testing.expectEqual(111, r.pet_2);
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~
 referenced by:
     comptime: tests.zig:57:17
 /usr/local/zig-x86_64-linux-0.15.2/lib/std/testing.zig:74:15: error: incompatible types: 'comptime_int' and 'formats.enum_to_i_invalid.EnumToIInvalid.Animal'
@@ -23,9 +23,9 @@ referenced by:
 /usr/local/zig-x86_64-linux-0.15.2/lib/std/testing.zig:74:33: note: type 'formats.enum_to_i_invalid.EnumToIInvalid.Animal' here
     const T = @TypeOf(expected, actual);
                                 ^~~~~~
-tests/enum_to_i_invalid_test.zig:18:32: note: called inline here
-    try std.testing.expectEqual(111, r.pet_2);
-        ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+tests/enum_to_i_invalid_test.zig:18:37: note: called inline here
+    try _imp_std.testing.expectEqual(111, r.pet_2);
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~
 referenced by:
     comptime: tests.zig:63:17
 /usr/local/zig-x86_64-linux-0.15.2/lib/std/testing.zig:74:15: error: incompatible types: 'comptime_int' and 'formats.switch_manual_enum_invalid_else.SwitchManualEnumInvalidElse.Opcode.CodeEnum'
@@ -37,9 +37,9 @@ referenced by:
 /usr/local/zig-x86_64-linux-0.15.2/lib/std/testing.zig:74:33: note: type 'formats.switch_manual_enum_invalid_else.SwitchManualEnumInvalidElse.Opcode.CodeEnum' here
     const T = @TypeOf(expected, actual);
                                 ^~~~~~
-tests/switch_manual_enum_invalid_else_test.zig:18:32: note: called inline here
-    try std.testing.expectEqual(255, r.opcodes.items[0].code);
-        ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+tests/switch_manual_enum_invalid_else_test.zig:18:37: note: called inline here
+    try _imp_std.testing.expectEqual(255, r.opcodes.items[0].code);
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 referenced by:
     comptime: tests.zig:241:17
 /usr/local/zig-x86_64-linux-0.15.2/lib/std/testing.zig:74:15: error: incompatible types: 'comptime_int' and 'formats.switch_manual_enum_invalid.SwitchManualEnumInvalid.Opcode.CodeEnum'
@@ -51,9 +51,9 @@ referenced by:
 /usr/local/zig-x86_64-linux-0.15.2/lib/std/testing.zig:74:33: note: type 'formats.switch_manual_enum_invalid.SwitchManualEnumInvalid.Opcode.CodeEnum' here
     const T = @TypeOf(expected, actual);
                                 ^~~~~~
-tests/switch_manual_enum_invalid_test.zig:18:32: note: called inline here
-    try std.testing.expectEqual(255, r.opcodes.items[0].code);
-        ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+tests/switch_manual_enum_invalid_test.zig:18:37: note: called inline here
+    try _imp_std.testing.expectEqual(255, r.opcodes.items[0].code);
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 referenced by:
     comptime: tests.zig:242:17
 /runtime/zig/src/root.zig:478:9: error: unsupported encoding 'Shift_JIS'
@@ -62,7 +62,7 @@ referenced by:
 referenced by:
     _read: formats/valid_eq_str_encodings.zig:33:68
     create: formats/valid_eq_str_encodings.zig:15:23
-    test.ValidEqStrEncodings: tests/valid_eq_str_encodings_test.zig:16:68
+    test.ValidEqStrEncodings: tests/valid_eq_str_encodings_test.zig:16:73
     comptime: tests.zig:276:17
 /runtime/zig/src/root.zig:478:9: error: unsupported encoding 'IBM437'
         @compileError("unsupported encoding '" ++ encoding ++ "'");
@@ -70,14 +70,14 @@ referenced by:
 referenced by:
     _read: formats/valid_eq_str_encodings.zig:38:68
     create: formats/valid_eq_str_encodings.zig:15:23
-    test.ValidEqStrEncodings: tests/valid_eq_str_encodings_test.zig:16:68
+    test.ValidEqStrEncodings: tests/valid_eq_str_encodings_test.zig:16:73
     comptime: tests.zig:276:17
-formats/cast_nested.zig:118:66: error: expected type '*formats.cast_nested.CastNested.Opcode.Strval', found '?*anyopaque'
-        _v = @as(*CastNested.Opcode.Strval, self.opcodes.items[0].body);
-                                            ~~~~~~~~~~~~~~~~~~~~~^~~~~
-formats/cast_nested.zig:118:66: note: '?*anyopaque' could have null values which are illegal in type '*formats.cast_nested.CastNested.Opcode.Strval'
+formats/cast_nested.zig:122:40: error: optional type '?formats.cast_nested.CastNested.Opcode.Body_switch' does not support field access
+        _v = self.opcodes.items[0].body.strval;
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+formats/cast_nested.zig:122:40: note: consider using '.?', 'orelse', or 'if'
 referenced by:
-    test.CastNested: tests/cast_nested_test.zig:17:68
+    test.CastNested: tests/cast_nested_test.zig:17:73
     comptime: tests.zig:28:17
 formats/cast_to_imported.zig:30:52: error: expected type '*formats.hello_world.HelloWorld', found '*anyopaque'
         _v = @as(*_imp_hello_world.HelloWorld, self.hw_param).one;
@@ -87,7 +87,7 @@ formats/hello_world.zig:6:24: note: struct declared here
 pub const HelloWorld = struct {
                        ^~~~~~
 referenced by:
-    test.ImportsCastToImported: tests/imports_cast_to_imported_test.zig:18:54
+    test.ImportsCastToImported: tests/imports_cast_to_imported_test.zig:18:59
     comptime: tests.zig:113:17
 formats/cast_to_imported2.zig:30:52: error: expected type '*formats.hello_world.HelloWorld', found '*anyopaque'
         _v = @as(*_imp_hello_world.HelloWorld, self.hw_param);
@@ -97,7 +97,7 @@ formats/hello_world.zig:6:24: note: struct declared here
 pub const HelloWorld = struct {
                        ^~~~~~
 referenced by:
-    test.ImportsCastToImported2: tests/imports_cast_to_imported2_test.zig:18:51
+    test.ImportsCastToImported2: tests/imports_cast_to_imported2_test.zig:18:56
     comptime: tests.zig:112:17
 formats/enum_int_range_u.zig:9:19: error: type 'i32' cannot represent integer value '4294967295'
         int_max = 4294967295,
@@ -106,7 +106,7 @@ referenced by:
     Constants: formats/enum_int_range_u.zig:7:27
     formats.enum_int_range_u.EnumIntRangeU: formats/enum_int_range_u.zig:30:9
     EnumIntRangeU: formats/enum_int_range_u.zig:6:27
-    test.EnumIntRangeU: tests/enum_int_range_u_test.zig:16:35
+    test.EnumIntRangeU: tests/enum_int_range_u_test.zig:16:40
     comptime: tests.zig:56:17
 formats/enum_long_range_s.zig:8:20: error: type 'i32' cannot represent integer value '-9223372036854775808'
         long_min = -9223372036854775808,
@@ -115,7 +115,7 @@ referenced by:
     Constants: formats/enum_long_range_s.zig:7:27
     formats.enum_long_range_s.EnumLongRangeS: formats/enum_long_range_s.zig:40:9
     EnumLongRangeS: formats/enum_long_range_s.zig:6:28
-    test.EnumLongRangeS: tests/enum_long_range_s_test.zig:16:36
+    test.EnumLongRangeS: tests/enum_long_range_s_test.zig:16:41
     comptime: tests.zig:58:17
 formats/enum_long_range_u.zig:9:19: error: type 'i32' cannot represent integer value '4294967295'
         int_max = 4294967295,
@@ -124,7 +124,7 @@ referenced by:
     Constants: formats/enum_long_range_u.zig:7:27
     formats.enum_long_range_u.EnumLongRangeU: formats/enum_long_range_u.zig:34:9
     EnumLongRangeU: formats/enum_long_range_u.zig:6:28
-    test.EnumLongRangeU: tests/enum_long_range_u_test.zig:16:36
+    test.EnumLongRangeU: tests/enum_long_range_u_test.zig:16:41
     comptime: tests.zig:59:17
 formats/enum_of_value_inst.zig:35:56: error: value with comptime-only type 'comptime_int' depends on runtime control flow
         _v = @as(EnumOfValueInst.Animal, @enumFromInt((if (self.pet_1 == EnumOfValueInst.Animal.cat) 4 else 12)));
@@ -133,7 +133,7 @@ formats/enum_of_value_inst.zig:35:71: note: runtime control flow here
         _v = @as(EnumOfValueInst.Animal, @enumFromInt((if (self.pet_1 == EnumOfValueInst.Animal.cat) 4 else 12)));
                                                            ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 referenced by:
-    test.EnumOfValueInst: tests/enum_of_value_inst_test.zig:19:91
+    test.EnumOfValueInst: tests/enum_of_value_inst_test.zig:19:101
     comptime: tests.zig:61:17
 formats/expr_1.zig:23:130: error: expected type 'usize', found 'i32'
         self.str1 = (try _imp_kaitai_struct.KaitaiStream.bytesToStr(self._allocator(), try self._io.readBytes(self._allocator(), (try self.lenOf1Mod())), "ASCII"));
@@ -144,7 +144,7 @@ formats/expr_1.zig:23:130: note: unsigned 64-bit int cannot represent all possib
                                                                      ^~~~~
 referenced by:
     create: formats/expr_1.zig:15:23
-    test.Expr1: tests/expr_1_test.zig:16:38
+    test.Expr1: tests/expr_1_test.zig:16:43
     comptime: tests.zig:76:17
 formats/expr_2.zig:42:133: error: expected type 'usize', found 'i32'
             self.str = (try _imp_kaitai_struct.KaitaiStream.bytesToStr(self._allocator(), try self._io.readBytes(self._allocator(), (try self.lenMod())), "UTF-8"));
@@ -157,21 +157,21 @@ referenced by:
     create: formats/expr_2.zig:34:27
     _read: formats/expr_2.zig:22:38
     create: formats/expr_2.zig:15:23
-    test.Expr2: tests/expr_2_test.zig:16:38
+    test.Expr2: tests/expr_2_test.zig:16:43
     comptime: tests.zig:77:17
 formats/expr_array.zig:126:29: error: expected type 'i32', found 'usize'
         _v = self.aint.items.len;
              ~~~~~~~~~~~~~~~^~~~
 formats/expr_array.zig:126:29: note: signed 32-bit int cannot represent all possible unsigned 64-bit values
 referenced by:
-    test.ExprArray: tests/expr_array_test.zig:17:51
+    test.ExprArray: tests/expr_array_test.zig:17:56
     comptime: tests.zig:79:17
 formats/expr_bytes_ops.zig:68:22: error: expected type 'i32', found 'usize'
         _v = self.one.len;
              ~~~~~~~~^~~~
 formats/expr_bytes_ops.zig:68:22: note: signed 32-bit int cannot represent all possible unsigned 64-bit values
 referenced by:
-    test.ExprBytesOps: tests/expr_bytes_ops_test.zig:17:50
+    test.ExprBytesOps: tests/expr_bytes_ops_test.zig:17:55
     comptime: tests.zig:83:17
 formats/expr_calc_array_ops.zig:84:37: error: expected type '*array_list.Aligned(i32,null)', found 'array_list.Aligned(i32,null)'
         _v = _imp_std.ArrayList(i32){ .items = @constCast(@as([]const i32, &.{ 10, 25, 50, 100, 200, 500, 1000 })), .capacity = 7 };
@@ -181,28 +181,28 @@ formats/expr_calc_array_ops.zig:84:37: error: expected type '*array_list.Aligned
            ^~~~~~
 referenced by:
     intArraySize: formats/expr_calc_array_ops.zig:132:32
-    test.ExprCalcArrayOps: tests/expr_calc_array_ops_test.zig:17:55
+    test.ExprCalcArrayOps: tests/expr_calc_array_ops_test.zig:17:60
     comptime: tests.zig:84:17
 formats/expr_if_int_eq.zig:56:39: error: expected type '?i32', found '?i16'
         _v = (try self.calc()) == self.seq_if;
                                   ~~~~^~~~~~~
 formats/expr_if_int_eq.zig:56:39: note: optional type child 'i16' cannot cast into optional type child 'i32'
 referenced by:
-    test.ExprIfIntEq: tests/expr_if_int_eq_test.zig:23:57
+    test.ExprIfIntEq: tests/expr_if_int_eq_test.zig:23:62
     comptime: tests.zig:87:17
 formats/expr_if_int_ops.zig:27:115: error: expected type 'u8', found '?u64'
         self.bytes = try _imp_kaitai_struct.KaitaiStream.processXorOne(self._allocator(), _raw_bytes, @as(u8, self.key));
                                                                                                               ~~~~^~~~
 referenced by:
     create: formats/expr_if_int_ops.zig:15:23
-    test.ExprIfIntOps: tests/expr_if_int_ops_test.zig:16:54
+    test.ExprIfIntOps: tests/expr_if_int_ops_test.zig:16:59
     comptime: tests.zig:88:17
 formats/expr_int_div.zig:53:25: error: expected type 'i32', found 'u32'
         _v = self.int_u / 13;
              ~~~~~~~~~~~^~~~
 formats/expr_int_div.zig:53:25: note: signed 32-bit int cannot represent all possible unsigned 32-bit values
 referenced by:
-    test.ExprIntDiv: tests/expr_int_div_test.zig:21:59
+    test.ExprIntDiv: tests/expr_int_div_test.zig:21:64
     comptime: tests.zig:89:17
 formats/expr_io_ternary.zig:92:20: error: incompatible types: '**formats.expr_io_ternary.ExprIoTernary.One' and '**formats.expr_io_ternary.ExprIoTernary.Two'
         _v = (try (if (self.flag == 64) self.obj1 else self.obj2)._io.size());
@@ -214,20 +214,20 @@ formats/expr_io_ternary.zig:92:60: note: type '**formats.expr_io_ternary.ExprIoT
         _v = (try (if (self.flag == 64) self.obj1 else self.obj2)._io.size());
                                                        ~~~~^~~~~
 referenced by:
-    test.ExprIoTernary: tests/expr_io_ternary_test.zig:17:58
+    test.ExprIoTernary: tests/expr_io_ternary_test.zig:17:63
     comptime: tests.zig:93:17
 formats/expr_mod.zig:53:14: error: expected type 'i32', found 'u32'
         _v = @mod(self.int_u, 13);
              ^~~~~~~~~~~~~~~~~~~~
 formats/expr_mod.zig:53:14: note: signed 32-bit int cannot represent all possible unsigned 32-bit values
 referenced by:
-    test.ExprMod: tests/expr_mod_test.zig:21:52
+    test.ExprMod: tests/expr_mod_test.zig:21:57
     comptime: tests.zig:94:17
 formats/float_to_i.zig:139:32: error: expected float type, found '?f32'
         _v = @intFromFloat(self.single_value_if);
                            ~~~~^~~~~~~~~~~~~~~~
 referenced by:
-    test.FloatToI: tests/float_to_i_test.zig:23:52
+    test.FloatToI: tests/float_to_i_test.zig:23:57
     comptime: tests.zig:102:17
 formats/imports_circular_b.zig:25:80: error: unable to resolve inferred error set
             self.back_ref = try _imp_imports_circular_a.ImportsCircularA.create(self._arena, self._io, null, null);
@@ -236,7 +236,7 @@ referenced by:
     create: formats/imports_circular_b.zig:16:23
     _read: formats/imports_circular_a.zig:24:71
     create: formats/imports_circular_a.zig:16:23
-    test.ImportsCircularA: tests/imports_circular_a_test.zig:16:61
+    test.ImportsCircularA: tests/imports_circular_a_test.zig:16:66
     comptime: tests.zig:114:17
 formats/index_to_param_eos.zig:37:117: error: expected type 'i32', found 'usize'
                 try self.blocks.append(self._allocator(), try Block.create(self._arena, self._io, self, self._root, i));
@@ -247,7 +247,7 @@ formats/index_to_param_eos.zig:42:160: note: parameter type declared here
                                                                                                                                                                ^~~
 referenced by:
     create: formats/index_to_param_eos.zig:15:23
-    test.IndexToParamEos: tests/index_to_param_eos_test.zig:16:60
+    test.IndexToParamEos: tests/index_to_param_eos_test.zig:16:65
     comptime: tests.zig:120:17
 formats/index_to_param_expr.zig:39:113: error: expected type 'i32', found 'usize'
             try self.blocks.append(self._allocator(), try Block.create(self._arena, self._io, self, self._root, i));
@@ -258,7 +258,7 @@ formats/index_to_param_expr.zig:43:162: note: parameter type declared here
                                                                                                                                                                  ^~~
 referenced by:
     create: formats/index_to_param_expr.zig:15:23
-    test.IndexToParamExpr: tests/index_to_param_expr_test.zig:16:62
+    test.IndexToParamExpr: tests/index_to_param_expr_test.zig:16:67
     comptime: tests.zig:121:17
 formats/index_to_param_until.zig:37:87: error: expected type 'i32', found 'usize'
                 const _it = try Block.create(self._arena, self._io, self, self._root, i);
@@ -269,43 +269,27 @@ formats/index_to_param_until.zig:46:164: note: parameter type declared here
                                                                                                                                                                    ^~~
 referenced by:
     create: formats/index_to_param_until.zig:15:23
-    test.IndexToParamUntil: tests/index_to_param_until_test.zig:16:64
+    test.IndexToParamUntil: tests/index_to_param_until_test.zig:16:69
     comptime: tests.zig:122:17
-formats/io_local_var.zig:23:37: error: expected type '*formats.io_local_var.IoLocalVar.Dummy', found '*anyopaque'
-        if (@as(*IoLocalVar.Dummy, (try self.messUp()))._io.pos() < 0) {
-                                    ^~~~~~~~~~~~~~~~~
-formats/io_local_var.zig:23:37: note: pointer type child 'anyopaque' cannot cast into pointer type child 'formats.io_local_var.IoLocalVar.Dummy'
-formats/io_local_var.zig:28:23: note: struct declared here
-    pub const Dummy = struct {
-                      ^~~~~~
-referenced by:
-    create: formats/io_local_var.zig:15:23
-    test.IoLocalVar: tests/io_local_var_test.zig:16:49
-    comptime: tests.zig:134:17
 formats/nav_parent_recursive.zig:24:54: error: unable to resolve inferred error set
             self.next = try NavParentRecursive.create(self._arena, self._io, self, self._root);
                             ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 referenced by:
     create: formats/nav_parent_recursive.zig:15:23
-    test.NavParentRecursive: tests/nav_parent_recursive_test.zig:16:65
+    test.NavParentRecursive: tests/nav_parent_recursive_test.zig:16:70
     comptime: tests.zig:145:17
-formats/nav_parent_switch_cast.zig:56:32: error: expected type '*anyopaque', found '[]u8'
-                    self.buf = try self._io.readBytes(self._allocator(), 4);
-                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-formats/nav_parent_switch_cast.zig:56:32: note: cannot implicitly cast slice '[]u8' to anyopaque pointer '*anyopaque'
-formats/nav_parent_switch_cast.zig:56:32: note: consider using '.ptr'
+formats/nav_parent_switch_cast.zig:87:66: error: type '*anyopaque' does not support field access
+                _v = @as(*NavParentSwitchCast.Foo, self._parent.?._parent).flag;
+                                                   ~~~~~~~~~~~~~~^~~~~~~~
 referenced by:
-    create: formats/nav_parent_switch_cast.zig:33:27
-    _read: formats/nav_parent_switch_cast.zig:22:35
-    create: formats/nav_parent_switch_cast.zig:15:23
-    test.NavParentSwitchCast: tests/nav_parent_switch_cast_test.zig:16:68
+    test.NavParentSwitchCast: tests/nav_parent_switch_cast_test.zig:19:72
     comptime: tests.zig:146:17
 formats/nav_root_recursive.zig:24:52: error: unable to resolve inferred error set
             self.next = try NavRootRecursive.create(self._arena, self._io, self, self._root);
                             ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 referenced by:
     create: formats/nav_root_recursive.zig:15:23
-    test.NavRootRecursive: tests/nav_root_recursive_test.zig:16:61
+    test.NavRootRecursive: tests/nav_root_recursive_test.zig:16:66
     comptime: tests.zig:150:17
 formats/nested_same_name.zig:106:96: error: expected type 'usize', found 'i32'
                 self.data = try self._io.readBytes(self._allocator(), self._parent.?.main_size * 2);
@@ -320,7 +304,7 @@ referenced by:
     create: formats/nested_same_name.zig:80:27
     _read: formats/nested_same_name.zig:22:41
     create: formats/nested_same_name.zig:15:23
-    test.NestedSameName: tests/nested_same_name_test.zig:16:57
+    test.NestedSameName: tests/nested_same_name_test.zig:16:62
     comptime: tests.zig:153:17
 formats/nested_same_name2.zig:111:97: error: expected type 'usize', found 'i32'
                 self.data1 = try self._io.readBytes(self._allocator(), self._parent.?.main_size * 2);
@@ -335,7 +319,7 @@ referenced by:
     create: formats/nested_same_name2.zig:85:27
     _read: formats/nested_same_name2.zig:23:41
     create: formats/nested_same_name2.zig:15:23
-    test.NestedSameName2: tests/nested_same_name2_test.zig:16:59
+    test.NestedSameName2: tests/nested_same_name2_test.zig:16:64
     comptime: tests.zig:152:17
 formats/params_pass_array_int.zig:63:37: error: expected type '*array_list.Aligned(u16,null)', found 'array_list.Aligned(u16,null)'
         _v = _imp_std.ArrayList(u16){ .items = @constCast(@as([]const u16, &.{ 27643, 7 })), .capacity = 2 };
@@ -346,7 +330,7 @@ formats/params_pass_array_int.zig:63:37: error: expected type '*array_list.Align
 referenced by:
     _read: formats/params_pass_array_int.zig:32:111
     create: formats/params_pass_array_int.zig:15:23
-    test.ParamsPassArrayInt: tests/params_pass_array_int_test.zig:16:66
+    test.ParamsPassArrayInt: tests/params_pass_array_int_test.zig:16:71
     comptime: tests.zig:164:17
 formats/params_pass_array_io.zig:26:134: error: expected type '*array_list.Aligned(*root.KaitaiStream,null)', found 'array_list.Aligned(*root.KaitaiStream,null)'
         self.one = try ParamType.create(self._arena, self._io, self, self._root, _imp_std.ArrayList(*_imp_kaitai_struct.KaitaiStream){ .items = @constCast(@as([]const *_imp_kaitai_struct.KaitaiStream, &.{ self.first._io, self._root.?._io })), .capacity = 2 });
@@ -359,7 +343,7 @@ formats/params_pass_array_io.zig:53:172: note: parameter type declared here
                                                                                                                                                                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 referenced by:
     create: formats/params_pass_array_io.zig:15:23
-    test.ParamsPassArrayIo: tests/params_pass_array_io_test.zig:16:64
+    test.ParamsPassArrayIo: tests/params_pass_array_io_test.zig:16:69
     comptime: tests.zig:165:17
 formats/params_pass_array_str.zig:63:44: error: expected type '*array_list.Aligned([]const u8,null)', found 'array_list.Aligned([]const u8,null)'
         _v = _imp_std.ArrayList([]const u8){ .items = @constCast(@as([]const []const u8, &.{ "aB", "Cd" })), .capacity = 2 };
@@ -370,7 +354,7 @@ formats/params_pass_array_str.zig:63:44: error: expected type '*array_list.Align
 referenced by:
     _read: formats/params_pass_array_str.zig:32:120
     create: formats/params_pass_array_str.zig:15:23
-    test.ParamsPassArrayStr: tests/params_pass_array_str_test.zig:16:66
+    test.ParamsPassArrayStr: tests/params_pass_array_str_test.zig:16:71
     comptime: tests.zig:166:17
 formats/params_pass_array_struct.zig:103:44: error: expected type '*array_list.Aligned(*anyopaque,null)', found 'array_list.Aligned(*anyopaque,null)'
         _v = _imp_std.ArrayList(*anyopaque){ .items = @constCast(@as([]const *anyopaque, &.{ self.one, self.two })), .capacity = 2 };
@@ -381,7 +365,7 @@ formats/params_pass_array_struct.zig:103:44: error: expected type '*array_list.A
 referenced by:
     _read: formats/params_pass_array_struct.zig:24:108
     create: formats/params_pass_array_struct.zig:15:23
-    test.ParamsPassArrayStruct: tests/params_pass_array_struct_test.zig:16:72
+    test.ParamsPassArrayStruct: tests/params_pass_array_struct_test.zig:16:77
     comptime: tests.zig:167:17
 formats/process_coerce_bytes.zig:61:43: error: expected type '[]const u8', found '?[]const u8'
             _v = (if (self.flag == 0) self.buf_unproc else self.buf_proc);
@@ -389,14 +373,13 @@ formats/process_coerce_bytes.zig:61:43: error: expected type '[]const u8', found
 formats/process_coerce_bytes.zig:61:43: note: cannot convert optional to payload type
 formats/process_coerce_bytes.zig:61:43: note: consider using '.?', 'orelse', or 'if'
 referenced by:
-    test.ProcessCoerceBytes: tests/process_coerce_bytes_test.zig:18:96
+    test.ProcessCoerceBytes: tests/process_coerce_bytes_test.zig:18:101
     comptime: tests.zig:177:17
-formats/process_coerce_switch.zig:33:39: error: expected type '?*anyopaque', found '[]u8'
-                    self.buf_unproc = try self._io.readBytes(self._allocator(), 4);
-                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+formats/process_coerce_switch.zig:89:39: error: expected type '*anyopaque', found '?formats.process_coerce_switch.ProcessCoerceSwitch.BufUnproc_switch'
+        _v = (if (self.flag == 0) self.buf_unproc else self.buf_proc);
+                                  ~~~~^~~~~~~~~~~
 referenced by:
-    create: formats/process_coerce_switch.zig:15:23
-    test.ProcessCoerceSwitch: tests/process_coerce_switch_test.zig:16:67
+    test.ProcessCoerceSwitch: tests/process_coerce_switch_test.zig:19:141
     comptime: tests.zig:178:17
 formats/process_coerce_usertype1.zig:91:43: error: expected type '*formats.process_coerce_usertype1.ProcessCoerceUsertype1.Foo', found '?*formats.process_coerce_usertype1.ProcessCoerceUsertype1.Foo'
             _v = (if (self.flag == 0) self.buf_unproc else self.buf_proc);
@@ -405,7 +388,7 @@ formats/process_coerce_usertype1.zig:91:43: note: cannot convert optional to pay
 formats/process_coerce_usertype1.zig:91:43: note: consider using '.?', 'orelse', or 'if'
 formats/process_coerce_usertype1.zig:91:43: note: '?*formats.process_coerce_usertype1.ProcessCoerceUsertype1.Foo' could have null values which are illegal in type '*formats.process_coerce_usertype1.ProcessCoerceUsertype1.Foo'
 referenced by:
-    test.ProcessCoerceUsertype1: tests/process_coerce_usertype1_test.zig:18:72
+    test.ProcessCoerceUsertype1: tests/process_coerce_usertype1_test.zig:18:77
     comptime: tests.zig:179:17
 formats/process_coerce_usertype2.zig:88:43: error: expected type '*formats.process_coerce_usertype2.ProcessCoerceUsertype2.Foo', found '?*formats.process_coerce_usertype2.ProcessCoerceUsertype2.Foo'
             _v = (if (self.flag == 0) self.buf_unproc else self.buf_proc);
@@ -414,7 +397,7 @@ formats/process_coerce_usertype2.zig:88:43: note: cannot convert optional to pay
 formats/process_coerce_usertype2.zig:88:43: note: consider using '.?', 'orelse', or 'if'
 formats/process_coerce_usertype2.zig:88:43: note: '?*formats.process_coerce_usertype2.ProcessCoerceUsertype2.Foo' could have null values which are illegal in type '*formats.process_coerce_usertype2.ProcessCoerceUsertype2.Foo'
 referenced by:
-    test.ProcessCoerceUsertype2: tests/process_coerce_usertype2_test.zig:18:72
+    test.ProcessCoerceUsertype2: tests/process_coerce_usertype2_test.zig:18:77
     comptime: tests.zig:180:17
 formats/process_repeat_usertype_dynarg_rotate.zig:30:147: error: expected type 'i32', found 'u64'
             const _raw_blocks_rol = try _imp_kaitai_struct.KaitaiStream.processRotateLeft(self._allocator(), _raw__raw_blocks_rol, self._io.pos() - 4 * i);
@@ -425,7 +408,7 @@ formats/process_repeat_usertype_dynarg_rotate.zig:30:147: note: signed 32-bit in
                                                                              ^~~
 referenced by:
     create: formats/process_repeat_usertype_dynarg_rotate.zig:15:23
-    test.ProcessRepeatUsertypeDynargRotate: tests/process_repeat_usertype_dynarg_rotate_test.zig:16:97
+    test.ProcessRepeatUsertypeDynargRotate: tests/process_repeat_usertype_dynarg_rotate_test.zig:16:102
     comptime: tests.zig:182:17
 formats/process_repeat_usertype_dynarg_xor.zig:30:132: error: expected type 'u8', found 'usize'
             const _raw_blocks = try _imp_kaitai_struct.KaitaiStream.processXorOne(self._allocator(), _raw__raw_blocks, @as(u8, 155 ^ (i << 4 | self._io.pos())));
@@ -433,14 +416,14 @@ formats/process_repeat_usertype_dynarg_xor.zig:30:132: error: expected type 'u8'
 formats/process_repeat_usertype_dynarg_xor.zig:30:132: note: unsigned 8-bit int cannot represent all possible unsigned 64-bit values
 referenced by:
     create: formats/process_repeat_usertype_dynarg_xor.zig:15:23
-    test.ProcessRepeatUsertypeDynargXor: tests/process_repeat_usertype_dynarg_xor_test.zig:16:91
+    test.ProcessRepeatUsertypeDynargXor: tests/process_repeat_usertype_dynarg_xor_test.zig:16:96
     comptime: tests.zig:183:17
-formats/recursive_one.zig:25:52: error: unable to resolve inferred error set
-                self.next = try RecursiveOne.create(self._arena, self._io, self, self._root);
-                                ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+formats/recursive_one.zig:29:72: error: unable to resolve inferred error set
+                self.next = .{ .recursive_one = try RecursiveOne.create(self._arena, self._io, self, self._root) };
+                                                    ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 referenced by:
-    create: formats/recursive_one.zig:15:23
-    test.RecursiveOne: tests/recursive_one_test.zig:16:52
+    create: formats/recursive_one.zig:19:23
+    test.RecursiveOne: tests/recursive_one_test.zig:16:57
     comptime: tests.zig:192:17
 formats/switch_integers2.zig:39:66: error: expected type 'usize', found '?u64'
         self.ham = try self._io.readBytes(self._allocator(), self.len);
@@ -452,56 +435,8 @@ formats/switch_integers2.zig:39:66: note: consider using '.?', 'orelse', or 'if'
                                                                      ^~~~~
 referenced by:
     create: formats/switch_integers2.zig:15:23
-    test.SwitchIntegers2: tests/switch_integers2_test.zig:16:58
+    test.SwitchIntegers2: tests/switch_integers2_test.zig:16:63
     comptime: tests.zig:239:17
-formats/switch_manual_int_size.zig:63:33: error: expected type '*anyopaque', found '[]u8'
-                    self.body = try self._io.readBytes(self._allocator(), self.size);
-                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-formats/switch_manual_int_size.zig:63:33: note: cannot implicitly cast slice '[]u8' to anyopaque pointer '*anyopaque'
-formats/switch_manual_int_size.zig:63:33: note: consider using '.ptr'
-referenced by:
-    create: formats/switch_manual_int_size.zig:40:27
-    _read: formats/switch_manual_int_size.zig:27:75
-    create: formats/switch_manual_int_size.zig:15:23
-    test.SwitchManualIntSize: tests/switch_manual_int_size_test.zig:16:68
-    comptime: tests.zig:247:17
-formats/switch_manual_int_size_eos.zig:92:33: error: expected type '*anyopaque', found '[]u8'
-                    self.body = try self._io.readBytesFull(self._allocator());
-                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-formats/switch_manual_int_size_eos.zig:92:33: note: cannot implicitly cast slice '[]u8' to anyopaque pointer '*anyopaque'
-formats/switch_manual_int_size_eos.zig:92:33: note: consider using '.ptr'
-referenced by:
-    create: formats/switch_manual_int_size_eos.zig:71:27
-    _read: formats/switch_manual_int_size_eos.zig:52:45
-    create: formats/switch_manual_int_size_eos.zig:40:27
-    _read: formats/switch_manual_int_size_eos.zig:27:75
-    create: formats/switch_manual_int_size_eos.zig:15:23
-    test.SwitchManualIntSizeEos: tests/switch_manual_int_size_eos_test.zig:16:75
-    comptime: tests.zig:246:17
-formats/switch_repeat_expr.zig:45:61: error: expected type '*anyopaque', found '[]u8'
-                    try self.body.append(self._allocator(), try self._io.readBytes(self._allocator(), self.size));
-                                                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-formats/switch_repeat_expr.zig:45:61: note: cannot implicitly cast slice '[]u8' to anyopaque pointer '*anyopaque'
-formats/switch_repeat_expr.zig:45:61: note: consider using '.ptr'
-/usr/local/zig-x86_64-linux-0.15.2/lib/std/array_list.zig:893:58: note: parameter type declared here
-        pub fn append(self: *Self, gpa: Allocator, item: T) Allocator.Error!void {
-                                                         ^
-referenced by:
-    create: formats/switch_repeat_expr.zig:15:23
-    test.SwitchRepeatExpr: tests/switch_repeat_expr_test.zig:16:61
-    comptime: tests.zig:253:17
-formats/switch_repeat_expr_invalid.zig:45:61: error: expected type '*anyopaque', found '[]u8'
-                    try self.body.append(self._allocator(), try self._io.readBytes(self._allocator(), self.size));
-                                                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-formats/switch_repeat_expr_invalid.zig:45:61: note: cannot implicitly cast slice '[]u8' to anyopaque pointer '*anyopaque'
-formats/switch_repeat_expr_invalid.zig:45:61: note: consider using '.ptr'
-/usr/local/zig-x86_64-linux-0.15.2/lib/std/array_list.zig:893:58: note: parameter type declared here
-        pub fn append(self: *Self, gpa: Allocator, item: T) Allocator.Error!void {
-                                                         ^
-referenced by:
-    create: formats/switch_repeat_expr_invalid.zig:15:23
-    test.SwitchRepeatExprInvalid: tests/switch_repeat_expr_invalid_test.zig:16:76
-    comptime: tests.zig:252:17
 formats/type_ternary.zig:62:47: error: expected type '*formats.type_ternary.TypeTernary.Dummy', found '?*formats.type_ternary.TypeTernary.Dummy'
         _v = (if (!((try self.isHack()))) self.dif_wo_hack else self.dif_with_hack);
                                           ~~~~^~~~~~~~~~~~
@@ -509,7 +444,7 @@ formats/type_ternary.zig:62:47: note: cannot convert optional to payload type
 formats/type_ternary.zig:62:47: note: consider using '.?', 'orelse', or 'if'
 formats/type_ternary.zig:62:47: note: '?*formats.type_ternary.TypeTernary.Dummy' could have null values which are illegal in type '*formats.type_ternary.TypeTernary.Dummy'
 referenced by:
-    test.TypeTernary: tests/type_ternary_test.zig:17:48
+    test.TypeTernary: tests/type_ternary_test.zig:17:53
     comptime: tests.zig:274:17
 formats/type_ternary_2nd_falsy.zig:144:36: error: expected type '*formats.type_ternary_2nd_falsy.TypeTernary2ndFalsy.Foo', found '?*formats.type_ternary_2nd_falsy.TypeTernary2ndFalsy.Foo'
         _v = (if ((try self.t())) (try self.nullUt()) else self.ut);
@@ -518,7 +453,7 @@ formats/type_ternary_2nd_falsy.zig:144:36: note: cannot convert optional to payl
 formats/type_ternary_2nd_falsy.zig:144:36: note: consider using '.?', 'orelse', or 'if'
 formats/type_ternary_2nd_falsy.zig:144:36: note: '?*formats.type_ternary_2nd_falsy.TypeTernary2ndFalsy.Foo' could have null values which are illegal in type '*formats.type_ternary_2nd_falsy.TypeTernary2ndFalsy.Foo'
 referenced by:
-    test.TypeTernary2ndFalsy: tests/type_ternary_2nd_falsy_test.zig:25:53
+    test.TypeTernary2ndFalsy: tests/type_ternary_2nd_falsy_test.zig:25:58
     comptime: tests.zig:273:17
 formats/valid_fail_in_enum.zig:28:22: error: comparison of 'formats.valid_fail_in_enum.ValidFailInEnum.Animal' with null
         if (self.foo == null) {
@@ -528,7 +463,7 @@ formats/valid_fail_in_enum.zig:7:24: note: enum declared here
                        ^~~~
 referenced by:
     create: formats/valid_fail_in_enum.zig:20:23
-    test.ValidFailInEnum: tests/valid_fail_in_enum_test.zig:16:106
+    test.ValidFailInEnum: tests/valid_fail_in_enum_test.zig:16:116
     comptime: tests.zig:284:17
 formats/vlq_base128_le.zig:57:87: error: expected type 'i32', found 'usize'
                 const _it = try Group.create(self._arena, self._io, self, self._root, i, (if (i != 0) (try self.groups.items[i - 1].intermValue()) else 0), (if (i != 0) (if (i == 9) 9223372036854775808 else self.groups.items[i - 1].multiplier * 128) else 1));
@@ -541,104 +476,53 @@ referenced by:
     create: formats/vlq_base128_le.zig:45:23
     _read: formats/imports_abs.zig:23:63
     create: formats/imports_abs.zig:16:23
-    test.ImportsAbs: tests/imports_abs_test.zig:16:48
+    test.ImportsAbs: tests/imports_abs_test.zig:16:53
     comptime: tests.zig:111:17
 formats/yaml_ints.zig:28:14: error: type 'i32' cannot represent integer value '4294967295'
         _v = 4294967295;
              ^~~~~~~~~~
 referenced by:
-    test.YamlInts: tests/yaml_ints_test.zig:17:61
+    test.YamlInts: tests/yaml_ints_test.zig:17:66
     comptime: tests.zig:304:17
-tests/debug_switch_user_test.zig:18:84: error: expected type '*formats.debug_switch_user.DebugSwitchUser.One', found '?*anyopaque'
-    try std.testing.expectEqual(-190, @as(*debug_switch_user.DebugSwitchUser.One, r.data).val);
-                                                                                  ~^~~~~
-tests/debug_switch_user_test.zig:18:84: note: '?*anyopaque' could have null values which are illegal in type '*formats.debug_switch_user.DebugSwitchUser.One'
+tests/debug_switch_user_test.zig:18:50: error: optional type '?formats.debug_switch_user.DebugSwitchUser.Data_switch' does not support field access
+    try _imp_std.testing.expectEqual(-190, r.data.one.val);
+                                           ~~~~~~^~~~
+tests/debug_switch_user_test.zig:18:50: note: consider using '.?', 'orelse', or 'if'
 referenced by:
     comptime: tests.zig:36:17
-tests/nav_parent_false_test.zig:19:80: error: expected type '[]const u8', found '?[]const u8'
-    try std.testing.expectEqualSlices(u8, &[_]u8{ 49, 50, 51 }, r.element_a.foo.more);
-                                                                ~~~~~~~~~~~~~~~^~~~~
-tests/nav_parent_false_test.zig:19:80: note: cannot convert optional to payload type
-tests/nav_parent_false_test.zig:19:80: note: consider using '.?', 'orelse', or 'if'
+tests/nav_parent_false_test.zig:19:85: error: expected type '[]const u8', found '?[]const u8'
+    try _imp_std.testing.expectEqualSlices(u8, &[_]u8{ 49, 50, 51 }, r.element_a.foo.more);
+                                                                     ~~~~~~~~~~~~~~~^~~~~
+tests/nav_parent_false_test.zig:19:85: note: cannot convert optional to payload type
+tests/nav_parent_false_test.zig:19:85: note: consider using '.?', 'orelse', or 'if'
 /usr/local/zig-x86_64-linux-0.15.2/lib/std/testing.zig:363:73: note: parameter type declared here
 pub fn expectEqualSlices(comptime T: type, expected: []const T, actual: []const T) !void {
                                                                         ^~~~~~~~~
 referenced by:
     comptime: tests.zig:143:17
-tests/nav_parent_switch_test.zig:18:87: error: expected type '*formats.nav_parent_switch.NavParentSwitch.Element1', found '?*formats.nav_parent_switch.NavParentSwitch.Element1'
-    try std.testing.expectEqual(66, @as(*nav_parent_switch.NavParentSwitch.Element1, r.content).foo);
-                                                                                     ~^~~~~~~~
-tests/nav_parent_switch_test.zig:18:87: note: cannot convert optional to payload type
-tests/nav_parent_switch_test.zig:18:87: note: consider using '.?', 'orelse', or 'if'
-tests/nav_parent_switch_test.zig:18:87: note: '?*formats.nav_parent_switch.NavParentSwitch.Element1' could have null values which are illegal in type '*formats.nav_parent_switch.NavParentSwitch.Element1'
+tests/nav_parent_switch_test.zig:18:97: error: expected type '*formats.nav_parent_switch.NavParentSwitch.Element1', found '?*formats.nav_parent_switch.NavParentSwitch.Element1'
+    try _imp_std.testing.expectEqual(66, @as(*_imp_nav_parent_switch.NavParentSwitch.Element1, r.content).foo);
+                                                                                               ~^~~~~~~~
+tests/nav_parent_switch_test.zig:18:97: note: cannot convert optional to payload type
+tests/nav_parent_switch_test.zig:18:97: note: consider using '.?', 'orelse', or 'if'
+tests/nav_parent_switch_test.zig:18:97: note: '?*formats.nav_parent_switch.NavParentSwitch.Element1' could have null values which are illegal in type '*formats.nav_parent_switch.NavParentSwitch.Element1'
 referenced by:
     comptime: tests.zig:147:17
-tests/params_pass_struct_test.zig:19:91: error: expected type '*formats.params_pass_struct.ParamsPassStruct.Block', found '*anyopaque'
-    try std.testing.expectEqual(255, @as(*params_pass_struct.ParamsPassStruct.Block, r.one.foo).foo);
-                                                                                     ~~~~~^~~~
-tests/params_pass_struct_test.zig:19:91: note: pointer type child 'anyopaque' cannot cast into pointer type child 'formats.params_pass_struct.ParamsPassStruct.Block'
+tests/params_pass_struct_test.zig:19:101: error: expected type '*formats.params_pass_struct.ParamsPassStruct.Block', found '*anyopaque'
+    try _imp_std.testing.expectEqual(255, @as(*_imp_params_pass_struct.ParamsPassStruct.Block, r.one.foo).foo);
+                                                                                               ~~~~~^~~~
+tests/params_pass_struct_test.zig:19:101: note: pointer type child 'anyopaque' cannot cast into pointer type child 'formats.params_pass_struct.ParamsPassStruct.Block'
 formats/params_pass_struct.zig:25:23: note: struct declared here
     pub const Block = struct {
                       ^~~~~~
 referenced by:
     comptime: tests.zig:171:17
-tests/switch_bytearray_test.zig:19:121: error: expected type '*formats.switch_bytearray.SwitchBytearray.Opcode.Strval', found '?*anyopaque'
-    try std.testing.expectEqualStrings("foobar", @as(*switch_bytearray.SwitchBytearray.Opcode.Strval, r.opcodes.items[0].body).value);
-                                                                                                      ~~~~~~~~~~~~~~~~~~^~~~~
-tests/switch_bytearray_test.zig:19:121: note: '?*anyopaque' could have null values which are illegal in type '*formats.switch_bytearray.SwitchBytearray.Opcode.Strval'
-referenced by:
-    comptime: tests.zig:237:17
-tests/switch_manual_enum_test.zig:19:124: error: expected type '*formats.switch_manual_enum.SwitchManualEnum.Opcode.Strval', found '?*anyopaque'
-    try std.testing.expectEqualStrings("foobar", @as(*switch_manual_enum.SwitchManualEnum.Opcode.Strval, r.opcodes.items[0].body).value);
-                                                                                                         ~~~~~~~~~~~~~~~~~~^~~~~
-tests/switch_manual_enum_test.zig:19:124: note: '?*anyopaque' could have null values which are illegal in type '*formats.switch_manual_enum.SwitchManualEnum.Opcode.Strval'
-referenced by:
-    comptime: tests.zig:243:17
-tests/switch_manual_int_else_test.zig:19:128: error: expected type '*formats.switch_manual_int_else.SwitchManualIntElse.Opcode.Strval', found '*anyopaque'
-    try std.testing.expectEqualStrings("foo", @as(*switch_manual_int_else.SwitchManualIntElse.Opcode.Strval, r.opcodes.items[0].body).value);
-                                                                                                             ~~~~~~~~~~~~~~~~~~^~~~~
-tests/switch_manual_int_else_test.zig:19:128: note: pointer type child 'anyopaque' cannot cast into pointer type child 'formats.switch_manual_int_else.SwitchManualIntElse.Opcode.Strval'
-formats/switch_manual_int_else.zig:108:28: note: struct declared here
-        pub const Strval = struct {
-                           ^~~~~~
-referenced by:
-    comptime: tests.zig:244:17
-tests/switch_manual_int_size_else_test.zig:19:140: error: expected type '*formats.switch_manual_int_size_else.SwitchManualIntSizeElse.Chunk.ChunkMeta', found '*anyopaque'
-    try std.testing.expectEqualStrings("Stuff", @as(*switch_manual_int_size_else.SwitchManualIntSizeElse.Chunk.ChunkMeta, r.chunks.items[0].body).title);
-                                                                                                                          ~~~~~~~~~~~~~~~~~^~~~~
-tests/switch_manual_int_size_else_test.zig:19:140: note: pointer type child 'anyopaque' cannot cast into pointer type child 'formats.switch_manual_int_size_else.SwitchManualIntSizeElse.Chunk.ChunkMeta'
-formats/switch_manual_int_size_else.zig:101:31: note: struct declared here
-        pub const ChunkMeta = struct {
-                              ^~~~~~
-referenced by:
-    comptime: tests.zig:245:17
-tests/switch_manual_int_test.zig:19:122: error: expected type '*formats.switch_manual_int.SwitchManualInt.Opcode.Strval', found '?*anyopaque'
-    try std.testing.expectEqualStrings("foobar", @as(*switch_manual_int.SwitchManualInt.Opcode.Strval, r.opcodes.items[0].body).value);
-                                                                                                       ~~~~~~~~~~~~~~~~~~^~~~~
-tests/switch_manual_int_test.zig:19:122: note: '?*anyopaque' could have null values which are illegal in type '*formats.switch_manual_int.SwitchManualInt.Opcode.Strval'
-referenced by:
-    comptime: tests.zig:248:17
-tests/switch_manual_str_else_test.zig:19:128: error: expected type '*formats.switch_manual_str_else.SwitchManualStrElse.Opcode.Strval', found '*anyopaque'
-    try std.testing.expectEqualStrings("foo", @as(*switch_manual_str_else.SwitchManualStrElse.Opcode.Strval, r.opcodes.items[0].body).value);
-                                                                                                             ~~~~~~~~~~~~~~~~~~^~~~~
-tests/switch_manual_str_else_test.zig:19:128: note: pointer type child 'anyopaque' cannot cast into pointer type child 'formats.switch_manual_str_else.SwitchManualStrElse.Opcode.Strval'
-formats/switch_manual_str_else.zig:109:28: note: struct declared here
-        pub const Strval = struct {
-                           ^~~~~~
-referenced by:
-    comptime: tests.zig:249:17
-tests/switch_manual_str_test.zig:19:122: error: expected type '*formats.switch_manual_str.SwitchManualStr.Opcode.Strval', found '?*anyopaque'
-    try std.testing.expectEqualStrings("foobar", @as(*switch_manual_str.SwitchManualStr.Opcode.Strval, r.opcodes.items[0].body).value);
-                                                                                                       ~~~~~~~~~~~~~~~~~~^~~~~
-tests/switch_manual_str_test.zig:19:122: note: '?*anyopaque' could have null values which are illegal in type '*formats.switch_manual_str.SwitchManualStr.Opcode.Strval'
-referenced by:
-    comptime: tests.zig:250:17
-error: the following command failed with 66 compilation errors:
+error: the following command failed with 54 compilation errors:
 /usr/local/zig-x86_64-linux-0.15.2/zig test -freference-trace=256 -ODebug --dep kaitai_struct -Mroot=/tests/spec/zig/tests.zig -Mkaitai_struct=/runtime/zig/src/root.zig --test-runner /tests/spec/zig/test_runner.zig --cache-dir .zig-cache --global-cache-dir /root/.cache/zig --name test --zig-lib-dir /usr/local/zig-x86_64-linux-0.15.2/lib/ --listen=-
 
 Build Summary: 0/2 steps succeeded; 1 failed
 test transitive failure
-+- compile test Debug native 66 errors
++- compile test Debug native 54 errors
 
 error: the following build command failed with exit code 1:
-.zig-cache/o/bb0d238f5ef3f946fb71974f3563c77f/build /usr/local/zig-x86_64-linux-0.15.2/zig /usr/local/zig-x86_64-linux-0.15.2/lib /tests/spec/zig .zig-cache /root/.cache/zig --seed 0x2b88cfab -Z30b18b7607defc2c test --summary all -freference-trace -Dno-bin
+.zig-cache/o/bb0d238f5ef3f946fb71974f3563c77f/build /usr/local/zig-x86_64-linux-0.15.2/zig /usr/local/zig-x86_64-linux-0.15.2/lib /tests/spec/zig .zig-cache /root/.cache/zig --seed 0xc82847a8 -Z9bfb17733e89e365 test --summary all -freference-trace -Dno-bin
