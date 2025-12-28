@@ -1,13 +1,13 @@
 {
   "$meta": {
     "lang": "zig",
-    "timestamp": "2025-12-12T23:32:10Z",
+    "timestamp": "2025-12-28T22:40:17Z",
     "ci": {
       "ci": "github",
-      "run_id": "20182854871",
-      "run_number": "366",
-      "job_id": "57946946375",
-      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/20182854871/job/57946946375"
+      "run_id": "20560533938",
+      "run_number": "367",
+      "job_id": "59050531270",
+      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/20560533938/job/59050531270"
     }
   },
   "BcdUserTypeBe": {
@@ -185,7 +185,7 @@
       "file_name": null,
       "line_num": null,
       "message": "TestExpectedEqual: expected 80, found 170",
-      "trace": "/usr/local/zig-x86_64-linux-0.15.2/lib/std/testing.zig:110:17: 0x12029c4 in expectEqualInner__anon_29819 (std.zig)\n                return error.TestExpectedEqual;\n                ^\n/tests/spec/zig/tests/debug_0_test.zig:17:5: 0x12404ea in test.Debug0 (tests.zig)\n    try _imp_std.testing.expectEqual(80, r.one);\n    ^"
+      "trace": "/usr/local/zig-x86_64-linux-0.15.2/lib/std/testing.zig:110:17: 0x12029c4 in expectEqualInner__anon_29857 (std.zig)\n                return error.TestExpectedEqual;\n                ^\n/tests/spec/zig/tests/debug_0_test.zig:17:5: 0x12404ea in test.Debug0 (tests.zig)\n    try _imp_std.testing.expectEqual(80, r.one);\n    ^"
     },
     "is_kst": true
   },
@@ -211,7 +211,7 @@
       "file_name": null,
       "line_num": null,
       "message": "TestExpectedEqual: expected .enum_value_80, found @enumFromInt(-1431655766)",
-      "trace": "/usr/local/zig-x86_64-linux-0.15.2/lib/std/testing.zig:110:17: 0x1241c74 in expectEqualInner__anon_31807 (std.zig)\n                return error.TestExpectedEqual;\n                ^\n/tests/spec/zig/tests/debug_enum_name_test.zig:17:5: 0x1242403 in test.DebugEnumName (tests.zig)\n    try _imp_std.testing.expectEqual(_imp_debug_enum_name.DebugEnumName.TestEnum1.enum_value_80, r.one);\n    ^"
+      "trace": "/usr/local/zig-x86_64-linux-0.15.2/lib/std/testing.zig:110:17: 0x1241c74 in expectEqualInner__anon_31845 (std.zig)\n                return error.TestExpectedEqual;\n                ^\n/tests/spec/zig/tests/debug_enum_name_test.zig:17:5: 0x1242403 in test.DebugEnumName (tests.zig)\n    try _imp_std.testing.expectEqual(_imp_debug_enum_name.DebugEnumName.TestEnum1.enum_value_80, r.one);\n    ^"
     },
     "is_kst": true
   },
@@ -365,8 +365,8 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "TestExpectedError: expected error.EndOfStream, found .{ .pre_bits = 12297829382473034410, .fail_bits = 12297829382473034410, ._root = .{ .pre_bits = 12297829382473034410, .fail_bits = 12297829382473034410, ._root = .{ .pre_bits = 12297829382473034410, .fail_bits = 12297829382473034410, ._root = .{ ... }, ._parent = null, ._arena = .{ ... }, ._io = .{ ... } }, ._parent = null, ._arena = .{ .child_allocator = .{ ... }, .state = .{ ... } }, ._io = .{ .reader_impl = .{ ... }, .bits_left = 0, .bits = 0 } }, ._parent = null, ._arena = .{ .child_allocator = .{ .ptr = anyopaque@159d240, .vtable = .{ ... } }, .state = .{ .buffer_list = .{ ... }, .end_index = 48 } }, ._io = .{ .reader_impl = .{ .file = .{ ... } }, .bits_left = 0, .bits = 0 } }",
-      "trace": "/usr/local/zig-x86_64-linux-0.15.2/lib/std/testing.zig:57:9: 0x12a4171 in expectError__anon_37136 (std.zig)\n        return error.TestExpectedError;\n        ^\n/tests/spec/zig/tests/eof_exception_bits_be_test.zig:16:5: 0x12a4625 in test.EofExceptionBitsBe (tests.zig)\n    try _imp_std.testing.expectError(error.EndOfStream, _imp_eof_exception_bits_be.EofExceptionBitsBe.create(&arena, &_io, null, null));\n    ^"
+      "message": "TestExpectedError: expected error.EndOfStream, found .{ .pre_bits = 12297829382473034410, .fail_bits = 12297829382473034410, ._root = .{ .pre_bits = 12297829382473034410, .fail_bits = 12297829382473034410, ._root = .{ .pre_bits = 12297829382473034410, .fail_bits = 12297829382473034410, ._root = .{ ... }, ._parent = null, ._arena = .{ ... }, ._io = .{ ... } }, ._parent = null, ._arena = .{ .child_allocator = .{ ... }, .state = .{ ... } }, ._io = .{ .reader_impl = .{ ... }, .bits_left = 0, .bits = 0 } }, ._parent = null, ._arena = .{ .child_allocator = .{ .ptr = anyopaque@159b240, .vtable = .{ ... } }, .state = .{ .buffer_list = .{ ... }, .end_index = 48 } }, ._io = .{ .reader_impl = .{ .file = .{ ... } }, .bits_left = 0, .bits = 0 } }",
+      "trace": "/usr/local/zig-x86_64-linux-0.15.2/lib/std/testing.zig:57:9: 0x12a4171 in expectError__anon_37174 (std.zig)\n        return error.TestExpectedError;\n        ^\n/tests/spec/zig/tests/eof_exception_bits_be_test.zig:16:5: 0x12a4625 in test.EofExceptionBitsBe (tests.zig)\n    try _imp_std.testing.expectError(error.EndOfStream, _imp_eof_exception_bits_be.EofExceptionBitsBe.create(&arena, &_io, null, null));\n    ^"
     },
     "is_kst": true
   },
@@ -376,8 +376,8 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "TestExpectedError: expected error.EndOfStream, found .{ .pre_bits = 12297829382473034410, .fail_bits = 12297829382473034410, ._root = .{ .pre_bits = 12297829382473034410, .fail_bits = 12297829382473034410, ._root = .{ .pre_bits = 12297829382473034410, .fail_bits = 12297829382473034410, ._root = .{ ... }, ._parent = null, ._arena = .{ ... }, ._io = .{ ... } }, ._parent = null, ._arena = .{ .child_allocator = .{ ... }, .state = .{ ... } }, ._io = .{ .reader_impl = .{ ... }, .bits_left = 0, .bits = 0 } }, ._parent = null, ._arena = .{ .child_allocator = .{ .ptr = anyopaque@159d240, .vtable = .{ ... } }, .state = .{ .buffer_list = .{ ... }, .end_index = 48 } }, ._io = .{ .reader_impl = .{ .file = .{ ... } }, .bits_left = 0, .bits = 0 } }",
-      "trace": "/usr/local/zig-x86_64-linux-0.15.2/lib/std/testing.zig:57:9: 0x129ffa1 in expectError__anon_37033 (std.zig)\n        return error.TestExpectedError;\n        ^\n/tests/spec/zig/tests/eof_exception_bits_be2_test.zig:16:5: 0x12a0455 in test.EofExceptionBitsBe2 (tests.zig)\n    try _imp_std.testing.expectError(error.EndOfStream, _imp_eof_exception_bits_be2.EofExceptionBitsBe2.create(&arena, &_io, null, null));\n    ^"
+      "message": "TestExpectedError: expected error.EndOfStream, found .{ .pre_bits = 12297829382473034410, .fail_bits = 12297829382473034410, ._root = .{ .pre_bits = 12297829382473034410, .fail_bits = 12297829382473034410, ._root = .{ .pre_bits = 12297829382473034410, .fail_bits = 12297829382473034410, ._root = .{ ... }, ._parent = null, ._arena = .{ ... }, ._io = .{ ... } }, ._parent = null, ._arena = .{ .child_allocator = .{ ... }, .state = .{ ... } }, ._io = .{ .reader_impl = .{ ... }, .bits_left = 0, .bits = 0 } }, ._parent = null, ._arena = .{ .child_allocator = .{ .ptr = anyopaque@159b240, .vtable = .{ ... } }, .state = .{ .buffer_list = .{ ... }, .end_index = 48 } }, ._io = .{ .reader_impl = .{ .file = .{ ... } }, .bits_left = 0, .bits = 0 } }",
+      "trace": "/usr/local/zig-x86_64-linux-0.15.2/lib/std/testing.zig:57:9: 0x129ffa1 in expectError__anon_37071 (std.zig)\n        return error.TestExpectedError;\n        ^\n/tests/spec/zig/tests/eof_exception_bits_be2_test.zig:16:5: 0x12a0455 in test.EofExceptionBitsBe2 (tests.zig)\n    try _imp_std.testing.expectError(error.EndOfStream, _imp_eof_exception_bits_be2.EofExceptionBitsBe2.create(&arena, &_io, null, null));\n    ^"
     },
     "is_kst": true
   },
@@ -387,8 +387,8 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "TestExpectedError: expected error.EndOfStream, found .{ .pre_bits = 12297829382473034410, .fail_bits = 12297829382473034410, ._root = .{ .pre_bits = 12297829382473034410, .fail_bits = 12297829382473034410, ._root = .{ .pre_bits = 12297829382473034410, .fail_bits = 12297829382473034410, ._root = .{ ... }, ._parent = null, ._arena = .{ ... }, ._io = .{ ... } }, ._parent = null, ._arena = .{ .child_allocator = .{ ... }, .state = .{ ... } }, ._io = .{ .reader_impl = .{ ... }, .bits_left = 0, .bits = 0 } }, ._parent = null, ._arena = .{ .child_allocator = .{ .ptr = anyopaque@159d240, .vtable = .{ ... } }, .state = .{ .buffer_list = .{ ... }, .end_index = 48 } }, ._io = .{ .reader_impl = .{ .file = .{ ... } }, .bits_left = 0, .bits = 0 } }",
-      "trace": "/usr/local/zig-x86_64-linux-0.15.2/lib/std/testing.zig:57:9: 0x12ac511 in expectError__anon_37288 (std.zig)\n        return error.TestExpectedError;\n        ^\n/tests/spec/zig/tests/eof_exception_bits_le_test.zig:16:5: 0x12ac9c5 in test.EofExceptionBitsLe (tests.zig)\n    try _imp_std.testing.expectError(error.EndOfStream, _imp_eof_exception_bits_le.EofExceptionBitsLe.create(&arena, &_io, null, null));\n    ^"
+      "message": "TestExpectedError: expected error.EndOfStream, found .{ .pre_bits = 12297829382473034410, .fail_bits = 12297829382473034410, ._root = .{ .pre_bits = 12297829382473034410, .fail_bits = 12297829382473034410, ._root = .{ .pre_bits = 12297829382473034410, .fail_bits = 12297829382473034410, ._root = .{ ... }, ._parent = null, ._arena = .{ ... }, ._io = .{ ... } }, ._parent = null, ._arena = .{ .child_allocator = .{ ... }, .state = .{ ... } }, ._io = .{ .reader_impl = .{ ... }, .bits_left = 0, .bits = 0 } }, ._parent = null, ._arena = .{ .child_allocator = .{ .ptr = anyopaque@159b240, .vtable = .{ ... } }, .state = .{ .buffer_list = .{ ... }, .end_index = 48 } }, ._io = .{ .reader_impl = .{ .file = .{ ... } }, .bits_left = 0, .bits = 0 } }",
+      "trace": "/usr/local/zig-x86_64-linux-0.15.2/lib/std/testing.zig:57:9: 0x12ac511 in expectError__anon_37326 (std.zig)\n        return error.TestExpectedError;\n        ^\n/tests/spec/zig/tests/eof_exception_bits_le_test.zig:16:5: 0x12ac9c5 in test.EofExceptionBitsLe (tests.zig)\n    try _imp_std.testing.expectError(error.EndOfStream, _imp_eof_exception_bits_le.EofExceptionBitsLe.create(&arena, &_io, null, null));\n    ^"
     },
     "is_kst": true
   },
@@ -398,8 +398,8 @@
     "failure": {
       "file_name": null,
       "line_num": null,
-      "message": "TestExpectedError: expected error.EndOfStream, found .{ .pre_bits = 12297829382473034410, .fail_bits = 12297829382473034410, ._root = .{ .pre_bits = 12297829382473034410, .fail_bits = 12297829382473034410, ._root = .{ .pre_bits = 12297829382473034410, .fail_bits = 12297829382473034410, ._root = .{ ... }, ._parent = null, ._arena = .{ ... }, ._io = .{ ... } }, ._parent = null, ._arena = .{ .child_allocator = .{ ... }, .state = .{ ... } }, ._io = .{ .reader_impl = .{ ... }, .bits_left = 0, .bits = 0 } }, ._parent = null, ._arena = .{ .child_allocator = .{ .ptr = anyopaque@159d240, .vtable = .{ ... } }, .state = .{ .buffer_list = .{ ... }, .end_index = 48 } }, ._io = .{ .reader_impl = .{ .file = .{ ... } }, .bits_left = 0, .bits = 0 } }",
-      "trace": "/usr/local/zig-x86_64-linux-0.15.2/lib/std/testing.zig:57:9: 0x12a8341 in expectError__anon_37212 (std.zig)\n        return error.TestExpectedError;\n        ^\n/tests/spec/zig/tests/eof_exception_bits_le2_test.zig:16:5: 0x12a87f5 in test.EofExceptionBitsLe2 (tests.zig)\n    try _imp_std.testing.expectError(error.EndOfStream, _imp_eof_exception_bits_le2.EofExceptionBitsLe2.create(&arena, &_io, null, null));\n    ^"
+      "message": "TestExpectedError: expected error.EndOfStream, found .{ .pre_bits = 12297829382473034410, .fail_bits = 12297829382473034410, ._root = .{ .pre_bits = 12297829382473034410, .fail_bits = 12297829382473034410, ._root = .{ .pre_bits = 12297829382473034410, .fail_bits = 12297829382473034410, ._root = .{ ... }, ._parent = null, ._arena = .{ ... }, ._io = .{ ... } }, ._parent = null, ._arena = .{ .child_allocator = .{ ... }, .state = .{ ... } }, ._io = .{ .reader_impl = .{ ... }, .bits_left = 0, .bits = 0 } }, ._parent = null, ._arena = .{ .child_allocator = .{ .ptr = anyopaque@159b240, .vtable = .{ ... } }, .state = .{ .buffer_list = .{ ... }, .end_index = 48 } }, ._io = .{ .reader_impl = .{ .file = .{ ... } }, .bits_left = 0, .bits = 0 } }",
+      "trace": "/usr/local/zig-x86_64-linux-0.15.2/lib/std/testing.zig:57:9: 0x12a8341 in expectError__anon_37250 (std.zig)\n        return error.TestExpectedError;\n        ^\n/tests/spec/zig/tests/eof_exception_bits_le2_test.zig:16:5: 0x12a87f5 in test.EofExceptionBitsLe2 (tests.zig)\n    try _imp_std.testing.expectError(error.EndOfStream, _imp_eof_exception_bits_le2.EofExceptionBitsLe2.create(&arena, &_io, null, null));\n    ^"
     },
     "is_kst": true
   },
