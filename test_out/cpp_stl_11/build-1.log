@@ -2,7 +2,7 @@ Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
 Copyright (C) Microsoft Corporation. All rights reserved.
 
 Building the projects in this solution one at a time. To enable parallel build, please add the "/m" switch.
-Build started 12/28/2025 10:56:55 PM.
+Build started 1/28/2026 12:06:31 AM.
 Project "C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\KS_TEST_CPP_STL.sln" on node 1 (default targets).
 ValidateSolutionConfiguration:
   Building solution configuration "Debug|x64".
@@ -1177,6 +1177,35 @@ C:\Tools\vcpkg\installed\x64-windows\include\boost/test/tools/old/impl.hpp(107):
               Arg1=int
           ]
   test_repeat_eos_u4.cpp
+C:\Tools\vcpkg\installed\x64-windows\include\boost/test/tools/old/impl.hpp(107): warning C4389: '==': signed/unsigned mismatch [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
+  C:\Tools\vcpkg\installed\x64-windows\include\boost/test/tools/old/impl.hpp(130): note: see reference to function template instantiation 'boost::test_tools::assertion_result boost::test_tools::tt_detail::equal_impl<Left,Right>(const Left &,const Right &)' being compiled
+          with
+          [
+              Left=uint32_t,
+              Right=int
+          ]
+  C:\Tools\vcpkg\installed\x64-windows\include\boost/test/tools/old/impl.hpp(145): note: see reference to function template instantiation 'boost::test_tools::assertion_result boost::test_tools::tt_detail::equal_impl_frwd::call_impl<Left,Right>(const Left &,const Right &,boost::mpl::false_) const' being compiled
+          with
+          [
+              Left=uint32_t,
+              Right=int
+          ]
+  C:\Tools\vcpkg\installed\x64-windows\include\boost/test/tools/old/impl.hpp(92): note: see reference to function template instantiation 'boost::test_tools::assertion_result boost::test_tools::tt_detail::equal_impl_frwd::operator ()<Arg0,Arg1>(const Left &,const Right &) const' being compiled
+          with
+          [
+              Arg0=uint32_t,
+              Arg1=int,
+              Left=uint32_t,
+              Right=int
+          ]
+  C:\projects\ci-targets\tests\spec\cpp_stl_11\test_repeat_eos_u4.cpp(14): note: see reference to function template instantiation 'bool boost::test_tools::tt_detail::check_frwd<boost::test_tools::tt_detail::equal_impl_frwd,_Ty,int>(Pred,const boost::unit_test::lazy_ostream &,boost::unit_test::const_string,size_t,boost::test_tools::tt_detail::tool_level,boost::test_tools::tt_detail::check_type,const Arg0 &,const char *,const Arg1 &,const char *)' being compiled
+          with
+          [
+              _Ty=uint32_t,
+              Pred=boost::test_tools::tt_detail::equal_impl_frwd,
+              Arg0=uint32_t,
+              Arg1=int
+          ]
   test_repeat_n_struct.cpp
 C:\Tools\vcpkg\installed\x64-windows\include\boost/test/tools/old/impl.hpp(107): warning C4389: '==': signed/unsigned mismatch [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
   C:\Tools\vcpkg\installed\x64-windows\include\boost/test/tools/old/impl.hpp(130): note: see reference to function template instantiation 'boost::test_tools::assertion_result boost::test_tools::tt_detail::equal_impl<Left,Right>(const Left &,const Right &)' being compiled
@@ -2160,6 +2189,7 @@ Build FAILED.
   C:\Tools\vcpkg\installed\x64-windows\include\boost/test/tools/old/impl.hpp(107): warning C4389: '==': signed/unsigned mismatch [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
   C:\Tools\vcpkg\installed\x64-windows\include\boost/test/tools/old/impl.hpp(107): warning C4389: '==': signed/unsigned mismatch [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
   C:\Tools\vcpkg\installed\x64-windows\include\boost/test/tools/old/impl.hpp(107): warning C4389: '==': signed/unsigned mismatch [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
+  C:\Tools\vcpkg\installed\x64-windows\include\boost/test/tools/old/impl.hpp(107): warning C4389: '==': signed/unsigned mismatch [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
   c:\projects\ci-targets\tests\compiled\cpp_stl_11\enum_long_range_s.h(21): warning C4309: 'initializing': truncation of constant value [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
   c:\projects\ci-targets\tests\compiled\cpp_stl_11\enum_long_range_s.h(28): warning C4309: 'initializing': truncation of constant value [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
   c:\projects\ci-targets\tests\compiled\cpp_stl_11\enum_long_range_u.h(23): warning C4309: 'initializing': truncation of constant value [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
@@ -2248,7 +2278,7 @@ Build FAILED.
   C:\projects\ci-targets\tests\compiled\cpp_stl_11\params_pass_array_io.cpp(18): error C2664: 'params_pass_array_io_t::param_type_t::param_type_t(const params_pass_array_io_t::param_type_t &)': cannot convert argument 1 from 'std::unique_ptr<std::vector<kaitai::kstream *,std::allocator<_Ty>>,std::default_delete<std::vector<_Ty,std::allocator<_Ty>>>>' to 'std::vector<kaitai::kstream *,std::allocator<_Ty>> *' [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
   C:\projects\ci-targets\tests\compiled\cpp_stl_11\params_pass_array_usertype.cpp(19): error C2664: 'params_pass_array_usertype_t::param_type_t::param_type_t(const params_pass_array_usertype_t::param_type_t &)': cannot convert argument 1 from 'std::vector<std::unique_ptr<params_pass_array_usertype_t::block_t,std::default_delete<_Ty>>,std::allocator<std::unique_ptr<_Ty,std::default_delete<_Ty>>>> *' to 'std::vector<params_pass_array_usertype_t::block_t *,std::allocator<_Ty>> *' [C:\projects\ci-targets\tests\compiled\cpp_stl_11\bin\ks_tests.vcxproj]
 
-    113 Warning(s)
+    114 Warning(s)
     24 Error(s)
 
-Time Elapsed 00:09:19.61
+Time Elapsed 00:09:39.55
