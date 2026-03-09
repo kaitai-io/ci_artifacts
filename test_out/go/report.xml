@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites tests="249" failures="14">
-	<testsuite name="kaitai/spec" tests="249" failures="14" errors="0" id="0" hostname="48f1b8cd0ba5" time="0.036" timestamp="2026-01-27T23:48:19Z">
+	<testsuite name="kaitai/spec" tests="249" failures="14" errors="0" id="0" hostname="03dd9ffeb396" time="0.038" timestamp="2026-03-09T18:17:22Z">
 		<testcase name="TestBcdUserTypeBe" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestBcdUserTypeLe" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestBitsByteAligned" classname="kaitai/spec" time="0.000"></testcase>
@@ -171,31 +171,31 @@
 		<testcase name="TestNestedTypes" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestNonStandard" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestOpaqueExternalType02Parent" classname="kaitai/spec" time="0.000">
-			<failure message="Failed"><![CDATA[goroutine 10 [running]:
+			<failure message="Failed"><![CDATA[goroutine 144 [running]:
 runtime/debug.Stack()
 	/usr/local/go/src/runtime/debug/stack.go:26 +0x5e
 runtime/debug.PrintStack()
 	/usr/local/go/src/runtime/debug/stack.go:18 +0x13
 kaitai/spec.TestOpaqueExternalType02Parent.func1()
-	/tests/spec/go/opaque_external_type_02_parent_test.go:15 +0x39
-panic({0x6ab2c0?, 0x98d2a0?})
-	/usr/local/go/src/runtime/panic.go:783 +0x132
+	/tests/spec/go/opaque_external_type_02_parent_test.go:15 +0x34
+panic({0x6c4a60?, 0x9c9870?})
+	/usr/local/go/src/runtime/panic.go:860 +0x13a
 test_formats.(*OpaqueExternalType02Child).SomeMethod(...)
 	/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:50
-test_formats.(*OpaqueExternalType02Child_OpaqueExternalType02ChildChild).Read(0xc00016c0c0?, 0xc000012970?, 0x3?, 0x705c20?)
+test_formats.(*OpaqueExternalType02Child_OpaqueExternalType02ChildChild).Read(0x9575f27f2f0?, 0x9575f260e10?, 0x3?, 0x7207a0?)
 	/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:77 +0x51
-test_formats.(*OpaqueExternalType02Child).Read(0xc000022410, 0xc000046688?, {0x0?, 0x0?}, 0x6ead00?)
+test_formats.(*OpaqueExternalType02Child).Read(0x9575f24b630, 0x9575f0f2e88?, {0x0?, 0x0?}, 0x704fa0?)
 	/tests/compiled/go/src/test_formats/opaque_external_type_02_child.go:42 +0x134
-test_formats.(*OpaqueExternalType02Parent_ParentObj).Read(0xc000038600, 0x418aa5?, 0x28?, 0x6eade0?)
+test_formats.(*OpaqueExternalType02Parent_ParentObj).Read(0x9575f30c100, 0x4200a5?, 0x28?, 0x705080?)
 	/tests/compiled/go/src/test_formats/opaque_external_type_02_parent.go:56 +0x7e
-test_formats.(*OpaqueExternalType02Parent).Read(0xc00016c0f0, 0x17?, {0x787a60?, 0xc00016c0f0?}, 0x7e7e88?)
+test_formats.(*OpaqueExternalType02Parent).Read(0x9575f27f320, 0x17?, {0x75cc20?, 0x9575f27f320?}, 0x7bea4c?)
 	/tests/compiled/go/src/test_formats/opaque_external_type_02_parent.go:28 +0x88
-kaitai/spec.TestOpaqueExternalType02Parent(0xc00016a1c0)
+kaitai/spec.TestOpaqueExternalType02Parent(0x9575f310008)
 	/tests/spec/go/opaque_external_type_02_parent_test.go:25 +0x10e
-testing.tRunner(0xc00016a1c0, 0x73b8a0)
-	/usr/local/go/src/testing/testing.go:1934 +0xea
+testing.tRunner(0x9575f310008, 0x757288)
+	/usr/local/go/src/testing/testing.go:2036 +0xea
 created by testing.(*T).Run in goroutine 1
-	/usr/local/go/src/testing/testing.go:1997 +0x465
+	/usr/local/go/src/testing/testing.go:2101 +0x4c5
     opaque_external_type_02_parent_test.go:16: unexpected panic: runtime error: invalid memory address or nil pointer dereference]]></failure>
 		</testcase>
 		<testcase name="TestOpaqueExternalType" classname="kaitai/spec" time="0.000"></testcase>
@@ -381,39 +381,39 @@ created by testing.(*T).Run in goroutine 1
 		<testcase name="TestSwitchManualIntElse" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestSwitchManualIntSizeElse" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestSwitchManualIntSizeEos" classname="kaitai/spec" time="0.000">
-			<failure message="Failed"><![CDATA[goroutine 215 [running]:
+			<failure message="Failed"><![CDATA[goroutine 205 [running]:
 runtime/debug.Stack()
 	/usr/local/go/src/runtime/debug/stack.go:26 +0x5e
 runtime/debug.PrintStack()
 	/usr/local/go/src/runtime/debug/stack.go:18 +0x13
 kaitai/spec.TestSwitchManualIntSizeEos.func1()
-	/tests/spec/go/switch_manual_int_size_eos_test.go:17 +0x39
-panic({0x6ad400?, 0xc0002f8720?})
-	/usr/local/go/src/runtime/panic.go:783 +0x132
-kaitai/spec.TestSwitchManualIntSizeEos(0xc0002ece00)
-	/tests/spec/go/switch_manual_int_size_eos_test.go:38 +0x69e
-testing.tRunner(0xc0002ece00, 0x73ba90)
-	/usr/local/go/src/testing/testing.go:1934 +0xea
+	/tests/spec/go/switch_manual_int_size_eos_test.go:17 +0x34
+panic({0x6c6aa0?, 0x9575f353a70?})
+	/usr/local/go/src/runtime/panic.go:860 +0x13a
+kaitai/spec.TestSwitchManualIntSizeEos(0x9575f394b48)
+	/tests/spec/go/switch_manual_int_size_eos_test.go:38 +0x696
+testing.tRunner(0x9575f394b48, 0x757478)
+	/usr/local/go/src/testing/testing.go:2036 +0xea
 created by testing.(*T).Run in goroutine 1
-	/usr/local/go/src/testing/testing.go:1997 +0x465
+	/usr/local/go/src/testing/testing.go:2101 +0x4c5
     switch_manual_int_size_eos_test.go:18: unexpected panic: interface conversion: interface {} is nil, not []uint8]]></failure>
 		</testcase>
 		<testcase name="TestSwitchManualIntSize" classname="kaitai/spec" time="0.000">
-			<failure message="Failed"><![CDATA[goroutine 216 [running]:
+			<failure message="Failed"><![CDATA[goroutine 206 [running]:
 runtime/debug.Stack()
 	/usr/local/go/src/runtime/debug/stack.go:26 +0x5e
 runtime/debug.PrintStack()
 	/usr/local/go/src/runtime/debug/stack.go:18 +0x13
 kaitai/spec.TestSwitchManualIntSize.func1()
-	/tests/spec/go/switch_manual_int_size_test.go:17 +0x39
-panic({0x6ad400?, 0xc0002f8960?})
-	/usr/local/go/src/runtime/panic.go:783 +0x132
-kaitai/spec.TestSwitchManualIntSize(0xc0002ecfc0)
-	/tests/spec/go/switch_manual_int_size_test.go:38 +0x691
-testing.tRunner(0xc0002ecfc0, 0x73ba80)
-	/usr/local/go/src/testing/testing.go:1934 +0xea
+	/tests/spec/go/switch_manual_int_size_test.go:17 +0x34
+panic({0x6c6aa0?, 0x9575f353cb0?})
+	/usr/local/go/src/runtime/panic.go:860 +0x13a
+kaitai/spec.TestSwitchManualIntSize(0x9575f394d88)
+	/tests/spec/go/switch_manual_int_size_test.go:38 +0x685
+testing.tRunner(0x9575f394d88, 0x757468)
+	/usr/local/go/src/testing/testing.go:2036 +0xea
 created by testing.(*T).Run in goroutine 1
-	/usr/local/go/src/testing/testing.go:1997 +0x465
+	/usr/local/go/src/testing/testing.go:2101 +0x4c5
     switch_manual_int_size_test.go:18: unexpected panic: interface conversion: interface {} is nil, not []uint8]]></failure>
 		</testcase>
 		<testcase name="TestSwitchManualInt" classname="kaitai/spec" time="0.000"></testcase>
@@ -421,21 +421,21 @@ created by testing.(*T).Run in goroutine 1
 		<testcase name="TestSwitchManualStr" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestSwitchMultiBoolOps" classname="kaitai/spec" time="0.000"></testcase>
 		<testcase name="TestSwitchRepeatExprInvalid" classname="kaitai/spec" time="0.000">
-			<failure message="Failed"><![CDATA[goroutine 221 [running]:
+			<failure message="Failed"><![CDATA[goroutine 211 [running]:
 runtime/debug.Stack()
 	/usr/local/go/src/runtime/debug/stack.go:26 +0x5e
 runtime/debug.PrintStack()
 	/usr/local/go/src/runtime/debug/stack.go:18 +0x13
 kaitai/spec.TestSwitchRepeatExprInvalid.func1()
-	/tests/spec/go/switch_repeat_expr_invalid_test.go:17 +0x39
-panic({0x6f0640?, 0xc000026870?})
-	/usr/local/go/src/runtime/panic.go:783 +0x132
-kaitai/spec.TestSwitchRepeatExprInvalid(0xc0002ed880)
-	/tests/spec/go/switch_repeat_expr_invalid_test.go:33 +0x2ef
-testing.tRunner(0xc0002ed880, 0x73bab8)
-	/usr/local/go/src/testing/testing.go:1934 +0xea
+	/tests/spec/go/switch_repeat_expr_invalid_test.go:17 +0x34
+panic({0x70a9c0?, 0x9575f0c8ca8?})
+	/usr/local/go/src/runtime/panic.go:860 +0x13a
+kaitai/spec.TestSwitchRepeatExprInvalid(0x9575f3958c8)
+	/tests/spec/go/switch_repeat_expr_invalid_test.go:33 +0x2ea
+testing.tRunner(0x9575f3958c8, 0x7574a0)
+	/usr/local/go/src/testing/testing.go:2036 +0xea
 created by testing.(*T).Run in goroutine 1
-	/usr/local/go/src/testing/testing.go:1997 +0x465
+	/usr/local/go/src/testing/testing.go:2101 +0x4c5
     switch_repeat_expr_invalid_test.go:18: unexpected panic: runtime error: index out of range [0] with length 0]]></failure>
 		</testcase>
 		<testcase name="TestSwitchRepeatExpr" classname="kaitai/spec" time="0.000"></testcase>
