@@ -1,13 +1,13 @@
 {
   "$meta": {
     "lang": "ruby",
-    "timestamp": "2026-03-09T18:17:40Z",
+    "timestamp": "2026-03-19T22:54:58Z",
     "ci": {
       "ci": "github",
-      "run_id": "22868088359",
-      "run_number": "369",
-      "job_id": "66340216796",
-      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/22868088359/job/66340216796"
+      "run_id": "23320764532",
+      "run_number": "370",
+      "job_id": "67831314293",
+      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/23320764532/job/67831314293"
     }
   },
   "BcdUserTypeBe": {
@@ -21,8 +21,14 @@
     "is_kst": true
   },
   "BitsByteAligned": {
-    "status": "passed",
+    "status": "failed",
     "elapsed": 0.0,
+    "failure": {
+      "file_name": "./spec/ruby/bits_byte_aligned_spec.rb",
+      "line_num": 4,
+      "message": "\nexpected: 65\n     got: 80\n\n(compared using ==)\n",
+      "trace": "./spec/ruby/bits_byte_aligned_spec.rb:14:in `block (2 levels) in <top (required)>'"
+    },
     "is_kst": true
   },
   "BitsEnum": {
@@ -306,6 +312,11 @@
     "is_kst": true
   },
   "EofExceptionSized": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "EofExceptionSwitchUser": {
     "status": "passed",
     "elapsed": 0.0,
     "is_kst": true
@@ -904,7 +915,18 @@
     "elapsed": 0.0,
     "is_kst": true
   },
-  "RepeatEosBit": {
+  "RepeatEosBitsB1": {
+    "status": "failed",
+    "elapsed": 0.0,
+    "failure": {
+      "file_name": "./spec/ruby/repeat_eos_bits_b1_spec.rb",
+      "line_num": 4,
+      "message": "\nexpected: true\n     got: 1\n\n(compared using ==)\n",
+      "trace": "./spec/ruby/repeat_eos_bits_b1_spec.rb:8:in `block (2 levels) in <top (required)>'"
+    },
+    "is_kst": true
+  },
+  "RepeatEosBitsB4": {
     "status": "passed",
     "elapsed": 0.0,
     "is_kst": true
