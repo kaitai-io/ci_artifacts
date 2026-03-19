@@ -7,7 +7,7 @@ referenced by:
     _read: formats/expr_str_encodings.zig:27:68
     create: formats/expr_str_encodings.zig:15:23
     test.ExprStrEncodings: tests/expr_str_encodings_test.zig:16:66
-    comptime: tests.zig:81:17
+    comptime: tests.zig:82:17
 /runtime/zig/src/root.zig:478:9: error: unsupported encoding 'IBM437'
         @compileError("unsupported encoding '" ++ encoding ++ "'");
         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -15,7 +15,7 @@ referenced by:
     _read: formats/expr_str_encodings.zig:29:68
     create: formats/expr_str_encodings.zig:15:23
     test.ExprStrEncodings: tests/expr_str_encodings_test.zig:16:66
-    comptime: tests.zig:81:17
+    comptime: tests.zig:82:17
 error: the following command failed with 2 compilation errors:
 /usr/local/zig-x86_64-linux-0.15.2/zig test -freference-trace=256 -ODebug --dep kaitai_struct -Mroot=/tests/spec/zig/tests.zig -Mkaitai_struct=/runtime/zig/src/root.zig --test-runner /tests/spec/zig/test_runner.zig --cache-dir .zig-cache --global-cache-dir /root/.cache/zig --name test --zig-lib-dir /usr/local/zig-x86_64-linux-0.15.2/lib/ --listen=-
 
@@ -24,4 +24,4 @@ test transitive failure
 +- compile test Debug native 2 errors
 
 error: the following build command failed with exit code 1:
-.zig-cache/o/bb2be1d730b79250120f1950cdfc8757/build /usr/local/zig-x86_64-linux-0.15.2/zig /usr/local/zig-x86_64-linux-0.15.2/lib /tests/spec/zig .zig-cache /root/.cache/zig --seed 0x852a1043 -Zb1fa4def60e705d3 test --summary all -freference-trace -Dno-bin
+.zig-cache/o/bb2be1d730b79250120f1950cdfc8757/build /usr/local/zig-x86_64-linux-0.15.2/zig /usr/local/zig-x86_64-linux-0.15.2/lib /tests/spec/zig .zig-cache /root/.cache/zig --seed 0x711ae5da -Za9dcabbd4f828b9c test --summary all -freference-trace -Dno-bin
