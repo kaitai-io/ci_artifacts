@@ -12,8 +12,8 @@
   <line>Command: /tests/compiled/cpp_stl_11/bin/ks_tests</line>
 </preamble>
 
-<pid>3197</pid>
-<ppid>3194</ppid>
+<pid>3217</pid>
+<ppid>3214</ppid>
 <tool>memcheck</tool>
 
 <args>
@@ -30,14 +30,120 @@
 
 <status>
   <state>RUNNING</state>
-  <time>00:00:00:00.284 </time>
+  <time>00:00:00:00.277 </time>
 </status>
 
 
 <status>
   <state>FINISHED</state>
-  <time>00:00:00:09.639 </time>
+  <time>00:00:00:09.291 </time>
 </status>
+
+<error>
+  <unique>0x13</unique>
+  <tid>1</tid>
+  <kind>Leak_DefinitelyLost</kind>
+  <xwhat>
+    <text>1,279 (64 direct, 1,215 indirect) bytes in 1 blocks are definitely lost in loss record 20 of 20</text>
+    <leakedbytes>1279</leakedbytes>
+    <leakedblocks>1</leakedblocks>
+  </xwhat>
+  <stack>
+    <frame>
+      <ip>0x4C2B0E0</ip>
+      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
+      <fn>operator new(unsigned long)</fn>
+    </frame>
+    <frame>
+      <ip>0x4FF907</ip>
+      <obj>/tests/compiled/cpp_stl_11/bin/ks_tests</obj>
+      <fn>test_switch_repeat_expr_invalid::test_method()</fn>
+      <dir>/tests/spec/cpp_stl_11</dir>
+      <file>test_switch_repeat_expr_invalid.cpp</file>
+      <line>10</line>
+    </frame>
+    <frame>
+      <ip>0x4FF648</ip>
+      <obj>/tests/compiled/cpp_stl_11/bin/ks_tests</obj>
+      <fn>test_switch_repeat_expr_invalid_invoker()</fn>
+      <dir>/tests/spec/cpp_stl_11</dir>
+      <file>test_switch_repeat_expr_invalid.cpp</file>
+      <line>7</line>
+    </frame>
+    <frame>
+      <ip>0x40E81F</ip>
+      <obj>/tests/compiled/cpp_stl_11/bin/ks_tests</obj>
+      <fn>boost::detail::function::void_function_invoker0&lt;void (*)(), void&gt;::invoke(boost::detail::function::function_buffer&amp;)</fn>
+      <dir>/usr/local/include/boost/function</dir>
+      <file>function_template.hpp</file>
+      <line>117</line>
+    </frame>
+    <frame>
+      <ip>0x4EB74AF</ip>
+      <obj>/usr/local/lib/libboost_unit_test_framework.so.1.81.0</obj>
+      <fn>boost::function0&lt;void&gt;::operator()() const</fn>
+      <dir>/root/boost_1_81_0/./boost/function</dir>
+      <file>function_template.hpp</file>
+      <line>764</line>
+    </frame>
+    <frame>
+      <ip>0x4EB662C</ip>
+      <obj>/usr/local/lib/libboost_unit_test_framework.so.1.81.0</obj>
+      <fn>boost::detail::forward::operator()()</fn>
+      <dir>/root/boost_1_81_0/./boost/test/impl</dir>
+      <file>execution_monitor.ipp</file>
+      <line>1388</line>
+    </frame>
+    <frame>
+      <ip>0x4EB8AB0</ip>
+      <obj>/usr/local/lib/libboost_unit_test_framework.so.1.81.0</obj>
+      <fn>boost::detail::function::function_obj_invoker0&lt;boost::detail::forward, int&gt;::invoke(boost::detail::function::function_buffer&amp;)</fn>
+      <dir>/root/boost_1_81_0/./boost/function</dir>
+      <file>function_template.hpp</file>
+      <line>137</line>
+    </frame>
+    <frame>
+      <ip>0x4EB7A93</ip>
+      <obj>/usr/local/lib/libboost_unit_test_framework.so.1.81.0</obj>
+      <fn>boost::function0&lt;int&gt;::operator()() const</fn>
+      <dir>/root/boost_1_81_0/./boost/function</dir>
+      <file>function_template.hpp</file>
+      <line>764</line>
+    </frame>
+    <frame>
+      <ip>0x4EB6F83</ip>
+      <obj>/usr/local/lib/libboost_unit_test_framework.so.1.81.0</obj>
+      <fn>int boost::detail::do_invoke&lt;boost::shared_ptr&lt;boost::detail::translator_holder_base&gt;, boost::function&lt;int ()&gt; &gt;(boost::shared_ptr&lt;boost::detail::translator_holder_base&gt; const&amp;, boost::function&lt;int ()&gt; const&amp;)</fn>
+      <dir>/root/boost_1_81_0/./boost/test/impl</dir>
+      <file>execution_monitor.ipp</file>
+      <line>301</line>
+    </frame>
+    <frame>
+      <ip>0x4EB4239</ip>
+      <obj>/usr/local/lib/libboost_unit_test_framework.so.1.81.0</obj>
+      <fn>boost::execution_monitor::catch_signals(boost::function&lt;int ()&gt; const&amp;)</fn>
+      <dir>/root/boost_1_81_0/./boost/test/impl</dir>
+      <file>execution_monitor.ipp</file>
+      <line>903</line>
+    </frame>
+    <frame>
+      <ip>0x4EB438F</ip>
+      <obj>/usr/local/lib/libboost_unit_test_framework.so.1.81.0</obj>
+      <fn>boost::execution_monitor::execute(boost::function&lt;int ()&gt; const&amp;)</fn>
+      <dir>/root/boost_1_81_0/./boost/test/impl</dir>
+      <file>execution_monitor.ipp</file>
+      <line>1301</line>
+    </frame>
+    <frame>
+      <ip>0x4EB5099</ip>
+      <obj>/usr/local/lib/libboost_unit_test_framework.so.1.81.0</obj>
+      <fn>boost::execution_monitor::vexecute(boost::function&lt;void ()&gt; const&amp;)</fn>
+      <dir>/root/boost_1_81_0/./boost/test/impl</dir>
+      <file>execution_monitor.ipp</file>
+      <line>1397</line>
+    </frame>
+  </stack>
+</error>
 
 <errorcounts>
 </errorcounts>
