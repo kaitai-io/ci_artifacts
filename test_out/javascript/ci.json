@@ -1,13 +1,13 @@
 {
   "$meta": {
     "lang": "javascript",
-    "timestamp": "2026-03-09T18:16:00Z",
+    "timestamp": "2026-03-19T22:53:45Z",
     "ci": {
       "ci": "github",
-      "run_id": "22868088359",
-      "run_number": "369",
-      "job_id": "66340216755",
-      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/22868088359/job/66340216755"
+      "run_id": "23320764532",
+      "run_number": "370",
+      "job_id": "67831314238",
+      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/23320764532/job/67831314238"
     }
   },
   "BcdUserTypeBe": {
@@ -21,8 +21,14 @@
     "is_kst": true
   },
   "BitsByteAligned": {
-    "status": "passed",
+    "status": "failed",
     "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": null,
+      "trace": "Expected values to be strictly equal:\n\n255 !== 70\n\n\n      + expected - actual\n\n      -255\n      +70\n      \nAssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n255 !== 70\n\n    at /tests/spec/javascript/test_bits_byte_aligned.js:18:10\n    at /tests/helpers/javascript/testHelper.js:16:11\n    at FSReqCallback.readFileAfterClose [as oncomplete] (internal/fs/read_file_context.js:63:3)"
+    },
     "is_kst": true
   },
   "BitsEnum": {
@@ -347,6 +353,11 @@
     "is_kst": true
   },
   "EofExceptionSized": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "EofExceptionSwitchUser": {
     "status": "passed",
     "elapsed": 0.0,
     "is_kst": true
@@ -965,7 +976,12 @@
     "elapsed": 0.0,
     "is_kst": true
   },
-  "RepeatEosBit": {
+  "RepeatEosBitsB1": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "RepeatEosBitsB4": {
     "status": "passed",
     "elapsed": 0.0,
     "is_kst": true
@@ -1169,8 +1185,14 @@
     "is_kst": true
   },
   "SwitchRepeatExprInvalid": {
-    "status": "passed",
+    "status": "failed",
     "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": null,
+      "trace": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n+ Uint8Array(1) [\n- Uint8Array(4) [\n-   55,\n-   19,\n-   0,\n    0\n  ]\n\n      + expected - actual\n\n      -{\"0\":0}\n      +{\"0\":55,\"1\":19,\"2\":0,\"3\":0}\n      \nAssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:\n+ actual - expected\n\n+ Uint8Array(1) [\n- Uint8Array(4) [\n-   55,\n-   19,\n-   0,\n    0\n  ]\n    at /tests/spec/javascript/test_switch_repeat_expr_invalid.js:13:10\n    at /tests/helpers/javascript/testHelper.js:16:11\n    at FSReqCallback.readFileAfterClose [as oncomplete] (internal/fs/read_file_context.js:63:3)"
+    },
     "is_kst": true
   },
   "TermBytes": {
