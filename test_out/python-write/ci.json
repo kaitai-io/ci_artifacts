@@ -1,13 +1,13 @@
 {
   "$meta": {
     "lang": "python-write",
-    "timestamp": "2026-03-09T18:17:07Z",
+    "timestamp": "2026-03-19T22:55:00Z",
     "ci": {
       "ci": "github",
-      "run_id": "22868088359",
-      "run_number": "369",
-      "job_id": "66340216792",
-      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/22868088359/job/66340216792"
+      "run_id": "23320764532",
+      "run_number": "370",
+      "job_id": "67831314277",
+      "url": "https://github.com/kaitai-io/ci_targets/actions/runs/23320764532/job/67831314277"
     }
   },
   "BcdUserTypeBe.ReadWriteRoundtrip": {
@@ -728,6 +728,17 @@
       "trace": null
     }
   },
+  "EofExceptionSwitchUser.ReadWriteRoundtrip": {
+    "status": "skipped",
+    "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": "cannot use roundtrip because parsing is expected to fail",
+      "trace": null
+    },
+    "is_kst": true
+  },
   "EofExceptionU4.EofExceptionU4": {
     "status": "passed",
     "elapsed": 0.0
@@ -1398,7 +1409,12 @@
     "elapsed": 0.0,
     "is_kst": true
   },
-  "RepeatEosBit.ReadWriteRoundtrip": {
+  "RepeatEosBitsB1.ReadWriteRoundtrip": {
+    "status": "passed",
+    "elapsed": 0.0,
+    "is_kst": true
+  },
+  "RepeatEosBitsB4.ReadWriteRoundtrip": {
     "status": "passed",
     "elapsed": 0.0,
     "is_kst": true
@@ -1724,8 +1740,14 @@
     "is_kst": true
   },
   "SwitchRepeatExprInvalid.ReadWriteRoundtrip": {
-    "status": "passed",
+    "status": "failed",
     "elapsed": 0.0,
+    "failure": {
+      "file_name": null,
+      "line_num": null,
+      "message": "list index out of range",
+      "trace": "Traceback (most recent call last):\n  File \"/tests/spec/python/specwrite/common_spec.py\", line 19, in test_read_write_roundtrip\n    orig_ks._read()\n    ~~~~~~~~~~~~~^^\n  File \"/tests/compiled/python/testwrite/switch_repeat_expr_invalid.py\", line 38, in _read\n    _io__raw_body = KaitaiStream(BytesIO(self._raw_body[i]))\n                                         ~~~~~~~~~~~~~~^^^\nIndexError: list index out of range"
+    },
     "is_kst": true
   },
   "TermBytes.ReadWriteRoundtrip": {
