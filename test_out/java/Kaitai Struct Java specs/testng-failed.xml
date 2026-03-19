@@ -77,6 +77,7 @@
       <class name="io.kaitai.struct.spec.TestBytesPadTermRoundtrip"/>
       <class name="io.kaitai.struct.spec.TestProcessCustomNoArgs"/>
       <class name="io.kaitai.struct.spec.TestTermBytes3"/>
+      <class name="io.kaitai.struct.spec.TestRepeatEosBitsB4"/>
       <class name="io.kaitai.struct.spec.TestNestedTypes3"/>
       <class name="io.kaitai.struct.spec.TestValidFailEqBytes"/>
       <class name="io.kaitai.struct.spec.TestStrEncodingsEscapingEnc$3"/>
@@ -107,6 +108,7 @@
       <class name="io.kaitai.struct.spec.TestParamsDef"/>
       <class name="io.kaitai.struct.spec.TestValidFailContentsInst"/>
       <class name="io.kaitai.struct.spec.TestValidSwitch"/>
+      <class name="io.kaitai.struct.spec.TestEofExceptionSwitchUser$1"/>
       <class name="io.kaitai.struct.spec.TestBytesPadTermEqual"/>
       <class name="io.kaitai.struct.spec.TestExprIfIntOps"/>
       <class name="io.kaitai.struct.spec.TestRepeatUntilTermBytes"/>
@@ -213,7 +215,6 @@
       <class name="io.kaitai.struct.spec.TestMetaTags"/>
       <class name="io.kaitai.struct.spec.TestSwitchIntegers2"/>
       <class name="io.kaitai.struct.spec.TestNavParentSwitch"/>
-      <class name="io.kaitai.struct.spec.TestRepeatEosBit"/>
       <class name="io.kaitai.struct.spec.TestStrPadTermZeroSize"/>
       <class name="io.kaitai.struct.spec.TestEnum1"/>
       <class name="io.kaitai.struct.spec.TestEnumInvalid"/>
@@ -241,6 +242,7 @@
       <class name="io.kaitai.struct.spec.TestCombineBytes"/>
       <class name="io.kaitai.struct.spec.TestProcessRepeatUsertype"/>
       <class name="io.kaitai.struct.spec.TestRecursiveOne"/>
+      <class name="io.kaitai.struct.spec.TestRepeatEosBitsB1"/>
       <class name="io.kaitai.struct.spec.TestInstanceStd"/>
       <class name="io.kaitai.struct.spec.TestTermBytes4"/>
       <class name="io.kaitai.struct.spec.TestEnum0"/>
@@ -283,6 +285,7 @@
       <class name="io.kaitai.struct.spec.TestProcessRepeatUsertypeDynargRotate"/>
       <class name="io.kaitai.struct.spec.TestExpr3"/>
       <class name="io.kaitai.struct.spec.TestTermStruct3"/>
+      <class name="io.kaitai.struct.spec.TestEofExceptionSwitchUser"/>
       <class name="io.kaitai.struct.spec.TestValidFailRangeStr"/>
       <class name="io.kaitai.struct.spec.TestValidFailRepeatExpr"/>
       <class name="io.kaitai.struct.spec.TestStrEncodingsEscapingEnc$2"/>
@@ -350,16 +353,21 @@
   </test> <!-- spec -->
   <test name="spec(failed)">
     <classes>
-      <class name="io.kaitai.struct.spec.TestEnumToIInvalid">
-        <methods>
-          <include name="testEnumToIInvalid"/>
-        </methods>
-      </class> <!-- io.kaitai.struct.spec.TestEnumToIInvalid -->
       <class name="io.kaitai.struct.spec.TestExprIntDiv">
         <methods>
           <include name="testExprIntDiv"/>
         </methods>
       </class> <!-- io.kaitai.struct.spec.TestExprIntDiv -->
+      <class name="io.kaitai.struct.spec.TestEnumToIInvalid">
+        <methods>
+          <include name="testEnumToIInvalid"/>
+        </methods>
+      </class> <!-- io.kaitai.struct.spec.TestEnumToIInvalid -->
+      <class name="io.kaitai.struct.spec.TestBitsByteAligned">
+        <methods>
+          <include name="testBitsByteAligned"/>
+        </methods>
+      </class> <!-- io.kaitai.struct.spec.TestBitsByteAligned -->
     </classes>
   </test> <!-- spec(failed) -->
 </suite> <!-- Failed suite [Kaitai Struct Java specs] -->
