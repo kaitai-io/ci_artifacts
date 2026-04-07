@@ -1,10 +1,10 @@
 
 Test module "C++/STL test units for Kaitai Struct" has failed with:
-  255 test cases out of 259 passed
-  4 test cases out of 259 failed
-  1 test case out of 259 aborted
-  1210 assertions out of 1216 passed
-  6 assertions out of 1216 failed
+  256 test cases out of 260 passed
+  4 test cases out of 260 failed
+  1 test case out of 260 aborted
+  1212 assertions out of 1218 passed
+  6 assertions out of 1218 failed
 
   Test case "test_bcd_user_type_be" has passed with:
     6 assertions out of 6 passed
@@ -95,6 +95,9 @@ Test module "C++/STL test units for Kaitai Struct" has failed with:
 
   Test case "test_debug_enum_name" has passed with:
     4 assertions out of 4 passed
+
+  Test case "test_debug_switch_user" has passed with:
+    2 assertions out of 2 passed
 
   Test case "test_default_big_endian" has passed with:
     1 assertion out of 1 passed
@@ -776,52 +779,52 @@ Test module "C++/STL test units for Kaitai Struct" has failed with:
 
 Detected memory leaks!
 Dumping objects ->
-{48267} normal block at 0x000001B8884524A0, 16 bytes long.
- Data: <  ?       ?     > A0 BA 3F 88 B8 01 00 00 80 B9 3F 88 B8 01 00 00 
-{48264} normal block at 0x000001B888452C70, 16 bytes long.
- Data: <  ?             > 90 B9 3F 88 B8 01 00 00 00 00 00 00 00 00 00 00 
-{48263} normal block at 0x000001B8883FB980, 72 bytes long.
- Data: <   ]    @ E     > C0 D5 AD 5D F6 7F 00 00 40 9B 45 88 B8 01 00 00 
-{48262} normal block at 0x000001B888453490, 16 bytes long.
- Data: <  E     @ E     > 10 92 45 88 B8 01 00 00 40 9B 45 88 B8 01 00 00 
-{48261} normal block at 0x000001B88837E070, 4 bytes long.
+{48380} normal block at 0x000001B28F0D6240, 16 bytes long.
+ Data: <0       @       > 30 87 08 8F B2 01 00 00 40 83 08 8F B2 01 00 00 
+{48377} normal block at 0x000001B28F0D5340, 16 bytes long.
+ Data: <P               > 50 83 08 8F B2 01 00 00 00 00 00 00 00 00 00 00 
+{48376} normal block at 0x000001B28F088340, 72 bytes long.
+ Data: <0  i            > 30 9C 14 69 F7 7F 00 00 90 D3 07 8F B2 01 00 00 
+{48375} normal block at 0x000001B28F0D5390, 16 bytes long.
+ Data: <                > B0 8B 08 8F B2 01 00 00 90 D3 07 8F B2 01 00 00 
+{48374} normal block at 0x000001B28F014600, 4 bytes long.
  Data: <7   > 37 13 00 00 
-{48258} normal block at 0x000001B888459B40, 264 bytes long.
- Data: <H E        ]    > 48 9B 45 88 B8 01 00 00 90 11 9E 5D F6 7F 00 00 
-{48257} normal block at 0x000001B8884523B0, 16 bytes long.
- Data: <8b8             > 38 62 38 88 B8 01 00 00 00 00 00 00 00 00 00 00 
-{48256} normal block at 0x000001B888452810, 16 bytes long.
- Data: < b8             > 10 62 38 88 B8 01 00 00 00 00 00 00 00 00 00 00 
-{48255} normal block at 0x000001B8884533A0, 16 bytes long.
- Data: <`b8             > 60 62 38 88 B8 01 00 00 00 00 00 00 00 00 00 00 
-{48254} normal block at 0x000001B888386210, 120 bytes long.
- Data: < (E     @@ 7    > 10 28 45 88 B8 01 00 00 40 40 04 37 00 CC CC CC 
-{48241} normal block at 0x000001B888453300, 16 bytes long.
- Data: <  ?             > B0 BA 3F 88 B8 01 00 00 00 00 00 00 00 00 00 00 
-{48240} normal block at 0x000001B8883FBAA0, 72 bytes long.
- Data: <   ]      E     > A8 D5 AD 5D F6 7F 00 00 10 92 45 88 B8 01 00 00 
-{48238} normal block at 0x000001B8883887E0, 4 bytes long.
+{48371} normal block at 0x000001B28F07D390, 264 bytes long.
+ Data: <         1 i    > 98 D3 07 8F B2 01 00 00 B0 31 05 69 F7 7F 00 00 
+{48370} normal block at 0x000001B28F0D5020, 16 bytes long.
+ Data: <x               > 78 BC 08 8F B2 01 00 00 00 00 00 00 00 00 00 00 
+{48369} normal block at 0x000001B28F0D63D0, 16 bytes long.
+ Data: <P               > 50 BC 08 8F B2 01 00 00 00 00 00 00 00 00 00 00 
+{48368} normal block at 0x000001B28F0D6380, 16 bytes long.
+ Data: <                > A0 BC 08 8F B2 01 00 00 00 00 00 00 00 00 00 00 
+{48367} normal block at 0x000001B28F08BC50, 120 bytes long.
+ Data: < c      @@ 7    > D0 63 0D 8F B2 01 00 00 40 40 04 37 00 CC CC CC 
+{48354} normal block at 0x000001B28F0D5840, 16 bytes long.
+ Data: <@               > 40 87 08 8F B2 01 00 00 00 00 00 00 00 00 00 00 
+{48353} normal block at 0x000001B28F088730, 72 bytes long.
+ Data: <   i            > 18 9C 14 69 F7 7F 00 00 B0 8B 08 8F B2 01 00 00 
+{48351} normal block at 0x000001B28F00E070, 4 bytes long.
  Data: <@@ 7> 40 40 04 37 
-{48235} normal block at 0x000001B888459210, 264 bytes long.
- Data: <  E        ]    > 18 92 45 88 B8 01 00 00 90 11 9E 5D F6 7F 00 00 
-{48229} normal block at 0x000001B888452BD0, 16 bytes long.
- Data: <  P             > E0 8A 50 88 B8 01 00 00 00 00 00 00 00 00 00 00 
-{48228} normal block at 0x000001B888508AE0, 32 bytes long.
- Data: < +E      $E     > D0 2B 45 88 B8 01 00 00 A0 24 45 88 B8 01 00 00 
-{48227} normal block at 0x000001B888453210, 16 bytes long.
- Data: <  P             > 00 83 50 88 B8 01 00 00 00 00 00 00 00 00 00 00 
-{48226} normal block at 0x000001B888508300, 32 bytes long.
- Data: < 2E      4E     > 10 32 45 88 B8 01 00 00 90 34 45 88 B8 01 00 00 
-{48225} normal block at 0x000001B888452860, 16 bytes long.
- Data: <  P             > 20 96 50 88 B8 01 00 00 00 00 00 00 00 00 00 00 
-{48224} normal block at 0x000001B888509620, 32 bytes long.
- Data: <`(E      b8     > 60 28 45 88 B8 01 00 00 10 62 38 88 B8 01 00 00 
-{48223} normal block at 0x000001B88837CD40, 3 bytes long.
+{48348} normal block at 0x000001B28F088BB0, 264 bytes long.
+ Data: <         1 i    > B8 8B 08 8F B2 01 00 00 B0 31 05 69 F7 7F 00 00 
+{48342} normal block at 0x000001B28F0D61F0, 16 bytes long.
+ Data: <`               > 60 A1 0F 8F B2 01 00 00 00 00 00 00 00 00 00 00 
+{48341} normal block at 0x000001B28F0FA160, 32 bytes long.
+ Data: < a      @b      > F0 61 0D 8F B2 01 00 00 40 62 0D 8F B2 01 00 00 
+{48340} normal block at 0x000001B28F0D5D90, 16 bytes long.
+ Data: <                > C0 98 0F 8F B2 01 00 00 00 00 00 00 00 00 00 00 
+{48339} normal block at 0x000001B28F0F98C0, 32 bytes long.
+ Data: < ]       S      > 90 5D 0D 8F B2 01 00 00 90 53 0D 8F B2 01 00 00 
+{48338} normal block at 0x000001B28F0D6100, 16 bytes long.
+ Data: <                > C0 A7 0F 8F B2 01 00 00 00 00 00 00 00 00 00 00 
+{48337} normal block at 0x000001B28F0FA7C0, 32 bytes long.
+ Data: < a      P       > 00 61 0D 8F B2 01 00 00 50 BC 08 8F B2 01 00 00 
+{48336} normal block at 0x000001B28F022F30, 3 bytes long.
  Data: <   > 01 07 02 
-{48219} normal block at 0x000001B888453170, 16 bytes long.
- Data: <@ P             > 40 94 50 88 B8 01 00 00 00 00 00 00 00 00 00 00 
-{48218} normal block at 0x000001B888509440, 32 bytes long.
- Data: <p1E     @ 7     > 70 31 45 88 B8 01 00 00 40 CD 37 88 B8 01 00 00 
-{48217} normal block at 0x000001B888506AA0, 64 bytes long.
- Data: <   ]    p       > D8 D5 AD 5D F6 7F 00 00 70 CE DB A5 B5 00 00 00 
+{48332} normal block at 0x000001B28F0D57F0, 16 bytes long.
+ Data: <@               > 40 A9 0F 8F B2 01 00 00 00 00 00 00 00 00 00 00 
+{48331} normal block at 0x000001B28F0FA940, 32 bytes long.
+ Data: < W      0/      > F0 57 0D 8F B2 01 00 00 30 2F 02 8F B2 01 00 00 
+{48330} normal block at 0x000001B28F1062A0, 64 bytes long.
+ Data: <H  i      5 %   > 48 9C 14 69 F7 7F 00 00 80 C9 35 FF 25 00 00 00 
 Object dump complete.
