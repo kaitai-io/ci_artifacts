@@ -1,12 +1,12 @@
 test
 +- compile test Debug native 54 errors
-/usr/local/zig-x86_64-linux-0.15.2/lib/std/testing.zig:74:15: error: incompatible types: 'comptime_int' and 'formats.enum_invalid.EnumInvalid.Animal'
+/usr/local/zig-x86_64-linux-0.16.0/lib/std/testing.zig:82:15: error: incompatible types: 'comptime_int' and 'formats.enum_invalid.EnumInvalid.Animal'
     const T = @TypeOf(expected, actual);
               ^~~~~~~~~~~~~~~~~~~~~~~~~
-/usr/local/zig-x86_64-linux-0.15.2/lib/std/testing.zig:74:23: note: type 'comptime_int' here
+/usr/local/zig-x86_64-linux-0.16.0/lib/std/testing.zig:82:23: note: type 'comptime_int' here
     const T = @TypeOf(expected, actual);
                       ^~~~~~~~
-/usr/local/zig-x86_64-linux-0.15.2/lib/std/testing.zig:74:33: note: type 'formats.enum_invalid.EnumInvalid.Animal' here
+/usr/local/zig-x86_64-linux-0.16.0/lib/std/testing.zig:82:33: note: type 'formats.enum_invalid.EnumInvalid.Animal' here
     const T = @TypeOf(expected, actual);
                                 ^~~~~~
 tests/enum_invalid_test.zig:18:37: note: called inline here
@@ -14,13 +14,13 @@ tests/enum_invalid_test.zig:18:37: note: called inline here
         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~
 referenced by:
     comptime: tests.zig:57:17
-/usr/local/zig-x86_64-linux-0.15.2/lib/std/testing.zig:74:15: error: incompatible types: 'comptime_int' and 'formats.enum_to_i_invalid.EnumToIInvalid.Animal'
+/usr/local/zig-x86_64-linux-0.16.0/lib/std/testing.zig:82:15: error: incompatible types: 'comptime_int' and 'formats.enum_to_i_invalid.EnumToIInvalid.Animal'
     const T = @TypeOf(expected, actual);
               ^~~~~~~~~~~~~~~~~~~~~~~~~
-/usr/local/zig-x86_64-linux-0.15.2/lib/std/testing.zig:74:23: note: type 'comptime_int' here
+/usr/local/zig-x86_64-linux-0.16.0/lib/std/testing.zig:82:23: note: type 'comptime_int' here
     const T = @TypeOf(expected, actual);
                       ^~~~~~~~
-/usr/local/zig-x86_64-linux-0.15.2/lib/std/testing.zig:74:33: note: type 'formats.enum_to_i_invalid.EnumToIInvalid.Animal' here
+/usr/local/zig-x86_64-linux-0.16.0/lib/std/testing.zig:82:33: note: type 'formats.enum_to_i_invalid.EnumToIInvalid.Animal' here
     const T = @TypeOf(expected, actual);
                                 ^~~~~~
 tests/enum_to_i_invalid_test.zig:18:37: note: called inline here
@@ -28,27 +28,13 @@ tests/enum_to_i_invalid_test.zig:18:37: note: called inline here
         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~
 referenced by:
     comptime: tests.zig:63:17
-/usr/local/zig-x86_64-linux-0.15.2/lib/std/testing.zig:74:15: error: incompatible types: 'comptime_int' and 'formats.switch_manual_enum_invalid_else.SwitchManualEnumInvalidElse.Opcode.CodeEnum'
+/usr/local/zig-x86_64-linux-0.16.0/lib/std/testing.zig:82:15: error: incompatible types: 'comptime_int' and 'formats.switch_manual_enum_invalid.SwitchManualEnumInvalid.Opcode.CodeEnum'
     const T = @TypeOf(expected, actual);
               ^~~~~~~~~~~~~~~~~~~~~~~~~
-/usr/local/zig-x86_64-linux-0.15.2/lib/std/testing.zig:74:23: note: type 'comptime_int' here
+/usr/local/zig-x86_64-linux-0.16.0/lib/std/testing.zig:82:23: note: type 'comptime_int' here
     const T = @TypeOf(expected, actual);
                       ^~~~~~~~
-/usr/local/zig-x86_64-linux-0.15.2/lib/std/testing.zig:74:33: note: type 'formats.switch_manual_enum_invalid_else.SwitchManualEnumInvalidElse.Opcode.CodeEnum' here
-    const T = @TypeOf(expected, actual);
-                                ^~~~~~
-tests/switch_manual_enum_invalid_else_test.zig:18:37: note: called inline here
-    try _imp_std.testing.expectEqual(255, r.opcodes.items[0].code);
-        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-referenced by:
-    comptime: tests.zig:243:17
-/usr/local/zig-x86_64-linux-0.15.2/lib/std/testing.zig:74:15: error: incompatible types: 'comptime_int' and 'formats.switch_manual_enum_invalid.SwitchManualEnumInvalid.Opcode.CodeEnum'
-    const T = @TypeOf(expected, actual);
-              ^~~~~~~~~~~~~~~~~~~~~~~~~
-/usr/local/zig-x86_64-linux-0.15.2/lib/std/testing.zig:74:23: note: type 'comptime_int' here
-    const T = @TypeOf(expected, actual);
-                      ^~~~~~~~
-/usr/local/zig-x86_64-linux-0.15.2/lib/std/testing.zig:74:33: note: type 'formats.switch_manual_enum_invalid.SwitchManualEnumInvalid.Opcode.CodeEnum' here
+/usr/local/zig-x86_64-linux-0.16.0/lib/std/testing.zig:82:33: note: type 'formats.switch_manual_enum_invalid.SwitchManualEnumInvalid.Opcode.CodeEnum' here
     const T = @TypeOf(expected, actual);
                                 ^~~~~~
 tests/switch_manual_enum_invalid_test.zig:18:37: note: called inline here
@@ -56,19 +42,32 @@ tests/switch_manual_enum_invalid_test.zig:18:37: note: called inline here
         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 referenced by:
     comptime: tests.zig:244:17
-/runtime/zig/src/root.zig:478:9: error: unsupported encoding 'Shift_JIS'
+/usr/local/zig-x86_64-linux-0.16.0/lib/std/testing.zig:82:15: error: incompatible types: 'comptime_int' and 'formats.switch_manual_enum_invalid_else.SwitchManualEnumInvalidElse.Opcode.CodeEnum'
+    const T = @TypeOf(expected, actual);
+              ^~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/zig-x86_64-linux-0.16.0/lib/std/testing.zig:82:23: note: type 'comptime_int' here
+    const T = @TypeOf(expected, actual);
+                      ^~~~~~~~
+/usr/local/zig-x86_64-linux-0.16.0/lib/std/testing.zig:82:33: note: type 'formats.switch_manual_enum_invalid_else.SwitchManualEnumInvalidElse.Opcode.CodeEnum' here
+    const T = @TypeOf(expected, actual);
+                                ^~~~~~
+tests/switch_manual_enum_invalid_else_test.zig:18:37: note: called inline here
+    try _imp_std.testing.expectEqual(255, r.opcodes.items[0].code);
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+referenced by:
+    comptime: tests.zig:243:17
+/runtime/zig/src/root.zig:474:9: error: unsupported encoding 'IBM437'
+        @compileError("unsupported encoding '" ++ encoding ++ "'");
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+referenced by:
+    str4GtStrFromBytes: formats/expr_str_encodings.zig:83:96
+    test.ExprStrEncodings: tests/expr_str_encodings_test.zig:23:69
+    comptime: tests.zig:100:17
+/runtime/zig/src/root.zig:474:9: error: unsupported encoding 'Shift_JIS'
         @compileError("unsupported encoding '" ++ encoding ++ "'");
         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 referenced by:
     _read: formats/valid_eq_str_encodings.zig:33:68
-    create: formats/valid_eq_str_encodings.zig:15:23
-    test.ValidEqStrEncodings: tests/valid_eq_str_encodings_test.zig:16:73
-    comptime: tests.zig:278:17
-/runtime/zig/src/root.zig:478:9: error: unsupported encoding 'IBM437'
-        @compileError("unsupported encoding '" ++ encoding ++ "'");
-        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-referenced by:
-    _read: formats/valid_eq_str_encodings.zig:38:68
     create: formats/valid_eq_str_encodings.zig:15:23
     test.ValidEqStrEncodings: tests/valid_eq_str_encodings_test.zig:16:73
     comptime: tests.zig:278:17
@@ -103,28 +102,25 @@ formats/enum_int_range_u.zig:9:19: error: type 'i32' cannot represent integer va
         int_max = 4294967295,
                   ^~~~~~~~~~
 referenced by:
-    Constants: formats/enum_int_range_u.zig:7:27
     formats.enum_int_range_u.EnumIntRangeU: formats/enum_int_range_u.zig:30:9
-    EnumIntRangeU: formats/enum_int_range_u.zig:6:27
-    test.EnumIntRangeU: tests/enum_int_range_u_test.zig:16:40
+    create: formats/enum_int_range_u.zig:14:19
+    test.EnumIntRangeU: tests/enum_int_range_u_test.zig:16:61
     comptime: tests.zig:56:17
 formats/enum_long_range_s.zig:8:20: error: type 'i32' cannot represent integer value '-9223372036854775808'
         long_min = -9223372036854775808,
                    ^~~~~~~~~~~~~~~~~~~~
 referenced by:
-    Constants: formats/enum_long_range_s.zig:7:27
     formats.enum_long_range_s.EnumLongRangeS: formats/enum_long_range_s.zig:40:9
-    EnumLongRangeS: formats/enum_long_range_s.zig:6:28
-    test.EnumLongRangeS: tests/enum_long_range_s_test.zig:16:41
+    create: formats/enum_long_range_s.zig:19:19
+    test.EnumLongRangeS: tests/enum_long_range_s_test.zig:16:63
     comptime: tests.zig:58:17
 formats/enum_long_range_u.zig:9:19: error: type 'i32' cannot represent integer value '4294967295'
         int_max = 4294967295,
                   ^~~~~~~~~~
 referenced by:
-    Constants: formats/enum_long_range_u.zig:7:27
     formats.enum_long_range_u.EnumLongRangeU: formats/enum_long_range_u.zig:34:9
-    EnumLongRangeU: formats/enum_long_range_u.zig:6:28
-    test.EnumLongRangeU: tests/enum_long_range_u_test.zig:16:41
+    create: formats/enum_long_range_u.zig:16:19
+    test.EnumLongRangeU: tests/enum_long_range_u_test.zig:16:63
     comptime: tests.zig:59:17
 formats/enum_of_value_inst.zig:35:56: error: value with comptime-only type 'comptime_int' depends on runtime control flow
         _v = @as(EnumOfValueInst.Animal, @enumFromInt((if (self.pet_1 == EnumOfValueInst.Animal.cat) 4 else 12)));
@@ -139,7 +135,7 @@ formats/expr_1.zig:23:130: error: expected type 'usize', found 'i32'
         self.str1 = (try _imp_kaitai_struct.KaitaiStream.bytesToStr(self._allocator(), try self._io.readBytes(self._allocator(), (try self.lenOf1Mod())), "ASCII"));
                                                                                                                                  ^~~~~~~~~~~~~~~~~~~~~~
 formats/expr_1.zig:23:130: note: unsigned 64-bit int cannot represent all possible signed 32-bit values
-/runtime/zig/src/root.zig:312:70: note: parameter type declared here
+/runtime/zig/src/root.zig:308:70: note: parameter type declared here
     pub fn readBytes(self: *KaitaiStream, allocator: Allocator, len: usize) ![]u8 {
                                                                      ^~~~~
 referenced by:
@@ -150,7 +146,7 @@ formats/expr_2.zig:42:133: error: expected type 'usize', found 'i32'
             self.str = (try _imp_kaitai_struct.KaitaiStream.bytesToStr(self._allocator(), try self._io.readBytes(self._allocator(), (try self.lenMod())), "UTF-8"));
                                                                                                                                     ^~~~~~~~~~~~~~~~~~~
 formats/expr_2.zig:42:133: note: unsigned 64-bit int cannot represent all possible signed 32-bit values
-/runtime/zig/src/root.zig:312:70: note: parameter type declared here
+/runtime/zig/src/root.zig:308:70: note: parameter type declared here
     pub fn readBytes(self: *KaitaiStream, allocator: Allocator, len: usize) ![]u8 {
                                                                      ^~~~~
 referenced by:
@@ -173,10 +169,11 @@ formats/expr_bytes_ops.zig:68:22: note: signed 32-bit int cannot represent all p
 referenced by:
     test.ExprBytesOps: tests/expr_bytes_ops_test.zig:17:55
     comptime: tests.zig:84:17
-formats/expr_calc_array_ops.zig:84:37: error: expected type '*array_list.Aligned(i32,null)', found 'array_list.Aligned(i32,null)'
+formats/expr_calc_array_ops.zig:84:37: error: expected type '*T', found 'T'
         _v = _imp_std.ArrayList(i32){ .items = @constCast(@as([]const i32, &.{ 10, 25, 50, 100, 200, 500, 1000 })), .capacity = 7 };
              ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/usr/local/zig-x86_64-linux-0.15.2/lib/std/array_list.zig:606:12: note: struct declared here
+formats/expr_calc_array_ops.zig:84:37: note: T = array_list.Aligned(i32,null)
+/usr/local/zig-x86_64-linux-0.16.0/lib/std/array_list.zig:576:12: note: struct declared here
     return struct {
            ^~~~~~
 referenced by:
@@ -229,15 +226,6 @@ formats/float_to_i.zig:139:32: error: expected float type, found '?f32'
 referenced by:
     test.FloatToI: tests/float_to_i_test.zig:23:57
     comptime: tests.zig:103:17
-formats/imports_circular_b.zig:25:80: error: unable to resolve inferred error set
-            self.back_ref = try _imp_imports_circular_a.ImportsCircularA.create(self._arena, self._io, null, null);
-                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-referenced by:
-    create: formats/imports_circular_b.zig:16:23
-    _read: formats/imports_circular_a.zig:24:71
-    create: formats/imports_circular_a.zig:16:23
-    test.ImportsCircularA: tests/imports_circular_a_test.zig:16:66
-    comptime: tests.zig:115:17
 formats/index_to_param_eos.zig:37:117: error: expected type 'i32', found 'usize'
                 try self.blocks.append(self._allocator(), try Block.create(self._arena, self._io, self, self._root, i));
                                                                                                                     ^
@@ -271,31 +259,17 @@ referenced by:
     create: formats/index_to_param_until.zig:15:23
     test.IndexToParamUntil: tests/index_to_param_until_test.zig:16:69
     comptime: tests.zig:123:17
-formats/nav_parent_recursive.zig:24:54: error: unable to resolve inferred error set
-            self.next = try NavParentRecursive.create(self._arena, self._io, self, self._root);
-                            ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-referenced by:
-    create: formats/nav_parent_recursive.zig:15:23
-    test.NavParentRecursive: tests/nav_parent_recursive_test.zig:16:70
-    comptime: tests.zig:146:17
 formats/nav_parent_switch_cast.zig:87:66: error: type '*anyopaque' does not support field access
                 _v = @as(*NavParentSwitchCast.Foo, self._parent.?._parent).flag;
                                                    ~~~~~~~~~~~~~~^~~~~~~~
 referenced by:
     test.NavParentSwitchCast: tests/nav_parent_switch_cast_test.zig:19:72
     comptime: tests.zig:147:17
-formats/nav_root_recursive.zig:24:52: error: unable to resolve inferred error set
-            self.next = try NavRootRecursive.create(self._arena, self._io, self, self._root);
-                            ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-referenced by:
-    create: formats/nav_root_recursive.zig:15:23
-    test.NavRootRecursive: tests/nav_root_recursive_test.zig:16:66
-    comptime: tests.zig:151:17
 formats/nested_same_name.zig:106:96: error: expected type 'usize', found 'i32'
                 self.data = try self._io.readBytes(self._allocator(), self._parent.?.main_size * 2);
                                                                       ~~~~~~~~~~~~~~~~~~~~~~~~~^~~
 formats/nested_same_name.zig:106:96: note: unsigned 64-bit int cannot represent all possible signed 32-bit values
-/runtime/zig/src/root.zig:312:70: note: parameter type declared here
+/runtime/zig/src/root.zig:308:70: note: parameter type declared here
     pub fn readBytes(self: *KaitaiStream, allocator: Allocator, len: usize) ![]u8 {
                                                                      ^~~~~
 referenced by:
@@ -310,7 +284,7 @@ formats/nested_same_name2.zig:111:97: error: expected type 'usize', found 'i32'
                 self.data1 = try self._io.readBytes(self._allocator(), self._parent.?.main_size * 2);
                                                                        ~~~~~~~~~~~~~~~~~~~~~~~~~^~~
 formats/nested_same_name2.zig:111:97: note: unsigned 64-bit int cannot represent all possible signed 32-bit values
-/runtime/zig/src/root.zig:312:70: note: parameter type declared here
+/runtime/zig/src/root.zig:308:70: note: parameter type declared here
     pub fn readBytes(self: *KaitaiStream, allocator: Allocator, len: usize) ![]u8 {
                                                                      ^~~~~
 referenced by:
@@ -321,10 +295,11 @@ referenced by:
     create: formats/nested_same_name2.zig:15:23
     test.NestedSameName2: tests/nested_same_name2_test.zig:16:64
     comptime: tests.zig:153:17
-formats/params_pass_array_int.zig:63:37: error: expected type '*array_list.Aligned(u16,null)', found 'array_list.Aligned(u16,null)'
+formats/params_pass_array_int.zig:63:37: error: expected type '*T', found 'T'
         _v = _imp_std.ArrayList(u16){ .items = @constCast(@as([]const u16, &.{ 27643, 7 })), .capacity = 2 };
              ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/usr/local/zig-x86_64-linux-0.15.2/lib/std/array_list.zig:606:12: note: struct declared here
+formats/params_pass_array_int.zig:63:37: note: T = array_list.Aligned(u16,null)
+/usr/local/zig-x86_64-linux-0.16.0/lib/std/array_list.zig:576:12: note: struct declared here
     return struct {
            ^~~~~~
 referenced by:
@@ -332,10 +307,11 @@ referenced by:
     create: formats/params_pass_array_int.zig:15:23
     test.ParamsPassArrayInt: tests/params_pass_array_int_test.zig:16:71
     comptime: tests.zig:165:17
-formats/params_pass_array_io.zig:26:134: error: expected type '*array_list.Aligned(*root.KaitaiStream,null)', found 'array_list.Aligned(*root.KaitaiStream,null)'
+formats/params_pass_array_io.zig:26:134: error: expected type '*T', found 'T'
         self.one = try ParamType.create(self._arena, self._io, self, self._root, _imp_std.ArrayList(*_imp_kaitai_struct.KaitaiStream){ .items = @constCast(@as([]const *_imp_kaitai_struct.KaitaiStream, &.{ self.first._io, self._root.?._io })), .capacity = 2 });
                                                                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/usr/local/zig-x86_64-linux-0.15.2/lib/std/array_list.zig:606:12: note: struct declared here
+formats/params_pass_array_io.zig:26:134: note: T = array_list.Aligned(*root.KaitaiStream,null)
+/usr/local/zig-x86_64-linux-0.16.0/lib/std/array_list.zig:576:12: note: struct declared here
     return struct {
            ^~~~~~
 formats/params_pass_array_io.zig:53:172: note: parameter type declared here
@@ -345,10 +321,11 @@ referenced by:
     create: formats/params_pass_array_io.zig:15:23
     test.ParamsPassArrayIo: tests/params_pass_array_io_test.zig:16:69
     comptime: tests.zig:166:17
-formats/params_pass_array_str.zig:63:44: error: expected type '*array_list.Aligned([]const u8,null)', found 'array_list.Aligned([]const u8,null)'
+formats/params_pass_array_str.zig:63:44: error: expected type '*T', found 'T'
         _v = _imp_std.ArrayList([]const u8){ .items = @constCast(@as([]const []const u8, &.{ "aB", "Cd" })), .capacity = 2 };
              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/usr/local/zig-x86_64-linux-0.15.2/lib/std/array_list.zig:606:12: note: struct declared here
+formats/params_pass_array_str.zig:63:44: note: T = array_list.Aligned([]const u8,null)
+/usr/local/zig-x86_64-linux-0.16.0/lib/std/array_list.zig:576:12: note: struct declared here
     return struct {
            ^~~~~~
 referenced by:
@@ -356,10 +333,11 @@ referenced by:
     create: formats/params_pass_array_str.zig:15:23
     test.ParamsPassArrayStr: tests/params_pass_array_str_test.zig:16:71
     comptime: tests.zig:167:17
-formats/params_pass_array_struct.zig:103:44: error: expected type '*array_list.Aligned(*anyopaque,null)', found 'array_list.Aligned(*anyopaque,null)'
+formats/params_pass_array_struct.zig:103:44: error: expected type '*T', found 'T'
         _v = _imp_std.ArrayList(*anyopaque){ .items = @constCast(@as([]const *anyopaque, &.{ self.one, self.two })), .capacity = 2 };
              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/usr/local/zig-x86_64-linux-0.15.2/lib/std/array_list.zig:606:12: note: struct declared here
+formats/params_pass_array_struct.zig:103:44: note: T = array_list.Aligned(*anyopaque,null)
+/usr/local/zig-x86_64-linux-0.16.0/lib/std/array_list.zig:576:12: note: struct declared here
     return struct {
            ^~~~~~
 referenced by:
@@ -381,18 +359,20 @@ formats/process_coerce_switch.zig:89:39: error: expected type '*anyopaque', foun
 referenced by:
     test.ProcessCoerceSwitch: tests/process_coerce_switch_test.zig:19:141
     comptime: tests.zig:179:17
-formats/process_coerce_usertype1.zig:91:43: error: expected type '*formats.process_coerce_usertype1.ProcessCoerceUsertype1.Foo', found '?*formats.process_coerce_usertype1.ProcessCoerceUsertype1.Foo'
+formats/process_coerce_usertype1.zig:91:43: error: expected type 'T', found '?T'
             _v = (if (self.flag == 0) self.buf_unproc else self.buf_proc);
                                       ~~~~^~~~~~~~~~~
+formats/process_coerce_usertype1.zig:91:43: note: T = *formats.process_coerce_usertype1.ProcessCoerceUsertype1.Foo
 formats/process_coerce_usertype1.zig:91:43: note: cannot convert optional to payload type
 formats/process_coerce_usertype1.zig:91:43: note: consider using '.?', 'orelse', or 'if'
 formats/process_coerce_usertype1.zig:91:43: note: '?*formats.process_coerce_usertype1.ProcessCoerceUsertype1.Foo' could have null values which are illegal in type '*formats.process_coerce_usertype1.ProcessCoerceUsertype1.Foo'
 referenced by:
     test.ProcessCoerceUsertype1: tests/process_coerce_usertype1_test.zig:18:77
     comptime: tests.zig:180:17
-formats/process_coerce_usertype2.zig:88:43: error: expected type '*formats.process_coerce_usertype2.ProcessCoerceUsertype2.Foo', found '?*formats.process_coerce_usertype2.ProcessCoerceUsertype2.Foo'
+formats/process_coerce_usertype2.zig:88:43: error: expected type 'T', found '?T'
             _v = (if (self.flag == 0) self.buf_unproc else self.buf_proc);
                                       ~~~~^~~~~~~~~~~
+formats/process_coerce_usertype2.zig:88:43: note: T = *formats.process_coerce_usertype2.ProcessCoerceUsertype2.Foo
 formats/process_coerce_usertype2.zig:88:43: note: cannot convert optional to payload type
 formats/process_coerce_usertype2.zig:88:43: note: consider using '.?', 'orelse', or 'if'
 formats/process_coerce_usertype2.zig:88:43: note: '?*formats.process_coerce_usertype2.ProcessCoerceUsertype2.Foo' could have null values which are illegal in type '*formats.process_coerce_usertype2.ProcessCoerceUsertype2.Foo'
@@ -403,7 +383,7 @@ formats/process_repeat_usertype_dynarg_rotate.zig:30:147: error: expected type '
             const _raw_blocks_rol = try _imp_kaitai_struct.KaitaiStream.processRotateLeft(self._allocator(), _raw__raw_blocks_rol, self._io.pos() - 4 * i);
                                                                                                                                    ~~~~~~~~~~~~~~~^~~~~~~
 formats/process_repeat_usertype_dynarg_rotate.zig:30:147: note: signed 32-bit int cannot represent all possible unsigned 64-bit values
-/runtime/zig/src/root.zig:509:78: note: parameter type declared here
+/runtime/zig/src/root.zig:505:78: note: parameter type declared here
     pub fn processRotateLeft(allocator: Allocator, data: []const u8, amount: i32) Allocator.Error![]u8 {
                                                                              ^~~
 referenced by:
@@ -418,37 +398,32 @@ referenced by:
     create: formats/process_repeat_usertype_dynarg_xor.zig:15:23
     test.ProcessRepeatUsertypeDynargXor: tests/process_repeat_usertype_dynarg_xor_test.zig:16:96
     comptime: tests.zig:184:17
-formats/recursive_one.zig:29:72: error: unable to resolve inferred error set
-                self.next = .{ .recursive_one = try RecursiveOne.create(self._arena, self._io, self, self._root) };
-                                                    ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-referenced by:
-    create: formats/recursive_one.zig:19:23
-    test.RecursiveOne: tests/recursive_one_test.zig:16:57
-    comptime: tests.zig:193:17
 formats/switch_integers2.zig:39:66: error: expected type 'usize', found '?u64'
         self.ham = try self._io.readBytes(self._allocator(), self.len);
                                                              ~~~~^~~~
 formats/switch_integers2.zig:39:66: note: cannot convert optional to payload type
 formats/switch_integers2.zig:39:66: note: consider using '.?', 'orelse', or 'if'
-/runtime/zig/src/root.zig:312:70: note: parameter type declared here
+/runtime/zig/src/root.zig:308:70: note: parameter type declared here
     pub fn readBytes(self: *KaitaiStream, allocator: Allocator, len: usize) ![]u8 {
                                                                      ^~~~~
 referenced by:
     create: formats/switch_integers2.zig:15:23
     test.SwitchIntegers2: tests/switch_integers2_test.zig:16:63
     comptime: tests.zig:241:17
-formats/type_ternary.zig:62:47: error: expected type '*formats.type_ternary.TypeTernary.Dummy', found '?*formats.type_ternary.TypeTernary.Dummy'
+formats/type_ternary.zig:62:47: error: expected type 'T', found '?T'
         _v = (if (!((try self.isHack()))) self.dif_wo_hack else self.dif_with_hack);
                                           ~~~~^~~~~~~~~~~~
+formats/type_ternary.zig:62:47: note: T = *formats.type_ternary.TypeTernary.Dummy
 formats/type_ternary.zig:62:47: note: cannot convert optional to payload type
 formats/type_ternary.zig:62:47: note: consider using '.?', 'orelse', or 'if'
 formats/type_ternary.zig:62:47: note: '?*formats.type_ternary.TypeTernary.Dummy' could have null values which are illegal in type '*formats.type_ternary.TypeTernary.Dummy'
 referenced by:
     test.TypeTernary: tests/type_ternary_test.zig:17:53
     comptime: tests.zig:276:17
-formats/type_ternary_2nd_falsy.zig:144:36: error: expected type '*formats.type_ternary_2nd_falsy.TypeTernary2ndFalsy.Foo', found '?*formats.type_ternary_2nd_falsy.TypeTernary2ndFalsy.Foo'
+formats/type_ternary_2nd_falsy.zig:144:36: error: expected type 'T', found '?T'
         _v = (if ((try self.t())) (try self.nullUt()) else self.ut);
                                    ^~~~~~~~~~~~~~~~~
+formats/type_ternary_2nd_falsy.zig:144:36: note: T = *formats.type_ternary_2nd_falsy.TypeTernary2ndFalsy.Foo
 formats/type_ternary_2nd_falsy.zig:144:36: note: cannot convert optional to payload type
 formats/type_ternary_2nd_falsy.zig:144:36: note: consider using '.?', 'orelse', or 'if'
 formats/type_ternary_2nd_falsy.zig:144:36: note: '?*formats.type_ternary_2nd_falsy.TypeTernary2ndFalsy.Foo' could have null values which are illegal in type '*formats.type_ternary_2nd_falsy.TypeTernary2ndFalsy.Foo'
@@ -495,14 +470,15 @@ tests/nav_parent_false_test.zig:19:85: error: expected type '[]const u8', found 
                                                                      ~~~~~~~~~~~~~~~^~~~~
 tests/nav_parent_false_test.zig:19:85: note: cannot convert optional to payload type
 tests/nav_parent_false_test.zig:19:85: note: consider using '.?', 'orelse', or 'if'
-/usr/local/zig-x86_64-linux-0.15.2/lib/std/testing.zig:363:73: note: parameter type declared here
+/usr/local/zig-x86_64-linux-0.16.0/lib/std/testing.zig:364:73: note: parameter type declared here
 pub fn expectEqualSlices(comptime T: type, expected: []const T, actual: []const T) !void {
                                                                         ^~~~~~~~~
 referenced by:
     comptime: tests.zig:144:17
-tests/nav_parent_switch_test.zig:18:97: error: expected type '*formats.nav_parent_switch.NavParentSwitch.Element1', found '?*formats.nav_parent_switch.NavParentSwitch.Element1'
+tests/nav_parent_switch_test.zig:18:97: error: expected type 'T', found '?T'
     try _imp_std.testing.expectEqual(66, @as(*_imp_nav_parent_switch.NavParentSwitch.Element1, r.content).foo);
                                                                                                ~^~~~~~~~
+tests/nav_parent_switch_test.zig:18:97: note: T = *formats.nav_parent_switch.NavParentSwitch.Element1
 tests/nav_parent_switch_test.zig:18:97: note: cannot convert optional to payload type
 tests/nav_parent_switch_test.zig:18:97: note: consider using '.?', 'orelse', or 'if'
 tests/nav_parent_switch_test.zig:18:97: note: '?*formats.nav_parent_switch.NavParentSwitch.Element1' could have null values which are illegal in type '*formats.nav_parent_switch.NavParentSwitch.Element1'
@@ -517,12 +493,62 @@ formats/params_pass_struct.zig:25:23: note: struct declared here
                       ^~~~~~
 referenced by:
     comptime: tests.zig:172:17
-error: the following command failed with 54 compilation errors:
-/usr/local/zig-x86_64-linux-0.15.2/zig test -freference-trace=256 -ODebug --dep kaitai_struct -Mroot=/tests/spec/zig/tests.zig -Mkaitai_struct=/runtime/zig/src/root.zig --test-runner /tests/spec/zig/test_runner.zig --cache-dir .zig-cache --global-cache-dir /root/.cache/zig --name test --zig-lib-dir /usr/local/zig-x86_64-linux-0.15.2/lib/ --listen=-
+error: dependency loop with length 2
+    formats/recursive_one.zig:19:23: note: function 'formats.recursive_one.RecursiveOne.create' uses inferred error set of function 'formats.recursive_one.RecursiveOne._read' here
+            try self._read();
+                ~~~~~~~~~~^~
+    referenced by:
+        test.RecursiveOne: tests/recursive_one_test.zig:16:57
+        comptime: tests.zig:193:17
+    formats/recursive_one.zig:29:72: note: function 'formats.recursive_one.RecursiveOne._read' uses inferred error set of function 'formats.recursive_one.RecursiveOne.create' here
+                    self.next = .{ .recursive_one = try RecursiveOne.create(self._arena, self._io, self, self._root) };
+                                                        ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    note: eliminate any one of these dependencies to break the loop
+error: dependency loop with length 2
+    formats/nav_root_recursive.zig:15:23: note: function 'formats.nav_root_recursive.NavRootRecursive.create' uses inferred error set of function 'formats.nav_root_recursive.NavRootRecursive._read' here
+            try self._read();
+                ~~~~~~~~~~^~
+    referenced by:
+        test.NavRootRecursive: tests/nav_root_recursive_test.zig:16:66
+        comptime: tests.zig:151:17
+    formats/nav_root_recursive.zig:24:52: note: function 'formats.nav_root_recursive.NavRootRecursive._read' uses inferred error set of function 'formats.nav_root_recursive.NavRootRecursive.create' here
+                self.next = try NavRootRecursive.create(self._arena, self._io, self, self._root);
+                                ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    note: eliminate any one of these dependencies to break the loop
+error: dependency loop with length 2
+    formats/nav_parent_recursive.zig:15:23: note: function 'formats.nav_parent_recursive.NavParentRecursive.create' uses inferred error set of function 'formats.nav_parent_recursive.NavParentRecursive._read' here
+            try self._read();
+                ~~~~~~~~~~^~
+    referenced by:
+        test.NavParentRecursive: tests/nav_parent_recursive_test.zig:16:70
+        comptime: tests.zig:146:17
+    formats/nav_parent_recursive.zig:24:54: note: function 'formats.nav_parent_recursive.NavParentRecursive._read' uses inferred error set of function 'formats.nav_parent_recursive.NavParentRecursive.create' here
+                self.next = try NavParentRecursive.create(self._arena, self._io, self, self._root);
+                                ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    note: eliminate any one of these dependencies to break the loop
+error: dependency loop with length 4
+    formats/imports_circular_a.zig:16:23: note: function 'formats.imports_circular_a.ImportsCircularA.create' uses inferred error set of function 'formats.imports_circular_a.ImportsCircularA._read' here
+            try self._read();
+                ~~~~~~~~~~^~
+    referenced by:
+        test.ImportsCircularA: tests/imports_circular_a_test.zig:16:66
+        comptime: tests.zig:115:17
+    formats/imports_circular_a.zig:24:71: note: function 'formats.imports_circular_a.ImportsCircularA._read' uses inferred error set of function 'formats.imports_circular_b.ImportsCircularB.create' here
+            self.two = try _imp_imports_circular_b.ImportsCircularB.create(self._arena, self._io, null, null);
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    formats/imports_circular_b.zig:16:23: note: function 'formats.imports_circular_b.ImportsCircularB.create' uses inferred error set of function 'formats.imports_circular_b.ImportsCircularB._read' here
+            try self._read();
+                ~~~~~~~~~~^~
+    formats/imports_circular_b.zig:25:80: note: function 'formats.imports_circular_b.ImportsCircularB._read' uses inferred error set of function 'formats.imports_circular_a.ImportsCircularA.create' here
+                self.back_ref = try _imp_imports_circular_a.ImportsCircularA.create(self._arena, self._io, null, null);
+                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    note: eliminate any one of these dependencies to break the loop
+error: 54 compilation errors
+failed command: /usr/local/zig-x86_64-linux-0.16.0/zig test -freference-trace=256 -ODebug --dep kaitai_struct -Mroot=/tests/spec/zig/tests.zig -Mkaitai_struct=/runtime/zig/src/root.zig --test-runner /tests/spec/zig/test_runner.zig --cache-dir .zig-cache --global-cache-dir /root/.cache/zig --name test --zig-lib-dir /usr/local/zig-x86_64-linux-0.16.0/lib/ --listen=-
 
-Build Summary: 0/2 steps succeeded; 1 failed
+Build Summary: 0/2 steps succeeded (1 failed)
 test transitive failure
 +- compile test Debug native 54 errors
 
 error: the following build command failed with exit code 1:
-.zig-cache/o/521f18b4b3b96f19ec92d8c4532e9ea7/build /usr/local/zig-x86_64-linux-0.15.2/zig /usr/local/zig-x86_64-linux-0.15.2/lib /tests/spec/zig .zig-cache /root/.cache/zig --seed 0x9358e369 -Z3f24fb8535fee2e3 test --summary all -freference-trace -Dno-bin
+.zig-cache/o/67fa4cdb43223d24d798f1403f339d04/build /usr/local/zig-x86_64-linux-0.16.0/zig /usr/local/zig-x86_64-linux-0.16.0/lib /tests/spec/zig .zig-cache /root/.cache/zig --seed 0xabced1d1 -Z104032090b3dcc3c test --summary all -freference-trace -Dno-bin

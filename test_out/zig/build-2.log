@@ -36,12 +36,12 @@ formats/process_term_struct.zig:1:1: error: unable to load 'process_term_struct.
 tests/process_term_struct_test.zig:5:42: note: file imported here
 const _imp_process_term_struct = @import("../formats/process_term_struct.zig");
                                          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-error: the following command failed with 9 compilation errors:
-/usr/local/zig-x86_64-linux-0.15.2/zig test -freference-trace=256 -ODebug --dep kaitai_struct -Mroot=/tests/spec/zig/tests.zig -Mkaitai_struct=/runtime/zig/src/root.zig --test-runner /tests/spec/zig/test_runner.zig --cache-dir .zig-cache --global-cache-dir /root/.cache/zig --name test --zig-lib-dir /usr/local/zig-x86_64-linux-0.15.2/lib/ --listen=-
+error: 9 compilation errors
+failed command: /usr/local/zig-x86_64-linux-0.16.0/zig test -freference-trace=256 -ODebug --dep kaitai_struct -Mroot=/tests/spec/zig/tests.zig -Mkaitai_struct=/runtime/zig/src/root.zig --test-runner /tests/spec/zig/test_runner.zig --cache-dir .zig-cache --global-cache-dir /root/.cache/zig --name test --zig-lib-dir /usr/local/zig-x86_64-linux-0.16.0/lib/ --listen=-
 
-Build Summary: 0/2 steps succeeded; 1 failed
+Build Summary: 0/2 steps succeeded (1 failed)
 test transitive failure
 +- compile test Debug native 9 errors
 
 error: the following build command failed with exit code 1:
-.zig-cache/o/521f18b4b3b96f19ec92d8c4532e9ea7/build /usr/local/zig-x86_64-linux-0.15.2/zig /usr/local/zig-x86_64-linux-0.15.2/lib /tests/spec/zig .zig-cache /root/.cache/zig --seed 0x482ccfb0 -Zad10e17bc62366c1 test --summary all -freference-trace -Dno-bin
+.zig-cache/o/67fa4cdb43223d24d798f1403f339d04/build /usr/local/zig-x86_64-linux-0.16.0/zig /usr/local/zig-x86_64-linux-0.16.0/lib /tests/spec/zig .zig-cache /root/.cache/zig --seed 0xce23f3e9 -Z7acf46ba38cc1848 test --summary all -freference-trace -Dno-bin

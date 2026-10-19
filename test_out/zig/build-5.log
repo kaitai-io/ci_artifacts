@@ -1,16 +1,6 @@
 test
 +- compile test Debug native 2 errors
-/runtime/zig/src/root.zig:478:9: error: unsupported encoding 'Shift_JIS'
-        @compileError("unsupported encoding '" ++ encoding ++ "'");
-        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-referenced by:
-    _read: formats/str_encodings_default.zig:45:72
-    create: formats/str_encodings_default.zig:35:27
-    _read: formats/str_encodings_default.zig:24:39
-    create: formats/str_encodings_default.zig:15:23
-    test.StrEncodingsDefault: tests/str_encodings_default_test.zig:16:72
-    comptime: tests.zig:175:17
-/runtime/zig/src/root.zig:478:9: error: unsupported encoding 'IBM437'
+/runtime/zig/src/root.zig:474:9: error: unsupported encoding 'IBM437'
         @compileError("unsupported encoding '" ++ encoding ++ "'");
         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 referenced by:
@@ -19,13 +9,23 @@ referenced by:
     _read: formats/str_encodings_default.zig:24:39
     create: formats/str_encodings_default.zig:15:23
     test.StrEncodingsDefault: tests/str_encodings_default_test.zig:16:72
-    comptime: tests.zig:175:17
-error: the following command failed with 2 compilation errors:
-/usr/local/zig-x86_64-linux-0.15.2/zig test -freference-trace=256 -ODebug --dep kaitai_struct -Mroot=/tests/spec/zig/tests.zig -Mkaitai_struct=/runtime/zig/src/root.zig --test-runner /tests/spec/zig/test_runner.zig --cache-dir .zig-cache --global-cache-dir /root/.cache/zig --name test --zig-lib-dir /usr/local/zig-x86_64-linux-0.15.2/lib/ --listen=-
+    comptime: tests.zig:174:17
+/runtime/zig/src/root.zig:474:9: error: unsupported encoding 'Shift_JIS'
+        @compileError("unsupported encoding '" ++ encoding ++ "'");
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+referenced by:
+    _read: formats/str_encodings_default.zig:45:72
+    create: formats/str_encodings_default.zig:35:27
+    _read: formats/str_encodings_default.zig:24:39
+    create: formats/str_encodings_default.zig:15:23
+    test.StrEncodingsDefault: tests/str_encodings_default_test.zig:16:72
+    comptime: tests.zig:174:17
+error: 2 compilation errors
+failed command: /usr/local/zig-x86_64-linux-0.16.0/zig test -freference-trace=256 -ODebug --dep kaitai_struct -Mroot=/tests/spec/zig/tests.zig -Mkaitai_struct=/runtime/zig/src/root.zig --test-runner /tests/spec/zig/test_runner.zig --cache-dir .zig-cache --global-cache-dir /root/.cache/zig --name test --zig-lib-dir /usr/local/zig-x86_64-linux-0.16.0/lib/ --listen=-
 
-Build Summary: 0/2 steps succeeded; 1 failed
+Build Summary: 0/2 steps succeeded (1 failed)
 test transitive failure
 +- compile test Debug native 2 errors
 
 error: the following build command failed with exit code 1:
-.zig-cache/o/521f18b4b3b96f19ec92d8c4532e9ea7/build /usr/local/zig-x86_64-linux-0.15.2/zig /usr/local/zig-x86_64-linux-0.15.2/lib /tests/spec/zig .zig-cache /root/.cache/zig --seed 0x13e0c5a -Zf60d59f8c2ad54d3 test --summary all -freference-trace -Dno-bin
+.zig-cache/o/67fa4cdb43223d24d798f1403f339d04/build /usr/local/zig-x86_64-linux-0.16.0/zig /usr/local/zig-x86_64-linux-0.16.0/lib /tests/spec/zig .zig-cache /root/.cache/zig --seed 0x7235e34e -Z3c333a8b0f2adbdc test --summary all -freference-trace -Dno-bin
